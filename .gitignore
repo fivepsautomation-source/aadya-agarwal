@@ -1,0 +1,14 @@
+# Raw Google Drive downloads & uncompressed media archives
+Aadya Agarwal - Multimedia*/
+Aadya Aranyo - website*/
+
+# Large unreferenced raw video recordings (>100MB rejected by GitHub)
+assets/**/*.mp4
+assets/**/*.mov
+*.mp4
+*.mov
+
+# Python cache & temporary test scratchpads
+scratch/
+__pycache__/
+*.pyc
