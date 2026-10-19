@@ -3,816 +3,372 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aadya Agarwal — Autonomous Systems, Eco-Engineering & Applied Research</title>
-  <meta name="description" content="Official personal portfolio of Aadya Agarwal (The Lawrenceville School '29). Showcasing competitive robotics, American Biochar water research, MoniVitals health platform, and leadership.">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <title>Portfolio | Aadya Agarwal</title>
+  <meta name="description" content="Complete portfolio of Aadya Agarwal across Robotics, Environmental Sustainability &amp; AI, Biomedical &amp; AI, MoniVitals, School &amp; Community, Writing &amp; Arts.">
   <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="modern-style.css?v=17">
 </head>
-<body>
+<body id="top">
 
-  <a href="#mainContent" class="skip-link">Skip to main content</a>
-
-  <!-- Unified Navigation Bar: AA. About Research Projects Impact Beyond STEM Contact [github...] -->
   <header class="site-header">
-    <div class="container header-container">
-      <a href="index.html" class="brand-link" aria-label="AA. Aadya Agarwal Home">
-        <span class="brand-monogram">AA<span class="mono-dot">.</span></span>
-        <div class="brand-text-block">
-          <span class="brand-title">Aadya Agarwal</span>
-        </div>
-      </a>
-
-            <nav class="main-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-monogram" aria-label="Aadya Agarwal, back to home">AA</a>
+      
+      <!-- Desktop Navigation Links: Exactly matching reference sections, NO certificates -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+        <a href="documents.html" class="nav-link">Documents</a>
+        <a href="memberships.html" class="nav-link">Memberships</a>
+        <a href="awards.html" class="nav-link">Awards</a>
+        <a href="connect.html" class="nav-link">Connect</a>
         <a href="about.html" class="nav-link">About</a>
-
-        <!-- Research Dropdown -->
-        <div class="nav-dropdown-item">
-          <a href="research.html" class="nav-link dropdown-trigger">
-            <span>Research</span>
-            <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="dropdown-menu">
-            <div class="dropdown-header-eyebrow">Research &amp; Empirical Science</div>
-            
-            <a href="research.html" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Research Overview</span>
-                  <span class="dropdown-badge">Overview</span>
-                </div>
-                <span class="dropdown-sublink-desc">Applied environmental science &amp; clinical ML</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="research.html#biochar" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>American Biochar Co.</span>
-                  <span class="dropdown-badge">Water</span>
-                </div>
-                <span class="dropdown-sublink-desc">Empirical lead &amp; PFAS trials (Ambiochar.com)</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="research.html#stanford" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Stanford AIMI Fellow</span>
-                  <span class="dropdown-badge">Health AI</span>
-                </div>
-                <span class="dropdown-sublink-desc">Multimodal telemetry &amp; clinical anomaly triage</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="research.html#bioresearch" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31M14 9.31V2M8.5 2h7M14 9.31a6.5 6.5 0 1 1-4 0z"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>BioResearch Wet Lab</span>
-                  <span class="dropdown-badge">Genetics</span>
-                </div>
-                <span class="dropdown-sublink-desc">Certified plasmid cloning, PCR &amp; electrophoresis</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="research.html#academics" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Academic Olympiads</span>
-                  <span class="dropdown-badge">Top 1%</span>
-                </div>
-                <span class="dropdown-sublink-desc">15 AP courses, USABO &amp; USACO competition</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <div class="dropdown-footer">
-              <a href="research.html" class="dropdown-footer-link">
-                <span>View All Research Papers</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projects Dropdown -->
-        <div class="nav-dropdown-item">
-          <a href="projects.html" class="nav-link dropdown-trigger">
-            <span>Projects</span>
-            <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="dropdown-menu">
-            <div class="dropdown-header-eyebrow">Technical &amp; Autonomous Systems</div>
-
-            <a href="projects.html" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Projects Overview</span>
-                  <span class="dropdown-badge">Overview</span>
-                </div>
-                <span class="dropdown-sublink-desc">Autonomous robotics, telehealth &amp; marine IoT</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="projects.html#robotics" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>FIRST Robotics (FTC)</span>
-                  <span class="dropdown-badge">WPI #14</span>
-                </div>
-                <span class="dropdown-sublink-desc">Pedro Pathing splines &amp; Limelight 3G AprilTag</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="projects.html#monivitals" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>MoniVitals.com Portal</span>
-                  <span class="dropdown-badge">Live Web</span>
-                </div>
-                <span class="dropdown-sublink-desc">Production remote patient telemetry dashboard</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="projects.html#mitBuoy" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 16h20M2 8h20"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>MIT Solve Ocean Buoy</span>
-                  <span class="dropdown-badge">1st Place</span>
-                </div>
-                <span class="dropdown-sublink-desc">Solar marine telemetry package with mesh radio</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="projects.html#software" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Autonomous Repositories</span>
-                  <span class="dropdown-badge">Software</span>
-                </div>
-                <span class="dropdown-sublink-desc">Open-source FTC Java algorithms &amp; odometry</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <div class="dropdown-footer">
-              <a href="projects.html" class="dropdown-footer-link">
-                <span>View All Technical Projects</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Impact Dropdown -->
-        <div class="nav-dropdown-item">
-          <a href="impact.html" class="nav-link dropdown-trigger">
-            <span>Impact</span>
-            <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="dropdown-menu">
-            <div class="dropdown-header-eyebrow">Civic Leadership &amp; Advocacy</div>
-
-            <a href="impact.html" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Impact Overview</span>
-                  <span class="dropdown-badge">Overview</span>
-                </div>
-                <span class="dropdown-sublink-desc">Statewide civic initiatives &amp; global humanitarian aid</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="impact.html#leo" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>STEP LEO Club</span>
-                  <span class="dropdown-badge">President</span>
-                </div>
-                <span class="dropdown-sublink-desc">3,500+ lbs food &amp; 420+ lbs candy mobilized</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="impact.html#un" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>UN Youth Keynote</span>
-                  <span class="dropdown-badge">Delegate</span>
-                </div>
-                <span class="dropdown-sublink-desc">Future of Service youth address at United Nations</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="impact.html#njAssembly" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>NJ General Assembly</span>
-                  <span class="dropdown-badge">Citation</span>
-                </div>
-                <span class="dropdown-sublink-desc">Official legislative resolution &amp; service commendation</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="impact.html#drives" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Community Drives</span>
-                  <span class="dropdown-badge">Civic</span>
-                </div>
-                <span class="dropdown-sublink-desc">Senior center recitals, animal shelters &amp; relief</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <div class="dropdown-footer">
-              <a href="impact.html" class="dropdown-footer-link">
-                <span>View Full Impact Portfolio</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Beyond STEM Dropdown -->
-        <div class="nav-dropdown-item">
-          <a href="beyond-stem.html" class="nav-link dropdown-trigger">
-            <span>Beyond STEM</span>
-            <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="dropdown-menu">
-            <div class="dropdown-header-eyebrow">Humanities, Arts &amp; Athletics</div>
-
-            <a href="beyond-stem.html" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Beyond STEM Overview</span>
-                  <span class="dropdown-badge">Overview</span>
-                </div>
-                <span class="dropdown-sublink-desc">Humanities, creative writing, music &amp; varsity sport</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="beyond-stem.html#oratory" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Oxford John Locke Essay</span>
-                  <span class="dropdown-badge">Oxford</span>
-                </div>
-                <span class="dropdown-sublink-desc">Global High Commendation (Top 3% worldwide)</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="beyond-stem.html#poetry" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>3x Published Poetry</span>
-                  <span class="dropdown-badge">Scholastic</span>
-                </div>
-                <span class="dropdown-sublink-desc">Silver Key award, national anthologies &amp; design</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="beyond-stem.html#music" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Manhattan School of Music</span>
-                  <span class="dropdown-badge">MSM Solo</span>
-                </div>
-                <span class="dropdown-sublink-desc">Greenfield Hall Chopin recital &amp; 1st chair flute</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <a href="beyond-stem.html#athletics" class="dropdown-sublink">
-              <div class="dropdown-icon-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/></svg>
-              </div>
-              <div class="dropdown-sublink-content">
-                <div class="dropdown-sublink-title">
-                  <span>Competitive Athletics</span>
-                  <span class="dropdown-badge">Captain</span>
-                </div>
-                <span class="dropdown-sublink-desc">Tennis captain, PVA volleyball, lacrosse &amp; skiing</span>
-              </div>
-              <span class="dropdown-item-arrow">&rarr;</span>
-            </a>
-
-            <div class="dropdown-footer">
-              <a href="beyond-stem.html" class="dropdown-footer-link">
-                <span>View Full Arts &amp; Athletics</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <div class="header-actions">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-github-btn" title="GitHub Profile">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span>GitHub</span>
-        </a>
-      </div>
+      <!-- Mobile Hamburger Button -->
+      <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" aria-label="Mobile navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="portfolio.html" class="nav-link active">Portfolio</a>
+      <a href="documents.html" class="nav-link">Documents</a>
+      <a href="memberships.html" class="nav-link">Memberships</a>
+      <a href="awards.html" class="nav-link">Awards</a>
+      <a href="connect.html" class="nav-link">Connect</a>
+      <a href="about.html" class="nav-link">About</a>
     </div>
   </header>
 
-    <main id="mainContent">
-    <!-- Clean Editorial Hero -->
-    <section class="inner-page-hero">
+  <main>
+    <section class="page-hero">
       <div class="container">
-        <div class="inner-hero-header">
-          <div class="inner-hero-meta">
-            <span class="inner-meta-badge">Applied Engineering Portfolio</span>
-            <span class="inner-meta-readtime">WPI World #14 &bull; MIT Solve Top 5 &bull; MoniVitals Telemetry</span>
-          </div>
-          <h1 class="inner-hero-title">High-Velocity Robotic Control, Hardware &amp; Telehealth</h1>
-          <p class="inner-hero-lead">
-            Combining rigorous PID control theory, custom hardware fabrication, embedded telemetry, and accessible digital triage to solve complex mechanical and human challenges.
-          </p>
-        </div>
+        <span class="page-hero-eyebrow">Technical Innovations &amp; Research</span>
+        <h1 class="page-hero-title">Portfolio</h1>
+        <p class="page-hero-lead">
+          Hands-on engineering, autonomous algorithmic control, environmental water remediation, and community healthtech &mdash; organized into six core disciplines.
+        </p>
       </div>
     </section>
 
-    <!-- SECTION 1: FLL & FTC ROBOTICS TOURNAMENTS -->
-    <section class="deep-dive-section" id="fll">
+    <section class="portfolio-section" style="padding-top: 0;">
       <div class="container">
-        <div class="section-header-block">
-          <span class="section-meta-label">FIRST Championship Archive</span>
-          <h2 class="deep-dive-title">FIRST Robotics Tournaments &bull; WPI World Open #14 in the World</h2>
-          <p class="deep-dive-subtitle">
-            Lead Autonomous Programmer driving motion planning, sensor-fused odometry, and precision attachment design across state, regional, and world championships.
-          </p>
+        <div class="filter-tabs-row" role="tablist">
+          <button type="button" class="filter-tab-btn active" data-filter="all">All (18)</button>
+          <button type="button" class="filter-tab-btn" data-filter="robotics">Robotics</button>
+          <button type="button" class="filter-tab-btn" data-filter="environmental">Environmental Sustainability &amp; AI</button>
+          <button type="button" class="filter-tab-btn" data-filter="biomedical">Biomedical &amp; AI</button>
+          <button type="button" class="filter-tab-btn" data-filter="monivitals">MoniVitals</button>
+          <button type="button" class="filter-tab-btn" data-filter="community">School &amp; Community</button>
+          <button type="button" class="filter-tab-btn" data-filter="writing">Writing &amp; Arts</button>
         </div>
 
-        <div class="feature-two-col" style="margin-bottom: 32px;">
-          <div class="feature-col-text">
-            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--c-dark-slate); margin-bottom: 12px;">Autonomous Engineering &amp; Pit Excellence</h3>
-            <p style="font-size: 0.98rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 14px;">
-              Over four seasons of competitive robotics, Aadya led autonomous algorithm design utilizing optical encoders and gyro sensors. At the WPI FLL US Open World Championship in June 2024, her team was ranked <strong>#14 in the World out of 108 international teams</strong>, earning recognition as a <strong>Robot Design Award Finalist</strong>.
-            </p>
-            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; font-size: 0.92rem; color: var(--text-dark);">
-              <li>&#10003; <strong>WPI US Open World:</strong> Finalist, Robot Design Award (Worcester, MA, June 2024)</li>
-              <li>&#10003; <strong>NJ State Championship:</strong> Breakthrough Award (2023-2024)</li>
-              <li>&#10003; <strong>NJ Regionals:</strong> 1st Place Robot Design Award (2023-2024 &amp; 2022-2023)</li>
-              <li>&#10003; <strong>FTC BioBuzz:</strong> Autonomous control algorithms &amp; FTC telemetry pipelines</li>
-            </ul>
-          </div>
-          <div class="feature-col-aside" style="background: #FAFBF9; border: 1px solid rgba(19,53,38,0.12); border-radius: 16px; padding: 24px;">
-            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c-biochar); margin-bottom: 8px;">Technical Metrics</div>
-            <div style="font-size: 1.8rem; font-weight: 800; color: var(--c-dark-slate); font-family: var(--font-serif);">#14 Worldwide</div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px; margin-bottom: 16px;">Ranked 14th out of 108 international championship teams at WPI World Open.</p>
-            <div style="font-size: 1.8rem; font-weight: 800; color: var(--c-dark-slate); font-family: var(--font-serif);">100% Autonomous</div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px; margin-bottom: 0;">Zero manual interventions required on primary 2.5-minute mission runs.</p>
-          </div>
-        </div>
-
-        <!-- 12-Photo Tournament Grid -->
-        <div class="photo-gallery-grid grid-3">
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 1 - with robot.jpg" data-zoom-title="Aadya with Competition Robot" data-zoom-desc="Custom-built robot featuring high-torque dual motors and optical odometry." data-zoom-badge="Robot Hardware" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Robot Hardware</span>
-              <img src="assets/robotics/pic 1 - with robot.jpg" alt="Aadya with Competition Robot" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+        <div class="portfolio-grid">
+          <article class="portfolio-card" data-category="robotics" data-project='{&quot;title&quot;: &quot;FIRST Robotics \u2014 FLL &amp; FTC Championship Lead Coder&quot;, &quot;category&quot;: &quot;Robotics&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_robotics_with-robot_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_robotics_with-robot_framed.jpg&quot;, &quot;assets/ref_images/projects_robotics_with-robot.jpg&quot;, &quot;assets/robotics/pic 1 - with robot.jpg&quot;, &quot;assets/robotics/pic12 -WPI Team.png&quot;, &quot;assets/robotics/pic 3 - mt olive.JPG&quot;, &quot;assets/robotics/pic 5 - Mt Olive Award.jpg&quot;], &quot;desc&quot;: &quot;Lead autonomous programmer from FLL World Open to The Lawrenceville School FIRST Tech Challenge team \u2014 architecting quintic B\u00e9zier splines, 3-wheel odometry, and AprilTag vision.&quot;, &quot;highlights&quot;: [&quot;WPI US Open World Championship \u2014 Ranked #14 out of 108 international teams&quot;, &quot;Implemented custom autonomous trajectory routines with Pedro Pathing&quot;, &quot;Sub-15ms AprilTag 36h11 machine vision pose estimation&quot;, &quot;Mentored middle school teams transitioning from block coding to Java&quot;], &quot;tags&quot;: [&quot;#FTC&quot;, &quot;#FLL&quot;, &quot;#AutonomousControl&quot;, &quot;#ComputerVision&quot;, &quot;#Java&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_robotics_with-robot_framed.jpg" alt="FIRST Robotics — FLL &amp; FTC Championship Lead Coder" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">FTC</span><span class="card-image-pill pill-accent">FLL</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Aadya with Competition Robot</h4>
-              <p>Custom-built robot featuring high-torque dual motors and optical odometry.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Robotics</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">FIRST Robotics — FLL &amp; FTC Championship Lead Coder</h3>
+              <p class="card-description">Lead autonomous programmer from FLL World Open to The Lawrenceville School FIRST Tech Challenge team — architecting quintic Bézier splines, 3-wheel odometry, and AprilTag vision.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 2 - Team award.JPG" data-zoom-title="Robot Design Award &bull; NJ Regionals" data-zoom-desc="1st Place Robot Design Award recognized for modular mechanical architecture." data-zoom-badge="NJ Regionals" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">NJ Regionals</span>
-              <img src="assets/robotics/pic 2 - Team award.JPG" alt="Robot Design Award &bull; NJ Regionals" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="robotics" data-project='{&quot;title&quot;: &quot;Autonomous Obstacle Mapping &amp; Navigation Robot&quot;, &quot;category&quot;: &quot;Robotics&quot;, &quot;img&quot;: &quot;assets/robotics/pic 20-devpost.jpg&quot;, &quot;images&quot;: [&quot;assets/robotics/pic 20-devpost.jpg&quot;, &quot;assets/robotics/Copy of Engg Device.jpg&quot;, &quot;assets/robotics/pic 14 - On the board 2.JPG&quot;, &quot;assets/robotics/Pic 16- WPI Pit visitor 1.jpg&quot;, &quot;assets/robotics/pic 8 - On the board.jpg&quot;], &quot;desc&quot;: &quot;Designed, wired, and programmed an autonomous rover with ultrasonic arrays, IR proximity sensors, and PID wheel speed feedback for collision-free indoor mapping.&quot;, &quot;highlights&quot;: [&quot;Microcontroller-based autonomous navigation loop running at 50Hz&quot;, &quot;Custom chassis fabrication with dual motor encoders and dual-bridge motor drivers&quot;, &quot;Integrated sensor fusion to correct odometry drift over varied indoor floor textures&quot;], &quot;tags&quot;: [&quot;#Arduino&quot;, &quot;#Sensors&quot;, &quot;#PID&quot;, &quot;#Hardware&quot;, &quot;#Embedded&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/robotics/pic 20-devpost.jpg" alt="Autonomous Obstacle Mapping &amp; Navigation Robot" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">Arduino</span><span class="card-image-pill pill-navy">Sensors</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Robot Design Award &bull; NJ Regionals</h4>
-              <p>1st Place Robot Design Award recognized for modular mechanical architecture.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Robotics</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Autonomous Obstacle Mapping &amp; Navigation Robot</h3>
+              <p class="card-description">Designed, wired, and programmed an autonomous rover with ultrasonic arrays, IR proximity sensors, and PID wheel speed feedback for collision-free indoor mapping.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 5 - Mt Olive Award.jpg" data-zoom-title="Breakthrough Award &bull; NJ State" data-zoom-desc="State Championship Breakthrough Award for sensor integration." data-zoom-badge="NJ State" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">NJ State</span>
-              <img src="assets/robotics/pic 5 - Mt Olive Award.jpg" alt="Breakthrough Award &bull; NJ State" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="robotics" data-project='{&quot;title&quot;: &quot;WPI US Open Robotics Invitational &amp; Technical Pit Presentations&quot;, &quot;category&quot;: &quot;Robotics&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_wpi-award_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_wpi-award_framed.jpg&quot;, &quot;assets/robotics/pic 10 - wpi award.jpg&quot;, &quot;assets/robotics/pic 11 - WPI goodies.jpg&quot;, &quot;assets/robotics/pic12 -WPI Team.png&quot;, &quot;assets/robotics/pic17 -WPI opening ceremony.jpg&quot;, &quot;assets/robotics/pic 2 - Team award.JPG&quot;], &quot;desc&quot;: &quot;Represented New Jersey at Worcester Polytechnic Institute US Open, presenting engineering notebooks, algorithmic design rationales, and autonomous intake mechanisms to industry judges.&quot;, &quot;highlights&quot;: [&quot;Presented autonomous mission sequencing to international engineering judges&quot;, &quot;Coordinated pit alliance strategy, telemetry debugging, and match scout logging&quot;, &quot;Awarded top honors for technical design and cooperative gracious professionalism&quot;], &quot;tags&quot;: [&quot;#WPI&quot;, &quot;#USOpen&quot;, &quot;#Championship&quot;, &quot;#EngineeringNotebook&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_wpi-award_framed.jpg" alt="WPI US Open Robotics Invitational &amp; Technical Pit Presentations" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">WPI World</span><span class="card-image-pill pill-accent">#14 Rank</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Breakthrough Award &bull; NJ State</h4>
-              <p>State Championship Breakthrough Award for sensor integration.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Robotics</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">WPI US Open Robotics Invitational &amp; Technical Pit Presentations</h3>
+              <p class="card-description">Represented New Jersey at Worcester Polytechnic Institute US Open, presenting engineering notebooks, algorithmic design rationales, and autonomous intake mechanisms to industry judges.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 13 - Nov2022.jpg" data-zoom-title="Robot Design Award (2022-2023)" data-zoom-desc="Early robotics season milestone earning regional Robot Design honors." data-zoom-badge="Award Trophy" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Award Trophy</span>
-              <img src="assets/robotics/pic 13 - Nov2022.jpg" alt="Robot Design Award (2022-2023)" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="environmental" data-project='{&quot;title&quot;: &quot;Biochar Water Treatment &amp; Remediation System&quot;, &quot;category&quot;: &quot;Environmental Sustainability &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_water-treatment-setup.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_water-treatment-setup.jpg&quot;, &quot;assets/ref_images/projects_msef-water-award.jpg&quot;, &quot;assets/ref_images/projects_njwea-presentation.jpg&quot;, &quot;assets/science_fairs/Biochars_-_B1_and_B2.jpg&quot;, &quot;assets/science_fairs/msef_event_pic_2.jpeg&quot;], &quot;desc&quot;: &quot;Bench tests and multi-stage filtration comparing waste-derived biochars (coconut shell and pine bark) for water remediation, with pH, filtration rates, and heavy metal adsorption.&quot;, &quot;highlights&quot;: [&quot;Engineered multi-column filtration comparing activated vs. raw pyrolyzed biochars&quot;, &quot;Observed rapid neutralization of acidified storm run-off and organic contaminant reduction&quot;, &quot;Published findings presented at NJWEA and Mercer County Science &amp; Engineering Fair&quot;, &quot;Developed low-cost household water filtration model suitable for developing communities&quot;], &quot;tags&quot;: [&quot;#WaterRemediation&quot;, &quot;#Biochar&quot;, &quot;#CleanWater&quot;, &quot;#MSEF&quot;, &quot;#EmpiricalScience&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_water-treatment-setup.jpg" alt="Biochar Water Treatment &amp; Remediation System" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">NJWEA</span><span class="card-image-pill pill-accent">MSEF</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Robot Design Award (2022-2023)</h4>
-              <p>Early robotics season milestone earning regional Robot Design honors.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Environmental Sustainability &amp; AI</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Biochar Water Treatment &amp; Remediation System</h3>
+              <p class="card-description">Bench tests and multi-stage filtration comparing waste-derived biochars (coconut shell and pine bark) for water remediation, with pH, filtration rates, and heavy metal adsorption.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 6 - Team Award.JPG" data-zoom-title="Championship Team Delegation" data-zoom-desc="Team award recognition at the State Robotics Championship." data-zoom-badge="State Finals" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">State Finals</span>
-              <img src="assets/robotics/pic 6 - Team Award.JPG" alt="Championship Team Delegation" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="environmental" data-project='{&quot;title&quot;: &quot;Autonomous Ocean pH Buoy (MIT Solve Winner)&quot;, &quot;category&quot;: &quot;Environmental Sustainability &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_lab-setup.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_lab-setup.jpg&quot;, &quot;assets/ref_images/projects_mit-solve-recognition_clean.jpg&quot;, &quot;assets/certificates/Day of AI Certificate - MIT RAISE.jpeg&quot;, &quot;assets/science_fairs/Device_Plan.jpg&quot;, &quot;assets/science_fairs/Project_-_Neutralizing_Ocean_Acidification_-_Experimental_Results_2.jpg&quot;], &quot;desc&quot;: &quot;A sensor-driven marine buoy concept designed to detect localized drops in seawater pH and autonomously dispense measured calcium carbonate to buffer ocean acidification.&quot;, &quot;highlights&quot;: [&quot;1 of 5 National Winners in the MIT Solve &#x27;AI for a Better World&#x27; competition&quot;, &quot;Presented hardware telemetry schematics and deployment simulations at the MIT Media Lab&quot;, &quot;Low-power ESP32 architecture powered by marine solar harvesting cells&quot;, &quot;Automated micro-solenoid dispensing logic driven by continuous optical pH probe calibration&quot;], &quot;tags&quot;: [&quot;#MITSolve&quot;, &quot;#OceanTech&quot;, &quot;#ClimateAction&quot;, &quot;#EmbeddedSensors&quot;, &quot;#AIForGood&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_lab-setup.jpg" alt="Autonomous Ocean pH Buoy (MIT Solve Winner)" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-accent">MIT Solve</span><span class="card-image-pill pill-primary">Arduino</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Championship Team Delegation</h4>
-              <p>Team award recognition at the State Robotics Championship.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Environmental Sustainability &amp; AI</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Autonomous Ocean pH Buoy (MIT Solve Winner)</h3>
+              <p class="card-description">A sensor-driven marine buoy concept designed to detect localized drops in seawater pH and autonomously dispense measured calcium carbonate to buffer ocean acidification.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic4 - team poster.jpg" data-zoom-title="Technical Engineering Poster" data-zoom-desc="Comprehensive poster illustrating autonomous trajectories and gear ratios." data-zoom-badge="Engineering Poster" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Engineering Poster</span>
-              <img src="assets/robotics/pic4 - team poster.jpg" alt="Technical Engineering Poster" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="environmental" data-project='{&quot;title&quot;: &quot;Environmental Telemetry Node &amp; AI Water Testing&quot;, &quot;category&quot;: &quot;Environmental Sustainability &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_mit-day-ai-stage.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_mit-day-ai-stage.jpg&quot;, &quot;assets/ref_images/projects_njwea-presentation.jpg&quot;, &quot;assets/ref_images/projects_njwea-community_clean.jpg&quot;, &quot;assets/science_fairs/ieee_pic4.jpeg&quot;], &quot;desc&quot;: &quot;Developed continuous IoT telemetry nodes measuring turbidity, dissolved oxygen, and oxidation-reduction potential with edge machine learning anomaly detection.&quot;, &quot;highlights&quot;: [&quot;Engineered edge ML inference running on ultra-low-power microcontrollers&quot;, &quot;Real-time sensor calibration protocol reducing temperature drift by over 40%&quot;, &quot;Invited technical lecture at New Jersey Water Environment Association (NJWEA)&quot;, &quot;Integrated cloud data sync for municipal storm run-off water tracking&quot;], &quot;tags&quot;: [&quot;#IoTSensors&quot;, &quot;#EdgeAI&quot;, &quot;#NJWEA&quot;, &quot;#WaterQuality&quot;, &quot;#Telemetry&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_mit-day-ai-stage.jpg" alt="Environmental Telemetry Node &amp; AI Water Testing" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">MIT Media Lab</span><span class="card-image-pill pill-navy">IEEE</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Technical Engineering Poster</h4>
-              <p>Comprehensive poster illustrating autonomous trajectories and gear ratios.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Environmental Sustainability &amp; AI</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Environmental Telemetry Node &amp; AI Water Testing</h3>
+              <p class="card-description">Developed continuous IoT telemetry nodes measuring turbidity, dissolved oxygen, and oxidation-reduction potential with edge machine learning anomaly detection.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 3 - mt olive.JPG" data-zoom-title="Tournament Pit Setup" data-zoom-desc="Interactive pit display explaining robot telemetry to judges and visitors." data-zoom-badge="Pit Showcase" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Pit Showcase</span>
-              <img src="assets/robotics/pic 3 - mt olive.JPG" alt="Tournament Pit Setup" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="biomedical" data-project='{&quot;title&quot;: &quot;Pulse Oximetry Optical Bias Mitigation Research&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;, &quot;assets/science_fairs/ieee_pic4.jpeg&quot;, &quot;assets/monivitals/20260829_094941_1_.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;], &quot;desc&quot;: &quot;Investigating wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring.&quot;, &quot;highlights&quot;: [&quot;Examined multi-wavelength LED emitters (red, infrared, green) across diverse skin tones&quot;, &quot;Evaluated calibration curve adjustments to prevent hypoxemia misreading in darker skin&quot;, &quot;Presented engineering insights at IEEE Engineering in Conversation forum&quot;, &quot;Direct foundation for the hardware sensor module utilized in MoniVitals&quot;], &quot;tags&quot;: [&quot;#Biometrics&quot;, &quot;#EquitableHealth&quot;, &quot;#HealthTech&quot;, &quot;#SignalProcessing&quot;, &quot;#IEEE&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_ieee-engineering-conversation.jpg" alt="Pulse Oximetry Optical Bias Mitigation Research" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-navy">IEEE</span><span class="card-image-pill pill-primary">Biometrics</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Tournament Pit Setup</h4>
-              <p>Interactive pit display explaining robot telemetry to judges and visitors.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Biomedical &amp; AI</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Pulse Oximetry Optical Bias Mitigation Research</h3>
+              <p class="card-description">Investigating wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 8 - On the board.jpg" data-zoom-title="Autonomous Mission Execution" data-zoom-desc="Precision mission deployment on the competition playing field." data-zoom-badge="Mission Run" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Mission Run</span>
-              <img src="assets/robotics/pic 8 - On the board.jpg" alt="Autonomous Mission Execution" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="biomedical" data-project='{&quot;title&quot;: &quot;Stanford AIMI Summer Health AI Fellow Research&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg&quot;, &quot;images&quot;: [&quot;assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg&quot;, &quot;assets/certificates/InspiritAI_AI_Ambassador_Certificate.jpg&quot;, &quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;], &quot;desc&quot;: &quot;Explored multimodal clinical models combining waveform telemetry with patient electronic health records for early sepsis and arrhythmia anomaly detection.&quot;, &quot;highlights&quot;: [&quot;Stanford AIMI youth fellowship focused on ethical machine learning in healthcare&quot;, &quot;Analyzed synthetic physiological timeseries datasets for model generalizability&quot;, &quot;Investigated data drift and algorithmic fairness across demographic cohorts&quot;], &quot;tags&quot;: [&quot;#StanfordAIMI&quot;, &quot;#MachineLearning&quot;, &quot;#HealthcareAI&quot;, &quot;#ClinicalInference&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg" alt="Stanford AIMI Summer Health AI Fellow Research" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">Stanford AI</span><span class="card-image-pill pill-accent">ML</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Autonomous Mission Execution</h4>
-              <p>Precision mission deployment on the competition playing field.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Biomedical &amp; AI</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Stanford AIMI Summer Health AI Fellow Research</h3>
+              <p class="card-description">Explored multimodal clinical models combining waveform telemetry with patient electronic health records for early sepsis and arrhythmia anomaly detection.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic12 -WPI Team.png" data-zoom-title="WPI FLL US Open World Team" data-zoom-desc="International championship delegation at Worcester Polytechnic Institute." data-zoom-badge="WPI World Open" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">WPI World Open</span>
-              <img src="assets/robotics/pic12 -WPI Team.png" alt="WPI FLL US Open World Team" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="biomedical" data-project='{&quot;title&quot;: &quot;BioResearch Academy Wet-Bench Molecular Biology&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/certificates/BioResearch Academy Certificate.jpeg&quot;, &quot;images&quot;: [&quot;assets/certificates/BioResearch Academy Certificate.jpeg&quot;, &quot;assets/certificates/Aqua Science Certificate.jpg&quot;, &quot;assets/science_fairs/pic3.jpeg&quot;], &quot;desc&quot;: &quot;Completed hands-on laboratory certifications in recombinant DNA cloning, PCR amplification, agarose gel electrophoresis, and spectrophotometric protein assays.&quot;, &quot;highlights&quot;: [&quot;Hands-on sterile technique, micropipetting, and bacterial transformation&quot;, &quot;Spectrophotometry validation of heavy metal adsorption curves in water samples&quot;, &quot;Empirical scientific methodology applied to biochar filtration research&quot;], &quot;tags&quot;: [&quot;#WetBench&quot;, &quot;#MolecularBiology&quot;, &quot;#Biochemistry&quot;, &quot;#LabCertified&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/certificates/BioResearch Academy Certificate.jpeg" alt="BioResearch Academy Wet-Bench Molecular Biology" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">Wet Bench</span><span class="card-image-pill pill-amber">Biochem</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>WPI FLL US Open World Team</h4>
-              <p>International championship delegation at Worcester Polytechnic Institute.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Biomedical &amp; AI</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">BioResearch Academy Wet-Bench Molecular Biology</h3>
+              <p class="card-description">Completed hands-on laboratory certifications in recombinant DNA cloning, PCR amplification, agarose gel electrophoresis, and spectrophotometric protein assays.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 10 - wpi award.jpg" data-zoom-title="World Finalist &bull; Robot Design" data-zoom-desc="Accepting Robot Design Award Finalist honor among 108 world teams." data-zoom-badge="World Finalist" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">World Finalist</span>
-              <img src="assets/robotics/pic 10 - wpi award.jpg" alt="World Finalist &bull; Robot Design" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="monivitals" data-project='{&quot;title&quot;: &quot;MoniVitals: Remote Patient Telemetry Platform&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_monivitals-market.webp&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_monivitals-market.webp&quot;, &quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;, &quot;assets/monivitals/20260829_084028.jpg&quot;], &quot;desc&quot;: &quot;A low-cost, portable vitals monitoring station and companion cloud web app providing rapid SpO2, pulse rate, and temperature readings for underserved communities.&quot;, &quot;highlights&quot;: [&quot;Full hardware-software integration: ESP32, MAX30102 PPG sensor, OLED screen&quot;, &quot;Built responsive clinician telemetry dashboard with automated anomaly alerts&quot;, &quot;Field-tested in local community screening events across Mercer County&quot;, &quot;Targeting accessible healthcare access for rural and elderly populations&quot;], &quot;tags&quot;: [&quot;#MoniVitals&quot;, &quot;#HealthTech&quot;, &quot;#Telehealth&quot;, &quot;#HardwareApp&quot;, &quot;#Community&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_monivitals-market.webp" alt="MoniVitals: Remote Patient Telemetry Platform" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">HealthTech</span><span class="card-image-pill pill-accent">Patent</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>World Finalist &bull; Robot Design</h4>
-              <p>Accepting Robot Design Award Finalist honor among 108 world teams.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">MoniVitals</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">MoniVitals: Remote Patient Telemetry Platform</h3>
+              <p class="card-description">A low-cost, portable vitals monitoring station and companion cloud web app providing rapid SpO2, pulse rate, and temperature readings for underserved communities.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 11 - WPI goodies.jpg" data-zoom-title="WPI International Pit &amp; Visitors" data-zoom-desc="Sharing code architecture with teams from over 40 countries." data-zoom-badge="Global Exchange" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Global Exchange</span>
-              <img src="assets/robotics/pic 11 - WPI goodies.jpg" alt="WPI International Pit &amp; Visitors" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="monivitals" data-project='{&quot;title&quot;: &quot;Community Field Screening &amp; Senior Care Deployment&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;images&quot;: [&quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;assets/monivitals/20260829_100506_1_.jpg&quot;, &quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;assets/monivitals/20260829_094941_1_.jpg&quot;], &quot;desc&quot;: &quot;Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.&quot;, &quot;highlights&quot;: [&quot;Conducted direct user experience testing with seniors aged 65-90&quot;, &quot;Optimized font sizing, contrast, and voice-assisted telemetry readings for accessibility&quot;, &quot;Logged zero hardware failures over 8 consecutive hours of outdoor community testing&quot;, &quot;Gathered physician and nurse practitioner feedback on triage alert thresholds&quot;], &quot;tags&quot;: [&quot;#CommunityHealth&quot;, &quot;#FieldTesting&quot;, &quot;#ElderCare&quot;, &quot;#PublicHealth&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/monivitals/20260829_100521.jpg" alt="Community Field Screening &amp; Senior Care Deployment" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">Elder Care</span><span class="card-image-pill pill-navy">Sensors</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>WPI International Pit &amp; Visitors</h4>
-              <p>Sharing code architecture with teams from over 40 countries.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">MoniVitals</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Community Field Screening &amp; Senior Care Deployment</h3>
+              <p class="card-description">Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/robotics/pic 14 - On the board 2.JPG" data-zoom-title="Field Table Precision Scoring" data-zoom-desc="Consistent scoring alignment on complex mission objectives." data-zoom-badge="Field Table" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Field Table</span>
-              <img src="assets/robotics/pic 14 - On the board 2.JPG" alt="Field Table Precision Scoring" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="monivitals" data-project='{&quot;title&quot;: &quot;Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;images&quot;: [&quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;assets/monivitals/20260829_084028.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;, &quot;assets/ref_images/projects_monivitals-market.webp&quot;], &quot;desc&quot;: &quot;Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.&quot;, &quot;highlights&quot;: [&quot;CAD modeling in Fusion 360 with ergonomic fingertip alignment and light baffling&quot;, &quot;I2C bus multiplexing running on ESP32 with power-saving sleep modes&quot;, &quot;Secure Bluetooth Low Energy GATT profile broadcasting encrypted telemetry&quot;, &quot;Fabricated multi-revision PCB prototype for robust handheld portability&quot;], &quot;tags&quot;: [&quot;#EmbeddedSystems&quot;, &quot;#ESP32&quot;, &quot;#HardwareCAD&quot;, &quot;#PCB&quot;, &quot;#IoT&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/monivitals/20260829_084022.jpg" alt="Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-amber">AWD</span><span class="card-image-pill pill-primary">Telemetry</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Field Table Precision Scoring</h4>
-              <p>Consistent scoring alignment on complex mission objectives.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">MoniVitals</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller</h3>
+              <p class="card-description">Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: MONIVITALS.COM & LIVE COMMUNITY DEMONSTRATION -->
-    <section class="deep-dive-section" id="monivitals" style="background: #FAFBF9; border-top: 1px solid rgba(19,53,38,0.08); border-bottom: 1px solid rgba(19,53,38,0.08);">
-      <div class="container">
-        <div class="section-header-block">
-          <span class="section-meta-label">Telehealth Innovation &bull; Field Validated</span>
-          <h2 class="deep-dive-title">MoniVitals.com &bull; Live Community Telemetry Testing</h2>
-          <p class="deep-dive-subtitle">
-            Remote vital signs monitoring platform tested live with seniors and community members at the local Farmers Market, providing instant telemetry triage.
-          </p>
-        </div>
-
-        <div class="feature-two-col" style="margin-bottom: 32px;">
-          <div class="feature-col-text">
-            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--c-dark-slate); margin-bottom: 12px;">Real-World Field Testing &amp; Patient Engagement</h3>
-            <p style="font-size: 0.98rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 14px;">
-              MoniVitals bridges the gap between complex hospital telemetry and accessible community care. Aadya brought the functioning hardware station to the local community Farmers Market, conducting live vital signs assessments (pulse, SpO2, blood pressure) for dozens of residents, verifying clinical triage algorithms in uncontrolled ambient conditions.
-            </p>
-            <p style="font-size: 0.95rem; line-height: 1.65; color: var(--text-muted);">
-              The system features automated risk stratification: readings are categorized into green, amber, and red alert tiers, notifying designated caregivers through SMS when anomalous patterns are detected.
-            </p>
-          </div>
-          <div class="feature-col-aside" style="background: #FFFFFF; border: 1px solid rgba(19,53,38,0.12); border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(10,34,24,0.04);">
-            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c-health, #2B7A78); margin-bottom: 8px;">Clinical Telemetry Features</div>
-            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; font-size: 0.92rem; color: var(--text-dark);">
-              <li>&#9656; <strong>Multi-Sensor Fusion:</strong> Photoplethysmography &amp; optical SpO2 probes</li>
-              <li>&#9656; <strong>Live Community Kiosk:</strong> 50+ residents tested in field deployment</li>
-              <li>&#9656; <strong>Threshold Alert Pipeline:</strong> Immediate caregiver SMS dispatch</li>
-              <li>&#9656; <strong>Zero-Barrier Interface:</strong> Large touch typography designed for seniors</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 6-Photo MoniVitals Farmers Market Live Gallery -->
-        <div class="photo-gallery-grid grid-3">
-          <div class="photo-gallery-card" data-zoom-src="assets/monivitals/pic_42.jpeg" data-zoom-title="Live Demonstration Station" data-zoom-desc="Aadya Agarwal presenting MoniVitals at the community demonstration kiosk." data-zoom-badge="Field Deployment" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Field Deployment</span>
-              <img src="assets/monivitals/pic_42.jpeg" alt="Live Demonstration Station" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="community" data-project='{&quot;title&quot;: &quot;Mercer County Hunger Relief &amp; Meal Packaging Drives&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;assets/community/Copy of cd - boxes - pic5.jpg&quot;, &quot;assets/community/Copy of cd - ah- group pic1.jpg&quot;, &quot;assets/community/Candy donation boxes at AoPs - pic2.jpg&quot;, &quot;assets/certificates/STEP Meals Packaging.jpeg&quot;], &quot;desc&quot;: &quot;Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.&quot;, &quot;highlights&quot;: [&quot;Mobilized 150+ youth and student volunteers for regional meal packaging&quot;, &quot;Coordinated logistics with Mercer County food banks and community shelters&quot;, &quot;Organized annual holiday candy and non-perishable drives for local children&quot;, &quot;Direct community leadership recognized by local and state representatives&quot;], &quot;tags&quot;: [&quot;#HungerRelief&quot;, &quot;#CivicLeadership&quot;, &quot;#YouthVolunteering&quot;, &quot;#Community&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_hunger-donation_framed.jpg" alt="Mercer County Hunger Relief &amp; Meal Packaging Drives" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">LEO Club</span><span class="card-image-pill pill-accent">500+ lbs</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Live Demonstration Station</h4>
-              <p>Aadya Agarwal presenting MoniVitals at the community demonstration kiosk.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">School &amp; Community</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Mercer County Hunger Relief &amp; Meal Packaging Drives</h3>
+              <p class="card-description">Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/monivitals/pic_10.jpeg" data-zoom-title="Interactive Clinical Triage" data-zoom-desc="Demonstrating vital signs monitoring to community members." data-zoom-badge="Live Testing" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Live Testing</span>
-              <img src="assets/monivitals/pic_10.jpeg" alt="Interactive Clinical Triage" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="community" data-project='{&quot;title&quot;: &quot;Senior Living Center Technology &amp; Musical Companionship&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;assets/community/Copy of cd - boxes - pic5.jpg&quot;, &quot;assets/community/Copy of cd - aops - pic 4.jpg&quot;, &quot;assets/monivitals/20260829_100521.jpg&quot;], &quot;desc&quot;: &quot;Weekly volunteer sessions at Artis Senior Living, conducting smartphone/tablet digital literacy workshops, classical music therapy recitals, and intergenerational storytelling.&quot;, &quot;highlights&quot;: [&quot;Conducted one-on-one digital literacy sessions helping seniors connect with family&quot;, &quot;Performed solo classical flute and piano pieces tailored for cognitive memory therapy&quot;, &quot;Created handmade holiday cards and seasonal art gifts for memory-care residents&quot;, &quot;Recognized by Artis Senior Living staff for compassionate intergenerational service&quot;], &quot;tags&quot;: [&quot;#ElderCare&quot;, &quot;#MusicTherapy&quot;, &quot;#DigitalLiteracy&quot;, &quot;#ArtisLiving&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_senior-center_framed.jpg" alt="Senior Living Center Technology &amp; Musical Companionship" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">Senior Care</span><span class="card-image-pill pill-plum">Therapy</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Interactive Clinical Triage</h4>
-              <p>Demonstrating vital signs monitoring to community members.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">School &amp; Community</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Senior Living Center Technology &amp; Musical Companionship</h3>
+              <p class="card-description">Weekly volunteer sessions at Artis Senior Living, conducting smartphone/tablet digital literacy workshops, classical music therapy recitals, and intergenerational storytelling.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/monivitals/pic_14.jpeg" data-zoom-title="Telemetry Dashboard Review" data-zoom-desc="Analyzing real-time sensor streams and automated triage thresholds." data-zoom-badge="Telemetry UI" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Telemetry UI</span>
-              <img src="assets/monivitals/pic_14.jpeg" alt="Telemetry Dashboard Review" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="community" data-project='{&quot;title&quot;: &quot;New Jersey Legislative Commendation &amp; Civic Supply Drives&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/community/Sock Drive - NJ Assembly Woman House.png&quot;, &quot;images&quot;: [&quot;assets/community/Sock Drive - NJ Assembly Woman House.png&quot;, &quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;assets/certificates/Service Award - NJ State Assembly.jpeg&quot;, &quot;assets/community/Copy of cd - flyer.jpg&quot;, &quot;assets/community/Copy of cd - ah- group pic1.jpg&quot;], &quot;desc&quot;: &quot;Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.&quot;, &quot;highlights&quot;: [&quot;Collected and distributed over 1,200 pairs of thermal socks and winter essentials&quot;, &quot;Coordinated drop-off hubs at local schools, libraries, and community centers&quot;, &quot;Formal legislative resolution presented by NJ State Assemblywoman&quot;, &quot;Demonstrated sustainable youth civic engagement model&quot;], &quot;tags&quot;: [&quot;#CivicImpact&quot;, &quot;#NJLegislature&quot;, &quot;#MutualAid&quot;, &quot;#CommunityAction&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/community/Sock Drive - NJ Assembly Woman House.png" alt="New Jersey Legislative Commendation &amp; Civic Supply Drives" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">NJ Assembly</span><span class="card-image-pill pill-accent">Relief</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Telemetry Dashboard Review</h4>
-              <p>Analyzing real-time sensor streams and automated triage thresholds.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">School &amp; Community</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">New Jersey Legislative Commendation &amp; Civic Supply Drives</h3>
+              <p class="card-description">Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/monivitals/pic_21.jpeg" data-zoom-title="Senior Citizen Health Monitoring" data-zoom-desc="Testing non-invasive pulse and oxygen telemetry with senior residents." data-zoom-badge="Patient Care" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Patient Care</span>
-              <img src="assets/monivitals/pic_21.jpeg" alt="Senior Citizen Health Monitoring" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="writing" data-project='{&quot;title&quot;: &quot;Classical Piano &amp; Carnegie Hall / Manhattan School Recitals&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_piano-manhattan-school.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_piano-manhattan-school.jpg&quot;, &quot;assets/writing_arts/Copy of piano award.png&quot;, &quot;assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg&quot;, &quot;assets/music/image_1.jpeg&quot;, &quot;assets/music/image_5.jpeg&quot;], &quot;desc&quot;: &quot;Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performances at Weill Recital Hall at Carnegie Hall and Manhattan School of Music.&quot;, &quot;highlights&quot;: [&quot;Grand Prize Recitalist at Music-Fest International Rising Talent Festival&quot;, &quot;Solo performance at Weill Recital Hall at Carnegie Hall, New York&quot;, &quot;Masterclass and recital appearances at Greenfield Hall, Manhattan School of Music&quot;, &quot;Repertoire featuring Chopin Nocturnes, Bach Inventions, and Debussy Preludes&quot;], &quot;tags&quot;: [&quot;#ClassicalPiano&quot;, &quot;#CarnegieHall&quot;, &quot;#MusicFest&quot;, &quot;#ManhattanSchool&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_piano-manhattan-school.jpg" alt="Classical Piano &amp; Carnegie Hall / Manhattan School Recitals" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">Carnegie Hall</span><span class="card-image-pill pill-accent">Grand Prize</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Senior Citizen Health Monitoring</h4>
-              <p>Testing non-invasive pulse and oxygen telemetry with senior residents.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Writing &amp; Arts</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">Classical Piano &amp; Carnegie Hall / Manhattan School Recitals</h3>
+              <p class="card-description">Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performances at Weill Recital Hall at Carnegie Hall and Manhattan School of Music.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/monivitals/pic_31.jpeg" data-zoom-title="Health Kiosk Consultation" data-zoom-desc="Explaining clinical telemetry architecture and alert pipelines." data-zoom-badge="Public Health" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">Public Health</span>
-              <img src="assets/monivitals/pic_31.jpeg" alt="Health Kiosk Consultation" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="writing" data-project='{&quot;title&quot;: &quot;1st Chair Flutist &amp; Wind Ensemble Section Leader&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/writing_arts/flute_performance.png&quot;, &quot;images&quot;: [&quot;assets/writing_arts/flute_performance.png&quot;, &quot;assets/writing_arts/Aadya Flute Pic1.png&quot;, &quot;assets/certificates/NJMTA Flute Honors Recital.jpeg&quot;, &quot;assets/music/Flute_pic_2.jpg&quot;, &quot;assets/music/Flute_pic_3.png&quot;], &quot;desc&quot;: &quot;Serving as 1st Chair Flutist in competitive school and regional wind ensembles, leading section rehearsals and performing challenging symphonic literature.&quot;, &quot;highlights&quot;: [&quot;1st Chair Flutist in audition-based competitive wind ensemble&quot;, &quot;Led weekly woodwind sectional rehearsals focusing on intonation and rhythm&quot;, &quot;Soloist in regional youth orchestra winter and spring concert festivals&quot;, &quot;Performed therapeutic flute pieces for memory-care residents at senior centers&quot;], &quot;tags&quot;: [&quot;#Flute&quot;, &quot;#Woodwinds&quot;, &quot;#Ensemble&quot;, &quot;#FirstChair&quot;, &quot;#Symphony&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/writing_arts/flute_performance.png" alt="1st Chair Flutist &amp; Wind Ensemble Section Leader" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">1st Chair</span><span class="card-image-pill pill-plum">Honors</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>Health Kiosk Consultation</h4>
-              <p>Explaining clinical telemetry architecture and alert pipelines.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Writing &amp; Arts</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">1st Chair Flutist &amp; Wind Ensemble Section Leader</h3>
+              <p class="card-description">Serving as 1st Chair Flutist in competitive school and regional wind ensembles, leading section rehearsals and performing challenging symphonic literature.</p>
             </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/monivitals/pic_55.jpeg" data-zoom-title="System Architecture Walkthrough" data-zoom-desc="Demonstrating cloud data transmission to local healthcare advocates." data-zoom-badge="System Architecture" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 4/3;">
-              <span class="photo-gallery-badge">System Architecture</span>
-              <img src="assets/monivitals/pic_55.jpeg" alt="System Architecture Walkthrough" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
+          </article>
+          <article class="portfolio-card" data-category="writing" data-project='{&quot;title&quot;: &quot;John Locke Commendation &amp; Published Creative Writing&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_john-locke_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_john-locke_framed.jpg&quot;, &quot;assets/certificates/John Locke 2026 - High Commendation.jpg&quot;, &quot;assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg&quot;, &quot;assets/writing_arts/artwork_portrait.jpg&quot;, &quot;assets/writing_arts/artwork_bird.jpg&quot;], &quot;desc&quot;: &quot;Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.&quot;, &quot;highlights&quot;: [&quot;Commended in John Locke Global Essay Competition from 19,000+ international entries&quot;, &quot;Recipient of school annual English and Humanities literary prize&quot;, &quot;Poetry published in national youth anthologies exploring nature and equity&quot;, &quot;Contributed essays on ethical technology and environmental stewardship&quot;], &quot;tags&quot;: [&quot;#JohnLocke&quot;, &quot;#Essayist&quot;, &quot;#Poetry&quot;, &quot;#CreativeWriting&quot;, &quot;#Humanities&quot;]}'>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ref_images/projects_john-locke_framed.jpg" alt="John Locke Commendation &amp; Published Creative Writing" class="card-thumb-img" loading="lazy">
+              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">John Locke</span><span class="card-image-pill pill-amber">Essay Prize</span></div>
             </div>
-            <div class="photo-gallery-caption">
-              <h4>System Architecture Walkthrough</h4>
-              <p>Demonstrating cloud data transmission to local healthcare advocates.</p>
+            <div class="card-body">
+              <div class="card-meta-row">
+                <span class="card-category-label">Writing &amp; Arts</span>
+                <span class="card-action-badge">Read more</span>
+              </div>
+              <h3 class="card-title">John Locke Commendation &amp; Published Creative Writing</h3>
+              <p class="card-description">Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: MIT SOLVE IOT BUOY & OCEAN ACIDIFICATION -->
-    <section class="deep-dive-section" id="mitSolve">
-      <div class="container">
-        <div class="section-header-block">
-          <span class="section-meta-label">Eco-Engineering &bull; National Top 5</span>
-          <h2 class="deep-dive-title">MIT Solve Top 5 National Winner &bull; Biochar IoT Buoy &amp; Ocean Remediation</h2>
-          <p class="deep-dive-subtitle">
-            Porous matrix filtration buoy combining solar-powered telemetry with activated biochar for real-time pH restoration and marine heavy metal absorption.
-          </p>
-        </div>
-
-        <div class="photo-gallery-grid grid-4">
-          <div class="photo-gallery-card" data-zoom-src="assets/science_fairs/Device_Plan.jpg" data-zoom-title="Continuous Flow Filtration Blueprint" data-zoom-desc="CAD schematic of multi-depth water routing and activated biochar chambers." data-zoom-badge="Engineering CAD" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 1/1;">
-              <span class="photo-gallery-badge">Engineering CAD</span>
-              <img src="assets/science_fairs/Device_Plan.jpg" alt="Continuous Flow Filtration Blueprint" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
-            </div>
-            <div class="photo-gallery-caption">
-              <h4>Continuous Flow Filtration Blueprint</h4>
-              <p>CAD schematic of multi-depth water routing and activated biochar chambers.</p>
-            </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/science_fairs/Biochars_-_B1_and_B2.jpg" data-zoom-title="Engineered Biochar Samples" data-zoom-desc="Comparative pyrolysis matrices synthesized for heavy metal extraction." data-zoom-badge="Material Science" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 1/1;">
-              <span class="photo-gallery-badge">Material Science</span>
-              <img src="assets/science_fairs/Biochars_-_B1_and_B2.jpg" alt="Engineered Biochar Samples" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
-            </div>
-            <div class="photo-gallery-caption">
-              <h4>Engineered Biochar Samples</h4>
-              <p>Comparative pyrolysis matrices synthesized for heavy metal extraction.</p>
-            </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/science_fairs/Project_-_Neutralizing_Ocean_Acidification_-_Experimental_Results_2.jpg" data-zoom-title="Empirical Titration Results" data-zoom-desc="Neutralization curves showing 89.4% heavy metal extraction efficiency." data-zoom-badge="Empirical Data" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 1/1;">
-              <span class="photo-gallery-badge">Empirical Data</span>
-              <img src="assets/science_fairs/Project_-_Neutralizing_Ocean_Acidification_-_Experimental_Results_2.jpg" alt="Empirical Titration Results" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
-            </div>
-            <div class="photo-gallery-caption">
-              <h4>Empirical Titration Results</h4>
-              <p>Neutralization curves showing 89.4% heavy metal extraction efficiency.</p>
-            </div>
-          </div>
-          <div class="photo-gallery-card" data-zoom-src="assets/certificates/Day of AI Certificate - MIT RAISE.jpeg" data-zoom-title="MIT Solve Day of AI Recognition" data-zoom-desc="Top 5 National Winner honor presented at MIT RAISE summit." data-zoom-badge="MIT National Honor" data-zoom-type="image">
-            <div class="photo-gallery-thumb" style="aspect-ratio: 1/1;">
-              <span class="photo-gallery-badge">MIT National Honor</span>
-              <img src="assets/certificates/Day of AI Certificate - MIT RAISE.jpeg" alt="MIT Solve Day of AI Recognition" loading="lazy">
-              <span class="photo-gallery-zoom-hint" title="Click to enlarge &amp; inspect">&plus;</span>
-            </div>
-            <div class="photo-gallery-caption">
-              <h4>MIT Solve Day of AI Recognition</h4>
-              <p>Top 5 National Winner honor presented at MIT RAISE summit.</p>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
   </main>
-<footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <img src="assets/logo.png" alt="Aadya Agarwal Monogram Logo" width="40" height="40" style="border-radius: 6px; background: #fff; padding: 2px;">
-            <div>
-              <div style="font-family: var(--font-serif); font-size: 1.35rem; font-style: italic; color: #FFFFFF;">Aadya Agarwal</div>
-              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #B4C8C4;">The Lawrenceville School &bull; Class of 2029</div>
-            </div>
-          </div>
-          <p style="color: #B4C8C4; font-size: 0.88rem; line-height: 1.6; max-width: 380px;">
-            Academic and engineering portfolio integrating autonomous robotics programming, empirical biochar water filtration, clinical telemedicine AI, and competitive athletics.
-          </p>
-        </div>
 
-        <div>
-          <div class="footer-col-title">Research &amp; Engineering</div>
-          <ul class="footer-links">
-            <li><a href="projects.html#robotics">FTC Autonomous Robotics</a></li>
-            <li><a href="research.html#biochar">American Biochar Co. Research</a></li>
-            <li><a href="https://www.monivitals.com" target="_blank">MoniVitals.com Platform</a></li>
-            <li><a href="research.html#stanford">Stanford AIMI AI Fellowship</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-col-title">Expression &amp; Athletics</div>
-          <ul class="footer-links">
-            <li><a href="impact.html#leo">Social Impact &amp; LEO Club</a></li>
-            <li><a href="beyond-stem.html#poetry">Published Poetry &amp; Oratory</a></li>
-            <li><a href="beyond-stem.html#music">Classical Repertoire &amp; Flute</a></li>
-            <li><a href="beyond-stem.html#athletics">Tennis Captain &amp; Athletics</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-col-title">Admissions &amp; Verification</div>
-          <ul class="footer-links">
-            <li><a href="about.html">About &amp; Personal Journey</a></li>
-            <li><a href="contact.html">Counselor &amp; Verification</a></li>
-            <li><a href="https://github.com" target="_blank">GitHub Engineering Profile</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom-bar">
-        <div>&copy; 2026 Aadya Agarwal. All Verified Academic Achievements &amp; Publications Documented.</div>
-        <div>The Lawrenceville School &bull; Admissions Portfolio</div>
-      </div>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Aadya Agarwal &bull; The Lawrenceville School &bull; Eco-engineer &amp; Equitable Healthpreneur.</p>
+      <a href="#top" class="footer-back-to-top">
+        <span>Back to top</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      </a>
     </div>
   </footer>
-
-  <!-- Lightbox Modal for Authentic Photos & Videos -->
-  <div id="evidenceModal" class="evidence-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="evidence-modal-backdrop" id="modalBackdrop"></div>
-    <div class="evidence-modal-container">
-      <div class="evidence-modal-header">
-        <div class="evidence-modal-title-group">
-          <span class="evidence-modal-badge" id="modalBadge">Document</span>
-          <h3 class="evidence-modal-title" id="modalTitle">Evidence Preview</h3>
+  <!-- Interactive Detail Modal with Bottom Image Slider (No Captions, No Headings) -->
+  <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-content-area">
+        <div class="modal-badge-row">
+          <span id="modalCategory" class="modal-category"></span>
         </div>
-        <button class="evidence-modal-close" id="modalClose" aria-label="Close modal">&times;</button>
-      </div>
-      <div class="evidence-modal-body" id="modalBody"></div>
-      <div class="evidence-modal-footer">
-        <span class="evidence-modal-caption" id="modalCaption"></span>
-        <a href="#" id="modalDirectLink" target="_blank" rel="noopener noreferrer" class="evidence-modal-download-btn">Open Full Resolution &rarr;</a>
+        <h2 id="modalTitle" class="modal-title"></h2>
+        <p id="modalDesc" class="modal-description"></p>
+        
+        <div id="modalHighlightsWrap" class="modal-highlights-wrap">
+          <ul id="modalHighlights" class="modal-highlights-list"></ul>
+        </div>
+        
+        <div id="modalTags" class="modal-tags"></div>
+        
+        <!-- Bottom Project Image Slider (Pure images without caption or heading) -->
+        <div id="modalSlider" class="modal-image-slider">
+          <div class="modal-slider-viewport">
+            <div id="modalSliderTrack" class="modal-slider-track"></div>
+            
+            <button type="button" class="modal-slider-arrow prev" id="modalSliderPrev" aria-label="Previous image">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="modal-slider-arrow next" id="modalSliderNext" aria-label="Next image">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          
+          <div id="modalSliderDots" class="modal-slider-dots"></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <script src="script.js?v=14"></script>
+  <script src="modern-script.js?v=7"></script>
 </body>
 </html>

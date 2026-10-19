@@ -632,10 +632,10 @@ print("Generated impact.html successfully")
 # ==============================================================================
 beyond_head = header_block.replace(
     '<title>Aadya Agarwal — Autonomous Systems, Eco-Engineering &amp; Applied Research</title>',
-    '<title>Beyond STEM: Humanities, Arts &amp; Athletics — Aadya Agarwal</title>'
+    '<title>Beyond STEM: Humanities &amp; Fine Arts — Aadya Agarwal</title>'
 ).replace(
     'content="Official portfolio of Aadya Agarwal.',
-    'content="Humanities, creative writing, music, and athletics: Oxford John Locke Commendation, 3x published poetry, Greenfield Hall recital, and varsity tennis captaincy.'
+    'content="Humanities, creative writing, and music: Oxford John Locke Commendation, 3x published poetry, and Greenfield Hall recital.'
 )
 
 beyond_body = """  <main id="mainContent">
@@ -643,10 +643,10 @@ beyond_body = """  <main id="mainContent">
     <section class="inner-page-hero">
       <div class="container">
         <div class="inner-hero-header">
-          <span class="inner-hero-eyebrow">Humanities, Arts &bull; Varsity Athletics</span>
-          <h1 class="inner-hero-title">Moral Philosophy, <span class="italic-serif">Poetic Form</span> &amp; Athletic Grit</h1>
+          <span class="inner-hero-eyebrow">Humanities &bull; Fine Arts &bull; Oratory</span>
+          <h1 class="inner-hero-title">Moral Philosophy, <span class="italic-serif">Poetic Form</span> &amp; Classical Art</h1>
           <p class="inner-hero-lead">
-            Exploring moral agency in autonomous algorithms through the Oxford John Locke Institute (Top 3% worldwide), publishing three award-winning poems, performing classical piano and 1st chair flute, and captaining competitive tennis.
+            Exploring moral agency in autonomous algorithms through the Oxford John Locke Institute (Top 3% worldwide), publishing three award-winning poems, and performing classical piano and 1st chair flute.
           </p>
 
           <div class="inner-hero-metrics">
@@ -666,9 +666,9 @@ beyond_body = """  <main id="mainContent">
               <div class="inner-metric-sub">Greenfield Hall Chopin recital</div>
             </div>
             <div class="inner-metric-tile">
-              <div class="inner-metric-num">Captain</div>
-              <div class="inner-metric-label">Varsity Athletics</div>
-              <div class="inner-metric-sub">Tennis captain &amp; PVA volleyball</div>
+              <div class="inner-metric-num">1st Chair</div>
+              <div class="inner-metric-label">Woodwinds</div>
+              <div class="inner-metric-sub">Concert Band Solo Flute</div>
             </div>
           </div>
         </div>
@@ -803,51 +803,6 @@ they stay right here, close to the humble ground.</div>
                 <span class="case-metric-desc">Classical Repertoire</span>
               </div>
             </div>
-            <div class="case-actions">
-              <a href="#athletics" class="arrow-link">
-                <span>View varsity athletics</span>
-                <span class="arrow" aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Beyond 4: Competitive Varsity Athletics -->
-    <section class="editorial-case-study" id="athletics" style="background: rgba(239, 232, 222, 0.4);">
-      <div class="container">
-        <div class="case-study-grid reversed">
-          <div class="case-study-copy">
-            <p class="case-kicker">04 &bull; Competitive Athletics &bull; Leadership</p>
-            <h2 class="case-title">Tennis Captaincy, Volleyball &amp; Mountain Grit</h2>
-            <p class="case-subtitle">Leading as Advanced Tennis Team Captain, PVA volleyball middle hitter, and competitive skier.</p>
-            <p class="case-body">
-              Athleticism is the physical mirror to intellectual discipline. Serving as <strong>Captain of the Advanced Tennis Team</strong>, Aadya competed across the USTA junior circuit, emphasizing baseline strategic patience and leadership under tournament pressure. She competes as a middle hitter for the <strong>Princeton Volleyball Academy (PVA)</strong>, and challenges alpine terrain in downhill skiing and varsity lacrosse.
-            </p>
-            <div class="case-metrics-bar">
-              <div class="case-metric-cell">
-                <span class="case-metric-num">Captain</span>
-                <span class="case-metric-desc">Tennis Team</span>
-              </div>
-              <div class="case-metric-cell">
-                <span class="case-metric-num">PVA Volleyball</span>
-                <span class="case-metric-desc">Middle Hitter</span>
-              </div>
-              <div class="case-metric-cell">
-                <span class="case-metric-num">Alpine Skiing</span>
-                <span class="case-metric-desc">Downhill Racing</span>
-              </div>
-            </div>
-            <div class="case-actions">
-              <a href="about.html" class="arrow-link">
-                <span>View full student bio</span>
-                <span class="arrow" aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-          <div class="case-photo-frame evidence-link" data-src="assets/athletics/tennis_action.jpg" data-title="Advanced Tennis Captaincy" data-badge="Athletics" data-caption="USTA junior circuit match and leadership on court.">
-            <img src="assets/athletics/tennis_action.jpg" alt="Aadya Tennis Action">
           </div>
         </div>
       </div>

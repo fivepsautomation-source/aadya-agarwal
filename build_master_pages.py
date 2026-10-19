@@ -883,10 +883,10 @@ print("Master impact.html generated successfully!")
 # ==============================================================================
 beyond_head = header_block.replace(
     '<title>Aadya Agarwal — Autonomous Systems, Eco-Engineering &amp; Applied Research</title>',
-    '<title>Beyond STEM: Humanities, Arts &amp; Athletics — Aadya Agarwal</title>'
+    '<title>Beyond STEM: Humanities &amp; Fine Arts — Aadya Agarwal</title>'
 ).replace(
     'content="Official portfolio of Aadya Agarwal.',
-    'content="Oxford John Locke High Commendation, HIR Bronze Medal, Scholastic Silver Keys, Music-Fest Grand Prize, and varsity tennis captaincy.'
+    'content="Oxford John Locke High Commendation, HIR Bronze Medal, Scholastic Silver Keys, and Music-Fest Grand Prize.'
 )
 
 beyond_body = """  <main id="mainContent">
@@ -894,10 +894,10 @@ beyond_body = """  <main id="mainContent">
     <section class="inner-page-hero">
       <div class="container">
         <div class="inner-hero-header">
-          <span class="inner-hero-eyebrow">Humanities, Arts &bull; Varsity Athletics</span>
+          <span class="inner-hero-eyebrow">Humanities &bull; Fine Arts &bull; Oratory</span>
           <h1 class="inner-hero-title">Moral Philosophy, <span class="italic-serif">Poetic Form</span> &amp; Classical Art</h1>
           <p class="inner-hero-lead">
-            Awarded Global High Commendation in the Oxford John Locke Essay Competition (Top 3% worldwide), Bronze Medal in the Harvard International Review, 2 Scholastic Silver Keys in Poetry, Grand Prize in the Music-Fest International Rising Talent Festival, and captain of competitive tennis.
+            Awarded Global High Commendation in the Oxford John Locke Essay Competition (Top 3% worldwide), Bronze Medal in the Harvard International Review, 2 Scholastic Silver Keys in Poetry, and Grand Prize in the Music-Fest International Rising Talent Festival.
           </p>
 
           <div class="inner-hero-metrics">
@@ -1131,44 +1131,6 @@ they stay right here, close to the humble ground.</div>
       </div>
     </section>
 
-    <!-- Beyond 5: Competitive Varsity Athletics -->
-    <section class="editorial-case-study" id="athletics">
-      <div class="container">
-        <div class="case-study-grid">
-          <div class="case-photo-frame evidence-link" data-src="assets/athletics/tennis_action.jpg" data-title="Advanced Tennis Captaincy" data-badge="Athletics" data-caption="Aadya competing in USTA junior circuit tennis tournament.">
-            <img src="assets/athletics/tennis_action.jpg" alt="Aadya Tennis Action">
-          </div>
-          <div class="case-study-copy">
-            <p class="case-kicker">05 &bull; Competitive Athletics &bull; Grit &amp; Teamwork</p>
-            <h2 class="case-title">Advanced Tennis Captain, PVA Volleyball &amp; Skiing</h2>
-            <p class="case-subtitle">Captaincy on the court, competitive club volleyball, downhill skiing, and varsity lacrosse.</p>
-            <p class="case-body">
-              Physical discipline reinforces intellectual endurance. Served as <strong>Captain of the Advanced Tennis Team</strong>, competing across the competitive USTA junior circuit. Competes as a middle hitter for the <strong>Princeton Volleyball Academy (PVA)</strong>, developing agility and defensive timing. Additionally races alpine terrain in downhill skiing and competes on the field in lacrosse.
-            </p>
-            <div class="case-metrics-bar">
-              <div class="case-metric-cell">
-                <span class="case-metric-num">Captain</span>
-                <span class="case-metric-desc">Tennis Team</span>
-              </div>
-              <div class="case-metric-cell">
-                <span class="case-metric-num">PVA Club</span>
-                <span class="case-metric-desc">Middle Hitter</span>
-              </div>
-              <div class="case-metric-cell">
-                <span class="case-metric-num">Alpine Skiing</span>
-                <span class="case-metric-desc">Downhill Racing</span>
-              </div>
-            </div>
-            <div class="case-actions">
-              <a href="about.html" class="arrow-link">
-                <span>View full student bio</span>
-                <span class="arrow" aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 """
 
