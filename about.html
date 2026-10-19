@@ -6,159 +6,431 @@
   <title>About | Aadya Agarwal</title>
   <meta name="description" content="About Aadya Agarwal: High school researcher, competitive robotics lead coder, and eco-engineer at The Lawrenceville School.">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="modern-style.css?v=22">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modern-style.css?v=23">
   <script src="auth.js"></script>
   <style>
-    /* Clean, Editorial About Page Styles */
-    .about-clean-hero {
+    /* "Serious But Cool" Gen Z Editorial Design */
+    :root {
+      --brand-green: #245220;
+      --brand-green-hover: #173814;
+      --brand-sage-light: #eff5ee;
+      --brand-sage-border: rgba(36, 82, 32, 0.16);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    .about-editorial-wrap {
+      padding: 3rem 0 6rem;
+    }
+
+    /* Hero Layout */
+    .about-hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.18fr 0.82fr;
       gap: 3.5rem;
       align-items: center;
-      margin-bottom: 4rem;
+      margin-bottom: 4.5rem;
     }
-    .about-clean-eyebrow {
-      font-size: 0.82rem;
+
+    .editorial-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--brand-sage-light);
+      border: 1px solid var(--brand-sage-border);
+      color: var(--brand-green);
+      font-size: 0.78rem;
       font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #2d6129;
-      margin-bottom: 0.75rem;
-      display: block;
+      margin-bottom: 1.5rem;
     }
-    .about-clean-title {
+
+    .editorial-badge .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    }
+
+    .about-headline {
       font-family: var(--font-display, 'Outfit', sans-serif);
-      font-size: clamp(2.2rem, 3.8vw, 3rem);
-      font-weight: 700;
-      line-height: 1.2;
-      color: #141c15;
-      letter-spacing: -0.025em;
+      font-size: clamp(2.5rem, 4.4vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.14;
+      color: #111a14;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-headline .italic-word {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 600;
+      color: var(--brand-green);
+      letter-spacing: -0.01em;
+      padding-right: 2px;
+    }
+
+    .about-intro-copy {
+      font-size: 1.15rem;
+      line-height: 1.68;
+      color: #3b4c3e;
       margin-bottom: 1.25rem;
+      max-width: 580px;
     }
-    .about-clean-p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: #4a594d;
-      margin-bottom: 1rem;
+
+    .about-intro-sub {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: #5d6f60;
+      margin-bottom: 2.25rem;
+      max-width: 560px;
     }
-    .about-clean-stats {
-      display: flex;
-      gap: 2rem;
-      margin-top: 2rem;
+
+    /* Key Metrics Strip */
+    .hero-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
       padding-top: 1.75rem;
-      border-top: 1px solid rgba(45, 97, 41, 0.15);
-      flex-wrap: wrap;
+      border-top: 1px solid var(--brand-sage-border);
     }
-    .stat-clean-num {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #2d6129;
+
+    .hero-stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-stat-val {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--brand-green);
       line-height: 1.1;
+      font-family: var(--font-display);
     }
-    .stat-clean-txt {
-      font-size: 0.8rem;
+
+    .hero-stat-lbl {
+      font-size: 0.78rem;
+      font-weight: 600;
       color: #64748b;
-      margin-top: 0.25rem;
+      margin-top: 4px;
+      line-height: 1.35;
     }
-    .about-clean-photo-wrap {
-      border-radius: 20px;
+
+    /* Photo Frame */
+    .portrait-card {
+      position: relative;
+      border-radius: 26px;
       overflow: hidden;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
-      border: 1px solid rgba(45, 97, 41, 0.15);
-      background: #f8faf8;
+      background: #ffffff;
+      border: 1px solid var(--brand-sage-border);
+      box-shadow: 
+        0 20px 40px -15px rgba(27, 63, 34, 0.15),
+        0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
     }
-    .about-clean-photo {
+
+    .portrait-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 50px -15px rgba(27, 63, 34, 0.22);
+    }
+
+    .portrait-img {
       width: 100%;
-      height: 480px;
+      height: 500px;
       object-fit: cover;
       object-position: center 18%;
       display: block;
     }
-    .clean-section-heading {
-      font-family: var(--font-display, 'Outfit', sans-serif);
-      font-size: 1.6rem;
+
+    .portrait-caption {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .caption-name {
       font-weight: 700;
+      font-size: 0.9rem;
       color: #141c15;
-      margin-bottom: 1.75rem;
-      letter-spacing: -0.02em;
     }
-    .clean-pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 4rem;
+
+    .caption-loc {
+      font-size: 0.78rem;
+      color: var(--brand-green);
+      font-weight: 600;
     }
-    .clean-pillar-card {
-      background: #ffffff;
-      border: 1px solid rgba(45, 97, 41, 0.15);
-      border-radius: 18px;
-      padding: 1.75rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
-      transition: border-color 0.2s ease, transform 0.2s ease;
-    }
-    .clean-pillar-card:hover {
-      border-color: #2d6129;
-      transform: translateY(-2px);
-    }
-    .clean-pillar-index {
-      font-size: 0.75rem;
-      font-weight: 800;
+
+    /* Section Subheads */
+    .section-eyebrow-cool {
+      font-size: 0.8rem;
+      font-weight: 700;
       letter-spacing: 0.1em;
-      color: #2d6129;
+      text-transform: uppercase;
+      color: var(--brand-green);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .section-title-cool {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      font-weight: 800;
+      color: #111a14;
+      letter-spacing: -0.025em;
+      margin-bottom: 2.25rem;
+    }
+
+    /* Bento Grid */
+    .cool-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.75rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .cool-card {
+      background: #ffffff;
+      border: 1px solid var(--brand-sage-border);
+      border-radius: 22px;
+      padding: 2rem;
+      box-shadow: 0 6px 24px rgba(20, 28, 21, 0.04);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cool-card:hover {
+      border-color: rgba(36, 82, 32, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 34px rgba(27, 63, 34, 0.09);
+    }
+
+    .bento-7 { grid-column: span 7; }
+    .bento-5 { grid-column: span 5; }
+    .bento-6 { grid-column: span 6; }
+    .bento-4 { grid-column: span 4; }
+    .bento-8 { grid-column: span 8; }
+
+    .card-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-green);
       margin-bottom: 0.75rem;
     }
-    .clean-pillar-name {
-      font-size: 1.18rem;
+
+    .card-h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
       font-weight: 700;
       color: #141c15;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
     }
-    .clean-pillar-desc {
+
+    .card-p {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: #4a594d;
+    }
+
+    /* Architecture List */
+    .tech-stack-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .tech-stack-item {
+      padding: 0.85rem 1rem;
+      background: var(--brand-sage-light);
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(36, 82, 32, 0.1);
+    }
+
+    .tech-stack-name {
+      font-weight: 700;
       font-size: 0.92rem;
-      line-height: 1.6;
-      color: #556b57;
+      color: #141c15;
     }
-    .clean-split-section {
+
+    .tech-stack-desc {
+      font-size: 0.8rem;
+      color: #556b57;
+      text-align: right;
+    }
+
+    /* Dual Snapshot Strip */
+    .snapshot-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 4rem;
+      gap: 1rem;
+      margin-top: 0.75rem;
     }
-    .clean-box {
-      background: #ffffff;
-      border: 1px solid rgba(45, 97, 41, 0.15);
-      border-radius: 18px;
-      padding: 2rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+
+    .snap-thumb {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 180px;
+      position: relative;
+      background: #111a14;
     }
-    .clean-list-item {
-      margin-bottom: 1.25rem;
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    .snap-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
     }
-    .clean-list-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
+
+    .snap-thumb:hover img {
+      transform: scale(1.04);
     }
-    .clean-item-title {
+
+    .snap-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 8px 12px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Influences Shelf */
+    .shelf-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .shelf-item {
+      padding: 1.25rem;
+      background: #fbfdfb;
+      border: 1px solid var(--brand-sage-border);
+      border-radius: 16px;
+    }
+
+    .shelf-author {
+      font-size: 0.75rem;
       font-weight: 700;
-      font-size: 1rem;
+      color: var(--brand-green);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+    }
+
+    .shelf-book {
+      font-weight: 700;
+      font-size: 1.05rem;
       color: #141c15;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
     }
-    .clean-item-sub {
-      font-size: 0.88rem;
-      color: #556b57;
+
+    .shelf-takeaway {
+      font-size: 0.84rem;
       line-height: 1.5;
+      color: #556b57;
     }
-    @media (max-width: 900px) {
-      .about-clean-hero, .clean-split-section {
+
+    /* Cool CTA Banner */
+    .cta-banner-cool {
+      background: linear-gradient(135deg, #245220 0%, #153812 100%);
+      border-radius: 24px;
+      padding: 3rem;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 15px 40px -10px rgba(27, 63, 34, 0.4);
+    }
+
+    .cta-title-cool {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-p-cool {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .cta-btn-cool {
+      background: #ffffff;
+      color: #153812;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .cta-btn-cool:hover {
+      background: #eff5ee;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 960px) {
+      .about-hero-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
       }
-      .about-clean-photo {
-        height: 380px;
+      .portrait-img {
+        height: 420px;
+      }
+      .cool-bento-grid {
+        grid-template-columns: 1fr;
+      }
+      .bento-7, .bento-5, .bento-6, .bento-4, .bento-8 {
+        grid-column: span 1;
+      }
+      .shelf-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-banner-cool {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.25rem;
       }
     }
   </style>
@@ -197,123 +469,175 @@
     </div>
   </header>
 
-  <main style="padding-top: 3.5rem; padding-bottom: 5rem;">
+  <main class="about-editorial-wrap">
     <div class="container">
 
-      <!-- 1. EDITORIAL CLEAN HERO -->
-      <section class="about-clean-hero">
+      <!-- 1. HERO SECTION: SERIOUS BUT COOL -->
+      <section class="about-hero-grid">
         <div>
-          <span class="about-clean-eyebrow">About Aadya Agarwal</span>
-          <h1 class="about-clean-title">
-            Building at the intersection of autonomous systems, eco-engineering, and human equity.
+          <div class="editorial-badge">
+            <span class="live-dot"></span>
+            <span>Student Researcher &bull; The Lawrenceville School</span>
+          </div>
+
+          <h1 class="about-headline">
+            Building autonomous code and <span class="italic-word">restoring</span> living systems.
           </h1>
-          <p class="about-clean-p">
-            I am a student at The Lawrenceville School ('29) in New Jersey. My research and engineering work centers on accessible hardware, machine intelligence, and sustainable chemistry that solve tangible community challenges.
-          </p>
-          <p class="about-clean-p">
-            From coding autonomous trajectory algorithms using Pedro Pathing for competitive robotics, to formulating low-cost biochar filters and autonomous solar-powered ocean pH buoys, I believe technical rigor is most meaningful when guided by human empathy.
+
+          <p class="about-intro-copy">
+            Hey, I'm Aadya. I develop closed-loop robotics algorithms, accessible eco-engineering hardware, and preventative healthcare tech calibrated to serve real communities.
           </p>
 
-          <div class="about-clean-stats">
-            <div>
-              <div class="stat-clean-num">#14 in World</div>
-              <div class="stat-clean-txt">WPI US Open Finalist</div>
+          <p class="about-intro-sub">
+            Whether modeling pyrolyzed biochar adsorption isotherms to purify toxic runoff or dialing in Bézier splines on an international robotics field, I believe technical precision only matters when paired with genuine human purpose.
+          </p>
+
+          <div class="hero-stat-row">
+            <div class="hero-stat-item">
+              <span class="hero-stat-val">#14</span>
+              <span class="hero-stat-lbl">World Design Finalist &bull; WPI US Open</span>
             </div>
-            <div>
-              <div class="stat-clean-num">Top 5 National</div>
-              <div class="stat-clean-txt">MIT Solve Winner</div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-val">Top 5</span>
+              <span class="hero-stat-lbl">National Winner &bull; MIT Solve</span>
             </div>
-            <div>
-              <div class="stat-clean-num">Carnegie Hall</div>
-              <div class="stat-clean-txt">Solo Classical Pianist</div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-val">Soloist</span>
+              <span class="hero-stat-lbl">Carnegie Hall &bull; Classical Piano</span>
             </div>
           </div>
         </div>
 
-        <div class="about-clean-photo-wrap">
-          <img src="assets/profile_aadya_horse.jpg" alt="Aadya Agarwal portrait" class="about-clean-photo">
+        <div class="portrait-card">
+          <img src="assets/profile_aadya_horse.jpg" alt="Aadya Agarwal portrait" class="portrait-img" loading="eager">
+          <div class="portrait-caption">
+            <span class="caption-name">Aadya Agarwal</span>
+            <span class="caption-loc">Princeton &bull; Lawrenceville, NJ</span>
+          </div>
         </div>
       </section>
 
-      <!-- 2. CORE FOCUS AREAS -->
+      <!-- 2. BENTO SECTION: THE WORK & THE BLUEPRINT -->
       <section>
-        <h2 class="clean-section-heading">Core Areas of Focus</h2>
-        <div class="clean-pillars-grid">
-          
-          <div class="clean-pillar-card">
-            <div class="clean-pillar-index">01 / ROBOTICS</div>
-            <h3 class="clean-pillar-name">Autonomous Systems</h3>
-            <p class="clean-pillar-desc">
-              Developing Pedro Pathing splines, odometry feedback loops, and Limelight 3G machine vision for FTC robotics competition algorithms.
-            </p>
-          </div>
+        <span class="section-eyebrow-cool">The Blueprint</span>
+        <h2 class="section-title-cool">How I think, build, and operate.</h2>
 
-          <div class="clean-pillar-card">
-            <div class="clean-pillar-index">02 / ECOLOGY</div>
-            <h3 class="clean-pillar-name">Eco-Engineering</h3>
-            <p class="clean-pillar-desc">
-              Researching waste-derived biochar water filtration to remove heavy metals, and building solar-powered autonomous ocean pH buffer buoys.
-            </p>
-          </div>
+        <div class="cool-bento-grid">
 
-          <div class="clean-pillar-card">
-            <div class="clean-pillar-index">03 / HEALTHCARE</div>
-            <h3 class="clean-pillar-name">Equitable Healthtech</h3>
-            <p class="clean-pillar-desc">
-              Engineering non-invasive wearable sensors to eliminate melanin optical bias in blood oxygen monitoring for underserved populations.
+          <!-- Bento 1: Core Thesis (7 cols) -->
+          <article class="cool-card bento-7">
+            <span class="card-tag">The Thesis</span>
+            <h3 class="card-h3">Where Code Meets Conscience</h3>
+            <p class="card-p">
+              My name comes from Sanskrit meaning <em>"The First"</em> &mdash; a quiet expectation to step forward into problems where the manual hasn't been written yet.
             </p>
-          </div>
+            <p class="card-p" style="margin-top: 0.75rem;">
+              Too much engineering stays locked in sanitized benchmarks. I build for edge environments: low-cost gravitational water filters for developing watersheds, solar buoys buffering acidified coastal reefs, and optical biosensors engineered to dismantle racial bias in pulse oximetry.
+            </p>
+          </article>
 
-          <div class="clean-pillar-card">
-            <div class="clean-pillar-index">04 / FINE ARTS</div>
-            <h3 class="clean-pillar-name">Piano &amp; Humanities</h3>
-            <p class="clean-pillar-desc">
-              Solo classical piano performances at Weill Recital Hall, first-chair orchestral flute, and recognized essays in philosophical ethics.
+          <!-- Bento 2: Technical Focus Stack (5 cols) -->
+          <article class="cool-card bento-5">
+            <span class="card-tag">Technical Depth</span>
+            <h3 class="card-h3">Current Engineering Stack</h3>
+            <div class="tech-stack-row">
+              <div class="tech-stack-item">
+                <span class="tech-stack-name">Pedro Pathing Splines</span>
+                <span class="tech-stack-desc">Autonomous Motion</span>
+              </div>
+              <div class="tech-stack-item">
+                <span class="tech-stack-name">Limelight 3G Odometry</span>
+                <span class="tech-stack-desc">Machine Vision</span>
+              </div>
+              <div class="tech-stack-item">
+                <span class="tech-stack-name">Biochar Pyrolysis</span>
+                <span class="tech-stack-desc">Adsorption Isotherms</span>
+              </div>
+              <div class="tech-stack-item">
+                <span class="tech-stack-name">ESP32 &bull; Solar Telemetry</span>
+                <span class="tech-stack-desc">IoT Ocean Buoy</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bento 3: Dual Life & In-Action (6 cols) -->
+          <article class="cool-card bento-6">
+            <span class="card-tag">In The Arena</span>
+            <h3 class="card-h3">Hardware Pits &bull; Orchestra Halls</h3>
+            <p class="card-p">
+              Competing at the highest tiers requires focus. From pit presentations at WPI to solo recitals under the lights of Weill Recital Hall, high-stakes craft requires the exact same mental discipline: calm under pressure and obsession with nuance.
             </p>
-          </div>
+            <div class="snapshot-row">
+              <div class="snap-thumb">
+                <img src="assets/robotics_multimedia/pic_1_-_with_robot.jpg" alt="Aadya with robot" loading="lazy">
+                <div class="snap-caption">Robotics Lead Coder</div>
+              </div>
+              <div class="snap-thumb">
+                <img src="assets/writing_arts/Aadya Flute Pic1.png" alt="Aadya playing flute" loading="lazy">
+                <div class="snap-caption">1st Chair Flutist</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bento 4: Life Outside The Lab (6 cols) -->
+          <article class="cool-card bento-6">
+            <span class="card-tag">Life Offline</span>
+            <h3 class="card-h3">Restless Curiosity</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem;">
+              <div style="padding: 0.85rem 1rem; background: var(--brand-sage-light); border-radius: 14px; border: 1px solid rgba(36, 82, 32, 0.08);">
+                <div style="font-weight: 700; font-size: 0.95rem; color: #141c15;">Wild Waters &bull; Rafting &amp; Parasailing</div>
+                <div style="font-size: 0.82rem; color: #556b57; margin-top: 2px;">Finding adrenaline on fast rivers and coastal winds across state trails.</div>
+              </div>
+              <div style="padding: 0.85rem 1rem; background: var(--brand-sage-light); border-radius: 14px; border: 1px solid rgba(36, 82, 32, 0.08);">
+                <div style="font-weight: 700; font-size: 0.95rem; color: #141c15;">Civic Direct Action &bull; STEP LEO Club</div>
+                <div style="font-size: 0.82rem; color: #556b57; margin-top: 2px;">President coordinating 3,500+ lbs of food packaging for local community security.</div>
+              </div>
+              <div style="padding: 0.85rem 1rem; background: var(--brand-sage-light); border-radius: 14px; border: 1px solid rgba(36, 82, 32, 0.08);">
+                <div style="font-weight: 700; font-size: 0.95rem; color: #141c15;">Culinary Chemistry &bull; Spice &amp; Heat</div>
+                <div style="font-size: 0.82rem; color: #556b57; margin-top: 2px;">Deconstructing regional spice ratios and testing pastry chemistry for family.</div>
+              </div>
+            </div>
+          </article>
 
         </div>
       </section>
 
-      <!-- 3. BEYOND THE LAB & INFLUENCES -->
-      <section class="clean-split-section">
-        
-        <div class="clean-box">
-          <h2 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: #141c15; margin-bottom: 1.25rem;">
-            Beyond the Laboratory
-          </h2>
-          <div class="clean-list-item">
-            <div class="clean-item-title">Outdoor Exploration</div>
-            <div class="clean-item-sub">Whitewater river rafting, parasailing, and trail hiking across state and national parks.</div>
+      <!-- 3. INFLUENCES SHELF -->
+      <section style="margin-bottom: 4.5rem;">
+        <span class="section-eyebrow-cool">Perspective</span>
+        <h2 class="section-title-cool">Ideas that sharpened my lens.</h2>
+
+        <div class="shelf-grid">
+          <div class="shelf-item">
+            <div class="shelf-author">John Locke</div>
+            <div class="shelf-book">Second Treatise of Government</div>
+            <div class="shelf-takeaway">Any technology or authority is only legitimate when it protects human dignity and fundamental equity.</div>
           </div>
-          <div class="clean-list-item">
-            <div class="clean-item-title">Civic Leadership</div>
-            <div class="clean-item-sub">President of STEP For A Better World LEO Club, coordinating over 3,500 lbs of packaged food for local relief.</div>
+          <div class="shelf-item">
+            <div class="shelf-author">Richard Feynman</div>
+            <div class="shelf-book">The Pleasure of Finding Things Out</div>
+            <div class="shelf-takeaway">True breakthroughs demand ruthless intellectual honesty and the childlike wonder of asking fundamental questions.</div>
           </div>
-          <div class="clean-list-item">
-            <div class="clean-item-title">Culinary Chemistry</div>
-            <div class="clean-item-sub">Experimenting with regional Indian and continental recipes, focusing on spice chemistry and dessert architecture.</div>
+          <div class="shelf-item">
+            <div class="shelf-author">Rachel Carson</div>
+            <div class="shelf-book">Silent Spring</div>
+            <div class="shelf-takeaway">Uncompromising chemical precision paired with morally urgent prose has the power to shift a civilization's conscience.</div>
           </div>
         </div>
+      </section>
 
-        <div class="clean-box">
-          <h2 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: #141c15; margin-bottom: 1.25rem;">
-            Key Intellectual Influences
-          </h2>
-          <div class="clean-list-item">
-            <div class="clean-item-title">Second Treatise of Government &bull; John Locke</div>
-            <div class="clean-item-sub">Instilling the principle that technology and authority are legitimate only when they safeguard human dignity and fundamental equity.</div>
+      <!-- 4. CALL TO ACTION -->
+      <section>
+        <div class="cta-banner-cool">
+          <div>
+            <h3 class="cta-title-cool">Have an ambitious idea? Let's build it.</h3>
+            <p class="cta-p-cool">Open to collaborative research, speaking panels on youth-led science, or discussing autonomous systems.</p>
           </div>
-          <div class="clean-list-item">
-            <div class="clean-item-title">The Pleasure of Finding Things Out &bull; Richard Feynman</div>
-            <div class="clean-item-sub">A reminder that authentic scientific discovery begins with intellectual honesty and the intrinsic joy of questioning assumptions.</div>
-          </div>
-          <div class="clean-list-item">
-            <div class="clean-item-title">Silent Spring &bull; Rachel Carson</div>
-            <div class="clean-item-sub">Illustrating how rigorous empirical chemistry paired with clear moral prose can transform environmental conscience.</div>
-          </div>
+          <a href="connect.html" class="cta-btn-cool">
+            <span>Connect with Aadya</span>
+            <span style="font-size: 1.1rem;">&rarr;</span>
+          </a>
         </div>
-
       </section>
 
     </div>
@@ -329,6 +653,6 @@
     </div>
   </footer>
 
-  <script src="modern-script.js?v=22"></script>
+  <script src="modern-script.js?v=23"></script>
 </body>
 </html>
