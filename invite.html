@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connect &amp; Collaborate | Aadya Agarwal</title>
-  <meta name="description" content="Get in touch with Aadya Agarwal for research collaborations, student speaking engagements, and STEM mentorship.">
+  <meta name="description" content="Connect with Aadya Agarwal for research collaborations, student speaking engagements, and STEM mentorship.">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="modern-style.css?v=20">
+  <link rel="stylesheet" href="modern-style.css?v=21">
   <script src="auth.js"></script>
 </head>
 <body id="top">
@@ -15,7 +15,7 @@
     <div class="container nav-wrapper">
       <a href="index.html" class="brand-monogram" aria-label="Aadya Agarwal, back to home">AA</a>
       
-      <!-- Desktop Navigation Links: Exactly matching reference sections, NO certificates -->
+      <!-- Desktop Navigation Links -->
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="portfolio.html" class="nav-link">Portfolio</a>
         <a href="documents.html" class="nav-link">Documents</a>
@@ -43,143 +43,154 @@
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="page-hero-eyebrow">Collaboration &amp; Inquiries</span>
-        <h1 class="page-hero-title">Connect with Aadya</h1>
-        <p class="page-hero-lead">
-          Available for research collaboration on water remediation and equitable healthtech, student keynote panels, and mentoring young women entering STEM.
+  <main style="padding-top: 2.5rem; padding-bottom: 5rem;">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="connect-hero-genz">
+        <div class="genz-status-pill">
+          <span class="pulse-dot"></span>
+          <span>Open for Collaborations &bull; Summer / Fall 2026</span>
+        </div>
+        <h1 class="about-hero-title-genz" style="font-size: clamp(2.3rem, 4vw, 3.2rem);">
+          Let's Build Something Cool <span class="highlight-accent">✦</span>
+        </h1>
+        <p class="about-hero-lead-genz" style="margin: 0 auto 2rem;">
+          Got a research idea, speaking invite, questions about autonomous robotics, or just want to say hi? I'd love to hear from you.
         </p>
-      </div>
-    </section>
 
-    <section class="connect-content-section" style="padding-top: 0; padding-bottom: 5rem;">
-      <div class="container">
+        <!-- Interactive Vibe Selection Bar -->
+        <div class="connect-vibe-bar">
+          <button type="button" class="vibe-tag-btn" onclick="selectTopic('Research Collaboration', '🔬 Research Collab: ')">
+            <span>🔬</span>
+            <span>Research Collab</span>
+          </button>
+          <button type="button" class="vibe-tag-btn" onclick="selectTopic('Speaking & Panels', '🎙️ Speaking / Keynote Invite: ')">
+            <span>🎙️</span>
+            <span>Speaking &amp; Panels</span>
+          </button>
+          <button type="button" class="vibe-tag-btn" onclick="selectTopic('STEM Mentorship', '🤖 Robotics / STEM Mentorship: ')">
+            <span>🤖</span>
+            <span>STEM Mentorship</span>
+          </button>
+          <button type="button" class="vibe-tag-btn" onclick="selectTopic('Quick Chat', '☕ Quick Chat / Hello: ')">
+            <span>☕</span>
+            <span>Quick Chat</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Layout -->
+      <div class="connect-main-layout">
         
-        <!-- Interactive Topic Quick Selectors -->
-        <div style="margin-bottom: 2rem;">
-          <h2 class="sub-section-title" style="margin-bottom: 0.5rem;">Areas of Engagement</h2>
-          <p style="font-size: 0.92rem; color: #64748b; margin-bottom: 1.25rem;">Select an area of interest to reach out directly:</p>
-          <div class="connect-topics-grid">
-            <div class="connect-topic-pill-card" onclick="window.location.href='mailto:aadyanj@gmail.com?subject=Research%20Collaboration%20Inquiry'">
-              <div class="connect-topic-header">
-                <div class="connect-topic-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                </div>
-                <h3 class="connect-topic-title">Research Collaboration</h3>
+        <!-- Left: Interactive Modern Form -->
+        <div class="connect-interactive-card">
+          <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #141c15; margin-bottom: 0.5rem;">
+            Send a Direct Message
+          </h2>
+          <p style="font-size: 0.92rem; color: #64748b; margin-bottom: 2rem;">
+            Fill in the details below and your email app will pop open with everything ready to send.
+          </p>
+
+          <form id="contactForm" class="contact-form-grid" onsubmit="handleSend(event);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="cName" class="form-label" style="font-weight: 600; font-size: 0.85rem; color: #141c15;">Your Name</label>
+                <input type="text" id="cName" class="form-input" placeholder="Aadya's friend..." required style="background: #f8faf8; border: 1.5px solid rgba(45,97,41,0.18); border-radius: 14px; padding: 12px 14px;">
               </div>
-              <p class="connect-topic-desc">Joint investigations in biochar adsorption, marine pH buffering, and equitable wearable biometrics.</p>
+              <div class="form-group">
+                <label for="cEmail" class="form-label" style="font-weight: 600; font-size: 0.85rem; color: #141c15;">Your Email</label>
+                <input type="email" id="cEmail" class="form-input" placeholder="you@example.com" required style="background: #f8faf8; border: 1.5px solid rgba(45,97,41,0.18); border-radius: 14px; padding: 12px 14px;">
+              </div>
             </div>
 
-            <div class="connect-topic-pill-card" onclick="window.location.href='mailto:aadyanj@gmail.com?subject=Speaking%20Engagement%20Invitation'">
-              <div class="connect-topic-header">
-                <div class="connect-topic-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-                </div>
-                <h3 class="connect-topic-title">Speaking &amp; Panels</h3>
-              </div>
-              <p class="connect-topic-desc">Keynotes and panel discussions on youth-led science, AI ethics, and girls in engineering.</p>
+            <div class="form-group">
+              <label for="cSubject" class="form-label" style="font-weight: 600; font-size: 0.85rem; color: #141c15;">Subject / Topic</label>
+              <input type="text" id="cSubject" class="form-input" placeholder="What's on your mind?" required style="background: #f8faf8; border: 1.5px solid rgba(45,97,41,0.18); border-radius: 14px; padding: 12px 14px;">
             </div>
 
-            <div class="connect-topic-pill-card" onclick="window.location.href='mailto:aadyanj@gmail.com?subject=STEM%20Mentorship%20Inquiry'">
-              <div class="connect-topic-header">
-                <div class="connect-topic-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                </div>
-                <h3 class="connect-topic-title">STEM Mentorship</h3>
-              </div>
-              <p class="connect-topic-desc">Guiding middle school robotics cohorts and aspiring researchers embarking on their first science fairs.</p>
+            <div class="form-group">
+              <label for="cMsg" class="form-label" style="font-weight: 600; font-size: 0.85rem; color: #141c15;">Your Message</label>
+              <textarea id="cMsg" class="form-textarea" rows="5" placeholder="Tell me about your event, project, or what you're working on..." required style="background: #f8faf8; border: 1.5px solid rgba(45,97,41,0.18); border-radius: 16px; padding: 14px;"></textarea>
             </div>
-          </div>
+
+            <button type="submit" class="clean-submit-btn" style="padding: 15px; font-size: 1rem; border-radius: 16px; margin-top: 0.5rem; justify-content: center;">
+              <span>Send Message via Email</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
         </div>
 
-        <div class="connect-grid-layout">
+        <!-- Right: Modern Gen Z Sidebar -->
+        <aside class="connect-sidebar-genz">
           
-          <!-- Direct Message Card -->
-          <div class="contact-card">
-            <h2 class="sub-section-title" style="margin-bottom: 0.5rem;">Send a Direct Message</h2>
-            <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 1.5rem;">
-              Fill in your details below and your default email client will open ready to send.
+          <!-- 1-Click Copy Email Pill -->
+          <div class="quick-email-pill-box">
+            <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #2d6129; margin-bottom: 6px; display: block;">Direct Inbox</span>
+            <span class="quick-email-text" id="target-email">aadyanj@gmail.com</span>
+            <button type="button" class="copy-email-btn" id="copy-btn" onclick="copyEmail()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span id="copy-text">Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Vibe & Stats Card -->
+          <div class="sidebar-status-card">
+            <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #141c15; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">
+              <span>⚡</span> Quick Signals
+            </h3>
+
+            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.1rem;">📍</span>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.88rem; color: #141c15;">Location</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">The Lawrenceville School &bull; NJ, USA</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.1rem;">⏱️</span>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.88rem; color: #141c15;">Response Time</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Usually within 24&ndash;48 hours</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.1rem;">💻</span>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.88rem; color: #141c15;">GitHub Code</div>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; color: #2d6129; font-weight: 600; text-decoration: underline;">github.com/aadyaagarwal</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaking Box -->
+          <div class="sidebar-status-card" style="background: #f8faf8; border-color: rgba(45, 97, 41, 0.2);">
+            <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #141c15; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
+              <span>🎤</span> Speaking &amp; Panels
+            </h3>
+            <p style="font-size: 0.84rem; line-height: 1.5; color: #4a594d; margin-bottom: 1rem;">
+              Available for student summits, youth STEM keynotes, and environmental panels on youth-driven solutions.
             </p>
-            <form id="contactForm" class="contact-form-grid" onsubmit="event.preventDefault(); window.location.href='mailto:aadyanj@gmail.com?subject=' + encodeURIComponent(document.getElementById('cSubject').value || 'Portfolio Inquiry') + '&body=' + encodeURIComponent('Name: ' + document.getElementById('cName').value + '
-Email: ' + document.getElementById('cEmail').value + '
-
-Message:
-' + document.getElementById('cMsg').value);">
-              <div class="form-group">
-                <label for="cName" class="form-label">Full Name</label>
-                <input type="text" id="cName" class="form-input" placeholder="Your name" required>
-              </div>
-              <div class="form-group">
-                <label for="cEmail" class="form-label">Email Address</label>
-                <input type="email" id="cEmail" class="form-input" placeholder="you@domain.com" required>
-              </div>
-              <div class="form-group">
-                <label for="cSubject" class="form-label">Subject</label>
-                <input type="text" id="cSubject" class="form-input" placeholder="Collaboration / Speaking / Question" required>
-              </div>
-              <div class="form-group">
-                <label for="cMsg" class="form-label">Message</label>
-                <textarea id="cMsg" class="form-textarea" rows="5" placeholder="Share context about your event, project, or inquiry..." required></textarea>
-              </div>
-              <button type="submit" class="primary-page-btn" style="justify-content: center; width: 100%; border: none; cursor: pointer; padding: 0.85rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>Send Message via Email</span>
-              </button>
-            </form>
+            <button type="button" onclick="selectTopic('Speaking & Panels', '🎙️ Speaking / Keynote Invitation: ')" style="background: #ffffff; border: 1px solid rgba(45,97,41,0.2); color: #2d6129; padding: 8px 14px; border-radius: 999px; font-weight: 700; font-size: 0.82rem; cursor: pointer; width: 100%; transition: all 0.2s;">
+              Request Speaking &rarr;
+            </button>
           </div>
 
-          <!-- Contact Sidebar Details -->
-          <div class="contact-sidebar">
-            <div class="contact-info-block">
-              <h3 class="contact-info-title">Direct Inquiries</h3>
-              <div class="contact-info-row">
-                <div class="contact-icon-circle">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <div>
-                  <p class="contact-row-label">Primary Email</p>
-                  <a href="mailto:aadyanj@gmail.com" class="contact-row-value">aadyanj@gmail.com</a>
-                </div>
-              </div>
+        </aside>
 
-              <div class="contact-info-row">
-                <div class="contact-icon-circle">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <div>
-                  <p class="contact-row-label">Academic Base</p>
-                  <p class="contact-row-value" style="color: #1e293b;">The Lawrenceville School<br>Lawrenceville, NJ 08648</p>
-                </div>
-              </div>
-
-              <div class="contact-info-row">
-                <div class="contact-icon-circle">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </div>
-                <div>
-                  <p class="contact-row-label">Code &amp; Repositories</p>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-row-value">github.com/aadyaagarwal</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Speaking Topics Box -->
-            <div style="background: #ffffff; border: 1px solid rgba(47, 111, 82, 0.16); border-radius: 18px; padding: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
-              <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: #162a20; margin-bottom: 0.75rem;">Invite Aadya to Speak</h3>
-              <p style="font-size: 0.88rem; line-height: 1.6; color: #64748b; margin-bottom: 1rem;">
-                Aadya speaks on youth-led climate technology, overcoming biometric bias in healthcare, and fostering competitive STEM pathways for girls.
-              </p>
-              <a href="mailto:aadyanj@gmail.com?subject=Speaking%20Engagement%20Request" class="primary-page-btn" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; font-size: 0.88rem;">
-                Invite to Speak &rarr;
-              </a>
-            </div>
-          </div>
-
-        </div>
       </div>
-    </section>
+
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -192,6 +203,50 @@ Message:
     </div>
   </footer>
 
-  <script src="modern-script.js?v=20"></script>
+  <script src="modern-script.js?v=21"></script>
+  <script>
+    function selectTopic(topicName, prefix) {
+      const subjectInput = document.getElementById('cSubject');
+      const msgArea = document.getElementById('cMsg');
+      if (subjectInput) {
+        subjectInput.value = prefix;
+        subjectInput.focus();
+      }
+      if (msgArea) {
+        msgArea.placeholder = "Hi Aadya, reaching out regarding " + topicName + "...";
+      }
+      // Highlight active pill
+      document.querySelectorAll('.vibe-tag-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.includes(topicName.split(' ')[0]));
+      });
+    }
+
+    function copyEmail() {
+      const email = 'aadyanj@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const copyText = document.getElementById('copy-text');
+        if (copyText) {
+          copyText.textContent = 'Copied! ✨';
+          setTimeout(() => {
+            copyText.textContent = 'Copy Email';
+          }, 2000);
+        }
+      });
+    }
+
+    function handleSend(e) {
+      e.preventDefault();
+      const name = document.getElementById('cName').value;
+      const email = document.getElementById('cEmail').value;
+      const subject = document.getElementById('cSubject').value || 'Portfolio Collaboration';
+      const msg = document.getElementById('cMsg').value;
+
+      const mailtoUrl = 'mailto:aadyanj@gmail.com' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent('Hi Aadya,\n\n' + msg + '\n\n---\nSent by: ' + name + ' (' + email + ')');
+
+      window.location.href = mailtoUrl;
+    }
+  </script>
 </body>
 </html>
