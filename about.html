@@ -4,10 +4,164 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Aadya Agarwal</title>
-  <meta name="description" content="About Aadya Agarwal: High school researcher, competitive robotics lead coder, and eco-engineer bridging autonomous systems, climate restoration, and human equity.">
+  <meta name="description" content="About Aadya Agarwal: High school researcher, competitive robotics lead coder, and eco-engineer at The Lawrenceville School.">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="modern-style.css?v=21">
+  <link rel="stylesheet" href="modern-style.css?v=22">
   <script src="auth.js"></script>
+  <style>
+    /* Clean, Editorial About Page Styles */
+    .about-clean-hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .about-clean-eyebrow {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #2d6129;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .about-clean-title {
+      font-family: var(--font-display, 'Outfit', sans-serif);
+      font-size: clamp(2.2rem, 3.8vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #141c15;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+    }
+    .about-clean-p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #4a594d;
+      margin-bottom: 1rem;
+    }
+    .about-clean-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(45, 97, 41, 0.15);
+      flex-wrap: wrap;
+    }
+    .stat-clean-num {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2d6129;
+      line-height: 1.1;
+    }
+    .stat-clean-txt {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 0.25rem;
+    }
+    .about-clean-photo-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(45, 97, 41, 0.15);
+      background: #f8faf8;
+    }
+    .about-clean-photo {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+    .clean-section-heading {
+      font-family: var(--font-display, 'Outfit', sans-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #141c15;
+      margin-bottom: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+    .clean-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .clean-pillar-card {
+      background: #ffffff;
+      border: 1px solid rgba(45, 97, 41, 0.15);
+      border-radius: 18px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .clean-pillar-card:hover {
+      border-color: #2d6129;
+      transform: translateY(-2px);
+    }
+    .clean-pillar-index {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #2d6129;
+      margin-bottom: 0.75rem;
+    }
+    .clean-pillar-name {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #141c15;
+      margin-bottom: 0.5rem;
+    }
+    .clean-pillar-desc {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #556b57;
+    }
+    .clean-split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    .clean-box {
+      background: #ffffff;
+      border: 1px solid rgba(45, 97, 41, 0.15);
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    }
+    .clean-list-item {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .clean-list-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clean-item-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #141c15;
+      margin-bottom: 0.25rem;
+    }
+    .clean-item-sub {
+      font-size: 0.88rem;
+      color: #556b57;
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .about-clean-hero, .clean-split-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .about-clean-photo {
+        height: 380px;
+      }
+    }
+  </style>
 </head>
 <body id="top">
 
@@ -43,208 +197,122 @@
     </div>
   </header>
 
-  <main style="padding-top: 2rem; padding-bottom: 5rem;">
+  <main style="padding-top: 3.5rem; padding-bottom: 5rem;">
     <div class="container">
 
-      <!-- 1. HERO BENTO SECTION -->
-      <section class="about-hero-bento">
-        <div class="about-hero-text">
-          <div class="genz-status-pill">
-            <span class="pulse-dot"></span>
-            <span>In the lab &bull; Building cool stuff</span>
-          </div>
-
-          <h1 class="about-hero-title-genz">
-            Hey, I'm Aadya <span class="highlight-accent">✦</span>
+      <!-- 1. EDITORIAL CLEAN HERO -->
+      <section class="about-clean-hero">
+        <div>
+          <span class="about-clean-eyebrow">About Aadya Agarwal</span>
+          <h1 class="about-clean-title">
+            Building at the intersection of autonomous systems, eco-engineering, and human equity.
           </h1>
-
-          <p class="about-hero-lead-genz">
-            High school researcher, competitive robotics lead coder, and eco-engineer finding the sweet spot where autonomous systems, climate restoration, and human equity meet.
+          <p class="about-clean-p">
+            I am a student at The Lawrenceville School ('29) in New Jersey. My research and engineering work centers on accessible hardware, machine intelligence, and sustainable chemistry that solve tangible community challenges.
+          </p>
+          <p class="about-clean-p">
+            From coding autonomous trajectory algorithms using Pedro Pathing for competitive robotics, to formulating low-cost biochar filters and autonomous solar-powered ocean pH buoys, I believe technical rigor is most meaningful when guided by human empathy.
           </p>
 
-          <div class="genz-tag-row">
-            <span class="genz-chip">#Lawrenceville29</span>
-            <span class="genz-chip">#BiocharAIoT</span>
-            <span class="genz-chip">#LimelightVision</span>
-            <span class="genz-chip">#FTCBioBuzz</span>
-            <span class="genz-chip">#MITSolve</span>
-            <span class="genz-chip">#CarnegieHallSoloist</span>
-          </div>
-
-          <div class="genz-stat-strip">
-            <div class="genz-stat-pill">
-              <div class="genz-stat-num">#14</div>
-              <div class="genz-stat-label">World US Open Finalist</div>
+          <div class="about-clean-stats">
+            <div>
+              <div class="stat-clean-num">#14 in World</div>
+              <div class="stat-clean-txt">WPI US Open Finalist</div>
             </div>
-            <div class="genz-stat-pill">
-              <div class="genz-stat-num">Top 5</div>
-              <div class="genz-stat-label">National MIT Solve</div>
+            <div>
+              <div class="stat-clean-num">Top 5 National</div>
+              <div class="stat-clean-txt">MIT Solve Winner</div>
             </div>
-            <div class="genz-stat-pill">
-              <div class="genz-stat-num">3,500+ lbs</div>
-              <div class="genz-stat-label">Food Packaged (LEO Club)</div>
+            <div>
+              <div class="stat-clean-num">Carnegie Hall</div>
+              <div class="stat-clean-txt">Solo Classical Pianist</div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Aadya's Hero Portrait -->
-        <div class="about-photo-card">
-          <img src="assets/profile_aadya_horse.jpg" alt="Aadya Agarwal" class="about-photo-img" loading="eager">
-          <div class="photo-floating-badge">
-            <div>
-              <div class="photo-badge-name">Aadya Agarwal</div>
-              <div class="photo-badge-loc">📍 Princeton &bull; Lawrenceville, NJ</div>
-            </div>
-            <span style="font-size: 1.25rem;">🌿</span>
-          </div>
+        <div class="about-clean-photo-wrap">
+          <img src="assets/profile_aadya_horse.jpg" alt="Aadya Agarwal portrait" class="about-clean-photo">
         </div>
       </section>
 
-      <!-- 2. BENTO SHOWCASE GRID -->
-      <section class="bento-showcase-grid">
-
-        <!-- Card 1: Quick Lore / Who I Am (7 cols) -->
-        <article class="bento-card col-span-7">
-          <div class="bento-card-header">
-            <div class="bento-card-icon">⚡</div>
-            <h2 class="bento-card-title">Quick Lore &bull; Who I Am</h2>
-          </div>
-          <div>
-            <div class="lore-item">
-              <div class="lore-emoji">🌱</div>
-              <div>
-                <h3 class="lore-text-title">Name Lore</h3>
-                <p class="lore-text-desc">Rooted in ancient Sanskrit meaning <em>"The First"</em> &mdash; a daily reminder to take bold first steps when the blueprint doesn't exist yet.</p>
-              </div>
-            </div>
-            <div class="lore-item">
-              <div class="lore-emoji">💡</div>
-              <div>
-                <h3 class="lore-text-title">Core Philosophy</h3>
-                <p class="lore-text-desc">Technical rigor is meaningless without a human conscience. An algorithm is only great if it solves real-world pain for vulnerable communities.</p>
-              </div>
-            </div>
-            <div class="lore-item">
-              <div class="lore-emoji">⚙️</div>
-              <div>
-                <h3 class="lore-text-title">The Dual Track</h3>
-                <p class="lore-text-desc">Writing PID loops, Bézier splines &amp; odometry for autonomous bots by day; testing pyrolyzed biochar isotherms &amp; solar pH ocean buoys by night.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2: Currently In My Stack / Obsessions (5 cols) -->
-        <article class="bento-card col-span-5">
-          <div class="bento-card-header">
-            <div class="bento-card-icon">🧪</div>
-            <h2 class="bento-card-title">In My Stack Right Now</h2>
-          </div>
-          <div class="tech-chips-cloud">
-            <span class="tech-chip-item"><span>🚀</span> Pedro Pathing Splines</span>
-            <span class="tech-chip-item"><span>👁️</span> Limelight 3G Vision</span>
-            <span class="tech-chip-item"><span>🌿</span> Biochar Adsorption</span>
-            <span class="tech-chip-item"><span>⚡</span> ESP32 Solar Telemetry</span>
-            <span class="tech-chip-item"><span>🩸</span> Melanin Bias Detection</span>
-            <span class="tech-chip-item"><span>🌊</span> Ocean pH Solenoids</span>
-            <span class="tech-chip-item"><span>🎹</span> Chopin Nocturnes</span>
-            <span class="tech-chip-item"><span>🐍</span> Python Data Analytics</span>
-          </div>
-        </article>
-
-        <!-- Card 3: In Action Snapshots (6 cols) -->
-        <article class="bento-card col-span-6">
-          <div class="bento-card-header">
-            <div class="bento-card-icon">📸</div>
-            <h2 class="bento-card-title">In Action Snapshots</h2>
-          </div>
-          <div class="action-gallery-grid">
-            <div class="action-thumb">
-              <img src="assets/robotics_multimedia/pic_1_-_with_robot.jpg" alt="Aadya with competition robot" loading="lazy">
-              <div class="action-caption">🤖 FTC Robotics Lead Coder</div>
-            </div>
-            <div class="action-thumb">
-              <img src="assets/writing_arts/Aadya Flute Pic1.png" alt="Aadya playing flute" loading="lazy">
-              <div class="action-caption">🎶 1st Chair Flute Soloist</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 4: Life Offline (6 cols) -->
-        <article class="bento-card col-span-6">
-          <div class="bento-card-header">
-            <div class="bento-card-icon">✨</div>
-            <h2 class="bento-card-title">Life Offline &bull; High-Key Loves</h2>
-          </div>
-          <div class="offline-grid">
-            <div class="offline-tile">
-              <div class="offline-tile-title">🌊 Wild Waters</div>
-              <div class="offline-tile-desc">Whitewater river rafting &amp; coastal parasailing outdoors.</div>
-            </div>
-            <div class="offline-tile">
-              <div class="offline-tile-title">🎹 Carnegie Hall Soloist</div>
-              <div class="offline-tile-desc">Classical piano recitals at Weill Recital Hall &amp; Greenfield.</div>
-            </div>
-            <div class="offline-tile">
-              <div class="offline-tile-title">🥘 Culinary Chemistry</div>
-              <div class="offline-tile-desc">Testing regional spice blends &amp; dessert chemistry experiments.</div>
-            </div>
-            <div class="offline-tile">
-              <div class="offline-tile-title">✍️ Philosophical Inquiries</div>
-              <div class="offline-tile-desc">John Locke Essay commendation exploring tech ethics.</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 5: Books That Shaped My Thinking (8 cols) -->
-        <article class="bento-card col-span-8">
-          <div class="bento-card-header">
-            <div class="bento-card-icon">📚</div>
-            <h2 class="bento-card-title">Books That Shifted My Perspective</h2>
-          </div>
-          <div class="influences-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-            <div class="influence-card" style="padding: 1rem;">
-              <span class="influence-genre">Philosophy</span>
-              <h3 class="influence-title" style="font-size: 1.05rem;">Second Treatise</h3>
-              <span class="influence-author">John Locke</span>
-              <p class="influence-note" style="font-size: 0.82rem;">Technology is only legitimate when safeguarding human dignity and equity.</p>
-            </div>
-            <div class="influence-card" style="padding: 1rem;">
-              <span class="influence-genre">Physics &amp; Inquiry</span>
-              <h3 class="influence-title" style="font-size: 1.05rem;">Finding Things Out</h3>
-              <span class="influence-author">Richard Feynman</span>
-              <p class="influence-note" style="font-size: 0.82rem;">Real discovery starts with intellectual honesty and the pure joy of curiosity.</p>
-            </div>
-            <div class="influence-card" style="padding: 1rem;">
-              <span class="influence-genre">Ecology</span>
-              <h3 class="influence-title" style="font-size: 1.05rem;">Silent Spring</h3>
-              <span class="influence-author">Rachel Carson</span>
-              <p class="influence-note" style="font-size: 0.82rem;">Meticulous chemistry paired with morally urgent prose wakes the conscience.</p>
-            </div>
-            <div class="influence-card" style="padding: 1rem;">
-              <span class="influence-genre">Music &amp; Structure</span>
-              <h3 class="influence-title" style="font-size: 1.05rem;">The Classical Style</h3>
-              <span class="influence-author">Charles Rosen</span>
-              <p class="influence-note" style="font-size: 0.82rem;">Rigorous architecture &mdash; whether a nocturne or a PID loop &mdash; creates power.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 6: Let's Connect CTA (4 cols) -->
-        <article class="bento-card col-span-4" style="background: linear-gradient(135deg, #2d6129, #1c4219); color: #ffffff; justify-content: space-between;">
-          <div>
-            <div class="bento-card-header">
-              <div class="bento-card-icon" style="background: rgba(255,255,255,0.2); color: #ffffff;">💬</div>
-              <h2 class="bento-card-title" style="color: #ffffff;">Let's Connect</h2>
-            </div>
-            <p style="font-size: 0.95rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); margin-bottom: 1.5rem;">
-              Have a research idea, robotics question, speaking invitation, or want to collaborate? I'd love to chat.
+      <!-- 2. CORE FOCUS AREAS -->
+      <section>
+        <h2 class="clean-section-heading">Core Areas of Focus</h2>
+        <div class="clean-pillars-grid">
+          
+          <div class="clean-pillar-card">
+            <div class="clean-pillar-index">01 / ROBOTICS</div>
+            <h3 class="clean-pillar-name">Autonomous Systems</h3>
+            <p class="clean-pillar-desc">
+              Developing Pedro Pathing splines, odometry feedback loops, and Limelight 3G machine vision for FTC robotics competition algorithms.
             </p>
           </div>
-          <a href="connect.html" class="primary-page-btn" style="background: #ffffff; color: #1c4219; border: none; font-weight: 700; width: 100%; justify-content: center; padding: 0.85rem; border-radius: 999px; text-decoration: none;">
-            <span>Get in Touch ✦</span>
-          </a>
-        </article>
+
+          <div class="clean-pillar-card">
+            <div class="clean-pillar-index">02 / ECOLOGY</div>
+            <h3 class="clean-pillar-name">Eco-Engineering</h3>
+            <p class="clean-pillar-desc">
+              Researching waste-derived biochar water filtration to remove heavy metals, and building solar-powered autonomous ocean pH buffer buoys.
+            </p>
+          </div>
+
+          <div class="clean-pillar-card">
+            <div class="clean-pillar-index">03 / HEALTHCARE</div>
+            <h3 class="clean-pillar-name">Equitable Healthtech</h3>
+            <p class="clean-pillar-desc">
+              Engineering non-invasive wearable sensors to eliminate melanin optical bias in blood oxygen monitoring for underserved populations.
+            </p>
+          </div>
+
+          <div class="clean-pillar-card">
+            <div class="clean-pillar-index">04 / FINE ARTS</div>
+            <h3 class="clean-pillar-name">Piano &amp; Humanities</h3>
+            <p class="clean-pillar-desc">
+              Solo classical piano performances at Weill Recital Hall, first-chair orchestral flute, and recognized essays in philosophical ethics.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. BEYOND THE LAB & INFLUENCES -->
+      <section class="clean-split-section">
+        
+        <div class="clean-box">
+          <h2 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: #141c15; margin-bottom: 1.25rem;">
+            Beyond the Laboratory
+          </h2>
+          <div class="clean-list-item">
+            <div class="clean-item-title">Outdoor Exploration</div>
+            <div class="clean-item-sub">Whitewater river rafting, parasailing, and trail hiking across state and national parks.</div>
+          </div>
+          <div class="clean-list-item">
+            <div class="clean-item-title">Civic Leadership</div>
+            <div class="clean-item-sub">President of STEP For A Better World LEO Club, coordinating over 3,500 lbs of packaged food for local relief.</div>
+          </div>
+          <div class="clean-list-item">
+            <div class="clean-item-title">Culinary Chemistry</div>
+            <div class="clean-item-sub">Experimenting with regional Indian and continental recipes, focusing on spice chemistry and dessert architecture.</div>
+          </div>
+        </div>
+
+        <div class="clean-box">
+          <h2 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: #141c15; margin-bottom: 1.25rem;">
+            Key Intellectual Influences
+          </h2>
+          <div class="clean-list-item">
+            <div class="clean-item-title">Second Treatise of Government &bull; John Locke</div>
+            <div class="clean-item-sub">Instilling the principle that technology and authority are legitimate only when they safeguard human dignity and fundamental equity.</div>
+          </div>
+          <div class="clean-list-item">
+            <div class="clean-item-title">The Pleasure of Finding Things Out &bull; Richard Feynman</div>
+            <div class="clean-item-sub">A reminder that authentic scientific discovery begins with intellectual honesty and the intrinsic joy of questioning assumptions.</div>
+          </div>
+          <div class="clean-list-item">
+            <div class="clean-item-title">Silent Spring &bull; Rachel Carson</div>
+            <div class="clean-item-sub">Illustrating how rigorous empirical chemistry paired with clear moral prose can transform environmental conscience.</div>
+          </div>
+        </div>
 
       </section>
 
@@ -261,6 +329,6 @@
     </div>
   </footer>
 
-  <script src="modern-script.js?v=21"></script>
+  <script src="modern-script.js?v=22"></script>
 </body>
 </html>
