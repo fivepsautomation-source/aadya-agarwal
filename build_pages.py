@@ -87,7 +87,7 @@ projects_body = """  <main id="mainContent">
               </div>
             </div>
             <div class="case-actions">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="arrow-link">
+              <a href="https://github.com/aanj1" target="_blank" rel="noopener noreferrer" class="arrow-link">
                 <span>View GitHub Repositories</span>
                 <span class="arrow" aria-hidden="true">&nearr;</span>
               </a>
