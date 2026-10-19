@@ -272,108 +272,48 @@
       color: #556b57;
     }
 
-    /* 5. Explorer Field Notes Style */
-    .fieldnotes-section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .fieldnotes-grid-3x2 {
+    /* 5. 5 Things You Might Not Guess */
+    .story-facts-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 4.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 4rem;
     }
 
-    .fieldnote-card {
+    .fact-card {
       background: #ffffff;
-      border: 1.5px solid var(--sage-border);
-      border-radius: 20px;
-      padding: 1.75rem 1.6rem 1.6rem;
-      box-shadow: 0 4px 18px rgba(20, 28, 21, 0.03);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
+      border: 1px solid var(--sage-border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.02);
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .fieldnote-card:hover {
+    .fact-card:hover {
       border-color: var(--sage-primary);
-      transform: translateY(-4px);
-      box-shadow: 0 14px 34px rgba(27, 63, 34, 0.1);
+      transform: translateY(-2px);
     }
 
-    .fieldnote-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.15rem;
-      padding-bottom: 0.85rem;
-      border-bottom: 1px dashed rgba(36, 82, 32, 0.15);
-    }
-
-    .fieldnote-code {
-      font-family: 'JetBrains Mono', monospace;
+    .fact-num {
       font-size: 0.72rem;
-      font-weight: 700;
+      font-weight: 800;
+      letter-spacing: 0.1em;
       color: var(--sage-primary);
-      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+      display: block;
     }
 
-    .fieldnote-stamp {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      font-weight: 600;
-      color: #556b57;
-      background: var(--sage-card);
-      padding: 3px 8px;
-      border-radius: 6px;
-      border: 1px solid rgba(36, 82, 32, 0.12);
-      letter-spacing: 0.02em;
-    }
-
-    .fieldnote-title {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
+    .fact-title {
+      font-size: 1.05rem;
       font-weight: 700;
       color: #121a14;
-      margin-bottom: 0.65rem;
-      line-height: 1.3;
+      margin-bottom: 0.4rem;
     }
 
-    .fieldnote-story {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: #4a594d;
-      flex: 1;
-    }
-
-    .fieldnote-bottom-tag {
-      margin-top: 1.25rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--sage-primary);
-    }
-
-    @media (max-width: 960px) {
-      .fieldnotes-grid-3x2 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 640px) {
-      .fieldnotes-grid-3x2 {
-        grid-template-columns: 1fr;
-      }
+    .fact-desc {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: #556b57;
     }
 
     /* 6. Friendly Sign-off */
@@ -554,116 +494,41 @@
 
       </section>
 
-      <!-- 5. EXPLORER FIELD NOTES (CURATED SNAPSHOTS) -->
+      <!-- 5. 5 THINGS YOU MIGHT NOT GUESS -->
       <section style="margin-bottom: 4.5rem;">
-        <div class="fieldnotes-section-head">
-          <div>
-            <span class="story-section-tag">Beyond the Laboratory</span>
-            <h2 class="story-card-h2" style="font-size: 1.7rem; margin-bottom: 0.35rem;">Field Notes &bull; 6 Things You Might Not Guess</h2>
+        <span class="story-section-tag">Behind the Scenes</span>
+        <h2 class="story-card-h2" style="font-size: 1.65rem; margin-bottom: 1.75rem;">5 Things About Me You Might Not Guess</h2>
+
+        <div class="story-facts-grid">
+          <div class="fact-card">
+            <span class="fact-num">01 / ADRENALINE</span>
+            <div class="fact-title">20-Foot Cliff Jump at Age 10</div>
+            <div class="fact-desc">Leaped off a 20-foot limestone cliff into the deep waters of Cenote Cristalino in Riviera Maya, Mexico. Love whitewater rafting and parasailing.</div>
           </div>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; color: #64748b; background: var(--sage-card); padding: 5px 12px; border-radius: 999px; border: 1px solid var(--sage-border);">
-            INDEX [01 &ndash; 06]
-          </span>
-        </div>
 
-        <div class="fieldnotes-grid-3x2">
-          
-          <!-- Card 1 -->
-          <article class="fieldnote-card">
-            <div class="fieldnote-header">
-              <span class="fieldnote-code">// 01 &bull; EXPEDITION</span>
-              <span class="fieldnote-stamp">📍 RIVIERA MAYA</span>
-            </div>
-            <h3 class="fieldnote-title">20-Foot Cliff Jump at Age 10</h3>
-            <p class="fieldnote-story">
-              Leaped off a 20-foot limestone cliff into the deep waters of Cenote Cristalino in Mexico. Addicted to outdoor adrenaline—whitewater river rafting, coastal parasailing, and alpine ski trails.
-            </p>
-            <div class="fieldnote-bottom-tag">
-              <span>🌊</span>
-              <span>Cenote Cristalino Expedition</span>
-            </div>
-          </article>
+          <div class="fact-card">
+            <span class="fact-num">02 / CULINARY CHEMISTRY</span>
+            <div class="fact-title">Avocado Buttercream</div>
+            <div class="fact-desc">Competed in a youth culinary contest and invented an "avocado buttercream" recipe that has become a permanent signature family dessert.</div>
+          </div>
 
-          <!-- Card 2 -->
-          <article class="fieldnote-card">
-            <div class="fieldnote-header">
-              <span class="fieldnote-code">// 02 &bull; FLAVOR LAB</span>
-              <span class="fieldnote-stamp">🍳 YOUTH BAKE-OFF</span>
-            </div>
-            <h3 class="fieldnote-title">Avocado Buttercream</h3>
-            <p class="fieldnote-story">
-              Entered a youth culinary contest and invented an original "avocado buttercream" recipe that won over judges and became a permanent signature family dessert tradition.
-            </p>
-            <div class="fieldnote-bottom-tag">
-              <span>🥑</span>
-              <span>Culinary Chemistry Experiment</span>
-            </div>
-          </article>
+          <div class="fact-card">
+            <span class="fact-num">03 / CONCERT HALLS</span>
+            <div class="fact-title">Solo at Carnegie Hall</div>
+            <div class="fact-desc">Solo classical piano performance at Weill Recital Hall and Greenfield Hall, alongside first-chair flute in competitive regional orchestras.</div>
+          </div>
 
-          <!-- Card 3 -->
-          <article class="fieldnote-card">
-            <div class="fieldnote-header">
-              <span class="fieldnote-code">// 03 &bull; CONCERT STAGE</span>
-              <span class="fieldnote-stamp">🎹 CARNEGIE HALL</span>
-            </div>
-            <h3 class="fieldnote-title">Solo at Carnegie Hall</h3>
-            <p class="fieldnote-story">
-              Solo classical piano performance at Weill Recital Hall and Greenfield Hall, alongside leading as first-chair flute in regional symphonies. Obsessed with Chopin nocturnes and acoustic nuance.
-            </p>
-            <div class="fieldnote-bottom-tag">
-              <span>🎼</span>
-              <span>Weill Recital Hall Soloist</span>
-            </div>
-          </article>
+          <div class="fact-card">
+            <span class="fact-num">04 / COMMUNITY WORK</span>
+            <div class="fact-title">3,500+ lbs of Food Packaged</div>
+            <div class="fact-desc">President of STEP For A Better World LEO Club, mobilizing youth cohorts to package emergency food supplies recognized by a NJ Legislative Citation.</div>
+          </div>
 
-          <!-- Card 4 -->
-          <article class="fieldnote-card">
-            <div class="fieldnote-header">
-              <span class="fieldnote-code">// 04 &bull; FIELD ACTION</span>
-              <span class="fieldnote-stamp">🎖️ NJ CITATION</span>
-            </div>
-            <h3 class="fieldnote-title">3,500+ lbs Food Packaged</h3>
-            <p class="fieldnote-story">
-              President of STEP For A Better World LEO Club, mobilizing youth cohorts for community emergency relief and packaging thousands of meals recognized by the New Jersey State Legislature.
-            </p>
-            <div class="fieldnote-bottom-tag">
-              <span>📦</span>
-              <span>STEP LEO Club Leadership</span>
-            </div>
-          </article>
-
-          <!-- Card 5 -->
-          <article class="fieldnote-card">
-            <div class="fieldnote-header">
-              <span class="fieldnote-code">// 05 &bull; ETHICAL INQUIRY</span>
-              <span class="fieldnote-stamp">✍️ JOHN LOCKE</span>
-            </div>
-            <h3 class="fieldnote-title">Algorithms &amp; Moral Limits</h3>
-            <p class="fieldnote-story">
-              Wrote commended philosophical essays investigating where algorithmic automation ends and human moral accountability begins. Believer that code without conscience is reckless.
-            </p>
-            <div class="fieldnote-bottom-tag">
-              <span>⚖️</span>
-              <span>John Locke Commendation</span>
-            </div>
-          </article>
-
-          <!-- Card 6 -->
-          <article class="fieldnote-card">
-            <div class="fieldnote-header">
-              <span class="fieldnote-code">// 06 &bull; CULTURAL HERITAGE</span>
-              <span class="fieldnote-stamp">🌏 SANSKRIT &bull; NJ</span>
-            </div>
-            <h3 class="fieldnote-title">Bridging Two Worlds</h3>
-            <p class="fieldnote-story">
-              Moving seamlessly between ancient Indian philosophical values of calm resilience and the cutting-edge robotics labs of New Jersey. Grounded in family heritage while engineering the future.
-            </p>
-            <div class="fieldnote-bottom-tag">
-              <span>🌱</span>
-              <span>Dual Roots &bull; Global Outlook</span>
-            </div>
-          </article>
-
+          <div class="fact-card">
+            <span class="fact-num">05 / PHILOSOPHY COMMENDATION</span>
+            <div class="fact-title">John Locke Essay Commendation</div>
+            <div class="fact-desc">Wrote commended critical essays exploring where algorithmic automation ends and human moral accountability begins.</div>
+          </div>
         </div>
       </section>
 
