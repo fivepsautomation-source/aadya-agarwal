@@ -339,4 +339,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  // 6. Portfolio Instant Search
+  const searchInput = document.getElementById('portfolioSearchInput');
+  if (searchInput && projectCards.length > 0) {
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      const activeFilterBtn = document.querySelector('.filter-tab-btn.active');
+      const activeFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
+
+      projectCards.forEach(card => {
+        const title = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
+        const desc = (card.querySelector('.card-description')?.textContent || '').toLowerCase();
+        const category = (card.getAttribute('data-category') || '').toLowerCase();
+        const cardProject = (card.getAttribute('data-project') || '').toLowerCase();
+
+        const matchesQuery = !q || title.includes(q) || desc.includes(q) || cardProject.includes(q);
+        const matchesCategory = activeFilter === 'all' || category.includes(activeFilter);
+
+        if (matchesQuery && matchesCategory) {
+          card.classList.remove('hidden');
+          card.style.display = '';
+        } else {
+          card.classList.add('hidden');
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+
 });

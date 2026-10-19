@@ -6,7 +6,8 @@
   <title>Portfolio | Aadya Agarwal</title>
   <meta name="description" content="Complete portfolio of Aadya Agarwal across Robotics, Environmental Sustainability &amp; AI, Biomedical &amp; AI, MoniVitals, School &amp; Community, Writing &amp; Arts.">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="modern-style.css?v=17">
+  <link rel="stylesheet" href="modern-style.css?v=20">
+  <script src="auth.js"></script>
 </head>
 <body id="top">
 
@@ -45,27 +46,36 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <span class="page-hero-eyebrow">Technical Innovations &amp; Research</span>
-        <h1 class="page-hero-title">Portfolio</h1>
+        <span class="page-hero-eyebrow">Technical Innovations &amp; Empirical Research</span>
+        <h1 class="page-hero-title">Complete Portfolio</h1>
         <p class="page-hero-lead">
           Hands-on engineering, autonomous algorithmic control, environmental water remediation, and community healthtech &mdash; organized into six core disciplines.
         </p>
       </div>
     </section>
 
-    <section class="portfolio-section" style="padding-top: 0;">
+    <section class="portfolio-section" style="padding-top: 0; padding-bottom: 5rem;">
       <div class="container">
-        <div class="filter-tabs-row" role="tablist">
-          <button type="button" class="filter-tab-btn active" data-filter="all">All (18)</button>
-          <button type="button" class="filter-tab-btn" data-filter="robotics">Robotics</button>
-          <button type="button" class="filter-tab-btn" data-filter="environmental">Environmental Sustainability &amp; AI</button>
-          <button type="button" class="filter-tab-btn" data-filter="biomedical">Biomedical &amp; AI</button>
-          <button type="button" class="filter-tab-btn" data-filter="monivitals">MoniVitals</button>
-          <button type="button" class="filter-tab-btn" data-filter="community">School &amp; Community</button>
-          <button type="button" class="filter-tab-btn" data-filter="writing">Writing &amp; Arts</button>
+        
+        <!-- Filter & Search Toolbar -->
+        <div class="portfolio-toolbar">
+          <div class="filter-tabs-row" role="tablist">
+            <button type="button" class="filter-tab-btn active" data-filter="all">All (18)</button>
+            <button type="button" class="filter-tab-btn" data-filter="robotics">Robotics (3)</button>
+            <button type="button" class="filter-tab-btn" data-filter="environmental">Environmental &amp; AI (3)</button>
+            <button type="button" class="filter-tab-btn" data-filter="biomedical">Biomedical &amp; AI (3)</button>
+            <button type="button" class="filter-tab-btn" data-filter="monivitals">MoniVitals (3)</button>
+            <button type="button" class="filter-tab-btn" data-filter="community">Community (3)</button>
+            <button type="button" class="filter-tab-btn" data-filter="writing">Writing &amp; Arts (3)</button>
+          </div>
+
+          <div class="portfolio-search-box">
+            <svg class="portfolio-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="portfolioSearchInput" class="portfolio-search-input" placeholder="Search projects, tags, methods..." aria-label="Search projects">
+          </div>
         </div>
 
-        <div class="portfolio-grid">
+        <div class="portfolio-grid" id="portfolioGrid">
           <article class="portfolio-card" data-category="robotics" data-project='{&quot;title&quot;: &quot;FIRST Robotics \u2014 FLL &amp; FTC Championship Lead Coder&quot;, &quot;category&quot;: &quot;Robotics&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_robotics_with-robot_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_robotics_with-robot_framed.jpg&quot;, &quot;assets/ref_images/projects_robotics_with-robot.jpg&quot;, &quot;assets/robotics/pic 1 - with robot.jpg&quot;, &quot;assets/robotics/pic12 -WPI Team.png&quot;, &quot;assets/robotics/pic 3 - mt olive.JPG&quot;, &quot;assets/robotics/pic 5 - Mt Olive Award.jpg&quot;], &quot;desc&quot;: &quot;Lead autonomous programmer from FLL World Open to The Lawrenceville School FIRST Tech Challenge team \u2014 architecting quintic B\u00e9zier splines, 3-wheel odometry, and AprilTag vision.&quot;, &quot;highlights&quot;: [&quot;WPI US Open World Championship \u2014 Ranked #14 out of 108 international teams&quot;, &quot;Implemented custom autonomous trajectory routines with Pedro Pathing&quot;, &quot;Sub-15ms AprilTag 36h11 machine vision pose estimation&quot;, &quot;Mentored middle school teams transitioning from block coding to Java&quot;], &quot;tags&quot;: [&quot;#FTC&quot;, &quot;#FLL&quot;, &quot;#AutonomousControl&quot;, &quot;#ComputerVision&quot;, &quot;#Java&quot;]}'>
             <div class="card-thumb-wrapper">
               <img src="assets/ref_images/projects_robotics_with-robot_framed.jpg" alt="FIRST Robotics — FLL &amp; FTC Championship Lead Coder" class="card-thumb-img" loading="lazy">
@@ -369,6 +379,6 @@
     </div>
   </div>
 
-  <script src="modern-script.js?v=7"></script>
+  <script src="modern-script.js?v=20"></script>
 </body>
 </html>
