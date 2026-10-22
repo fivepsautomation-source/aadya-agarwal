@@ -1478,9 +1478,9 @@ about_body = """  <main id="mainContent">
                       <li class="hero-achieve-item">
                         <div class="achieve-item-head">
                           <span class="achieve-title">Music-Fest Grand Prize (Piano)</span>
-                          <span class="achieve-pill">Carnegie Hall</span>
+                          <span class="achieve-pill">Manhattan School</span>
                         </div>
-                        <p class="achieve-desc">Grand Prize Solo Recitalist with Carnegie Hall Weill Hall invitation.</p>
+                        <p class="achieve-desc">Grand Prize Solo Recitalist with Manhattan School of Music performance.</p>
                       </li>
                       <li class="hero-achieve-item">
                         <div class="achieve-item-head">
@@ -1765,7 +1765,7 @@ about_body = """  <main id="mainContent">
               </div>
               <div class="timeline-achievement-row">
                 <span class="timeline-row-badge">Music-Fest Grand Prize</span>
-                <span class="timeline-row-desc">Grand Prize Winner for solo piano recital; Carnegie Hall invitation.</span>
+                <span class="timeline-row-desc">Grand Prize Winner for solo piano recital; Manhattan School of Music performance.</span>
               </div>
               <div class="timeline-achievement-row">
                 <span class="timeline-row-badge">MoniVitals.com</span>

@@ -224,7 +224,7 @@
 ### 7.1 Classical Piano
 - **Music-Fest International Rising Talent Festival (May 2024):**
   - **Grand Prize Winner**
-  - **Carnegie / Manhattan Recital:** Performed solo recital at **Greenfield Hall, Manhattan School of Music (NYC)** (F. Chopin, Waltz in B Minor Op. 69, No. 2).
+  - **Manhattan School of Music Recital:** Performed solo recital at **Greenfield Hall, Manhattan School of Music (NYC)** (F. Chopin, Waltz in B Minor Op. 69, No. 2).
 - **Studio Recital:** Friedrich Kuhlau, Sonatina Op. 55 #1 Vivace (Spring 2024).
 - **NJMTA (New Jersey Music Teachers Association):** Honors Rating Award (March 2023 & March 2024).
 

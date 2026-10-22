@@ -284,7 +284,7 @@ new_timeline_html = '''        <div class="clean-timeline-flow">
               </div>
               <div class="timeline-achievement-row">
                 <span class="timeline-row-badge">Music-Fest Grand Prize</span>
-                <span class="timeline-row-desc">Grand Prize Winner for solo piano recital; Carnegie Hall invitation.</span>
+                <span class="timeline-row-desc">Grand Prize Winner for solo piano recital; Manhattan School of Music performance.</span>
               </div>
               <div class="timeline-achievement-row">
                 <span class="timeline-row-badge">MoniVitals.com</span>

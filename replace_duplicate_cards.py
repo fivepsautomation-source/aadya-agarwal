@@ -43,7 +43,7 @@ old_card_17 = '''<div class="evidence-card" data-category="arts">
           </div>'''
 
 new_card_17 = '''<div class="evidence-card" data-category="arts">
-            <div class="evidence-thumb-wrapper" onclick="openMediaModal({ title: 'Music-Fest International Grand Prize', desc: 'Grand Prize Winner for Piano Solo with invitation to perform at Carnegie Hall Weill Recital Hall.', badge: 'International Grand Prize', type: 'image', src: 'assets/writing_arts/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg' })">
+            <div class="evidence-thumb-wrapper" onclick="openMediaModal({ title: 'Music-Fest International Grand Prize', desc: 'Grand Prize Winner for Piano Solo with performance at Greenfield Hall, Manhattan School of Music.', badge: 'International Grand Prize', type: 'image', src: 'assets/writing_arts/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg' })">
               <img src="assets/writing_arts/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg" alt="Music-Fest Grand Prize Recital" class="evidence-thumb-img">
               <div class="evidence-thumb-overlay"><span class="evidence-zoom-icon">Inspect High-Res &rarr;</span></div>
               <span class="evidence-source-tag">Folder: Writing &amp; Arts</span>
@@ -51,7 +51,7 @@ new_card_17 = '''<div class="evidence-card" data-category="arts">
             <div class="evidence-card-content">
               <span class="evidence-cat-tag" style="color: #7E22CE;">Fine Arts &bull; International Prize</span>
               <h4 class="evidence-item-title">Music-Fest Grand Prize Winner</h4>
-              <p class="evidence-item-meta">Piano Solo &bull; Carnegie Hall Invitation</p>
+              <p class="evidence-item-meta">Piano Solo &bull; Manhattan School Performance</p>
             </div>
           </div>'''
 

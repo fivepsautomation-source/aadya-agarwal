@@ -52,12 +52,12 @@ new_cards = '''<div class="gallery-carousel-track">
                 <p class="gallery-card-sub">North South Foundation Champion</p>
               </div>
             </div>
-            <div class="gallery-card evidence-link" data-src="assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg" data-title="Music-Fest Grand Prize Winner" data-badge="Fine Arts" data-caption="Piano Solo Grand Prize and Carnegie Hall Weill Recital Hall invitation">
+            <div class="gallery-card evidence-link" data-src="assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg" data-title="Music-Fest Grand Prize Winner" data-badge="Fine Arts" data-caption="Piano Solo Grand Prize and Manhattan School of Music recital">
               <img src="assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg" alt="Music-Fest Grand Prize Winner" loading="lazy">
               <div class="gallery-card-overlay">
                 <span class="gallery-card-tag">Fine Arts</span>
                 <h4 class="gallery-card-title">Music-Fest Grand Prize</h4>
-                <p class="gallery-card-sub">Piano Solo &bull; Carnegie Hall Invitation</p>
+                <p class="gallery-card-sub">Piano Solo &bull; Manhattan School Performance</p>
               </div>
             </div>
             <div class="gallery-card evidence-link" data-src="assets/robotics/pic 1 - with robot.jpg" data-title="FTC BioBuzz Autonomous Robot" data-badge="Robotics" data-caption="Custom odometry, Pedro Pathing, and Limelight 3G visual pipeline">

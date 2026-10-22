@@ -295,9 +295,9 @@ interactive_buttons_html = '''          <!-- Interactive Hero Action Buttons wit
                       <li class="hero-achieve-item">
                         <div class="achieve-item-head">
                           <span class="achieve-title">Music-Fest Grand Prize (Piano)</span>
-                          <span class="achieve-pill">Carnegie Hall</span>
+                          <span class="achieve-pill">Manhattan School</span>
                         </div>
-                        <p class="achieve-desc">Grand Prize Solo Recitalist with Carnegie Hall Weill Hall invitation.</p>
+                        <p class="achieve-desc">Grand Prize Solo Recitalist with Manhattan School of Music performance.</p>
                       </li>
                       <li class="hero-achieve-item">
                         <div class="achieve-item-head">
