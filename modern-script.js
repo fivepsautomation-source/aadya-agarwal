@@ -92,12 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
             slide.setAttribute('aria-hidden', 'true');
           }
         });
-
-        const counter = document.getElementById('heroSliderCounter');
-        if (counter) {
-          const norm = ((currentIndex % N) + N) % N + 1;
-          counter.innerHTML = `<span class="pulse-dot"></span> ${norm} / ${N}`;
-        }
       }
 
       function goToSlide(targetIdx) {
@@ -457,16 +451,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentThumbIdx = 0;
 
     if (thumbWrapper && thumbImg && images.length > 1) {
-      // Add subtle photo counter badge
-      const counterBadge = document.createElement('div');
-      counterBadge.className = 'card-photo-counter';
-      counterBadge.setAttribute('aria-label', `Photo 1 of ${images.length}`);
-      counterBadge.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> <span>1 / ${images.length}</span>`;
-      thumbWrapper.appendChild(counterBadge);
+      thumbWrapper.style.cursor = 'pointer';
+      thumbWrapper.setAttribute('title', 'Click photo to view next image');
 
-      thumbWrapper.setAttribute('title', `Click photo to flip through ${images.length} pictures`);
-
-      // Clicking on the image thumbnail cycles to the next photo
+      // Clicking on the image thumbnail cycles to the next photo without showing numbers
       thumbWrapper.addEventListener('click', (e) => {
         e.stopPropagation(); // prevent modal opening so photo can flip!
         e.preventDefault();
@@ -476,8 +464,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           thumbImg.src = images[currentThumbIdx];
           thumbImg.classList.remove('fading');
-          const span = counterBadge.querySelector('span');
-          if (span) span.textContent = `${currentThumbIdx + 1} / ${images.length}`;
         }, 120);
       });
     }

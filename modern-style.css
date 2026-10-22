@@ -341,27 +341,8 @@ img {
   right: 0.85rem;
 }
 
-/* Modern pill counter */
 .slider-counter {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.85rem;
-  z-index: 20;
-  background: rgba(11, 17, 13, 0.78);
-  color: #ffffff;
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-full);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  pointer-events: none;
+  display: none !important;
 }
 
 .pulse-dot {
@@ -661,31 +642,7 @@ img {
 }
 
 .card-photo-counter {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(15, 23, 42, 0.82);
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  pointer-events: none;
-  z-index: 4;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  letter-spacing: 0.02em;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.card-thumb-wrapper:hover .card-photo-counter {
-  transform: scale(1.05);
-  background: rgba(95, 25, 95, 0.92);
+  display: none !important;
 }
 
 .portfolio-card:hover .card-img,
