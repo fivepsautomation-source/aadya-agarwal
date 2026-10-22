@@ -220,22 +220,30 @@ img {
 .hero-slider-section {
   position: relative;
   width: 100%;
-  height: 140px;
+  height: 200px;
   background-color: #0b110d;
   overflow: hidden;
   margin: 0;
   padding: 0;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+.hero-slider-section:active {
+  cursor: grabbing;
 }
 
 @media (min-width: 640px) {
   .hero-slider-section {
-    height: 165px;
+    height: 240px;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-slider-section {
-    height: 190px;
+    height: 280px;
   }
 }
 
@@ -291,6 +299,7 @@ img {
   margin: 0;
   padding: 0;
   border: none;
+  pointer-events: none;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 }
 
@@ -1418,6 +1427,14 @@ img {
   background: #111815;
   border: 1px solid rgba(47, 111, 82, 0.2);
   box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.18);
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+.modal-slider-viewport:active {
+  cursor: grabbing;
 }
 
 .modal-slider-track {
@@ -1451,6 +1468,7 @@ img {
   object-fit: contain;
   border-radius: 8px;
   user-select: none;
+  pointer-events: none;
   display: block;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }

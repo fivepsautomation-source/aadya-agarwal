@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Interval Step Slider (aadyaagarwal.vercel.app step transition with zero gap)
+  // 3. Hero Panoramic Ribbon Slider (Auto-scrolls, drag-to-scroll, wheel-to-scroll, arrow navigation)
   const track = document.querySelector('.hero-slider-track');
   const sliderContainer = document.querySelector('.hero-slider-section');
   const prevBtn = document.querySelector('.slider-nav-btn.prev');
@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const allSlides = Array.from(track.children);
       let currentIndex = N; // Start at first item of center set
-      let isTransitioning = false;
-      const INTERVAL_MS = 4000; // Step transition flip interval
+      const INTERVAL_MS = 3200; // Auto-scroll interval (3.2 seconds)
       let timer = null;
+      let transitionTimeout = null;
 
       function getItemWidth() {
         if (allSlides.length > 0) {
@@ -94,24 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      function goToSlide(targetIdx) {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        currentIndex = targetIdx;
-        updatePosition(true);
-      }
-
-      function stepNext() {
-        goToSlide(currentIndex + 1);
-      }
-
-      function stepPrev() {
-        goToSlide(currentIndex - 1);
-      }
-
-      track.addEventListener('transitionend', () => {
-        isTransitioning = false;
-        // Seamless infinite wrap
+      function checkWrap() {
         if (currentIndex < N || currentIndex >= 2 * N) {
           if (currentIndex < N) {
             currentIndex += N;
@@ -119,9 +102,32 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex -= N;
           }
           updatePosition(false);
-          void track.offsetHeight;
+          void track.offsetHeight; // force reflow
         }
+      }
+
+      track.addEventListener('transitionend', (e) => {
+        if (e.target !== track) return;
+        if (transitionTimeout) clearTimeout(transitionTimeout);
+        checkWrap();
       });
+
+      function goToSlide(targetIdx, animate = true) {
+        currentIndex = targetIdx;
+        updatePosition(animate);
+        if (animate) {
+          if (transitionTimeout) clearTimeout(transitionTimeout);
+          transitionTimeout = setTimeout(checkWrap, 550);
+        }
+      }
+
+      function stepNext() {
+        goToSlide(currentIndex + 1, true);
+      }
+
+      function stepPrev() {
+        goToSlide(currentIndex - 1, true);
+      }
 
       function startTimer() {
         stopTimer();
@@ -138,10 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // Initial placement
       updatePosition(false);
       startTimer();
-
-      // Pause on hover so visitor can view any photo
-      sliderContainer.addEventListener('mouseenter', stopTimer);
-      sliderContainer.addEventListener('mouseleave', startTimer);
 
       // Arrow navigation
       if (nextBtn) {
@@ -165,27 +167,81 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePosition(false);
       });
 
-      // Touch / swipe support
-      let touchStartX = 0;
-      let touchStartTime = 0;
-      sliderContainer.addEventListener('touchstart', (e) => {
-        stopTimer();
-        touchStartX = e.touches[0].clientX;
-        touchStartTime = Date.now();
-      }, { passive: true });
+      // Mouse Drag & Touch Swipe support
+      let isDragging = false;
+      let startX = 0;
+      let currentX = 0;
+      let dragStartTime = 0;
 
-      sliderContainer.addEventListener('touchend', (e) => {
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        const dt = Date.now() - touchStartTime;
-        if (Math.abs(dx) > 40 && dt < 600) {
-          if (dx < 0) {
+      function handleDragStart(clientX) {
+        isDragging = true;
+        startX = clientX;
+        currentX = clientX;
+        dragStartTime = Date.now();
+        stopTimer();
+        sliderContainer.style.cursor = 'grabbing';
+      }
+
+      function handleDragMove(clientX) {
+        if (!isDragging) return;
+        currentX = clientX;
+      }
+
+      function handleDragEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        sliderContainer.style.cursor = 'grab';
+        const diffX = currentX - startX;
+        const timeElapsed = Date.now() - dragStartTime;
+
+        if (Math.abs(diffX) > 35 && timeElapsed < 800) {
+          if (diffX < 0) {
             stepNext();
           } else {
             stepPrev();
           }
         }
         startTimer();
+      }
+
+      sliderContainer.style.cursor = 'grab';
+      sliderContainer.addEventListener('mousedown', (e) => {
+        handleDragStart(e.clientX);
+      });
+      window.addEventListener('mousemove', (e) => {
+        if (isDragging) handleDragMove(e.clientX);
+      });
+      window.addEventListener('mouseup', () => {
+        if (isDragging) handleDragEnd();
+      });
+
+      sliderContainer.addEventListener('touchstart', (e) => {
+        handleDragStart(e.touches[0].clientX);
       }, { passive: true });
+      sliderContainer.addEventListener('touchmove', (e) => {
+        if (isDragging) handleDragMove(e.touches[0].clientX);
+      }, { passive: true });
+      sliderContainer.addEventListener('touchend', () => {
+        handleDragEnd();
+      }, { passive: true });
+
+      // Trackpad / Horizontal Wheel scrolling
+      let wheelTimeout = null;
+      sliderContainer.addEventListener('wheel', (e) => {
+        const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+        if (Math.abs(delta) > 15) {
+          e.preventDefault();
+          if (wheelTimeout) return;
+          wheelTimeout = setTimeout(() => { wheelTimeout = null; }, 300);
+          stopTimer();
+          if (delta > 0) {
+            stepNext();
+          } else {
+            stepPrev();
+          }
+          startTimer();
+        }
+      }, { passive: false });
     }
   }
 
@@ -315,6 +371,61 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       goToSlide(currentSlide + 1);
     });
+  }
+
+  // Modal Slider Touch Swipe & Drag & Wheel Support
+  const modalViewport = document.querySelector('.modal-slider-viewport');
+  if (modalViewport) {
+    let mTouchStart = 0;
+    modalViewport.addEventListener('touchstart', (e) => {
+      mTouchStart = e.touches[0].clientX;
+    }, { passive: true });
+
+    modalViewport.addEventListener('touchend', (e) => {
+      const diff = mTouchStart - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 35) {
+        if (diff > 0) {
+          goToSlide(currentSlide + 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+    }, { passive: true });
+
+    let mDragging = false;
+    let mDragStart = 0;
+    modalViewport.addEventListener('mousedown', (e) => {
+      mDragging = true;
+      mDragStart = e.clientX;
+    });
+
+    window.addEventListener('mouseup', (e) => {
+      if (!mDragging) return;
+      mDragging = false;
+      const diff = mDragStart - e.clientX;
+      if (Math.abs(diff) > 35) {
+        if (diff > 0) {
+          goToSlide(currentSlide + 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+    });
+
+    let mWheelTimeout = null;
+    modalViewport.addEventListener('wheel', (e) => {
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+      if (Math.abs(delta) > 15) {
+        e.preventDefault();
+        if (mWheelTimeout) return;
+        mWheelTimeout = setTimeout(() => { mWheelTimeout = null; }, 300);
+        if (delta > 0) {
+          goToSlide(currentSlide + 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+    }, { passive: false });
   }
 
   window.openProjectModal = function(data) {
