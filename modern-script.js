@@ -26,107 +26,235 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Continuous Infinite Marquee Ribbon (Glides like a continuous logo ticker)
+  // 3. Interval Step Slider (aadyaagarwal.vercel.app step transition with zero gap)
   const track = document.querySelector('.hero-slider-track');
   const sliderContainer = document.querySelector('.hero-slider-section');
   const prevBtn = document.querySelector('.slider-nav-btn.prev');
   const nextBtn = document.querySelector('.slider-nav-btn.next');
 
   if (track && sliderContainer) {
-    // Clone children to ensure seamless continuous wrap-around without empty space
-    const originalChildren = Array.from(track.children);
-    if (originalChildren.length > 0) {
-      originalChildren.forEach(item => {
-        track.appendChild(item.cloneNode(true));
+    const rawItems = Array.from(track.querySelectorAll('.hero-slider-item'));
+    if (rawItems.length > 0) {
+      // Structure each slide to have direct full-bleed image with zero gap
+      const originalSlides = rawItems.map(item => {
+        const originalImg = item.querySelector('img');
+        const src = originalImg ? originalImg.getAttribute('src') : '';
+        const alt = originalImg ? (originalImg.getAttribute('alt') || '') : '';
+        const posClass = originalImg && originalImg.classList.contains('pos-top') ? 'pos-top' : 
+                         (originalImg && originalImg.classList.contains('pos-mid-top') ? 'pos-mid-top' : '');
+
+        const slide = document.createElement('div');
+        slide.className = 'hero-slider-item';
+        slide.innerHTML = `
+          <img src="${src}" alt="${alt}" class="hero-slider-img ${posClass}" loading="lazy">
+        `;
+        return slide;
       });
-    }
 
-    let offset = 0;
-    const baseSpeed = 1.0; // pixels per frame (smooth steady gliding ~60px/sec)
-    let velocity = 0;
-    let isPaused = false;
-    let isDragging = false;
-    let startX = 0;
-    let dragStartOffset = 0;
+      // Clear track and clone 3 sets: [-1, 0, 1] so total = 3 * N for infinite wrap
+      track.innerHTML = '';
+      const N = originalSlides.length;
+      [-1, 0, 1].forEach(() => {
+        originalSlides.forEach(s => {
+          track.appendChild(s.cloneNode(true));
+        });
+      });
 
-    function getSetWidth() {
-      const items = track.children;
-      let total = 0;
-      const count = items.length / 2;
-      for (let i = 0; i < count; i++) {
-        total += items[i].getBoundingClientRect().width;
+      const allSlides = Array.from(track.children);
+      let currentIndex = N; // Start at first item of center set
+      let isTransitioning = false;
+      const INTERVAL_MS = 4000; // Step transition flip interval
+      let timer = null;
+
+      function getItemWidth() {
+        if (allSlides.length > 0) {
+          const rect = allSlides[0].getBoundingClientRect();
+          if (rect && rect.width > 0) return rect.width;
+        }
+        const containerWidth = sliderContainer.getBoundingClientRect().width || window.innerWidth;
+        if (window.innerWidth >= 1024) return containerWidth / 4;
+        if (window.innerWidth >= 640) return containerWidth / 3;
+        return containerWidth / 2;
       }
-      return total;
-    }
 
-    function renderLoop() {
-      const setWidth = getSetWidth();
-      if (setWidth > 0) {
-        if (!isPaused && !isDragging) {
-          offset -= baseSpeed;
-        }
+      function updatePosition(animate = true) {
+        if (!allSlides[currentIndex]) return;
+        const itemWidth = getItemWidth();
+        const targetX = -(currentIndex * itemWidth);
 
-        if (velocity !== 0) {
-          offset += velocity;
-          velocity *= 0.90;
-          if (Math.abs(velocity) < 0.05) velocity = 0;
-        }
+        track.style.transition = animate ? 'transform 500ms cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
+        track.style.transform = `translate3d(${targetX}px, 0, 0)`;
 
-        // Infinite wrap-around seamlessly
-        while (offset <= -setWidth) {
-          offset += setWidth;
-        }
-        while (offset > 0) {
-          offset -= setWidth;
-        }
+        allSlides.forEach((slide, idx) => {
+          if (idx >= currentIndex && idx < currentIndex + 4) {
+            slide.setAttribute('aria-hidden', 'false');
+          } else {
+            slide.setAttribute('aria-hidden', 'true');
+          }
+        });
 
-        track.style.transform = `translate3d(${offset}px, 0, 0)`;
+        const counter = document.getElementById('heroSliderCounter');
+        if (counter) {
+          const norm = ((currentIndex % N) + N) % N + 1;
+          counter.innerHTML = `<span class="pulse-dot"></span> ${norm} / ${N}`;
+        }
       }
-      requestAnimationFrame(renderLoop);
-    }
 
-    requestAnimationFrame(renderLoop);
+      function goToSlide(targetIdx) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex = targetIdx;
+        updatePosition(true);
+      }
 
-    // Pause on hover so visitor can admire any image
-    sliderContainer.addEventListener('mouseenter', () => { isPaused = true; });
-    sliderContainer.addEventListener('mouseleave', () => { isPaused = false; });
+      function stepNext() {
+        goToSlide(currentIndex + 1);
+      }
 
-    // Arrow navigation buttons provide instant smooth nudge
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        const itemWidth = originalChildren[0]?.getBoundingClientRect().width || 380;
-        velocity -= itemWidth * 0.12;
+      function stepPrev() {
+        goToSlide(currentIndex - 1);
+      }
+
+      track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        // Seamless infinite wrap
+        if (currentIndex < N || currentIndex >= 2 * N) {
+          if (currentIndex < N) {
+            currentIndex += N;
+          } else {
+            currentIndex -= N;
+          }
+          updatePosition(false);
+          void track.offsetHeight;
+        }
       });
-    }
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        const itemWidth = originalChildren[0]?.getBoundingClientRect().width || 380;
-        velocity += itemWidth * 0.12;
+      function startTimer() {
+        stopTimer();
+        timer = setInterval(stepNext, INTERVAL_MS);
+      }
+
+      function stopTimer() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      // Initial placement
+      updatePosition(false);
+      startTimer();
+
+      // Pause on hover so visitor can view any photo
+      sliderContainer.addEventListener('mouseenter', stopTimer);
+      sliderContainer.addEventListener('mouseleave', startTimer);
+
+      // Arrow navigation
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          stepNext();
+          startTimer();
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          stepPrev();
+          startTimer();
+        });
+      }
+
+      // Resize listener
+      window.addEventListener('resize', () => {
+        updatePosition(false);
       });
+
+      // Touch / swipe support
+      let touchStartX = 0;
+      let touchStartTime = 0;
+      sliderContainer.addEventListener('touchstart', (e) => {
+        stopTimer();
+        touchStartX = e.touches[0].clientX;
+        touchStartTime = Date.now();
+      }, { passive: true });
+
+      sliderContainer.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dt = Date.now() - touchStartTime;
+        if (Math.abs(dx) > 40 && dt < 600) {
+          if (dx < 0) {
+            stepNext();
+          } else {
+            stepPrev();
+          }
+        }
+        startTimer();
+      }, { passive: true });
     }
-
-    // Touch & pointer dragging
-    sliderContainer.addEventListener('pointerdown', (e) => {
-      isDragging = true;
-      startX = e.clientX;
-      dragStartOffset = offset;
-    });
-
-    window.addEventListener('pointermove', (e) => {
-      if (!isDragging) return;
-      const dx = e.clientX - startX;
-      offset = dragStartOffset + dx;
-    });
-
-    window.addEventListener('pointerup', () => {
-      isDragging = false;
-    });
   }
 
-  // 4. Portfolio Filter Tabs (6 Exact Categories requested by user)
+  // 4. Portfolio Filter Tabs (Curated All showing Important Highlights + 6 Specific Disciplines)
   const filterBtns = document.querySelectorAll('.filter-tab-btn');
   const projectCards = document.querySelectorAll('.portfolio-card');
+
+  function applyPortfolioFilter(filterVal, searchQuery = '') {
+    const q = searchQuery.toLowerCase().trim();
+
+    projectCards.forEach(card => {
+      const cardCats = (card.getAttribute('data-category') || '').split(' ');
+      const isFeatured = card.getAttribute('data-featured') === 'true';
+
+      let matchesFilter = false;
+      if (filterVal === 'all') {
+        // If there's an active text query, let user search across all; otherwise strictly show ONLY important items!
+        matchesFilter = q ? true : isFeatured;
+      } else {
+        matchesFilter = cardCats.includes(filterVal);
+      }
+
+      let matchesSearch = true;
+      if (q) {
+        const title = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
+        const desc = (card.querySelector('.card-description')?.textContent || '').toLowerCase();
+        const cardProject = (card.getAttribute('data-project') || '').toLowerCase();
+        matchesSearch = title.includes(q) || desc.includes(q) || cardProject.includes(q);
+      }
+
+      if (matchesFilter && matchesSearch) {
+        card.classList.remove('hidden');
+        card.style.display = '';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(8px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 20);
+      } else {
+        card.classList.add('hidden');
+        card.style.display = 'none';
+      }
+    });
+
+    // Update section count badge if present
+    const countBadge = document.getElementById('portfolioCountBadge');
+    if (countBadge) {
+      if (filterVal === 'all' && !q) {
+        const featCount = Array.from(projectCards).filter(c => !c.classList.contains('hidden')).length;
+        countBadge.textContent = `${featCount} Key Innovations • Top Awards & Highlights`;
+      } else {
+        const visibleCount = Array.from(projectCards).filter(c => !c.classList.contains('hidden')).length;
+        countBadge.textContent = `${visibleCount} Selected Projects`;
+      }
+    }
+  }
+
+  // Initial load: show only the 8 curated important items in "All"
+  if (projectCards.length > 0) {
+    applyPortfolioFilter('all');
+  }
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -138,22 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.setAttribute('aria-pressed', 'true');
 
       const filterVal = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const cardCats = (card.getAttribute('data-category') || '').split(' ');
-        if (filterVal === 'all' || cardCats.includes(filterVal)) {
-          card.classList.remove('hidden');
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          setTimeout(() => {
-            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 30);
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+      const searchInput = document.getElementById('portfolioSearchInput');
+      applyPortfolioFilter(filterVal, searchInput ? searchInput.value : '');
     });
   });
 
@@ -324,17 +438,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Attach card click handlers
+  // Attach card image flip & modal opening handlers
   projectCards.forEach(card => {
+    let projectData = null;
+    try {
+      const rawData = card.getAttribute('data-project');
+      if (rawData) projectData = JSON.parse(rawData);
+    } catch (err) {
+      console.error('Error parsing card project data', err);
+    }
+
+    const thumbWrapper = card.querySelector('.card-thumb-wrapper');
+    const thumbImg = card.querySelector('.card-thumb-img');
+    const images = projectData && Array.isArray(projectData.images) && projectData.images.length > 0
+      ? projectData.images
+      : (projectData && projectData.img ? [projectData.img] : []);
+
+    let currentThumbIdx = 0;
+
+    if (thumbWrapper && thumbImg && images.length > 1) {
+      // Add subtle photo counter badge
+      const counterBadge = document.createElement('div');
+      counterBadge.className = 'card-photo-counter';
+      counterBadge.setAttribute('aria-label', `Photo 1 of ${images.length}`);
+      counterBadge.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> <span>1 / ${images.length}</span>`;
+      thumbWrapper.appendChild(counterBadge);
+
+      thumbWrapper.setAttribute('title', `Click photo to flip through ${images.length} pictures`);
+
+      // Clicking on the image thumbnail cycles to the next photo
+      thumbWrapper.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent modal opening so photo can flip!
+        e.preventDefault();
+
+        currentThumbIdx = (currentThumbIdx + 1) % images.length;
+        thumbImg.classList.add('fading');
+        setTimeout(() => {
+          thumbImg.src = images[currentThumbIdx];
+          thumbImg.classList.remove('fading');
+          const span = counterBadge.querySelector('span');
+          if (span) span.textContent = `${currentThumbIdx + 1} / ${images.length}`;
+        }, 120);
+      });
+    }
+
+    // Clicking on the card body (or on thumbnail if single photo) opens the modal
     card.addEventListener('click', () => {
-      try {
-        const rawData = card.getAttribute('data-project');
-        if (rawData) {
-          const data = JSON.parse(rawData);
-          window.openProjectModal(data);
-        }
-      } catch (err) {
-        console.error('Error parsing card project data', err);
+      if (projectData) {
+        window.openProjectModal(projectData);
       }
     });
   });
@@ -344,27 +495,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('portfolioSearchInput');
   if (searchInput && projectCards.length > 0) {
     searchInput.addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase().trim();
       const activeFilterBtn = document.querySelector('.filter-tab-btn.active');
       const activeFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
-
-      projectCards.forEach(card => {
-        const title = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
-        const desc = (card.querySelector('.card-description')?.textContent || '').toLowerCase();
-        const category = (card.getAttribute('data-category') || '').toLowerCase();
-        const cardProject = (card.getAttribute('data-project') || '').toLowerCase();
-
-        const matchesQuery = !q || title.includes(q) || desc.includes(q) || cardProject.includes(q);
-        const matchesCategory = activeFilter === 'all' || category.includes(activeFilter);
-
-        if (matchesQuery && matchesCategory) {
-          card.classList.remove('hidden');
-          card.style.display = '';
-        } else {
-          card.classList.add('hidden');
-          card.style.display = 'none';
-        }
-      });
+      applyPortfolioFilter(activeFilter, e.target.value);
     });
   }
 
