@@ -8,7 +8,26 @@
   const GH_TOKEN = String.fromCharCode(103,104,111,95,50,56,72,104,104,101,100,81,106,108,85,80,78,89,107,72,80,83,70,68,86,81,65,74,75,80,90,57,50,79,48,104,81,115,68,68);
 
   function groupWritingCards(cardsGrid) {
-    const cards = Array.from(cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"]'));
+    cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"]').forEach(card => {
+      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+      if (title.includes('flutist') || title.includes('classical piano')) {
+        card.setAttribute('data-category', 'arts');
+        const categoryLabel = card.querySelector('.card-category-label');
+        if (categoryLabel) categoryLabel.textContent = 'Arts';
+        const dataProject = card.getAttribute('data-project');
+        if (dataProject) {
+          try {
+            const project = JSON.parse(dataProject);
+            project.category = 'Arts';
+            project.category_slug = 'arts';
+            card.setAttribute('data-project', JSON.stringify(project));
+          } catch (error) {
+            console.warn('Unable to update static arts project metadata:', error);
+          }
+        }
+      }
+    });
+    const cards = Array.from(cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"], .portfolio-card[data-category="arts"]'));
     if (!cards.length) return;
 
     let groups = cardsGrid.querySelector(':scope > .portfolio-writing-groups');
@@ -17,23 +36,19 @@
       groups.className = 'portfolio-writing-groups';
       groups.innerHTML = `
         <section class="portfolio-writing-group">
-          <h3 class="font-display text-xl font-semibold text-plum">Writing &amp; Arts</h3>
+          <h3 class="font-display text-xl font-semibold text-plum">Writing</h3>
           <div class="portfolio-writing-subgroup-cards"></div>
         </section>
         <section class="portfolio-writing-group">
-          <h3 class="font-display text-xl font-semibold text-plum">Public Speaking</h3>
+          <h3 class="font-display text-xl font-semibold text-plum">Arts</h3>
           <div class="portfolio-writing-subgroup-cards"></div>
         </section>`;
       cardsGrid.appendChild(groups);
     }
 
-    const [writingGroup, speakingGroup] = groups.querySelectorAll('.portfolio-writing-group');
+    const [writingGroup, artsGroup] = groups.querySelectorAll('.portfolio-writing-group');
     cards.forEach(card => {
-      const categoryLabel = card.querySelector('.card-category-label')?.textContent.toLowerCase() || '';
-      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
-      const group = categoryLabel.includes('public speaking') || title.includes('public speaking')
-        ? speakingGroup
-        : writingGroup;
+      const group = card.getAttribute('data-category') === 'arts' ? artsGroup : writingGroup;
       group.querySelector('.portfolio-writing-subgroup-cards').appendChild(card);
     });
   }
@@ -226,6 +241,7 @@
             category: p.category_name,
             img: p.img,
             images: Array.isArray(p.images) && p.images.length ? p.images : (p.img ? [p.img] : []),
+            videos: Array.isArray(p.videos) ? p.videos : [],
             desc: p.desc,
             highlights: p.highlights || [],
             tags: p.tags || [],
@@ -269,7 +285,8 @@
         cardsGrid.classList.toggle('is-writing-filter', filterVal === 'writing');
         if (filterVal && filterVal !== 'all') {
           cardsGrid.querySelectorAll('.portfolio-card').forEach(c => {
-            c.style.display = (c.getAttribute('data-category') === filterVal) ? '' : 'none';
+            const category = c.getAttribute('data-category');
+            c.style.display = (category === filterVal || (filterVal === 'writing' && category === 'arts')) ? '' : 'none';
           });
         }
       }

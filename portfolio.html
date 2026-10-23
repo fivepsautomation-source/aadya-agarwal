@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentCards = document.querySelectorAll('.portfolio-cards-grid .portfolio-card');
       currentCards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
-        if (targetFilter === 'all' || cardCat === targetFilter) {
+        if (targetFilter === 'all' || cardCat === targetFilter || (targetFilter === 'writing' && cardCat === 'arts')) {
           card.style.display = '';
         } else {
           card.style.display = 'none';

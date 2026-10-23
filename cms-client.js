@@ -143,6 +143,7 @@
                 category: p.category_name,
                 img: p.img,
                 images: Array.isArray(p.images) && p.images.length ? p.images : [p.img],
+                videos: Array.isArray(p.videos) ? p.videos : [],
                 desc: p.desc,
                 highlights: p.highlights || [],
                 tags: p.tags || [],

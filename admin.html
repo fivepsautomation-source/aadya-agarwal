@@ -753,7 +753,8 @@
               <button class="btn-secondary" onclick="filterPortfolioList('biomedical', this)">Biomedical &amp; AI</button>
               <button class="btn-secondary" onclick="filterPortfolioList('monivitals', this)">MoniVitals</button>
               <button class="btn-secondary" onclick="filterPortfolioList('community', this)">School &amp; Community</button>
-              <button class="btn-secondary" onclick="filterPortfolioList('writing', this)">Writing &amp; Arts</button>
+              <button class="btn-secondary" onclick="filterPortfolioList('writing', this)">Writing</button>
+              <button class="btn-secondary" onclick="filterPortfolioList('arts', this)">Arts</button>
             </div>
 
             <!-- Project Cards List -->
@@ -943,7 +944,8 @@
             <option value="biomedical">Biomedical &amp; AI</option>
             <option value="monivitals">MoniVitals</option>
             <option value="community">School &amp; Community</option>
-            <option value="writing">Writing &amp; Arts</option>
+            <option value="writing">Writing</option>
+            <option value="arts">Arts</option>
           </select>
         </div>
       </div>
@@ -1930,7 +1932,8 @@
         'biomedical': 'Biomedical & AI',
         'monivitals': 'MoniVitals',
         'community': 'School & Community',
-        'writing': 'Writing & Arts'
+        'writing': 'Writing',
+        'arts': 'Arts'
       };
       const category_name = categoryNames[category_slug] || 'Project';
       const img = document.getElementById('modalProjImg').value.trim() || (currentModalGalleryImages[0] || '');

@@ -1521,6 +1521,9 @@
           if (Array.isArray(item.highlights)) {
             PROJECTS_DATA[idx].technicalFocus = item.highlights;
           }
+          if (Array.isArray(item.videos)) {
+            PROJECTS_DATA[idx].videos = item.videos;
+          }
         } else {
           PROJECTS_DATA.push({
             title: item.title,
@@ -1531,7 +1534,7 @@
             technicalFocus: item.highlights || [],
             sections: [{ title: "Project Overview", intro: item.desc || "" }],
             gallery: (item.images || []).map(img => typeof img === 'string' ? { src: img, alt: item.title, caption: item.title } : img),
-            videos: []
+            videos: Array.isArray(item.videos) ? item.videos : []
           });
         }
       });

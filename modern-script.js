@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // If there's an active text query, let user search across all; otherwise strictly show ONLY important items!
         matchesFilter = q ? true : isFeatured;
       } else {
-        matchesFilter = cardCats.includes(filterVal);
+        matchesFilter = cardCats.includes(filterVal) || (filterVal === 'writing' && cardCats.includes('arts'));
       }
 
       let matchesSearch = true;

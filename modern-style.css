@@ -815,10 +815,13 @@ dialog#projectModal::backdrop,
 }
 
 .modal-hero-overlay {
-  position: relative !important;
-  inset: auto !important;
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 1 !important;
   width: 100% !important;
-  background: #0f0f12 !important;
+  background: linear-gradient(transparent, rgba(15, 15, 18, 0.88)) !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
@@ -1415,6 +1418,8 @@ figure figcaption {
   grid-column: 1 / -1;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1.25rem, 2vw, 1.75rem);
+  justify-self: center;
+  width: 100%;
 }
 
 .portfolio-cards-grid.is-writing-filter .portfolio-writing-group {
@@ -1442,6 +1447,12 @@ img {
 @media (max-width: 639px) {
   .portfolio-cards-grid.is-writing-filter .portfolio-writing-groups {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-cards-grid.is-writing-filter .portfolio-writing-groups {
+    width: calc(66.6667% - 8px);
   }
 }
 
