@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css?v=353">
+  <link rel="stylesheet" href="modern-style.css?v=354">
   <style>
     :root {
       --admin-plum: #3b122d;
@@ -1839,12 +1839,13 @@
     function renderPortfolioList(items) {
       const container = document.getElementById('portfolioProjectsList');
       container.innerHTML = '';
-      if (!items.length) {
+      const sortedItems = [...items].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
+      if (!sortedItems.length) {
         container.innerHTML = '<p style="color: rgba(0,0,0,0.5); padding: 1.5rem 0;">No projects in this category.</p>';
         return;
       }
 
-      items.forEach(p => {
+      sortedItems.forEach(p => {
         const row = document.createElement('div');
         row.className = 'item-list-row';
         const photoCount = Array.isArray(p.images) ? p.images.length : (p.img ? 1 : 0);
@@ -1937,6 +1938,9 @@
       const highlights = document.getElementById('modalProjHighlights').value.split('\n').map(s => s.trim()).filter(Boolean);
       const tags = document.getElementById('modalProjTags').value.split(',').map(s => s.trim()).filter(Boolean);
 
+      const existing = (siteData.portfolio || []).find(p => String(p.id) === String(id));
+      const sort_order = existing && existing.sort_order !== undefined ? existing.sort_order : ((siteData.portfolio || []).length + 1);
+
       const payload = {
         id: id ? parseInt(id) : null,
         title,
@@ -1946,7 +1950,8 @@
         images: currentModalGalleryImages,
         desc,
         highlights,
-        tags
+        tags,
+        sort_order
       };
 
       try {

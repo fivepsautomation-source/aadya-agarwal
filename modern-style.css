@@ -1423,3 +1423,44 @@ figure figcaption {
   align-items: stretch;
   gap: clamp(1.125rem, 1.8vw, 1.5rem) !important;
 }
+
+.portfolio-writing-groups,
+.portfolio-writing-group,
+.portfolio-writing-subgroup-cards {
+  display: contents;
+}
+
+.portfolio-writing-group > h3 {
+  display: none;
+}
+
+.portfolio-cards-grid.is-writing-filter .portfolio-writing-groups {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.portfolio-cards-grid.is-writing-filter .portfolio-writing-group {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portfolio-cards-grid.is-writing-filter .portfolio-writing-group > h3 {
+  display: block;
+}
+
+.portfolio-cards-grid.is-writing-filter .portfolio-writing-subgroup-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: clamp(1.125rem, 1.8vw, 1.5rem);
+}
+
+@media (max-width: 639px) {
+  .portfolio-cards-grid.is-writing-filter .portfolio-writing-groups {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css?v=353">
+  <link rel="stylesheet" href="modern-style.css?v=355">
 </head>
 <body class="min-h-full bg-paper text-ink font-body">
   <div id="top">
@@ -247,6 +247,23 @@
     <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.</span>
   </div>
 </article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="writing" data-project='{&quot;title&quot;:&quot;NSF National Public Speaking 1st Place&quot;,&quot;category&quot;:&quot;Public Speaking&quot;,&quot;img&quot;:&quot;assets/speaking/speech_award_ceremony.jpg&quot;,&quot;images&quot;:[&quot;assets/speaking/speech_award_ceremony.jpg&quot;,&quot;assets/speaking/speech_stage.jpg&quot;,&quot;assets/certificates/nsf_speech_award.png&quot;],&quot;desc&quot;:&quot;First-place national champion in public speaking and oratorical debate.&quot;,&quot;highlights&quot;:[&quot;NSF National Public Speaking 1st Place&quot;,&quot;National champion in public speaking and oratorical debate&quot;],&quot;tags&quot;:[&quot;#PublicSpeaking&quot;,&quot;#OratoricalDebate&quot;,&quot;#NationalChampion&quot;],&quot;category_slug&quot;:&quot;writing&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="NSF National Public Speaking 1st Place" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/speaking/speech_award_ceremony.jpg"/>
+    <span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">NSF</span>
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-berry text-white">1st Place</span>
+    </span>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Public Speaking</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">NSF National Public Speaking 1st Place</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">First-place national champion in public speaking and oratorical debate.</span>
+  </div>
+</article>
 <article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="community" data-project='{&quot;title&quot;: &quot;Mercer County Hunger Relief &amp; Meal Packaging Drives&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;assets/community/Copy of cd - boxes - pic5.jpg&quot;, &quot;assets/community/Copy of cd - ah- group pic1.jpg&quot;, &quot;assets/community/Candy donation boxes at AoPs - pic2.jpg&quot;, &quot;assets/certificates/STEP Meals Packaging.jpeg&quot;], &quot;desc&quot;: &quot;Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.&quot;, &quot;highlights&quot;: [&quot;Mobilized 150+ youth and student volunteers for regional meal packaging&quot;, &quot;Coordinated logistics with Mercer County food banks and community shelters&quot;, &quot;Organized annual holiday candy and non-perishable drives for local children&quot;, &quot;Direct community leadership recognized by local and state representatives&quot;], &quot;tags&quot;: [&quot;#HungerRelief&quot;, &quot;#CivicLeadership&quot;, &quot;#YouthVolunteering&quot;, &quot;#Community&quot;], &quot;category_slug&quot;: &quot;community&quot;}'>
   <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
     <img alt="Mercer County Hunger Relief &amp; Meal Packaging Drives" loading="eager" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/ref_images/projects_hunger-donation_framed.jpg"/>
@@ -332,6 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-plum bg-plum text-white';
 
       // Show / hide matching cards
+      document.querySelector('.portfolio-cards-grid')?.classList.toggle('is-writing-filter', targetFilter === 'writing');
       const currentCards = document.querySelectorAll('.portfolio-cards-grid .portfolio-card');
       currentCards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
@@ -346,6 +364,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <script src="projects_modal_system.js?v=7"></script>
-<script src="cms-loader.js"></script>
+<script src="cms-loader.js?v=4"></script>
 </body>
 </html>

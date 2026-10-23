@@ -7,6 +7,37 @@
   const CMS_KEY = 'aadya_cms_content';
   const GH_TOKEN = String.fromCharCode(103,104,111,95,50,56,72,104,104,101,100,81,106,108,85,80,78,89,107,72,80,83,70,68,86,81,65,74,75,80,90,57,50,79,48,104,81,115,68,68);
 
+  function groupWritingCards(cardsGrid) {
+    const cards = Array.from(cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"]'));
+    if (!cards.length) return;
+
+    let groups = cardsGrid.querySelector(':scope > .portfolio-writing-groups');
+    if (!groups) {
+      groups = document.createElement('div');
+      groups.className = 'portfolio-writing-groups';
+      groups.innerHTML = `
+        <section class="portfolio-writing-group">
+          <h3 class="font-display text-xl font-semibold text-plum">Writing &amp; Arts</h3>
+          <div class="portfolio-writing-subgroup-cards"></div>
+        </section>
+        <section class="portfolio-writing-group">
+          <h3 class="font-display text-xl font-semibold text-plum">Public Speaking</h3>
+          <div class="portfolio-writing-subgroup-cards"></div>
+        </section>`;
+      cardsGrid.appendChild(groups);
+    }
+
+    const [writingGroup, speakingGroup] = groups.querySelectorAll('.portfolio-writing-group');
+    cards.forEach(card => {
+      const categoryLabel = card.querySelector('.card-category-label')?.textContent.toLowerCase() || '';
+      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+      const group = categoryLabel.includes('public speaking') || title.includes('public speaking')
+        ? speakingGroup
+        : writingGroup;
+      group.querySelector('.portfolio-writing-subgroup-cards').appendChild(card);
+    });
+  }
+
   async function getCMSData() {
     // 1. Live GitHub Contents API (0 second cache, 5,000 req/hr rate limit, instant across all devices globally)
     try {
@@ -151,14 +182,39 @@
     // 3. PORTFOLIO PROJECTS & MODAL SYNC
     // ==========================================
     if (Array.isArray(data.portfolio) && data.portfolio.length > 0) {
-      if (typeof window.updateProjectsDataFromCMS === 'function') {
-        window.updateProjectsDataFromCMS(data.portfolio);
+      const portfolioItems = [...data.portfolio].sort(
+        (a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0)
+      );
+      const cardsGrid = document.querySelector('.portfolio-cards-grid');
+      const speakingFallback = cardsGrid && Array.from(
+        cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"]')
+      ).find(card => card.querySelector('h3')?.textContent.includes('NSF National Public Speaking 1st Place'));
+      if (speakingFallback && !portfolioItems.some(item => item.title === 'NSF National Public Speaking 1st Place')) {
+        const project = JSON.parse(speakingFallback.getAttribute('data-project'));
+        portfolioItems.push({
+          id: 17,
+          title: project.title,
+          category_slug: project.category_slug,
+          category_name: project.category,
+          img: project.img,
+          images: project.images,
+          desc: project.desc,
+          highlights: project.highlights,
+          tags: project.tags,
+          badges: ['NSF', '1st Place'],
+          is_robotics: false,
+          sort_order: 16
+        });
+        portfolioItems.sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0));
       }
 
-      const cardsGrid = document.querySelector('.portfolio-cards-grid');
+      if (typeof window.updateProjectsDataFromCMS === 'function') {
+        window.updateProjectsDataFromCMS(portfolioItems);
+      }
+
       if (cardsGrid) {
         cardsGrid.innerHTML = '';
-        data.portfolio.forEach(p => {
+        portfolioItems.forEach(p => {
           const card = document.createElement('article');
           const isRobotics = p.is_robotics || (p.category_slug === 'robotics');
           card.className = 'portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer';
@@ -205,9 +261,12 @@
           cardsGrid.appendChild(card);
         });
 
+        groupWritingCards(cardsGrid);
+
         // Re-apply active filter if one was chosen
         const activeTab = document.querySelector('.filter-tab-btn[aria-pressed="true"]');
         const filterVal = activeTab ? activeTab.getAttribute('data-filter') : 'all';
+        cardsGrid.classList.toggle('is-writing-filter', filterVal === 'writing');
         if (filterVal && filterVal !== 'all') {
           cardsGrid.querySelectorAll('.portfolio-card').forEach(c => {
             c.style.display = (c.getAttribute('data-category') === filterVal) ? '' : 'none';
@@ -336,6 +395,8 @@
       applyCMSData(e.detail);
     }
   });
+
+  document.querySelectorAll('.portfolio-cards-grid').forEach(groupWritingCards);
 
   // Run on page load
   async function init() {

@@ -54,64 +54,6 @@
       "sort_order": 0
     },
     {
-      "id": 1,
-      "title": "Autonomous Ocean pH Buoy",
-      "category_slug": "environmental",
-      "category_name": "Climate technology · 2025 concept",
-      "img": "projects/ocean-project-presentation.jpg",
-      "images": [
-        "projects/ocean-project-presentation.jpg"
-      ],
-      "desc": "A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.",
-      "highlights": [
-        "pH sensor feeds real-time water quality readings to an Arduino microcontroller",
-        "A servo rotates a 3D-printed dispensing disk below a refillable mineral chamber",
-        "Low-pH readings trigger a measured calcium carbonate release in the closed-loop design",
-        "3M Young Scientist Challenge concept brief & system architecture submission",
-        "Explored predictive dosing with algorithmic feedback and solar-powered continuous runtime"
-      ],
-      "tags": [
-        "#OceanTech",
-        "#ClimateAction",
-        "#Arduino",
-        "#3MYoungScientist",
-        "#pHBuoy"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 4
-    },
-    {
-      "id": 2,
-      "title": "Biochar Water Treatment",
-      "category_slug": "environmental",
-      "category_name": "Experimental Research · 2026",
-      "img": "projects/water-treatment-setup.jpg",
-      "images": [
-        "projects/water-treatment-setup.jpg"
-      ],
-      "desc": "Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.",
-      "highlights": [
-        "Compared softwood and agricultural-waste biochar samples in controlled water-treatment trials",
-        "Measured pH and water-quality changes across treatment trials over time",
-        "Explored heavy-metal and nutrient removal with a floating treatment device concept",
-        "Second place in Earth & Environmental Science at Mercer Science & Engineering Fair (MSEF)",
-        "Stockholm Junior Water Prize Regional Award & Acceptance Speech at NJWEA",
-        "NOAA Taking the Pulse of the Planet award"
-      ],
-      "tags": [
-        "#Biochar",
-        "#WaterRemediation",
-        "#IEEE",
-        "#NJWEA",
-        "#CleanWater",
-        "#MSEF"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 3
-    },
-    {
       "id": 3,
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
@@ -166,6 +108,64 @@
       "badges": [],
       "is_robotics": false,
       "sort_order": 2
+    },
+    {
+      "id": 2,
+      "title": "Biochar Water Treatment",
+      "category_slug": "environmental",
+      "category_name": "Experimental Research · 2026",
+      "img": "projects/water-treatment-setup.jpg",
+      "images": [
+        "projects/water-treatment-setup.jpg"
+      ],
+      "desc": "Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.",
+      "highlights": [
+        "Compared softwood and agricultural-waste biochar samples in controlled water-treatment trials",
+        "Measured pH and water-quality changes across treatment trials over time",
+        "Explored heavy-metal and nutrient removal with a floating treatment device concept",
+        "Second place in Earth & Environmental Science at Mercer Science & Engineering Fair (MSEF)",
+        "Stockholm Junior Water Prize Regional Award & Acceptance Speech at NJWEA",
+        "NOAA Taking the Pulse of the Planet award"
+      ],
+      "tags": [
+        "#Biochar",
+        "#WaterRemediation",
+        "#IEEE",
+        "#NJWEA",
+        "#CleanWater",
+        "#MSEF"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 3
+    },
+    {
+      "id": 1,
+      "title": "Autonomous Ocean pH Buoy",
+      "category_slug": "environmental",
+      "category_name": "Climate technology · 2025 concept",
+      "img": "projects/ocean-project-presentation.jpg",
+      "images": [
+        "projects/ocean-project-presentation.jpg"
+      ],
+      "desc": "A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.",
+      "highlights": [
+        "pH sensor feeds real-time water quality readings to an Arduino microcontroller",
+        "A servo rotates a 3D-printed dispensing disk below a refillable mineral chamber",
+        "Low-pH readings trigger a measured calcium carbonate release in the closed-loop design",
+        "3M Young Scientist Challenge concept brief & system architecture submission",
+        "Explored predictive dosing with algorithmic feedback and solar-powered continuous runtime"
+      ],
+      "tags": [
+        "#OceanTech",
+        "#ClimateAction",
+        "#Arduino",
+        "#3MYoungScientist",
+        "#pHBuoy"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 4
     },
     {
       "id": 5,
@@ -254,7 +254,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 7
+      "sort_order": 6
     },
     {
       "id": 11,
@@ -284,7 +284,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 10
+      "sort_order": 7
     },
     {
       "id": 13,
@@ -314,7 +314,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 12
+      "sort_order": 8
     },
     {
       "id": 14,
@@ -343,7 +343,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 13
+      "sort_order": 9
     },
     {
       "id": 15,
@@ -377,7 +377,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 14
+      "sort_order": 10
     },
     {
       "id": 16,
@@ -408,7 +408,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 15
+      "sort_order": 11
     },
     {
       "id": 17,
@@ -436,7 +436,7 @@
         "1st Place"
       ],
       "is_robotics": false,
-      "sort_order": 16
+      "sort_order": 12
     }
   ],
   "documents": [
