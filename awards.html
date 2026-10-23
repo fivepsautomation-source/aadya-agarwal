@@ -4,67 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awards &amp; Distinctions | Aadya Agarwal</title>
-  <meta name="description" content="Awards, honors, and distinctions earned across robotics, environmental research, creative writing, music, and civic leadership.">
+  <meta name="description" content="Awards, certificates, research publications, writing, robotics, humanities, civic service, and conference presentations by Aadya Agarwal.">
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css?v=354">
-  <style>
-    .award-card-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: #ffffff;
-      border: 1px solid rgba(15, 15, 18, 0.12);
-      border-radius: 18px;
-      padding: 1.6rem 1.75rem;
-      box-shadow: 0 4px 18px rgba(15, 15, 18, 0.04);
-      transition: all 0.22s ease;
-    }
-    .award-card-item:hover {
-      transform: translateY(-3px);
-      border-color: rgba(95, 61, 196, 0.35);
-      box-shadow: 0 12px 28px -4px rgba(95, 61, 196, 0.12), 0 4px 12px rgba(15, 15, 18, 0.04);
-    }
-    .award-tag-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.3rem 0.75rem;
-      border-radius: 8px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .tag-stem { background: rgba(95, 61, 196, 0.09); color: #5f3dc4; }
-    .tag-robotics { background: rgba(24, 100, 171, 0.09); color: #1864ab; }
-    .tag-writing { background: rgba(134, 46, 156, 0.09); color: #862e9c; }
-    .tag-civic { background: rgba(43, 138, 62, 0.09); color: #2b8a3e; }
-    .tag-music { background: rgba(186, 31, 67, 0.09); color: #ba1f43; }
-    
-    .award-link-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #ba1f43;
-      text-decoration: none;
-      transition: all 0.18s ease;
-      margin-top: 1.25rem;
-    }
-    .award-link-btn:hover {
-      color: #5f3dc4;
-    }
-    .award-link-btn:hover span:last-child {
-      transform: translate(2px, -1px);
-    }
-  </style>
+  <link rel="stylesheet" href="modern-style.css?v=362">
 </head>
-<body class="min-h-full bg-paper text-ink font-body">
+<body class="awards-page min-h-full bg-paper text-ink font-body">
   <div id="top">
-    <!-- Header / Navbar -->
     <header class="site-header">
       <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6">
         <a href="index.html#top" class="font-display text-xl font-bold text-plum" aria-label="Aadya Agarwal, back to top">AA</a>
@@ -92,245 +40,153 @@
     </header>
 
     <main>
-      <!-- Clean Page Hero Section (matching all other pages) -->
-      <section class="page-hero">
+      <section class="page-hero awards-hero">
         <div class="container">
-          <span class="page-hero-eyebrow">Excellence, Honors &amp; Public Recognition</span>
-          <h1 class="page-hero-title">Awards &amp; Distinctions</h1>
-          <p class="page-hero-lead">
-            Selected recognition earned across competitive robotics, environmental research, international writing, classical piano, and civic leadership.
-          </p>
+          <span class="page-hero-eyebrow">Selected Honors · 2022–2026</span>
+          <h1 class="page-hero-title">Awards &amp; Recognition</h1>
+          <p class="page-hero-lead">Recognition across environmental research, robotics, writing, humanities, and community service.</p>
+          <nav class="awards-page-nav" aria-label="Awards sections">
+            <a href="#research-awards">Research</a><a href="#robotics-awards">Robotics</a><a href="#civic-awards">Civic</a><a href="#writing-awards">Writing</a><a href="#humanities-award">Humanities</a><a href="#featured-in">Featured in</a><a href="#conferences">Conferences</a>
+          </nav>
         </div>
       </section>
 
-      <!-- Main Awards Grid Section -->
-      <section class="py-8 sm:py-12">
+      <section class="awards-section" id="research-awards">
         <div class="container">
-          
-          <!-- Category Filter Tabs -->
-          <div class="flex items-center justify-between flex-wrap gap-4 pb-6 border-b border-ink/10">
-            <div class="flex gap-2 overflow-x-auto pb-2 sm:pb-0" id="awardsFilterTabs" aria-label="Filter awards by category">
-              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-plum bg-plum text-white" data-filter="all">
-                All Awards
-              </button>
-              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="stem">
-                STEM &amp; Research
-              </button>
-              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="robotics">
-                Robotics
-              </button>
-              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="writing">
-                Writing &amp; Arts
-              </button>
-              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="civic">
-                Civic Leadership
-              </button>
+          <header class="awards-section-heading">
+            <span class="editorial-eyebrow">01 · Awards</span>
+            <h2 class="editorial-section-title">Environmental research &amp; innovation</h2>
+            <p class="editorial-lead-subtext">Recognition for water research, environmental science, and youth-led AI innovation.</p>
+          </header>
+          <div class="awards-feature-grid">
+            <article class="award-visual-card award-visual-card-featured">
+              <a class="award-visual-image-link" href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab" target="_blank" rel="noopener noreferrer" aria-label="Read the Lawrenceville story about MIT Solve">
+                <img src="assets/ref_images/projects_mit-solve-recognition_clean.jpg" alt="MIT Solve recognition at the MIT Media Lab" loading="lazy">
+              </a>
+              <div class="award-visual-content">
+                <span class="award-year-pill">National Winner · 2026</span>
+                <h3>MIT Solve — AI for a Better World Youth Innovation Challenge</h3>
+                <p class="award-project-line">Project: A biochar-based, AI-powered IoT device to detect and treat water contamination.</p>
+                <p>Selected as one of five national winning teams; invited to present the project to a panel of experts at America’s Youth AI Festival, held at the MIT Media Lab in July 2026.</p>
+                <a class="award-text-link" href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab" target="_blank" rel="noopener noreferrer">Read the Lawrenceville feature <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="award-visual-card">
+              <a class="award-visual-image-link" href="assets/ref_images/projects_msef-water-award.jpg" target="_blank" rel="noopener noreferrer" aria-label="View water research recognition"><img src="assets/ref_images/projects_msef-water-award.jpg" alt="Water research and Stockholm Junior Water Prize recognition" loading="lazy"></a>
+              <div class="award-visual-content"><span class="award-year-pill">Regional Award · 2026</span><h3>U.S. Stockholm Junior Water Prize</h3><p>Regional Award for water research.</p></div>
+            </article>
+            <article class="award-visual-card">
+              <a class="award-visual-image-link" href="assets/science_fairs/whatsapp_2026-05-13_at_8.30.48_PM__1_.jpeg" target="_blank" rel="noopener noreferrer" aria-label="View environmental science recognition"><img src="assets/science_fairs/whatsapp_2026-05-13_at_8.30.48_PM__1_.jpeg" alt="Environmental science fair recognition" loading="lazy"></a>
+              <div class="award-visual-content"><span class="award-year-pill">Recognition · 2026</span><h3>NOAA — “Taking the Pulse of the Planet” Award</h3><p>National Oceanic and Atmospheric Administration recognition.</p></div>
+            </article>
+            <article class="award-visual-card">
+              <a class="award-visual-image-link" href="assets/science_fairs/Science_Fair_Awards_At_Mercer_County_Science_Fair.jpg" target="_blank" rel="noopener noreferrer" aria-label="View Mercer Science and Engineering Fair awards"><img src="assets/science_fairs/Science_Fair_Awards_At_Mercer_County_Science_Fair.jpg" alt="Awards at Mercer County Science and Engineering Fair" loading="lazy"></a>
+              <div class="award-visual-content"><span class="award-year-pill">Second Place · 2026</span><h3>Mercer Science &amp; Engineering Fair</h3><p>Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="awards-section awards-section-tinted" id="robotics-awards">
+        <div class="container">
+          <header class="awards-section-heading"><span class="editorial-eyebrow">02 · Robotics awards</span><h2 class="editorial-section-title">Building, coding &amp; competing</h2><p class="editorial-lead-subtext">Recognition across FIRST LEGO League and student engineering competitions.</p></header>
+          <div class="awards-feature-grid awards-feature-grid-three">
+            <article class="award-visual-card">
+              <a class="award-visual-image-link" href="assets/robotics/pic 10 - wpi award.jpg" target="_blank" rel="noopener noreferrer" aria-label="View WPI US Open robotics recognition"><img src="assets/robotics/pic 10 - wpi award.jpg" alt="Robot Design Award finalist recognition at WPI US Open" loading="lazy"></a>
+              <div class="award-visual-content"><span class="award-year-pill">World Finalist</span><h3>WPI US Open World Championship</h3><p>Ranked #14 out of 108 international teams; Robot Design Award Finalist.</p></div>
+            </article>
+            <article class="award-visual-card">
+              <a class="award-visual-image-link" href="assets/robotics/pic 2 - Team award.JPG" target="_blank" rel="noopener noreferrer" aria-label="View NJ Regional Robot Design Award"><img src="assets/robotics/pic 2 - Team award.JPG" alt="FIRST LEGO League team with regional award" loading="lazy"></a>
+              <div class="award-visual-content"><span class="award-year-pill">FIRST LEGO League</span><h3>NJ Regional &amp; State Awards</h3><ul class="award-detail-list"><li>1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023).</li><li>Breakthrough Award at NJ State (2023–2024).</li></ul></div>
+            </article>
+            <article class="award-visual-card">
+              <a class="award-visual-image-link" href="assets/robotics/hackathon-best-beginner-hack.jpeg" target="_blank" rel="noopener noreferrer" aria-label="View Panther Hackathon recognition"><img src="assets/robotics/hackathon-best-beginner-hack.jpeg" alt="PDS Panther Hackathon Best Beginner Hack recognition" loading="lazy"></a>
+              <div class="award-visual-content"><span class="award-year-pill">Princeton Day School</span><h3>Panther Hackathon — Best Beginner Hack</h3><p>Recognized for a beginner-level hackathon project.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="awards-section" id="civic-awards">
+        <div class="container">
+          <header class="awards-section-heading"><span class="editorial-eyebrow">03 · Civic leadership</span><h2 class="editorial-section-title">Service recognized</h2></header>
+          <div class="awards-feature-grid awards-feature-grid-two">
+            <article class="award-visual-card award-visual-card-horizontal">
+              <a class="award-visual-image-link" href="assets/certificates/Service Award - NJ State Assembly.jpeg" target="_blank" rel="noopener noreferrer" aria-label="View New Jersey Legislative Commendation"><img src="assets/certificates/Service Award - NJ State Assembly.jpeg" alt="New Jersey State Assembly and Senate commendation" loading="lazy"></a>
+              <div class="award-visual-content"><span class="award-year-pill">State Recognition</span><h3>New Jersey Legislative Commendation</h3><p>Commendation from the New Jersey State Assembly and State Senate recognizing community service and leadership.</p></div>
+            </article>
+            <article class="award-visual-card award-visual-card-horizontal">
+              <a class="award-visual-image-link" href="assets/certificates/STEP UN Future of Service.jpeg" target="_blank" rel="noopener noreferrer" aria-label="View Future of Service recognition"><img src="assets/certificates/STEP UN Future of Service.jpeg" alt="United Nations Future of Service recognition" loading="lazy"></a>
+              <div class="award-visual-content"><span class="award-year-pill">Youth Service</span><h3>Future of Service Award</h3><p>Recognition for youth-led service and community impact.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="awards-section awards-section-tinted" id="writing-awards">
+        <div class="container">
+          <header class="awards-section-heading"><span class="editorial-eyebrow">04 · Creative &amp; academic research writing</span><h2 class="editorial-section-title">Writing, research &amp; publication</h2></header>
+          <div class="writing-awards-layout">
+            <div class="writing-awards-list">
+              <article class="writing-award-item"><span class="writing-award-mark">01</span><div><h3>John Locke International Essay Writing Competition</h3><p>High Commendation in Science &amp; Technology, 2026.</p><a class="award-text-link" href="assets/certificates/John Locke 2026 - High Commendation.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a></div></article>
+              <article class="writing-award-item"><span class="writing-award-mark">02</span><div><h3>HIR Summer 2026</h3><p>Bronze Medal, Technology &amp; Innovation theme.</p></div></article>
+              <article class="writing-award-item"><span class="writing-award-mark">03</span><div><h3>Scholastic Art &amp; Writing Awards</h3><p>Four Honorable Mentions in Personal Essay &amp; Memoir, and two Silver Keys in Poetry (2026, 2025).</p><a class="award-text-link" href="assets/certificates/Scholastic_Poetry_Silver_Key_Certificate.pdf" target="_blank" rel="noopener noreferrer">View Poetry Silver Key certificate <span aria-hidden="true">↗</span></a></div></article>
+              <article class="writing-award-item"><span class="writing-award-mark">04</span><div><h3>“When the Sink Speaks”</h3><p>Selected for publication in <em>The Rev</em>, top 10 out of 150 entries in an international student creative competition.</p><a class="award-text-link" href="https://www.creativity-unleashed.org/TheRev." target="_blank" rel="noopener noreferrer">Explore The Rev <span aria-hidden="true">↗</span></a></div></article>
+              <article class="writing-award-item"><span class="writing-award-mark">05</span><div><h3>Poetry &amp; creative fiction publications</h3><p>Featured in literary magazines and anthologies, including Poetic Power, The Telling Room, and Skipping Stones.</p></div></article>
+              <article class="writing-award-item"><span class="writing-award-mark">06</span><div><h3>Veterans of Foreign Wars — Patriot’s Pen</h3><p>Placed 2nd locally and 3rd at the district level in this national contest.</p></div></article>
             </div>
-            <span class="text-xs text-ink/45 hidden sm:inline">10 Distinctions &amp; Honors</span>
+            <aside class="techtrek-panel">
+              <span class="editorial-eyebrow">Published science research</span>
+              <h3>TechTrek · International STEM Publication</h3>
+              <p>Biology &amp; Chemistry Associate for the school chapter, supporting chapter content and subject-area coordination.</p>
+              <div class="techtrek-article-grid">
+                <a class="techtrek-article-card" href="https://www.techtrekusa.com/post/beyond-textbooks-reversing-the-central-dogma-of-biology" target="_blank" rel="noopener noreferrer"><img src="assets/ref_images/projects_lab-setup.jpg" alt="Laboratory setup for the TechTrek biology article" loading="lazy"><span><strong>Beyond Textbooks: Reversing the Central Dogma of Biology</strong><small>Read article ↗</small></span></a>
+                <a class="techtrek-article-card" href="https://www.techtrekusa.com/post/ai-driven-discovery-of-solar-fuel-catalysts-the-future-of-clean-energy" target="_blank" rel="noopener noreferrer"><img src="assets/ref_images/projects_mit-day-ai-stage.jpg" alt="AI research presentation for the TechTrek clean-energy article" loading="lazy"><span><strong>AI-Driven Discovery of Solar Fuel Catalysts</strong><small>Read article ↗</small></span></a>
+              </div>
+            </aside>
           </div>
-
-          <!-- Awards Cards Grid -->
-          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="awardsCardsGrid">
-            
-            <!-- 1. MIT Solve National Winner & Leopold Scholar -->
-            <article class="award-card-item" data-category="stem">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-stem">Global STEM Finalist</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  MIT Solve National Winner &amp; Leopold Scholar
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  One of five national AI for a Better World winners; showcased autonomous ocean pH buoy research at the MIT Media Lab. Named Leopold Scholar in Ecology &amp; Ethics by The Lawrenceville School.
-                </p>
-              </div>
-              <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab" target="_blank" rel="noopener noreferrer" class="award-link-btn">
-                <span>Leopold Scholar &amp; MIT Solve — Lawrenceville</span>
-                <span class="transition-transform" aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <!-- 2. WPI US Open World Championship -->
-            <article class="award-card-item" data-category="robotics">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-robotics">World Championship</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  WPI US Open World Championship — Rank #14
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  Ranked #14 out of 108 international robotics teams at the Worcester Polytechnic Institute US Open Invitational as Lead Autonomous Programmer, achieving Robot Design Finalist honors.
-                </p>
-              </div>
-              <a href="portfolio.html" class="award-link-btn">
-                <span>WPI US Open International Invitational Details</span>
-                <span class="transition-transform" aria-hidden="true">&rarr;</span>
-              </a>
-            </article>
-
-            <!-- 3. Water Research Prizes & Stockholm Junior Award -->
-            <article class="award-card-item" data-category="stem">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-stem">Environmental Science</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  Water Research Prizes &amp; Stockholm Junior Award
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  Second Place in Earth &amp; Environmental Science at Mercer County Science &amp; Engineering Fair (MSEF), Stockholm Junior Water Prize regional award, NOAA Taking the Pulse of the Planet Award, and NJWEA keynote invitation.
-                </p>
-              </div>
-              <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/from-water-research-to-biomedical-engineering-lawrentians-recognized-for-scientific-excellence" target="_blank" rel="noopener noreferrer" class="award-link-btn">
-                <span>Scientific Excellence — Lawrenceville</span>
-                <span class="transition-transform" aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <!-- 4. Featured in The Lawrentian -->
-            <article class="award-card-item" data-category="stem">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-stem">Magazine Profile</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  Featured in The Lawrentian (“One 2 Watch”)
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  The school magazine feature profile traces Aadya's biochar filtration empirical trials and its evolution into an autonomous, AI-powered water-remediation IoT buoy node.
-                </p>
-              </div>
-              <a href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer" class="award-link-btn">
-                <span>“One 2 Watch” Feature — The Lawrentian</span>
-                <span class="transition-transform" aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <!-- 5. Music-Fest International Rising Talent Grand Prize -->
-            <article class="award-card-item" data-category="writing">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-music">Manhattan School of Music</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  Music-Fest International Rising Talent Grand Prize
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  Grand Prize winner for classical piano solo performance, earning recital honors at Greenfield Hall, Manhattan School of Music.
-                </p>
-              </div>
-              <a href="portfolio.html" class="award-link-btn">
-                <span>Manhattan School of Music Recital Details</span>
-                <span class="transition-transform" aria-hidden="true">&rarr;</span>
-              </a>
-            </article>
-
-            <!-- 6. John Locke Global Essay Prize Commendation -->
-            <article class="award-card-item" data-category="writing">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-writing">International Writing</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  John Locke Global Essay Prize Commendation
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  Commended in the prestigious international John Locke Global Essay Competition from over 19,000 entries across 138 nations; Lawrenceville annual John H. Imbrie English/Humanities Prize winner.
-                </p>
-              </div>
-              <a href="portfolio.html" class="award-link-btn">
-                <span>John Locke Institute Commendation Details</span>
-                <span class="transition-transform" aria-hidden="true">&rarr;</span>
-              </a>
-            </article>
-
-            <!-- 7. New Jersey Legislative Commendation -->
-            <article class="award-card-item" data-category="civic">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-civic">Civic Commendation</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  New Jersey Legislative Commendation
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  Official legislative resolution from the New Jersey State Senate and General Assembly recognizing youth leadership, regional food relief, and senior care packaging mobilization.
-                </p>
-              </div>
-              <a href="memberships.html" class="award-link-btn">
-                <span>New Jersey Assembly &amp; Senate Citation</span>
-                <span class="transition-transform" aria-hidden="true">&rarr;</span>
-              </a>
-            </article>
-
-            <!-- 8. PDS Panther Hackathon Best Beginner Hack -->
-            <article class="award-card-item" data-category="robotics">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-robotics">Hackathon Winner</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  PDS Panther Hackathon — Best Beginner Hack
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  Awarded Best Beginner Hackathon winner at Princeton Day School for rapid prototype engineering, software architecture, and hardware sensor integration.
-                </p>
-              </div>
-              <a href="portfolio.html" class="award-link-btn">
-                <span>Panther Hackathon Architecture Details</span>
-                <span class="transition-transform" aria-hidden="true">&rarr;</span>
-              </a>
-            </article>
-
-            <!-- 9. Scholastic Art & Writing Regional Honorable Mention -->
-            <article class="award-card-item" data-category="writing">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-writing">Scholastic Honors</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  Scholastic Art &amp; Writing Honorable Mention
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  Regional Honorable Mention for “Joy Is Universal” and published poetry exploring environmental consciousness, identity, and diaspora; highlighted by Princeton Day School.
-                </p>
-              </div>
-              <a href="https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/" target="_blank" rel="noopener noreferrer" class="award-link-btn">
-                <span>Princeton Day School Announcement</span>
-                <span class="transition-transform" aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <!-- 10. North South Foundation National Public Speaking -->
-            <article class="award-card-item" data-category="writing">
-              <div>
-                <div class="flex items-center justify-between gap-2">
-                  <span class="award-tag-badge tag-writing">National Champion</span>
-                </div>
-                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                  NSF National Public Speaking 1st Place
-                </h3>
-                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                  First Place National Champion in public speaking and oratorical debate, establishing early foundations in scientific communication and community advocacy.
-                </p>
-              </div>
-              <a href="speaking-writing.html" class="award-link-btn">
-                <span>National NSF Speaking Championship</span>
-                <span class="transition-transform" aria-hidden="true">&rarr;</span>
-              </a>
-            </article>
-
-          </div>
-
-
-
         </div>
       </section>
+
+      <section class="awards-section" id="humanities-award">
+        <div class="container">
+          <article class="humanities-award-card">
+            <a class="humanities-award-image" href="assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg" target="_blank" rel="noopener noreferrer" aria-label="View John H. Imbrie Humanities Award photo"><img src="assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg" alt="Receiving the John H. Imbrie Humanities Award" loading="lazy"></a>
+            <div class="humanities-award-copy"><span class="editorial-eyebrow">05 · Humanities award · The Lawrenceville School</span><h2 class="editorial-section-title">John H. Imbrie Humanities/English Award</h2><p>Recipient, selected from 150 ninth-grade students for excellence in English within the Humanities program.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="awards-section awards-section-tinted" id="featured-in">
+        <div class="container">
+          <header class="awards-section-heading"><span class="editorial-eyebrow">06 · Featured in</span><h2 class="editorial-section-title">Research &amp; student stories</h2></header>
+          <div class="featured-publication-grid">
+            <article class="featured-publication-card"><span class="featured-publication-index">01</span><h3>American Biochar Company</h3><p>Young Researcher Spotlight.</p></article>
+            <a class="featured-publication-card featured-publication-link" href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer"><span class="featured-publication-index">02</span><h3>The Lawrentian</h3><p>“One 2 Watch” · Quarterly school magazine, The Lawrenceville School.</p><span class="award-text-link">Read the feature ↗</span></a>
+            <article class="featured-publication-card"><span class="featured-publication-index">03</span><h3>Princeton Day School</h3><p>Featured during middle school.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="awards-section" id="conferences">
+        <div class="container">
+          <header class="awards-section-heading"><span class="editorial-eyebrow">07 · Conferences</span><h2 class="editorial-section-title">Sharing research with the community</h2></header>
+          <div class="conference-layout">
+            <div class="conference-list">
+              <article class="conference-item"><span class="conference-number">01</span><div><h3>NJWEA Water Resource Annual Conference &amp; Exposition</h3><p>Invited to present · Atlantic City, New Jersey · 2026</p></div></article>
+              <article class="conference-item"><span class="conference-number">02</span><div><h3>IEEE Integrated STEM Education Conference</h3><p>K–12 poster presentation · Princeton University</p></div></article>
+            </div>
+            <article class="conference-video-card">
+              <div class="conference-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/ELyxcPwMp3M" title="Acceptance Speech | NJWEA Stockholm Junior Water Prize Regional Award | Aadya Agarwal" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              <h3>Acceptance Speech</h3><p>NJWEA Stockholm Junior Water Prize Regional Award · Aadya Agarwal</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="awards-closing-note"><div class="container"><p>Also recognized for FIRST LEGO League robot design, the PDS Panther Hackathon Best Beginner Hack, Science Olympiad event medals, public speaking and music.</p></div></section>
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-ink/10 bg-paper py-8 text-center text-xs text-ink/50">
       <div class="mx-auto max-w-6xl px-5 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p>© 2026 Aadya Agarwal · Built with intentional craft &amp; equitable vision.</p>
@@ -338,41 +194,6 @@
       </div>
     </footer>
   </div>
-
   <script src="modern-script.js?v=250"></script>
-  <script src="cms-loader.js?v=2"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const filterBtns = document.querySelectorAll('#awardsFilterTabs .filter-tab-btn');
-      const awardCards = document.querySelectorAll('#awardsCardsGrid .award-card-item');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.getAttribute('data-filter');
-
-          filterBtns.forEach(b => {
-            b.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum';
-          });
-          btn.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-plum bg-plum text-white';
-
-          awardCards.forEach(card => {
-            const cat = card.getAttribute('data-category');
-            if (filter === 'all' || cat === filter) {
-              card.style.display = 'flex';
-              card.style.opacity = '0';
-              card.style.transform = 'translateY(6px)';
-              requestAnimationFrame(() => {
-                card.style.transition = 'opacity 250ms ease, transform 250ms ease';
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-              });
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-    });
-  </script>
 </body>
 </html>

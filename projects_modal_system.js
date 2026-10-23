@@ -1245,9 +1245,9 @@
 
     return `
       <!-- Hero Banner with Title Overlay -->
-      <div class="relative h-[36vh] min-h-64 w-full overflow-hidden bg-[#0a0a0d] sm:h-[420px]">
-        ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="h-full w-full object-contain md:object-cover bg-[#0a0a0d]" style="object-position: center top !important;">` : ''}
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent px-5 py-5 text-white sm:px-8 sm:py-7 pointer-events-none">
+      <div class="modal-hero-banner">
+        ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image" style="object-position: center !important;">` : ''}
+        <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 pointer-events-none">
           ${project.category ? `<span class="mb-2 inline-block rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">${project.category}</span>` : ''}
           <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
         </div>
@@ -1372,6 +1372,10 @@
   document.addEventListener('DOMContentLoaded', () => {
     setupModalDOM();
     setupCardImageSwitchers();
+    document.querySelectorAll('.portfolio-cards-grid').forEach((grid) => {
+      const cardObserver = new MutationObserver(() => setupCardImageSwitchers());
+      cardObserver.observe(grid, { childList: true });
+    });
 
     // Bind click handlers: entering card is done via content below image or "Read more" button
     const cards = document.querySelectorAll('.portfolio-card');
@@ -1418,6 +1422,7 @@
 
       const imgEl = mediaBox.querySelector('img');
       if (!imgEl) return;
+      imgEl.classList.add('card-image-foreground');
 
       let images = [];
       const dataProjectStr = card.getAttribute('data-project');
@@ -1444,28 +1449,6 @@
       if (images.length > 1) {
         let curIdx = 0;
 
-        // Counter pill
-        const counterPill = document.createElement('span');
-        counterPill.className = 'card-img-counter-pill';
-        counterPill.textContent = `1 / ${images.length}`;
-        mediaBox.appendChild(counterPill);
-
-        // Prev & Next Buttons
-        const prevBtn = document.createElement('button');
-        prevBtn.type = 'button';
-        prevBtn.className = 'card-img-nav-btn prev';
-        prevBtn.setAttribute('aria-label', 'Previous image');
-        prevBtn.innerHTML = '&#8249;';
-
-        const nextBtn = document.createElement('button');
-        nextBtn.type = 'button';
-        nextBtn.className = 'card-img-nav-btn next';
-        nextBtn.setAttribute('aria-label', 'Next image');
-        nextBtn.innerHTML = '&#8250;';
-
-        mediaBox.appendChild(prevBtn);
-        mediaBox.appendChild(nextBtn);
-
         const changeImage = (newIdx) => {
           curIdx = (newIdx + images.length) % images.length;
           imgEl.style.transition = 'opacity 0.15s ease';
@@ -1473,23 +1456,9 @@
           setTimeout(() => {
             imgEl.src = images[curIdx];
             imgEl.style.opacity = '1';
-            counterPill.textContent = `${curIdx + 1} / ${images.length}`;
           }, 150);
         };
 
-        prevBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          e.preventDefault();
-          changeImage(curIdx - 1);
-        });
-
-        nextBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          e.preventDefault();
-          changeImage(curIdx + 1);
-        });
-
-        // Clicking image container advances to next image without entering modal
         mediaBox.addEventListener('click', (e) => {
           e.stopPropagation();
           e.preventDefault();
