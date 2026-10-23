@@ -740,7 +740,71 @@
 }
 
 .portfolio-card {
+  cursor: default;
+}
+.portfolio-card .p-5 {
   cursor: pointer;
+}
+
+/* Card Thumbnail Carousel & Image Switcher */
+.card-media-box {
+  position: relative;
+  cursor: pointer;
+}
+.card-img-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  z-index: 20;
+  cursor: pointer;
+  user-select: none;
+}
+.card-img-nav-btn:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+}
+.card-media-box:hover .card-img-nav-btn {
+  opacity: 1;
+}
+.card-img-nav-btn.prev {
+  left: 8px;
+}
+.card-img-nav-btn.next {
+  right: 8px;
+}
+.card-img-counter-pill {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(15, 15, 18, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 15;
+  letter-spacing: 0.06em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* ==========================================================================
@@ -1127,5 +1191,228 @@ figure figcaption {
   text-decoration: underline !important;
 }
 
+/* ==========================================================================
+   FEATURED IN & PUBLICATIONS SECTION STYLES
+   ========================================================================== */
+.p-6 {
+  padding: 1.5rem !important;
+}
 
+#featured {
+  background-color: #ffffff;
+}
 
+.featured-pub-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  background-color: #ffffff !important;
+  border: 1px solid rgba(15, 15, 18, 0.12) !important;
+  border-radius: 18px !important;
+  padding: 1.6rem 1.75rem !important;
+  box-shadow: 0 4px 18px rgba(15, 15, 18, 0.04) !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease !important;
+  position: relative;
+}
+
+.featured-pub-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(95, 61, 196, 0.35) !important;
+  box-shadow: 0 12px 28px -4px rgba(95, 61, 196, 0.12), 0 4px 12px rgba(15, 15, 18, 0.04) !important;
+}
+
+.pub-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.pub-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 7px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.pub-badge-lawrentian {
+  background-color: rgba(186, 31, 67, 0.09) !important;
+  color: #ba1f43 !important;
+  border: 1px solid rgba(186, 31, 67, 0.2) !important;
+}
+
+.pub-badge-mitsolve {
+  background-color: rgba(95, 61, 196, 0.09) !important;
+  color: #5f3dc4 !important;
+  border: 1px solid rgba(95, 61, 196, 0.2) !important;
+}
+
+.pub-badge-science {
+  background-color: rgba(11, 114, 133, 0.09) !important;
+  color: #0b7285 !important;
+  border: 1px solid rgba(11, 114, 133, 0.2) !important;
+}
+
+.pub-badge-pds {
+  background-color: rgba(43, 138, 62, 0.09) !important;
+  color: #2b8a3e !important;
+  border: 1px solid rgba(43, 138, 62, 0.2) !important;
+}
+
+.pub-badge-ieee {
+  background-color: rgba(24, 100, 171, 0.09) !important;
+  color: #1864ab !important;
+  border: 1px solid rgba(24, 100, 171, 0.2) !important;
+}
+
+.pub-badge-instagram {
+  background-color: rgba(232, 89, 12, 0.09) !important;
+  color: #e8590c !important;
+  border: 1px solid rgba(232, 89, 12, 0.2) !important;
+}
+
+.pub-type-tag {
+  font-size: 0.75rem;
+  color: rgba(15, 15, 18, 0.45);
+  font-weight: 500;
+}
+
+.pub-card-title {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #0f0f12;
+  margin-top: 1rem;
+  transition: color 0.18s ease;
+}
+
+.featured-pub-card:hover .pub-card-title {
+  color: #5f3dc4;
+}
+
+.pub-card-desc {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(15, 15, 18, 0.65);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pub-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ba1f43;
+  text-decoration: none;
+  margin-top: 1.25rem;
+  transition: all 0.18s ease;
+}
+
+.featured-pub-card:hover .pub-action-link {
+  color: #5f3dc4;
+}
+
+.pub-action-link .arrow-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.featured-pub-card:hover .pub-action-link .arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Direct Links Status Pill */
+.direct-links-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 9999px;
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.direct-links-pill .pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10b981;
+  display: inline-block;
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Institutional Partners Banner */
+.institutions-banner {
+  margin-top: 2.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 15, 18, 0.1);
+  background-color: #fdfaf6;
+  padding: 1.5rem 1.75rem;
+}
+
+.institution-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(15, 15, 18, 0.12);
+  background-color: #ffffff;
+  padding: 0.4rem 0.95rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(15, 15, 18, 0.75);
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.institution-chip:hover {
+  border-color: rgba(95, 61, 196, 0.45);
+  color: #5f3dc4;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(95, 61, 196, 0.12);
+}
+
+/* Modal and Card Media Framing - Across Mobile, Tablet & Desktop */
+#projectModal {
+  max-width: 72rem;
+  width: 95vw;
+}
+
+#modalDynamicRoot .relative.overflow-hidden img {
+  object-position: center top !important;
+}
+
+.card-media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (max-width: 640px) {
+  #projectModal {
+    width: 98vw;
+    border-radius: 1rem;
+  }
+}

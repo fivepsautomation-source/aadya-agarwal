@@ -1,0 +1,745 @@
+{
+  "settings": {
+    "site_title": "Aadya Agarwal | Portfolio",
+    "hero_badge": "ECO-ENGINEER & EQUITABLE HEALTHPRENEUR.",
+    "hero_name": "Aadya Agarwal",
+    "hero_school": "The Lawrenceville School · Class of 2029",
+    "hero_location": "Lawrenceville, New Jersey",
+    "hero_bio": "My vision is a world where clean water and basic health care reach the people it usually forgets — and I want to spend my life building the tools that get them there. I work at the meeting point of responsible AI, hands-on engineering and community science, because the hardest problems in equity are never just technical. Whether it is a biochar filter, a one-minute vitals check or a poem, I am chasing the same question: how do we make care more honest, more equitable and more within reach?",
+    "hero_portrait": "projects/aadya-headshot.jpg",
+    "hero_slider_images": "[\"projects/njwea-presentation.jpg\", \"projects/msef-water-award.jpg\", \"projects/monivitals-market.webp\", \"assets/science_fairs/pic1.jpeg\", \"assets/science_fairs/pic2.jpeg\", \"assets/science_fairs/pic4.jpeg\", \"assets/science_fairs/pic5.jpeg\", \"assets/science_fairs/pic6.jpeg\", \"assets/science_fairs/pic7.jpeg\"]",
+    "connect_email": "aadyanj@gmail.com",
+    "connect_github": "https://github.com/aanj1",
+    "invite_headline": "Speak · Mentor · Research",
+    "invite_body": "Aadya is available to speak at student events, mentor young women entering STEM, and collaborate on water, responsible-AI and equitable-health research. Reach out to arrange a conversation."
+  },
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "Autonomous Ocean pH Buoy",
+      "category_slug": "robotics",
+      "category_name": "Robotics & Coding",
+      "img": "projects/ocean-project-presentation.jpg",
+      "images": [
+        "projects/ocean-project-presentation.jpg"
+      ],
+      "desc": "A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.",
+      "highlights": [
+        "pH sensor feeds real-time water quality readings to an Arduino microcontroller",
+        "A servo rotates a 3D-printed dispensing disk below a refillable mineral chamber",
+        "Low-pH readings trigger a measured calcium carbonate release in the closed-loop design",
+        "3M Young Scientist Challenge concept brief & system architecture submission",
+        "Explored predictive dosing with algorithmic feedback and solar-powered continuous runtime"
+      ],
+      "tags": [
+        "#OceanTech",
+        "#ClimateAction",
+        "#Arduino",
+        "#3MYoungScientist",
+        "#pHBuoy"
+      ],
+      "badges": [],
+      "is_robotics": true,
+      "sort_order": 0
+    },
+    {
+      "id": 2,
+      "title": "Biochar Water Treatment",
+      "category_slug": "environmental",
+      "category_name": "Experimental Research · 2026",
+      "img": "projects/water-treatment-setup.jpg",
+      "images": [
+        "projects/water-treatment-setup.jpg"
+      ],
+      "desc": "Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.",
+      "highlights": [
+        "Compared softwood and agricultural-waste biochar samples in controlled water-treatment trials",
+        "Measured pH and water-quality changes across treatment trials over time",
+        "Explored heavy-metal and nutrient removal with a floating treatment device concept",
+        "Second place in Earth & Environmental Science at Mercer Science & Engineering Fair (MSEF)",
+        "Stockholm Junior Water Prize Regional Award & Acceptance Speech at NJWEA",
+        "NOAA Taking the Pulse of the Planet award"
+      ],
+      "tags": [
+        "#Biochar",
+        "#WaterRemediation",
+        "#IEEE",
+        "#NJWEA",
+        "#CleanWater",
+        "#MSEF"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 1
+    },
+    {
+      "id": 3,
+      "title": "MIT Solve — AI for a Better World",
+      "category_slug": "environmental",
+      "category_name": "MIT Day of AI · July 2026",
+      "img": "projects/mit-day-ai-stage.jpg",
+      "images": [
+        "projects/mit-day-ai-stage.jpg"
+      ],
+      "desc": "One of five national MIT Solve AI for a Better World winners, I presented an AI-powered water-quality node at the MIT Media Lab.",
+      "highlights": [
+        "One of 5 national MIT Solve AI for a Better World winners",
+        "Presented the water-remediation IoT node on stage at the MIT Media Lab",
+        "Pairs water-quality sensing with edge machine learning and actionable treatment response",
+        "Proposed training on river, lake and global water-measurement data with responsible-AI safeguards",
+        "Human review, fixed safety limits and decision logs govern operation",
+        "Named Leopold Scholar in Ecology and Ethics by The Lawrenceville School"
+      ],
+      "tags": [
+        "#MITSolve",
+        "#AIForABetterWorld",
+        "#MITMediaLab",
+        "#ClimateAction",
+        "#ResponsibleAI"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 2
+    },
+    {
+      "id": 4,
+      "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
+      "category_slug": "environmental",
+      "category_name": "Peer-Reviewed Presentation · 2026",
+      "img": "projects/ieee-engineering-conversation.jpg",
+      "images": [
+        "projects/ieee-engineering-conversation.jpg"
+      ],
+      "desc": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University.",
+      "highlights": [
+        "Approved research abstract presented at IEEE/ISEC K–12 conference at Princeton University",
+        "Comparative analysis of softwood vs agricultural-waste biochars for remediation",
+        "Bench trials tracking heavy metal and nutrient removal, dissolved oxygen, and pH response",
+        "Technical engagement and presentation with engineering and academic faculty at Princeton"
+      ],
+      "tags": [
+        "#IEEE",
+        "#ISEC2026",
+        "#PrincetonUniversity",
+        "#WaterRemediation",
+        "#BiocharResearch"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 3
+    },
+    {
+      "id": 5,
+      "title": "Biomedical & AI Scientific Research",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical & AI",
+      "img": "assets/certificates/BioResearch Academy Certificate.jpeg",
+      "images": [
+        "assets/certificates/BioResearch Academy Certificate.jpeg",
+        "assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg",
+        "assets/certificates/InspiritAI_AI_Ambassador_Certificate.jpg",
+        "assets/ref_images/projects_ieee-engineering-conversation.jpg",
+        "assets/ref_images/projects_lab-setup.jpg",
+        "assets/science_fairs/ieee_pic4.jpeg",
+        "assets/science_fairs/pic3.jpeg",
+        "assets/certificates/Aqua Science Certificate.jpg"
+      ],
+      "desc": "Stanford AIMI clinical AI research, computational drug discovery with AutoDock Vina, Harvard-mentored molecular biology wet lab, and Cambridge cancer genomics research.",
+      "highlights": [
+        "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
+        "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
+        "Bioinformatics Tools: AutoDock Vina (Molecular Docking), Computational Structural Biology, Protein Modeling, Graph Theory Networks.",
+        "Wet Lab Techniques: Sterile cell culture, CRISPR-Cas9 protocols, gel electrophoresis, PCR preparation, chemical safety.",
+        "Stanford AIMI Clinical AI: Selected for competitive 30-week internship (<5% acceptance rate), developing computer vision assistive interfaces utilizing medical imaging.",
+        "Computational Oncology: Co-authoring manuscript on cervical cancer treatments using AutoDock Vina molecular docking simulations.",
+        "Biomedical Research Fellow (Harvard Mentor Prof. Sam Kunes): 24-week bioresearch program with 3 weeks hands-on wet lab work in Boston (CRISPR, gel electrophoresis, PCR).",
+        "Independent Cancer Research (Cambridge Mentor Dr. Kristina Kordova): scRNA-seq analysis & Python classification model identifying 32 breast cancer biomarker clusters."
+      ],
+      "tags": [
+        "#StanfordAIMI",
+        "#HarvardBioResearch",
+        "#ComputationalOncology",
+        "#AutoDockVina",
+        "#CRISPR",
+        "#scRNAseq",
+        "#MachineLearning",
+        "#Bioinformatics"
+      ],
+      "badges": [
+        {
+          "label": "Stanford AIMI",
+          "tone": "plum"
+        },
+        {
+          "label": "Harvard Fellow",
+          "tone": "berry"
+        },
+        {
+          "label": "AutoDock Vina",
+          "tone": "moss"
+        }
+      ],
+      "is_robotics": false,
+      "sort_order": 4
+    },
+    {
+      "id": 8,
+      "title": "MoniVitals: Equitable Vitals Monitor & App",
+      "category_slug": "monivitals",
+      "category_name": "MoniVitals",
+      "img": "assets/ref_images/projects_monivitals-market.webp",
+      "images": [
+        "assets/ref_images/projects_monivitals-market.webp",
+        "assets/monivitals/20260829_100521.jpg",
+        "assets/monivitals/20260829_084022.jpg",
+        "assets/monivitals/20260829_100443.jpg",
+        "assets/monivitals/20260829_084028.jpg",
+        "assets/monivitals/20260829_100506_1_.jpg",
+        "assets/monivitals/20260829_094941_1_.jpg"
+      ],
+      "desc": "I brought MoniVitals to our local farmers market and senior outreach events, offering neighbors a free check of their critical vitals in under a minute.",
+      "highlights": [
+        "Phone-connected, non-invasive vital screening platform developed for accessible and equitable community health",
+        "Measures six vital markers in under a minute, including blood oxygen (SpO2), pulse rate, body temperature, and estimated blood pressure",
+        "Private real-time readings transmitted securely to each visitor&#x27;s smartphone",
+        "Python data telemetry backend integrated with edge ESP32 microcontroller, MAX30102 PPG sensor, and MLX90614 infrared optical thermopile",
+        "Conducted over 100 free vital screenings across local New Jersey farmers markets, community centers, and senior living facilities"
+      ],
+      "tags": [
+        "#MoniVitals",
+        "#HealthTech",
+        "#Python",
+        "#ESP32",
+        "#CommunityHealth",
+        "#Telehealth"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 7
+    },
+    {
+      "id": 9,
+      "title": "Community Field Screening & Senior Care Deployment",
+      "category_slug": "monivitals",
+      "category_name": "MoniVitals",
+      "img": "assets/monivitals/20260829_100521.jpg",
+      "images": [
+        "assets/monivitals/20260829_100521.jpg",
+        "assets/monivitals/20260829_100506_1_.jpg",
+        "assets/ref_images/projects_senior-center_framed.jpg",
+        "assets/monivitals/20260829_094941_1_.jpg"
+      ],
+      "desc": "Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.",
+      "highlights": [
+        "Conducted direct user experience testing with seniors aged 65-90",
+        "Optimized font sizing, contrast, and voice-assisted telemetry readings for accessibility",
+        "Logged zero hardware failures over 8 consecutive hours of outdoor community testing",
+        "Gathered physician and nurse practitioner feedback on triage alert thresholds"
+      ],
+      "tags": [
+        "#CommunityHealth",
+        "#FieldTesting",
+        "#ElderCare",
+        "#PublicHealth"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 8
+    },
+    {
+      "id": 10,
+      "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
+      "category_slug": "monivitals",
+      "category_name": "MoniVitals",
+      "img": "assets/monivitals/20260829_084022.jpg",
+      "images": [
+        "assets/monivitals/20260829_084022.jpg",
+        "assets/monivitals/20260829_084028.jpg",
+        "assets/monivitals/20260829_100443.jpg",
+        "assets/ref_images/projects_monivitals-market.webp"
+      ],
+      "desc": "Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.",
+      "highlights": [
+        "CAD modeling in Fusion 360 with ergonomic fingertip alignment and light baffling",
+        "I2C bus multiplexing running on ESP32 with power-saving sleep modes",
+        "Secure Bluetooth Low Energy GATT profile broadcasting encrypted telemetry",
+        "Fabricated multi-revision PCB prototype for robust handheld portability"
+      ],
+      "tags": [
+        "#EmbeddedSystems",
+        "#ESP32",
+        "#HardwareCAD",
+        "#PCB",
+        "#IoT"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 9
+    },
+    {
+      "id": 11,
+      "title": "Mercer County Hunger Relief & Meal Packaging Drives",
+      "category_slug": "community",
+      "category_name": "School & Community",
+      "img": "assets/ref_images/projects_hunger-donation_framed.jpg",
+      "images": [
+        "assets/ref_images/projects_hunger-donation_framed.jpg",
+        "assets/community/Copy of cd - boxes - pic5.jpg",
+        "assets/community/Copy of cd - ah- group pic1.jpg",
+        "assets/community/Candy donation boxes at AoPs - pic2.jpg",
+        "assets/certificates/STEP Meals Packaging.jpeg"
+      ],
+      "desc": "Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.",
+      "highlights": [
+        "Mobilized 150+ youth and student volunteers for regional meal packaging",
+        "Coordinated logistics with Mercer County food banks and community shelters",
+        "Organized annual holiday candy and non-perishable drives for local children",
+        "Direct community leadership recognized by local and state representatives"
+      ],
+      "tags": [
+        "#HungerRelief",
+        "#CivicLeadership",
+        "#YouthVolunteering",
+        "#Community"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 10
+    },
+    {
+      "id": 12,
+      "title": "Senior Living Center Technology & Musical Companionship",
+      "category_slug": "community",
+      "category_name": "School & Community",
+      "img": "assets/ref_images/projects_senior-center_framed.jpg",
+      "images": [
+        "assets/ref_images/projects_senior-center_framed.jpg",
+        "assets/community/Copy of cd - boxes - pic5.jpg",
+        "assets/community/Copy of cd - aops - pic 4.jpg",
+        "assets/monivitals/20260829_100521.jpg"
+      ],
+      "desc": "Weekly volunteer sessions at Artis Senior Living, conducting smartphone/tablet digital literacy workshops, classical music therapy recitals, and intergenerational storytelling.",
+      "highlights": [
+        "Conducted one-on-one digital literacy sessions helping seniors connect with family",
+        "Performed solo classical flute and piano pieces tailored for cognitive memory therapy",
+        "Created handmade holiday cards and seasonal art gifts for memory-care residents",
+        "Recognized by Artis Senior Living staff for compassionate intergenerational service"
+      ],
+      "tags": [
+        "#ElderCare",
+        "#MusicTherapy",
+        "#DigitalLiteracy",
+        "#ArtisLiving"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 11
+    },
+    {
+      "id": 13,
+      "title": "New Jersey Legislative Commendation & Civic Supply Drives",
+      "category_slug": "community",
+      "category_name": "School & Community",
+      "img": "assets/community/Sock Drive - NJ Assembly Woman House.png",
+      "images": [
+        "assets/community/Sock Drive - NJ Assembly Woman House.png",
+        "assets/ref_images/projects_hunger-donation_framed.jpg",
+        "assets/certificates/Service Award - NJ State Assembly.jpeg",
+        "assets/community/Copy of cd - flyer.jpg",
+        "assets/community/Copy of cd - ah- group pic1.jpg"
+      ],
+      "desc": "Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.",
+      "highlights": [
+        "Collected and distributed over 1,200 pairs of thermal socks and winter essentials",
+        "Coordinated drop-off hubs at local schools, libraries, and community centers",
+        "Formal legislative resolution presented by NJ State Assemblywoman",
+        "Demonstrated sustainable youth civic engagement model"
+      ],
+      "tags": [
+        "#CivicImpact",
+        "#NJLegislature",
+        "#MutualAid",
+        "#CommunityAction"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 12
+    },
+    {
+      "id": 14,
+      "title": "Classical Piano & Manhattan School of Music Recitals",
+      "category_slug": "writing",
+      "category_name": "Writing & Arts",
+      "img": "assets/ref_images/projects_piano-manhattan-school.jpg",
+      "images": [
+        "assets/ref_images/projects_piano-manhattan-school.jpg",
+        "assets/writing_arts/Copy of piano award.png",
+        "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
+        "assets/music/image_1.jpeg",
+        "assets/music/image_5.jpeg"
+      ],
+      "desc": "Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performance at Greenfield Hall, Manhattan School of Music.",
+      "highlights": [
+        "Grand Prize Recitalist at Music-Fest International Rising Talent Festival",
+        "Solo recital performance at Greenfield Hall, Manhattan School of Music",
+        "Masterclass and performance appearances with Chopin Nocturnes, Bach Inventions, and Debussy Preludes"
+      ],
+      "tags": [
+        "#ClassicalPiano",
+        "#ManhattanSchool",
+        "#MusicFest",
+        "#RisingTalent"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 13
+    },
+    {
+      "id": 15,
+      "title": "1st Chair Flutist & Wind Ensemble Section Leader",
+      "category_slug": "writing",
+      "category_name": "Writing & Arts",
+      "img": "assets/writing_arts/flute_performance.png",
+      "images": [
+        "assets/writing_arts/flute_performance.png",
+        "assets/writing_arts/Aadya Flute Pic1.png",
+        "assets/certificates/NJMTA Flute Honors Recital.jpeg",
+        "assets/music/Flute_pic_2.jpg",
+        "assets/music/Flute_pic_3.png",
+        "assets/music/Playing_Flute_for_Seniors_at_the_Senior_Living_Center2.jpeg"
+      ],
+      "desc": "Serving as 1st Chair Flutist in competitive school and regional wind ensembles, NJMTA Flute Honors Award winner, and leading woodwind section rehearsals.",
+      "highlights": [
+        "1st Chair Flutist in audition-based competitive school and regional wind ensemble",
+        "NJMTA (New Jersey Music Teachers Association) Spring Recital Honors Award for Flute (2024)",
+        "Led weekly woodwind sectional rehearsals focusing on intonation, phrasing, and ensemble cohesion",
+        "Soloist in regional youth orchestra winter and spring concert festivals",
+        "Performed therapeutic classical flute repertoire for memory-care residents at senior centers"
+      ],
+      "tags": [
+        "#Flute",
+        "#NJMTA",
+        "#Woodwinds",
+        "#FirstChair",
+        "#HonorsRecital",
+        "#Ensemble"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 14
+    },
+    {
+      "id": 16,
+      "title": "John Locke Commendation & Published Creative Writing",
+      "category_slug": "writing",
+      "category_name": "Writing & Arts",
+      "img": "assets/ref_images/projects_john-locke_framed.jpg",
+      "images": [
+        "assets/ref_images/projects_john-locke_framed.jpg",
+        "assets/certificates/John Locke 2026 - High Commendation.jpg",
+        "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
+        "assets/writing_arts/artwork_portrait.jpg",
+        "assets/writing_arts/artwork_bird.jpg"
+      ],
+      "desc": "Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.",
+      "highlights": [
+        "Commended in John Locke Global Essay Competition from 19,000+ international entries",
+        "Recipient of school annual English and Humanities literary prize",
+        "Poetry published in national youth anthologies exploring nature and equity",
+        "Contributed essays on ethical technology and environmental stewardship"
+      ],
+      "tags": [
+        "#JohnLocke",
+        "#Essayist",
+        "#Poetry",
+        "#CreativeWriting",
+        "#Humanities"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 15
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "title": "Autonomous Ocean pH Buoy &amp; Chemical Buffer Dispenser",
+      "category_pill": "Climate Tech",
+      "eyebrow": "Climate Tech &amp; Automation",
+      "accordions": [
+        {
+          "title": "3M Young Scientist Challenge Project Brief &amp; Circuit Schematics",
+          "content": "Arduino Nano microcontroller interfaced with an analog pH probe and sealed servo dispensing mechanism. When seawater acidity exceeds the predefined threshold (pH &lt; 7.9), the servo releases micro-dosed calcium carbonate slurry to counteract localized ocean acidification."
+        },
+        {
+          "title": "Buoyancy Balance &amp; Low-Power Telemetry Calibration",
+          "content": "Next steps involve dynamic wave-buoyancy testing in coastal flumes, 5W solar trickle charging with deep-sleep power cycles, and GSM-based IoT telemetry transmitting pH logs directly to a web dashboard."
+        }
+      ],
+      "sort_order": 0
+    },
+    {
+      "id": 2,
+      "title": "Biochar AIoT Device: Water Filtration &amp; Adsorption",
+      "category_pill": "Water Research",
+      "eyebrow": "Environmental Water Remediation &amp; IoT",
+      "accordions": [
+        {
+          "title": "IEEE / ISEC Peer-Reviewed Research Abstract",
+          "content": "Comparative adsorption study evaluating softwood vs. agricultural-waste pyrolyzed biochars. Monitored pH, electrical conductivity, dissolved oxygen, and heavy metal uptake (Pb2+, Cu2+) across multi-stage gravitational filter columns."
+        },
+        {
+          "title": "Mercer County Science &amp; Engineering Fair (MSEF) Poster",
+          "content": "Bench-scale flow trials measuring flow-rate attenuation and contaminant saturation thresholds over continuous 72-hour filtration cycles, validating accessible low-cost drinking water purification."
+        }
+      ],
+      "sort_order": 1
+    },
+    {
+      "id": 3,
+      "title": "AI for a Better World (MIT Solve Water Node)",
+      "category_pill": "Responsible AI",
+      "eyebrow": "Responsible AI &amp; Edge Computing",
+      "accordions": [
+        {
+          "title": "MIT Solve National Winner Technical Presentation Deck",
+          "content": "Proposed solar-powered edge AI node integrating optical turbidity, dissolved oxygen, and temperature sensors. Incorporates fixed safety bounds, hardware interlocks, and local anomaly detection algorithms to prevent false chemical dosing."
+        },
+        {
+          "title": "Ethical AI Architecture &amp; Human-in-the-Loop Safeguards",
+          "content": "Transparent decision logging protocols ensuring automated actuator actions can be overridden by human operators via encrypted cellular telemetry."
+        }
+      ],
+      "sort_order": 2
+    },
+    {
+      "id": 4,
+      "title": "MoniVitals: Non-Invasive Multispectral Telemetry",
+      "category_pill": "HealthTech",
+      "eyebrow": "Healthtech &amp; Optical Biometrics",
+      "accordions": [
+        {
+          "title": "Provisional Patent Specification &amp; Sensor Topology",
+          "content": "Dual-wavelength PPG optical sensor array designed to mitigate skin melanin absorption bias in pulse oximetry, integrating contactless MLX90614 infrared thermopile and ESP32 microcontroller with BLE telemetry."
+        },
+        {
+          "title": "Field Validation Protocol with Senior Living Centers",
+          "content": "Pilot testing protocol conducting 100+ non-invasive screenings to benchmark telemetry latency, battery efficiency (300mAh LiPo), and ergonomic wearable enclosure comfort."
+        }
+      ],
+      "sort_order": 3
+    },
+    {
+      "id": 5,
+      "title": "FIRST Tech Challenge (FTC) Autonomous Pathing Architecture",
+      "category_pill": "Robotics",
+      "eyebrow": "Autonomous Robotics &amp; Motion Control",
+      "accordions": [
+        {
+          "title": "Pedro Pathing Quintic Spline Algorithm &amp; Odometry Code",
+          "content": "Custom autonomous trajectory generation using quintic Bézier splines, 3-wheel dead-wheel odometry pods, and sub-15ms AprilTag 36h11 computer vision pose correction for tournament robotics."
+        },
+        {
+          "title": "WPI US Open World Championship Technical Notebook",
+          "content": "Engineering notebook documenting autonomous drive tuning, PID velocity loops, and intake mechanism iterations that powered the team to Rank #14 out of 108 international teams."
+        }
+      ],
+      "sort_order": 4
+    },
+    {
+      "id": 6,
+      "title": "Multimodal Clinical Sepsis &amp; Diagnostic Modeling",
+      "category_pill": "Clinical AI",
+      "eyebrow": "Clinical Machine Learning",
+      "accordions": [
+        {
+          "title": "Stanford AIMI &amp; InspiritAI Research Report",
+          "content": "Explored deep learning architectures combining patient electronic health records (EHR) with real-time waveform telemetry to identify early physiological biomarkers of sepsis and cardiac arrhythmia."
+        }
+      ],
+      "sort_order": 5
+    },
+    {
+      "id": 7,
+      "title": "Cancer Biomarker &amp; Recombinant DNA Assay Protocol",
+      "category_pill": "Biomarker Research",
+      "eyebrow": "Molecular Biology &amp; Wet-Bench",
+      "accordions": [
+        {
+          "title": "BioResearch Academy Wet-Bench Laboratory Certification",
+          "content": "Comprehensive laboratory documentation covering recombinant plasmid transformation, PCR amplification, agarose gel electrophoresis, and spectrophotometric protein concentration assays."
+        }
+      ],
+      "sort_order": 6
+    },
+    {
+      "id": 8,
+      "title": "John Locke Global Essay: Environmental Governance &amp; Ethics",
+      "category_pill": "Humanities",
+      "eyebrow": "Humanities &amp; Technological Ethics",
+      "accordions": [
+        {
+          "title": "Commended Essay Manuscript: Technological Authority &amp; Human Dignity",
+          "content": "Critically examining Lockean property theories in the context of modern environmental stewardship and AI governance, arguing that technological development must preserve fundamental human and ecological equity."
+        }
+      ],
+      "sort_order": 7
+    }
+  ],
+  "memberships": [],
+  "awards": [
+    {
+      "id": 1,
+      "title": "MIT Solve National Winner &amp; Leopold Scholar",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/certificates/Day of AI Certificate - MIT RAISE.jpeg",
+      "description": "One of five national AI for a Better World winners; presented autonomous ocean pH buoy research at the MIT Media Lab. Lawrenceville also named Aadya a Leopold Scholar in Ecology and Ethics.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 0
+    },
+    {
+      "id": 2,
+      "title": "WPI US Open World Championship — Rank #14",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/ref_images/projects_wpi-award_framed.jpg",
+      "description": "Ranked #14 out of 108 international robotics teams at the Worcester Polytechnic Institute US Open Invitational as Lead Autonomous Programmer, achieving Robot Design Finalist honors.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 1
+    },
+    {
+      "id": 3,
+      "title": "Water Research Prizes &amp; Stockholm Junior Award",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/ref_images/projects_msef-water-award.jpg",
+      "description": "Second Place in Earth and Environmental Science at Mercer County Science &amp; Engineering Fair (MSEF), Stockholm Junior Water Prize regional award, NOAA special recognition, and NJWEA conference invitation.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 2
+    },
+    {
+      "id": 4,
+      "title": "Featured in The Lawrentian (“One 2 Watch”)",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
+      "description": "The school magazine feature traces Aadya&#x27;s biochar filtration empirical trials and its evolution into an AI-powered water-remediation buoy node.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 3
+    },
+    {
+      "id": 5,
+      "title": "New Jersey Legislative Commendation",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/certificates/Service Award - NJ State Assembly.jpeg",
+      "description": "Official legislative commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing 150+ youth for regional hunger relief and senior care supply packaging.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 4
+    },
+    {
+      "id": 6,
+      "title": "Music-Fest International Rising Talent Grand Prize",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
+      "description": "Grand Prize winner with solo classical piano recitals at Greenfield Hall at Manhattan School of Music, New York.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 5
+    },
+    {
+      "id": 7,
+      "title": "John Locke Institute Essay Prize Commendation",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/ref_images/projects_john-locke_framed.jpg",
+      "description": "Commended in the prestigious international John Locke Global Essay Competition from over 19,000 entries across 138 nations; school annual English and Humanities literary prize winner.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 6
+    },
+    {
+      "id": 8,
+      "title": "North South Foundation National Public Speaking 1st Place",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/certificates/nsf_speech_award.png",
+      "description": "First Place National Champion in public speaking and oratorical debate, establishing early foundations in scientific communication, AI scholars fellowship, and community advocacy.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 7
+    }
+  ],
+  "about": {
+    "etymology": {
+      "tag": "IDENTITY · ETYMOLOGY",
+      "title": "What \"Aadya\" Means to Me",
+      "content": "My name is rooted in ancient Sanskrit (आद्या), meaning \"The First\" and \"The Primordial\". In Indian tradition, it represents intentional agency, calm resilience, and the quiet responsibility to act before others do. To me, it has never meant finishing first in an easy race. It means being willing to take the very first step into uncomfortable, unpaved problems—whether that's diagnosing heavy-metal contamination in agricultural runoff or stepping up to code complex odometry splines under competition pressure."
+    },
+    "quote": {
+      "text": "Nothing beats kindness. It sits quietly beyond all things.",
+      "author": "CHARLIE MACKESY, THE BOY, THE MOLE, THE FOX AND THE HORSE",
+      "reflection": "In high-velocity engineering, it's dangerously easy to obsess solely over performance—PID loops, velocity constraints, or sensor parts-per-million. This quote is my compass: technical rigor is hollow if it doesn't leave people feeling treated with gentleness and dignity."
+    },
+    "books": [
+      {
+        "author": "RICHARD FEYNMAN",
+        "title": "The Pleasure of Finding Things Out",
+        "note": "Taught me that genuine breakthroughs start with ruthless intellectual honesty and the unfiltered joy of asking why."
+      },
+      {
+        "author": "JOHN LOCKE",
+        "title": "Second Treatise of Government",
+        "note": "Instilled the conviction that technological authority is only legitimate when it protects human dignity and fundamental equity."
+      },
+      {
+        "author": "RACHEL CARSON",
+        "title": "Silent Spring",
+        "note": "Proved that meticulous empirical chemistry paired with urgent moral clarity has the power to shift a civilization's conscience."
+      }
+    ],
+    "five_things": [
+      {
+        "tag": "01 / ADRENALINE",
+        "title": "20-Foot Cliff Jump at Age 10",
+        "desc": "Leaped off a 20-foot limestone cliff into the deep waters of Cenote Cristalino in Riviera Maya, Mexico. Love whitewater rafting and parasailing."
+      },
+      {
+        "tag": "02 / CULINARY CHEMISTRY",
+        "title": "Avocado Buttercream",
+        "desc": "Competed in a youth culinary contest and invented an \"avocado buttercream\" recipe that has become a permanent signature family dessert."
+      },
+      {
+        "tag": "03 / CONCERT HALLS",
+        "title": "Solo at Manhattan School of Music",
+        "desc": "Solo classical piano performance at Greenfield Hall, alongside first-chair flute in competitive regional orchestras."
+      },
+      {
+        "tag": "04 / COMMUNITY WORK",
+        "title": "3,500+ lbs of Food Packaged",
+        "desc": "President of STEP For A Better World LEO Club, mobilizing youth cohorts to package emergency food supplies recognized by a NJ Legislative Citation."
+      },
+      {
+        "tag": "05 / PHILOSOPHY COMMENDATION",
+        "title": "John Locke Essay Commendation",
+        "desc": "Wrote commended critical essays exploring where algorithmic automation ends and human moral accountability begins."
+      }
+    ]
+  },
+  "media": [
+    {
+      "id": 1,
+      "filename": "20261023_091817_test_admin_upload.png",
+      "url": "assets/uploads/20261023_091817_test_admin_upload.png",
+      "size_bytes": 0,
+      "uploaded_at": "2026-10-23 03:48:17"
+    }
+  ]
+}

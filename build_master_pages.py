@@ -1098,7 +1098,7 @@ they stay right here, close to the humble ground.</div>
             <h2 class="case-title">Music-Fest Grand Prize Winner &amp; NJMTA Honors</h2>
             <p class="case-subtitle">Selected for Honors Recitals at Westminster Conservatory &amp; Rutgers Nicholas Music Hall.</p>
             <p class="case-body">
-              Awarded the <strong>Grand Prize in the Music-Fest International Rising Talent Festival</strong> for piano recital performance. Earned <strong>Honors Ratings</strong> in NJMTA auditions for Piano for two consecutive years, as well as an <strong>Honors Rating in Flute (2025)</strong>.
+              Awarded the <strong>Grand Prize in the Music-Fest International Rising Talent Festival</strong> for piano recital performance at Greenfield Hall (Manhattan School of Music), as well as the prestigious <strong>NJMTA Honors Recital Award in Flute</strong>.
             </p>
             <p class="case-body">
               Selected to perform in prestigious Honors Recitals at Westminster Conservatory and Rutgers University Nicholas Music Hall. Plays flute in the middle and high school jazz bands, performs studio recitals, and brings classical music to elder residents at senior living homes. Also active in technical theater with the <strong>Periwig Arts Council</strong>, serving as stage manager and production assistant for <em>Much Ado About Nothing</em>.

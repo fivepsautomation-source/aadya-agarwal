@@ -1095,7 +1095,18 @@
       }, 3500);
     }
 
-    const API_BASE = (window.location.protocol === 'file:' || (window.location.port !== '8000' && !window.location.hostname.includes('localhost'))) ? 'http://localhost:8000' : '';
+    const API_BASE = (window.location.protocol === 'file:' || (window.location.port !== '8000' && window.location.hostname.includes('localhost'))) ? 'http://localhost:8000' : '';
+
+    async function hashPassClient(password) {
+      try {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(password + 'aadya_salt_2026');
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+      } catch (err) {
+        return '';
+      }
+    }
 
     async function apiRequest(url, method = 'GET', data = null) {
       const headers = { 'Authorization': `Bearer ${AUTH_TOKEN}` };
@@ -1113,6 +1124,10 @@
         }
         return await res.json();
       } catch (e) {
+        if (url === '/api/content' && method === 'GET') {
+          const fallback = await fetch('site_content.json');
+          return await fallback.json();
+        }
         console.error('API Error:', e);
         throw e;
       }
@@ -1126,32 +1141,50 @@
       const errBox = document.getElementById('loginError');
       errBox.style.display = 'none';
 
+      // 1. Try local or remote API if available
+      let apiSuccess = false;
       try {
-        const res = await fetch(`${API_BASE}/api/auth/login`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password })
-        });
-        const data = await res.json();
-        if (data.success && data.token) {
-          AUTH_TOKEN = data.token;
-          localStorage.setItem('aadya_admin_token', AUTH_TOKEN);
-          document.getElementById('loginScreen').style.display = 'none';
-          document.getElementById('cmsApp').style.display = 'flex';
-          showToast('Welcome back, Aadya!');
-          loadAllData();
-        } else {
-          errBox.textContent = data.error || 'Authentication failed. Check credentials.';
-          errBox.style.display = 'block';
+        if (API_BASE || window.location.port === '8000') {
+          const res = await fetch(`${API_BASE}/api/auth/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+          });
+          const data = await res.json();
+          if (data.success && data.token) {
+            AUTH_TOKEN = data.token;
+            localStorage.setItem('aadya_admin_token', AUTH_TOKEN);
+            document.getElementById('loginScreen').style.display = 'none';
+            document.getElementById('cmsApp').style.display = 'flex';
+            showToast('Welcome back, Aadya!');
+            loadAllData();
+            return;
+          }
         }
-      } catch (err) {
-        errBox.textContent = 'Server connection error. Ensure python server.py is running on port 8000.';
+      } catch (apiErr) {
+        // Fallback to standalone client authentication
+      }
+
+      // 2. Standalone client authentication (works anywhere on production & custom domains)
+      const validEmails = ['aadyaagarwal.com', 'admin@aadyaagarwal.com'];
+      const passHash = await hashPassClient(password);
+      const targetHash = '775887e2215d798351bd4c7fd9676ad51197e6ac8f5d1b5595d5468fa125bdf4';
+
+      if (validEmails.includes(email.toLowerCase()) && passHash === targetHash) {
+        AUTH_TOKEN = 'standalone_' + Date.now();
+        localStorage.setItem('aadya_admin_token', AUTH_TOKEN);
+        document.getElementById('loginScreen').style.display = 'none';
+        document.getElementById('cmsApp').style.display = 'flex';
+        showToast('Welcome back, Aadya! (Portal Activated)');
+        loadAllData();
+      } else {
+        errBox.textContent = 'Invalid administrator credentials. Check your email & password.';
         errBox.style.display = 'block';
       }
     }
 
     function handleLogout() {
-      if (AUTH_TOKEN) {
+      if (AUTH_TOKEN && !AUTH_TOKEN.startsWith('standalone_')) {
         fetch(`${API_BASE}/api/auth/logout`, {
           method: 'POST',
           headers: { 'Authorization': `Bearer ${AUTH_TOKEN}` }
@@ -1167,6 +1200,12 @@
     // Check existing auth on load
     window.addEventListener('DOMContentLoaded', async () => {
       if (AUTH_TOKEN) {
+        if (AUTH_TOKEN.startsWith('standalone_')) {
+          document.getElementById('loginScreen').style.display = 'none';
+          document.getElementById('cmsApp').style.display = 'flex';
+          loadAllData();
+          return;
+        }
         try {
           const res = await fetch(`${API_BASE}/api/auth/me`, {
             headers: { 'Authorization': `Bearer ${AUTH_TOKEN}` }
@@ -1178,7 +1217,13 @@
             loadAllData();
             return;
           }
-        } catch (e) {}
+        } catch (e) {
+          // If server offline, keep standalone active
+          document.getElementById('loginScreen').style.display = 'none';
+          document.getElementById('cmsApp').style.display = 'flex';
+          loadAllData();
+          return;
+        }
       }
       document.getElementById('loginScreen').style.display = 'flex';
     });
