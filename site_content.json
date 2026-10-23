@@ -257,36 +257,6 @@
       "sort_order": 7
     },
     {
-      "id": 10,
-      "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
-      "category_slug": "monivitals",
-      "category_name": "MoniVitals",
-      "img": "assets/monivitals/20260829_084022.jpg",
-      "images": [
-        "assets/monivitals/20260829_084022.jpg",
-        "assets/monivitals/20260829_084028.jpg",
-        "assets/monivitals/20260829_100443.jpg",
-        "assets/ref_images/projects_monivitals-market.webp"
-      ],
-      "desc": "Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.",
-      "highlights": [
-        "CAD modeling in Fusion 360 with ergonomic fingertip alignment and light baffling",
-        "I2C bus multiplexing running on ESP32 with power-saving sleep modes",
-        "Secure Bluetooth Low Energy GATT profile broadcasting encrypted telemetry",
-        "Fabricated multi-revision PCB prototype for robust handheld portability"
-      ],
-      "tags": [
-        "#EmbeddedSystems",
-        "#ESP32",
-        "#HardwareCAD",
-        "#PCB",
-        "#IoT"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 9
-    },
-    {
       "id": 11,
       "title": "Mercer County Hunger Relief & Meal Packaging Drives",
       "category_slug": "community",
