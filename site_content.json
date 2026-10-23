@@ -287,35 +287,6 @@
       "sort_order": 10
     },
     {
-      "id": 12,
-      "title": "Senior Living Center Technology & Musical Companionship",
-      "category_slug": "community",
-      "category_name": "School & Community",
-      "img": "assets/ref_images/projects_senior-center_framed.jpg",
-      "images": [
-        "assets/ref_images/projects_senior-center_framed.jpg",
-        "assets/community/Copy of cd - boxes - pic5.jpg",
-        "assets/community/Copy of cd - aops - pic 4.jpg",
-        "assets/monivitals/20260829_100521.jpg"
-      ],
-      "desc": "Weekly volunteer sessions at Artis Senior Living, conducting smartphone/tablet digital literacy workshops, classical music therapy recitals, and intergenerational storytelling.",
-      "highlights": [
-        "Conducted one-on-one digital literacy sessions helping seniors connect with family",
-        "Performed solo classical flute and piano pieces tailored for cognitive memory therapy",
-        "Created handmade holiday cards and seasonal art gifts for memory-care residents",
-        "Recognized by Artis Senior Living staff for compassionate intergenerational service"
-      ],
-      "tags": [
-        "#ElderCare",
-        "#MusicTherapy",
-        "#DigitalLiteracy",
-        "#ArtisLiving"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 11
-    },
-    {
       "id": 13,
       "title": "New Jersey Legislative Commendation & Civic Supply Drives",
       "category_slug": "community",
