@@ -12,8 +12,7 @@
     try {
       const res = await fetch(`https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=${Date.now()}_${Math.random()}`, {
         headers: {
-          'Authorization': `token ${GH_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json'
+          'Authorization': `token ${GH_TOKEN}`
         }
       });
       if (res.ok) {

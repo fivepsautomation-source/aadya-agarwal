@@ -1260,7 +1260,6 @@
           method: 'PUT',
           headers: {
             'Authorization': `token ${token}`,
-            'Accept': 'application/vnd.github.v3+json',
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
@@ -1332,8 +1331,7 @@
           const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
           const ghRes = await fetch(`https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=${Date.now()}_${Math.random()}`, {
             headers: {
-              'Authorization': `token ${token}`,
-              'Accept': 'application/vnd.github.v3+json'
+              'Authorization': `token ${token}`
             }
           });
           if (ghRes.ok) {
@@ -2473,7 +2471,8 @@
       const repo = 'aadyaagarwal';
       const path = 'site_content.json';
       const baseUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-      const activeToken = token || localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
+      const storedToken = localStorage.getItem('aadya_github_token');
+      const activeToken = (storedToken && (storedToken.startsWith('ghp_') || storedToken.startsWith('gho_'))) ? storedToken : DEFAULT_GH_TOKEN;
 
       async function getFreshSha() {
         // Try git trees API on main branch (never cached by intermediate proxies, 100% exact blob sha)
@@ -2481,8 +2480,7 @@
           const treeRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/main?cb=${Date.now()}_${Math.random()}`, {
             method: 'GET',
             headers: {
-              'Authorization': `token ${activeToken}`,
-              'Accept': 'application/vnd.github.v3+json'
+              'Authorization': `token ${activeToken}`
             }
           });
           if (treeRes.ok) {
@@ -2496,8 +2494,7 @@
         const res = await fetch(`${baseUrl}?ref=main&cb=${Date.now()}_${Math.random()}`, {
           method: 'GET',
           headers: {
-            'Authorization': `token ${activeToken}`,
-            'Accept': 'application/vnd.github.v3+json'
+            'Authorization': `token ${activeToken}`
           }
         });
         if (!res.ok) {
@@ -2524,7 +2521,6 @@
             method: 'PUT',
             headers: {
               'Authorization': `token ${activeToken}`,
-              'Accept': 'application/vnd.github.v3+json',
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
