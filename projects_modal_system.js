@@ -10,8 +10,8 @@
     "group": "Projects",
     "category": "Health technology",
     "summary": "I brought MoniVitals to our local farmers market and senior outreach events, offering neighbors a free check of their critical vitals in under a minute.",
-    "cardImage": "projects/monivitals-market.webp",
-    "heroImage": "projects/monivitals-market.webp",
+    "cardImage": "assets/ref_images/projects_monivitals-market.webp",
+    "heroImage": "assets/ref_images/projects_monivitals-market.webp",
     "badges": [
       {
         "label": "HealthTech",
@@ -53,64 +53,39 @@
     "gallerySubtitle": "Community screening drives, senior outreach, hardware enclosure fabrication, and telemetry testing.",
     "gallery": [
       {
-        "src": "projects/monivitals-market.webp",
-        "alt": "Aadya presenting MoniVitals at the farmers market",
-        "caption": "Community health outreach"
+        "src": "assets/ref_images/projects_monivitals-market.webp",
+        "alt": "MoniVitals: Equitable Vitals Monitor & App",
+        "caption": "MoniVitals: Equitable Vitals Monitor & App"
       },
       {
         "src": "assets/monivitals/20260829_100521.jpg",
-        "alt": "Live screening with community senior",
-        "caption": "Senior vitals screening"
-      },
-      {
-        "src": "assets/monivitals/20260829_100506_1_.jpg",
-        "alt": "Real-time vitals monitoring",
-        "caption": "Real-time telemetry readout"
-      },
-      {
-        "src": "assets/monivitals/20260829_094941_1_.jpg",
-        "alt": "Aadya at the MoniVitals screening table",
-        "caption": "Farmers market booth"
+        "alt": "MoniVitals: Equitable Vitals Monitor & App",
+        "caption": "MoniVitals: Equitable Vitals Monitor & App"
       },
       {
         "src": "assets/monivitals/20260829_084022.jpg",
-        "alt": "MoniVitals handheld hardware prototype",
-        "caption": "Handheld sensor prototype"
-      },
-      {
-        "src": "assets/monivitals/20260829_084028.jpg",
-        "alt": "Custom enclosure with integrated sensors",
-        "caption": "Custom 3D printed housing"
+        "alt": "MoniVitals: Equitable Vitals Monitor & App",
+        "caption": "MoniVitals: Equitable Vitals Monitor & App"
       },
       {
         "src": "assets/monivitals/20260829_100443.jpg",
-        "alt": "Breadboard telemetry and sensor validation",
-        "caption": "Circuit design & bench calibration"
+        "alt": "MoniVitals: Equitable Vitals Monitor & App",
+        "caption": "MoniVitals: Equitable Vitals Monitor & App"
       },
       {
-        "src": "assets/ref_images/projects_senior-center_framed.jpg",
-        "alt": "Senior care center community testing",
-        "caption": "Senior care center deployment"
+        "src": "assets/monivitals/20260829_084028.jpg",
+        "alt": "MoniVitals: Equitable Vitals Monitor & App",
+        "caption": "MoniVitals: Equitable Vitals Monitor & App"
       },
       {
-        "src": "assets/monivitals/pic_10.jpeg",
-        "alt": "MoniVitals field testing",
-        "caption": "Field user screening"
+        "src": "assets/monivitals/20260829_100506_1_.jpg",
+        "alt": "MoniVitals: Equitable Vitals Monitor & App",
+        "caption": "MoniVitals: Equitable Vitals Monitor & App"
       },
       {
-        "src": "assets/monivitals/pic_14.jpeg",
-        "alt": "Outreach screening participant",
-        "caption": "Accessible vital reading"
-      },
-      {
-        "src": "assets/monivitals/pic_21.jpeg",
-        "alt": "Community health engagement",
-        "caption": "Public health screening"
-      },
-      {
-        "src": "assets/monivitals/pic_31.jpeg",
-        "alt": "MoniVitals mobile interface test",
-        "caption": "Telehealth mobile dashboard"
+        "src": "assets/monivitals/20260829_094941_1_.jpg",
+        "alt": "MoniVitals: Equitable Vitals Monitor & App",
+        "caption": "MoniVitals: Equitable Vitals Monitor & App"
       }
     ]
   },
@@ -119,7 +94,7 @@
     "group": "Projects",
     "category": "Climate technology \u00b7 2025 concept",
     "summary": "A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.",
-    "cardImage": "projects/buoy-system-diagram.jpg",
+    "cardImage": "projects/ocean-project-presentation.jpg",
     "heroImage": "projects/ocean-project-presentation.jpg",
     "badges": [
       {
@@ -161,23 +136,8 @@
     "gallery": [
       {
         "src": "projects/ocean-project-presentation.jpg",
-        "alt": "3M Young Scientist Challenge presentation",
-        "caption": "3M challenge presentation"
-      },
-      {
-        "src": "projects/buoy-system-diagram.jpg",
-        "alt": "Buoy system architecture and control sequence",
-        "caption": "System architecture diagram"
-      },
-      {
-        "src": "projects/floating-treatment-design.jpg",
-        "alt": "Floating sensor and dispensing mechanism",
-        "caption": "Dispenser mechanical plan"
-      },
-      {
-        "src": "projects/system-design.jpg",
-        "alt": "Closed-loop feedback control flow",
-        "caption": "Telemetry & control loop"
+        "alt": "Autonomous Ocean pH Buoy",
+        "caption": "Autonomous Ocean pH Buoy"
       }
     ]
   },
@@ -240,109 +200,9 @@
     "gallerySubtitle": "Bench trials, IEEE presentation at Princeton University, NJWEA symposium, and award ceremonies.",
     "gallery": [
       {
-        "src": "projects/ieee-engineering-conversation.jpg",
-        "alt": "Aadya discussing engineering work at IEEE/ISEC",
-        "caption": "Engineering conversation"
-      },
-      {
-        "src": "projects/ieee-attendance.jpg",
-        "alt": "Aadya at the IEEE/ISEC conference at Princeton University",
-        "caption": "IEEE/ISEC 2026 at Princeton"
-      },
-      {
-        "src": "projects/msef-water-award.jpg",
-        "alt": "Aadya with science-fair certificate",
-        "caption": "Mercer Science Fair 2nd Place"
-      },
-      {
-        "src": "projects/njwea-presentation.jpg",
-        "alt": "Aadya presenting at the NJWEA conference",
-        "caption": "Presenting at NJWEA"
-      },
-      {
-        "src": "projects/njwea-recognition.jpg",
-        "alt": "Aadya receiving award at NJWEA",
-        "caption": "Stockholm Junior Water Prize Award"
-      },
-      {
-        "src": "projects/njwea-community.jpg",
-        "alt": "Aadya with water-environment professionals",
-        "caption": "Water industry community"
-      },
-      {
         "src": "projects/water-treatment-setup.jpg",
-        "alt": "Water treatment trial vessels",
-        "caption": "Treatment trial vessels"
-      },
-      {
-        "src": "projects/biochar-samples.jpg",
-        "alt": "Two labeled biochar samples",
-        "caption": "Biochar types B1 and B2"
-      },
-      {
-        "src": "projects/biochar-testing.jpg",
-        "alt": "Biochar testing on laboratory table",
-        "caption": "Laboratory bench testing"
-      },
-      {
-        "src": "projects/contaminated-water-ph.jpg",
-        "alt": "Aadya testing water pH",
-        "caption": "Sample pH measurement"
-      },
-      {
-        "src": "projects/water-toxicity-testing.jpg",
-        "alt": "Water toxicity testing",
-        "caption": "Spectrophotometric assay"
-      },
-      {
-        "src": "projects/floating-treatment-design.jpg",
-        "alt": "Floating biochar filtration device diagram",
-        "caption": "Floating filtration design"
-      },
-      {
-        "src": "projects/system-design.jpg",
-        "alt": "End-to-end water treatment system design",
-        "caption": "End-to-end system design"
-      },
-      {
-        "src": "projects/device-plan.jpg",
-        "alt": "Engineering schematics on whiteboard",
-        "caption": "Device planning & schematics"
-      },
-      {
-        "src": "projects/engineering-device.jpg",
-        "alt": "Aadya working on engineering device",
-        "caption": "Filtration node prototyping"
-      },
-      {
-        "src": "projects/treated-water-filtration.jpg",
-        "alt": "Treated water passing through filter",
-        "caption": "Gravity filtration trial"
-      },
-      {
-        "src": "projects/ph-trials.jpg",
-        "alt": "Repeated pH measurement log",
-        "caption": "Repeated pH trials"
-      },
-      {
-        "src": "projects/ph-time-series.jpg",
-        "alt": "pH measurements plotted over time",
-        "caption": "pH response time-series"
-      },
-      {
-        "src": "projects/trial-log.jpg",
-        "alt": "Table of experimental data",
-        "caption": "Water quality data log"
-      },
-      {
-        "src": "projects/acidification-results.jpg",
-        "alt": "Ocean-acidification neutralization chart",
-        "caption": "Neutralization kinetics"
-      },
-      {
-        "src": "projects/acidification-results-2.jpg",
-        "alt": "Comparative adsorption performance",
-        "caption": "Heavy metal removal rates"
+        "alt": "Biochar Water Treatment",
+        "caption": "Biochar Water Treatment"
       }
     ]
   },
@@ -385,23 +245,8 @@
     "gallery": [
       {
         "src": "projects/mit-day-ai-stage.jpg",
-        "alt": "Aadya presenting AI for a Better World at the MIT Media Lab",
-        "caption": "On stage at MIT Media Lab"
-      },
-      {
-        "src": "projects/mit-day-ai-ai-method.jpg",
-        "alt": "Slide explaining water sensor AI and safeguards",
-        "caption": "AI modeling & responsible safeguards"
-      },
-      {
-        "src": "projects/mit-solve-buoy-presentation.jpg",
-        "alt": "Buoy telemetry and edge hardware slide",
-        "caption": "IoT node specs & solar runtime"
-      },
-      {
-        "src": "projects/mit-solve-recognition.jpg",
-        "alt": "Aadya receiving award on stage at MIT",
-        "caption": "National Winner certificate ceremony"
+        "alt": "AI for a Better World",
+        "caption": "AI for a Better World"
       }
     ]
   },
@@ -887,28 +732,28 @@
     "gallery": [
       {
         "src": "assets/ref_images/projects_hunger-donation_framed.jpg",
-        "alt": "Mercer County Hunger Relief drive",
-        "caption": "Community food drive"
+        "alt": "Mercer County Hunger Relief & Meal Packaging Drives",
+        "caption": "Mercer County Hunger Relief & Meal Packaging Drives"
       },
       {
         "src": "assets/community/Copy of cd - boxes - pic5.jpg",
-        "alt": "Boxes of packed goods for delivery",
-        "caption": "Packed donations ready for transport"
+        "alt": "Mercer County Hunger Relief & Meal Packaging Drives",
+        "caption": "Mercer County Hunger Relief & Meal Packaging Drives"
       },
       {
         "src": "assets/community/Copy of cd - ah- group pic1.jpg",
-        "alt": "Volunteer packaging group",
-        "caption": "Youth volunteer team"
+        "alt": "Mercer County Hunger Relief & Meal Packaging Drives",
+        "caption": "Mercer County Hunger Relief & Meal Packaging Drives"
       },
       {
         "src": "assets/community/Candy donation boxes at AoPs - pic2.jpg",
-        "alt": "Candy donation boxes at AoPS",
-        "caption": "Donation box setup"
+        "alt": "Mercer County Hunger Relief & Meal Packaging Drives",
+        "caption": "Mercer County Hunger Relief & Meal Packaging Drives"
       },
       {
         "src": "assets/certificates/STEP Meals Packaging.jpeg",
-        "alt": "STEP Meals Packaging certificate",
-        "caption": "STEP Meals Service Certificate"
+        "alt": "Mercer County Hunger Relief & Meal Packaging Drives",
+        "caption": "Mercer County Hunger Relief & Meal Packaging Drives"
       }
     ]
   },
@@ -951,23 +796,23 @@
     "gallery": [
       {
         "src": "assets/ref_images/projects_senior-center_framed.jpg",
-        "alt": "Outreach at Senior Living Center",
-        "caption": "Senior living companionship"
+        "alt": "Senior Living Center Technology & Musical Companionship",
+        "caption": "Senior Living Center Technology & Musical Companionship"
       },
       {
-        "src": "assets/monivitals/20260829_100521.jpg",
-        "alt": "Health check and conversation with senior elder",
-        "caption": "One-on-one technology session"
-      },
-      {
-        "src": "projects/flute-seniors.jpeg",
-        "alt": "Playing flute for senior living residents",
-        "caption": "Flute recital for memory-care residents"
+        "src": "assets/community/Copy of cd - boxes - pic5.jpg",
+        "alt": "Senior Living Center Technology & Musical Companionship",
+        "caption": "Senior Living Center Technology & Musical Companionship"
       },
       {
         "src": "assets/community/Copy of cd - aops - pic 4.jpg",
-        "alt": "Community care box preparation",
-        "caption": "Handmade care package preparation"
+        "alt": "Senior Living Center Technology & Musical Companionship",
+        "caption": "Senior Living Center Technology & Musical Companionship"
+      },
+      {
+        "src": "assets/monivitals/20260829_100521.jpg",
+        "alt": "Senior Living Center Technology & Musical Companionship",
+        "caption": "Senior Living Center Technology & Musical Companionship"
       }
     ]
   },
@@ -1010,28 +855,28 @@
     "gallery": [
       {
         "src": "assets/community/Sock Drive - NJ Assembly Woman House.png",
-        "alt": "Sock Drive presentation with NJ Assemblywoman",
-        "caption": "Presentation with NJ Assemblywoman"
-      },
-      {
-        "src": "assets/certificates/Service Award - NJ State Assembly.jpeg",
-        "alt": "NJ State Assembly Service Award certificate",
-        "caption": "New Jersey State Assembly Commendation"
+        "alt": "New Jersey Legislative Commendation & Civic Supply Drives",
+        "caption": "New Jersey Legislative Commendation & Civic Supply Drives"
       },
       {
         "src": "assets/ref_images/projects_hunger-donation_framed.jpg",
-        "alt": "Donation drive collections",
-        "caption": "Civic donation collection"
+        "alt": "New Jersey Legislative Commendation & Civic Supply Drives",
+        "caption": "New Jersey Legislative Commendation & Civic Supply Drives"
+      },
+      {
+        "src": "assets/certificates/Service Award - NJ State Assembly.jpeg",
+        "alt": "New Jersey Legislative Commendation & Civic Supply Drives",
+        "caption": "New Jersey Legislative Commendation & Civic Supply Drives"
       },
       {
         "src": "assets/community/Copy of cd - flyer.jpg",
-        "alt": "Supply drive outreach flyer",
-        "caption": "Community outreach campaign"
+        "alt": "New Jersey Legislative Commendation & Civic Supply Drives",
+        "caption": "New Jersey Legislative Commendation & Civic Supply Drives"
       },
       {
         "src": "assets/community/Copy of cd - ah- group pic1.jpg",
-        "alt": "Youth civic engagement team",
-        "caption": "Youth civic volunteer team"
+        "alt": "New Jersey Legislative Commendation & Civic Supply Drives",
+        "caption": "New Jersey Legislative Commendation & Civic Supply Drives"
       }
     ]
   },
@@ -1074,23 +919,23 @@
     "gallery": [
       {
         "src": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
-        "alt": "IEEE Engineering in Conversation presentation",
-        "caption": "IEEE Engineering in Conversation"
+        "alt": "Pulse Oximetry Optical Bias Mitigation Research",
+        "caption": "Pulse Oximetry Optical Bias Mitigation Research"
       },
       {
         "src": "assets/science_fairs/ieee_pic4.jpeg",
-        "alt": "Research presentation and discussion",
-        "caption": "Technical forum discussion"
+        "alt": "Pulse Oximetry Optical Bias Mitigation Research",
+        "caption": "Pulse Oximetry Optical Bias Mitigation Research"
       },
       {
         "src": "assets/monivitals/20260829_094941_1_.jpg",
-        "alt": "Sensor module evaluation",
-        "caption": "Telemetry calibration station"
+        "alt": "Pulse Oximetry Optical Bias Mitigation Research",
+        "caption": "Pulse Oximetry Optical Bias Mitigation Research"
       },
       {
         "src": "assets/monivitals/20260829_100443.jpg",
-        "alt": "Hardware circuit breadboard testing",
-        "caption": "PPG circuit breadboard test"
+        "alt": "Pulse Oximetry Optical Bias Mitigation Research",
+        "caption": "Pulse Oximetry Optical Bias Mitigation Research"
       }
     ]
   },
@@ -1132,18 +977,18 @@
     "gallery": [
       {
         "src": "assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg",
-        "alt": "AI Scholars Certificate",
-        "caption": "AI Scholars Certificate"
+        "alt": "Stanford AIMI Summer Health AI Fellow Research",
+        "caption": "Stanford AIMI Summer Health AI Fellow Research"
       },
       {
         "src": "assets/certificates/InspiritAI_AI_Ambassador_Certificate.jpg",
-        "alt": "AI Ambassador Certificate",
-        "caption": "AI Ambassador Certificate"
+        "alt": "Stanford AIMI Summer Health AI Fellow Research",
+        "caption": "Stanford AIMI Summer Health AI Fellow Research"
       },
       {
         "src": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
-        "alt": "AI in healthcare research presentation",
-        "caption": "Healthcare AI Presentation"
+        "alt": "Stanford AIMI Summer Health AI Fellow Research",
+        "caption": "Stanford AIMI Summer Health AI Fellow Research"
       }
     ]
   },
@@ -1185,18 +1030,18 @@
     "gallery": [
       {
         "src": "assets/certificates/BioResearch Academy Certificate.jpeg",
-        "alt": "BioResearch Academy Certificate",
-        "caption": "BioResearch Academy Certification"
+        "alt": "BioResearch Academy Wet-Bench Molecular Biology",
+        "caption": "BioResearch Academy Wet-Bench Molecular Biology"
       },
       {
         "src": "assets/certificates/Aqua Science Certificate.jpg",
-        "alt": "Aqua Science Certificate",
-        "caption": "Aqua Science Lab Certification"
+        "alt": "BioResearch Academy Wet-Bench Molecular Biology",
+        "caption": "BioResearch Academy Wet-Bench Molecular Biology"
       },
       {
         "src": "assets/science_fairs/pic3.jpeg",
-        "alt": "Laboratory testing bench",
-        "caption": "Laboratory testing bench"
+        "alt": "BioResearch Academy Wet-Bench Molecular Biology",
+        "caption": "BioResearch Academy Wet-Bench Molecular Biology"
       }
     ]
   }
