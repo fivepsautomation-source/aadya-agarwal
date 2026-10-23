@@ -586,7 +586,71 @@
       "sort_order": 7
     }
   ],
-  "memberships": [],
+  "memberships": [
+    {
+      "id": 1,
+      "org_name": "IEEE (Institute of Electrical and Electronics Engineers)",
+      "role": "Student Member and Presenter",
+      "website_label": "IEEE",
+      "badge_text": "IEEE",
+      "badge_gradient": "linear-gradient(135deg, #1864ab, #228be6)",
+      "url": "https://www.ieee.org/"
+    },
+    {
+      "id": 2,
+      "org_name": "Water Environment Federation",
+      "role": "U.S. Stockholm Junior Water Prize Award",
+      "website_label": "WEF",
+      "badge_text": "WEF",
+      "badge_gradient": "linear-gradient(135deg, #099268, #20c997)",
+      "url": "https://www.wef.org/sjwp/"
+    },
+    {
+      "id": 3,
+      "org_name": "AWDORG Foundation (Anything Will Do)",
+      "role": "Volunteer (Global Youth & Healthcare, ProjectEducate)",
+      "website_label": "AWD Org",
+      "badge_text": "AWD",
+      "badge_gradient": "linear-gradient(135deg, #e8590c, #f08c00)",
+      "url": "https://anythingwilldo.org/"
+    },
+    {
+      "id": 4,
+      "org_name": "STEP For A Better World LEO Club",
+      "role": "Board Member",
+      "website_label": "STEP",
+      "badge_text": "LEO",
+      "badge_gradient": "linear-gradient(135deg, #c2255c, #66a80f)",
+      "url": "https://stepforabetterworld.org/"
+    },
+    {
+      "id": 5,
+      "org_name": "Biomedical Engineering Society (BMES)",
+      "role": "Student Member",
+      "website_label": "BMES",
+      "badge_text": "BMES",
+      "badge_gradient": "linear-gradient(135deg, #0c8599, #15aabf)",
+      "url": "https://www.bmes.org/"
+    },
+    {
+      "id": 6,
+      "org_name": "New Jersey Water Environment Association (NJWEA)",
+      "role": "Member",
+      "website_label": "NJWEA",
+      "badge_text": "NJ",
+      "badge_gradient": "linear-gradient(135deg, #0b7285, #1098ad)",
+      "url": "https://njwea.org/"
+    },
+    {
+      "id": 7,
+      "org_name": "NCWIT Aspirations in Computing (AiC) Community",
+      "role": "Community Member",
+      "website_label": "NCWIT / AiC",
+      "badge_text": "NC",
+      "badge_gradient": "linear-gradient(135deg, #5f3dc4, #c2255c)",
+      "url": "https://www.aspirations.org/"
+    }
+  ],
   "awards": [
     {
       "id": 1,
