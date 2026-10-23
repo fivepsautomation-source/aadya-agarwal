@@ -262,7 +262,7 @@
 
           card.innerHTML = `
             <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
-              <img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}"/>
+              <img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}"/>
               ${badgesHtml}
             </div>
             <div class="flex w-full flex-1 flex-col p-5 text-left">

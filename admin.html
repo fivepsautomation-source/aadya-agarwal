@@ -958,7 +958,7 @@
         </label>
         <div style="display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
           <div style="width: 120px; height: 85px; border-radius: 10px; overflow: hidden; background: #eee; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
-            <img id="modalProjImgPreview" src="assets/logo.png" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='assets/logo.png'">
+            <img id="modalProjImgPreview" src="assets/logo.png" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this)">
           </div>
           <div style="flex: 1; min-width: 240px;">
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
@@ -967,7 +967,7 @@
                 <input type="file" accept="image/*" style="display: none;" onchange="uploadSingleImage(this, 'modalProjImg', 'modalProjImgPreview')">
               </label>
             </div>
-            <input type="text" id="modalProjImg" class="form-input" style="font-size: 0.82rem; padding: 0.55rem 0.8rem;" required placeholder="Image URL (e.g. assets/uploads/...)" oninput="document.getElementById('modalProjImgPreview').src=this.value">
+            <input type="text" id="modalProjImg" class="form-input" style="font-size: 0.82rem; padding: 0.55rem 0.8rem;" required placeholder="Image URL (e.g. assets/uploads/...)" oninput="updateCoverPreview(this.value)">
           </div>
         </div>
       </div>
@@ -1168,6 +1168,62 @@
     let AUTH_TOKEN = localStorage.getItem('aadya_admin_token') || '';
     let siteData = {};
 
+    const localPreviewCache = window.localPreviewCache || (window.localPreviewCache = {});
+
+    function getResolvedImageSrc(url) {
+      if (!url) return 'assets/logo.png';
+      if (typeof url !== 'string') return url;
+      if (localPreviewCache[url]) return localPreviewCache[url];
+      try {
+        const cached = sessionStorage.getItem('aadya_preview_' + url);
+        if (cached) return cached;
+      } catch (e) {}
+      return url;
+    }
+
+    function smartImageFallback(imgEl, originalUrl) {
+      if (!imgEl) return;
+      const src = originalUrl || imgEl.getAttribute('src') || '';
+      if (!src) {
+        imgEl.src = 'assets/logo.png';
+        return;
+      }
+      if (localPreviewCache[src]) {
+        imgEl.src = localPreviewCache[src];
+        return;
+      }
+      try {
+        const cached = sessionStorage.getItem('aadya_preview_' + src);
+        if (cached) {
+          imgEl.src = cached;
+          return;
+        }
+      } catch (e) {}
+
+      if (src.includes('assets/uploads/') && !imgEl.dataset.triedGithubRaw) {
+        imgEl.dataset.triedGithubRaw = 'true';
+        const cleanPath = src.substring(src.indexOf('assets/uploads/'));
+        imgEl.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${cleanPath}`;
+        return;
+      }
+      if (src.includes('assets/uploads/') && !imgEl.dataset.triedCdn) {
+        imgEl.dataset.triedCdn = 'true';
+        const cleanPath = src.substring(src.indexOf('assets/uploads/'));
+        imgEl.src = `https://cdn.jsdelivr.net/gh/minakshi2517/aadyaagarwal@main/${cleanPath}`;
+        return;
+      }
+      imgEl.src = 'assets/logo.png';
+    }
+
+    function updateCoverPreview(val) {
+      const prev = document.getElementById('modalProjImgPreview');
+      if (prev) {
+        prev.removeAttribute('data-tried-github-raw');
+        prev.removeAttribute('data-tried-cdn');
+        prev.src = getResolvedImageSrc((val || '').trim());
+      }
+    }
+
     function showToast(msg) {
       const container = document.getElementById('toastContainer');
       const toast = document.createElement('div');
@@ -1272,6 +1328,18 @@
         });
 
         if (res.ok) {
+          const previewData = compressedUrl || rawB64;
+          localPreviewCache[path] = previewData;
+          try { sessionStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
+          if (API_BASE) {
+            try {
+              fetch(`${API_BASE}/api/upload`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ base64: rawB64, filename })
+              }).catch(() => {});
+            } catch (e) {}
+          }
           showToast('✓ Image committed to GitHub cloud!');
           return path;
         }
@@ -1279,8 +1347,10 @@
         console.warn('GitHub direct asset upload note:', e);
       }
 
+      const fallbackUrl = compressedUrl || await readFileAsDataUrl(file);
+      localPreviewCache[fallbackUrl] = fallbackUrl;
       showToast('✓ Image optimized and ready!');
-      return compressedUrl || await readFileAsDataUrl(file);
+      return fallbackUrl;
     }
 
     async function syncToStorageAndPublish(label = 'Changes') {
@@ -1737,7 +1807,7 @@
         card.style.cssText = `position: relative; border-radius: 8px; overflow: hidden; background: #eee; border: 2px solid ${isCover ? 'var(--admin-berry)' : 'rgba(0,0,0,0.12)'}; aspect-ratio: 1/1; box-shadow: 0 1px 4px rgba(0,0,0,0.08); group;`;
         
         card.innerHTML = `
-          <img src="${imgUrl}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='assets/logo.png'">
+          <img src="${getResolvedImageSrc(imgUrl)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this, '${imgUrl}')">
           <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: space-between; padding: 4px;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               ${isCover ? '<span style="background: var(--admin-berry); color: #fff; font-size: 8px; font-weight: 800; text-transform: uppercase; padding: 2px 5px; border-radius: 4px;">Cover</span>' : '<span></span>'}
@@ -1801,7 +1871,11 @@
     function setAsCoverImage(url) {
       document.getElementById('modalProjImg').value = url;
       const prev = document.getElementById('modalProjImgPreview');
-      if (prev) prev.src = url;
+      if (prev) {
+        prev.removeAttribute('data-tried-github-raw');
+        prev.removeAttribute('data-tried-cdn');
+        prev.src = getResolvedImageSrc(url);
+      }
       renderModalGallery();
       showToast('Set as cover photo.');
     }
@@ -1853,7 +1927,7 @@
         const photoCount = Array.isArray(p.images) ? p.images.length : (p.img ? 1 : 0);
         row.innerHTML = `
           <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
-            <img src="${p.img || 'assets/logo.png'}" class="item-thumb-micro" onerror="this.src='assets/logo.png'">
+            <img src="${getResolvedImageSrc(p.img || 'assets/logo.png')}" class="item-thumb-micro" onerror="smartImageFallback(this, '${p.img || ''}')">
             <div class="item-meta-col">
               <div class="item-meta-title">${p.title}</div>
               <div class="item-meta-subtitle">${p.category_name} &bull; <strong style="color: var(--admin-berry);">${photoCount} Photos in Gallery</strong></div>
@@ -1911,7 +1985,12 @@
       document.getElementById('modalProjTitle').value = p.title;
       document.getElementById('modalProjCategory').value = p.category_slug;
       document.getElementById('modalProjImg').value = p.img || '';
-      document.getElementById('modalProjImgPreview').src = p.img || 'assets/logo.png';
+      const prev = document.getElementById('modalProjImgPreview');
+      if (prev) {
+        prev.removeAttribute('data-tried-github-raw');
+        prev.removeAttribute('data-tried-cdn');
+        prev.src = getResolvedImageSrc(p.img || 'assets/logo.png');
+      }
       document.getElementById('modalProjDesc').value = p.desc || '';
       document.getElementById('modalProjHighlights').value = (p.highlights || []).join('\n');
       document.getElementById('modalProjTags').value = (p.tags || []).join(', ');
@@ -1994,11 +2073,21 @@
 
       if (targetInputId === 'heroPortrait') {
         const hp = document.getElementById('heroPortraitPreview');
-        if (hp) hp.src = imgUrl;
+        if (hp) hp.src = getResolvedImageSrc(imgUrl);
       }
       if (previewImgId) {
         const prev = document.getElementById(previewImgId);
-        if (prev) prev.src = imgUrl;
+        if (prev) {
+          prev.removeAttribute('data-tried-github-raw');
+          prev.removeAttribute('data-tried-cdn');
+          prev.src = getResolvedImageSrc(imgUrl);
+        }
+      }
+      if (targetInputId === 'modalProjImg' && typeof currentModalGalleryImages !== 'undefined') {
+        if (!currentModalGalleryImages.includes(imgUrl)) {
+          currentModalGalleryImages.unshift(imgUrl);
+          renderModalGallery();
+        }
       }
       showToast('✓ Image attached successfully!');
     }
@@ -2099,7 +2188,7 @@
         card.style.cssText = 'border: 1px solid rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column;';
         card.innerHTML = `
           <div style="height: 160px; background: #eee; overflow: hidden; position: relative;">
-            <img src="${m.url}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='assets/logo.png'">
+            <img src="${getResolvedImageSrc(m.url)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this, '${m.url}')">
           </div>
           <div style="padding: 0.85rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
@@ -2336,7 +2425,12 @@
       document.getElementById('modalAwardCategory').value = a.category_pill;
       document.getElementById('modalAwardYear').value = a.year;
       document.getElementById('modalAwardImg').value = a.image_url || '';
-      document.getElementById('modalAwardImgPreview').src = a.image_url || 'assets/logo.png';
+      const prev = document.getElementById('modalAwardImgPreview');
+      if (prev) {
+        prev.removeAttribute('data-tried-github-raw');
+        prev.removeAttribute('data-tried-cdn');
+        prev.src = getResolvedImageSrc(a.image_url || 'assets/logo.png');
+      }
       document.getElementById('modalAwardDesc').value = a.description || '';
       document.getElementById('modalAwardLinkText').value = a.link_text || 'Learn More';
       document.getElementById('modalAwardLinkUrl').value = a.link_url || '#';
@@ -2411,7 +2505,7 @@
         row.className = 'item-list-row';
         row.innerHTML = `
           <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
-            <img src="${a.image_url || 'assets/logo.png'}" class="item-thumb-micro" onerror="this.src='assets/logo.png'">
+            <img src="${getResolvedImageSrc(a.image_url || 'assets/logo.png')}" class="item-thumb-micro" onerror="smartImageFallback(this, '${a.image_url || ''}')">
             <div class="item-meta-col">
               <div class="item-meta-title">${a.title} (${a.year})</div>
               <div class="item-meta-subtitle">${a.category_pill} &bull; ${(a.description || '').slice(0, 80)}...</div>
