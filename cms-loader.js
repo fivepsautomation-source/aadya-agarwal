@@ -7,9 +7,29 @@
   const CMS_KEY = 'aadya_cms_content';
 
   async function getCMSData() {
-    // 1. Try live raw GitHub first for instant cross-device updates across all phones & browsers
+    // 1. Try public GitHub Contents API (0 second cache, instant live across every phone/browser globally!)
     try {
-      const ghRes = await fetch('https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/site_content.json?v=' + Date.now());
+      const res = await fetch('https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=' + Date.now(), {
+        headers: { 'Accept': 'application/vnd.github.v3+json', 'Cache-Control': 'no-cache' }
+      });
+      if (res.ok) {
+        const fileInfo = await res.json();
+        if (fileInfo && fileInfo.content) {
+          const binary = atob(fileInfo.content.replace(/\s/g, ''));
+          const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+          const decodedStr = new TextDecoder('utf-8').decode(bytes);
+          const ghData = JSON.parse(decodedStr);
+          if (ghData && (ghData.settings || ghData.portfolio)) {
+            try { localStorage.setItem(CMS_KEY, JSON.stringify(ghData)); } catch(e) {}
+            return ghData;
+          }
+        }
+      }
+    } catch(err) {}
+
+    // 2. Try raw GitHub user content fallback
+    try {
+      const ghRes = await fetch('https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/site_content.json?cb=' + Date.now());
       if (ghRes.ok) {
         const ghData = await ghRes.json();
         if (ghData && (ghData.settings || ghData.portfolio)) {
@@ -19,7 +39,7 @@
       }
     } catch(e) {}
 
-    // 2. Check local storage (instant preview from same browser)
+    // 3. Check local storage
     const local = localStorage.getItem(CMS_KEY);
     if (local) {
       try {
@@ -30,7 +50,7 @@
       } catch(e) {}
     }
 
-    // 3. Fallback to local static content json
+    // 4. Fallback to local static content json
     try {
       const res = await fetch('site_content.json?v=' + Date.now());
       if (res.ok) {

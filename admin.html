@@ -1203,20 +1203,20 @@
     }
 
     const DEFAULT_GH_TOKEN = String.fromCharCode(103,104,111,95,50,56,72,104,104,101,100,81,106,108,85,80,78,89,107,72,80,83,70,68,86,81,65,74,75,80,90,57,50,79,48,104,81,115,68,68);
-    let isSyncingToGH = false;
-
-    async function autoSyncToGitHub() {
-      if (isSyncingToGH || !siteData || !siteData.settings) return;
-      isSyncingToGH = true;
-      try {
-        const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
-        await publishToGitHub(token);
-        showToast('🚀 Live on GitHub & All Devices!');
-      } catch(err) {
-        console.warn('Auto sync warning:', err);
-      } finally {
-        isSyncingToGH = false;
-      }
+    let syncTimeout = null;
+    function autoSyncToGitHub() {
+      if (!siteData || !siteData.settings) return;
+      if (syncTimeout) clearTimeout(syncTimeout);
+      syncTimeout = setTimeout(async () => {
+        try {
+          const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
+          await publishToGitHub(token);
+          showToast('🚀 Live on GitHub & All Devices! Saved worldwide.');
+        } catch(err) {
+          console.error('Auto sync error:', err);
+          showToast('Sync note: ' + err.message);
+        }
+      }, 400);
     }
 
     function syncToStorage() {
@@ -2493,21 +2493,28 @@
       const owner = 'minakshi2517';
       const repo = 'aadyaagarwal';
       const path = 'site_content.json';
-      const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+      const baseUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
 
-      showToast('Connecting to GitHub repository...');
-      
-      const getRes = await fetch(url, {
-        headers: {
-          'Authorization': `token ${token}`,
-          'Accept': 'application/vnd.github.v3+json'
+      showToast('Connecting to GitHub & saving globally...');
+
+      async function getFreshSha() {
+        const res = await fetch(`${baseUrl}?cb=${Date.now()}_${Math.random()}`, {
+          method: 'GET',
+          cache: 'no-store',
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache'
+          }
+        });
+        if (!res.ok) {
+          const errText = await res.text();
+          throw new Error('Could not fetch file metadata from GitHub: ' + errText);
         }
-      });
-      if (!getRes.ok) {
-        throw new Error('Could not reach GitHub repository. Check your personal access token.');
+        const data = await res.json();
+        return data.sha;
       }
-      const fileInfo = await getRes.json();
-      const sha = fileInfo.sha;
 
       const jsonStr = JSON.stringify(siteData, null, 2);
       const utf8Bytes = new TextEncoder().encode(jsonStr);
@@ -2517,33 +2524,50 @@
       }
       const base64Content = btoa(binaryStr);
 
-      const putRes = await fetch(url, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `token ${token}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: 'Update site content via Aadya Admin Portal',
-          content: base64Content,
-          sha: sha,
-          branch: 'main'
-        })
-      });
+      let lastErr = null;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          const sha = await getFreshSha();
+          const putRes = await fetch(baseUrl, {
+            method: 'PUT',
+            cache: 'no-store',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'Content-Type': 'application/json',
+              'Cache-Control': 'no-cache, no-store, must-revalidate'
+            },
+            body: JSON.stringify({
+              message: 'Live CMS Update: ' + new Date().toISOString(),
+              content: base64Content,
+              sha: sha,
+              branch: 'main'
+            })
+          });
 
-      if (!putRes.ok) {
-        const errJson = await putRes.json().catch(() => ({}));
-        throw new Error(errJson.message || 'GitHub commit failed');
+          if (putRes.ok) {
+            const commitData = await putRes.json();
+            return commitData;
+          }
+
+          const errData = await putRes.json().catch(() => ({}));
+          if (putRes.status === 409 || (errData.message && errData.message.includes('does not match'))) {
+            await new Promise(r => setTimeout(r, 600));
+            continue;
+          }
+          throw new Error(errData.message || ('GitHub error HTTP ' + putRes.status));
+        } catch(err) {
+          lastErr = err;
+          await new Promise(r => setTimeout(r, 600));
+        }
       }
 
-      return true;
+      throw lastErr || new Error('Failed to commit to GitHub after retries.');
     }
 
     async function publishAllChanges() {
       // 1. Sync immediately to browser storage and dispatch event
       syncToStorage();
-      showToast('✓ Local changes live across all open tabs!');
 
       // 2. Try server publish if backend is alive
       try {
@@ -2563,7 +2587,7 @@
         alert('🚀 SUCCESS! All changes have been published to GitHub & Vercel!\n\nEvery device, phone, laptop, and browser worldwide will now see your updated changes live.');
       } catch (err) {
         console.warn('GitHub publish note:', err);
-        showToast('✓ Saved locally! Export site_content.json if needed.');
+        alert('Global publish note: ' + err.message + '\n\nSaved locally on this device!');
       }
     }
   </script>
