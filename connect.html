@@ -1,606 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="antialiased">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connect | Aadya Agarwal</title>
-  <meta name="description" content="Connect with Aadya Agarwal for research collaborations, student speaking engagements, and STEM mentorship.">
+  <meta name="description" content="Connect with Aadya Agarwal for research collaborations, speaking invitations, and mentorship inquiries.">
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css?v=25">
-  <script src="auth.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modern-style.css?v=350">
   <style>
-    /* Aadya's Personal & Clean Connect Page Styles */
-    :root {
-      --sage-primary: #245220;
-      --sage-dark: #163813;
-      --sage-bg: #f4f8f4;
-      --sage-card: #eff5ee;
-      --sage-border: rgba(36, 82, 32, 0.16);
-      --font-serif: 'Cormorant Garamond', Georgia, serif;
-    }
-
-    .connect-page-wrap {
-      padding: 3.5rem 0 6rem;
-    }
-
-    /* Hero */
-    .connect-hero-editorial {
-      max-width: 720px;
-      margin-bottom: 3.5rem;
-    }
-
-    .connect-tag-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: var(--sage-card);
-      border: 1px solid var(--sage-border);
-      color: var(--sage-primary);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
-    }
-
-    .connect-hero-title {
-      font-family: var(--font-display, 'Outfit', sans-serif);
-      font-size: clamp(2.5rem, 4.2vw, 3.4rem);
-      font-weight: 800;
-      line-height: 1.15;
-      color: #121a14;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
-    }
-
-    .connect-hero-title .serif-italic {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-weight: 600;
-      color: var(--sage-primary);
-    }
-
-    .connect-hero-p {
-      font-size: 1.12rem;
-      line-height: 1.7;
-      color: #4a594d;
-    }
-
-    /* Topic Selection Cards */
-    .topic-selection-section {
-      margin-bottom: 3.5rem;
-    }
-
-    .topic-section-label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--sage-primary);
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .topic-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .topic-choice-card {
+    .form-card-box {
       background: #ffffff;
-      border: 1.5px solid var(--sage-border);
-      border-radius: 18px;
-      padding: 1.35rem 1.25rem;
-      cursor: pointer;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
-      transition: all 0.22s ease;
-      text-align: left;
-      font-family: inherit;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
+      border: 1px solid rgba(15, 15, 18, 0.12);
+      border-radius: 20px;
+      padding: 2.25rem;
+      box-shadow: 0 4px 24px -2px rgba(15, 15, 18, 0.05);
     }
-
-    .topic-choice-card:hover, .topic-choice-card.active {
-      border-color: var(--sage-primary);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 26px rgba(27, 63, 34, 0.08);
-      background: #fbfdfb;
+    @media (max-width: 640px) {
+      .form-card-box {
+        padding: 1.5rem;
+      }
     }
-
-    .topic-choice-card.active {
-      border-color: var(--sage-primary);
-      background: var(--sage-card);
-    }
-
-    .topic-choice-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 0.5rem;
-    }
-
-    .topic-choice-icon {
-      font-size: 1.25rem;
-    }
-
-    .topic-choice-title {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: #121a14;
-    }
-
-    .topic-choice-desc {
-      font-size: 0.86rem;
-      line-height: 1.5;
-      color: #556b57;
-    }
-
-    /* 2-Column Split Layout */
-    .connect-split-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-
-    /* Form Card */
-    .connect-form-panel {
-      background: #ffffff;
-      border: 1.5px solid var(--sage-border);
-      border-radius: 24px;
-      padding: 2.5rem;
-      box-shadow: 0 8px 30px rgba(20, 28, 21, 0.04);
-    }
-
-    .form-heading {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: #121a14;
-      margin-bottom: 0.4rem;
-    }
-
-    .form-subtext {
-      font-size: 0.92rem;
-      color: #556b57;
-      margin-bottom: 2rem;
-    }
-
-    .form-row-two {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .form-field-group {
-      margin-bottom: 1.25rem;
-    }
-
-    .form-field-label {
-      display: block;
-      font-size: 0.84rem;
-      font-weight: 600;
-      color: #121a14;
-      margin-bottom: 0.45rem;
-    }
-
-    .form-input-styled {
+    .styled-input {
       width: 100%;
-      padding: 13px 15px;
-      background: #f8faf8;
-      border: 1.5px solid var(--sage-border);
-      border-radius: 14px;
-      font-family: inherit;
-      font-size: 0.96rem;
-      color: #121a14;
-      outline: none;
-      box-sizing: border-box;
+      border: 1.5px solid rgba(15, 15, 18, 0.14);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      color: #1f2937;
+      background: #ffffff;
       transition: all 0.2s ease;
-    }
-
-    .form-input-styled:focus {
-      background: #ffffff;
-      border-color: var(--sage-primary);
-      box-shadow: 0 0 0 3.5px rgba(36, 82, 32, 0.12);
-    }
-
-    .form-submit-btn {
-      width: 100%;
-      padding: 14px 22px;
-      background: linear-gradient(135deg, #245220 0%, #173814 100%);
-      color: #ffffff;
-      border: none;
-      border-radius: 14px;
       font-family: inherit;
-      font-size: 0.98rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
+    }
+    .styled-input:focus {
+      outline: none;
+      border-color: #5f3dc4;
+      box-shadow: 0 0 0 3px rgba(95, 61, 196, 0.14);
+    }
+    .styled-submit-btn {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-      box-shadow: 0 6px 18px rgba(27, 63, 34, 0.22);
-      margin-top: 0.5rem;
-    }
-
-    .form-submit-btn:hover {
-      background: linear-gradient(135deg, #1d431a 0%, #112a0f 100%);
-      transform: translateY(-1.5px);
-      box-shadow: 0 8px 24px rgba(27, 63, 34, 0.3);
-    }
-
-    /* Sidebar Details */
-    .connect-sidebar-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 1.75rem;
-    }
-
-    .sidebar-detail-box {
-      background: #ffffff;
-      border: 1.5px solid var(--sage-border);
-      border-radius: 22px;
-      padding: 2rem;
-      box-shadow: 0 6px 20px rgba(20, 28, 21, 0.03);
-    }
-
-    .box-title {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #121a14;
-      margin-bottom: 1.25rem;
-    }
-
-    /* Email Copy Pill */
-    .inbox-card-highlight {
-      background: var(--sage-card);
-      border: 1.5px solid rgba(36, 82, 32, 0.22);
-      border-radius: 20px;
-      padding: 1.5rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .inbox-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--sage-primary);
-      margin-bottom: 4px;
-      display: block;
-    }
-
-    .inbox-address {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #121a14;
-      margin-bottom: 0.85rem;
-      display: block;
-    }
-
-    .btn-copy-address {
-      background: var(--sage-primary);
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.85rem 1.5rem;
+      border-radius: 12px;
+      background: #ba1f43;
       color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
       border: none;
-      padding: 7px 18px;
-      border-radius: 999px;
-      font-family: inherit;
-      font-size: 0.82rem;
-      font-weight: 700;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
       transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(186, 31, 67, 0.25);
     }
-
-    .btn-copy-address:hover {
-      background: var(--sage-dark);
-      transform: translateY(-1px);
-    }
-
-    /* Info Row */
-    .signal-row {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    .signal-row:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    .signal-icon {
-      font-size: 1.15rem;
-      line-height: 1.3;
-    }
-
-    .signal-title {
-      font-weight: 700;
-      font-size: 0.92rem;
-      color: #121a14;
-      margin-bottom: 2px;
-    }
-
-    .signal-desc {
-      font-size: 0.84rem;
-      color: #556b57;
-      line-height: 1.45;
-    }
-
-    .signal-desc a {
-      color: var(--sage-primary);
-      text-decoration: underline;
-      font-weight: 600;
-    }
-
-    @media (max-width: 900px) {
-      .connect-split-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .form-row-two {
-        grid-template-columns: 1fr;
-      }
+    .styled-submit-btn:hover {
+      background: #9e1736;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(186, 31, 67, 0.35);
     }
   </style>
 </head>
-<body id="top">
-
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="index.html" class="brand-monogram" aria-label="Aadya Agarwal, back to home">AA</a>
-      
-      <!-- Desktop Navigation Links -->
-      <nav class="desktop-nav" aria-label="Main navigation">
+<body class="min-h-full bg-paper text-ink font-body">
+  <div id="top">
+    <!-- Header / Navbar -->
+    <header class="site-header">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6">
+        <a href="index.html#top" class="font-display text-xl font-bold text-plum" aria-label="Aadya Agarwal, back to top">AA</a>
+        <nav aria-label="Main navigation" class="desktop-nav">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="documents.html" class="nav-link">Documents</a>
+          <a href="memberships.html" class="nav-link">Memberships</a>
+          <a href="awards.html" class="nav-link">Awards</a>
+          <a href="connect.html" class="nav-link active">Connect</a>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="portfolio.html" class="nav-link">Portfolio</a>
         <a href="documents.html" class="nav-link">Documents</a>
         <a href="memberships.html" class="nav-link">Memberships</a>
         <a href="awards.html" class="nav-link">Awards</a>
         <a href="connect.html" class="nav-link active">Connect</a>
         <a href="about.html" class="nav-link">About</a>
-      </nav>
-
-      <!-- Mobile Hamburger Button -->
-      <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div class="mobile-menu" aria-label="Mobile navigation">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="documents.html" class="nav-link">Documents</a>
-      <a href="memberships.html" class="nav-link">Memberships</a>
-      <a href="awards.html" class="nav-link">Awards</a>
-      <a href="connect.html" class="nav-link active">Connect</a>
-      <a href="about.html" class="nav-link">About</a>
-    </div>
-  </header>
-
-  <main class="connect-page-wrap">
-    <div class="container">
-
-      <!-- Hero Introduction -->
-      <div class="connect-hero-editorial">
-        <div class="connect-tag-pill">
-          <span>Inquiries &bull; Summer &amp; Fall 2026</span>
-        </div>
-        <h1 class="connect-hero-title">
-          Let's start a <span class="serif-italic">conversation.</span>
-        </h1>
-        <p class="connect-hero-p">
-          Whether you're developing climate solutions, planning a youth STEM keynote, curious about autonomous robotics algorithms, or looking to collaborate—my inbox is always open.
-        </p>
       </div>
+    </header>
 
-      <!-- Interactive Topic Selectors -->
-      <div class="topic-selection-section">
-        <span class="topic-section-label">Select what you'd like to talk about:</span>
-        <div class="topic-cards-grid">
-          
-          <button type="button" class="topic-choice-card" onclick="pickTopic('Research Collaboration', '🔬 Research Collab: ')">
-            <div class="topic-choice-header">
-              <span class="topic-choice-icon">🔬</span>
-              <span class="topic-choice-title">Research Collab</span>
-            </div>
-            <p class="topic-choice-desc">Joint investigations in biochar adsorption, solar pH ocean telemetry, and optical sensor bias.</p>
-          </button>
-
-          <button type="button" class="topic-choice-card" onclick="pickTopic('Speaking & Panels', '🎙️ Speaking / Keynote: ')">
-            <div class="topic-choice-header">
-              <span class="topic-choice-icon">🎙️</span>
-              <span class="topic-choice-title">Speaking &amp; Panels</span>
-            </div>
-            <p class="topic-choice-desc">Keynotes and discussions on youth-led science, environmental equity, and girls in engineering.</p>
-          </button>
-
-          <button type="button" class="topic-choice-card" onclick="pickTopic('Robotics & Mentorship', '🤖 Robotics Mentorship: ')">
-            <div class="topic-choice-header">
-              <span class="topic-choice-icon">🤖</span>
-              <span class="topic-choice-title">STEM Mentorship</span>
-            </div>
-            <p class="topic-choice-desc">Mentoring middle school teams in FLL/FTC robot mechanisms, Pedro Pathing, and Python logic.</p>
-          </button>
-
-          <button type="button" class="topic-choice-card" onclick="pickTopic('Quick Chat', '☕ Quick Hello / Coffee Chat: ')">
-            <div class="topic-choice-header">
-              <span class="topic-choice-icon">☕</span>
-              <span class="topic-choice-title">General Hello</span>
-            </div>
-            <p class="topic-choice-desc">Book recommendations, science questions, or simply exchanging notes on cool tech ideas.</p>
-          </button>
-
+    <main>
+      <!-- Normal Clean Page Hero Section -->
+      <section class="page-hero">
+        <div class="container">
+          <span class="page-hero-eyebrow">Get In Touch · Collaborate &amp; Mentor</span>
+          <h1 class="page-hero-title">Connect with Aadya</h1>
+          <p class="page-hero-lead">
+            Available for youth STEM mentorship, scientific research collaborations, conference keynotes, and equitable technology panel discussions.
+          </p>
         </div>
-      </div>
+      </section>
 
-      <!-- Main Form & Direct Info Split -->
-      <div class="connect-split-grid">
-        
-        <!-- Left: Form Panel -->
-        <div class="connect-form-panel">
-          <h2 class="form-heading">Send a Direct Note</h2>
-          <p class="form-subtext">Fill in the fields below and your default email app will generate the message ready to send.</p>
-
-          <form id="contactForm" onsubmit="handleDirectSend(event);">
-            <div class="form-row-two">
-              <div>
-                <label for="cName" class="form-field-label">Your Name</label>
-                <input type="text" id="cName" class="form-input-styled" placeholder="Name" required>
+      <!-- Centered Mail Form Section -->
+      <section class="py-8 sm:py-14">
+        <div class="container">
+          <div class="max-w-xl mx-auto">
+            
+            <div class="form-card-box">
+              <div class="border-b border-ink/10 pb-4 mb-6">
+                <span class="text-[11px] font-bold uppercase tracking-[0.16em] text-berry">Direct Message</span>
+                <h2 class="mt-1 font-display text-2xl font-bold text-plum">Send a Message</h2>
+                <p class="mt-1 text-xs sm:text-sm text-ink/65 leading-relaxed">
+                  Fill out the form below to reach out directly via email.
+                </p>
               </div>
-              <div>
-                <label for="cEmail" class="form-field-label">Your Email</label>
-                <input type="email" id="cEmail" class="form-input-styled" placeholder="you@domain.com" required>
-              </div>
-            </div>
 
-            <div class="form-field-group">
-              <label for="cSubject" class="form-field-label">Subject</label>
-              <input type="text" id="cSubject" class="form-input-styled" placeholder="What's on your mind?" required>
-            </div>
-
-            <div class="form-field-group">
-              <label for="cMsg" class="form-field-label">Message</label>
-              <textarea id="cMsg" class="form-input-styled" rows="5" placeholder="Share context about your project, conference, or inquiry..." required style="resize: vertical;"></textarea>
-            </div>
-
-            <button type="submit" class="form-submit-btn">
-              <span>Send Message</span>
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </button>
-          </form>
-        </div>
-
-        <!-- Right: Direct Information Stack -->
-        <aside class="connect-sidebar-stack">
-          
-          <div class="sidebar-detail-box">
-            <!-- 1-Click Copy Inbox Highlight -->
-            <div class="inbox-card-highlight">
-              <span class="inbox-label">Direct Inbox</span>
-              <span class="inbox-address">aadyanj@gmail.com</span>
-              <button type="button" class="btn-copy-address" id="copy-btn" onclick="copyAddress()">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                <span id="copy-text">Copy Email</span>
-              </button>
-            </div>
-
-            <h3 class="box-title">Direct Signals</h3>
-
-            <div class="signal-row">
-              <div class="signal-icon">📍</div>
-              <div>
-                <div class="signal-title">Academic Base</div>
-                <div class="signal-desc">The Lawrenceville School &bull; Lawrenceville, NJ</div>
-              </div>
-            </div>
-
-            <div class="signal-row">
-              <div class="signal-icon">⚡</div>
-              <div>
-                <div class="signal-title">Response Window</div>
-                <div class="signal-desc">Usually responds within 24 to 48 hours.</div>
-              </div>
-            </div>
-
-            <div class="signal-row">
-              <div class="signal-icon">💻</div>
-              <div>
-                <div class="signal-title">Code Repositories</div>
-                <div class="signal-desc">
-                  <a href="https://github.com/aanj1" target="_blank" rel="noopener noreferrer">github.com/aanj1</a>
+              <form id="contactForm" onsubmit="handleDirectSend(event)" class="space-y-4">
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label for="cName" class="block text-xs font-semibold uppercase tracking-wider text-ink/60 mb-1.5">Your Name *</label>
+                    <input type="text" id="cName" class="styled-input" placeholder="e.g. Jane Doe" required>
+                  </div>
+                  <div>
+                    <label for="cEmail" class="block text-xs font-semibold uppercase tracking-wider text-ink/60 mb-1.5">Your Email *</label>
+                    <input type="email" id="cEmail" class="styled-input" placeholder="e.g. jane@organization.org" required>
+                  </div>
                 </div>
-              </div>
+
+                <div>
+                  <label for="cSubject" class="block text-xs font-semibold uppercase tracking-wider text-ink/60 mb-1.5">Subject *</label>
+                  <input type="text" id="cSubject" class="styled-input" placeholder="Collaboration / Inquiry / Mentorship" required>
+                </div>
+
+                <div>
+                  <label for="cMsg" class="block text-xs font-semibold uppercase tracking-wider text-ink/60 mb-1.5">Message *</label>
+                  <textarea id="cMsg" class="styled-input" rows="5" placeholder="Write your message here..." required style="resize: vertical;"></textarea>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit" class="styled-submit-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    <span>Send Message via Email</span>
+                  </button>
+                  <p class="mt-3 text-center text-xs text-ink/50">
+                    Direct email: <a href="mailto:aadyanj@gmail.com" class="font-semibold text-plum hover:text-berry hover:underline">aadyanj@gmail.com</a>
+                  </p>
+                </div>
+              </form>
             </div>
+
           </div>
+        </div>
+      </section>
+    </main>
 
-          <!-- Speaking Box -->
-          <div class="sidebar-detail-box" style="background: var(--sage-card);">
-            <h3 class="box-title" style="margin-bottom: 0.6rem;">Keynote &amp; Panel Speaking</h3>
-            <p style="font-size: 0.88rem; line-height: 1.6; color: #4a594d; margin-bottom: 1.25rem;">
-              Aadya regularly presents on youth-led ecological technology, mitigating algorithmic bias in medical sensors, and advancing girls in competitive STEM.
-            </p>
-            <a href="mailto:aadyanj@gmail.com?subject=Speaking%20Engagement%20Request" style="font-size: 0.86rem; font-weight: 700; color: var(--sage-primary); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-              <span>Invite to Speak</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
-
-        </aside>
-
+    <!-- Footer -->
+    <footer class="border-t border-ink/10 bg-paper py-8 text-center text-xs text-ink/50">
+      <div class="mx-auto max-w-6xl px-5 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© 2026 Aadya Agarwal · Built with intentional craft &amp; equitable vision.</p>
+        <a href="#top" class="text-plum hover:text-berry font-medium transition">Back to top ↑</a>
       </div>
+    </footer>
+  </div>
 
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; 2026 Aadya Agarwal &bull; The Lawrenceville School &bull; Eco-engineer &amp; Equitable Healthpreneur.</p>
-      <a href="#top" class="footer-back-to-top">
-        <span>Back to top</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-      </a>
-    </div>
-  </footer>
-
-  <script src="modern-script.js?v=25"></script>
+  <script src="modern-script.js?v=250"></script>
+  <script src="cms-loader.js"></script>
   <script>
-    function pickTopic(topicName, prefix) {
-      const subjectInput = document.getElementById('cSubject');
-      const msgArea = document.getElementById('cMsg');
-      if (subjectInput) {
-        subjectInput.value = prefix;
-        subjectInput.focus();
-      }
-      if (msgArea) {
-        msgArea.placeholder = "Hi Aadya, I'm reaching out regarding " + topicName + "...";
-      }
-      document.querySelectorAll('.topic-choice-card').forEach(card => {
-        card.classList.toggle('active', card.textContent.includes(topicName.split(' ')[0]));
-      });
-    }
-
-    function copyAddress() {
-      const email = 'aadyanj@gmail.com';
-      navigator.clipboard.writeText(email).then(() => {
-        const copyText = document.getElementById('copy-text');
-        if (copyText) {
-          copyText.textContent = 'Copied! ✨';
-          setTimeout(() => {
-            copyText.textContent = 'Copy Email';
-          }, 2000);
-        }
-      });
-    }
-
     function handleDirectSend(e) {
       e.preventDefault();
       const name = document.getElementById('cName').value;
       const email = document.getElementById('cEmail').value;
-      const subject = document.getElementById('cSubject').value || 'Portfolio Collaboration';
+      const subject = document.getElementById('cSubject').value || 'Portfolio Collaboration Inquiry';
       const msg = document.getElementById('cMsg').value;
 
       const mailtoUrl = 'mailto:aadyanj@gmail.com' +

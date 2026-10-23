@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 /* ==========================================================================
    AADYA AGARWAL — OFFICIAL PORTFOLIO DESIGN SYSTEM
    Award-Winning Admissions Showcase & Innovation Architecture
@@ -11,94 +12,94 @@
 :root {
   /* ==========================================================================
      USER-PROVIDED OFFICIAL COLOR PALETTE:
-     - darkolivegreen: #306028
-     - whitesmoke:     #F8F8F8
-     - linen:          #EFE8DE
+     - darkolivegreen: #5f3dc4
+     - whitesmoke:     #fdf9f5
+     - linen:          #f3f0ff
      - darkgray:       #B4B0BC
-     - darkslategray:  #3E452C
-     - gray:           #92886F
-     - silver:         #B4C8C4
-     - khaki:          #C0C852
+     - darkslategray:  #0f0f12
+     - gray:           #ba1f43
+     - silver:         #5f3dc4
+     - khaki:          #ba1f43
      ========================================================================== */
-  --c-dark-olive: #306028;
-  --c-whitesmoke: #F8F8F8;
-  --c-linen: #EFE8DE;
-  --c-dark-gray: #B4B0BC;
-  --c-dark-slate: #3E452C;
-  --c-gray: #92886F;
-  --c-silver: #B4C8C4;
-  --c-khaki: #C0C852;
+  --c-dark-olive: #5f3dc4;
+  --c-whitesmoke: #fdf9f5;
+  --c-linen: #f3f0ff;
+  --c-dark-gray: #0f0f12bf;
+  --c-dark-slate: #0f0f12;
+  --c-gray: #ba1f43;
+  --c-silver: #5f3dc4;
+  --c-khaki: #ba1f43;
 
   /* Brand Semantic Mappings */
-  --forest-dark: #3E452C;
+  --forest-dark: #0f0f12;
   /* darkslategray */
-  --forest-primary: #306028;
+  --forest-primary: #5f3dc4;
   /* darkolivegreen */
-  --forest-light: #417536;
-  --forest-subtle: #254A1E;
-  --sage-accent: #B4C8C4;
+  --forest-light: #5f3dc4;
+  --forest-subtle: #4c2fa3;
+  --sage-accent: #ba1f43;
   /* silver */
-  --sage-soft: #B4C8C4;
-  --sage-tint: #EFE8DE;
+  --sage-soft: #f3f0ff;
+  --sage-tint: #f3f0ff;
   /* linen */
-  --sage-mist: #F4F6F4;
-  --accent-khaki: #C0C852;
+  --sage-mist: #fdf9f5;
+  --accent-khaki: #ba1f43;
   /* khaki lime highlight */
 
   /* Surfaces & Backgrounds */
-  --bg-page: #F8F8F8;
+  --bg-page: #fdf9f5;
   /* whitesmoke */
   --bg-card: #FFFFFF;
-  --bg-subtle: #EFE8DE;
+  --bg-subtle: #f8f4ef;
   /* linen */
   --border-light: rgba(62, 69, 44, 0.12);
-  --border-medium: #B4C8C4;
+  --border-medium: #5f3dc4;
   /* silver */
-  --border-strong: #92886F;
+  --border-strong: #ba1f43;
   /* gray */
 
   /* Text */
   --text-dark: #222919;
   --text-main: #333C27;
   --text-muted: #676D5B;
-  --text-light: #92886F;
+  --text-light: #ba1f43;
   /* gray */
   --text-inverse: #FFFFFF;
 
   /* Pillar Accents Harmonized with Palette */
   /* 1. Robotics & Tech */
-  --c-robotics: #306028;
+  --c-robotics: #5f3dc4;
   --c-robotics-dark: #22471D;
-  --c-robotics-bg: #EFE8DE;
-  --c-robotics-border: #B4C8C4;
+  --c-robotics-bg: #f3f0ff;
+  --c-robotics-border: #5f3dc4;
   --c-robotics-glow: rgba(48, 96, 40, 0.25);
 
   /* 2. Environmental Biochar */
-  --c-biochar: #3E452C;
+  --c-biochar: #0f0f12;
   --c-biochar-dark: #2D331F;
   --c-biochar-bg: #F2EFE8;
-  --c-biochar-border: #B4C8C4;
+  --c-biochar-border: #5f3dc4;
   --c-biochar-glow: rgba(62, 69, 44, 0.25);
 
   /* 3. Healthcare AI & MoniVitals */
   --c-health: #2D6B5A;
   --c-health-dark: #1F4D41;
   --c-health-bg: #EAEFEB;
-  --c-health-border: #B4C8C4;
+  --c-health-border: #5f3dc4;
   --c-health-glow: rgba(45, 107, 90, 0.25);
 
   /* 4. Climate IoT Buoy */
-  --c-iot: #92886F;
+  --c-iot: #ba1f43;
   --c-iot-dark: #706752;
   --c-iot-bg: #F7F5F0;
-  --c-iot-border: #B4C8C4;
+  --c-iot-border: #5f3dc4;
   --c-iot-glow: rgba(146, 136, 111, 0.25);
 
   /* 5. Scholarship & John Locke */
-  --c-writing: #C0C852;
+  --c-writing: #ba1f43;
   --c-writing-dark: #586111;
   --c-writing-bg: #FBFCEE;
-  --c-writing-border: #C0C852;
+  --c-writing-border: #ba1f43;
   --c-writing-glow: rgba(192, 200, 82, 0.25);
 
   /* 6. Performing & Fine Arts */
@@ -109,10 +110,10 @@
   --c-arts-glow: rgba(180, 176, 188, 0.25);
 
   /* 7. Competitive Athletics */
-  --c-athletics: #306028;
+  --c-athletics: #5f3dc4;
   --c-athletics-dark: #204419;
-  --c-athletics-bg: #EFE8DE;
-  --c-athletics-border: #C0C852;
+  --c-athletics-bg: #f3f0ff;
+  --c-athletics-border: #ba1f43;
   --c-athletics-glow: rgba(48, 96, 40, 0.25);
 
   /* Shadows & Elevation */
@@ -716,7 +717,7 @@ button {
 .showcase-main-desc {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #B4C8C4;
+  color: #5f3dc4;
   max-width: 820px;
   margin: 0 auto;
 }
@@ -874,7 +875,7 @@ button {
 
 .showcase-caption-sub {
   font-size: 0.84rem;
-  color: #B4C8C4;
+  color: #5f3dc4;
   margin: 0;
   line-height: 1.4;
 }
@@ -931,7 +932,7 @@ button {
 
 .showcase-arrow-btn:hover {
   background: rgba(255, 255, 255, 0.95);
-  color: #0A2218;
+  color: #0f0f12;
   transform: translateY(-50%) scale(1.08);
 }
 
@@ -1024,7 +1025,7 @@ button {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: #B4C8C4;
+  color: #5f3dc4;
   line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
@@ -1068,7 +1069,7 @@ button {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: #B4C8C4;
+  color: #5f3dc4;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -1862,7 +1863,7 @@ button {
   width: 100%;
   height: 250px;
   overflow: hidden;
-  background: #0A2218;
+  background: #0f0f12;
 }
 
 .bento-span-2 .bento-media-cover {
@@ -2191,7 +2192,7 @@ button {
 .evidence-thumb-wrapper {
   position: relative;
   height: 210px;
-  background: #0A2218;
+  background: #0f0f12;
   overflow: hidden;
   cursor: pointer;
 }
@@ -2567,7 +2568,7 @@ button {
   font-family: var(--font-serif, Georgia, serif);
   font-size: 1.08rem;
   font-weight: 700;
-  color: var(--c-dark-slate, #1A3026);
+  color: var(--c-dark-slate, #0f0f12);
   margin: 0 0 6px;
   line-height: 1.35;
 }
@@ -2719,7 +2720,7 @@ button {
 }
 
 .role-tag.tag-linen {
-  background: #EFE8DE;
+  background: #f3f0ff;
   color: #635C48;
   border: 1px solid rgba(146, 136, 111, 0.35);
 }
@@ -3199,12 +3200,12 @@ button {
 /* ==========================================================================
    UNIFIED EDITORIAL DESIGN SYSTEM FOR INNER PAGES
    Strictly adheres to the Home Page Palette:
-   - Whitesmoke: #F8F8F8 (Page background)
-   - Linen:      #EFE8DE (Subtle surfaces & warm accents)
-   - Dark Slate: #3E452C (Headings & deep text)
-   - Dark Olive: #306028 (Primary brand green)
-   - Silver:     #B4C8C4 (Clean architectural borders)
-   - Khaki:      #C0C852 (Vibrant lime-khaki highlight tags)
+   - Whitesmoke: #fdf9f5 (Page background)
+   - Linen:      #f3f0ff (Subtle surfaces & warm accents)
+   - Dark Slate: #0f0f12 (Headings & deep text)
+   - Dark Olive: #5f3dc4 (Primary brand green)
+   - Silver:     #5f3dc4 (Clean architectural borders)
+   - Khaki:      #ba1f43 (Vibrant lime-khaki highlight tags)
    - Card:       #FFFFFF (Crisp white editorial cards)
    ========================================================================== */
 
@@ -3212,7 +3213,7 @@ button {
    1. Clean Editorial Hero for Inner Pages
    -------------------------------------------------------------------------- */
 .inner-page-hero {
-  background: linear-gradient(180deg, #F8F8F8 0%, #EFE8DE 100%);
+  background: linear-gradient(180deg, #fdf9f5 0%, #f3f0ff 100%);
   border-bottom: 1px solid rgba(62, 69, 44, 0.12);
   padding: 130px 0 60px;
   position: relative;
@@ -4488,7 +4489,7 @@ button {
 .hero-btn-projects:hover,
 #heroProjectsContainer:hover .hero-btn-projects,
 #heroProjectsContainer.is-open .hero-btn-projects {
-  border-color: #306028;
+  border-color: #5f3dc4;
 }
 
 /* Invisible hover bridge to prevent any gap flicker */
@@ -4810,8 +4811,8 @@ button {
   border-radius: 50%;
 }
 .hero-col-dot.dot-robotics { background: #0284c7; }
-.hero-col-dot.dot-water { background: #306028; }
-.hero-col-dot.dot-arts { background: #c0c852; }
+.hero-col-dot.dot-water { background: #5f3dc4; }
+.hero-col-dot.dot-arts { background: #ba1f43; }
 
 .hero-achieve-list {
   list-style: none;
@@ -5373,7 +5374,7 @@ img[src*="piano_recital"] {
   aspect-ratio: 3 / 4;
   border-radius: 24px;
   overflow: hidden;
-  background: #EFE8DE;
+  background: #f3f0ff;
   box-shadow: 0 16px 40px rgba(19, 53, 38, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(62, 69, 44, 0.14);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -5423,7 +5424,7 @@ img[src*="piano_recital"] {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #C0C852;
+  background: #ba1f43;
   box-shadow: 0 0 0 2px rgba(192, 200, 82, 0.4);
 }
 
@@ -5442,14 +5443,14 @@ img[src*="piano_recital"] {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--c-dark-olive, #306028);
+  color: var(--c-dark-olive, #5f3dc4);
   margin-bottom: 14px;
 }
 
 .minimal-eyebrow .eyebrow-line {
   width: 24px;
   height: 2px;
-  background: var(--c-dark-olive, #306028);
+  background: var(--c-dark-olive, #5f3dc4);
   border-radius: 2px;
 }
 
@@ -5457,7 +5458,7 @@ img[src*="piano_recital"] {
   font-family: var(--font-serif, Georgia, serif);
   font-size: clamp(2.4rem, 4.2vw, 3.8rem);
   font-weight: 700;
-  color: var(--c-dark-slate, #1A3026);
+  color: var(--c-dark-slate, #0f0f12);
   line-height: 1.15;
   margin: 0 0 18px 0;
   letter-spacing: -0.02em;
@@ -5466,13 +5467,13 @@ img[src*="piano_recital"] {
 .minimal-greeting-heading .italic-serif {
   font-style: italic;
   font-weight: 400;
-  color: var(--c-dark-olive, #306028);
+  color: var(--c-dark-olive, #5f3dc4);
 }
 
 .minimal-lead-text {
   font-size: 1.14rem;
   line-height: 1.68;
-  color: var(--c-dark-slate, #1A3026);
+  color: var(--c-dark-slate, #0f0f12);
   margin: 0 0 14px 0;
 }
 
@@ -5498,7 +5499,7 @@ img[src*="piano_recital"] {
   font-family: var(--font-heading);
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--c-dark-slate, #1A3026);
+  color: var(--c-dark-slate, #0f0f12);
   background: #FFFFFF;
   border: 1px solid rgba(62, 69, 44, 0.16);
   padding: 7px 16px;
@@ -5533,7 +5534,7 @@ img[src*="piano_recital"] {
   align-items: center;
   gap: 10px;
   padding: 13px 26px;
-  background: var(--c-dark-olive, #306028);
+  background: var(--c-dark-olive, #5f3dc4);
   color: #FFFFFF !important;
   font-family: var(--font-sans, system-ui, sans-serif);
   font-size: 0.92rem;
@@ -5556,7 +5557,7 @@ img[src*="piano_recital"] {
   gap: 8px;
   padding: 13px 24px;
   background: #FFFFFF;
-  color: var(--c-dark-slate, #1A3026) !important;
+  color: var(--c-dark-slate, #0f0f12) !important;
   border: 1px solid rgba(62, 69, 44, 0.2);
   font-family: var(--font-sans, system-ui, sans-serif);
   font-size: 0.92rem;
@@ -5568,14 +5569,14 @@ img[src*="piano_recital"] {
 
 .btn-minimal-secondary:hover {
   background: #F4EFE6;
-  border-color: var(--c-dark-olive, #306028);
+  border-color: var(--c-dark-olive, #5f3dc4);
   transform: translateY(-2px);
 }
 
 .minimal-link-touch {
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--c-dark-olive, #306028) !important;
+  color: var(--c-dark-olive, #5f3dc4) !important;
   text-decoration: underline;
   text-underline-offset: 4px;
   margin-left: 6px;
@@ -6024,7 +6025,7 @@ section {
   height: 72vh;
   min-height: 540px;
   max-height: 680px;
-  background: #0A2218;
+  background: #0f0f12;
   overflow: hidden;
   border-bottom: 1px solid rgba(62, 69, 44, 0.15);
 }
@@ -6170,7 +6171,7 @@ section {
 
 .hero-slider-nav:hover {
   background: #FFFFFF;
-  color: #0A2218;
+  color: #0f0f12;
   border-color: #FFFFFF;
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);

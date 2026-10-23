@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="antialiased">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aadya Agarwal | Eco-engineer &amp; Equitable Healthpreneur</title>
-  <meta name="description" content="Aadya Agarwal — The Lawrenceville School '29. MIT Solve National Winner, FIRST Robotics lead coder, biochar water researcher, and MoniVitals founder.">
+  <title>Aadya Agarwal | Portfolio</title>
+  <meta name="description" content="Aadya Agarwal — The Lawrenceville School '29. Eco-engineer &amp; Equitable Healthpreneur. MIT Solve National Winner, FIRST Robotics lead coder, biochar water researcher, and MoniVitals founder.">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="modern-style.css?v=35">
-  <script src="auth.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modern-style.css?v=340">
 </head>
-<body id="top">
-
+<body class="min-h-full">
+  <div id="top">
+    <main>
   <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="index.html" class="brand-monogram" aria-label="Aadya Agarwal, back to home">AA</a>
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6">
+      <a href="#top" class="font-display text-xl font-bold text-plum" aria-label="Aadya Agarwal, back to top">AA</a>
       
-      <!-- Desktop Navigation Links: Exactly matching reference sections, NO certificates -->
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="portfolio.html" class="nav-link">Portfolio</a>
         <a href="documents.html" class="nav-link">Documents</a>
@@ -33,7 +35,7 @@
 
     <!-- Mobile Dropdown Menu -->
     <div class="mobile-menu" aria-label="Mobile navigation">
-      <a href="index.html" class="nav-link active">Home</a>
+      <a href="#top" class="nav-link">Home</a>
       <a href="portfolio.html" class="nav-link">Portfolio</a>
       <a href="documents.html" class="nav-link">Documents</a>
       <a href="memberships.html" class="nav-link">Memberships</a>
@@ -41,836 +43,865 @@
       <a href="connect.html" class="nav-link">Connect</a>
       <a href="about.html" class="nav-link">About</a>
     </div>
-  </header>
-
-  <main>
-    <!-- 1. HERO PANORAMIC SLIDER RIBBON -->
-    <section class="hero-slider-section" aria-label="Aadya Agarwal highlights carousel">
-      <div class="hero-slider-track">
-        <div class="hero-slider-item">
-          <img src="assets/ref_images/projects_msef-water-award.jpg" alt="Aadya Agarwal with her research team and MSEF science fair award" class="hero-slider-img" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/ref_images/projects_njwea-community_clean.jpg" alt="Aadya presenting environmental water findings at NJWEA community event" class="hero-slider-img" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/ref_images/projects_lab-setup.jpg" alt="Laboratory spectrophotometry and multi-stage water filtration bench test setup" class="hero-slider-img" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/ref_images/projects_ieee-engineering-conversation.jpg" alt="Aadya presenting applied engineering and IoT sensor telemetry at IEEE conference" class="hero-slider-img" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/ref_images/projects_mit-day-ai-stage.jpg" alt="Aadya Agarwal presenting water quality node on stage at the MIT Media Lab" class="hero-slider-img" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/ref_images/projects_mit-solve-recognition_clean.jpg" alt="Aadya Agarwal receiving national recognition for AI for a Better World with judge" class="hero-slider-img" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/ref_images/projects_njwea-presentation.jpg" alt="Aadya delivering technical speech on biochar water treatment at NJWEA" class="hero-slider-img" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg" alt="Aadya Agarwal receiving the John H. Imbrie Humanities Award" class="hero-slider-img" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/writing_arts/Aadya Flute Pic1.png" alt="Aadya Agarwal solo flute recital performance" class="hero-slider-img pos-mid-top" loading="lazy">
-        </div>
-        <div class="hero-slider-item">
-          <img src="assets/robotics/pic 1 - with robot.jpg" alt="Aadya with FIRST Tech Challenge BioBuzz autonomous robot" class="hero-slider-img pos-top" loading="lazy">
-        </div>
+  <section aria-label="Portfolio highlights" class="hero-slider-container relative overflow-hidden bg-[#0f0f12]">
+  <div class="hero-slider-track flex h-full transition-transform duration-500 ease-in-out" style="transform: translateX(0); gap: 0; margin: 0; padding: 0;">
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0">
+      <img src="projects/njwea-presentation.jpg" alt="Aadya presenting environmental water findings" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0">
+      <img src="projects/msef-water-award.jpg" alt="Aadya with MSEF science fair award" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0">
+      <img src="projects/monivitals-market.webp" alt="Aadya demonstrating MoniVitals health monitor at community market" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0">
+      <img src="projects/lab-setup.jpg" alt="Water remediation testing lab bench" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0">
+      <img src="projects/ieee-engineering-conversation.jpg" alt="Applied engineering presentation at IEEE" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0">
+      <img src="projects/mit-day-ai-stage.jpg" alt="Aadya speaking on stage at MIT Media Lab" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0">
+      <img src="projects/mit-solve-recognition.jpg" alt="MIT Solve recognition ceremony" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <!-- Seamless infinite buffer clones: Never any black gap on desktop, tablet, or mobile -->
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0" aria-hidden="true">
+      <img src="projects/njwea-presentation.jpg" alt="" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0" aria-hidden="true">
+      <img src="projects/msef-water-award.jpg" alt="" class="h-full w-full object-cover object-center select-none">
+    </div>
+    <div class="hero-slide-item relative h-full w-full shrink-0 sm:w-1/2 lg:w-1/3 overflow-hidden m-0 p-0" aria-hidden="true">
+      <img src="projects/monivitals-market.webp" alt="" class="h-full w-full object-cover object-center select-none">
+    </div>
+  </div>
+  <button type="button" aria-label="Previous highlight" class="hero-slider-prev absolute left-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/90 text-lg text-ink shadow-md hover:bg-white focus-visible:outline-2 focus-visible:outline-berry sm:left-5 cursor-pointer select-none">‹</button>
+  <button type="button" aria-label="Next highlight" class="hero-slider-next absolute right-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/90 text-lg text-ink shadow-md hover:bg-white focus-visible:outline-2 focus-visible:outline-berry sm:right-5 cursor-pointer select-none">›</button>
+</section></div><section class="relative z-10 bg-paper pt-0 pb-8 sm:pb-10">
+  <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 lg:flex-row lg:items-start lg:gap-8 lg:px-6">
+    <!-- Aadya profile image matching user green box: 250px x 260px with elegant border & shadow -->
+    <div class="relative shrink-0 overflow-hidden rounded-2xl -mt-10 sm:-mt-12 lg:-mt-14" style="width: 250px; height: 260px; border: 4px solid #ffffff; box-shadow: 0 14px 36px rgba(15, 15, 18, 0.12); background-color: #ffffff;">
+      <img alt="Aadya Agarwal" data-cms="hero_portrait" src="projects/aadya-headshot.jpg" class="h-full w-full object-cover object-[center_12%] select-none">
+    </div>
+    <div class="pt-2 pb-1 lg:pt-3 flex-1">
+      <div class="flex flex-wrap items-center gap-3 lg:gap-4">
+        <h1 class="flex shrink-0 items-center gap-2.5 font-display text-[25px] font-semibold tracking-tight text-plum lg:text-4xl"><span data-cms="hero_name">Aadya Agarwal</span><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="Aadya Agarwal on GitHub" class="text-ink/40 transition hover:text-ink/70"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5 lg:h-6 lg:w-6"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path></svg></a></h1>
+        <p class="max-w-44 border-l border-berry/40 pl-3 text-[10px] font-semibold uppercase leading-4 tracking-[0.08em] text-berry lg:max-w-64 lg:pl-4 lg:text-xs" data-cms="hero_badge">Eco-engineer &amp; Equitable Healthpreneur.</p>
       </div>
+      <p class="mt-1 text-sm text-ink/60" data-cms="hero_tagline">The Lawrenceville School · Class of 2029 · Lawrenceville, New Jersey</p>
+      <p class="mt-3 max-w-2xl text-sm leading-6 text-ink/75" data-cms="hero_bio">My vision is a world where clean water and basic health care reach the people it usually forgets — and I want to spend my life building the tools that get them there. I work at the meeting point of responsible AI, hands-on engineering and community science, because the hardest problems in equity are never just technical. Whether it is a biochar filter, a one-minute vitals check or a poem, I am chasing the same question: how do we make care more honest, more equitable and more within reach?</p>
+    </div>
+  </div>
+</section><section id="projects" class="border-t border-ink/10 bg-white/55 py-14 sm:py-16">
+<div class="mx-auto max-w-6xl px-5 sm:px-6">
+  <h2 class="font-display text-3xl font-semibold tracking-tight text-plum sm:text-4xl">Portfolio</h2>
+  <div class="-mx-5 mt-6 flex gap-2 overflow-x-auto px-5 pb-3 sm:mx-0 sm:flex-wrap sm:px-0 portfolio-filter-tabs" aria-label="Project categories">
+  <button type="button" aria-pressed="true" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-plum bg-plum text-white" data-filter="all">All</button>
+  <button type="button" aria-pressed="false" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="robotics">Robotics &amp; Coding</button>
+  <button type="button" aria-pressed="false" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="environmental">Environmental Sustainability &amp; AI</button>
+  <button type="button" aria-pressed="false" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="biomedical">Biomedical &amp; AI</button>
+  <button type="button" aria-pressed="false" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="monivitals">MoniVitals</button>
+  <button type="button" aria-pressed="false" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="community">School &amp; Community</button>
+  <button type="button" aria-pressed="false" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="writing">Writing &amp; Arts</button>
+</div>
 
-      <button type="button" class="slider-nav-btn prev" aria-label="Previous highlight">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-      </button>
-      <button type="button" class="slider-nav-btn next" aria-label="Next highlight">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </button>
-    </section>
+  <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 portfolio-cards-grid">
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="robotics" data-is-robotics="true">
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="FIRST Robotics — FLL &amp; FTC" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/robotics/pic 2 - Team award.JPG"/>
+    <span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">FTC</span>
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-berry text-white">FLL</span>
+    </span>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Lead Coder &amp; Programming Team · 2020–Present</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">FIRST Robotics — FLL &amp; FTC</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">From lead coder of an FLL team invited to the WPI US Open to the Lawrenceville FIRST Tech Challenge programming team — building autonomous control and computer-vision pipelines, and teaching robotics to middle schoolers.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="environmental" data-project='{&quot;title&quot;: &quot;MIT Solve — AI for a Better World&quot;, &quot;category&quot;: &quot;MIT Day of AI · July 2026&quot;, &quot;img&quot;: &quot;projects/mit-day-ai-stage.jpg&quot;, &quot;desc&quot;: &quot;One of five national MIT Solve AI for a Better World winners, I presented an AI-powered water-quality node at the MIT Media Lab.&quot;, &quot;highlights&quot;: [&quot;One of 5 national MIT Solve AI for a Better World winners&quot;, &quot;Presented the water-remediation IoT node on stage at the MIT Media Lab&quot;, &quot;Pairs water-quality sensing with edge machine learning and actionable treatment response&quot;, &quot;Proposed training on river, lake and global water-measurement data with responsible-AI safeguards&quot;, &quot;Human review, fixed safety limits and decision logs govern operation&quot;, &quot;Named Leopold Scholar in Ecology and Ethics by The Lawrenceville School&quot;], &quot;tags&quot;: [&quot;#MITSolve&quot;, &quot;#AIForABetterWorld&quot;, &quot;#MITMediaLab&quot;, &quot;#ClimateAction&quot;, &quot;#ResponsibleAI&quot;], &quot;category_slug&quot;: &quot;environmental&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="MIT Solve — AI for a Better World" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="projects/mit-day-ai-stage.jpg"/>
+    <span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">MIT Solve</span>
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-berry text-white">MIT Media Lab</span>
+    </span>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">MIT Day of AI · July 2026</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">MIT Solve — AI for a Better World</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">One of five national MIT Solve AI for a Better World winners, I presented an AI-powered water-quality node at the MIT Media Lab.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="environmental" data-project='{&quot;title&quot;: &quot;IEEE/ISEC — Comparative Biochar Water Analysis&quot;, &quot;category&quot;: &quot;Peer-Reviewed Presentation · 2026&quot;, &quot;img&quot;: &quot;projects/ieee-engineering-conversation.jpg&quot;, &quot;desc&quot;: &quot;Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University.&quot;, &quot;highlights&quot;: [&quot;Approved research abstract presented at IEEE/ISEC K–12 conference at Princeton University&quot;, &quot;Comparative analysis of softwood vs agricultural-waste biochars for remediation&quot;, &quot;Bench trials tracking heavy metal and nutrient removal, dissolved oxygen, and pH response&quot;, &quot;Technical engagement and presentation with engineering and academic faculty at Princeton&quot;], &quot;tags&quot;: [&quot;#IEEE&quot;, &quot;#ISEC2026&quot;, &quot;#PrincetonUniversity&quot;, &quot;#WaterRemediation&quot;, &quot;#BiocharResearch&quot;], &quot;category_slug&quot;: &quot;environmental&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="IEEE/ISEC — Comparative Biochar Water Analysis" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="projects/ieee-engineering-conversation.jpg"/>
+    <span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">IEEE/ISEC</span>
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-berry text-white">Princeton</span>
+    </span>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Peer-Reviewed Presentation · 2026</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">IEEE/ISEC — Comparative Biochar Water Analysis</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at Princeton University.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="environmental" data-project='{&quot;title&quot;: &quot;Biochar Water Treatment&quot;, &quot;category&quot;: &quot;Experimental Research · 2026&quot;, &quot;img&quot;: &quot;projects/water-treatment-setup.jpg&quot;, &quot;desc&quot;: &quot;Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.&quot;, &quot;highlights&quot;: [&quot;Compared softwood and agricultural-waste biochar samples in controlled water-treatment trials&quot;, &quot;Measured pH and water-quality changes across treatment trials over time&quot;, &quot;Explored heavy-metal and nutrient removal with a floating treatment device concept&quot;, &quot;Second place in Earth &amp; Environmental Science at Mercer Science &amp; Engineering Fair (MSEF)&quot;, &quot;Stockholm Junior Water Prize Regional Award &amp; Acceptance Speech at NJWEA&quot;, &quot;NOAA Taking the Pulse of the Planet award&quot;], &quot;tags&quot;: [&quot;#Biochar&quot;, &quot;#WaterRemediation&quot;, &quot;#IEEE&quot;, &quot;#NJWEA&quot;, &quot;#CleanWater&quot;, &quot;#MSEF&quot;], &quot;category_slug&quot;: &quot;environmental&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Biochar Water Treatment" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="projects/water-treatment-setup.jpg"/>
+    <span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">IEEE/ISEC</span>
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-berry text-white">NJWEA</span>
+    </span>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Experimental research · 2026</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Biochar Water Treatment</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="environmental" data-project='{&quot;title&quot;: &quot;Autonomous Ocean pH Buoy&quot;, &quot;category&quot;: &quot;Climate Technology · 2025 Concept&quot;, &quot;img&quot;: &quot;projects/ocean-project-presentation.jpg&quot;, &quot;desc&quot;: &quot;A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.&quot;, &quot;highlights&quot;: [&quot;pH sensor feeds real-time water quality readings to an Arduino microcontroller&quot;, &quot;A servo rotates a 3D-printed dispensing disk below a refillable mineral chamber&quot;, &quot;Low-pH readings trigger a measured calcium carbonate release in the closed-loop design&quot;, &quot;3M Young Scientist Challenge concept brief &amp; system architecture submission&quot;, &quot;Explored predictive dosing with algorithmic feedback and solar-powered continuous runtime&quot;], &quot;tags&quot;: [&quot;#OceanTech&quot;, &quot;#ClimateAction&quot;, &quot;#Arduino&quot;, &quot;#3MYoungScientist&quot;, &quot;#pHBuoy&quot;], &quot;category_slug&quot;: &quot;environmental&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Autonomous Ocean pH Buoy" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="projects/ocean-project-presentation.jpg"/>
+    <span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">Climate Tech</span>
+      <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-berry text-white">3M Challenge</span>
+    </span>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Climate technology · 2025 concept</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Autonomous Ocean pH Buoy</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="biomedical" data-project='{&quot;title&quot;: &quot;Pulse Oximetry Optical Bias Mitigation Research&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;, &quot;assets/science_fairs/ieee_pic4.jpeg&quot;, &quot;assets/monivitals/20260829_094941_1_.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;], &quot;desc&quot;: &quot;Investigating wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring.&quot;, &quot;highlights&quot;: [&quot;Examined multi-wavelength LED emitters (red, infrared, green) across diverse skin tones&quot;, &quot;Evaluated calibration curve adjustments to prevent hypoxemia misreading in darker skin&quot;, &quot;Presented engineering insights at IEEE Engineering in Conversation forum&quot;, &quot;Direct foundation for the hardware sensor module utilized in MoniVitals&quot;], &quot;tags&quot;: [&quot;#Biometrics&quot;, &quot;#EquitableHealth&quot;, &quot;#HealthTech&quot;, &quot;#SignalProcessing&quot;, &quot;#IEEE&quot;], &quot;category_slug&quot;: &quot;biomedical&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Pulse Oximetry Optical Bias Mitigation Research" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/ref_images/projects_ieee-engineering-conversation.jpg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Biomedical & AI</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Pulse Oximetry Optical Bias Mitigation Research</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Investigating wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="biomedical" data-project='{&quot;title&quot;: &quot;Stanford AIMI Summer Health AI Fellow Research&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg&quot;, &quot;images&quot;: [&quot;assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg&quot;, &quot;assets/certificates/InspiritAI_AI_Ambassador_Certificate.jpg&quot;, &quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;], &quot;desc&quot;: &quot;Explored multimodal clinical models combining waveform telemetry with patient electronic health records for early sepsis and arrhythmia anomaly detection.&quot;, &quot;highlights&quot;: [&quot;Stanford AIMI youth fellowship focused on ethical machine learning in healthcare&quot;, &quot;Analyzed synthetic physiological timeseries datasets for model generalizability&quot;, &quot;Investigated data drift and algorithmic fairness across demographic cohorts&quot;], &quot;tags&quot;: [&quot;#StanfordAIMI&quot;, &quot;#MachineLearning&quot;, &quot;#HealthcareAI&quot;, &quot;#ClinicalInference&quot;], &quot;category_slug&quot;: &quot;biomedical&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Stanford AIMI Summer Health AI Fellow Research" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Biomedical & AI</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Stanford AIMI Summer Health AI Fellow Research</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Explored multimodal clinical models combining waveform telemetry with patient electronic health records for early sepsis and arrhythmia anomaly detection.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="biomedical" data-project='{&quot;title&quot;: &quot;BioResearch Academy Wet-Bench Molecular Biology&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/certificates/BioResearch Academy Certificate.jpeg&quot;, &quot;images&quot;: [&quot;assets/certificates/BioResearch Academy Certificate.jpeg&quot;, &quot;assets/certificates/Aqua Science Certificate.jpg&quot;, &quot;assets/science_fairs/pic3.jpeg&quot;], &quot;desc&quot;: &quot;Completed hands-on laboratory certifications in recombinant DNA cloning, PCR amplification, agarose gel electrophoresis, and spectrophotometric protein assays.&quot;, &quot;highlights&quot;: [&quot;Hands-on sterile technique, micropipetting, and bacterial transformation&quot;, &quot;Spectrophotometry validation of heavy metal adsorption curves in water samples&quot;, &quot;Empirical scientific methodology applied to biochar filtration research&quot;], &quot;tags&quot;: [&quot;#WetBench&quot;, &quot;#MolecularBiology&quot;, &quot;#Biochemistry&quot;, &quot;#LabCertified&quot;], &quot;category_slug&quot;: &quot;biomedical&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="BioResearch Academy Wet-Bench Molecular Biology" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/certificates/BioResearch Academy Certificate.jpeg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Biomedical & AI</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">BioResearch Academy Wet-Bench Molecular Biology</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Completed hands-on laboratory certifications in recombinant DNA cloning, PCR amplification, agarose gel electrophoresis, and spectrophotometric protein assays.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="monivitals" data-project='{&quot;title&quot;: &quot;MoniVitals: Equitable Vitals Monitor &amp; App&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_monivitals-market.webp&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_monivitals-market.webp&quot;, &quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;, &quot;assets/monivitals/20260829_084028.jpg&quot;, &quot;assets/monivitals/20260829_100506_1_.jpg&quot;, &quot;assets/monivitals/20260829_094941_1_.jpg&quot;], &quot;desc&quot;: &quot;I brought MoniVitals to our local farmers market and senior outreach events, offering neighbors a free check of their critical vitals in under a minute.&quot;, &quot;highlights&quot;: [&quot;Phone-connected, non-invasive vital screening platform developed for accessible and equitable community health&quot;, &quot;Measures six vital markers in under a minute, including blood oxygen (SpO2), pulse rate, body temperature, and estimated blood pressure&quot;, &quot;Private real-time readings transmitted securely to each visitor&#x27;s smartphone&quot;, &quot;Python data telemetry backend integrated with edge ESP32 microcontroller, MAX30102 PPG sensor, and MLX90614 infrared optical thermopile&quot;, &quot;Conducted over 100 free vital screenings across local New Jersey farmers markets, community centers, and senior living facilities&quot;], &quot;tags&quot;: [&quot;#MoniVitals&quot;, &quot;#HealthTech&quot;, &quot;#Python&quot;, &quot;#ESP32&quot;, &quot;#CommunityHealth&quot;, &quot;#Telehealth&quot;], &quot;category_slug&quot;: &quot;monivitals&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="MoniVitals: Equitable Vitals Monitor &amp; App" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/ref_images/projects_monivitals-market.webp"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Health Technology</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">MoniVitals: Equitable Vitals Monitor &amp; App</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">I brought MoniVitals to our local farmers market and senior outreach events, offering neighbors a free check of their critical vitals in under a minute.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="monivitals" data-project='{&quot;title&quot;: &quot;Community Field Screening &amp; Senior Care Deployment&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;images&quot;: [&quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;assets/monivitals/20260829_100506_1_.jpg&quot;, &quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;assets/monivitals/20260829_094941_1_.jpg&quot;], &quot;desc&quot;: &quot;Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.&quot;, &quot;highlights&quot;: [&quot;Conducted direct user experience testing with seniors aged 65-90&quot;, &quot;Optimized font sizing, contrast, and voice-assisted telemetry readings for accessibility&quot;, &quot;Logged zero hardware failures over 8 consecutive hours of outdoor community testing&quot;, &quot;Gathered physician and nurse practitioner feedback on triage alert thresholds&quot;], &quot;tags&quot;: [&quot;#CommunityHealth&quot;, &quot;#FieldTesting&quot;, &quot;#ElderCare&quot;, &quot;#PublicHealth&quot;], &quot;category_slug&quot;: &quot;monivitals&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Community Field Screening &amp; Senior Care Deployment" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/monivitals/20260829_100521.jpg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Health Technology</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Community Field Screening &amp; Senior Care Deployment</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="monivitals" data-project='{&quot;title&quot;: &quot;Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;images&quot;: [&quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;assets/monivitals/20260829_084028.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;, &quot;assets/ref_images/projects_monivitals-market.webp&quot;], &quot;desc&quot;: &quot;Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.&quot;, &quot;highlights&quot;: [&quot;CAD modeling in Fusion 360 with ergonomic fingertip alignment and light baffling&quot;, &quot;I2C bus multiplexing running on ESP32 with power-saving sleep modes&quot;, &quot;Secure Bluetooth Low Energy GATT profile broadcasting encrypted telemetry&quot;, &quot;Fabricated multi-revision PCB prototype for robust handheld portability&quot;], &quot;tags&quot;: [&quot;#EmbeddedSystems&quot;, &quot;#ESP32&quot;, &quot;#HardwareCAD&quot;, &quot;#PCB&quot;, &quot;#IoT&quot;], &quot;category_slug&quot;: &quot;monivitals&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/monivitals/20260829_084022.jpg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Health Technology</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="community" data-project='{&quot;title&quot;: &quot;Mercer County Hunger Relief &amp; Meal Packaging Drives&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;assets/community/Copy of cd - boxes - pic5.jpg&quot;, &quot;assets/community/Copy of cd - ah- group pic1.jpg&quot;, &quot;assets/community/Candy donation boxes at AoPs - pic2.jpg&quot;, &quot;assets/certificates/STEP Meals Packaging.jpeg&quot;], &quot;desc&quot;: &quot;Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.&quot;, &quot;highlights&quot;: [&quot;Mobilized 150+ youth and student volunteers for regional meal packaging&quot;, &quot;Coordinated logistics with Mercer County food banks and community shelters&quot;, &quot;Organized annual holiday candy and non-perishable drives for local children&quot;, &quot;Direct community leadership recognized by local and state representatives&quot;], &quot;tags&quot;: [&quot;#HungerRelief&quot;, &quot;#CivicLeadership&quot;, &quot;#YouthVolunteering&quot;, &quot;#Community&quot;], &quot;category_slug&quot;: &quot;community&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Mercer County Hunger Relief &amp; Meal Packaging Drives" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/ref_images/projects_hunger-donation_framed.jpg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">School & Community</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Mercer County Hunger Relief &amp; Meal Packaging Drives</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="community" data-project='{&quot;title&quot;: &quot;Senior Living Center Technology &amp; Musical Companionship&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;assets/community/Copy of cd - boxes - pic5.jpg&quot;, &quot;assets/community/Copy of cd - aops - pic 4.jpg&quot;, &quot;assets/monivitals/20260829_100521.jpg&quot;], &quot;desc&quot;: &quot;Weekly volunteer sessions at Artis Senior Living, conducting smartphone/tablet digital literacy workshops, classical music therapy recitals, and intergenerational storytelling.&quot;, &quot;highlights&quot;: [&quot;Conducted one-on-one digital literacy sessions helping seniors connect with family&quot;, &quot;Performed solo classical flute and piano pieces tailored for cognitive memory therapy&quot;, &quot;Created handmade holiday cards and seasonal art gifts for memory-care residents&quot;, &quot;Recognized by Artis Senior Living staff for compassionate intergenerational service&quot;], &quot;tags&quot;: [&quot;#ElderCare&quot;, &quot;#MusicTherapy&quot;, &quot;#DigitalLiteracy&quot;, &quot;#ArtisLiving&quot;], &quot;category_slug&quot;: &quot;community&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Senior Living Center Technology &amp; Musical Companionship" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/ref_images/projects_senior-center_framed.jpg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">School & Community</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Senior Living Center Technology &amp; Musical Companionship</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Weekly volunteer sessions at Artis Senior Living, conducting smartphone/tablet digital literacy workshops, classical music therapy recitals, and intergenerational storytelling.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="community" data-project='{&quot;title&quot;: &quot;New Jersey Legislative Commendation &amp; Civic Supply Drives&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/community/Sock Drive - NJ Assembly Woman House.png&quot;, &quot;images&quot;: [&quot;assets/community/Sock Drive - NJ Assembly Woman House.png&quot;, &quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;assets/certificates/Service Award - NJ State Assembly.jpeg&quot;, &quot;assets/community/Copy of cd - flyer.jpg&quot;, &quot;assets/community/Copy of cd - ah- group pic1.jpg&quot;], &quot;desc&quot;: &quot;Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.&quot;, &quot;highlights&quot;: [&quot;Collected and distributed over 1,200 pairs of thermal socks and winter essentials&quot;, &quot;Coordinated drop-off hubs at local schools, libraries, and community centers&quot;, &quot;Formal legislative resolution presented by NJ State Assemblywoman&quot;, &quot;Demonstrated sustainable youth civic engagement model&quot;], &quot;tags&quot;: [&quot;#CivicImpact&quot;, &quot;#NJLegislature&quot;, &quot;#MutualAid&quot;, &quot;#CommunityAction&quot;], &quot;category_slug&quot;: &quot;community&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="New Jersey Legislative Commendation &amp; Civic Supply Drives" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/community/Sock Drive - NJ Assembly Woman House.png"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">School & Community</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">New Jersey Legislative Commendation &amp; Civic Supply Drives</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="writing" data-project='{&quot;title&quot;: &quot;Classical Piano &amp; Manhattan School of Music Recitals&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_piano-manhattan-school.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_piano-manhattan-school.jpg&quot;, &quot;assets/writing_arts/Copy of piano award.png&quot;, &quot;assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg&quot;, &quot;assets/music/image_1.jpeg&quot;, &quot;assets/music/image_5.jpeg&quot;], &quot;desc&quot;: &quot;Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performance at Greenfield Hall, Manhattan School of Music.&quot;, &quot;highlights&quot;: [&quot;Grand Prize Recitalist at Music-Fest International Rising Talent Festival&quot;, &quot;Solo recital performance at Greenfield Hall, Manhattan School of Music&quot;, &quot;Masterclass and performance appearances with Chopin Nocturnes, Bach Inventions, and Debussy Preludes&quot;], &quot;tags&quot;: [&quot;#ClassicalPiano&quot;, &quot;#ManhattanSchool&quot;, &quot;#MusicFest&quot;, &quot;#RisingTalent&quot;], &quot;category_slug&quot;: &quot;writing&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="Classical Piano &amp; Manhattan School of Music Recitals" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/ref_images/projects_piano-manhattan-school.jpg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Writing & Arts</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">Classical Piano &amp; Manhattan School of Music Recitals</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performance at Greenfield Hall, Manhattan School of Music.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="writing" data-project='{&quot;title&quot;: &quot;1st Chair Flutist &amp; Wind Ensemble Section Leader&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/writing_arts/flute_performance.png&quot;, &quot;images&quot;: [&quot;assets/writing_arts/flute_performance.png&quot;, &quot;assets/writing_arts/Aadya Flute Pic1.png&quot;, &quot;assets/certificates/NJMTA Flute Honors Recital.jpeg&quot;, &quot;assets/music/Flute_pic_2.jpg&quot;, &quot;assets/music/Flute_pic_3.png&quot;, &quot;assets/music/Playing_Flute_for_Seniors_at_the_Senior_Living_Center2.jpeg&quot;], &quot;desc&quot;: &quot;Serving as 1st Chair Flutist in competitive school and regional wind ensembles, NJMTA Flute Honors Award winner, and leading woodwind section rehearsals.&quot;, &quot;highlights&quot;: [&quot;1st Chair Flutist in audition-based competitive school and regional wind ensemble&quot;, &quot;NJMTA (New Jersey Music Teachers Association) Spring Recital Honors Award for Flute (2024)&quot;, &quot;Led weekly woodwind sectional rehearsals focusing on intonation, phrasing, and ensemble cohesion&quot;, &quot;Soloist in regional youth orchestra winter and spring concert festivals&quot;, &quot;Performed therapeutic classical flute repertoire for memory-care residents at senior centers&quot;], &quot;tags&quot;: [&quot;#Flute&quot;, &quot;#NJMTA&quot;, &quot;#Woodwinds&quot;, &quot;#FirstChair&quot;, &quot;#HonorsRecital&quot;, &quot;#Ensemble&quot;], &quot;category_slug&quot;: &quot;writing&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="1st Chair Flutist &amp; Wind Ensemble Section Leader" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/writing_arts/flute_performance.png"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Writing & Arts</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">1st Chair Flutist &amp; Wind Ensemble Section Leader</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Serving as 1st Chair Flutist in competitive school and regional wind ensembles, NJMTA Flute Honors Award winner, and leading woodwind section rehearsals.</span>
+  </div>
+</article>
+<article class="portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer" data-category="writing" data-project='{&quot;title&quot;: &quot;John Locke Commendation &amp; Published Creative Writing&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_john-locke_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_john-locke_framed.jpg&quot;, &quot;assets/certificates/John Locke 2026 - High Commendation.jpg&quot;, &quot;assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg&quot;, &quot;assets/writing_arts/artwork_portrait.jpg&quot;, &quot;assets/writing_arts/artwork_bird.jpg&quot;], &quot;desc&quot;: &quot;Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.&quot;, &quot;highlights&quot;: [&quot;Commended in John Locke Global Essay Competition from 19,000+ international entries&quot;, &quot;Recipient of school annual English and Humanities literary prize&quot;, &quot;Poetry published in national youth anthologies exploring nature and equity&quot;, &quot;Contributed essays on ethical technology and environmental stewardship&quot;], &quot;tags&quot;: [&quot;#JohnLocke&quot;, &quot;#Essayist&quot;, &quot;#Poetry&quot;, &quot;#CreativeWriting&quot;, &quot;#Humanities&quot;], &quot;category_slug&quot;: &quot;writing&quot;}'>
+  <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+    <img alt="John Locke Commendation &amp; Published Creative Writing" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/ref_images/projects_john-locke_framed.jpg"/>
+  </div>
+  <div class="flex w-full flex-1 flex-col p-5 text-left">
+    <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+      <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">Writing & Arts</span>
+      <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+    </span>
+    <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">John Locke Commendation &amp; Published Creative Writing</h3>
+    <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.</span>
+  </div>
+</article>
+</div>
 
-    <!-- 2. HERO PROFILE / BIO SECTION -->
-    <section class="hero-profile-section">
-      <div class="container">
-        <div class="profile-card-layout">
-          <div class="profile-avatar-frame">
-            <img src="assets/ref_images/projects_aadya-headshot.jpg" alt="Aadya Agarwal portrait" class="profile-avatar-img">
-          </div>
-          
-          <div class="profile-content-col">
-            <div class="profile-header-row">
-              <h1 class="profile-title">
-                Hi, I'm Aadya Agarwal
-                <a href="https://github.com/aanj1" target="_blank" rel="noopener noreferrer" class="github-link-icon" aria-label="Aadya Agarwal on GitHub">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path></svg>
-                </a>
-              </h1>
-              <span class="profile-role-badge">Eco-engineer &amp; Equitable Healthpreneur</span>
-            </div>
+</div>
+<dialog id="projectModal" aria-label="Project details" class="m-auto max-h-[90dvh] w-[95vw] max-w-6xl overflow-hidden rounded-2xl border border-ink/15 bg-paper p-0 text-ink shadow-2xl backdrop:bg-ink/70">
+  <div class="relative">
+    <button type="button" id="modalCloseBtn" aria-label="Close project" class="absolute right-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-[#ba1f43] text-2xl font-bold leading-none text-white shadow-lg transition hover:bg-[#9e1736] cursor-pointer">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div id="modalScrollArea" class="max-h-[90dvh] overflow-y-auto">
+      <div id="modalDynamicRoot"></div>
+    </div>
+  </div>
+</dialog>
 
-            <p class="profile-school-tag">The Lawrenceville School &bull; Class of 2029 &bull; Lawrenceville, New Jersey</p>
-            
-            <p class="profile-bio-text">
-              My vision is a world where clean water and basic health care reach the people it usually forgets &mdash; and I want to spend my life building the tools that get them there. I work at the meeting point of responsible AI, hands-on engineering and community science, because the hardest problems in equity are never just technical. Whether it is a biochar filter, a one-minute vitals check or a poem, I am chasing the same question: how do we make care more honest, more equitable and more within reach?
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. PORTFOLIO SHOWCASE (All 18 Projects across 6 Categories) -->
-    <section id="portfolio" class="portfolio-section">
-      <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
-          <div>
-            <h2 class="section-title">Portfolio</h2>
-            <p class="section-subtext">Selected innovations across competitive robotics, environmental chemistry, and health AI.</p>
-          </div>
-          <div id="portfolioCountBadge" style="font-size: 0.95rem; font-weight: 700; color: var(--color-plum);">
-            10 Key Innovations &bull; Top Awards &amp; Highlights
-          </div>
-        </div>
-
-        <div class="filter-tabs-row" role="tablist">
-          <button type="button" class="filter-tab-btn active" data-filter="all">All</button>
-          <button type="button" class="filter-tab-btn" data-filter="robotics">Robotics &amp; Coding</button>
-          <button type="button" class="filter-tab-btn" data-filter="environmental">Environmental Sustainability &amp; AI</button>
-          <button type="button" class="filter-tab-btn" data-filter="biomedical">Biomedical &amp; AI</button>
-          <button type="button" class="filter-tab-btn" data-filter="monivitals">MoniVitals</button>
-          <button type="button" class="filter-tab-btn" data-filter="community">School &amp; Community</button>
-          <button type="button" class="filter-tab-btn" data-filter="writing">Writing &amp; Arts</button>
-        </div>
-
-        <div class="portfolio-grid">
-          <!-- 1. FIRST Tech Challenge (FTC) -->
-          <article class="portfolio-card" data-featured="true" data-category="robotics" data-project='{&quot;title&quot;: &quot;FIRST Tech Challenge \u2014 The Lawrenceville School (2024\u2013Present)&quot;, &quot;category&quot;: &quot;Robotics &amp; Coding&quot;, &quot;img&quot;: &quot;assets/robotics/pic 1 - with robot.jpg&quot;, &quot;images&quot;: [&quot;assets/robotics/pic 1 - with robot.jpg&quot;, &quot;assets/robotics/pic 8 - On the board.jpg&quot;, &quot;assets/robotics/pic 14 - On the board 2.JPG&quot;, &quot;assets/robotics/Copy of Engg Device.jpg&quot;], &quot;desc&quot;: &quot;On the Lawrenceville School FTC programming team for the BioBuzz season: developing autonomous and driver-assisted motion control with Pedro Pathing, Limelight computer-vision pipelines for AprilTag field localization and real-time intake monitoring, and community outreach.&quot;, &quot;highlights&quot;: [&quot;Autonomous and driver-assisted motion control with Pedro Pathing for the BioBuzz season&quot;, &quot;Limelight computer-vision pipelines for AprilTag field localization and real-time intake monitoring&quot;, &quot;Sub-15ms AprilTag 36h11 machine vision pose estimation and 3-wheel odometry&quot;, &quot;Community outreach: teaching robot design, algorithmic thinking and Python basics to 10\u201315 middle-school students across hands-on sessions&quot;], &quot;tags&quot;: [&quot;#FTC&quot;, &quot;#PedroPathing&quot;, &quot;#Limelight3G&quot;, &quot;#AprilTag&quot;, &quot;#Python&quot;, &quot;#Lawrenceville&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/robotics/pic 1 - with robot.jpg" alt="FIRST Tech Challenge — The Lawrenceville School (2024–Present)" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">FTC</span><span class="card-image-pill pill-accent">BioBuzz</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Robotics &amp; Coding</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">FIRST Tech Challenge &mdash; The Lawrenceville School (2024&ndash;Present)</h3>
-              <p class="card-description">On the Lawrenceville School FTC programming team for the BioBuzz season: developing autonomous and driver-assisted motion control with Pedro Pathing, Limelight computer-vision pipelines for AprilTag field localization, and mentoring middle school students.</p>
-            </div>
-          </article>
-
-          <!-- 2. FIRST LEGO League (FLL) -->
-          <article class="portfolio-card" data-featured="true" data-category="robotics" data-project='{&quot;title&quot;: &quot;FIRST LEGO League \u2014 The LeapcoderZ (2020\u20132024)&quot;, &quot;category&quot;: &quot;Robotics &amp; Coding&quot;, &quot;img&quot;: &quot;assets/robotics/pic 10 - wpi award.jpg&quot;, &quot;images&quot;: [&quot;assets/robotics/pic 10 - wpi award.jpg&quot;, &quot;assets/robotics/pic12 -WPI Team.png&quot;, &quot;assets/robotics/pic17 -WPI opening ceremony.jpg&quot;, &quot;assets/robotics/Pic 16- WPI Pit visitor 1.jpg&quot;, &quot;assets/robotics/Pic 16- WPI Pit visitor 2.jpg&quot;, &quot;assets/robotics/pic 11 - WPI goodies.jpg&quot;, &quot;assets/robotics/pic 2 - Team award.JPG&quot;, &quot;assets/robotics/pic 6 - Team Award.JPG&quot;, &quot;assets/robotics/pic 5 - Mt Olive Award.jpg&quot;, &quot;assets/robotics/pic 7 - Mt Olive award.JPG&quot;, &quot;assets/robotics/pic 3 - mt olive.JPG&quot;, &quot;assets/robotics/pic4 - team poster.jpg&quot;, &quot;assets/robotics/pic 13 - Nov2022.jpg&quot;], &quot;desc&quot;: &quot;Lead Coder &amp; Innovation Lead for The LeapcoderZ (2020\u20132024). Award record: Robot Design Award Finalist at the WPI FLL US Open World (June 2024), Breakthrough Award at NJ State, and multiple Robot Design Awards at NJ Regionals.&quot;, &quot;highlights&quot;: [&quot;Robot Design Award Finalist at the WPI FLL US Open World Championship (ranked #14 out of 108 international teams, June 2024)&quot;, &quot;Breakthrough Award at NJ State Championship (2023\u20132024)&quot;, &quot;Robot Design Award at NJ Regionals (2023\u20132024 &amp; 2022\u20132023)&quot;, &quot;Lead Coder &amp; Innovation Lead for The LeapcoderZ eight-person competition team&quot;, &quot;Architected multi-sensor line-tracking, PID gyro stabilization, and modular attachment quick-swaps&quot;], &quot;tags&quot;: [&quot;#FLL&quot;, &quot;#TheLeapcoderZ&quot;, &quot;#WPIUSOpen&quot;, &quot;#RobotDesign&quot;, &quot;#WorldRank14&quot;, &quot;#NJState&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/robotics/pic 10 - wpi award.jpg" alt="FIRST LEGO League — The LeapcoderZ (2020–2024)" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">FLL World Open</span><span class="card-image-pill pill-accent">Rank #14</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Robotics &amp; Coding</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">FIRST LEGO League &mdash; The LeapcoderZ (2020&ndash;2024)</h3>
-              <p class="card-description">Lead Coder and Innovation Lead for The LeapcoderZ. Award record: Robot Design Award Finalist at the WPI FLL US Open World Championship (ranked #14 out of 108 international teams, June 2024), Breakthrough Award at NJ State, and multiple Robot Design Awards at NJ Regionals.</p>
-            </div>
-          </article>
-
-          <!-- 3. PDS Panther Hackathon -->
-          <article class="portfolio-card" data-featured="true" data-category="robotics" data-project='{&quot;title&quot;: &quot;PDS Panther Hackathon, Grade 7th \u2013 Best Beginner Hackathon&quot;, &quot;category&quot;: &quot;Robotics &amp; Coding&quot;, &quot;img&quot;: &quot;assets/robotics/hackathon-best-beginner-hack.jpeg&quot;, &quot;images&quot;: [&quot;assets/robotics/hackathon-best-beginner-hack.jpeg&quot;, &quot;assets/robotics/PantherHack_Winner_Certificate.jpg&quot;, &quot;assets/robotics/pic 20-devpost.jpg&quot;], &quot;desc&quot;: &quot;Won Best Beginner Hack at the PDS Panther Hackathon in Grade 7th for &#x27;HobbyPals&#x27; \u2014 an interactive online platform helping kids pursue creative hobbies while developing healthy screen-time habits.&quot;, &quot;highlights&quot;: [&quot;PDS Panther Hackathon: Awarded &#x27;Best Beginner Hack&#x27; (Grade 7th, 2024)&quot;, &quot;Devpost project submission for &#x27;HobbyPals&#x27; \u2014 online app helping youth replace screen time with active offline hobbies&quot;, &quot;Rapid ideation, front-end interaction flow, and functional web prototype created under hackathon time limits&quot;, &quot;Delivered technical pitch and live interactive demo to judge panel&quot;], &quot;tags&quot;: [&quot;#PantherHack&quot;, &quot;#BestBeginnerHack&quot;, &quot;#HobbyPals&quot;, &quot;#Devpost&quot;, &quot;#WebDevelopment&quot;, &quot;#Grade7th&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/robotics/hackathon-best-beginner-hack.jpeg" alt="PDS Panther Hackathon, Grade 7th – Best Beginner Hackathon" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">PDS Panther</span><span class="card-image-pill pill-accent">Best Beginner Hack</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Robotics &amp; Coding</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">PDS Panther Hackathon, Grade 7th &ndash; Best Beginner Hackathon</h3>
-              <p class="card-description">Won Best Beginner Hack at the PDS Panther Hackathon in Grade 7th for &quot;HobbyPals&quot; &mdash; an online app helping kids pursue creative hobbies while building healthy offline habits.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-featured="true" data-category="environmental" data-project='{&quot;title&quot;: &quot;Biochar Water Treatment &amp; Remediation System&quot;, &quot;category&quot;: &quot;Environmental Sustainability &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_water-treatment-setup.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_water-treatment-setup.jpg&quot;, &quot;assets/ref_images/projects_msef-water-award.jpg&quot;, &quot;assets/ref_images/projects_njwea-presentation.jpg&quot;, &quot;assets/science_fairs/Biochars_-_B1_and_B2.jpg&quot;, &quot;assets/science_fairs/msef_event_pic_2.jpeg&quot;], &quot;desc&quot;: &quot;Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.&quot;, &quot;highlights&quot;: [&quot;Stockholm Junior Water Prize Regional Award (Special Award &amp; Acceptance Speech at NJWEA)&quot;, &quot;2nd Place in Earth &amp; Environmental Science at Mercer Science &amp; Engineering Fair (MSEF)&quot;, &quot;Community Outreach: Featured in American Biochar Company&quot;, &quot;Compared softwood and agricultural-waste biochar samples&quot;, &quot;Measured pH and water-quality changes across treatment trials&quot;, &quot;Explored heavy-metal and nutrient removal with a floating treatment device concept&quot;], &quot;tags&quot;: [&quot;#Biochar&quot;, &quot;#WaterRemediation&quot;, &quot;#MSEF&quot;, &quot;#StockholmWaterPrize&quot;, &quot;#AmericanBiocharCompany&quot;, &quot;#CleanWater&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_water-treatment-setup.jpg" alt="Biochar Water Treatment &amp; Remediation System" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">MSEF</span><span class="card-image-pill pill-accent">Stockholm Award</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Environmental Sustainability &amp; AI</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Biochar Water Treatment &amp; Remediation System</h3>
-              <p class="card-description">Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-featured="true" data-category="environmental" data-project='{&quot;title&quot;: &quot;MIT Solve Winner - AI For A Better World Challenge, July 2026&quot;, &quot;category&quot;: &quot;Environmental Sustainability &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_lab-setup.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_lab-setup.jpg&quot;, &quot;assets/ref_images/projects_mit-solve-recognition_clean.jpg&quot;, &quot;assets/ref_images/projects_mit-day-ai-stage.jpg&quot;, &quot;assets/certificates/Day of AI Certificate - MIT RAISE.jpeg&quot;, &quot;assets/science_fairs/Device_Plan.jpg&quot;, &quot;assets/science_fairs/Project_-_Neutralizing_Ocean_Acidification_-_Experimental_Results_2.jpg&quot;], &quot;desc&quot;: &quot;One of five national MIT Solve AI for a Better World winners, I presented an AI-powered water-quality node at the MIT Media Lab.&quot;, &quot;highlights&quot;: [&quot;The biochar remediation concept combines water-quality sensing, edge machine learning and an actionable treatment response&quot;, &quot;The presentation proposed training on river, lake and global water-measurement data&quot;, &quot;Human review, safety limits and decision logs were part of the responsible-AI plan&quot;, &quot;Presented on stage at the MIT Media Lab&quot;], &quot;tags&quot;: [&quot;#MITSolve&quot;, &quot;#AIForABetterWorld&quot;, &quot;#MITMediaLab&quot;, &quot;#OceanTech&quot;, &quot;#ClimateAction&quot;, &quot;#EmbeddedSensors&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_lab-setup.jpg" alt="MIT Solve Winner - AI For A Better World Challenge, July 2026" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-accent">MIT Solve</span><span class="card-image-pill pill-primary">National Winner</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Environmental Sustainability &amp; AI</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">MIT Solve Winner - AI For A Better World Challenge, July 2026</h3>
-              <p class="card-description">One of five national MIT Solve AI for a Better World winners, I presented an AI-powered water-quality node at the MIT Media Lab.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-category="environmental" data-project='{&quot;title&quot;: &quot;Environmental Telemetry Node &amp; AI Water Testing&quot;, &quot;category&quot;: &quot;Environmental Sustainability &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_mit-day-ai-stage.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_mit-day-ai-stage.jpg&quot;, &quot;assets/ref_images/projects_njwea-presentation.jpg&quot;, &quot;assets/ref_images/projects_njwea-community_clean.jpg&quot;, &quot;assets/science_fairs/ieee_pic4.jpeg&quot;], &quot;desc&quot;: &quot;Developed continuous IoT telemetry nodes measuring turbidity, dissolved oxygen, and oxidation-reduction potential with edge machine learning anomaly detection.&quot;, &quot;highlights&quot;: [&quot;Engineered edge ML inference running on ultra-low-power microcontrollers&quot;, &quot;Real-time sensor calibration protocol reducing temperature drift by over 40%&quot;, &quot;Invited technical lecture at New Jersey Water Environment Association (NJWEA)&quot;, &quot;Integrated cloud data sync for municipal storm run-off water tracking&quot;], &quot;tags&quot;: [&quot;#IoTSensors&quot;, &quot;#EdgeAI&quot;, &quot;#NJWEA&quot;, &quot;#WaterQuality&quot;, &quot;#Telemetry&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_mit-day-ai-stage.jpg" alt="Environmental Telemetry Node &amp; AI Water Testing" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">MIT Media Lab</span><span class="card-image-pill pill-navy">IEEE</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Environmental Sustainability &amp; AI</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Environmental Telemetry Node &amp; AI Water Testing</h3>
-              <p class="card-description">Developed continuous IoT telemetry nodes measuring turbidity, dissolved oxygen, and oxidation-reduction potential with edge machine learning anomaly detection.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-category="biomedical" data-project='{&quot;title&quot;: &quot;Pulse Oximetry Optical Bias Mitigation Research&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;, &quot;assets/science_fairs/ieee_pic4.jpeg&quot;, &quot;assets/monivitals/20260829_094941_1_.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;], &quot;desc&quot;: &quot;Investigating wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring.&quot;, &quot;highlights&quot;: [&quot;Examined multi-wavelength LED emitters (red, infrared, green) across diverse skin tones&quot;, &quot;Evaluated calibration curve adjustments to prevent hypoxemia misreading in darker skin&quot;, &quot;Presented engineering insights at IEEE Engineering in Conversation forum&quot;, &quot;Direct foundation for the hardware sensor module utilized in MoniVitals&quot;], &quot;tags&quot;: [&quot;#Biometrics&quot;, &quot;#EquitableHealth&quot;, &quot;#HealthTech&quot;, &quot;#SignalProcessing&quot;, &quot;#IEEE&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_ieee-engineering-conversation.jpg" alt="Pulse Oximetry Optical Bias Mitigation Research" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-navy">IEEE</span><span class="card-image-pill pill-primary">Biometrics</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Biomedical &amp; AI</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Pulse Oximetry Optical Bias Mitigation Research</h3>
-              <p class="card-description">Investigating wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-category="biomedical" data-project='{&quot;title&quot;: &quot;Stanford AIMI Summer Health AI Fellow Research&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg&quot;, &quot;images&quot;: [&quot;assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg&quot;, &quot;assets/certificates/InspiritAI_AI_Ambassador_Certificate.jpg&quot;, &quot;assets/ref_images/projects_ieee-engineering-conversation.jpg&quot;], &quot;desc&quot;: &quot;Explored multimodal clinical models combining waveform telemetry with patient electronic health records for early sepsis and arrhythmia anomaly detection.&quot;, &quot;highlights&quot;: [&quot;Stanford AIMI youth fellowship focused on ethical machine learning in healthcare&quot;, &quot;Analyzed synthetic physiological timeseries datasets for model generalizability&quot;, &quot;Investigated data drift and algorithmic fairness across demographic cohorts&quot;], &quot;tags&quot;: [&quot;#StanfordAIMI&quot;, &quot;#MachineLearning&quot;, &quot;#HealthcareAI&quot;, &quot;#ClinicalInference&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg" alt="Stanford AIMI Summer Health AI Fellow Research" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">Stanford AI</span><span class="card-image-pill pill-accent">ML</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Biomedical &amp; AI</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Stanford AIMI Summer Health AI Fellow Research</h3>
-              <p class="card-description">Explored multimodal clinical models combining waveform telemetry with patient electronic health records for early sepsis and arrhythmia anomaly detection.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-category="biomedical" data-project='{&quot;title&quot;: &quot;BioResearch Academy Wet-Bench Molecular Biology&quot;, &quot;category&quot;: &quot;Biomedical &amp; AI&quot;, &quot;img&quot;: &quot;assets/certificates/BioResearch Academy Certificate.jpeg&quot;, &quot;images&quot;: [&quot;assets/certificates/BioResearch Academy Certificate.jpeg&quot;, &quot;assets/certificates/Aqua Science Certificate.jpg&quot;, &quot;assets/science_fairs/pic3.jpeg&quot;], &quot;desc&quot;: &quot;Completed hands-on laboratory certifications in recombinant DNA cloning, PCR amplification, agarose gel electrophoresis, and spectrophotometric protein assays.&quot;, &quot;highlights&quot;: [&quot;Hands-on sterile technique, micropipetting, and bacterial transformation&quot;, &quot;Spectrophotometry validation of heavy metal adsorption curves in water samples&quot;, &quot;Empirical scientific methodology applied to biochar filtration research&quot;], &quot;tags&quot;: [&quot;#WetBench&quot;, &quot;#MolecularBiology&quot;, &quot;#Biochemistry&quot;, &quot;#LabCertified&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/certificates/BioResearch Academy Certificate.jpeg" alt="BioResearch Academy Wet-Bench Molecular Biology" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">Wet Bench</span><span class="card-image-pill pill-amber">Biochem</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Biomedical &amp; AI</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">BioResearch Academy Wet-Bench Molecular Biology</h3>
-              <p class="card-description">Completed hands-on laboratory certifications in recombinant DNA cloning, PCR amplification, agarose gel electrophoresis, and spectrophotometric protein assays.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-featured="true" data-category="monivitals" data-project='{&quot;title&quot;: &quot;MoniVitals: Equitable Vitals Monitor &amp; App&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_monivitals-market.webp&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_monivitals-market.webp&quot;, &quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;, &quot;assets/monivitals/20260829_084028.jpg&quot;, &quot;assets/monivitals/20260829_100506_1_.jpg&quot;, &quot;assets/monivitals/20260829_094941_1_.jpg&quot;], &quot;desc&quot;: &quot;I brought MoniVitals to our local farmers market and senior outreach events, offering neighbors a free check of their critical vitals in under a minute.&quot;, &quot;highlights&quot;: [&quot;Phone-connected, non-invasive vital screening platform developed for accessible and equitable community health&quot;, &quot;Measures six vital markers in under a minute, including blood oxygen (SpO2), pulse rate, body temperature, and estimated blood pressure&quot;, &quot;Private real-time readings transmitted securely to each visitor&#x27;s smartphone&quot;, &quot;Python data telemetry backend integrated with edge ESP32 microcontroller, MAX30102 PPG sensor, and MLX90614 infrared optical thermopile&quot;, &quot;Conducted over 100 free vital screenings across local New Jersey farmers markets, community centers, and senior living facilities&quot;], &quot;tags&quot;: [&quot;#MoniVitals&quot;, &quot;#HealthTech&quot;, &quot;#Python&quot;, &quot;#ESP32&quot;, &quot;#CommunityHealth&quot;, &quot;#Telehealth&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_monivitals-market.webp" alt="MoniVitals: Equitable Vitals Monitor &amp; App" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">HealthTech</span><span class="card-image-pill pill-accent">Farmers Market</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">MoniVitals</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">MoniVitals: Equitable Vitals Monitor &amp; App</h3>
-              <p class="card-description">I brought MoniVitals to our local farmers market and senior outreach events, offering neighbors a free check of their critical vitals in under a minute.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-category="monivitals" data-project='{&quot;title&quot;: &quot;Community Field Screening &amp; Senior Care Deployment&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;images&quot;: [&quot;assets/monivitals/20260829_100521.jpg&quot;, &quot;assets/monivitals/20260829_100506_1_.jpg&quot;, &quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;assets/monivitals/20260829_094941_1_.jpg&quot;], &quot;desc&quot;: &quot;Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.&quot;, &quot;highlights&quot;: [&quot;Conducted direct user experience testing with seniors aged 65-90&quot;, &quot;Optimized font sizing, contrast, and voice-assisted telemetry readings for accessibility&quot;, &quot;Logged zero hardware failures over 8 consecutive hours of outdoor community testing&quot;, &quot;Gathered physician and nurse practitioner feedback on triage alert thresholds&quot;], &quot;tags&quot;: [&quot;#CommunityHealth&quot;, &quot;#FieldTesting&quot;, &quot;#ElderCare&quot;, &quot;#PublicHealth&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/monivitals/20260829_100521.jpg" alt="Community Field Screening &amp; Senior Care Deployment" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">Elder Care</span><span class="card-image-pill pill-navy">Sensors</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">MoniVitals</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Community Field Screening &amp; Senior Care Deployment</h3>
-              <p class="card-description">Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-category="monivitals" data-project='{&quot;title&quot;: &quot;Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller&quot;, &quot;category&quot;: &quot;MoniVitals&quot;, &quot;img&quot;: &quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;images&quot;: [&quot;assets/monivitals/20260829_084022.jpg&quot;, &quot;assets/monivitals/20260829_084028.jpg&quot;, &quot;assets/monivitals/20260829_100443.jpg&quot;, &quot;assets/ref_images/projects_monivitals-market.webp&quot;], &quot;desc&quot;: &quot;Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.&quot;, &quot;highlights&quot;: [&quot;CAD modeling in Fusion 360 with ergonomic fingertip alignment and light baffling&quot;, &quot;I2C bus multiplexing running on ESP32 with power-saving sleep modes&quot;, &quot;Secure Bluetooth Low Energy GATT profile broadcasting encrypted telemetry&quot;, &quot;Fabricated multi-revision PCB prototype for robust handheld portability&quot;], &quot;tags&quot;: [&quot;#EmbeddedSystems&quot;, &quot;#ESP32&quot;, &quot;#HardwareCAD&quot;, &quot;#PCB&quot;, &quot;#IoT&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/monivitals/20260829_084022.jpg" alt="Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-amber">AWD</span><span class="card-image-pill pill-primary">Telemetry</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">MoniVitals</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Hardware Prototype, Custom Enclosure &amp; ESP32 Microcontroller</h3>
-              <p class="card-description">Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-category="community" data-project='{&quot;title&quot;: &quot;Mercer County Hunger Relief &amp; Meal Packaging Drives&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;assets/community/Copy of cd - boxes - pic5.jpg&quot;, &quot;assets/community/Copy of cd - ah- group pic1.jpg&quot;, &quot;assets/community/Candy donation boxes at AoPs - pic2.jpg&quot;, &quot;assets/certificates/STEP Meals Packaging.jpeg&quot;], &quot;desc&quot;: &quot;Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.&quot;, &quot;highlights&quot;: [&quot;Mobilized 150+ youth and student volunteers for regional meal packaging&quot;, &quot;Coordinated logistics with Mercer County food banks and community shelters&quot;, &quot;Organized annual holiday candy and non-perishable drives for local children&quot;, &quot;Direct community leadership recognized by local and state representatives&quot;], &quot;tags&quot;: [&quot;#HungerRelief&quot;, &quot;#CivicLeadership&quot;, &quot;#YouthVolunteering&quot;, &quot;#Community&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_hunger-donation_framed.jpg" alt="Mercer County Hunger Relief &amp; Meal Packaging Drives" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">LEO Club</span><span class="card-image-pill pill-accent">500+ lbs</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">School &amp; Community</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Mercer County Hunger Relief &amp; Meal Packaging Drives</h3>
-              <p class="card-description">Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-category="community" data-project='{&quot;title&quot;: &quot;Senior Living Center Technology &amp; Musical Companionship&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_senior-center_framed.jpg&quot;, &quot;assets/community/Copy of cd - boxes - pic5.jpg&quot;, &quot;assets/community/Copy of cd - aops - pic 4.jpg&quot;, &quot;assets/monivitals/20260829_100521.jpg&quot;], &quot;desc&quot;: &quot;Weekly volunteer sessions at Artis Senior Living, conducting smartphone/tablet digital literacy workshops, classical music therapy recitals, and intergenerational storytelling.&quot;, &quot;highlights&quot;: [&quot;Conducted one-on-one digital literacy sessions helping seniors connect with family&quot;, &quot;Performed solo classical flute and piano pieces tailored for cognitive memory therapy&quot;, &quot;Created handmade holiday cards and seasonal art gifts for memory-care residents&quot;, &quot;Recognized by Artis Senior Living staff for compassionate intergenerational service&quot;], &quot;tags&quot;: [&quot;#ElderCare&quot;, &quot;#MusicTherapy&quot;, &quot;#DigitalLiteracy&quot;, &quot;#ArtisLiving&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_senior-center_framed.jpg" alt="Senior Living Center Technology &amp; Musical Companionship" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">Senior Care</span><span class="card-image-pill pill-plum">Therapy</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">School &amp; Community</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Senior Living Center Technology &amp; Musical Companionship</h3>
-              <p class="card-description">Weekly volunteer sessions at Artis Senior Living, conducting smartphone/tablet digital literacy workshops, classical music therapy recitals, and intergenerational storytelling.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-featured="true" data-category="community" data-project='{&quot;title&quot;: &quot;New Jersey Legislative Commendation &amp; Civic Supply Drives&quot;, &quot;category&quot;: &quot;School &amp; Community&quot;, &quot;img&quot;: &quot;assets/community/Sock Drive - NJ Assembly Woman House.png&quot;, &quot;images&quot;: [&quot;assets/community/Sock Drive - NJ Assembly Woman House.png&quot;, &quot;assets/ref_images/projects_hunger-donation_framed.jpg&quot;, &quot;assets/certificates/Service Award - NJ State Assembly.jpeg&quot;, &quot;assets/community/Copy of cd - flyer.jpg&quot;, &quot;assets/community/Copy of cd - ah- group pic1.jpg&quot;], &quot;desc&quot;: &quot;Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.&quot;, &quot;highlights&quot;: [&quot;Collected and distributed over 1,200 pairs of thermal socks and winter essentials&quot;, &quot;Coordinated drop-off hubs at local schools, libraries, and community centers&quot;, &quot;Formal legislative resolution presented by NJ State Assemblywoman&quot;, &quot;Demonstrated sustainable youth civic engagement model&quot;], &quot;tags&quot;: [&quot;#CivicImpact&quot;, &quot;#NJLegislature&quot;, &quot;#MutualAid&quot;, &quot;#CommunityAction&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/community/Sock Drive - NJ Assembly Woman House.png" alt="New Jersey Legislative Commendation &amp; Civic Supply Drives" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">NJ Assembly</span><span class="card-image-pill pill-accent">Relief</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">School &amp; Community</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">New Jersey Legislative Commendation &amp; Civic Supply Drives</h3>
-              <p class="card-description">Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-featured="true" data-category="writing" data-project='{&quot;title&quot;: &quot;Classical Piano &amp; Manhattan School of Music Recitals&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_piano-manhattan-school.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_piano-manhattan-school.jpg&quot;, &quot;assets/writing_arts/Copy of piano award.png&quot;, &quot;assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg&quot;, &quot;assets/music/image_1.jpeg&quot;, &quot;assets/music/image_5.jpeg&quot;], &quot;desc&quot;: &quot;Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performance at Greenfield Hall, Manhattan School of Music.&quot;, &quot;highlights&quot;: [&quot;Grand Prize Recitalist at Music-Fest International Rising Talent Festival&quot;, &quot;Solo recital performance at Greenfield Hall, Manhattan School of Music&quot;, &quot;Masterclass and performance appearances with Chopin Nocturnes, Bach Inventions, and Debussy Preludes&quot;], &quot;tags&quot;: [&quot;#ClassicalPiano&quot;, &quot;#ManhattanSchool&quot;, &quot;#MusicFest&quot;, &quot;#RisingTalent&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_piano-manhattan-school.jpg" alt="Classical Piano &amp; Manhattan School of Music Recitals" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">Manhattan School</span><span class="card-image-pill pill-accent">Grand Prize</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Writing &amp; Arts</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">Classical Piano &amp; Manhattan School of Music Recitals</h3>
-              <p class="card-description">Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performance at Greenfield Hall, Manhattan School of Music.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-featured="true" data-category="writing" data-project='{&quot;title&quot;: &quot;1st Chair Flutist &amp; Wind Ensemble Section Leader&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/writing_arts/flute_performance.png&quot;, &quot;images&quot;: [&quot;assets/writing_arts/flute_performance.png&quot;, &quot;assets/writing_arts/Aadya Flute Pic1.png&quot;, &quot;assets/certificates/NJMTA Flute Honors Recital.jpeg&quot;, &quot;assets/music/Flute_pic_2.jpg&quot;, &quot;assets/music/Flute_pic_3.png&quot;, &quot;assets/music/Playing_Flute_for_Seniors_at_the_Senior_Living_Center2.jpeg&quot;], &quot;desc&quot;: &quot;Serving as 1st Chair Flutist in competitive school and regional wind ensembles, NJMTA Flute Honors Award winner, and leading woodwind section rehearsals.&quot;, &quot;highlights&quot;: [&quot;1st Chair Flutist in audition-based competitive school and regional wind ensemble&quot;, &quot;NJMTA (New Jersey Music Teachers Association) Spring Recital Honors Award for Flute (2024)&quot;, &quot;Led weekly woodwind sectional rehearsals focusing on intonation, phrasing, and ensemble cohesion&quot;, &quot;Soloist in regional youth orchestra winter and spring concert festivals&quot;, &quot;Performed therapeutic classical flute repertoire for memory-care residents at senior centers&quot;], &quot;tags&quot;: [&quot;#Flute&quot;, &quot;#NJMTA&quot;, &quot;#Woodwinds&quot;, &quot;#FirstChair&quot;, &quot;#HonorsRecital&quot;, &quot;#Ensemble&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/writing_arts/flute_performance.png" alt="1st Chair Flutist &amp; Wind Ensemble Section Leader" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-primary">1st Chair</span><span class="card-image-pill pill-plum">NJMTA Honors</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Writing &amp; Arts</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">1st Chair Flutist &amp; Wind Ensemble Section Leader</h3>
-              <p class="card-description">Serving as 1st Chair Flutist in competitive school and regional wind ensembles, NJMTA Flute Honors Award winner, and leading woodwind section rehearsals.</p>
-            </div>
-          </article>
-          <article class="portfolio-card" data-featured="true" data-category="writing" data-project='{&quot;title&quot;: &quot;John Locke Commendation &amp; Published Creative Writing&quot;, &quot;category&quot;: &quot;Writing &amp; Arts&quot;, &quot;img&quot;: &quot;assets/ref_images/projects_john-locke_framed.jpg&quot;, &quot;images&quot;: [&quot;assets/ref_images/projects_john-locke_framed.jpg&quot;, &quot;assets/certificates/John Locke 2026 - High Commendation.jpg&quot;, &quot;assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg&quot;, &quot;assets/writing_arts/artwork_portrait.jpg&quot;, &quot;assets/writing_arts/artwork_bird.jpg&quot;], &quot;desc&quot;: &quot;Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.&quot;, &quot;highlights&quot;: [&quot;Commended in John Locke Global Essay Competition from 19,000+ international entries&quot;, &quot;Recipient of school annual English and Humanities literary prize&quot;, &quot;Poetry published in national youth anthologies exploring nature and equity&quot;, &quot;Contributed essays on ethical technology and environmental stewardship&quot;], &quot;tags&quot;: [&quot;#JohnLocke&quot;, &quot;#Essayist&quot;, &quot;#Poetry&quot;, &quot;#CreativeWriting&quot;, &quot;#Humanities&quot;]}'>
-            <div class="card-thumb-wrapper">
-              <img src="assets/ref_images/projects_john-locke_framed.jpg" alt="John Locke Commendation &amp; Published Creative Writing" class="card-thumb-img" loading="lazy">
-              <div class="card-image-badges" aria-hidden="true"><span class="card-image-pill pill-plum">John Locke</span><span class="card-image-pill pill-amber">Essay Prize</span></div>
-            </div>
-            <div class="card-body">
-              <div class="card-meta-row">
-                <span class="card-category-label">Writing &amp; Arts</span>
-                <span class="card-action-badge">Read more</span>
-              </div>
-              <h3 class="card-title">John Locke Commendation &amp; Published Creative Writing</h3>
-              <p class="card-description">Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. PROJECT DOCUMENTS SECTION -->
-    <section id="documents" class="documents-section" style="border-top: 1px solid var(--color-ink-10); padding: 4rem 0;">
-      <div class="container">
-        <div style="margin-bottom: 2rem;">
-          <h2 class="section-title">Project Documents</h2>
-          <p class="section-subtext">Key methods, designs and next steps from each project.</p>
-        </div>
-<div class="documents-grid">
-          
-          <!-- Document 1: Autonomous Ocean pH Buoy -->
-          <article class="doc-article-card">
-            <div class="doc-article-header">
-              <div>
-                <p class="doc-eyebrow">Project</p>
-                <h3 class="doc-project-title">Autonomous Ocean pH Buoy</h3>
-              </div>
-              <span class="doc-category-badge">Climate Tech</span>
-            </div>
-            <div class="doc-accordion-list">
-              <details class="doc-accordion-item">
-                <summary>
-                  <span>2025 3M Young Scientist Challenge project brief</span>
-                  <span class="doc-plus-icon" aria-hidden="true">+</span>
-                </summary>
-                <div class="doc-accordion-body">
-                  <p>Concept: an Arduino reads water pH and triggers a servo to release calcium carbonate when acidity passes a set threshold.</p>
-                </div>
-              </details>
-              <details class="doc-accordion-item">
-                <summary>
-                  <span>2025 3M application notes</span>
-                  <span class="doc-plus-icon" aria-hidden="true">+</span>
-                </summary>
-                <div class="doc-accordion-body">
-                  <p>Next steps: test buoyancy, calibrate the dispenser, compare mineral options, add solar power and explore predictive dosing with Python.</p>
-                </div>
-              </details>
-            </div>
-          </article>
-
-          <!-- Document 2: Biochar AIoT Device -->
-          <article class="doc-article-card">
-            <div class="doc-article-header">
-              <div>
-                <p class="doc-eyebrow">Project</p>
-                <h3 class="doc-project-title">Biochar AIoT Device</h3>
-              </div>
-              <span class="doc-category-badge">Water Research</span>
-            </div>
-            <div class="doc-accordion-list">
-              <details class="doc-accordion-item">
-                <summary>
-                  <span>IEEE/ISEC research abstract</span>
-                  <span class="doc-plus-icon" aria-hidden="true">+</span>
-                </summary>
-                <div class="doc-accordion-body">
-                  <p>Softwood and agricultural-waste biochars compared for heavy-metal and nutrient removal, using pH, conductivity, dissolved oxygen and biological response as measures.</p>
-                </div>
-              </details>
-              <details class="doc-accordion-item">
-                <summary>
-                  <span>Mercer Science and Engineering Fair poster</span>
-                  <span class="doc-plus-icon" aria-hidden="true">+</span>
-                </summary>
-                <div class="doc-accordion-body">
-                  <p>Bench-scale treatment trials compare biochar samples and track changes in water quality over time.</p>
-                </div>
-              </details>
-            </div>
-          </article>
-
-          <!-- Document 3: AI for a Better World (MIT Solve) -->
-          <article class="doc-article-card">
-            <div class="doc-article-header">
-              <div>
-                <p class="doc-eyebrow">Project</p>
-                <h3 class="doc-project-title">AI for a Better World (MIT Solve)</h3>
-              </div>
-              <span class="doc-category-badge">Responsible AI</span>
-            </div>
-            <div class="doc-accordion-list">
-              <details class="doc-accordion-item">
-                <summary>
-                  <span>MIT Solve presentation deck</span>
-                  <span class="doc-plus-icon" aria-hidden="true">+</span>
-                </summary>
-                <div class="doc-accordion-body">
-                  <p>Proposed water-quality node: AI-assisted sensing and treatment, 5 W solar, two-to-three-day runtime and GSM/4G telemetry. The plan includes human review, fixed safety limits and decision logs.</p>
-                </div>
-              </details>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. MEMBERSHIPS SECTION -->
-    <section id="memberships" class="memberships-section" style="border-top: 1px solid var(--color-ink-10); padding: 3.2rem 0 2.2rem; background: var(--color-paper-soft);">
-      <div class="container">
-        <div style="margin-bottom: 1.5rem;">
-          <h2 class="section-title">Memberships &amp; Affiliations</h2>
-          <p class="section-subtext">Continuous scroll of organizations, leadership programs, and professional cohorts where I actively learn and contribute.</p>
-        </div>
-      </div>
-
-      <div class="memberships-ticker-container" aria-label="Continuous memberships ticker ribbon">
-        <div class="memberships-ticker-track">
-          <a href="https://anythingwilldo.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="AWDORG Foundation (Anything Will Do) - Volunteer (Global Youth & Healthcare, ProjectEducate)">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #e8590c, #f08c00);" aria-hidden="true">AWD</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">AWD Org</span>
-              <span class="membership-sleek-org">AWDORG Foundation (Anything Will Do)</span>
-              <span class="membership-sleek-role">Volunteer (Global Youth & Healthcare, ProjectEducate)</span>
-            </div>
-          </a>
-          <a href="https://stepforabetterworld.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="STEP For A Better World LEO Club - Board Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #2b8a3e, #66a80f);" aria-hidden="true">LEO</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">STEP</span>
-              <span class="membership-sleek-org">STEP For A Better World LEO Club</span>
-              <span class="membership-sleek-role">Board Member</span>
-            </div>
-          </a>
-          <a href="https://www.bmes.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="Biomedical Engineering Society (BMES) - Student Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0c8599, #15aabf);" aria-hidden="true">BMES</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">BMES</span>
-              <span class="membership-sleek-org">Biomedical Engineering Society (BMES)</span>
-              <span class="membership-sleek-role">Student Member</span>
-            </div>
-          </a>
-          <a href="https://njwea.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="New Jersey Water Environment Association (NJWEA) - Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0b7285, #1098ad);" aria-hidden="true">NJ</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">NJWEA</span>
-              <span class="membership-sleek-org">New Jersey Water Environment Association (NJWEA)</span>
-              <span class="membership-sleek-role">Member</span>
-            </div>
-          </a>
-          <a href="https://www.aspirations.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="NCWIT Aspirations in Computing (AiC) Community - Community Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #5f3dc4, #c2255c);" aria-hidden="true">NC</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">NCWIT / AiC</span>
-              <span class="membership-sleek-org">NCWIT Aspirations in Computing (AiC) Community</span>
-              <span class="membership-sleek-role">Community Member</span>
-            </div>
-          </a>
-          <a href="https://www.firstinspires.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="FIRST Tech Challenge (FTC) - Team Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #1864ab, #339af0);" aria-hidden="true">FTC</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">FIRST / FTC</span>
-              <span class="membership-sleek-org">FIRST Tech Challenge (FTC)</span>
-              <span class="membership-sleek-role">Team Member</span>
-            </div>
-          </a>
-          <a href="https://ieee-isec.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="IEEE Integrated STEM Education Conference (ISEC) - Student Member and Presenter">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0b3b60, #1971c2);" aria-hidden="true">IEEE</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">IEEE / ISEC</span>
-              <span class="membership-sleek-org">IEEE Integrated STEM Education Conference (ISEC)</span>
-              <span class="membership-sleek-role">Student Member and Presenter</span>
-            </div>
-          </a>
-          <a href="https://www.wef.org/sjwp/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="Water Environment Federation - U.S. Stockholm Junior Water Prize Award">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #099268, #20c997);" aria-hidden="true">WEF</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">WEF</span>
-              <span class="membership-sleek-org">Water Environment Federation</span>
-              <span class="membership-sleek-role">U.S. Stockholm Junior Water Prize Award</span>
-            </div>
-          </a>
-          <a href="https://anythingwilldo.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="AWDORG Foundation (Anything Will Do) - Volunteer (Global Youth & Healthcare, ProjectEducate)">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #e8590c, #f08c00);" aria-hidden="true">AWD</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">AWD Org</span>
-              <span class="membership-sleek-org">AWDORG Foundation (Anything Will Do)</span>
-              <span class="membership-sleek-role">Volunteer (Global Youth & Healthcare, ProjectEducate)</span>
-            </div>
-          </a>
-          <a href="https://stepforabetterworld.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="STEP For A Better World LEO Club - Board Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #2b8a3e, #66a80f);" aria-hidden="true">LEO</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">STEP</span>
-              <span class="membership-sleek-org">STEP For A Better World LEO Club</span>
-              <span class="membership-sleek-role">Board Member</span>
-            </div>
-          </a>
-          <a href="https://www.bmes.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="Biomedical Engineering Society (BMES) - Student Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0c8599, #15aabf);" aria-hidden="true">BMES</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">BMES</span>
-              <span class="membership-sleek-org">Biomedical Engineering Society (BMES)</span>
-              <span class="membership-sleek-role">Student Member</span>
-            </div>
-          </a>
-          <a href="https://njwea.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="New Jersey Water Environment Association (NJWEA) - Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0b7285, #1098ad);" aria-hidden="true">NJ</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">NJWEA</span>
-              <span class="membership-sleek-org">New Jersey Water Environment Association (NJWEA)</span>
-              <span class="membership-sleek-role">Member</span>
-            </div>
-          </a>
-          <a href="https://www.aspirations.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="NCWIT Aspirations in Computing (AiC) Community - Community Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #5f3dc4, #c2255c);" aria-hidden="true">NC</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">NCWIT / AiC</span>
-              <span class="membership-sleek-org">NCWIT Aspirations in Computing (AiC) Community</span>
-              <span class="membership-sleek-role">Community Member</span>
-            </div>
-          </a>
-          <a href="https://www.firstinspires.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="FIRST Tech Challenge (FTC) - Team Member">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #1864ab, #339af0);" aria-hidden="true">FTC</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">FIRST / FTC</span>
-              <span class="membership-sleek-org">FIRST Tech Challenge (FTC)</span>
-              <span class="membership-sleek-role">Team Member</span>
-            </div>
-          </a>
-          <a href="https://ieee-isec.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="IEEE Integrated STEM Education Conference (ISEC) - Student Member and Presenter">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0b3b60, #1971c2);" aria-hidden="true">IEEE</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">IEEE / ISEC</span>
-              <span class="membership-sleek-org">IEEE Integrated STEM Education Conference (ISEC)</span>
-              <span class="membership-sleek-role">Student Member and Presenter</span>
-            </div>
-          </a>
-          <a href="https://www.wef.org/sjwp/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="Water Environment Federation - U.S. Stockholm Junior Water Prize Award">
-            <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #099268, #20c997);" aria-hidden="true">WEF</span>
-            <div class="membership-sleek-body">
-              <span class="membership-sleek-title">WEF</span>
-              <span class="membership-sleek-org">Water Environment Federation</span>
-              <span class="membership-sleek-role">U.S. Stockholm Junior Water Prize Award</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. AWARDS & FEATURES SECTION -->
-    <section id="awards" class="awards-section" style="border-top: 1px solid var(--color-ink-10); padding: 4rem 0;">
-      <div class="container">
-        <div style="margin-bottom: 2rem;">
-          <h2 class="section-title">Awards &amp; Features</h2>
-          <p class="section-subtext">Selected honors, STEM competitions, research prizes, and artistic distinctions.</p>
-        </div>
-<div class="container">
-        <div class="awards-grid">
-
-          <!-- Award 1 -->
-          <article class="award-item-card">
-            <div>
-              <div class="award-card-badge-row">
-                <span class="award-category-pill">National Winner</span>
-                <span class="award-year">2026</span>
-              </div>
-              <h3 class="award-card-title">MIT Solve National Winner &amp; Leopold Scholar</h3>
-              <p class="award-card-desc">
-                One of five national AI for a Better World winners; presented autonomous ocean pH buoy research at the MIT Media Lab. Lawrenceville also named Aadya a Leopold Scholar in Ecology and Ethics.
-              </p>
-            </div>
-            <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab" target="_blank" rel="noopener noreferrer" class="award-card-link">
-              <span>Leopold Scholar &amp; MIT Solve winner &mdash; Lawrenceville</span>
-              <span aria-hidden="true">&nearr;</span>
-            </a>
-          </article>
-
-          <!-- Award 2 -->
-          <article class="award-item-card">
-            <div>
-              <div class="award-card-badge-row">
-                <span class="award-category-pill">World Championship</span>
-                <span class="award-year">2024</span>
-              </div>
-              <h3 class="award-card-title">WPI US Open World Championship &mdash; Rank #14</h3>
-              <p class="award-card-desc">
-                Ranked #14 out of 108 international robotics teams at the Worcester Polytechnic Institute US Open Invitational as Lead Autonomous Programmer, achieving Robot Design Finalist honors.
-              </p>
-            </div>
-            <a href="portfolio.html" class="award-card-link">
-              <span>WPI US Open International Invitational Details</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <!-- Award 3 -->
-          <article class="award-item-card">
-            <div>
-              <div class="award-card-badge-row">
-                <span class="award-category-pill">Water Research</span>
-                <span class="award-year">2024 &ndash; 2026</span>
-              </div>
-              <h3 class="award-card-title">Water Research Prizes &amp; Stockholm Junior Award</h3>
-              <p class="award-card-desc">
-                Second Place in Earth and Environmental Science at Mercer County Science &amp; Engineering Fair (MSEF), Stockholm Junior Water Prize regional award, NOAA special recognition, and NJWEA conference invitation.
-              </p>
-            </div>
-            <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/from-water-research-to-biomedical-engineering-lawrentians-recognized-for-scientific-excellence" target="_blank" rel="noopener noreferrer" class="award-card-link">
-              <span>MSEF, Stockholm &amp; NOAA awards &mdash; Lawrenceville</span>
-              <span aria-hidden="true">&nearr;</span>
-            </a>
-          </article>
-
-          <!-- Award 4 -->
-          <article class="award-item-card">
-            <div>
-              <div class="award-card-badge-row">
-                <span class="award-category-pill">Media Feature</span>
-                <span class="award-year">Summer 2026</span>
-              </div>
-              <h3 class="award-card-title">Featured in The Lawrentian (&ldquo;One 2 Watch&rdquo;)</h3>
-              <p class="award-card-desc">
-                The school magazine feature traces Aadya's biochar filtration empirical trials and its evolution into an AI-powered water-remediation buoy node.
-              </p>
-            </div>
-            <a href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer" class="award-card-link">
-              <span>&ldquo;One 2 Watch&rdquo; profile in The Lawrentian</span>
-              <span aria-hidden="true">&nearr;</span>
-            </a>
-          </article>
-
-          <!-- Award 5 -->
-          <article class="award-item-card">
-            <div>
-              <div class="award-card-badge-row">
-                <span class="award-category-pill">Civic Commendation</span>
-                <span class="award-year">2025</span>
-              </div>
-              <h3 class="award-card-title">New Jersey Legislative Commendation</h3>
-              <p class="award-card-desc">
-                Official legislative commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing 150+ youth for regional hunger relief and senior care supply packaging.
-              </p>
-            </div>
-            <a href="portfolio.html" class="award-card-link">
-              <span>New Jersey Assembly &amp; Senate Citation Details</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <!-- Award 6 -->
-          <article class="award-item-card">
-            <div>
-              <div class="award-card-badge-row">
-                <span class="award-category-pill">Fine Arts</span>
-                <span class="award-year">2024</span>
-              </div>
-              <h3 class="award-card-title">Music-Fest International Rising Talent Grand Prize</h3>
-              <p class="award-card-desc">
-                Grand Prize winner with solo classical piano recitals at Greenfield Hall at Manhattan School of Music, New York.
-              </p>
-            </div>
-            <a href="portfolio.html" class="award-card-link">
-              <span>Manhattan School &amp; Greenfield Hall Performances</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <!-- Award 7 -->
-          <article class="award-item-card">
-            <div>
-              <div class="award-card-badge-row">
-                <span class="award-category-pill">Writing</span>
-                <span class="award-year">2025</span>
-              </div>
-              <h3 class="award-card-title">John Locke Institute Essay Prize Commendation</h3>
-              <p class="award-card-desc">
-                Commended in the prestigious international John Locke Global Essay Competition from over 19,000 entries across 138 nations; school annual English and Humanities literary prize winner.
-              </p>
-            </div>
-            <a href="portfolio.html" class="award-card-link">
-              <span>John Locke Institute Global Commendation</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-          <!-- Award 8 -->
-          <article class="award-item-card">
-            <div>
-              <div class="award-card-badge-row">
-                <span class="award-category-pill">Speech</span>
-                <span class="award-year">2021</span>
-              </div>
-              <h3 class="award-card-title">North South Foundation National Public Speaking 1st Place</h3>
-              <p class="award-card-desc">
-                First Place National Champion in public speaking and oratorical debate, establishing early foundations in scientific communication and community advocacy.
-              </p>
-            </div>
-            <a href="portfolio.html" class="award-card-link">
-              <span>National NSF Public Speaking Championship</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </article>
-
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <!-- 7. INVITE AADYA SECTION (Reference: Speak • Mentor • Research) -->
-    <span id="connect" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
-    <section id="invite" class="invite-section">
-      <div class="invite-card-inner">
-        <span class="invite-badge-eyebrow">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></svg>
-          Invite Aadya
-        </span>
-        <h2 class="invite-title">Speak &bull; Mentor &bull; Research</h2>
-        <p class="invite-lead">
-          Aadya is available to speak at student events, mentor young women entering STEM, and collaborate on water, responsible-AI and equitable-health research. Reach out to arrange a conversation.
+</section><section id="featured" class="border-t border-ink/10 bg-white py-14 sm:py-16">
+  <div class="mx-auto max-w-6xl px-5 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 pb-8 border-b border-ink/10">
+      <div>
+        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-berry">Press &amp; Media Coverage</p>
+        <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-plum sm:text-4xl">Featured In &amp; Publications</h2>
+        <p class="mt-2 max-w-2xl text-sm leading-6 text-ink/65">
+          Official press articles, magazine profiles, and institutional announcements covering Aadya's environmental research, AI innovation, and writing honors.
         </p>
-        <div class="invite-actions-row">
-          <a href="mailto:aadyanj@gmail.com" class="btn-invite-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Email to invite
-          </a>
-          <a href="connect.html" class="btn-invite-secondary">
-            Other ways to connect &rarr;
-          </a>
-        </div>
       </div>
-    </section>
-  </main>
+      <div class="flex flex-wrap items-center gap-2 text-xs text-ink/50">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 font-medium text-emerald-700 border border-emerald-200">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          Direct Article Links
+        </span>
+      </div>
+    </div>
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; 2026 Aadya Agarwal &bull; The Lawrenceville School &bull; Eco-engineer &amp; Equitable Healthpreneur.</p>
-      <a href="#top" class="footer-back-to-top">
-        <span>Back to top</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    <!-- Featured Publications Grid -->
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- 1. The Lawrentian -->
+      <a href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between rounded-2xl border border-ink/15 bg-paper p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-plum/40 hover:bg-white hover:shadow-lg">
+        <div>
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center rounded-md bg-[#ba1f43]/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#ba1f43]">
+              The Lawrentian
+            </span>
+            <span class="text-xs text-ink/40">Magazine Profile</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold leading-snug text-ink transition-colors group-hover:text-plum">
+            “One 2 Watch: A Clear Flow of Ideas”
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/65 line-clamp-3">
+            In-depth profile tracing Aadya's biochar water research, journey in environmental sustainability, and vision for AI-powered autonomous filtration.
+          </p>
+        </div>
+        <div class="mt-5 flex items-center gap-1.5 text-xs font-semibold text-berry group-hover:text-plum">
+          <span>Read Magazine Feature</span>
+          <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- 2. MIT Solve & MIT Media Lab -->
+      <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between rounded-2xl border border-ink/15 bg-paper p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-plum/40 hover:bg-white hover:shadow-lg">
+        <div>
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center rounded-md bg-[#5f3dc4]/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#5f3dc4]">
+              MIT Solve · Media Lab
+            </span>
+            <span class="text-xs text-ink/40">National Winner</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold leading-snug text-ink transition-colors group-hover:text-plum">
+            From Lawrenceville to the MIT Media Lab
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/65 line-clamp-3">
+            One of five national AI for a Better World winners; showcased water telemetry at the MIT Media Lab and named Leopold Scholar in Ecology &amp; Ethics.
+          </p>
+        </div>
+        <div class="mt-5 flex items-center gap-1.5 text-xs font-semibold text-berry group-hover:text-plum">
+          <span>Read School Article</span>
+          <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- 3. Lawrenceville School Water Research Feature -->
+      <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/from-water-research-to-biomedical-engineering-lawrentians-recognized-for-scientific-excellence" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between rounded-2xl border border-ink/15 bg-paper p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-plum/40 hover:bg-white hover:shadow-lg">
+        <div>
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center rounded-md bg-[#0b7285]/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#0b7285]">
+              Scientific Excellence
+            </span>
+            <span class="text-xs text-ink/40">Research Awards</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold leading-snug text-ink transition-colors group-hover:text-plum">
+            Water Research &amp; Environmental Honors
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/65 line-clamp-3">
+            Institutional spotlight on Aadya's Stockholm Junior Water Prize regional award, MSEF 2nd Place, NOAA special award, and NJWEA presentation invitation.
+          </p>
+        </div>
+        <div class="mt-5 flex items-center gap-1.5 text-xs font-semibold text-berry group-hover:text-plum">
+          <span>Read Press Release</span>
+          <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- 4. Princeton Day School Creative Writing Spotlight -->
+      <a href="https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between rounded-2xl border border-ink/15 bg-paper p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-plum/40 hover:bg-white hover:shadow-lg">
+        <div>
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center rounded-md bg-[#2b8a3e]/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2b8a3e]">
+              Princeton Day School
+            </span>
+            <span class="text-xs text-ink/40">Writing Spotlight</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold leading-snug text-ink transition-colors group-hover:text-plum">
+            Scholastic Writing &amp; Creative Recognition
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/65 line-clamp-3">
+            PDS announcement celebrating Aadya's creative endeavors and 2025 regional Scholastic Art &amp; Writing Honorable Mention for “Joy Is Universal.”
+          </p>
+        </div>
+        <div class="mt-5 flex items-center gap-1.5 text-xs font-semibold text-berry group-hover:text-plum">
+          <span>View Facebook Announcement</span>
+          <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- 5. IEEE Integrated STEM Conference (ISEC) -->
+      <a href="https://ieee-isec.org/" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between rounded-2xl border border-ink/15 bg-paper p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-plum/40 hover:bg-white hover:shadow-lg">
+        <div>
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center rounded-md bg-[#1864ab]/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#1864ab]">
+              IEEE / ISEC Princeton
+            </span>
+            <span class="text-xs text-ink/40">Peer-Reviewed Conf</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold leading-snug text-ink transition-colors group-hover:text-plum">
+            K–12 Research at Princeton University
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/65 line-clamp-3">
+            Author and oral presenter on biochar water treatment, investigating heavy-metal sorption, conductivity, and water-quality kinetics.
+          </p>
+        </div>
+        <div class="mt-5 flex items-center gap-1.5 text-xs font-semibold text-berry group-hover:text-plum">
+          <span>Visit Conference Site</span>
+          <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- 6. PDS Instagram Community Feature -->
+      <a href="https://www.instagram.com/p/DbdafHpFcEk/" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between rounded-2xl border border-ink/15 bg-paper p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-plum/40 hover:bg-white hover:shadow-lg">
+        <div>
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center rounded-md bg-[#e8590c]/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#e8590c]">
+              PDS Instagram Spotlight
+            </span>
+            <span class="text-xs text-ink/40">Student Feature</span>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold leading-snug text-ink transition-colors group-hover:text-plum">
+            Student Leadership &amp; Community Impact
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/65 line-clamp-3">
+            School spotlight post celebrating Aadya's achievements across robotics, STEM competitions, community service, and academic leadership.
+          </p>
+        </div>
+        <div class="mt-5 flex items-center gap-1.5 text-xs font-semibold text-berry group-hover:text-plum">
+          <span>View Instagram Post</span>
+          <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+        </div>
       </a>
     </div>
-  </footer>
-  <!-- Interactive Detail Modal with Bottom Image Slider (No Captions, No Headings) -->
-  <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-card">
-      <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
-      
-      <div class="modal-content-area">
-        <div class="modal-badge-row">
-          <span id="modalCategory" class="modal-category"></span>
-        </div>
-        <h2 id="modalTitle" class="modal-title"></h2>
-        <p id="modalDesc" class="modal-description"></p>
-        
-        <div id="modalHighlightsWrap" class="modal-highlights-wrap">
-          <ul id="modalHighlights" class="modal-highlights-list"></ul>
-        </div>
-        
-        <div id="modalTags" class="modal-tags"></div>
-        
-        <!-- Bottom Project Image Slider (Pure images without caption or heading) -->
-        <div id="modalSlider" class="modal-image-slider">
-          <div class="modal-slider-viewport">
-            <div id="modalSliderTrack" class="modal-slider-track"></div>
-            
-            <button type="button" class="modal-slider-arrow prev" id="modalSliderPrev" aria-label="Previous image">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <button type="button" class="modal-slider-arrow next" id="modalSliderNext" aria-label="Next image">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-          </div>
-          
-          <div id="modalSliderDots" class="modal-slider-dots"></div>
-        </div>
+
+    <!-- Quick Partner & Organization Badges Bar -->
+    <div class="mt-10 rounded-2xl border border-ink/10 bg-paper/50 p-5 sm:p-6">
+      <p class="text-center text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
+        Recognized &amp; Supported By Institutions Nationwide
+      </p>
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+        <a href="https://solve.mit.edu/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:text-plum">
+          MIT Solve
+        </a>
+        <a href="https://raise.mit.edu/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:text-plum">
+          MIT RAISE
+        </a>
+        <a href="https://thelawrentian.lawrenceville.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:text-plum">
+          The Lawrentian
+        </a>
+        <a href="https://ieee-isec.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:text-plum">
+          IEEE / ISEC
+        </a>
+        <a href="https://njwea.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:text-plum">
+          NJWEA
+        </a>
+        <a href="https://www.noaa.gov/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:text-plum">
+          NOAA
+        </a>
+        <a href="https://www.artandwriting.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:text-plum">
+          Scholastic Art &amp; Writing
+        </a>
+        <a href="https://www.pds.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:text-plum">
+          Princeton Day School
+        </a>
       </div>
     </div>
   </div>
+</section><section id="documents" class="border-t border-ink/10 bg-paper py-14 sm:py-16"><div class="mx-auto max-w-6xl px-5 sm:px-6"><h2 class="font-display text-3xl font-semibold tracking-tight text-plum sm:text-4xl">Project Documents</h2><p class="mt-2 max-w-2xl text-sm leading-6 text-ink/60">Key methods, designs and next steps from each project.</p><div class="mt-8 grid gap-5 md:grid-cols-2"><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6"><div class="flex flex-wrap items-start justify-between gap-3 border-b border-ink/10 pb-4"><div><p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-ink/45">Project</p><h3 class="mt-1 font-display text-lg font-semibold leading-snug">Autonomous Ocean pH Buoy</h3></div><span class="rounded-md border border-plum/20 bg-plum-soft/60 px-2.5 py-1 text-xs font-medium text-plum">Climate Tech</span></div><div class="mt-4 space-y-2"><details class="group rounded-lg border border-ink/10 bg-paper/60"><summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-medium marker:hidden [&amp;::-webkit-details-marker]:hidden"><span>2025 3M Young Scientist Challenge project brief</span><span aria-hidden="true" class="text-xl text-plum group-open:rotate-45">+</span></summary><div class="border-t border-ink/10 px-4 pb-4 pt-3"><p class="text-sm leading-6 text-ink/70">Concept: an Arduino reads water pH and triggers a servo to release calcium carbonate when acidity passes a set threshold.</p></div></details><details class="group rounded-lg border border-ink/10 bg-paper/60"><summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-medium marker:hidden [&amp;::-webkit-details-marker]:hidden"><span>2025 3M application notes</span><span aria-hidden="true" class="text-xl text-plum group-open:rotate-45">+</span></summary><div class="border-t border-ink/10 px-4 pb-4 pt-3"><p class="text-sm leading-6 text-ink/70">Next steps: test buoyancy, calibrate the dispenser, compare mineral options, add solar power and explore predictive dosing with Python.</p></div></details></div></article><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6"><div class="flex flex-wrap items-start justify-between gap-3 border-b border-ink/10 pb-4"><div><p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-ink/45">Project</p><h3 class="mt-1 font-display text-lg font-semibold leading-snug">Biochar Water Treatment</h3></div><span class="rounded-md border border-plum/20 bg-plum-soft/60 px-2.5 py-1 text-xs font-medium text-plum">Water Research</span></div><div class="mt-4 space-y-2"><details class="group rounded-lg border border-ink/10 bg-paper/60"><summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-medium marker:hidden [&amp;::-webkit-details-marker]:hidden"><span>IEEE/ISEC research abstract</span><span aria-hidden="true" class="text-xl text-plum group-open:rotate-45">+</span></summary><div class="border-t border-ink/10 px-4 pb-4 pt-3"><p class="text-sm leading-6 text-ink/70">Softwood and agricultural-waste biochars compared for heavy-metal and nutrient removal, using pH, conductivity, dissolved oxygen and biological response as measures.</p></div></details><details class="group rounded-lg border border-ink/10 bg-paper/60"><summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-medium marker:hidden [&amp;::-webkit-details-marker]:hidden"><span>Mercer Science and Engineering Fair poster</span><span aria-hidden="true" class="text-xl text-plum group-open:rotate-45">+</span></summary><div class="border-t border-ink/10 px-4 pb-4 pt-3"><p class="text-sm leading-6 text-ink/70">Bench-scale treatment trials compare biochar samples and track changes in water quality over time.</p></div></details></div></article><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6"><div class="flex flex-wrap items-start justify-between gap-3 border-b border-ink/10 pb-4"><div><p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-ink/45">Project</p><h3 class="mt-1 font-display text-lg font-semibold leading-snug">AI for a Better World</h3></div><span class="rounded-md border border-plum/20 bg-plum-soft/60 px-2.5 py-1 text-xs font-medium text-plum">Responsible AI</span></div><div class="mt-4 space-y-2"><details class="group rounded-lg border border-ink/10 bg-paper/60"><summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-medium marker:hidden [&amp;::-webkit-details-marker]:hidden"><span>MIT Solve presentation deck</span><span aria-hidden="true" class="text-xl text-plum group-open:rotate-45">+</span></summary><div class="border-t border-ink/10 px-4 pb-4 pt-3"><p class="text-sm leading-6 text-ink/70">Proposed water-quality node: AI-assisted sensing and treatment, 5 W solar, two-to-three-day runtime and GSM/4G telemetry. The plan includes human review, fixed safety limits and decision logs.</p></div></details></div></article></div></div></section><section id="memberships" class="border-t border-ink/10 bg-paper py-14 sm:py-16">
+  <div class="mx-auto max-w-6xl px-5 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+      <div>
+        <h2 class="font-display text-3xl font-semibold tracking-tight text-plum sm:text-4xl">Memberships</h2>
+        <p class="mt-2 max-w-2xl text-sm leading-6 text-ink/60">
+          Organizations, professional bodies, and leadership cohorts where Aadya actively participates or holds membership.
+        </p>
+      </div>
+      <a href="memberships.html" class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-berry hover:text-plum transition">
+        View All Organizations &rarr;
+      </a>
+    </div>
 
-  <script src="modern-script.js?v=35"></script>
+    <!-- Continuous Marquee Ticker (infinite smooth moving ribbon) -->
+    <div class="mt-8 memberships-ticker-container" aria-label="Continuous memberships ticker ribbon">
+      <div class="memberships-ticker-track">
+        <a href="https://anythingwilldo.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="AWDORG Foundation (Anything Will Do) - Volunteer">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #e8590c, #f08c00);" aria-hidden="true">AWD</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">AWD Org</span>
+            <span class="membership-sleek-org">AWDORG Foundation (Anything Will Do)</span>
+            <span class="membership-sleek-role">Volunteer (Youth &amp; Healthcare)</span>
+          </div>
+        </a>
+        <a href="https://stepforabetterworld.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="STEP For A Better World LEO Club - Board Member">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #c2255c, #66a80f);" aria-hidden="true">LEO</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">STEP</span>
+            <span class="membership-sleek-org">STEP For A Better World LEO Club</span>
+            <span class="membership-sleek-role">Board Member</span>
+          </div>
+        </a>
+        <a href="https://www.bmes.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="Biomedical Engineering Society (BMES) - Student Member">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0c8599, #15aabf);" aria-hidden="true">BMES</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">BMES</span>
+            <span class="membership-sleek-org">Biomedical Engineering Society</span>
+            <span class="membership-sleek-role">Student Member</span>
+          </div>
+        </a>
+        <a href="https://njwea.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="New Jersey Water Environment Association (NJWEA) - Member">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0b7285, #1098ad);" aria-hidden="true">NJ</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">NJWEA</span>
+            <span class="membership-sleek-org">NJ Water Environment Association</span>
+            <span class="membership-sleek-role">Stockholm Junior Water Prize Award</span>
+          </div>
+        </a>
+        <a href="https://www.aspirations.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="NCWIT Aspirations in Computing (AiC) Community - Community Member">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #5f3dc4, #c2255c);" aria-hidden="true">NC</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">NCWIT / AiC</span>
+            <span class="membership-sleek-org">National Center for Women &amp; IT</span>
+            <span class="membership-sleek-role">Aspirations in Computing Member</span>
+          </div>
+        </a>
+        <a href="https://www.firstinspires.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="FIRST Tech Challenge (FTC) - Team Member">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #1864ab, #339af0);" aria-hidden="true">FTC</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">FIRST / FTC</span>
+            <span class="membership-sleek-org">FIRST Tech Challenge (FTC)</span>
+            <span class="membership-sleek-role">Team Member</span>
+          </div>
+        </a>
+        <a href="https://ieee-isec.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="IEEE Integrated STEM Education Conference (ISEC) - Student Member and Presenter">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0b3b60, #1971c2);" aria-hidden="true">IEEE</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">IEEE / ISEC</span>
+            <span class="membership-sleek-org">IEEE Integrated STEM Education</span>
+            <span class="membership-sleek-role">Student Member &amp; Presenter</span>
+          </div>
+        </a>
+        <a href="https://www.wef.org/sjwp/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-label="Water Environment Federation - U.S. Stockholm Junior Water Prize Award">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #099268, #20c997);" aria-hidden="true">WEF</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">WEF</span>
+            <span class="membership-sleek-org">Water Environment Federation</span>
+            <span class="membership-sleek-role">U.S. SJWP Awardee</span>
+          </div>
+        </a>
+
+        <!-- Duplicate set for seamless continuous marquee loop -->
+        <a href="https://anythingwilldo.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-hidden="true" tabindex="-1">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #e8590c, #f08c00);">AWD</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">AWD Org</span>
+            <span class="membership-sleek-org">AWDORG Foundation (Anything Will Do)</span>
+            <span class="membership-sleek-role">Volunteer (Youth &amp; Healthcare)</span>
+          </div>
+        </a>
+        <a href="https://stepforabetterworld.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-hidden="true" tabindex="-1">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #c2255c, #66a80f);">LEO</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">STEP</span>
+            <span class="membership-sleek-org">STEP For A Better World LEO Club</span>
+            <span class="membership-sleek-role">Board Member</span>
+          </div>
+        </a>
+        <a href="https://www.bmes.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-hidden="true" tabindex="-1">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0c8599, #15aabf);">BMES</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">BMES</span>
+            <span class="membership-sleek-org">Biomedical Engineering Society</span>
+            <span class="membership-sleek-role">Student Member</span>
+          </div>
+        </a>
+        <a href="https://njwea.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-hidden="true" tabindex="-1">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0b7285, #1098ad);">NJ</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">NJWEA</span>
+            <span class="membership-sleek-org">NJ Water Environment Association</span>
+            <span class="membership-sleek-role">Stockholm Junior Water Prize Award</span>
+          </div>
+        </a>
+        <a href="https://www.aspirations.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-hidden="true" tabindex="-1">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #5f3dc4, #c2255c);">NC</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">NCWIT / AiC</span>
+            <span class="membership-sleek-org">National Center for Women &amp; IT</span>
+            <span class="membership-sleek-role">Aspirations in Computing Member</span>
+          </div>
+        </a>
+        <a href="https://www.firstinspires.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-hidden="true" tabindex="-1">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #1864ab, #339af0);">FTC</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">FIRST / FTC</span>
+            <span class="membership-sleek-org">FIRST Tech Challenge (FTC)</span>
+            <span class="membership-sleek-role">Team Member</span>
+          </div>
+        </a>
+        <a href="https://ieee-isec.org/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-hidden="true" tabindex="-1">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #0b3b60, #1971c2);">IEEE</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">IEEE / ISEC</span>
+            <span class="membership-sleek-org">IEEE Integrated STEM Education</span>
+            <span class="membership-sleek-role">Student Member &amp; Presenter</span>
+          </div>
+        </a>
+        <a href="https://www.wef.org/sjwp/" target="_blank" rel="noopener noreferrer" class="membership-sleek-card" aria-hidden="true" tabindex="-1">
+          <span class="membership-sleek-badge" style="background: linear-gradient(135deg, #099268, #20c997);">WEF</span>
+          <div class="membership-sleek-body">
+            <span class="membership-sleek-title">WEF</span>
+            <span class="membership-sleek-org">Water Environment Federation</span>
+            <span class="membership-sleek-role">U.S. SJWP Awardee</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section><section id="invite" class="border-t border-ink/10 bg-plum-soft/40 py-14 sm:py-16"><div class="mx-auto max-w-4xl px-5 text-center sm:px-6"><p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-berry">Invite Aadya</p><h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-plum sm:text-4xl">Speak · Mentor · Research</h2><p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-ink/70">Aadya is available to speak at student events, mentor young women entering STEM, and collaborate on water, responsible-AI and equitable-health research. Reach out to arrange a conversation.</p><div class="mt-6 flex flex-wrap items-center justify-center gap-3"><a href="mailto:aadyanj@gmail.com" class="rounded-lg bg-plum px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-plum/90">Email to invite</a><a href="connect.html" class="rounded-lg border border-plum/40 bg-white px-5 py-2.5 text-sm font-semibold text-plum transition hover:bg-plum/5">Other ways to connect</a></div></div></section><section id="awards" class="border-t border-ink/10 bg-white/55 py-14 sm:py-16"><div class="mx-auto max-w-6xl px-5 sm:px-6"><h2 class="font-display text-3xl font-semibold tracking-tight text-plum sm:text-4xl">Awards &amp; Features</h2><p class="mt-2 max-w-2xl text-sm leading-6 text-ink/60">Selected recognition, with links to the original school and publication posts.</p><div class="mt-8 grid gap-4 md:grid-cols-2"><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-semibold">MIT Solve national winner &amp; Leopold Scholar</h3><p class="mt-2 text-sm leading-6 text-ink/65">One of five national AI for a Better World winners; presented at the MIT Media Lab. Lawrenceville also named Aadya a Leopold Scholar in Ecology and Ethics.</p><a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-plum underline underline-offset-4 hover:text-berry">Leopold Scholar &amp; MIT Solve winner — Lawrenceville<span aria-hidden="true"> ↗</span></a></article><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-semibold">Water research prizes</h3><p class="mt-2 text-sm leading-6 text-ink/65">Second place in Earth and Environmental Science at MSEF, a Stockholm Junior Water Prize regional award, a NOAA special award, and an NJWEA conference invitation.</p><a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/from-water-research-to-biomedical-engineering-lawrentians-recognized-for-scientific-excellence" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-plum underline underline-offset-4 hover:text-berry">MSEF, Stockholm &amp; NOAA awards — Lawrenceville<span aria-hidden="true"> ↗</span></a></article><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-semibold">Featured in The Lawrentian</h3><p class="mt-2 text-sm leading-6 text-ink/65">The “One 2 Watch” feature traces the biochar research and its evolution into an AI-powered water-remediation concept.</p><a href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-plum underline underline-offset-4 hover:text-berry">One 2 Watch: A Clear Flow of Ideas — The Lawrentian<span aria-hidden="true"> ↗</span></a></article><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-semibold">Creative writing recognition</h3><p class="mt-2 text-sm leading-6 text-ink/65">Princeton Day School highlighted Aadya’s creative work. Her resume lists a 2025 regional Scholastic Art &amp; Writing Honorable Mention for “Joy Is Universal.”</p><a href="https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-plum underline underline-offset-4 hover:text-berry">Creative writing recognition — Princeton Day School<span aria-hidden="true"> ↗</span></a></article><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-semibold">Princeton Day School feature</h3><p class="mt-2 text-sm leading-6 text-ink/65">A second school post celebrates Aadya’s work and achievements.</p><a href="https://www.instagram.com/p/DbdafHpFcEk/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-plum underline underline-offset-4 hover:text-berry">Princeton Day School Instagram feature<span aria-hidden="true"> ↗</span></a></article><article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-semibold">Humanities &amp; English prize</h3><p class="mt-2 text-sm leading-6 text-ink/65">Awarded Lawrenceville’s John H. Imbrie Humanities/English Prize for a Second Former.</p><a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/underform-students-recognized-for-strengthening-the-lawrenceville-community" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-plum underline underline-offset-4 hover:text-berry">John H. Imbrie Prize — Lawrenceville<span aria-hidden="true"> ↗</span></a></article></div><p class="mt-6 text-sm leading-6 text-ink/60">Also recognized for FIRST LEGO League robot design, the PDS Panther Hackathon Best Beginner Hack, Science Olympiad event medals, public speaking and music.</p></div></section><footer class="border-t border-ink/10 bg-white px-5 py-8 text-center text-sm text-ink/50">Aadya Agarwal · The Lawrenceville School · Class of 2029 · <a class="text-plum hover:underline" href="about.html">About</a></footer></main>
+  </div>
+  
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Portfolio Filter Tabs
+  const filterBtns = document.querySelectorAll('.portfolio-filter-tabs .filter-tab-btn');
+  const projectCards = document.querySelectorAll('.portfolio-cards-grid .portfolio-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetFilter = btn.getAttribute('data-filter');
+
+      // Update button active states
+      filterBtns.forEach(b => {
+        b.setAttribute('aria-pressed', 'false');
+        b.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum';
+      });
+      btn.setAttribute('aria-pressed', 'true');
+      btn.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-plum bg-plum text-white';
+
+      // Show / hide matching cards with smooth animation
+      projectCards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (targetFilter === 'all' || cardCat === targetFilter) {
+          card.style.display = '';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(8px)';
+          requestAnimationFrame(() => {
+            card.style.transition = 'opacity 300ms ease, transform 300ms ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 2. Project Detail Modal
+  // Modal handled by projects_modal_system.js
+});
+</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.hero-slider-container');
+  const track = document.querySelector('.hero-slider-track');
+  const prevBtn = document.querySelector('.hero-slider-prev');
+  const nextBtn = document.querySelector('.hero-slider-next');
+  const totalOriginalSlides = 7;
+  let currentSlide = 0;
+  let isTransitioning = false;
+
+  const AUTO_PLAY_INTERVAL = 3500; // Changes slide every 3.5 seconds
+  let autoPlayTimer = null;
+
+  function updateSliderPosition(animate = true) {
+    if (!track) return;
+    const slideItem = track.querySelector('.hero-slide-item');
+    if (!slideItem) return;
+    const slideWidth = slideItem.getBoundingClientRect().width;
+    if (animate) {
+      track.style.transition = 'transform 500ms ease-in-out';
+    } else {
+      track.style.transition = 'none';
+    }
+    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    currentSlide++;
+    updateSliderPosition(true);
+
+    if (currentSlide === totalOriginalSlides) {
+      setTimeout(() => {
+        currentSlide = 0;
+        updateSliderPosition(false);
+        isTransitioning = false;
+      }, 500);
+    } else {
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
+    }
+  }
+
+  function prevSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    if (currentSlide === 0) {
+      currentSlide = totalOriginalSlides;
+      updateSliderPosition(false);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          currentSlide = totalOriginalSlides - 1;
+          updateSliderPosition(true);
+          setTimeout(() => { isTransitioning = false; }, 500);
+        });
+      });
+    } else {
+      currentSlide--;
+      updateSliderPosition(true);
+      setTimeout(() => { isTransitioning = false; }, 500);
+    }
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayTimer = setInterval(() => {
+      nextSlide();
+    }, AUTO_PLAY_INTERVAL);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  function resetAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      nextSlide();
+      resetAutoPlay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      prevSlide();
+      resetAutoPlay();
+    });
+  }
+
+  if (container) {
+    container.addEventListener('mouseenter', () => {
+      stopAutoPlay();
+    });
+    container.addEventListener('mouseleave', () => {
+      startAutoPlay();
+    });
+  }
+
+  // Keyboard navigation
+  container?.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      nextSlide();
+      resetAutoPlay();
+    }
+    if (e.key === 'ArrowLeft') {
+      prevSlide();
+      resetAutoPlay();
+    }
+  });
+
+  // Touch and drag swipe support
+  let startX = 0;
+  container?.addEventListener('touchstart', (e) => {
+    stopAutoPlay();
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  container?.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) nextSlide();
+      else prevSlide();
+    }
+    startAutoPlay();
+  }, { passive: true });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoPlay();
+    } else {
+      startAutoPlay();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    updateSliderPosition(false);
+  });
+
+  // Start autoplay automatically
+  startAutoPlay();
+});
+</script>
+<script src="projects_modal_system.js?v=6"></script>
+<script src="cms-loader.js"></script>
 </body>
 </html>

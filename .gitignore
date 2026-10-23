@@ -3,10 +3,10 @@ Aadya Agarwal - Multimedia*/
 Aadya Aranyo - website*/
 
 # Large unreferenced raw video recordings (>100MB rejected by GitHub)
-assets/**/*.mp4
-assets/**/*.mov
-*.mp4
-*.mov
+**/*.mp4
+**/*.mov
+**/*.avi
+**/*.wmv
 
 # Python cache & temporary test scratchpads
 scratch/

@@ -1,233 +1,432 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="antialiased">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awards &amp; Features | Aadya Agarwal</title>
-  <meta name="description" content="Awards, honors, and press features for Aadya Agarwal in AI, environmental science, competitive robotics, and humanities.">
+  <title>Awards &amp; Distinctions | Aadya Agarwal</title>
+  <meta name="description" content="Awards, honors, and distinctions earned across robotics, environmental research, creative writing, music, and civic leadership.">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="modern-style.css?v=20">
-  <script src="auth.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modern-style.css?v=350">
+  <style>
+    .award-card-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+      border: 1px solid rgba(15, 15, 18, 0.12);
+      border-radius: 18px;
+      padding: 1.6rem 1.75rem;
+      box-shadow: 0 4px 18px rgba(15, 15, 18, 0.04);
+      transition: all 0.22s ease;
+    }
+    .award-card-item:hover {
+      transform: translateY(-3px);
+      border-color: rgba(95, 61, 196, 0.35);
+      box-shadow: 0 12px 28px -4px rgba(95, 61, 196, 0.12), 0 4px 12px rgba(15, 15, 18, 0.04);
+    }
+    .award-tag-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .tag-stem { background: rgba(95, 61, 196, 0.09); color: #5f3dc4; }
+    .tag-robotics { background: rgba(24, 100, 171, 0.09); color: #1864ab; }
+    .tag-writing { background: rgba(134, 46, 156, 0.09); color: #862e9c; }
+    .tag-civic { background: rgba(43, 138, 62, 0.09); color: #2b8a3e; }
+    .tag-music { background: rgba(186, 31, 67, 0.09); color: #ba1f43; }
+    
+    .award-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ba1f43;
+      text-decoration: none;
+      transition: all 0.18s ease;
+      margin-top: 1.25rem;
+    }
+    .award-link-btn:hover {
+      color: #5f3dc4;
+    }
+    .award-link-btn:hover span:last-child {
+      transform: translate(2px, -1px);
+    }
+  </style>
 </head>
-<body id="top">
-
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="index.html" class="brand-monogram" aria-label="Aadya Agarwal, back to home">AA</a>
-      
-      <!-- Desktop Navigation Links: Exactly matching reference sections, NO certificates -->
-      <nav class="desktop-nav" aria-label="Main navigation">
+<body class="min-h-full bg-paper text-ink font-body">
+  <div id="top">
+    <!-- Header / Navbar -->
+    <header class="site-header">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6">
+        <a href="index.html#top" class="font-display text-xl font-bold text-plum" aria-label="Aadya Agarwal, back to top">AA</a>
+        <nav aria-label="Main navigation" class="desktop-nav">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="documents.html" class="nav-link">Documents</a>
+          <a href="memberships.html" class="nav-link">Memberships</a>
+          <a href="awards.html" class="nav-link active">Awards</a>
+          <a href="connect.html" class="nav-link">Connect</a>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="portfolio.html" class="nav-link">Portfolio</a>
         <a href="documents.html" class="nav-link">Documents</a>
         <a href="memberships.html" class="nav-link">Memberships</a>
         <a href="awards.html" class="nav-link active">Awards</a>
         <a href="connect.html" class="nav-link">Connect</a>
         <a href="about.html" class="nav-link">About</a>
-      </nav>
-
-      <!-- Mobile Hamburger Button -->
-      <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div class="mobile-menu" aria-label="Mobile navigation">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="documents.html" class="nav-link">Documents</a>
-      <a href="memberships.html" class="nav-link">Memberships</a>
-      <a href="awards.html" class="nav-link active">Awards</a>
-      <a href="connect.html" class="nav-link">Connect</a>
-      <a href="about.html" class="nav-link">About</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="page-hero-eyebrow">Milestones, Honors &amp; Citations</span>
-        <h1 class="page-hero-title">Awards &amp; Features</h1>
-        <p class="page-hero-lead">
-          Selected national recognitions, academic fellowships, and media features across artificial intelligence, environmental engineering, tournament robotics, and the humanities.
-        </p>
       </div>
-    </section>
+    </header>
 
-    <section class="awards-section" style="padding-top: 0; padding-bottom: 5rem;">
-      <div class="container">
-        
-        <div class="awards-hero-stats">
-          <div class="doc-stat-card">
-            <div class="doc-stat-num">5+</div>
-            <div class="doc-stat-txt">National &amp; International Wins</div>
-          </div>
-          <div class="doc-stat-card">
-            <div class="doc-stat-num">3</div>
-            <div class="doc-stat-txt">Scientific Fellowships</div>
-          </div>
-          <div class="doc-stat-card">
-            <div class="doc-stat-num">2</div>
-            <div class="doc-stat-txt">Legislative Citations</div>
-          </div>
-          <div class="doc-stat-card">
-            <div class="doc-stat-num">Music-Fest</div>
-            <div class="doc-stat-txt">Grand Prize Recitalist</div>
-          </div>
+    <main>
+      <!-- Clean Page Hero Section (matching all other pages) -->
+      <section class="page-hero">
+        <div class="container">
+          <span class="page-hero-eyebrow">Excellence, Honors &amp; Public Recognition</span>
+          <h1 class="page-hero-title">Awards &amp; Distinctions</h1>
+          <p class="page-hero-lead">
+            Selected recognition earned across competitive robotics, environmental research, international writing, classical piano, and civic leadership.
+          </p>
         </div>
+      </section>
 
-        <div class="awards-rich-grid">
-          <article class="award-rich-card">
-            <div class="award-thumb-wrap">
-              <img src="assets/certificates/Day of AI Certificate - MIT RAISE.jpeg" alt="MIT Solve National Winner &amp; Leopold Scholar" class="award-thumb-img" loading="lazy">
+      <!-- Main Awards Grid Section -->
+      <section class="py-8 sm:py-12">
+        <div class="container">
+          
+          <!-- Category Filter Tabs -->
+          <div class="flex items-center justify-between flex-wrap gap-4 pb-6 border-b border-ink/10">
+            <div class="flex gap-2 overflow-x-auto pb-2 sm:pb-0" id="awardsFilterTabs" aria-label="Filter awards by category">
+              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-plum bg-plum text-white" data-filter="all">
+                All Awards
+              </button>
+              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="stem">
+                STEM &amp; Research
+              </button>
+              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="robotics">
+                Robotics
+              </button>
+              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="writing">
+                Writing &amp; Arts
+              </button>
+              <button type="button" class="filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum" data-filter="civic">
+                Civic Leadership
+              </button>
             </div>
-            <div class="award-rich-body">
-              <div class="award-rich-header">
-                <span class="award-category-pill">National Winner</span>
-                <span class="award-year">2026</span>
+            <span class="text-xs text-ink/45 hidden sm:inline">10 Distinctions &amp; Honors</span>
+          </div>
+
+          <!-- Awards Cards Grid -->
+          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="awardsCardsGrid">
+            
+            <!-- 1. MIT Solve National Winner & Leopold Scholar -->
+            <article class="award-card-item" data-category="stem">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-stem">Global STEM Finalist</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">2025</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  MIT Solve National Winner &amp; Leopold Scholar
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  One of five national AI for a Better World winners; showcased autonomous ocean pH buoy research at the MIT Media Lab. Named Leopold Scholar in Ecology &amp; Ethics by The Lawrenceville School.
+                </p>
               </div>
-              <h3 class="award-rich-title">MIT Solve National Winner &amp; Leopold Scholar</h3>
-              <p class="award-rich-desc">One of five national AI for a Better World winners; presented autonomous ocean pH buoy research at the MIT Media Lab. Lawrenceville also named Aadya a Leopold Scholar in Ecology and Ethics.</p>
-              <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-media-lab-at-mit" class="award-rich-link" target="_blank" rel="noopener noreferrer">
-                <span>Read MIT Solve Profile</span>
-                <span aria-hidden="true">&rarr;</span>
+              <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab" target="_blank" rel="noopener noreferrer" class="award-link-btn">
+                <span>Leopold Scholar &amp; MIT Solve — Lawrenceville</span>
+                <span class="transition-transform" aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <!-- 2. WPI US Open World Championship -->
+            <article class="award-card-item" data-category="robotics">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-robotics">World Championship</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">2024</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  WPI US Open World Championship — Rank #14
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  Ranked #14 out of 108 international robotics teams at the Worcester Polytechnic Institute US Open Invitational as Lead Autonomous Programmer, achieving Robot Design Finalist honors.
+                </p>
+              </div>
+              <a href="portfolio.html" class="award-link-btn">
+                <span>WPI US Open International Invitational Details</span>
+                <span class="transition-transform" aria-hidden="true">&rarr;</span>
+              </a>
+            </article>
+
+            <!-- 3. Water Research Prizes & Stockholm Junior Award -->
+            <article class="award-card-item" data-category="stem">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-stem">Environmental Science</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">2024–2026</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  Water Research Prizes &amp; Stockholm Junior Award
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  Second Place in Earth &amp; Environmental Science at Mercer County Science &amp; Engineering Fair (MSEF), Stockholm Junior Water Prize regional award, NOAA Taking the Pulse of the Planet Award, and NJWEA keynote invitation.
+                </p>
+              </div>
+              <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/from-water-research-to-biomedical-engineering-lawrentians-recognized-for-scientific-excellence" target="_blank" rel="noopener noreferrer" class="award-link-btn">
+                <span>Scientific Excellence — Lawrenceville</span>
+                <span class="transition-transform" aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <!-- 4. Featured in The Lawrentian -->
+            <article class="award-card-item" data-category="stem">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-stem">Magazine Profile</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">Summer 2026</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  Featured in The Lawrentian (“One 2 Watch”)
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  The school magazine feature profile traces Aadya's biochar filtration empirical trials and its evolution into an autonomous, AI-powered water-remediation IoT buoy node.
+                </p>
+              </div>
+              <a href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer" class="award-link-btn">
+                <span>“One 2 Watch” Feature — The Lawrentian</span>
+                <span class="transition-transform" aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <!-- 5. Music-Fest International Rising Talent Grand Prize -->
+            <article class="award-card-item" data-category="writing">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-music">Manhattan School of Music</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">2024</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  Music-Fest International Rising Talent Grand Prize
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  Grand Prize winner for classical piano solo performance, earning recital honors at Greenfield Hall, Manhattan School of Music.
+                </p>
+              </div>
+              <a href="portfolio.html" class="award-link-btn">
+                <span>Manhattan School of Music Recital Details</span>
+                <span class="transition-transform" aria-hidden="true">&rarr;</span>
+              </a>
+            </article>
+
+            <!-- 6. John Locke Global Essay Prize Commendation -->
+            <article class="award-card-item" data-category="writing">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-writing">International Writing</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">2025</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  John Locke Global Essay Prize Commendation
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  Commended in the prestigious international John Locke Global Essay Competition from over 19,000 entries across 138 nations; Lawrenceville annual John H. Imbrie English/Humanities Prize winner.
+                </p>
+              </div>
+              <a href="portfolio.html" class="award-link-btn">
+                <span>John Locke Institute Commendation Details</span>
+                <span class="transition-transform" aria-hidden="true">&rarr;</span>
+              </a>
+            </article>
+
+            <!-- 7. New Jersey Legislative Commendation -->
+            <article class="award-card-item" data-category="civic">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-civic">Civic Commendation</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">2025</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  New Jersey Legislative Commendation
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  Official legislative resolution from the New Jersey State Senate and General Assembly recognizing youth leadership, regional food relief, and senior care packaging mobilization.
+                </p>
+              </div>
+              <a href="memberships.html" class="award-link-btn">
+                <span>New Jersey Assembly &amp; Senate Citation</span>
+                <span class="transition-transform" aria-hidden="true">&rarr;</span>
+              </a>
+            </article>
+
+            <!-- 8. PDS Panther Hackathon Best Beginner Hack -->
+            <article class="award-card-item" data-category="robotics">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-robotics">Hackathon Winner</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">Grade 7</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  PDS Panther Hackathon — Best Beginner Hack
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  Awarded Best Beginner Hackathon winner at Princeton Day School for rapid prototype engineering, software architecture, and hardware sensor integration.
+                </p>
+              </div>
+              <a href="portfolio.html" class="award-link-btn">
+                <span>Panther Hackathon Architecture Details</span>
+                <span class="transition-transform" aria-hidden="true">&rarr;</span>
+              </a>
+            </article>
+
+            <!-- 9. Scholastic Art & Writing Regional Honorable Mention -->
+            <article class="award-card-item" data-category="writing">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-writing">Scholastic Honors</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">2025</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  Scholastic Art &amp; Writing Honorable Mention
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  Regional Honorable Mention for “Joy Is Universal” and published poetry exploring environmental consciousness, identity, and diaspora; highlighted by Princeton Day School.
+                </p>
+              </div>
+              <a href="https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/" target="_blank" rel="noopener noreferrer" class="award-link-btn">
+                <span>Princeton Day School Announcement</span>
+                <span class="transition-transform" aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <!-- 10. North South Foundation National Public Speaking -->
+            <article class="award-card-item" data-category="writing">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="award-tag-badge tag-writing">National Champion</span>
+                  <span class="font-mono text-xs font-bold text-ink/40">National</span>
+                </div>
+                <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
+                  NSF National Public Speaking 1st Place
+                </h3>
+                <p class="text-sm text-ink/65 mt-2 leading-relaxed">
+                  First Place National Champion in public speaking and oratorical debate, establishing early foundations in scientific communication and community advocacy.
+                </p>
+              </div>
+              <a href="speaking-writing.html" class="award-link-btn">
+                <span>National NSF Speaking Championship</span>
+                <span class="transition-transform" aria-hidden="true">&rarr;</span>
+              </a>
+            </article>
+
+          </div>
+
+          <!-- Quick Partner & Organization Badges Bar -->
+          <div class="mt-12 rounded-2xl border border-ink/10 bg-white p-5 sm:p-6 shadow-xs">
+            <p class="text-center text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
+              Recognized &amp; Supported By Institutions Nationwide
+            </p>
+            <div class="mt-4 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+              <a href="https://solve.mit.edu/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-paper px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:bg-white hover:text-plum">
+                MIT Solve
+              </a>
+              <a href="https://raise.mit.edu/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-paper px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:bg-white hover:text-plum">
+                MIT RAISE
+              </a>
+              <a href="https://thelawrentian.lawrenceville.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-paper px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:bg-white hover:text-plum">
+                The Lawrentian
+              </a>
+              <a href="https://ieee-isec.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-paper px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:bg-white hover:text-plum">
+                IEEE / ISEC
+              </a>
+              <a href="https://njwea.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-paper px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:bg-white hover:text-plum">
+                NJWEA
+              </a>
+              <a href="https://www.noaa.gov/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-paper px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:bg-white hover:text-plum">
+                NOAA
+              </a>
+              <a href="https://www.artandwriting.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-paper px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:bg-white hover:text-plum">
+                Scholastic Art &amp; Writing
+              </a>
+              <a href="https://www.pds.org/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-ink/15 bg-paper px-3.5 py-1.5 text-xs font-semibold text-ink/75 shadow-xs transition hover:border-plum/50 hover:bg-white hover:text-plum">
+                Princeton Day School
               </a>
             </div>
-          </article>
-          <article class="award-rich-card">
-            <div class="award-thumb-wrap">
-              <img src="assets/ref_images/projects_wpi-award_framed.jpg" alt="WPI US Open World Championship — Rank #14" class="award-thumb-img" loading="lazy">
-            </div>
-            <div class="award-rich-body">
-              <div class="award-rich-header">
-                <span class="award-category-pill">World Championship</span>
-                <span class="award-year">2024</span>
+          </div>
+
+          <!-- Additional Distinctions Callout Card -->
+          <div class="mt-8 rounded-2xl border border-plum/20 bg-gradient-to-r from-plum-soft/40 via-white to-plum-soft/30 p-6 text-sm leading-relaxed text-ink/80 shadow-xs">
+            <div class="flex items-start gap-3">
+              <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-plum text-white font-bold text-xs" aria-hidden="true">★</span>
+              <div>
+                <p class="font-bold text-plum text-base">Additional Honors &amp; Competitive Distinctions</p>
+                <p class="mt-1 text-sm text-ink/70">
+                  FIRST LEGO League Robot Design Award (WPI US Open Qualifier) · Science Olympiad Regional Event Medals · New Jersey State Legislative Commendation for Community Action · John Locke Global Essay Prize Commendation in Science &amp; Technology · Manhattan School of Music Greenfield Hall Recital.
+                </p>
               </div>
-              <h3 class="award-rich-title">WPI US Open World Championship — Rank #14</h3>
-              <p class="award-rich-desc">Ranked #14 out of 108 international robotics teams at the Worcester Polytechnic Institute US Open Invitational as Lead Autonomous Programmer, achieving Robot Design Finalist honors.</p>
-              <a href="portfolio.html" class="award-rich-link" target="_blank" rel="noopener noreferrer">
-                <span>View WPI Championship Pit</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
             </div>
-          </article>
-          <article class="award-rich-card">
-            <div class="award-thumb-wrap">
-              <img src="assets/ref_images/projects_msef-water-award.jpg" alt="Water Research Prizes &amp; Stockholm Junior Award" class="award-thumb-img" loading="lazy">
-            </div>
-            <div class="award-rich-body">
-              <div class="award-rich-header">
-                <span class="award-category-pill">Water Research</span>
-                <span class="award-year">2024–2026</span>
-              </div>
-              <h3 class="award-rich-title">Water Research Prizes &amp; Stockholm Junior Award</h3>
-              <p class="award-rich-desc">Second Place in Earth and Environmental Science at Mercer County Science &amp; Engineering Fair (MSEF), Stockholm Junior Water Prize regional award, NOAA special recognition, and NJWEA conference invitation.</p>
-              <a href="documents.html" class="award-rich-link" target="_blank" rel="noopener noreferrer">
-                <span>Explore Water Research</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </article>
-          <article class="award-rich-card">
-            <div class="award-thumb-wrap">
-              <img src="assets/ref_images/projects_ieee-engineering-conversation.jpg" alt="Featured in The Lawrentian (“One 2 Watch”)" class="award-thumb-img" loading="lazy">
-            </div>
-            <div class="award-rich-body">
-              <div class="award-rich-header">
-                <span class="award-category-pill">Media Feature</span>
-                <span class="award-year">Summer 2026</span>
-              </div>
-              <h3 class="award-rich-title">Featured in The Lawrentian (“One 2 Watch”)</h3>
-              <p class="award-rich-desc">The school magazine feature traces Aadya&#x27;s biochar filtration empirical trials and its evolution into an AI-powered water-remediation buoy node.</p>
-              <a href="https://www.lawrenceville.org" class="award-rich-link" target="_blank" rel="noopener noreferrer">
-                <span>Read The Lawrentian Story</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </article>
-          <article class="award-rich-card">
-            <div class="award-thumb-wrap">
-              <img src="assets/certificates/Service Award - NJ State Assembly.jpeg" alt="New Jersey Legislative Commendation" class="award-thumb-img" loading="lazy">
-            </div>
-            <div class="award-rich-body">
-              <div class="award-rich-header">
-                <span class="award-category-pill">Civic Commendation</span>
-                <span class="award-year">2025</span>
-              </div>
-              <h3 class="award-rich-title">New Jersey Legislative Commendation</h3>
-              <p class="award-rich-desc">Official legislative commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing 150+ youth for regional hunger relief and senior care supply packaging.</p>
-              <a href="memberships.html" class="award-rich-link" target="_blank" rel="noopener noreferrer">
-                <span>View Legislative Citation</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </article>
-          <article class="award-rich-card">
-            <div class="award-thumb-wrap">
-              <img src="assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg" alt="Music-Fest International Rising Talent Grand Prize" class="award-thumb-img" loading="lazy">
-            </div>
-            <div class="award-rich-body">
-              <div class="award-rich-header">
-                <span class="award-category-pill">Fine Arts</span>
-                <span class="award-year">2024</span>
-              </div>
-              <h3 class="award-rich-title">Music-Fest International Rising Talent Grand Prize</h3>
-              <p class="award-rich-desc">Grand Prize winner with solo classical piano recitals at Greenfield Hall at Manhattan School of Music, New York.</p>
-              <a href="portfolio.html" class="award-rich-link" target="_blank" rel="noopener noreferrer">
-                <span>View Music-Fest Honors</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </article>
-          <article class="award-rich-card">
-            <div class="award-thumb-wrap">
-              <img src="assets/ref_images/projects_john-locke_framed.jpg" alt="John Locke Institute Essay Prize Commendation" class="award-thumb-img" loading="lazy">
-            </div>
-            <div class="award-rich-body">
-              <div class="award-rich-header">
-                <span class="award-category-pill">Global Essay Prize</span>
-                <span class="award-year">2025</span>
-              </div>
-              <h3 class="award-rich-title">John Locke Institute Essay Prize Commendation</h3>
-              <p class="award-rich-desc">Commended in the prestigious international John Locke Global Essay Competition from over 19,000 entries across 138 nations; school annual English and Humanities literary prize winner.</p>
-              <a href="documents.html" class="award-rich-link" target="_blank" rel="noopener noreferrer">
-                <span>Read Essay Abstract</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </article>
-          <article class="award-rich-card">
-            <div class="award-thumb-wrap">
-              <img src="assets/certificates/nsf_speech_award.png" alt="North South Foundation National Public Speaking 1st Place" class="award-thumb-img" loading="lazy">
-            </div>
-            <div class="award-rich-body">
-              <div class="award-rich-header">
-                <span class="award-category-pill">Public Oratory &amp; AI</span>
-                <span class="award-year">2021–2024</span>
-              </div>
-              <h3 class="award-rich-title">North South Foundation National Public Speaking 1st Place</h3>
-              <p class="award-rich-desc">First Place National Champion in public speaking and oratorical debate, establishing early foundations in scientific communication, AI scholars fellowship, and community advocacy.</p>
-              <a href="connect.html" class="award-rich-link" target="_blank" rel="noopener noreferrer">
-                <span>Explore Oratory &amp; Research</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </article>
+          </div>
+
         </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-ink/10 bg-paper py-8 text-center text-xs text-ink/50">
+      <div class="mx-auto max-w-6xl px-5 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© 2026 Aadya Agarwal · Built with intentional craft &amp; equitable vision.</p>
+        <a href="#top" class="text-plum hover:text-berry font-medium transition">Back to top ↑</a>
       </div>
-    </section>
-  </main>
+    </footer>
+  </div>
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; 2026 Aadya Agarwal &bull; The Lawrenceville School &bull; Eco-engineer &amp; Equitable Healthpreneur.</p>
-      <a href="#top" class="footer-back-to-top">
-        <span>Back to top</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-      </a>
-    </div>
-  </footer>
+  <script src="modern-script.js?v=250"></script>
+  <script src="cms-loader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('#awardsFilterTabs .filter-tab-btn');
+      const awardCards = document.querySelectorAll('#awardsCardsGrid .award-card-item');
 
-  <script src="modern-script.js?v=20"></script>
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterBtns.forEach(b => {
+            b.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum';
+          });
+          btn.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition border-plum bg-plum text-white';
+
+          awardCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = 'flex';
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(6px)';
+              requestAnimationFrame(() => {
+                card.style.transition = 'opacity 250ms ease, transform 250ms ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              });
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
