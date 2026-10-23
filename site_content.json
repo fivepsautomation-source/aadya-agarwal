@@ -3,14 +3,14 @@
     "site_title": "Aadya Agarwal | Portfolio",
     "hero_badge": "ECO-ENGINEER & EQUITABLE HEALTHPRENEUR.",
     "hero_name": "Aadya Agarwal",
-    "hero_school": "The Lawrenceville School \u00b7 Class of 2029",
+    "hero_school": "The Lawrenceville School · Class of 2029",
     "hero_location": "Lawrenceville, New Jersey",
-    "hero_bio": "My vision is a world where clean water and basic health care reach the people it usually forgets \u2014 and I want to spend my life building the tools that get them there. I work at the meeting point of responsible AI, hands-on engineering and community science, because the hardest problems in equity are never just technical. Whether it is a biochar filter, a one-minute vitals check or a poem, I am chasing the same question: how do we make care more honest, more equitable and more within reach?",
+    "hero_bio": "My vision is a world where clean water and basic health care reach the people it usually forgets — and I want to spend my life building the tools that get them there. I work at the meeting point of responsible AI, hands-on engineering and community science, because the hardest problems in equity are never just technical. Whether it is a biochar filter, a one-minute vitals check or a poem, I am chasing the same question: how do we make care more honest, more equitable and more within reach?",
     "hero_portrait": "projects/aadya-headshot.jpg",
     "hero_slider_images": "[\"projects/njwea-presentation.jpg\", \"projects/msef-water-award.jpg\", \"projects/monivitals-market.webp\", \"assets/science_fairs/pic1.jpeg\", \"assets/science_fairs/pic2.jpeg\", \"assets/science_fairs/pic4.jpeg\", \"assets/science_fairs/pic5.jpeg\", \"assets/science_fairs/pic6.jpeg\", \"assets/science_fairs/pic7.jpeg\"]",
     "connect_email": "aadyanj@gmail.com",
     "connect_github": "https://github.com/aanj1",
-    "invite_headline": "Speak \u00b7 Mentor \u00b7 Research",
+    "invite_headline": "Speak · Mentor · Research",
     "invite_body": "Aadya is available to speak at student events, mentor young women entering STEM, and collaborate on water, responsible-AI and equitable-health research. Reach out to arrange a conversation."
   },
   "portfolio": [
@@ -46,7 +46,7 @@
       "id": 2,
       "title": "Biochar Water Treatment",
       "category_slug": "environmental",
-      "category_name": "Experimental Research \u00b7 2026",
+      "category_name": "Experimental Research · 2026",
       "img": "projects/water-treatment-setup.jpg",
       "images": [
         "projects/water-treatment-setup.jpg"
@@ -74,9 +74,9 @@
     },
     {
       "id": 3,
-      "title": "MIT Solve \u2014 AI for a Better World",
+      "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
-      "category_name": "MIT Day of AI \u00b7 July 2026",
+      "category_name": "MIT Day of AI · July 2026",
       "img": "projects/mit-day-ai-stage.jpg",
       "images": [
         "projects/mit-day-ai-stage.jpg"
@@ -103,16 +103,16 @@
     },
     {
       "id": 4,
-      "title": "IEEE/ISEC \u2014 Comparative Biochar Water Analysis",
+      "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
-      "category_name": "Peer-Reviewed Presentation \u00b7 2026",
+      "category_name": "Peer-Reviewed Presentation · 2026",
       "img": "projects/ieee-engineering-conversation.jpg",
       "images": [
         "projects/ieee-engineering-conversation.jpg"
       ],
-      "desc": "Approved abstract: \u201cComparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.\u201d Presented at the IEEE/ISEC K\u201312 conference at Princeton University.",
+      "desc": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University.",
       "highlights": [
-        "Approved research abstract presented at IEEE/ISEC K\u201312 conference at Princeton University",
+        "Approved research abstract presented at IEEE/ISEC K–12 conference at Princeton University",
         "Comparative analysis of softwood vs agricultural-waste biochars for remediation",
         "Bench trials tracking heavy metal and nutrient removal, dissolved oxygen, and pH response",
         "Technical engagement and presentation with engineering and academic faculty at Princeton"
@@ -537,7 +537,7 @@
       "accordions": [
         {
           "title": "Pedro Pathing Quintic Spline Algorithm &amp; Odometry Code",
-          "content": "Custom autonomous trajectory generation using quintic B\u00e9zier splines, 3-wheel dead-wheel odometry pods, and sub-15ms AprilTag 36h11 computer vision pose correction for tournament robotics."
+          "content": "Custom autonomous trajectory generation using quintic Bézier splines, 3-wheel dead-wheel odometry pods, and sub-15ms AprilTag 36h11 computer vision pose correction for tournament robotics."
         },
         {
           "title": "WPI US Open World Championship Technical Notebook",
@@ -601,7 +601,7 @@
     },
     {
       "id": 4,
-      "title": "Featured in The Lawrentian (\u201cOne 2 Watch\u201d)",
+      "title": "Featured in The Lawrentian (“One 2 Watch”)",
       "category_pill": "Honors",
       "year": "2026",
       "image_url": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
@@ -612,7 +612,7 @@
     },
     {
       "id": 2,
-      "title": "WPI US Open World Championship \u2014 Rank #14",
+      "title": "WPI US Open World Championship — Rank #14",
       "category_pill": "Honors",
       "year": "2026",
       "image_url": "assets/ref_images/projects_wpi-award_framed.jpg",
@@ -679,14 +679,14 @@
   ],
   "about": {
     "etymology": {
-      "tag": "IDENTITY \u00b7 ETYMOLOGY",
+      "tag": "IDENTITY · ETYMOLOGY",
       "title": "What \"Aadya\" Means to Me",
-      "content": "My name is rooted in ancient Sanskrit (\u0906\u0926\u094d\u092f\u093e), meaning \"The First\" and \"The Primordial\". In Indian tradition, it represents intentional agency, calm resilience, and the quiet responsibility to act before others do. To me, it has never meant finishing first in an easy race. It means being willing to take the very first step into uncomfortable, unpaved problems\u2014whether that's diagnosing heavy-metal contamination in agricultural runoff or stepping up to code complex odometry splines under competition pressure."
+      "content": "My name is rooted in ancient Sanskrit (आद्या), meaning \"The First\" and \"The Primordial\". In Indian tradition, it represents intentional agency, calm resilience, and the quiet responsibility to act before others do. To me, it has never meant finishing first in an easy race. It means being willing to take the very first step into uncomfortable, unpaved problems—whether that's diagnosing heavy-metal contamination in agricultural runoff or stepping up to code complex odometry splines under competition pressure."
     },
     "quote": {
       "text": "Nothing beats kindness. It sits quietly beyond all things.",
       "author": "CHARLIE MACKESY, THE BOY, THE MOLE, THE FOX AND THE HORSE",
-      "reflection": "In high-velocity engineering, it's dangerously easy to obsess solely over performance\u2014PID loops, velocity constraints, or sensor parts-per-million. This quote is my compass: technical rigor is hollow if it doesn't leave people feeling treated with gentleness and dignity."
+      "reflection": "In high-velocity engineering, it's dangerously easy to obsess solely over performance—PID loops, velocity constraints, or sensor parts-per-million. This quote is my compass: technical rigor is hollow if it doesn't leave people feeling treated with gentleness and dignity."
     },
     "books": [
       {
@@ -741,6 +741,5 @@
       "size_bytes": 0,
       "uploaded_at": "2026-10-23 03:48:17"
     }
-  ],
-  "last_synced": "2026-10-23T21:30:00Z"
+  ]
 }
