@@ -79,7 +79,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 0
+      "sort_order": 4
     },
     {
       "id": 2,
@@ -109,7 +109,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 1
+      "sort_order": 3
     },
     {
       "id": 3,
@@ -138,7 +138,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 2
+      "sort_order": 1
     },
     {
       "id": 4,
@@ -165,7 +165,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 3
+      "sort_order": 2
     },
     {
       "id": 5,
@@ -219,7 +219,7 @@
         }
       ],
       "is_robotics": false,
-      "sort_order": 4
+      "sort_order": 5
     },
     {
       "id": 8,
@@ -409,6 +409,34 @@
       "badges": [],
       "is_robotics": false,
       "sort_order": 15
+    },
+    {
+      "id": 17,
+      "title": "NSF National Public Speaking 1st Place",
+      "category_slug": "writing",
+      "category_name": "Public Speaking",
+      "img": "assets/speaking/speech_award_ceremony.jpg",
+      "images": [
+        "assets/speaking/speech_award_ceremony.jpg",
+        "assets/speaking/speech_stage.jpg",
+        "assets/certificates/nsf_speech_award.png"
+      ],
+      "desc": "First-place national champion in public speaking and oratorical debate.",
+      "highlights": [
+        "NSF National Public Speaking 1st Place",
+        "National champion in public speaking and oratorical debate"
+      ],
+      "tags": [
+        "#PublicSpeaking",
+        "#OratoricalDebate",
+        "#NationalChampion"
+      ],
+      "badges": [
+        "NSF",
+        "1st Place"
+      ],
+      "is_robotics": false,
+      "sort_order": 16
     }
   ],
   "documents": [
@@ -612,7 +640,8 @@
       "description": "One of five national AI for a Better World winners; presented autonomous ocean pH buoy research at the MIT Media Lab. Lawrenceville also named Aadya a Leopold Scholar in Ecology and Ethics.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 0
+      "sort_order": 0,
+      "img": "projects/mit-day-ai-stage.jpg"
     },
     {
       "id": 4,
@@ -623,7 +652,8 @@
       "description": "The school magazine feature traces Aadya&#x27;s biochar filtration empirical trials and its evolution into an AI-powered water-remediation buoy node.",
       "link_text": "Learn Mor",
       "link_url": "#",
-      "sort_order": 0
+      "sort_order": 0,
+      "img": "projects/water-treatment-setup.jpg"
     },
     {
       "id": 2,
@@ -634,7 +664,8 @@
       "description": "Ranked #14 out of 108 international robotics teams at the Worcester Polytechnic Institute US Open Invitational as Lead Autonomous Programmer, achieving Robot Design Finalist honors.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 1
+      "sort_order": 1,
+      "img": "projects/wpi-award_framed.jpg"
     },
     {
       "id": 3,
@@ -645,7 +676,8 @@
       "description": "Second Place in Earth and Environmental Science at Mercer County Science &amp; Engineering Fair (MSEF), Stockholm Junior Water Prize regional award, NOAA special recognition, and NJWEA conference invitation.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 2
+      "sort_order": 2,
+      "img": "projects/msef-water-award.jpg"
     },
     {
       "id": 5,
@@ -656,7 +688,8 @@
       "description": "Official legislative commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing 150+ youth for regional hunger relief and senior care supply packaging.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 4
+      "sort_order": 4,
+      "img": "assets/certificates/Service Award - NJ State Assembly.jpeg"
     },
     {
       "id": 6,
@@ -667,7 +700,8 @@
       "description": "Grand Prize winner with solo classical piano recitals at Greenfield Hall at Manhattan School of Music, New York.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 5
+      "sort_order": 5,
+      "img": "projects/piano-manhattan-school.jpg"
     },
     {
       "id": 7,
@@ -678,7 +712,8 @@
       "description": "Commended in the prestigious international John Locke Global Essay Competition from over 19,000 entries across 138 nations; school annual English and Humanities literary prize winner.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 6
+      "sort_order": 6,
+      "img": "projects/john-locke_framed.jpg"
     },
     {
       "id": 8,
@@ -689,7 +724,8 @@
       "description": "First Place National Champion in public speaking and oratorical debate, establishing early foundations in scientific communication, AI scholars fellowship, and community advocacy.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 7
+      "sort_order": 7,
+      "img": "assets/certificates/Award Certificate - NSF PS1 contest .jpg"
     }
   ],
   "about": {
