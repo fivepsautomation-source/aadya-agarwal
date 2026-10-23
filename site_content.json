@@ -270,7 +270,39 @@
         "assets/community/Copy of cd - boxes - pic5.jpg",
         "assets/community/Copy of cd - ah- group pic1.jpg",
         "assets/community/Candy donation boxes at AoPs - pic2.jpg",
-        "assets/certificates/STEP Meals Packaging.jpeg"
+        "assets/certificates/STEP Meals Packaging.jpeg",
+        "assets/uploads/1792790739009_Copy_of_cd_-_hhc_-_pic3.jpg",
+        "assets/uploads/1792790741610_Copy_of_cd_-_load_car_-_pic2.jpg",
+        "assets/uploads/1792790748368_Copy_of_cd_-_org_-_pic_10.jpg",
+        "assets/uploads/1792790750907_Copy_of_cd_-_org_-_pic3.jpg",
+        "assets/uploads/1792790753351_Copy_of_cd_-_shopping_-_pic_6.jpg",
+        "assets/uploads/1792790755466_Copy_of_cd_-_shopping_-_pic1.jpg",
+        "assets/uploads/1792790757685_Copy_of_cd_-_shopping_-_pic2.jpg",
+        "assets/uploads/1792790763595_Copy_of_cd_-_shopping_-_pic4.jpg",
+        "assets/uploads/1792790766138_Copy_of_cd_-_shopping_-_pic7.jpg",
+        "assets/uploads/1792790770179_Copy_of_cd-_box_-_pic_4.jpg",
+        "assets/uploads/1792790776451_Copy_of_Copy_of_Copy_of_cd_loading_car_2.jpg",
+        "assets/uploads/1792790779051_Copy_of_image_4.jpeg",
+        "assets/uploads/1792790784710_Copy_of_image_16.jpeg",
+        "assets/uploads/1792790790801_Copy_of_image_17.jpeg",
+        "assets/uploads/1792790821105_Copy_of_image_22.jpeg",
+        "assets/uploads/1792790826065_Copy_of_image_23.jpeg",
+        "assets/uploads/1792790828356_Copy_of_image_24.jpeg",
+        "assets/uploads/1792790831685_Distributing_at_Howard_Healthy_Choices_Social_Agency_-_pic1.jpg",
+        "assets/uploads/1792790835691_Donation_boxes-_pic3.jpg",
+        "assets/uploads/1792790842482_loading_car_for_distribution_-_pic1.jpg",
+        "assets/uploads/1792790844403_NJ_State_Service_Award_-_NJ_State_Assembly.jpeg",
+        "assets/uploads/1792790846782_Packing_candy_boxes_-_pic6.jpg",
+        "assets/uploads/1792790851212_pic_2_-_SC.jpg",
+        "assets/uploads/1792790853907_pic_3_-_Animal_Shelter_-_Paws_for_Reading.jpg",
+        "assets/uploads/1792790856275_pic_3_-_AWD_Fund_Raiser.jpg",
+        "assets/uploads/1792790858390_pic_4_-_SC.jpg",
+        "assets/uploads/1792790861020_pic_6_-_Senior_Center.jpg",
+        "assets/uploads/1792790863307_pic_13_-_Hurricane_Helen_Relief_Donation_-_WWPD_-2.jpg",
+        "assets/uploads/1792790866011_pic_14_-_BackToSchoolDrive-Donation-AadyaAgarwal-09032023.jpg",
+        "assets/uploads/1792790868017_Serving_at_Senior_Center2.jpeg",
+        "assets/uploads/1792790869730_Serving_at_Senior_Citizen_Center.jpeg",
+        "assets/uploads/1792790871447_Sock_Drive_-_NJ_Assembly_Woman_House.png"
       ],
       "desc": "Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.",
       "highlights": [
@@ -318,22 +350,15 @@
     {
       "id": 14,
       "title": "Classical Piano & Manhattan School of Music Recitals",
-      "category_slug": "arts",
-      "category_name": "Arts",
+      "category_slug": "writing",
+      "category_name": "Writing & Arts",
       "img": "assets/ref_images/projects_piano-manhattan-school.jpg",
       "images": [
         "assets/ref_images/projects_piano-manhattan-school.jpg",
         "assets/writing_arts/Copy of piano award.png",
         "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
         "assets/music/image_1.jpeg",
-        "assets/music/image_5.jpeg",
-        "assets/music/image_8.jpeg",
-        "assets/music/image_9.jpeg",
-        "assets/music/image_10.jpeg",
-        "assets/music/Piano_Pic_3.jpg",
-        "assets/arts/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-        "assets/arts/Copy of piano award.png",
-        "assets/arts/Music Fest Grand Prize Recital.jpeg"
+        "assets/music/image_5.jpeg"
       ],
       "desc": "Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performance at Greenfield Hall, Manhattan School of Music.",
       "highlights": [
@@ -347,12 +372,6 @@
         "#MusicFest",
         "#RisingTalent"
       ],
-      "videos": [
-        {
-          "src": "assets/music/20241217_193755-wonderful_time_of_year.mp4",
-          "title": "School Music Concert"
-        }
-      ],
       "badges": [],
       "is_robotics": false,
       "sort_order": 9
@@ -360,8 +379,8 @@
     {
       "id": 15,
       "title": "1st Chair Flutist & Wind Ensemble Section Leader",
-      "category_slug": "arts",
-      "category_name": "Arts",
+      "category_slug": "writing",
+      "category_name": "Writing & Arts",
       "img": "assets/writing_arts/flute_performance.png",
       "images": [
         "assets/writing_arts/flute_performance.png",
@@ -369,9 +388,7 @@
         "assets/certificates/NJMTA Flute Honors Recital.jpeg",
         "assets/music/Flute_pic_2.jpg",
         "assets/music/Flute_pic_3.png",
-        "assets/music/Playing_Flute_for_Seniors_at_the_Senior_Living_Center2.jpeg",
-        "assets/arts/Aadya Flute Pic1.png",
-        "assets/arts/NJMTA Flute Honors Recital.jpeg"
+        "assets/music/Playing_Flute_for_Seniors_at_the_Senior_Living_Center2.jpeg"
       ],
       "desc": "Serving as 1st Chair Flutist in competitive school and regional wind ensembles, NJMTA Flute Honors Award winner, and leading woodwind section rehearsals.",
       "highlights": [
@@ -389,12 +406,6 @@
         "#HonorsRecital",
         "#Ensemble"
       ],
-      "videos": [
-        {
-          "src": "assets/music/Aadya_Agarwal_-_7th_grade_-_School_Band_Concert_-_Spring_2024.mp4",
-          "title": "Spring 2024 School Band Concert"
-        }
-      ],
       "badges": [],
       "is_robotics": false,
       "sort_order": 10
@@ -408,7 +419,9 @@
       "images": [
         "assets/ref_images/projects_john-locke_framed.jpg",
         "assets/certificates/John Locke 2026 - High Commendation.jpg",
-        "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg"
+        "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
+        "assets/writing_arts/artwork_portrait.jpg",
+        "assets/writing_arts/artwork_bird.jpg"
       ],
       "desc": "Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.",
       "highlights": [
@@ -455,125 +468,6 @@
       ],
       "is_robotics": false,
       "sort_order": 12
-    },
-    {
-      "id": 18,
-      "title": "Published Poetry & Short Stories",
-      "category_slug": "writing",
-      "category_name": "Writing",
-      "img": "projects/writing/celebration-of-poets.png",
-      "images": [
-        "projects/writing/celebration-of-poets.png",
-        "projects/writing/anthology-fall-2024.jpeg",
-        "projects/writing/balance-skipping-stones.jpg",
-        "projects/writing/in-a-shift-of-heart.png",
-        "projects/writing/my-moms-frying-pan.png",
-        "projects/writing/when-kindness-is-planted.webp",
-        "projects/writing/pds-feature-2023.webp",
-        "projects/writing/scholastic-honorable-mention.jpeg",
-        "assets/writing_arts/poem_celebration_of_small.png",
-        "assets/writing_arts/poem_frying_pan.png",
-        "assets/writing_arts/poem_shift_of_heart.png"
-      ],
-      "desc": "Published poems, short stories, and student journalism exploring nature, identity, kindness, and community.",
-      "highlights": [
-        "Poems published in Poetic Power anthologies: A Celebration of Small, For If They Let Go, My Mom's Frying Pan, and In a Shift of Heart",
-        "Published the poem Balance in Skipping Stones Multicultural International Magazine",
-        "Published the short stories Joy Is Universal and When Kindness Was Planted in The Telling Room",
-        "Featured writer for The Princeton Day School Post"
-      ],
-      "tags": [
-        "#Poetry",
-        "#PublishedWriting",
-        "#ShortStories",
-        "#StudentJournalism"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 13
-    },
-    {
-      "id": 19,
-      "title": "Visual Arts Portfolio",
-      "category_slug": "arts",
-      "category_name": "Arts",
-      "img": "projects/art/art-16-2023.webp",
-      "images": [
-        "projects/art/art-16-2023.webp",
-        "projects/art/art-18-2024.jpg",
-        "projects/art/art-20-2024.jpg",
-        "projects/art/artwork-1-2022.jpg",
-        "projects/art/artwork-11-2022.jpg",
-        "projects/art/artwork-12-yearbook-cover-2020.jpg",
-        "projects/art/artwork-2-2023.jpg",
-        "projects/art/artwork-3-2021.jpg",
-        "projects/art/artwork-4-2021.jpg",
-        "projects/art/artwork-6-2023.jpg",
-        "projects/art/artwork-7-2022.jpg",
-        "assets/visual_arts/Fruits.jpg",
-        "assets/visual_arts/flowers.jpg",
-        "assets/visual_arts/art_11.jpg",
-        "assets/visual_arts/art_8_dancing_girls_.jpg",
-        "assets/visual_arts/artwork-13.jpg",
-        "assets/visual_arts/artwork-9_unfinished_.jpg",
-        "assets/visual_arts/artwork-12-3rd_grade_year_book_cover.jpg",
-        "assets/visual_arts/baking_caricature.jpg",
-        "assets/visual_arts/artwork-1.jpg",
-        "assets/visual_arts/artwork-16.jpg",
-        "assets/visual_arts/artwork-5.jpg",
-        "assets/visual_arts/art_1.jpg",
-        "assets/visual_arts/art_15_dog-remove_.jpg",
-        "assets/visual_arts/art_16.jpg",
-        "assets/visual_arts/art_3.jpg",
-        "assets/visual_arts/art_5.jpg",
-        "assets/writing_arts/artwork_bird.jpg",
-        "assets/writing_arts/artwork_landscape.jpg",
-        "assets/writing_arts/artwork_portrait.jpg"
-      ],
-      "desc": "A collection of drawings, paintings, and studies spanning wildlife, botanical subjects, portraiture, landscapes, and yearbook-cover design.",
-      "highlights": [
-        "School yearbook cover contest winner in 3rd grade",
-        "Acrylic still-life and botanical studies",
-        "Wildlife, portrait, landscape, and figurative drawing studies",
-        "Additional artwork from the studio series and creative portfolio"
-      ],
-      "tags": [
-        "#VisualArts",
-        "#Drawing",
-        "#Painting",
-        "#Illustration"
-      ],
-      "badges": [
-        "Visual Arts"
-      ],
-      "is_robotics": false,
-      "sort_order": 14
-    },
-    {
-      "id": 20,
-      "title": "Theatre & Stage Performance",
-      "category_slug": "arts",
-      "category_name": "Arts",
-      "img": "assets/writing_arts/Theater - Much Ado About Nothing.png",
-      "images": [
-        "assets/writing_arts/Theater - Much Ado About Nothing.png",
-        "assets/arts/Theater - Much Ado About Nothing.png"
-      ],
-      "desc": "Stage and theatre work spanning school productions, stage management, ensemble performance, and dramatic monologues.",
-      "highlights": [
-        "Stage manager for The Lawrenceville School Spring Musical (2025)",
-        "Performed with the 8th Notes Ensemble in The Day the Internet Died",
-        "Performed in McCarter Theatre's Mystery Theatre production",
-        "Performed Emily Webb's dramatic monologue from Our Town"
-      ],
-      "tags": [
-        "#Theatre",
-        "#StageManagement",
-        "#Performance"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 15
     }
   ],
   "documents": [
