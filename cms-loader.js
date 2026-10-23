@@ -160,50 +160,41 @@
 
       const cardsGrid = document.querySelector('.portfolio-cards-grid');
       if (cardsGrid) {
-        // Render all projects dynamically so additions/deletions/edits reflect globally
-        cardsGrid.innerHTML = '';
-        data.portfolio.forEach(p => {
-          const card = document.createElement('article');
-          card.className = 'portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer';
-          card.setAttribute('data-category', p.category_slug || 'robotics');
-          card.setAttribute('data-project', JSON.stringify({
-            title: p.title,
-            category: p.category_name,
-            img: p.img,
-            images: Array.isArray(p.images) && p.images.length ? p.images : [p.img],
-            desc: p.desc,
-            highlights: p.highlights || [],
-            tags: p.tags || [],
-            category_slug: p.category_slug
-          }));
+        const existingCards = Array.from(cardsGrid.querySelectorAll('.portfolio-card'));
+        if (existingCards.length > 0) {
+          data.portfolio.forEach((p, idx) => {
+            let card = existingCards.find(c => {
+              const h3 = c.querySelector('h3');
+              if (!h3) return false;
+              const ct = h3.textContent.trim().toLowerCase();
+              const pt = (p.title || '').trim().toLowerCase();
+              return ct === pt || pt.includes(ct.slice(0, 15)) || ct.includes(pt.slice(0, 15));
+            }) || existingCards[idx];
 
-          card.innerHTML = `
-            <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
-              <img alt="${p.title || ''}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}" onerror="this.src='assets/logo.png'"/>
-              <span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
-                <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">${p.category_name || 'Project'}</span>
-              </span>
-            </div>
-            <div class="flex w-full flex-1 flex-col p-5 text-left">
-              <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
-                <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">${p.category_name || 'Project'}</span>
-                <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
-              </span>
-              <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">${p.title || ''}</h3>
-              <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">${p.desc || ''}</span>
-            </div>
-          `;
-          cardsGrid.appendChild(card);
-        });
-
-        // Rebind category filters if defined on page
-        const activeFilterBtn = document.querySelector('.portfolio-filter-tabs .filter-tab-btn[aria-pressed="true"]');
-        if (activeFilterBtn) {
-          const filter = activeFilterBtn.getAttribute('data-filter') || 'all';
-          const cards = cardsGrid.querySelectorAll('.portfolio-card');
-          cards.forEach(card => {
-            const cat = card.getAttribute('data-category');
-            card.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
+            if (card) {
+              const h3 = card.querySelector('h3');
+              if (h3 && p.title) h3.textContent = p.title;
+              const descEl = card.querySelector('.line-clamp-3') || card.querySelector('p');
+              if (descEl && p.desc) descEl.textContent = p.desc;
+              const imgEl = card.querySelector('img');
+              if (imgEl && p.img) {
+                imgEl.src = p.img;
+                if (p.title) imgEl.alt = p.title;
+              }
+              const catLabel = card.querySelector('.card-category-label');
+              if (catLabel && p.category_name) catLabel.textContent = p.category_name;
+              if (p.category_slug) card.setAttribute('data-category', p.category_slug);
+              card.setAttribute('data-project', JSON.stringify({
+                title: p.title,
+                category: p.category_name,
+                img: p.img,
+                images: Array.isArray(p.images) && p.images.length ? p.images : [p.img],
+                desc: p.desc,
+                highlights: p.highlights || [],
+                tags: p.tags || [],
+                category_slug: p.category_slug
+              }));
+            }
           });
         }
       }
@@ -296,6 +287,22 @@
     window.CMS_DATA = data;
     window.dispatchEvent(new CustomEvent('cms:data_applied', { detail: data }));
   }
+
+  // Delegated modal open listener so clicking any card or 'Read more' always opens the project modal
+  document.addEventListener('click', (e) => {
+    const readMore = e.target.closest('.card-read-more');
+    const card = e.target.closest('.portfolio-card');
+    if (readMore || card) {
+      if (e.target.closest('.hero-slider-container')) return;
+      if (e.target.closest('.aspect-video')) return; // Flipping gallery inside card
+      const targetCard = card || readMore.closest('.portfolio-card');
+      if (!targetCard) return;
+      const title = targetCard.querySelector('h3')?.textContent?.trim() || '';
+      if (typeof window.openProjectModal === 'function') {
+        window.openProjectModal(title);
+      }
+    }
+  });
 
   // Real-time synchronization: when admin.html saves in another tab, live site updates instantly!
   window.addEventListener('storage', (e) => {
