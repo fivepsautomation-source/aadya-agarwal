@@ -257,35 +257,6 @@
       "sort_order": 7
     },
     {
-      "id": 9,
-      "title": "Community Field Screening & Senior Care Deployment",
-      "category_slug": "monivitals",
-      "category_name": "MoniVitals",
-      "img": "assets/monivitals/20260829_100521.jpg",
-      "images": [
-        "assets/monivitals/20260829_100521.jpg",
-        "assets/monivitals/20260829_100506_1_.jpg",
-        "assets/ref_images/projects_senior-center_framed.jpg",
-        "assets/monivitals/20260829_094941_1_.jpg"
-      ],
-      "desc": "Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.",
-      "highlights": [
-        "Conducted direct user experience testing with seniors aged 65-90",
-        "Optimized font sizing, contrast, and voice-assisted telemetry readings for accessibility",
-        "Logged zero hardware failures over 8 consecutive hours of outdoor community testing",
-        "Gathered physician and nurse practitioner feedback on triage alert thresholds"
-      ],
-      "tags": [
-        "#CommunityHealth",
-        "#FieldTesting",
-        "#ElderCare",
-        "#PublicHealth"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 8
-    },
-    {
       "id": 10,
       "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
       "category_slug": "monivitals",
