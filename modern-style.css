@@ -215,27 +215,15 @@
 .hero-slide-item {
   position: relative;
   height: 100%;
-  width: 100%;
+  width: max-content !important;
   flex-shrink: 0;
-  overflow: hidden;
-}
-
-@media (min-width: 640px) {
-  .hero-slide-item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-slide-item {
-    width: 33.333333%;
-  }
 }
 
 .hero-slide-item img {
   height: 100%;
-  width: 100%;
-  object-fit: cover;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain;
   object-position: center;
   user-select: none;
 }
@@ -1415,4 +1403,23 @@ figure figcaption {
     width: 98vw;
     border-radius: 1rem;
   }
+}
+
+/* Keep the home hero, profile and portfolio sections on a consistent rhythm. */
+#top + section {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem) !important;
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem) !important;
+}
+
+#top + section > div {
+  gap: clamp(1.5rem, 2.5vw, 2rem) !important;
+}
+
+#top + section > div > div:first-child {
+  margin-top: 0 !important;
+}
+
+.portfolio-cards-grid {
+  align-items: stretch;
+  gap: clamp(1.125rem, 1.8vw, 1.5rem) !important;
 }

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css?v=330">
+  <link rel="stylesheet" href="modern-style.css?v=353">
   <style>
     :root {
       --admin-plum: #3b122d;
@@ -1394,7 +1394,7 @@
       }
 
       if (url === '/api/portfolio/delete' && method === 'POST') {
-        siteData.portfolio = (siteData.portfolio || []).filter(p => p.id !== data.id);
+        siteData.portfolio = (siteData.portfolio || []).filter(p => String(p.id) !== String(data.id));
         syncToStorage();
         return { success: true };
       }
@@ -1417,7 +1417,7 @@
       }
 
       if (url === '/api/awards/delete' && method === 'POST') {
-        siteData.awards = (siteData.awards || []).filter(a => a.id !== data.id);
+        siteData.awards = (siteData.awards || []).filter(a => String(a.id) !== String(data.id));
         syncToStorage();
         return { success: true };
       }
@@ -1444,7 +1444,7 @@
       }
 
       if (url === '/api/documents/delete' && method === 'POST') {
-        siteData.documents = (siteData.documents || []).filter(d => d.id !== data.id);
+        siteData.documents = (siteData.documents || []).filter(d => String(d.id) !== String(data.id));
         syncToStorage();
         return { success: true };
       }
@@ -1452,7 +1452,7 @@
       if (url === '/api/memberships/save' && method === 'POST') {
         siteData.memberships = siteData.memberships || [];
         if (data.id) {
-          const idx = siteData.memberships.findIndex(m => m.id === data.id);
+          const idx = siteData.memberships.findIndex(m => String(m.id) === String(data.id));
           if (idx >= 0) siteData.memberships[idx] = { ...siteData.memberships[idx], ...data };
           else siteData.memberships.push(data);
         } else {
@@ -1464,13 +1464,13 @@
       }
 
       if (url === '/api/memberships/delete' && method === 'POST') {
-        siteData.memberships = (siteData.memberships || []).filter(m => m.id !== data.id);
+        siteData.memberships = (siteData.memberships || []).filter(m => String(m.id) !== String(data.id));
         syncToStorage();
         return { success: true };
       }
 
       if (url === '/api/media/delete' && method === 'POST') {
-        siteData.media = (siteData.media || []).filter(m => m.id !== data.id);
+        siteData.media = (siteData.media || []).filter(m => String(m.id) !== String(data.id));
         syncToStorage();
         return { success: true };
       }
@@ -1962,11 +1962,15 @@
     async function deleteProjectItem(id) {
       if (!confirm('Are you sure you want to delete this project?')) return;
       try {
+        if (siteData && Array.isArray(siteData.portfolio)) {
+          siteData.portfolio = siteData.portfolio.filter(p => String(p.id) !== String(id));
+          syncToStorage();
+        }
         await apiRequest('/api/portfolio/delete', 'POST', { id });
         await syncToStorageAndPublish('Project deletion');
         loadAllData();
       } catch (e) {
-        alert('Failed to delete project.');
+        alert('Failed to delete project: ' + e.message);
       }
     }
 
@@ -2291,6 +2295,10 @@
 
     async function deleteMembershipItem(id) {
       if (!confirm('Delete this membership?')) return;
+      if (siteData && Array.isArray(siteData.memberships)) {
+        siteData.memberships = siteData.memberships.filter(m => String(m.id) !== String(id));
+        syncToStorage();
+      }
       await apiRequest('/api/memberships/delete', 'POST', { id });
       await syncToStorageAndPublish('Membership deletion');
       loadAllData();
@@ -2416,6 +2424,10 @@
 
     async function deleteAwardItem(id) {
       if (!confirm('Delete this award?')) return;
+      if (siteData && Array.isArray(siteData.awards)) {
+        siteData.awards = siteData.awards.filter(a => String(a.id) !== String(id));
+        syncToStorage();
+      }
       await apiRequest('/api/awards/delete', 'POST', { id });
       await syncToStorageAndPublish('Award deletion');
       loadAllData();

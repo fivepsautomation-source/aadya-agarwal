@@ -157,41 +157,60 @@
 
       const cardsGrid = document.querySelector('.portfolio-cards-grid');
       if (cardsGrid) {
-        const existingCards = Array.from(cardsGrid.querySelectorAll('.portfolio-card'));
-        if (existingCards.length > 0) {
-          data.portfolio.forEach((p, idx) => {
-            let card = existingCards.find(c => {
-              const h3 = c.querySelector('h3');
-              if (!h3) return false;
-              const ct = h3.textContent.trim().toLowerCase();
-              const pt = (p.title || '').trim().toLowerCase();
-              return ct === pt || pt.includes(ct.slice(0, 15)) || ct.includes(pt.slice(0, 15));
-            }) || existingCards[idx];
+        cardsGrid.innerHTML = '';
+        data.portfolio.forEach(p => {
+          const card = document.createElement('article');
+          const isRobotics = p.is_robotics || (p.category_slug === 'robotics');
+          card.className = 'portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer';
+          card.setAttribute('data-category', p.category_slug || 'environmental');
+          if (isRobotics) card.setAttribute('data-is-robotics', 'true');
+          
+          card.setAttribute('data-project', JSON.stringify({
+            title: p.title,
+            category: p.category_name,
+            img: p.img,
+            images: Array.isArray(p.images) && p.images.length ? p.images : (p.img ? [p.img] : []),
+            desc: p.desc,
+            highlights: p.highlights || [],
+            tags: p.tags || [],
+            category_slug: p.category_slug
+          }));
 
-            if (card) {
-              const h3 = card.querySelector('h3');
-              if (h3 && p.title) h3.textContent = p.title;
-              const descEl = card.querySelector('.line-clamp-3') || card.querySelector('p');
-              if (descEl && p.desc) descEl.textContent = p.desc;
-              const imgEl = card.querySelector('img');
-              if (imgEl && p.img) {
-                imgEl.src = p.img;
-                if (p.title) imgEl.alt = p.title;
-              }
-              const catLabel = card.querySelector('.card-category-label');
-              if (catLabel && p.category_name) catLabel.textContent = p.category_name;
-              if (p.category_slug) card.setAttribute('data-category', p.category_slug);
-              card.setAttribute('data-project', JSON.stringify({
-                title: p.title,
-                category: p.category_name,
-                img: p.img,
-                images: Array.isArray(p.images) && p.images.length ? p.images : [p.img],
-                desc: p.desc,
-                highlights: p.highlights || [],
-                tags: p.tags || [],
-                category_slug: p.category_slug
-              }));
-            }
+          let badgesHtml = '';
+          if (Array.isArray(p.badges) && p.badges.length) {
+            badgesHtml = `<span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">` +
+              p.badges.map((b, i) => `<span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md ${i % 2 === 0 ? 'bg-plum' : 'bg-berry'} text-white">${typeof b === 'object' ? b.label : b}</span>`).join('') +
+              `</span>`;
+          } else if (isRobotics) {
+            badgesHtml = `<span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
+              <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">FTC</span>
+              <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-berry text-white">FLL</span>
+            </span>`;
+          }
+
+          card.innerHTML = `
+            <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+              <img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}"/>
+              ${badgesHtml}
+            </div>
+            <div class="flex w-full flex-1 flex-col p-5 text-left">
+              <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+                <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">${p.category_name || ''}</span>
+                <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+              </span>
+              <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">${p.title}</h3>
+              <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">${p.desc || ''}</span>
+            </div>
+          `;
+          cardsGrid.appendChild(card);
+        });
+
+        // Re-apply active filter if one was chosen
+        const activeTab = document.querySelector('.filter-tab-btn[aria-pressed="true"]');
+        const filterVal = activeTab ? activeTab.getAttribute('data-filter') : 'all';
+        if (filterVal && filterVal !== 'all') {
+          cardsGrid.querySelectorAll('.portfolio-card').forEach(c => {
+            c.style.display = (c.getAttribute('data-category') === filterVal) ? '' : 'none';
           });
         }
       }

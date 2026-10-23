@@ -15,10 +15,49 @@
   },
   "portfolio": [
     {
+      "id": 101,
+      "title": "FIRST Robotics — FLL & FTC",
+      "category_slug": "robotics",
+      "category_name": "Lead Coder & Programming Team · 2020–Present",
+      "img": "assets/robotics/pic 2 - Team award.JPG",
+      "images": [
+        "assets/robotics/pic 2 - Team award.JPG",
+        "assets/robotics/pic 1 - with robot.jpg",
+        "assets/robotics/pic 10 - wpi award.jpg",
+        "assets/robotics/pic 11 - WPI goodies.jpg",
+        "assets/robotics/pic12 -WPI Team.png",
+        "assets/robotics/pic 6 - Team Award.JPG",
+        "assets/robotics/pic 3 - mt olive.JPG",
+        "assets/robotics/pic 8 - On the board.jpg"
+      ],
+      "desc": "From lead coder of an FLL team invited to the WPI US Open to the Lawrenceville FIRST Tech Challenge programming team — building autonomous control and computer-vision pipelines, and teaching robotics to middle schoolers.",
+      "highlights": [
+        "Lead coder of an FLL team invited to the WPI US Open",
+        "Member of Lawrenceville FIRST Tech Challenge (FTC) programming team",
+        "Engineered autonomous navigation routines and computer-vision pipelines with OpenCV and Java",
+        "Designed custom robot attachments, motor gear ratios, and sensory feedback loops",
+        "Mentored and coached younger middle school students in robotics construction and algorithm design"
+      ],
+      "tags": [
+        "#FIRSTRobotics",
+        "#FTC",
+        "#FLL",
+        "#Robotics",
+        "#Java",
+        "#AutonomousControl"
+      ],
+      "badges": [
+        "FTC",
+        "FLL"
+      ],
+      "is_robotics": true,
+      "sort_order": 0
+    },
+    {
       "id": 1,
       "title": "Autonomous Ocean pH Buoy",
-      "category_slug": "robotics",
-      "category_name": "Robotics & Coding",
+      "category_slug": "environmental",
+      "category_name": "Climate technology · 2025 concept",
       "img": "projects/ocean-project-presentation.jpg",
       "images": [
         "projects/ocean-project-presentation.jpg"
@@ -39,7 +78,7 @@
         "#pHBuoy"
       ],
       "badges": [],
-      "is_robotics": true,
+      "is_robotics": false,
       "sort_order": 0
     },
     {

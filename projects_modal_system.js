@@ -6,6 +6,90 @@
 (function() {
   const PROJECTS_DATA = [
   {
+    "title": "FIRST Robotics — FLL & FTC",
+    "group": "Robotics",
+    "category": "Lead Coder & Programming Team · 2020–Present",
+    "summary": "From lead coder of an FLL team invited to the WPI US Open to the Lawrenceville FIRST Tech Challenge programming team — building autonomous control and computer-vision pipelines, and teaching robotics to middle schoolers.",
+    "cardImage": "assets/robotics/pic 2 - Team award.JPG",
+    "heroImage": "assets/robotics/pic 2 - Team award.JPG",
+    "badges": [
+      {
+        "label": "FTC",
+        "tone": "plum"
+      },
+      {
+        "label": "FLL",
+        "tone": "berry"
+      }
+    ],
+    "technicalFocus": [
+      "Lead coder of an FLL team invited to the prestigious WPI US Open championship",
+      "Active member of the Lawrenceville School FIRST Tech Challenge (FTC) programming team",
+      "Engineered autonomous driving trajectories and sensory navigation using Java and OpenCV computer-vision pipelines",
+      "Designed custom gear-reduction attachments, 3D printed sensor brackets, and closed-loop motor encoders",
+      "Mentored and coached younger middle school students in robotics principles, code architecture, and algorithm design"
+    ],
+    "attachments": [],
+    "videos": [],
+    "sections": [
+      {
+        "title": "Autonomous Navigation & Computer-Vision Algorithms",
+        "intro": "Implemented autonomous navigation routines utilizing sensor telemetry, AprilTag detection, and OpenCV vision pipelines to achieve high-precision field localization and game element scoring."
+      },
+      {
+        "title": "Mechanical Architecture & Drive-train Iterations",
+        "intro": "Prototyped lightweight intake mechanisms and multi-stage lift systems using custom 3D-printed brackets and high-torque motor gearboxes engineered for rapid cycle times."
+      },
+      {
+        "title": "STEM Mentorship & Community Outreach",
+        "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access."
+      }
+    ],
+    "gallerySubtitle": "Competition matches, team awards, robot build iterations, and WPI championship presentation.",
+    "gallery": [
+      {
+        "src": "assets/robotics/pic 2 - Team award.JPG",
+        "alt": "FIRST Robotics Team Award",
+        "caption": "FIRST Robotics Team Award & Recognition"
+      },
+      {
+        "src": "assets/robotics/pic 1 - with robot.jpg",
+        "alt": "Aadya with competition robot",
+        "caption": "Hands-on robot tuning and drive-train testing"
+      },
+      {
+        "src": "assets/robotics/pic 10 - wpi award.jpg",
+        "alt": "WPI Award Ceremony",
+        "caption": "WPI US Open championship award presentation"
+      },
+      {
+        "src": "assets/robotics/pic 11 - WPI goodies.jpg",
+        "alt": "WPI Championship Experience",
+        "caption": "WPI national tournament participation and badge honors"
+      },
+      {
+        "src": "assets/robotics/pic12 -WPI Team.png",
+        "alt": "WPI Championship Team",
+        "caption": "Full robotics team celebrating at WPI US Open"
+      },
+      {
+        "src": "assets/robotics/pic 6 - Team Award.JPG",
+        "alt": "FIRST LEGO League Award",
+        "caption": "Championship banner and trophy honors"
+      },
+      {
+        "src": "assets/robotics/pic 3 - mt olive.JPG",
+        "alt": "Mt Olive Regional Event",
+        "caption": "Regional tournament field trials and pit demonstrations"
+      },
+      {
+        "src": "assets/robotics/pic 8 - On the board.jpg",
+        "alt": "Strategy and Autonomous Mapping",
+        "caption": "Field strategy analysis and autonomous game run planning"
+      }
+    ]
+  },
+  {
     "title": "MoniVitals: Equitable Vitals Monitor & App",
     "group": "Projects",
     "category": "Health technology",
