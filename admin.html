@@ -1333,9 +1333,7 @@
           const ghRes = await fetch(`https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=${Date.now()}_${Math.random()}`, {
             headers: {
               'Authorization': `token ${token}`,
-              'Accept': 'application/vnd.github.v3+json',
-              'Cache-Control': 'no-cache, no-store, must-revalidate',
-              'Pragma': 'no-cache'
+              'Accept': 'application/vnd.github.v3+json'
             }
           });
           if (ghRes.ok) {
@@ -2480,12 +2478,9 @@
       async function getFreshSha() {
         const res = await fetch(`${baseUrl}?cb=${Date.now()}_${Math.random()}`, {
           method: 'GET',
-          cache: 'no-store',
           headers: {
             'Authorization': `token ${activeToken}`,
-            'Accept': 'application/vnd.github.v3+json',
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Pragma': 'no-cache'
+            'Accept': 'application/vnd.github.v3+json'
           }
         });
         if (!res.ok) {
@@ -2510,12 +2505,10 @@
           const sha = await getFreshSha();
           const putRes = await fetch(baseUrl, {
             method: 'PUT',
-            cache: 'no-store',
             headers: {
               'Authorization': `token ${activeToken}`,
               'Accept': 'application/vnd.github.v3+json',
-              'Content-Type': 'application/json',
-              'Cache-Control': 'no-cache, no-store, must-revalidate'
+              'Content-Type': 'application/json'
             },
             body: JSON.stringify({
               message: 'Update site content via Aadya Admin Portal [' + new Date().toLocaleTimeString() + ']',
