@@ -7,7 +7,19 @@
   const CMS_KEY = 'aadya_cms_content';
 
   async function getCMSData() {
-    // 1. Check local storage first (instant live preview from admin.html)
+    // 1. Try live raw GitHub first for instant cross-device updates across all phones & browsers
+    try {
+      const ghRes = await fetch('https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/site_content.json?v=' + Date.now());
+      if (ghRes.ok) {
+        const ghData = await ghRes.json();
+        if (ghData && (ghData.settings || ghData.portfolio)) {
+          try { localStorage.setItem(CMS_KEY, JSON.stringify(ghData)); } catch(e) {}
+          return ghData;
+        }
+      }
+    } catch(e) {}
+
+    // 2. Check local storage (instant preview from same browser)
     const local = localStorage.getItem(CMS_KEY);
     if (local) {
       try {
@@ -18,13 +30,11 @@
       } catch(e) {}
     }
 
-    // 2. Try fetching static content json fallback
+    // 3. Fallback to local static content json
     try {
       const res = await fetch('site_content.json?v=' + Date.now());
       if (res.ok) {
         const data = await res.json();
-        // Seed into localStorage so user has a working base
-        try { localStorage.setItem(CMS_KEY, JSON.stringify(data)); } catch(e) {}
         return data;
       }
     } catch(e) {}
