@@ -2476,7 +2476,24 @@
       const activeToken = token || localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
 
       async function getFreshSha() {
-        const res = await fetch(`${baseUrl}?cb=${Date.now()}_${Math.random()}`, {
+        // Try git trees API on main branch (never cached by intermediate proxies, 100% exact blob sha)
+        try {
+          const treeRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/main?cb=${Date.now()}_${Math.random()}`, {
+            method: 'GET',
+            headers: {
+              'Authorization': `token ${activeToken}`,
+              'Accept': 'application/vnd.github.v3+json'
+            }
+          });
+          if (treeRes.ok) {
+            const treeData = await treeRes.json();
+            const item = (treeData.tree || []).find(t => t.path === path);
+            if (item && item.sha) return item.sha;
+          }
+        } catch(e) {}
+
+        // Fallback to Contents API with explicit ref=main
+        const res = await fetch(`${baseUrl}?ref=main&cb=${Date.now()}_${Math.random()}`, {
           method: 'GET',
           headers: {
             'Authorization': `token ${activeToken}`,
@@ -2500,7 +2517,7 @@
       const base64Content = btoa(binaryStr);
 
       let lastErr = null;
-      for (let attempt = 0; attempt < 4; attempt++) {
+      for (let attempt = 0; attempt < 5; attempt++) {
         try {
           const sha = await getFreshSha();
           const putRes = await fetch(baseUrl, {
@@ -2524,14 +2541,17 @@
           }
 
           const errData = await putRes.json().catch(() => ({}));
-          if (putRes.status === 409 || (errData.message && errData.message.includes('does not match'))) {
-            await new Promise(r => setTimeout(r, 750));
+          const errMsg = errData.message || ('GitHub error HTTP ' + putRes.status);
+          lastErr = new Error(errMsg);
+
+          if (putRes.status === 409 || errMsg.includes('does not match')) {
+            await new Promise(r => setTimeout(r, 1000));
             continue;
           }
-          throw new Error(errData.message || ('GitHub error HTTP ' + putRes.status));
+          throw lastErr;
         } catch(err) {
           lastErr = err;
-          await new Promise(r => setTimeout(r, 750));
+          await new Promise(r => setTimeout(r, 1000));
         }
       }
 
