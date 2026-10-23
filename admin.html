@@ -1327,10 +1327,29 @@
 
     async function handleClientSideFallback(url, method, data) {
       if (!siteData || !siteData.settings) {
+        // Try live un-cached GitHub Contents API first
         try {
-          const ghRes = await fetch('https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/site_content.json?v=' + Date.now());
+          const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
+          const ghRes = await fetch(`https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=${Date.now()}_${Math.random()}`, {
+            headers: {
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'Cache-Control': 'no-cache, no-store, must-revalidate',
+              'Pragma': 'no-cache'
+            }
+          });
           if (ghRes.ok) {
-            siteData = await ghRes.json();
+            const fileInfo = await ghRes.json();
+            if (fileInfo && fileInfo.content) {
+              const binary = atob(fileInfo.content.replace(/\s/g, ''));
+              const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+              const decodedStr = new TextDecoder('utf-8').decode(bytes);
+              const ghData = JSON.parse(decodedStr);
+              if (ghData && (ghData.settings || ghData.portfolio)) {
+                siteData = ghData;
+                localStorage.setItem('aadya_cms_content', JSON.stringify(ghData));
+              }
+            }
           }
         } catch(e) {}
 
@@ -1351,29 +1370,7 @@
       }
 
       if (url === '/api/content' && method === 'GET') {
-        try {
-          const ghRes = await fetch('https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/site_content.json?v=' + Date.now());
-          if (ghRes.ok) {
-            const json = await ghRes.json();
-            if (json && (json.settings || json.portfolio)) {
-              siteData = json;
-              localStorage.setItem('aadya_cms_content', JSON.stringify(json));
-              return json;
-            }
-          }
-        } catch(e) {}
-
-        const stored = localStorage.getItem('aadya_cms_content');
-        if (stored) {
-          try { 
-            siteData = JSON.parse(stored);
-            return siteData;
-          } catch(e) {}
-        }
-        const fallbackRes = await fetch('site_content.json?v=' + Date.now());
-        const json = await fallbackRes.json();
-        siteData = json;
-        return json;
+        return siteData;
       }
 
       if (url === '/api/settings/update' && method === 'POST') {
