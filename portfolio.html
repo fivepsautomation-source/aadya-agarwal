@@ -316,43 +316,33 @@
   
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Portfolio Filter Tabs
-  const filterBtns = document.querySelectorAll('.portfolio-filter-tabs .filter-tab-btn');
-  const projectCards = document.querySelectorAll('.portfolio-cards-grid .portfolio-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+  const filterTabsContainer = document.querySelector('.portfolio-filter-tabs');
+  if (filterTabsContainer) {
+    filterTabsContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-tab-btn');
+      if (!btn) return;
       const targetFilter = btn.getAttribute('data-filter');
 
       // Update button active states
-      filterBtns.forEach(b => {
+      filterTabsContainer.querySelectorAll('.filter-tab-btn').forEach(b => {
         b.setAttribute('aria-pressed', 'false');
         b.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum';
       });
       btn.setAttribute('aria-pressed', 'true');
       btn.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-plum bg-plum text-white';
 
-      // Show / hide matching cards with smooth animation
-      projectCards.forEach(card => {
+      // Show / hide matching cards
+      const currentCards = document.querySelectorAll('.portfolio-cards-grid .portfolio-card');
+      currentCards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
         if (targetFilter === 'all' || cardCat === targetFilter) {
           card.style.display = '';
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(8px)';
-          requestAnimationFrame(() => {
-            card.style.transition = 'opacity 300ms ease, transform 300ms ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          });
         } else {
           card.style.display = 'none';
         }
       });
     });
-  });
-
-  // 2. Project Detail Modal
-  // Modal handled by projects_modal_system.js
+  }
 });
 </script>
 <script src="projects_modal_system.js?v=7"></script>
