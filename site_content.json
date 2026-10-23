@@ -600,6 +600,17 @@
       "sort_order": 0
     },
     {
+      "id": 4,
+      "title": "Featured in The Lawrentian (“One 2 Watch”)",
+      "category_pill": "Honors",
+      "year": "2026",
+      "image_url": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
+      "description": "The school magazine feature traces Aadya&#x27;s biochar filtration empirical trials and its evolution into an AI-powered water-remediation buoy node.",
+      "link_text": "Learn Mor",
+      "link_url": "#",
+      "sort_order": 0
+    },
+    {
       "id": 2,
       "title": "WPI US Open World Championship — Rank #14",
       "category_pill": "Honors",
@@ -620,17 +631,6 @@
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 2
-    },
-    {
-      "id": 4,
-      "title": "Featured in The Lawrentian (“One 2 Watch”)",
-      "category_pill": "Honors",
-      "year": "2026",
-      "image_url": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
-      "description": "The school magazine feature traces Aadya&#x27;s biochar filtration empirical trials and its evolution into an AI-powered water-remediation buoy node.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 3
     },
     {
       "id": 5,

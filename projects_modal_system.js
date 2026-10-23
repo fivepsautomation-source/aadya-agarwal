@@ -117,7 +117,7 @@
     "videos": [
       {
         "type": "local",
-        "src": "/projects/videos/3m-buoy-submission.mp4",
+        "src": "projects/videos/3m-buoy-preview.mp4",
         "title": "3M Young Scientist Challenge submission",
         "poster": "projects/ocean-project-presentation.jpg"
       }
@@ -1095,6 +1095,70 @@
       `;
     }
 
+    // Video Recording Section HTML - Rendered at the end, only when real videos exist (zero placeholders)
+    let videosHtml = '';
+    if (Array.isArray(project.videos) && project.videos.length > 0) {
+      const validVideos = project.videos.filter(v => v && v.src && typeof v.src === 'string' && v.src.trim() !== '');
+      if (validVideos.length > 0) {
+        videosHtml = `
+          <div class="video-recording-section mt-10">
+            <div class="mb-4 flex items-center justify-between">
+              <h3 class="font-display text-2xl font-bold text-plum">Featured Video</h3>
+              <span class="text-xs font-semibold uppercase tracking-wider text-[#ba1f43]">${validVideos.length === 1 ? 'Video Recording' : validVideos.length + ' Videos'}</span>
+            </div>
+            <div class="space-y-6">
+              ${validVideos.map(vid => {
+                const vidTitle = vid.title || `${project.title} Video Recording`;
+                const isYouTube = vid.type === 'youtube' || (!vid.src.endsWith('.mp4') && !vid.src.endsWith('.mov') && !vid.src.endsWith('.webm') && !vid.src.includes('/'));
+
+                if (isYouTube) {
+                  const ytId = vid.src.replace(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)/, '').split(/[^a-zA-Z0-9_-]/)[0];
+                  return `
+                    <div class="overflow-hidden rounded-2xl border border-ink/15 bg-black shadow-lg">
+                      <div class="relative aspect-video w-full bg-black">
+                        <iframe 
+                          src="https://www.youtube.com/embed/${ytId}?rel=0" 
+                          title="${vidTitle}"
+                          class="absolute inset-0 h-full w-full border-0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          allowfullscreen>
+                        </iframe>
+                      </div>
+                      <div class="bg-paper px-5 py-3 border-t border-ink/10 flex items-center justify-between">
+                        <span class="text-sm font-semibold text-ink">${vidTitle}</span>
+                        <a href="https://www.youtube.com/watch?v=${ytId}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-plum hover:text-berry underline underline-offset-2">Watch on YouTube ↗</a>
+                      </div>
+                    </div>
+                  `;
+                } else {
+                  const videoSrc = vid.src.startsWith('/') ? vid.src.slice(1) : vid.src;
+                  return `
+                    <div class="overflow-hidden rounded-2xl border border-ink/15 bg-black shadow-lg">
+                      <div class="relative aspect-video w-full bg-black">
+                        <video 
+                          src="${videoSrc}" 
+                          controls 
+                          playsinline 
+                          preload="metadata" 
+                          poster="${vid.poster || ''}" 
+                          class="h-full w-full object-contain">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <div class="bg-paper px-5 py-3 border-t border-ink/10 flex items-center justify-between">
+                        <span class="text-sm font-semibold text-ink">${vidTitle}</span>
+                        <span class="text-xs font-mono font-medium text-ink/50">MP4 Video</span>
+                      </div>
+                    </div>
+                  `;
+                }
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }
+    }
+
     return `
       <!-- Hero Banner with Title Overlay -->
       <div class="relative h-[36vh] min-h-64 w-full overflow-hidden bg-[#0a0a0d] sm:h-[420px]">
@@ -1112,6 +1176,7 @@
         ${docsHtml}
         ${sectionsHtml}
         ${galleryHtml}
+        ${videosHtml}
       </div>
     `;
   }
@@ -1178,6 +1243,9 @@
             }
           });
         }
+        if (Array.isArray(identifier.videos) && identifier.videos.length > 0) {
+          project.videos = identifier.videos;
+        }
       } else {
         const imgs = Array.isArray(identifier.images) ? identifier.images : (identifier.img ? [identifier.img] : []);
         project = {
@@ -1193,7 +1261,8 @@
             }
           ],
           gallery: imgs.map(img => typeof img === 'string' ? { src: img, alt: identifier.title, caption: identifier.title } : img),
-          gallerySubtitle: "Field captures, research documentation, and presentation materials."
+          gallerySubtitle: "Field captures, research documentation, and presentation materials.",
+          videos: Array.isArray(identifier.videos) ? identifier.videos : (identifier.video ? [identifier.video] : [])
         };
       }
     } else {
@@ -1380,5 +1449,49 @@
         }
       }, 3000);
     }
+
+    // CMS Synchronization: Expose global updater & load cached updates
+    window.updateProjectsDataFromCMS = function(cmsPortfolio) {
+      if (!Array.isArray(cmsPortfolio) || !cmsPortfolio.length) return;
+      cmsPortfolio.forEach(item => {
+        const idx = PROJECTS_DATA.findIndex(p => p.title.toLowerCase() === (item.title || '').toLowerCase());
+        if (idx >= 0) {
+          PROJECTS_DATA[idx].title = item.title;
+          if (item.desc) PROJECTS_DATA[idx].summary = item.desc;
+          if (item.img) {
+            PROJECTS_DATA[idx].cardImage = item.img;
+            PROJECTS_DATA[idx].heroImage = item.img;
+          }
+          if (Array.isArray(item.images) && item.images.length > 0) {
+            PROJECTS_DATA[idx].gallery = item.images.map(img => typeof img === 'string' ? { src: img, alt: item.title, caption: item.title } : img);
+          }
+          if (Array.isArray(item.highlights)) {
+            PROJECTS_DATA[idx].technicalFocus = item.highlights;
+          }
+        } else {
+          PROJECTS_DATA.push({
+            title: item.title,
+            category: item.category_name || '',
+            summary: item.desc || '',
+            cardImage: item.img || '',
+            heroImage: item.img || '',
+            technicalFocus: item.highlights || [],
+            sections: [{ title: "Project Overview", intro: item.desc || "" }],
+            gallery: (item.images || []).map(img => typeof img === 'string' ? { src: img, alt: item.title, caption: item.title } : img),
+            videos: []
+          });
+        }
+      });
+    };
+
+    try {
+      const stored = localStorage.getItem('aadya_cms_content');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (parsed && Array.isArray(parsed.portfolio)) {
+          window.updateProjectsDataFromCMS(parsed.portfolio);
+        }
+      }
+    } catch(e) {}
   });
 })();
