@@ -661,11 +661,16 @@
             </p>
           </div>
 
-          <div class="grid-3col" style="margin-bottom: 2rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
             <div class="cms-card" style="margin: 0;">
               <p style="font-size: 0.75rem; font-weight: 700; color: var(--admin-berry); text-transform: uppercase;">Portfolio Projects</p>
-              <h3 id="statCountProjects" style="font-size: 2.4rem; font-weight: 800; color: var(--admin-plum); margin: 0.25rem 0;">11</h3>
-              <p style="font-size: 0.82rem; color: rgba(15,15,18,0.6);">Across 6 specialized categories</p>
+              <h3 id="statCountProjects" style="font-size: 2.4rem; font-weight: 800; color: var(--admin-plum); margin: 0.25rem 0;">16</h3>
+              <p style="font-size: 0.82rem; color: rgba(15,15,18,0.6);">Across all specialized domains</p>
+            </div>
+            <div class="cms-card" style="margin: 0;">
+              <p style="font-size: 0.75rem; font-weight: 700; color: var(--admin-berry); text-transform: uppercase;">Awards &amp; Distinctions</p>
+              <h3 id="statCountAwards" style="font-size: 2.4rem; font-weight: 800; color: var(--admin-plum); margin: 0.25rem 0;">22</h3>
+              <p style="font-size: 0.82rem; color: rgba(15,15,18,0.6);">National awards, certs &amp; honors</p>
             </div>
             <div class="cms-card" style="margin: 0;">
               <p style="font-size: 0.75rem; font-weight: 700; color: var(--admin-berry); text-transform: uppercase;">Technical Briefs</p>
@@ -808,11 +813,22 @@
             <div class="cms-card-header">
               <div>
                 <h2 class="cms-card-title">Awards &amp; Press Citations</h2>
-                <p class="cms-card-subtitle">Add national awards, upload certificates/photos, and update school features.</p>
+                <p class="cms-card-subtitle">Manage all 22 current awards, certificates, publications, and honors from the website.</p>
               </div>
               <button onclick="openNewAwardModal()" class="btn-primary" style="width: auto; padding: 0.65rem 1.4rem; margin: 0; background: var(--admin-berry);">
                 <span>+ Add Award / Feature</span>
               </button>
+            </div>
+
+            <!-- Awards category filter tabs -->
+            <div id="awardsFilterTabs" style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+              <button type="button" onclick="filterAwardsList('all', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: var(--admin-plum); color: #fff;">All (<span id="countAwardsAll">0</span>)</button>
+              <button type="button" onclick="filterAwardsList('research', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Research &amp; Water</button>
+              <button type="button" onclick="filterAwardsList('robotics', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Robotics</button>
+              <button type="button" onclick="filterAwardsList('civic', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Civic &amp; Service</button>
+              <button type="button" onclick="filterAwardsList('writing', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Writing &amp; STEM Pubs</button>
+              <button type="button" onclick="filterAwardsList('humanities', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Humanities &amp; School</button>
+              <button type="button" onclick="filterAwardsList('arts', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Music &amp; Oratory</button>
             </div>
 
             <div id="awardsList">
@@ -1039,7 +1055,28 @@
       <div class="grid-2col">
         <div class="form-group">
           <label class="form-label">Category Badge</label>
-          <input type="text" id="modalAwardCategory" class="form-input" placeholder="Global STEM Finalist" required>
+          <input type="text" id="modalAwardCategory" list="awardCategorySuggestions" class="form-input" placeholder="e.g. National Winner · 2026" required>
+          <datalist id="awardCategorySuggestions">
+            <option value="National Winner · 2026">
+            <option value="Regional Award · 2026">
+            <option value="Second Place · 2026">
+            <option value="Recognition · 2026">
+            <option value="World Finalist · 2026">
+            <option value="FIRST LEGO League">
+            <option value="State Recognition">
+            <option value="Youth Service">
+            <option value="High Commendation · 2026">
+            <option value="Bronze Medal · 2026">
+            <option value="Silver Key & Honorable Mentions">
+            <option value="Top 10 Selection · 2026">
+            <option value="Literary Anthologies">
+            <option value="Published Author & Associate">
+            <option value="The Lawrenceville School · 2026">
+            <option value="School Feature · 2026">
+            <option value="Grand Prize Winner · 2026">
+            <option value="Honors Recital Winner">
+            <option value="National Champion">
+          </datalist>
         </div>
         <div class="form-group">
           <label class="form-label">Year</label>
@@ -1052,14 +1089,14 @@
         <label class="form-label">Award / Certificate Image</label>
         <div style="display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
           <div style="width: 100px; height: 75px; border-radius: 10px; overflow: hidden; background: #eee; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0;">
-            <img id="modalAwardImgPreview" src="assets/logo.png" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='assets/logo.png'">
+            <img id="modalAwardImgPreview" src="assets/logo.png" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this)">
           </div>
           <div style="flex: 1; min-width: 220px;">
             <label class="btn-secondary" style="cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; padding: 0.5rem 0.95rem; margin-bottom: 0.5rem;">
               <span>📷 Change / Upload Image</span>
               <input type="file" accept="image/*" style="display: none;" onchange="uploadSingleImage(this, 'modalAwardImg', 'modalAwardImgPreview')">
             </label>
-            <input type="text" id="modalAwardImg" class="form-input" style="font-size: 0.82rem; padding: 0.55rem 0.8rem;" placeholder="Image URL" oninput="document.getElementById('modalAwardImgPreview').src=this.value">
+            <input type="text" id="modalAwardImg" class="form-input" style="font-size: 0.82rem; padding: 0.55rem 0.8rem;" placeholder="Image URL (e.g. assets/certificates/...)" oninput="updateAwardPreview(this.value)">
           </div>
         </div>
       </div>
@@ -1217,6 +1254,15 @@
 
     function updateCoverPreview(val) {
       const prev = document.getElementById('modalProjImgPreview');
+      if (prev) {
+        prev.removeAttribute('data-tried-github-raw');
+        prev.removeAttribute('data-tried-cdn');
+        prev.src = getResolvedImageSrc((val || '').trim());
+      }
+    }
+
+    function updateAwardPreview(val) {
+      const prev = document.getElementById('modalAwardImgPreview');
       if (prev) {
         prev.removeAttribute('data-tried-github-raw');
         prev.removeAttribute('data-tried-cdn');
@@ -1749,6 +1795,9 @@
 
       // Counts
       document.getElementById('statCountProjects').textContent = (siteData.portfolio || []).length;
+      if (document.getElementById('statCountAwards')) {
+        document.getElementById('statCountAwards').textContent = (siteData.awards || []).length;
+      }
       document.getElementById('statCountDocs').textContent = (siteData.documents || []).length;
       document.getElementById('statCountMedia').textContent = (siteData.media || []).length;
 
@@ -1762,7 +1811,11 @@
       renderMembershipsList(siteData.memberships || []);
 
       // Render Awards
-      renderAwardsList(siteData.awards || []);
+      if (typeof currentAwardsFilter !== 'undefined' && currentAwardsFilter && currentAwardsFilter !== 'all') {
+        filterAwardsList(currentAwardsFilter);
+      } else {
+        renderAwardsList(siteData.awards || []);
+      }
 
       // Render About
       const ab = siteData.about || {};
@@ -2493,11 +2546,18 @@
       }
     }
 
+    let currentAwardsFilter = 'all';
+
     function renderAwardsList(items) {
       const c = document.getElementById('awardsList');
+      if (!c) return;
+      const countEl = document.getElementById('countAwardsAll');
+      if (countEl && siteData && siteData.awards) {
+        countEl.textContent = siteData.awards.length;
+      }
       c.innerHTML = '';
-      if (!items.length) {
-        c.innerHTML = '<p style="color: rgba(15,15,18,0.5); padding: 1.5rem 0;">No awards added yet.</p>';
+      if (!items || !items.length) {
+        c.innerHTML = '<p style="color: rgba(15,15,18,0.5); padding: 1.5rem 0;">No awards found in this category.</p>';
         return;
       }
       items.forEach(a => {
@@ -2507,8 +2567,10 @@
           <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
             <img src="${getResolvedImageSrc(a.image_url || 'assets/logo.png')}" class="item-thumb-micro" onerror="smartImageFallback(this, '${a.image_url || ''}')">
             <div class="item-meta-col">
-              <div class="item-meta-title">${a.title} (${a.year})</div>
-              <div class="item-meta-subtitle">${a.category_pill} &bull; ${(a.description || '').slice(0, 80)}...</div>
+              <div class="item-meta-title">${a.title} ${a.year ? '(' + a.year + ')' : ''}</div>
+              <div class="item-meta-subtitle">
+                <span style="background: rgba(186, 31, 67, 0.1); color: var(--admin-berry); font-weight: 700; padding: 2px 7px; border-radius: 4px; font-size: 0.75rem; margin-right: 6px;">${a.category_pill || 'Award'}</span> &bull; ${(a.description || '').slice(0, 95)}...
+              </div>
             </div>
           </div>
           <div class="item-actions-col">
@@ -2522,6 +2584,57 @@
         `;
         c.appendChild(row);
       });
+    }
+
+    function filterAwardsList(cat, btn) {
+      currentAwardsFilter = cat;
+      document.querySelectorAll('#awardsFilterTabs button').forEach(b => {
+        b.style.background = '#fff';
+        b.style.color = 'var(--admin-plum)';
+      });
+      if (btn) {
+        btn.style.background = 'var(--admin-plum)';
+        btn.style.color = '#fff';
+      } else {
+        const matchingBtn = Array.from(document.querySelectorAll('#awardsFilterTabs button')).find(b => {
+          const oc = b.getAttribute('onclick') || '';
+          return oc.includes(`'${cat}'`);
+        });
+        if (matchingBtn) {
+          matchingBtn.style.background = 'var(--admin-plum)';
+          matchingBtn.style.color = '#fff';
+        }
+      }
+      const items = siteData.awards || [];
+      if (cat === 'all') {
+        renderAwardsList(items);
+        return;
+      }
+      const filtered = items.filter(a => {
+        const group = (a.category_group || '').toLowerCase();
+        const pill = (a.category_pill || '').toLowerCase();
+        const title = (a.title || '').toLowerCase();
+        if (cat === 'research') {
+          return group === 'research' || pill.includes('water') || pill.includes('winner') || pill.includes('science') || title.includes('mit') || title.includes('water') || title.includes('noaa') || title.includes('mercer');
+        }
+        if (cat === 'robotics') {
+          return group === 'robotics' || pill.includes('robot') || pill.includes('lego') || pill.includes('hackathon') || title.includes('wpi') || title.includes('robotics') || title.includes('fll') || title.includes('hackathon');
+        }
+        if (cat === 'civic') {
+          return group === 'civic' || pill.includes('service') || pill.includes('state') || title.includes('legislative') || title.includes('service') || title.includes('nations');
+        }
+        if (cat === 'writing') {
+          return group === 'writing' || pill.includes('essay') || pill.includes('writing') || pill.includes('poetry') || pill.includes('author') || pill.includes('medal') || title.includes('locke') || title.includes('scholastic') || title.includes('techtrek') || title.includes('sink') || title.includes('patriot') || title.includes('harvard');
+        }
+        if (cat === 'humanities') {
+          return group === 'humanities' || pill.includes('humanities') || pill.includes('school') || pill.includes('spotlight') || title.includes('imbrie') || title.includes('lawrentian') || title.includes('biochar');
+        }
+        if (cat === 'arts') {
+          return group === 'arts' || pill.includes('piano') || pill.includes('flute') || pill.includes('recital') || pill.includes('speaking') || pill.includes('champion') || title.includes('music') || title.includes('flute') || title.includes('speaking');
+        }
+        return false;
+      });
+      renderAwardsList(filtered);
     }
 
     async function deleteAwardItem(id) {

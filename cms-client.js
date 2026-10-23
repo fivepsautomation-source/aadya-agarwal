@@ -141,6 +141,7 @@
               card.setAttribute('data-project', JSON.stringify({
                 title: p.title,
                 category: p.category_name,
+                article_url: p.article_url,
                 img: p.img,
                 images: Array.isArray(p.images) && p.images.length ? p.images : [p.img],
                 videos: Array.isArray(p.videos) ? p.videos : [],

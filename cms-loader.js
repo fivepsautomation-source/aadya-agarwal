@@ -234,11 +234,13 @@
           const isRobotics = p.is_robotics || (p.category_slug === 'robotics');
           card.className = 'portfolio-card group flex min-w-0 flex-col overflow-hidden rounded-xl border border-ink/15 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-plum/40 hover:shadow-lg cursor-pointer';
           card.setAttribute('data-category', p.category_slug || 'environmental');
+          if (p.article_url) card.setAttribute('data-article-url', p.article_url);
           if (isRobotics) card.setAttribute('data-is-robotics', 'true');
           
           card.setAttribute('data-project', JSON.stringify({
             title: p.title,
             category: p.category_name,
+            article_url: p.article_url,
             img: p.img,
             images: Array.isArray(p.images) && p.images.length ? p.images : (p.img ? [p.img] : []),
             videos: Array.isArray(p.videos) ? p.videos : [],
@@ -262,7 +264,7 @@
 
           card.innerHTML = `
             <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
-              <img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}"/>
+              ${p.article_url ? `<a class="block h-full w-full" href="${p.article_url}" target="_blank" rel="noopener noreferrer" aria-label="Read the Lawrenceville feature about MIT Solve"><img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}"/></a>` : `<img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}"/>`}
               ${badgesHtml}
             </div>
             <div class="flex w-full flex-1 flex-col p-5 text-left">

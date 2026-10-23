@@ -1460,6 +1460,7 @@
         };
 
         mediaBox.addEventListener('click', (e) => {
+          if (e.target.closest('a')) return;
           e.stopPropagation();
           e.preventDefault();
           changeImage(curIdx + 1);
