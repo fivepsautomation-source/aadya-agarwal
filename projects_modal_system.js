@@ -881,167 +881,98 @@
     ]
   },
   {
-    "title": "Pulse Oximetry Optical Bias Mitigation Research",
+    "title": "Biomedical & AI Scientific Research",
     "group": "Projects",
     "category": "Biomedical & AI",
-    "summary": "Investigating wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring.",
-    "cardImage": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
-    "heroImage": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
-    "badges": [
-      {
-        "label": "Biometrics",
-        "tone": "plum"
-      },
-      {
-        "label": "IEEE",
-        "tone": "berry"
-      }
-    ],
-    "technicalFocus": [
-      "Examined multi-wavelength LED emitters (red, infrared, green) across diverse skin tones",
-      "Evaluated calibration curve adjustments to prevent hypoxemia misreading in darker skin",
-      "Presented engineering insights at IEEE Engineering in Conversation forum",
-      "Direct foundation for the hardware sensor module utilized in MoniVitals"
-    ],
-    "attachments": [],
-    "videos": [],
-    "sections": [
-      {
-        "title": "Photoplethysmography Melanin Differential Calibration",
-        "intro": "Pulse oximeters rely on differential absorption of 660nm (red) and 940nm (infrared) light through pulsating vascular tissue. Higher epidermal melanin attenuates shorter wavelengths, skewing R-curves and overestimating oxygen saturation. Evaluated adaptive multi-wavelength LED arrays to dynamically compensate for baseline attenuation."
-      },
-      {
-        "title": "Clinical Bias Mitigation & IEEE Presentation",
-        "intro": "Synthesized findings into an equitable telemetry framework, presenting methodology and bench data at the IEEE Engineering in Conversation forum to advocate for inclusive medical device standards."
-      }
-    ],
-    "gallerySubtitle": "Spectrophotometric analysis, circuit breadboards, and IEEE technical presentations.",
-    "gallery": [
-      {
-        "src": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
-        "alt": "Pulse Oximetry Optical Bias Mitigation Research",
-        "caption": "Pulse Oximetry Optical Bias Mitigation Research"
-      },
-      {
-        "src": "assets/science_fairs/ieee_pic4.jpeg",
-        "alt": "Pulse Oximetry Optical Bias Mitigation Research",
-        "caption": "Pulse Oximetry Optical Bias Mitigation Research"
-      },
-      {
-        "src": "assets/monivitals/20260829_094941_1_.jpg",
-        "alt": "Pulse Oximetry Optical Bias Mitigation Research",
-        "caption": "Pulse Oximetry Optical Bias Mitigation Research"
-      },
-      {
-        "src": "assets/monivitals/20260829_100443.jpg",
-        "alt": "Pulse Oximetry Optical Bias Mitigation Research",
-        "caption": "Pulse Oximetry Optical Bias Mitigation Research"
-      }
-    ]
-  },
-  {
-    "title": "Stanford AIMI Summer Health AI Fellow Research",
-    "group": "Projects",
-    "category": "Biomedical & AI",
-    "summary": "Explored multimodal clinical models combining waveform telemetry with patient electronic health records for early sepsis and arrhythmia anomaly detection.",
-    "cardImage": "assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg",
-    "heroImage": "assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg",
+    "summary": "Stanford AIMI clinical AI research, computational drug discovery with AutoDock Vina, Harvard-mentored molecular biology wet lab, and Cambridge cancer genomics research.",
+    "cardImage": "assets/certificates/BioResearch Academy Certificate.jpeg",
+    "heroImage": "assets/certificates/BioResearch Academy Certificate.jpeg",
     "badges": [
       {
         "label": "Stanford AIMI",
         "tone": "plum"
       },
       {
-        "label": "Machine Learning",
+        "label": "Harvard Fellow",
         "tone": "berry"
+      },
+      {
+        "label": "AutoDock Vina",
+        "tone": "moss"
       }
     ],
     "technicalFocus": [
-      "Stanford AIMI youth fellowship focused on ethical machine learning in healthcare",
-      "Analyzed synthetic physiological timeseries datasets for model generalizability",
-      "Investigated data drift and algorithmic fairness across demographic cohorts"
+      "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
+      "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
+      "Bioinformatics Tools: AutoDock Vina (Molecular Docking), Computational Structural Biology, Protein Modeling, Graph Theory Networks.",
+      "Wet Lab Techniques: Sterile cell culture, CRISPR-Cas9 protocols, gel electrophoresis, PCR preparation, chemical safety."
     ],
-    "attachments": [],
+    "attachments": [
+      {
+        "label": "All Pictures & Videos (Google Drive Folder)",
+        "href": "https://drive.google.com/drive/folders/1CvGPX-xZhf5QsRUANlcrS7EhEGcuwtv_?usp=drive_link"
+      }
+    ],
     "videos": [],
     "sections": [
       {
-        "title": "Multimodal Clinical Timeseries Modeling",
-        "intro": "Trained recurrent and transformer architectures on continuous ECG/PPG timeseries combined with demographic EHR metadata, achieving high area under ROC curve for early decompensation warning."
+        "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
+        "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 \u2013 June 2027.<br><br>\u2022 Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>\u2022 Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>\u2022 Scheduled to present research at a Stanford Health event in summer 2027."
       },
       {
-        "title": "Algorithmic Equity & Drift Monitoring",
-        "intro": "Evaluated sub-group performance metrics across age and demographic strata to ensure predictive thresholds did not disproportionately misclassify historically underserved patient populations."
+        "title": "Computational Oncology Research, Mentored Independent Research",
+        "intro": "Research Co-Author | June 2026 \u2013 Present.<br><br>\u2022 Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>\u2022 Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>\u2022 Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal."
+      },
+      {
+        "title": "Biomedical Research Fellow \u2014 Advanced BioResearch Academy, Boston. MA",
+        "intro": "Research Trainee | Fall 2025 \u2013 Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>\u2022 Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>\u2022 Delivered independent research project presentations at the end of each 12-week session.<br>\u2022 Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research."
+      },
+      {
+        "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
+        "intro": "July \u2013 August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>\u2022 Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>\u2022 Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>\u2022 Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>\u2022 Authored a 6-page research paper detailing methodology, analysis, and biological implications."
       }
     ],
-    "gallerySubtitle": "Stanford AIMI fellowship certifications, model telemetry, and research presentations.",
-    "gallery": [
-      {
-        "src": "assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg",
-        "alt": "Stanford AIMI Summer Health AI Fellow Research",
-        "caption": "Stanford AIMI Summer Health AI Fellow Research"
-      },
-      {
-        "src": "assets/certificates/InspiritAI_AI_Ambassador_Certificate.jpg",
-        "alt": "Stanford AIMI Summer Health AI Fellow Research",
-        "caption": "Stanford AIMI Summer Health AI Fellow Research"
-      },
-      {
-        "src": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
-        "alt": "Stanford AIMI Summer Health AI Fellow Research",
-        "caption": "Stanford AIMI Summer Health AI Fellow Research"
-      }
-    ]
-  },
-  {
-    "title": "BioResearch Academy Wet-Bench Molecular Biology",
-    "group": "Projects",
-    "category": "Biomedical & AI",
-    "summary": "Completed hands-on laboratory certifications in recombinant DNA cloning, PCR amplification, agarose gel electrophoresis, and spectrophotometric protein assays.",
-    "cardImage": "assets/certificates/BioResearch Academy Certificate.jpeg",
-    "heroImage": "assets/certificates/BioResearch Academy Certificate.jpeg",
-    "badges": [
-      {
-        "label": "Wet Bench",
-        "tone": "plum"
-      },
-      {
-        "label": "Molecular Biology",
-        "tone": "berry"
-      }
-    ],
-    "technicalFocus": [
-      "Hands-on sterile technique, micropipetting, and bacterial transformation",
-      "Spectrophotometry validation of heavy metal adsorption curves in water samples",
-      "Empirical scientific methodology applied to biochar filtration research"
-    ],
-    "attachments": [],
-    "videos": [],
-    "sections": [
-      {
-        "title": "Wet-Bench Laboratory Techniques",
-        "intro": "Performed plasmid restriction digest, DNA ligation, competent E. coli transformation, and blue-white colony screening under strict sterile biosafety protocols."
-      },
-      {
-        "title": "Spectrophotometric Water Assay Application",
-        "intro": "Applied optical density calibration and UV-Vis spectrophotometry to quantify trace heavy-metal solute concentrations before and after biochar filtration."
-      }
-    ],
-    "gallerySubtitle": "Laboratory certifications, gel electrophoresis, and spectrophotometric assay documentation.",
+    "gallerySubtitle": "Stanford AIMI fellowship, Harvard bioresearch laboratory sessions, molecular biology certifications, and research presentations.",
     "gallery": [
       {
         "src": "assets/certificates/BioResearch Academy Certificate.jpeg",
-        "alt": "BioResearch Academy Wet-Bench Molecular Biology",
-        "caption": "BioResearch Academy Wet-Bench Molecular Biology"
+        "alt": "Biomedical & AI Scientific Research",
+        "caption": "Biomedical & AI Scientific Research"
       },
       {
-        "src": "assets/certificates/Aqua Science Certificate.jpg",
-        "alt": "BioResearch Academy Wet-Bench Molecular Biology",
-        "caption": "BioResearch Academy Wet-Bench Molecular Biology"
+        "src": "assets/certificates/InspiritAI_AI_Scholars_Certificate.jpg",
+        "alt": "Biomedical & AI Scientific Research",
+        "caption": "Biomedical & AI Scientific Research"
+      },
+      {
+        "src": "assets/certificates/InspiritAI_AI_Ambassador_Certificate.jpg",
+        "alt": "Biomedical & AI Scientific Research",
+        "caption": "Biomedical & AI Scientific Research"
+      },
+      {
+        "src": "assets/ref_images/projects_ieee-engineering-conversation.jpg",
+        "alt": "Biomedical & AI Scientific Research",
+        "caption": "Biomedical & AI Scientific Research"
+      },
+      {
+        "src": "assets/ref_images/projects_lab-setup.jpg",
+        "alt": "Biomedical & AI Scientific Research",
+        "caption": "Biomedical & AI Scientific Research"
+      },
+      {
+        "src": "assets/science_fairs/ieee_pic4.jpeg",
+        "alt": "Biomedical & AI Scientific Research",
+        "caption": "Biomedical & AI Scientific Research"
       },
       {
         "src": "assets/science_fairs/pic3.jpeg",
-        "alt": "BioResearch Academy Wet-Bench Molecular Biology",
-        "caption": "BioResearch Academy Wet-Bench Molecular Biology"
+        "alt": "Biomedical & AI Scientific Research",
+        "caption": "Biomedical & AI Scientific Research"
+      },
+      {
+        "src": "assets/certificates/Aqua Science Certificate.jpg",
+        "alt": "Biomedical & AI Scientific Research",
+        "caption": "Biomedical & AI Scientific Research"
       }
     ]
   }
