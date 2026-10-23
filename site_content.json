@@ -57,9 +57,12 @@
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
       "category_name": "Environmental Sustainability & AI",
-      "img": "projects/mit-day-ai-stage.jpg",
+      "img": "assets/uploads/1792790364403_Environment_and_Water_Research_Awards.jpg",
       "images": [
-        "projects/mit-day-ai-stage.jpg"
+        "projects/mit-day-ai-stage.jpg",
+        "assets/uploads/1792790364403_Environment_and_Water_Research_Awards.jpg",
+        "assets/uploads/1792790366841_Environmental_Science_Research_-_Mercer_Science___Engineering_Fair.jpg",
+        "assets/uploads/1792790369208_Receiving_Stockholm_Water_Prize_Award.jpg"
       ],
       "desc": "One of five national MIT Solve AI for a Better World winners, presented an AI-powered water-quality node at the MIT Media Lab.",
       "highlights": [
