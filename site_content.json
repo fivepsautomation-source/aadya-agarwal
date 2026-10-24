@@ -354,124 +354,85 @@
       "sort_order": 8
     },
     {
-      "id": 14,
-      "title": "Classical Piano & Manhattan School of Music Recitals",
-      "category_slug": "arts",
-      "category_name": "Arts",
-      "img": "assets/music/image_10.jpeg",
-      "images": [
-        "assets/ref_images/projects_piano-manhattan-school.jpg",
-        "assets/writing_arts/Copy of piano award.png",
-        "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-        "assets/music/image_1.jpeg",
-        "assets/music/image_8.jpeg",
-        "assets/music/image_9.jpeg",
-        "assets/music/image_10.jpeg",
-        "assets/music/Piano_Pic_3.jpg",
-        "assets/arts/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-        "assets/arts/Copy of piano award.png",
-        "assets/arts/Music Fest Grand Prize Recital.jpeg"
-      ],
-      "desc": "Grand Prize winner at the Music-Fest International Rising Talent Festival; solo performance at Greenfield Hall, Manhattan School of Music.",
-      "highlights": [
-        "Grand Prize Recitalist at Music-Fest International Rising Talent Festival",
-        "Solo recital performance at Greenfield Hall, Manhattan School of Music",
-        "Masterclass and performance appearances with Chopin Nocturnes, Bach Inventions, and Debussy Preludes"
-      ],
-      "tags": [
-        "#ClassicalPiano",
-        "#ManhattanSchool",
-        "#MusicFest",
-        "#RisingTalent"
-      ],
-      "videos": [
-        {
-          "src": "assets/music/20241217_193755-wonderful_time_of_year.mp4",
-          "title": "School Music Concert"
-        }
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 9
-    },
-    {
-      "id": 15,
-      "title": "1st Chair Flutist & Wind Ensemble Section Leader",
-      "category_slug": "arts",
-      "category_name": "Arts",
+      "title": "Writing & Arts",
+      "category_name": "Writing & Arts",
+      "category_slug": "writing",
       "img": "assets/writing_arts/Aadya Flute Pic1.png",
-      "images": [
-        "assets/writing_arts/flute_performance.png",
-        "assets/writing_arts/Aadya Flute Pic1.png",
-        "assets/certificates/NJMTA Flute Honors Recital.jpeg",
-        "assets/music/Flute_pic_2.jpg",
-        "assets/music/Flute_pic_3.png",
-        "assets/music/Playing_Flute_for_Seniors_at_the_Senior_Living_Center2.jpeg",
-        "assets/arts/Aadya Flute Pic1.png",
-        "assets/arts/NJMTA Flute Honors Recital.jpeg"
-      ],
-      "desc": "Serving as 1st Chair Flutist in competitive school and regional wind ensembles, NJMTA Flute Honors Award winner, and leading woodwind section rehearsals.",
+      "desc": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
       "highlights": [
-        "1st Chair Flutist in audition-based competitive school and regional wind ensemble",
-        "NJMTA (New Jersey Music Teachers Association) Spring Recital Honors Award for Flute (2024)",
-        "Led weekly woodwind sectional rehearsals focusing on intonation, phrasing, and ensemble cohesion",
-        "Soloist in regional youth orchestra winter and spring concert festivals",
-        "Performed therapeutic classical flute repertoire for memory-care residents at senior centers"
+        "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
+        "Bronze Medal, Technology & Innovation theme, Harvard International Review, Summer 2026",
+        "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
+        "2025 National History Day (NJ Regional): a 2,500-word paper on Lysenkoism and the suppression of scientific advancement in the Soviet Union",
+        "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville’s jazz band with NJMTA Honors recitals",
+        "Backstage technical theater, stage manager and production assistant"
       ],
       "tags": [
         "#Flute",
+        "#ClassicalPiano",
+        "#JohnLocke",
+        "#Poetry",
+        "#CreativeWriting",
+        "#ScienceJournalism",
+        "#Theatre",
         "#NJMTA",
-        "#Woodwinds",
-        "#FirstChair",
-        "#HonorsRecital",
-        "#Ensemble"
-      ],
-      "videos": [
-        {
-          "src": "assets/music/Aadya_Agarwal_-_7th_grade_-_School_Band_Concert_-_Spring_2024.mp4",
-          "title": "Spring 2024 School Band Concert"
-        }
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 10
-    },
-    {
-      "id": 17,
-      "title": "NSF National Public Speaking 1st Place",
-      "category_slug": "writing",
-      "category_name": "Public Speaking",
-      "img": "assets/uploads/1792842362259_mit-day-ai-stage.jpg",
-      "images": [
-        "assets/uploads/1792842362259_mit-day-ai-stage.jpg",
-        "assets/speaking/speech_award_ceremony.jpg",
-        "assets/speaking/speech_stage.jpg",
-        "assets/certificates/nsf_speech_award.png"
-      ],
-      "desc": "First-place national champion in public speaking and oratorical debate.",
-      "highlights": [
-        "NSF National Public Speaking 1st Place",
-        "National champion in public speaking and oratorical debate"
-      ],
-      "tags": [
-        "#PublicSpeaking",
-        "#OratoricalDebate",
-        "#NationalChampion"
+        "#MusicFest"
       ],
       "badges": [
-        "NSF",
-        "1st Place"
+        "Flute",
+        "Piano",
+        "Writing & Arts"
       ],
-      "is_robotics": false,
-      "sort_order": 12
-    },
-    {
-      "id": 18,
-      "title": "Published Poetry & Short Stories",
-      "category_slug": "writing",
-      "category_name": "Writing",
-      "img": "projects/writing/celebration-of-poets.png",
+      "attachments": [
+        {
+          "label": "John Locke 2026 High Commendation (PDF)",
+          "href": "assets/writing_arts/John Locke 2026 - High Commendation.pdf"
+        },
+        {
+          "label": "Scholastic Poetry Silver Key certificate (PDF)",
+          "href": "assets/writing_arts/Scholastic_Poetry_Silver_Key_Certificate.pdf"
+        },
+        {
+          "label": "Scholastic Writing recognition letter (PDF)",
+          "href": "assets/writing_arts/Scholastic_Writing_Recognition_Letter.pdf"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Published writing",
+          "intro": "Essays and poetry recognized by the John Locke Institute and Scholastic Art & Writing Awards, with work published in The Telling Room, Skipping Stones and Poetic Power anthologies, plus science journalism for TechTrek USA."
+        },
+        {
+          "title": "Flute",
+          "intro": "Flutist in Lawrenceville's jazz band and recipient of NJMTA Honors recital recognition."
+        },
+        {
+          "title": "Piano",
+          "intro": "Music-Fest International Rising Talent Festival Grand Prize winner, with a solo recital at Greenfield Hall, Manhattan School of Music."
+        },
+        {
+          "title": "Theater",
+          "intro": "Backstage technical theater work as a stage manager and production assistant, alongside school and community performances."
+        }
+      ],
+      "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater.",
       "images": [
+        "assets/writing_arts/Aadya Flute Pic1.png",
+        "assets/writing_arts/flute_performance.png",
+        "assets/music/Flute_pic_2.jpg",
+        "assets/music/Flute_pic_3.png",
+        "assets/certificates/NJMTA Flute Honors Recital.jpeg",
+        "assets/ref_images/projects_piano-manhattan-school.jpg",
+        "assets/writing_arts/Copy of piano award.png",
+        "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
+        "assets/music/Piano_Pic_3.jpg",
+        "assets/music/image_1.jpeg",
+        "assets/music/image_5.jpeg",
+        "assets/music/image_8.jpeg",
+        "assets/music/image_9.jpeg",
+        "assets/music/image_10.jpeg",
+        "assets/ref_images/projects_john-locke_framed.jpg",
+        "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
         "projects/writing/celebration-of-poets.png",
         "projects/writing/anthology-fall-2024.jpeg",
         "projects/writing/balance-skipping-stones.jpg",
@@ -479,52 +440,28 @@
         "projects/writing/my-moms-frying-pan.png",
         "projects/writing/when-kindness-is-planted.webp",
         "projects/writing/pds-feature-2023.webp",
-        "projects/writing/scholastic-honorable-mention.jpeg",
         "assets/writing_arts/poem_celebration_of_small.png",
         "assets/writing_arts/poem_frying_pan.png",
-        "assets/writing_arts/poem_shift_of_heart.png"
+        "assets/writing_arts/poem_shift_of_heart.png",
+        "techtrek/TechTrek Article 1.png",
+        "techtrek/TechTrek Article 2.png",
+        "assets/writing_arts/Theater - Much Ado About Nothing.png",
+        "assets/uploads/1792842400029_the-day-the-internet-died.jpg",
+        "assets/uploads/1792842362259_mit-day-ai-stage.jpg",
+        "assets/speaking/speech_award_ceremony.jpg",
+        "assets/speaking/speech_stage.jpg",
+        "assets/certificates/nsf_speech_award.png"
       ],
-      "desc": "Published poems, short stories, and student journalism exploring nature, identity, kindness, and community.",
-      "highlights": [
-        "Poems published in Poetic Power anthologies: A Celebration of Small, For If They Let Go, My Mom's Frying Pan, and In a Shift of Heart",
-        "Published the poem Balance in Skipping Stones Multicultural International Magazine",
-        "Published the short stories Joy Is Universal and When Kindness Was Planted in The Telling Room",
-        "Featured writer for The Princeton Day School Post"
-      ],
-      "tags": [
-        "#Poetry",
-        "#PublishedWriting",
-        "#ShortStories",
-        "#StudentJournalism"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 13
-    },
-    {
-      "id": 20,
-      "title": "Theatre & Stage Performance",
-      "category_slug": "arts",
-      "category_name": "Arts",
-      "img": "assets/writing_arts/Theater - Much Ado About Nothing.png",
-      "images": [
-        "assets/uploads/1792842400029_the-day-the-internet-died.jpg"
-      ],
-      "desc": "Stage and theatre work spanning school productions, stage management, ensemble performance, and dramatic monologues.",
-      "highlights": [
-        "Stage manager for The Lawrenceville School Spring Musical (2025)",
-        "Performed with the 8th Notes Ensemble in The Day the Internet Died",
-        "Performed in McCarter Theatre's Mystery Theatre production",
-        "Performed Emily Webb's dramatic monologue from Our Town"
-      ],
-      "tags": [
-        "#Theatre",
-        "#StageManagement",
-        "#Performance"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 15
+      "videos": [
+        {
+          "src": "assets/music/20241217_193755-wonderful_time_of_year.mp4",
+          "title": "School Music Concert"
+        },
+        {
+          "src": "assets/music/Aadya_Agarwal_-_7th_grade_-_School_Band_Concert_-_Spring_2024.mp4",
+          "title": "Spring 2024 School Band Concert"
+        }
+      ]
     }
   ],
   "documents": [

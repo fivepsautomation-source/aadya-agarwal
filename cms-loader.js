@@ -80,50 +80,9 @@
     }
   }, true);
 
-  // Group writing and arts cards cleanly
+  // Group writing and arts cards cleanly (single standard card requested)
   function groupWritingCards(cardsGrid) {
-    if (!cardsGrid) return;
-    cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"]').forEach(card => {
-      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
-      if (title.includes('flutist') || title.includes('classical piano')) {
-        card.setAttribute('data-category', 'arts');
-        const categoryLabel = card.querySelector('.card-category-label');
-        if (categoryLabel) categoryLabel.textContent = 'Arts';
-        const dataProject = card.getAttribute('data-project');
-        if (dataProject) {
-          try {
-            const project = JSON.parse(dataProject);
-            project.category = 'Arts';
-            project.category_slug = 'arts';
-            card.setAttribute('data-project', JSON.stringify(project));
-          } catch (error) {
-            console.warn('Unable to update static arts project metadata:', error);
-          }
-        }
-      }
-    });
-    const cards = Array.from(cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"], .portfolio-card[data-category="arts"]'));
-    if (!cards.length) return;
-
-    let groups = cardsGrid.querySelector(':scope > .portfolio-writing-groups');
-    if (!groups) {
-      groups = document.createElement('div');
-      groups.className = 'portfolio-writing-groups';
-      groups.innerHTML = `
-        <section class="portfolio-writing-group">
-          <h3 class="font-display text-xl font-semibold text-plum">Writing &amp; Arts</h3>
-          <div class="portfolio-writing-subgroup-cards"></div>
-        </section>`;
-      cardsGrid.appendChild(groups);
-    }
-
-    const writingArtsGroup = groups.querySelector('.portfolio-writing-group');
-    if (writingArtsGroup) {
-      const subCards = writingArtsGroup.querySelector('.portfolio-writing-subgroup-cards');
-      if (subCards) {
-        cards.forEach(card => subCards.appendChild(card));
-      }
-    }
+    return;
   }
 
   // =========================================================================
@@ -374,7 +333,6 @@
         // Re-apply active filter if one was selected
         const activeTab = document.querySelector('.filter-tab-btn[aria-pressed="true"]');
         const filterVal = activeTab ? activeTab.getAttribute('data-filter') : 'all';
-        cardsGrid.classList.toggle('is-writing-filter', filterVal === 'writing');
         if (filterVal && filterVal !== 'all') {
           cardsGrid.querySelectorAll('.portfolio-card').forEach(c => {
             const category = c.getAttribute('data-category');
