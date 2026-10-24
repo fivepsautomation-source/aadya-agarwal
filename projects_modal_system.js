@@ -1248,7 +1248,7 @@
       <div class="modal-hero-banner">
         ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image" style="object-position: center !important;">` : ''}
         <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 pointer-events-none">
-          ${project.category ? `<span class="mb-2 inline-block rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">${project.category}</span>` : ''}
+          ${project.category ? `<span class="modal-category-badge mb-2 rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">${project.category}</span>` : ''}
           <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
         </div>
       </div>

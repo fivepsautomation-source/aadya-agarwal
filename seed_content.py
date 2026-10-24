@@ -69,8 +69,9 @@ def seed_content():
 
     # 3. Documents Items
     cursor.execute('DELETE FROM documents_items')
-    with open('documents.html', 'r', encoding='utf-8') as f:
-        doc_html = f.read()
+    if os.path.exists('documents.html'):
+        with open('documents.html', 'r', encoding='utf-8') as f:
+            doc_html = f.read()
 
     doc_articles = re.findall(r'<article class="doc-rich-card">(.*?)</article>', doc_html, re.DOTALL)
     for i, art in enumerate(doc_articles):

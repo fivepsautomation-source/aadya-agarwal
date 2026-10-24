@@ -227,6 +227,16 @@
         window.updateProjectsDataFromCMS(portfolioItems);
       }
 
+      const highlightBadgeCandidates = [
+        'FTC', 'FLL', 'MIT Solve', 'MIT Media Lab', 'IEEE', 'ISEC',
+        'Stockholm', 'NJWEA', 'MSEF', 'NOAA', '3M Young Scientist',
+        'Arduino', 'Stanford AIMI', 'Harvard', 'AutoDock Vina', 'MoniVitals',
+        'ESP32', 'HealthTech', 'Hunger Relief', 'Youth Volunteering',
+        'Legislative Commendation', 'Winter Drive', 'Manhattan School',
+        'Music-Fest', 'Grand Prize', 'NJMTA', '1st Chair', 'John Locke',
+        'Published Poetry', 'NSF', '1st Place', 'Visual Arts', 'Theatre'
+      ];
+
       if (cardsGrid) {
         cardsGrid.innerHTML = '';
         portfolioItems.forEach(p => {
@@ -250,17 +260,34 @@
             category_slug: p.category_slug
           }));
 
-          let badgesHtml = '';
-          if (Array.isArray(p.badges) && p.badges.length) {
-            badgesHtml = `<span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">` +
-              p.badges.map((b, i) => `<span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md ${i % 2 === 0 ? 'bg-plum' : 'bg-berry'} text-white">${typeof b === 'object' ? b.label : b}</span>`).join('') +
-              `</span>`;
-          } else if (isRobotics) {
-            badgesHtml = `<span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">
-              <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-plum text-white">FTC</span>
-              <span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md bg-berry text-white">FLL</span>
-            </span>`;
+          const searchableProjectText = [
+            p.title,
+            p.category_name,
+            p.desc,
+            ...(Array.isArray(p.highlights) ? p.highlights : []),
+            ...(Array.isArray(p.tags) ? p.tags : [])
+          ].filter(Boolean).join(' ').toLowerCase().replace(/[^a-z0-9]+/g, '');
+          const relevantBadges = [];
+          const addRelevantBadge = label => {
+            const normalizedLabel = String(label || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+            if (normalizedLabel && searchableProjectText.includes(normalizedLabel) && !relevantBadges.includes(label) && relevantBadges.length < 2) {
+              relevantBadges.push(label);
+            }
+          };
+
+          if (Array.isArray(p.badges)) {
+            p.badges.forEach(badge => addRelevantBadge(typeof badge === 'object' ? badge.label : badge));
           }
+          highlightBadgeCandidates.forEach(addRelevantBadge);
+          if (isRobotics) {
+            ['FTC', 'FLL'].forEach(addRelevantBadge);
+          }
+
+          const badgesHtml = relevantBadges.length
+            ? `<span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">` +
+              relevantBadges.map((badge, i) => `<span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md ${i % 2 === 0 ? 'bg-plum' : 'bg-berry'} text-white">${badge}</span>`).join('') +
+              `</span>`
+            : '';
 
           card.innerHTML = `
             <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
@@ -338,10 +365,21 @@
     // 5. MEMBERSHIPS & ORGANIZATIONS
     // ==========================================
     if (Array.isArray(data.memberships) && data.memberships.length > 0) {
+      const membershipLogos = {
+        awdorg: 'membership%20logo/awd.jfif',
+        bmes: 'membership%20logo/BMES.webp',
+        firstftc: 'membership%20logo/first%20robotics.jpg',
+        ieee: 'membership%20logo/ieee.jfif',
+        ncwitaic: 'membership%20logo/ncwit.webp',
+        njwea: 'membership%20logo/njwea.jfif',
+        wef: 'wef.png'
+      };
       const tickerTrack = document.querySelector('.memberships-ticker-track');
       if (tickerTrack) {
         tickerTrack.innerHTML = '';
         data.memberships.forEach(m => {
+          const membershipKey = (m.website_label || m.org_name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+          const logo = membershipLogos[membershipKey];
           const card = document.createElement('a');
           card.href = m.url || '#';
           card.target = '_blank';
@@ -349,7 +387,7 @@
           card.className = 'membership-sleek-card';
           card.setAttribute('aria-label', `${m.org_name} - ${m.role}`);
           card.innerHTML = `
-            <span class="membership-sleek-badge" style="background: ${m.badge_gradient || 'linear-gradient(135deg, #099268, #20c997)'};" aria-hidden="true">${m.badge_text || 'ORG'}</span>
+            ${logo ? `<img class="membership-sleek-logo" src="${logo}" alt="${m.website_label || m.org_name} logo">` : `<span class="membership-sleek-badge" style="background: ${m.badge_gradient || 'linear-gradient(135deg, #099268, #20c997)'};" aria-hidden="true">${m.badge_text || 'ORG'}</span>`}
             <div class="membership-sleek-body">
               <span class="membership-sleek-title">${m.website_label || m.org_name}</span>
               <span class="membership-sleek-org">${m.org_name}</span>
