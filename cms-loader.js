@@ -421,6 +421,43 @@
             }
           }
         });
+
+        // Append any newly added awards from admin
+        const unmatchedAwards = data.awards.filter(aw => {
+          const awTitle = (aw.title || '').trim().toLowerCase();
+          return !Array.from(visualCards).some(c => {
+            const t = c.querySelector('h3')?.textContent.trim().toLowerCase() || '';
+            return t === awTitle || t.includes(awTitle.slice(0, 15)) || awTitle.includes(t.slice(0, 15));
+          });
+        });
+
+        if (unmatchedAwards.length > 0) {
+          unmatchedAwards.forEach(newAw => {
+            const pill = (newAw.category_pill || '').toLowerCase();
+            const targetSectionId = pill.includes('robot') ? 'robotics-awards' :
+                                    pill.includes('civic') || pill.includes('service') ? 'civic-awards' :
+                                    pill.includes('writing') || pill.includes('essay') ? 'writing-awards' :
+                                    'research-awards';
+            const targetGrid = document.querySelector(`#${targetSectionId} .awards-feature-grid`) || document.querySelector('.awards-feature-grid');
+            if (targetGrid) {
+              const newCard = document.createElement('article');
+              newCard.className = 'award-visual-card';
+              const imgUrl = window.getResolvedImageSrc(newAw.image_url || 'assets/logo.png');
+              newCard.innerHTML = `
+                <a class="award-visual-image-link" href="${newAw.link_url || imgUrl}" target="_blank" rel="noopener noreferrer" aria-label="${newAw.title}">
+                  <img src="${imgUrl}" alt="${newAw.title}" loading="lazy">
+                </a>
+                <div class="award-visual-content">
+                  <span class="award-year-pill">${newAw.category_pill || 'Award'} · ${newAw.year || '2026'}</span>
+                  <h3>${newAw.title}</h3>
+                  <p>${newAw.description || ''}</p>
+                  ${newAw.link_url ? `<a class="award-text-link" href="${newAw.link_url}" target="_blank" rel="noopener noreferrer">${newAw.link_text || 'Learn More'} <span aria-hidden="true">&nearr;</span></a>` : ''}
+                </div>
+              `;
+              targetGrid.appendChild(newCard);
+            }
+          });
+        }
       }
 
       // 4B. Update awards on index.html (#awards section)
