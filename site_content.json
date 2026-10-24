@@ -437,37 +437,6 @@
       "sort_order": 10
     },
     {
-      "id": 16,
-      "title": "John Locke Commendation & Published Creative Writing",
-      "category_slug": "writing",
-      "category_name": "Writing & Arts",
-      "img": "assets/ref_images/projects_john-locke_framed.jpg",
-      "images": [
-        "assets/ref_images/projects_john-locke_framed.jpg",
-        "assets/certificates/John Locke 2026 - High Commendation.jpg",
-        "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
-        "assets/writing_arts/artwork_portrait.jpg",
-        "assets/writing_arts/artwork_bird.jpg"
-      ],
-      "desc": "Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness and identity.",
-      "highlights": [
-        "Commended in John Locke Global Essay Competition from 19,000+ international entries",
-        "Recipient of school annual English and Humanities literary prize",
-        "Poetry published in national youth anthologies exploring nature and equity",
-        "Contributed essays on ethical technology and environmental stewardship"
-      ],
-      "tags": [
-        "#JohnLocke",
-        "#Essayist",
-        "#Poetry",
-        "#CreativeWriting",
-        "#Humanities"
-      ],
-      "badges": [],
-      "is_robotics": false,
-      "sort_order": 11
-    },
-    {
       "id": 17,
       "title": "NSF National Public Speaking 1st Place",
       "category_slug": "writing",
