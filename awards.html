@@ -248,11 +248,18 @@
       <section class="awards-section awards-section-tinted" id="featured-in">
         <div class="container">
           <header class="awards-section-heading"><span class="editorial-eyebrow">05 · Featured in</span><h2 class="editorial-section-title">Research &amp; student stories</h2></header>
-          <div class="featured-publication-grid">
-            <a class="featured-publication-card featured-publication-link" href="https://ambiochar.com/what-are-your-desired-outcomes/" target="_blank" rel="noopener noreferrer" aria-label="Read Aadya's Young Researcher Spotlight on Ambiochar">
-              <img class="featured-publication-image" src="assets/ref_images/projects_lab-setup.jpg" alt="Aadya conducting biochar water research" loading="lazy">
-              <div class="featured-publication-copy"><span class="featured-publication-index">01</span><h3>American Biochar Company</h3><p>Young Researcher Spotlight.</p><span class="award-text-link">Read the feature ↗</span></div>
-            </a>
+            <div class="featured-publication-card featured-publication-link" id="biocharCard" style="cursor: pointer;" role="button" tabindex="0" aria-label="View American Biochar Company feature image and article">
+              <div style="position: relative; overflow: hidden; width: 100%;">
+                <img class="featured-publication-image" src="assets/featured%20in%20american%20biochar.jpeg" alt="American Biochar Company - Young Researcher Spotlight" loading="lazy" onerror="if(this.src.includes('assets/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/assets/featured%20in%20american%20biochar.jpeg';}">
+                <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(15, 15, 18, 0.78); color: #fff; font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; pointer-events: none; backdrop-filter: blur(4px);">🔍 Click to enlarge</span>
+              </div>
+              <div class="featured-publication-copy">
+                <span class="featured-publication-index">01</span>
+                <h3>American Biochar Company</h3>
+                <p>Young Researcher Spotlight.</p>
+                <a class="award-text-link" href="https://ambiochar.com/what-are-your-desired-outcomes/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Read the feature <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
             <a class="featured-publication-card featured-publication-link" href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer" aria-label="Read Aadya's One 2 Watch feature in The Lawrentian">
               <img class="featured-publication-image" src="assets/ref_images/projects_ieee-engineering-conversation.jpg" alt="Aadya presenting her research at an IEEE event" loading="lazy">
               <div class="featured-publication-copy"><span class="featured-publication-index">02</span><h3>The Lawrentian</h3><p>“One 2 Watch” · Quarterly school magazine, The Lawrenceville School.</p><span class="award-text-link">Read the feature ↗</span></div>
@@ -284,6 +291,30 @@
       <section class="awards-closing-note"><div class="container"><p>Also recognized for FIRST LEGO League robot design, the PDS Panther Hackathon Best Beginner Hack, Science Olympiad event medals, public speaking and music.</p></div></section>
     </main>
 
+    <!-- Biochar 2-Step Click Image Modal -->
+    <div id="biocharImageModal" class="biochar-modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-label="American Biochar Company Young Researcher Spotlight">
+      <div class="biochar-modal-dialog">
+        <button type="button" class="biochar-modal-close" aria-label="Close modal">&times;</button>
+        <div class="biochar-modal-link" title="Click to open American Biochar Company article">
+          <div class="biochar-modal-img-frame">
+            <img src="assets/featured%20in%20american%20biochar.jpeg" alt="American Biochar Company - Young Researcher Spotlight" class="biochar-modal-img" onerror="if(this.src.includes('assets/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/assets/featured%20in%20american%20biochar.jpeg';}">
+            <div class="biochar-modal-cta">
+              <span>Click image to open article: ambiochar.com ↗</span>
+            </div>
+          </div>
+        </div>
+        <div class="biochar-modal-footer">
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; color: #fff; margin: 0;">American Biochar Company</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 4px 0 0 0;">Young Researcher Spotlight · Click anywhere to view the full article</p>
+          </div>
+          <a href="https://ambiochar.com/what-are-your-desired-outcomes/" target="_blank" rel="noopener noreferrer" class="biochar-open-btn">
+            <span>Visit Article ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <footer class="border-t border-ink/10 bg-paper py-8 text-center text-xs text-ink/50">
       <div class="mx-auto max-w-6xl px-5 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p>© 2026 Aadya Agarwal · Built with intentional craft &amp; equitable vision.</p>
@@ -294,5 +325,57 @@
   <script src="modern-script.js?v=250"></script>
   <script src="cms-loader.js?v=7"></script>
   <script src="remove-visible-numbers.js?v=2"></script>
+  <script>
+  (function() {
+    const card = document.getElementById('biocharCard');
+    const modal = document.getElementById('biocharImageModal');
+    const closeBtn = modal ? modal.querySelector('.biochar-modal-close') : null;
+    const targetUrl = 'https://ambiochar.com/what-are-your-desired-outcomes/';
+
+    if (card && modal) {
+      // 1st click on card: enlarge image in modal
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.award-text-link')) {
+          return;
+        }
+        e.preventDefault();
+        modal.style.display = 'flex';
+        requestAnimationFrame(() => modal.classList.add('is-open'));
+        document.body.style.overflow = 'hidden';
+      });
+
+      // 2nd click: click on enlarged image or modal frame redirects to targetUrl
+      const modalLink = modal.querySelector('.biochar-modal-link');
+      if (modalLink) {
+        modalLink.addEventListener('click', function() {
+          window.open(targetUrl, '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          closeBiocharModal();
+        });
+      }
+
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeBiocharModal();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) closeBiocharModal();
+      });
+
+      function closeBiocharModal() {
+        modal.classList.remove('is-open');
+        setTimeout(function() {
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+        }, 280);
+      }
+    }
+  })();
+  </script>
 </body>
 </html>
