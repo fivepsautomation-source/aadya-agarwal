@@ -1377,6 +1377,7 @@
           const previewData = compressedUrl || rawB64;
           localPreviewCache[path] = previewData;
           try { sessionStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
+          try { localStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
           if (API_BASE) {
             try {
               fetch(`${API_BASE}/api/upload`, {
@@ -1395,6 +1396,8 @@
 
       const fallbackUrl = compressedUrl || await readFileAsDataUrl(file);
       localPreviewCache[fallbackUrl] = fallbackUrl;
+      try { sessionStorage.setItem('aadya_preview_' + fallbackUrl, fallbackUrl); } catch (e) {}
+      try { localStorage.setItem('aadya_preview_' + fallbackUrl, fallbackUrl); } catch (e) {}
       showToast('✓ Image optimized and ready!');
       return fallbackUrl;
     }
@@ -1765,7 +1768,8 @@
       document.getElementById('currentTabTitle').textContent = titles[tabId] || 'CMS';
       
       // highlight active sidebar item
-      event.currentTarget.classList.add('active');
+      const activeBtn = (window.event && window.event.currentTarget) || document.querySelector(`.sidebar-nav-item[onclick*="'${tabId}'"]`);
+      if (activeBtn && activeBtn.classList) activeBtn.classList.add('active');
     }
 
     // 3. Load All Data from Database

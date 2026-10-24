@@ -1,13 +1,88 @@
 /**
- * Aadya Agarwal Portfolio - Dynamic Real-Time Universal CMS Loader
+ * Aadya Agarwal Portfolio - Dynamic Real-Time Universal CMS Loader v7.0
  * Connects all pages to live CMS data (GitHub Contents API -> Raw Fallback -> LocalStorage -> site_content.json).
  * Guarantees zero-cache, cross-device global sync for all devices (phones, tablets, laptops) worldwide.
+ * Includes universal image resolving & zero-glitch fallback system.
  */
 (function() {
   const CMS_KEY = 'aadya_cms_content';
   const GH_TOKEN = String.fromCharCode(103,104,111,95,50,56,72,104,104,101,100,81,106,108,85,80,78,89,107,72,80,83,70,68,86,81,65,74,75,80,90,57,50,79,48,104,81,115,68,68);
 
+  // =========================================================================
+  // UNIVERSAL IMAGE RESOLVER & FALLBACK SYSTEM
+  // =========================================================================
+  window.getResolvedImageSrc = function(url) {
+    if (!url) return 'assets/logo.png';
+    if (typeof url !== 'string') return url;
+    const cleanUrl = url.trim();
+    if (!cleanUrl) return 'assets/logo.png';
+    if (cleanUrl.startsWith('data:')) return cleanUrl;
+
+    try {
+      const localCached = localStorage.getItem('aadya_preview_' + cleanUrl);
+      if (localCached) return localCached;
+    } catch(e) {}
+
+    try {
+      const sessionCached = sessionStorage.getItem('aadya_preview_' + cleanUrl);
+      if (sessionCached) return sessionCached;
+    } catch(e) {}
+
+    return cleanUrl;
+  };
+
+  // Global capture-phase error listener for all images on the page
+  window.addEventListener('error', function(e) {
+    const target = e.target;
+    if (target && target.tagName === 'IMG') {
+      const src = target.getAttribute('src') || '';
+      if (!src || src === 'assets/logo.png') return;
+
+      target.dataset.errFallbackCount = target.dataset.errFallbackCount || '0';
+      const count = parseInt(target.dataset.errFallbackCount);
+
+      if (count === 0) {
+        target.dataset.errFallbackCount = '1';
+        // Try localStorage preview first (e.g. freshly uploaded image in admin)
+        try {
+          const preview = localStorage.getItem('aadya_preview_' + src) || sessionStorage.getItem('aadya_preview_' + src);
+          if (preview) {
+            target.src = preview;
+            return;
+          }
+        } catch(err) {}
+
+        // If it's an uploaded asset, fetch from GitHub raw
+        if (src.includes('assets/uploads/')) {
+          const cleanPath = src.substring(src.indexOf('assets/uploads/'));
+          target.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${cleanPath}`;
+          return;
+        }
+
+        // Other relative project/asset paths
+        if (!src.startsWith('http') && !src.startsWith('data:')) {
+          const cleanRel = src.replace(/^\.\//, '');
+          target.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${cleanRel}`;
+          return;
+        }
+      } else if (count === 1) {
+        target.dataset.errFallbackCount = '2';
+        // Fallback to jsDelivr CDN
+        if (src.includes('assets/uploads/')) {
+          const cleanPath = src.substring(src.indexOf('assets/uploads/'));
+          target.src = `https://cdn.jsdelivr.net/gh/minakshi2517/aadyaagarwal@main/${cleanPath}`;
+          return;
+        }
+      }
+
+      // Final safe fallback
+      target.src = 'assets/logo.png';
+    }
+  }, true);
+
+  // Group writing and arts cards cleanly
   function groupWritingCards(cardsGrid) {
+    if (!cardsGrid) return;
     cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"]').forEach(card => {
       const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
       if (title.includes('flutist') || title.includes('classical piano')) {
@@ -36,25 +111,26 @@
       groups.className = 'portfolio-writing-groups';
       groups.innerHTML = `
         <section class="portfolio-writing-group">
-          <h3 class="font-display text-xl font-semibold text-plum">Writing</h3>
-          <div class="portfolio-writing-subgroup-cards"></div>
-        </section>
-        <section class="portfolio-writing-group">
-          <h3 class="font-display text-xl font-semibold text-plum">Arts</h3>
+          <h3 class="font-display text-xl font-semibold text-plum">Writing &amp; Arts</h3>
           <div class="portfolio-writing-subgroup-cards"></div>
         </section>`;
       cardsGrid.appendChild(groups);
     }
 
-    const [writingGroup, artsGroup] = groups.querySelectorAll('.portfolio-writing-group');
-    cards.forEach(card => {
-      const group = card.getAttribute('data-category') === 'arts' ? artsGroup : writingGroup;
-      group.querySelector('.portfolio-writing-subgroup-cards').appendChild(card);
-    });
+    const writingArtsGroup = groups.querySelector('.portfolio-writing-group');
+    if (writingArtsGroup) {
+      const subCards = writingArtsGroup.querySelector('.portfolio-writing-subgroup-cards');
+      if (subCards) {
+        cards.forEach(card => subCards.appendChild(card));
+      }
+    }
   }
 
+  // =========================================================================
+  // FETCH CMS DATA
+  // =========================================================================
   async function getCMSData() {
-    // 1. Live GitHub Contents API (0 second cache, 5,000 req/hr rate limit, instant across all devices globally)
+    // 1. Live GitHub Contents API (0 second cache, 5,000 req/hr rate limit, instant worldwide)
     try {
       const res = await fetch(`https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=${Date.now()}_${Math.random()}`, {
         headers: {
@@ -68,7 +144,7 @@
           const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
           const decodedStr = new TextDecoder('utf-8').decode(bytes);
           const ghData = JSON.parse(decodedStr);
-          if (ghData && (ghData.settings || ghData.portfolio)) {
+          if (ghData && (ghData.settings || ghData.portfolio || ghData.awards)) {
             try { localStorage.setItem(CMS_KEY, JSON.stringify(ghData)); } catch(e) {}
             return ghData;
           }
@@ -78,30 +154,30 @@
       console.warn('GitHub contents fetch notice:', err);
     }
 
-    // 2. Raw GitHub CDN fallback
+    // 2. Check LocalStorage (instant preview from admin.html in the same browser)
+    const local = localStorage.getItem(CMS_KEY);
+    if (local) {
+      try {
+        const parsed = JSON.parse(local);
+        if (parsed && (parsed.settings || parsed.portfolio || parsed.awards)) {
+          return parsed;
+        }
+      } catch(e) {}
+    }
+
+    // 3. Raw GitHub CDN fallback
     try {
       const ghRes = await fetch(`https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/site_content.json?cb=${Date.now()}`, {
         cache: 'no-store'
       });
       if (ghRes.ok) {
         const ghData = await ghRes.json();
-        if (ghData && (ghData.settings || ghData.portfolio)) {
+        if (ghData && (ghData.settings || ghData.portfolio || ghData.awards)) {
           try { localStorage.setItem(CMS_KEY, JSON.stringify(ghData)); } catch(e) {}
           return ghData;
         }
       }
     } catch(e) {}
-
-    // 3. LocalStorage cached content
-    const local = localStorage.getItem(CMS_KEY);
-    if (local) {
-      try {
-        const parsed = JSON.parse(local);
-        if (parsed && (parsed.settings || parsed.portfolio)) {
-          return parsed;
-        }
-      } catch(e) {}
-    }
 
     // 4. Fallback to local static JSON
     try {
@@ -115,13 +191,14 @@
     return null;
   }
 
+  // =========================================================================
+  // APPLY CMS DATA TO DOM
+  // =========================================================================
   function applyCMSData(data) {
     if (!data) return;
     const s = data.settings || {};
 
-    // ==========================================
     // 1. HERO & PROFILE SECTION
-    // ==========================================
     if (s.hero_name) {
       document.querySelectorAll('[data-cms="hero_name"], .hero-name').forEach(el => {
         el.textContent = s.hero_name;
@@ -156,16 +233,15 @@
     }
 
     if (s.hero_portrait) {
+      const resolvedPortrait = window.getResolvedImageSrc(s.hero_portrait);
       document.querySelectorAll('[data-cms="hero_portrait"], img.hero-portrait, img[alt="Aadya Agarwal"]').forEach(el => {
         if (el.tagName === 'IMG') {
-          el.src = s.hero_portrait;
+          el.src = resolvedPortrait;
         }
       });
     }
 
-    // ==========================================
     // 2. CONNECT & CONTACT CHANNELS
-    // ==========================================
     if (s.connect_email) {
       document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
         el.href = 'mailto:' + s.connect_email;
@@ -177,7 +253,9 @@
 
     if (s.connect_github) {
       document.querySelectorAll('a[href*="github.com"]').forEach(el => {
-        el.href = s.connect_github;
+        if (!el.href.includes('minakshi2517')) {
+          el.href = s.connect_github;
+        }
       });
     }
 
@@ -193,40 +271,18 @@
       });
     }
 
-    // ==========================================
     // 3. PORTFOLIO PROJECTS & MODAL SYNC
-    // ==========================================
     if (Array.isArray(data.portfolio) && data.portfolio.length > 0) {
       const portfolioItems = [...data.portfolio].sort(
         (a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0)
       );
-      const cardsGrid = document.querySelector('.portfolio-cards-grid');
-      const speakingFallback = cardsGrid && Array.from(
-        cardsGrid.querySelectorAll('.portfolio-card[data-category="writing"]')
-      ).find(card => card.querySelector('h3')?.textContent.includes('NSF National Public Speaking 1st Place'));
-      if (speakingFallback && !portfolioItems.some(item => item.title === 'NSF National Public Speaking 1st Place')) {
-        const project = JSON.parse(speakingFallback.getAttribute('data-project'));
-        portfolioItems.push({
-          id: 17,
-          title: project.title,
-          category_slug: project.category_slug,
-          category_name: project.category,
-          img: project.img,
-          images: project.images,
-          desc: project.desc,
-          highlights: project.highlights,
-          tags: project.tags,
-          badges: ['NSF', '1st Place'],
-          is_robotics: false,
-          sort_order: 16
-        });
-        portfolioItems.sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0));
-      }
 
+      // Pass directly to projects_modal_system.js
       if (typeof window.updateProjectsDataFromCMS === 'function') {
         window.updateProjectsDataFromCMS(portfolioItems);
       }
 
+      const cardsGrid = document.querySelector('.portfolio-cards-grid');
       const highlightBadgeCandidates = [
         'FTC', 'FLL', 'MIT Solve', 'MIT Media Lab', 'IEEE', 'ISEC',
         'Stockholm', 'NJWEA', 'MSEF', 'NOAA', '3M Young Scientist',
@@ -247,17 +303,23 @@
           if (p.article_url) card.setAttribute('data-article-url', p.article_url);
           if (isRobotics) card.setAttribute('data-is-robotics', 'true');
           
+          const coverImg = window.getResolvedImageSrc(p.img || 'assets/logo.png');
+          const galleryImgs = Array.isArray(p.images) && p.images.length ? p.images.map(img => window.getResolvedImageSrc(img)) : (coverImg ? [coverImg] : []);
+
           card.setAttribute('data-project', JSON.stringify({
             title: p.title,
             category: p.category_name,
             article_url: p.article_url,
-            img: p.img,
-            images: Array.isArray(p.images) && p.images.length ? p.images : (p.img ? [p.img] : []),
+            img: coverImg,
+            images: galleryImgs,
             videos: Array.isArray(p.videos) ? p.videos : [],
             desc: p.desc,
             highlights: p.highlights || [],
             tags: p.tags || [],
-            category_slug: p.category_slug
+            category_slug: p.category_slug,
+            attachments: Array.isArray(p.attachments) ? p.attachments : [],
+            sections: Array.isArray(p.sections) ? p.sections : [],
+            gallerySubtitle: p.gallerySubtitle || ''
           }));
 
           const searchableProjectText = [
@@ -267,6 +329,7 @@
             ...(Array.isArray(p.highlights) ? p.highlights : []),
             ...(Array.isArray(p.tags) ? p.tags : [])
           ].filter(Boolean).join(' ').toLowerCase().replace(/[^a-z0-9]+/g, '');
+
           const relevantBadges = [];
           const addRelevantBadge = label => {
             const normalizedLabel = String(label || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
@@ -291,7 +354,7 @@
 
           card.innerHTML = `
             <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
-              ${p.article_url ? `<a class="block h-full w-full" href="${p.article_url}" target="_blank" rel="noopener noreferrer" aria-label="Read the Lawrenceville feature about MIT Solve"><img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}"/></a>` : `<img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${p.img || 'assets/logo.png'}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}"/>`}
+              ${p.article_url ? `<a class="block h-full w-full" href="${p.article_url}" target="_blank" rel="noopener noreferrer" aria-label="Read feature for ${p.title}"><img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${coverImg}"/></a>` : `<img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${coverImg}"/>`}
               ${badgesHtml}
             </div>
             <div class="flex w-full flex-1 flex-col p-5 text-left">
@@ -308,7 +371,7 @@
 
         groupWritingCards(cardsGrid);
 
-        // Re-apply active filter if one was chosen
+        // Re-apply active filter if one was selected
         const activeTab = document.querySelector('.filter-tab-btn[aria-pressed="true"]');
         const filterVal = activeTab ? activeTab.getAttribute('data-filter') : 'all';
         cardsGrid.classList.toggle('is-writing-filter', filterVal === 'writing');
@@ -321,49 +384,73 @@
       }
     }
 
-    // ==========================================
-    // 4. AWARDS & DISTINCTIONS
-    // ==========================================
+    // 4. AWARDS & DISTINCTIONS SYNC (Both index.html and awards.html)
     if (Array.isArray(data.awards) && data.awards.length > 0) {
-      const awardsGrid = document.getElementById('awardsCardsGrid');
-      if (awardsGrid) {
-        awardsGrid.innerHTML = '';
-        data.awards.forEach(aw => {
-          const pill = (aw.category_pill || '').toLowerCase();
-          const cat = pill.includes('stem') ? 'stem' :
-                      pill.includes('robot') ? 'robotics' :
-                      pill.includes('writing') ? 'writing' : 'civic';
+      // 4A. Update awards on awards.html (Visual cards matching by title or id)
+      const visualCards = document.querySelectorAll('.award-visual-card');
+      if (visualCards.length > 0) {
+        visualCards.forEach(card => {
+          const titleEl = card.querySelector('h3');
+          if (!titleEl) return;
+          const cardTitle = titleEl.textContent.trim().toLowerCase();
 
-          const card = document.createElement('article');
-          card.className = 'award-card-item';
-          card.setAttribute('data-category', cat);
-          card.innerHTML = `
-            <div>
-              <div class="flex items-center justify-between gap-2">
-                <span class="award-tag-badge tag-${cat}">${aw.category_pill || 'Honors'}</span>
-              </div>
-              <h3 class="font-display text-lg font-bold text-ink mt-3.5 leading-snug">
-                ${aw.title || ''}
-              </h3>
-              <p class="text-sm text-ink/65 mt-2 leading-relaxed">
-                ${aw.description || ''}
-              </p>
-            </div>
-            ${aw.link_url ? `
-              <a href="${aw.link_url}" target="_blank" rel="noopener noreferrer" class="award-link-btn">
-                <span>${aw.link_text || 'Learn More'}</span>
-                <span class="transition-transform" aria-hidden="true">&rarr;</span>
-              </a>
-            ` : ''}
-          `;
-          awardsGrid.appendChild(card);
+          const match = data.awards.find(aw => {
+            const awTitle = (aw.title || '').trim().toLowerCase();
+            return awTitle === cardTitle || awTitle.includes(cardTitle.slice(0, 15)) || cardTitle.includes(awTitle.slice(0, 15));
+          });
+
+          if (match) {
+            const imgEl = card.querySelector('img');
+            if (imgEl && match.image_url) {
+              imgEl.src = window.getResolvedImageSrc(match.image_url);
+            }
+            if (match.category_pill || match.year) {
+              const pillEl = card.querySelector('.award-year-pill');
+              if (pillEl) pillEl.textContent = `${match.category_pill || 'Award'} · ${match.year || '2026'}`;
+            }
+            if (match.description) {
+              const descEl = card.querySelector('p');
+              if (descEl) descEl.textContent = match.description;
+            }
+            if (match.link_url && match.link_text) {
+              const linkEl = card.querySelector('.award-text-link');
+              if (linkEl) {
+                linkEl.href = match.link_url;
+                linkEl.innerHTML = `${match.link_text} <span aria-hidden="true">&nearr;</span>`;
+              }
+            }
+          }
+        });
+      }
+
+      // 4B. Update awards on index.html (#awards section)
+      const homeAwards = document.querySelectorAll('#awards .award-feature-card');
+      if (homeAwards.length > 0) {
+        homeAwards.forEach(card => {
+          const titleEl = card.querySelector('h3');
+          if (!titleEl) return;
+          const cardTitle = titleEl.textContent.trim().toLowerCase();
+
+          const match = data.awards.find(aw => {
+            const awTitle = (aw.title || '').trim().toLowerCase();
+            return awTitle === cardTitle || awTitle.includes(cardTitle.slice(0, 15)) || cardTitle.includes(awTitle.slice(0, 15));
+          });
+
+          if (match) {
+            const imgEl = card.querySelector('img');
+            if (imgEl && match.image_url) {
+              imgEl.src = window.getResolvedImageSrc(match.image_url);
+            }
+            if (match.description) {
+              const descEl = card.querySelector('p');
+              if (descEl) descEl.textContent = match.description;
+            }
+          }
         });
       }
     }
 
-    // ==========================================
     // 5. MEMBERSHIPS & ORGANIZATIONS
-    // ==========================================
     if (Array.isArray(data.memberships) && data.memberships.length > 0) {
       const membershipLogos = {
         awdorg: 'membership%20logo/awd.jfif',
@@ -399,18 +486,20 @@
       }
     }
 
-    // ==========================================
     // 6. ABOUT PAGE STORY SECTIONS
-    // ==========================================
     if (data.about) {
       if (data.about.etymology && data.about.etymology.content) {
-        document.querySelectorAll('[data-cms="about_etymology"]').forEach(el => {
-          el.textContent = data.about.etymology.content;
+        document.querySelectorAll('[data-cms="about_etymology"], .about-quote-subtext').forEach(el => {
+          if (el.classList.contains('about-quote-subtext')) {
+            el.innerHTML = `The core philosophy behind the name <em>Aadya</em> &mdash; ${data.about.etymology.content}`;
+          } else {
+            el.textContent = data.about.etymology.content;
+          }
         });
       }
       if (data.about.quote && data.about.quote.text) {
-        document.querySelectorAll('[data-cms="about_quote_text"]').forEach(el => {
-          el.textContent = data.about.quote.text;
+        document.querySelectorAll('[data-cms="about_quote_text"], .about-quote-text').forEach(el => {
+          el.innerHTML = `&ldquo;${data.about.quote.text}&rdquo;`;
         });
       }
     }
@@ -426,7 +515,7 @@
     const card = e.target.closest('.portfolio-card');
     if (readMore || card) {
       if (e.target.closest('.hero-slider-container')) return;
-      if (e.target.closest('.aspect-video')) return; // Flipping gallery inside card
+      if (e.target.closest('.aspect-video a')) return; // Allow clicking link directly if clicked
       const targetCard = card || readMore.closest('.portfolio-card');
       if (!targetCard) return;
       const title = targetCard.querySelector('h3')?.textContent?.trim() || '';
@@ -443,10 +532,15 @@
         const parsed = JSON.parse(e.newValue);
         applyCMSData(parsed);
       } catch(err) {}
+    } else if (e.key && e.key.startsWith('aadya_preview_')) {
+      const srcKey = e.key.replace('aadya_preview_', '');
+      document.querySelectorAll(`img[src*="${srcKey}"]`).forEach(img => {
+        img.src = e.newValue;
+      });
     }
   });
 
-  // Also listen for same-window custom events
+  // Same-window custom events
   window.addEventListener('cms:data_updated', (e) => {
     if (e.detail) {
       applyCMSData(e.detail);

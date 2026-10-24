@@ -1429,7 +1429,7 @@ figure figcaption {
 .portfolio-cards-grid.is-writing-filter .portfolio-writing-groups {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(1.25rem, 2vw, 1.75rem);
   justify-self: center;
   width: 100%;
@@ -1455,12 +1455,6 @@ figure figcaption {
 
 img {
   transform: none !important;
-}
-
-@media (max-width: 639px) {
-  .portfolio-cards-grid.is-writing-filter .portfolio-writing-groups {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
 
 @media (min-width: 1024px) {
@@ -2263,6 +2257,8 @@ img {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(95, 61, 196, 0.3);
 }
+
+.explore-pill-btn {
   color: #ffffff;
   text-decoration: none;
   transition: all 0.2s ease;

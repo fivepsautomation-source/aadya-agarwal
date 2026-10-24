@@ -1074,7 +1074,8 @@
   }
 
   function renderModalContent(project) {
-    const heroSrc = project.heroImage || project.cardImage || '';
+    const heroRaw = project.heroImage || project.cardImage || '';
+    const heroSrc = typeof window.getResolvedImageSrc === 'function' ? window.getResolvedImageSrc(heroRaw) : heroRaw;
 
     // Technical focus HTML
     let techFocusHtml = '';
@@ -1169,11 +1170,14 @@
           </div>
           <p class="mb-6 text-sm text-ink/65 leading-relaxed">${subtitle}</p>
           <div class="phone-photo-grid">
-            ${galleryPhotos.map(ph => `
-              <a href="${ph.src}" target="_blank" rel="noopener noreferrer" aria-label="${ph.alt || 'View photo'}" class="phone-gallery-thumb">
-                <img src="${ph.src}" alt="${ph.alt || project.title + ' photo'}" loading="lazy">
+            ${galleryPhotos.map(ph => {
+              const phRaw = ph.src || '';
+              const phSrc = typeof window.getResolvedImageSrc === 'function' ? window.getResolvedImageSrc(phRaw) : phRaw;
+              return `
+              <a href="${phSrc}" target="_blank" rel="noopener noreferrer" aria-label="${ph.alt || 'View photo'}" class="phone-gallery-thumb">
+                <img src="${phSrc}" alt="${ph.alt || project.title + ' photo'}" loading="lazy" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">
               </a>
-            `).join('')}
+            `;}).join('')}
           </div>
         </div>
       `;
@@ -1246,7 +1250,7 @@
     return `
       <!-- Hero Banner with Title Overlay -->
       <div class="modal-hero-banner">
-        ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image" style="object-position: center !important;">` : ''}
+        ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image" style="object-position: center !important;" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
         <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 pointer-events-none">
           ${project.category ? `<span class="modal-category-badge mb-2 rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">${project.category}</span>` : ''}
           <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
@@ -1308,11 +1312,12 @@
 
     if (typeof identifier === 'object' && identifier !== null) {
       const title = (identifier.title || '').trim();
-      const matchedIdx = PROJECTS_DATA.findIndex(p => {
+      const exactIdx = PROJECTS_DATA.findIndex(p => p.title.toLowerCase() === title.toLowerCase());
+      const matchedIdx = exactIdx >= 0 ? exactIdx : (title.toLowerCase() === 'writing & arts' ? -1 : PROJECTS_DATA.findIndex(p => {
         const t1 = p.title.toLowerCase();
         const t2 = title.toLowerCase();
         return t1 === t2 || t1.includes(t2) || t2.includes(t1.slice(0, 15));
-      });
+      }));
 
       if (matchedIdx >= 0) {
         project = JSON.parse(JSON.stringify(PROJECTS_DATA[matchedIdx]));
@@ -1338,14 +1343,15 @@
           summary: identifier.desc || '',
           heroImage: identifier.img || imgs[0] || '',
           technicalFocus: identifier.highlights || [],
-          sections: [
+          sections: Array.isArray(identifier.sections) && identifier.sections.length ? identifier.sections : [
             {
               title: "Project Highlights & Methodology",
               intro: identifier.desc || ""
             }
           ],
+          attachments: Array.isArray(identifier.attachments) ? identifier.attachments : [],
           gallery: imgs.map(img => typeof img === 'string' ? { src: img, alt: identifier.title, caption: identifier.title } : img),
-          gallerySubtitle: "Field captures, research documentation, and presentation materials.",
+          gallerySubtitle: identifier.gallerySubtitle || "Field captures, research documentation, and presentation materials.",
           videos: Array.isArray(identifier.videos) ? identifier.videos : (identifier.video ? [identifier.video] : [])
         };
       }
@@ -1533,7 +1539,9 @@
             cardImage: item.img || '',
             heroImage: item.img || '',
             technicalFocus: item.highlights || [],
-            sections: [{ title: "Project Overview", intro: item.desc || "" }],
+            sections: Array.isArray(item.sections) ? item.sections : [{ title: "Project Overview", intro: item.desc || "" }],
+            attachments: Array.isArray(item.attachments) ? item.attachments : [],
+            gallerySubtitle: item.gallerySubtitle || '',
             gallery: (item.images || []).map(img => typeof img === 'string' ? { src: img, alt: item.title, caption: item.title } : img),
             videos: Array.isArray(item.videos) ? item.videos : []
           });
