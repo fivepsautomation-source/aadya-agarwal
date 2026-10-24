@@ -525,16 +525,7 @@
         "href": "assets/writing_arts/Scholastic_Writing_Recognition_Letter.pdf"
       }
     ],
-    "videos": [
-      {
-        "src": "assets/music/20241217_193755-wonderful_time_of_year.mp4",
-        "title": "School Music Concert"
-      },
-      {
-        "src": "assets/music/Aadya_Agarwal_-_7th_grade_-_School_Band_Concert_-_Spring_2024.mp4",
-        "title": "Spring 2024 School Band Concert"
-      }
-    ],
+    "videos": [],
     "sections": [
       {
         "title": "Published writing",
@@ -1273,7 +1264,7 @@
             }
           });
         }
-        if (Array.isArray(identifier.videos) && identifier.videos.length > 0) {
+        if (Array.isArray(identifier.videos)) {
           project.videos = identifier.videos;
         }
       } else {

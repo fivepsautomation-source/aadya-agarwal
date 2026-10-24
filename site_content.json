@@ -452,16 +452,7 @@
         "assets/speaking/speech_stage.jpg",
         "assets/certificates/nsf_speech_award.png"
       ],
-      "videos": [
-        {
-          "src": "assets/music/20241217_193755-wonderful_time_of_year.mp4",
-          "title": "School Music Concert"
-        },
-        {
-          "src": "assets/music/Aadya_Agarwal_-_7th_grade_-_School_Band_Concert_-_Spring_2024.mp4",
-          "title": "Spring 2024 School Band Concert"
-        }
-      ]
+      "videos": []
     }
   ],
   "documents": [
