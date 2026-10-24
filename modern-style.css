@@ -1758,46 +1758,7 @@ img {
 }
 
 .techtrek-article-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
   margin-top: 1.1rem;
-}
-
-.techtrek-article-card {
-  display: grid;
-  grid-template-columns: 6.25rem minmax(0, 1fr);
-  align-items: center;
-  gap: 0.8rem;
-  overflow: hidden;
-  border: 1px solid var(--awards-line);
-  border-radius: 0.75rem;
-  background: #fdf9f5;
-}
-
-.techtrek-article-card img {
-  display: block;
-  width: 6.25rem;
-  height: 5.5rem;
-  object-fit: cover;
-}
-
-.techtrek-article-card span {
-  display: grid;
-  gap: 0.35rem;
-  padding: 0.55rem 0.6rem 0.55rem 0;
-}
-
-.techtrek-article-card strong {
-  color: #17151c;
-  font-size: 0.78rem;
-  line-height: 1.4;
-}
-
-.techtrek-article-card small {
-  color: #ba1f43;
-  font-size: 0.7rem;
-  font-weight: 700;
 }
 
 .humanities-award-card {
