@@ -501,63 +501,6 @@
       "sort_order": 13
     },
     {
-      "id": 19,
-      "title": "Visual Arts Portfolio",
-      "category_slug": "arts",
-      "category_name": "Arts",
-      "img": "projects/art/art-16-2023.webp",
-      "images": [
-        "projects/art/art-16-2023.webp",
-        "projects/art/art-18-2024.jpg",
-        "projects/art/art-20-2024.jpg",
-        "projects/art/artwork-1-2022.jpg",
-        "projects/art/artwork-11-2022.jpg",
-        "projects/art/artwork-12-yearbook-cover-2020.jpg",
-        "projects/art/artwork-2-2023.jpg",
-        "projects/art/artwork-3-2021.jpg",
-        "projects/art/artwork-4-2021.jpg",
-        "projects/art/artwork-6-2023.jpg",
-        "projects/art/artwork-7-2022.jpg",
-        "assets/visual_arts/Fruits.jpg",
-        "assets/visual_arts/flowers.jpg",
-        "assets/visual_arts/art_11.jpg",
-        "assets/visual_arts/art_8_dancing_girls_.jpg",
-        "assets/visual_arts/artwork-13.jpg",
-        "assets/visual_arts/artwork-9_unfinished_.jpg",
-        "assets/visual_arts/artwork-12-3rd_grade_year_book_cover.jpg",
-        "assets/visual_arts/baking_caricature.jpg",
-        "assets/visual_arts/artwork-1.jpg",
-        "assets/visual_arts/artwork-16.jpg",
-        "assets/visual_arts/artwork-5.jpg",
-        "assets/visual_arts/art_1.jpg",
-        "assets/visual_arts/art_15_dog-remove_.jpg",
-        "assets/visual_arts/art_16.jpg",
-        "assets/visual_arts/art_3.jpg",
-        "assets/visual_arts/art_5.jpg",
-        "assets/writing_arts/artwork_bird.jpg",
-        "assets/writing_arts/artwork_landscape.jpg",
-        "assets/writing_arts/artwork_portrait.jpg"
-      ],
-      "desc": "A collection of drawings, paintings, and studies spanning wildlife, botanical subjects, portraiture, landscapes, and yearbook-cover design.",
-      "highlights": [
-        "School yearbook cover contest winner in 3rd grade",
-        "Acrylic still-life and botanical studies",
-        "Wildlife, portrait, landscape, and figurative drawing studies",
-        "Additional artwork from the studio series and creative portfolio"
-      ],
-      "tags": [
-        "#VisualArts",
-        "#Drawing",
-        "#Painting",
-        "#Illustration"
-      ],
-      "badges": [
-        "Visual Arts"
-      ],
-      "is_robotics": false,
-      "sort_order": 14
-    },
-    {
       "id": 20,
       "title": "Theatre & Stage Performance",
       "category_slug": "arts",
