@@ -483,66 +483,142 @@
     ]
   },
   {
-    "title": "Writing & Publications",
+    "title": "Writing & Arts",
     "group": "Writing & Arts",
-    "category": "Creative & academic writing \u00b7 2021\u2013present",
-    "summary": "Commended in the international John Locke Institute Global Essay Prize; multiple published poems exploring environmental consciousness, identity, and ethics.",
-    "cardImage": "projects/writing/scholastic-honorable-mention.jpeg",
-    "heroImage": "assets/ref_images/projects_john-locke_framed.jpg",
+    "category": "Writing & Arts",
+    "summary": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
+    "cardImage": "assets/writing_arts/Aadya Flute Pic1.png",
+    "heroImage": "assets/writing_arts/Aadya Flute Pic1.png",
     "badges": [
       {
-        "label": "John Locke",
+        "label": "Flute",
         "tone": "plum"
       },
       {
-        "label": "Scholastic",
+        "label": "Piano",
         "tone": "berry"
+      },
+      {
+        "label": "Writing & Arts",
+        "tone": "gold"
       }
     ],
     "technicalFocus": [
-      "Commended in John Locke Global Essay Competition from 19,000+ international entries",
-      "Recipient of school annual English and Humanities literary prize",
-      "Poetry published in national youth anthologies exploring nature and equity",
-      "Contributed essays on ethical technology and environmental stewardship"
+      "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
+      "Bronze Medal, Technology & Innovation theme, Harvard International Review, Summer 2026",
+      "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
+      "2025 National History Day (NJ Regional): a 2,500-word paper on Lysenkoism and the suppression of scientific advancement in the Soviet Union",
+      "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville’s jazz band with NJMTA Honors recitals",
+      "Backstage technical theater, stage manager and production assistant"
     ],
     "attachments": [
       {
-        "label": "Selected writing sample (PDF)",
-        "href": "docs/writing-sample.pdf"
-      }
-    ],
-    "videos": [],
-    "sections": [
-      {
-        "title": "John Locke Global Essay Commendation",
-        "intro": "Selected for High Commendation in the international John Locke Institute Global Essay Competition from over 19,000 international submissions, exploring ethical technology, environmental consciousness, and stewardship."
+        "label": "John Locke 2026 High Commendation (PDF)",
+        "href": "assets/writing_arts/John Locke 2026 - High Commendation.pdf"
       },
       {
-        "title": "Published Poetry & Literary Anthologies (2021\u2013Present)",
-        "intro": "Work published in national youth anthologies including The Telling Room, Skipping Stones magazine, and A Celebration of Poets."
+        "label": "Scholastic Poetry Silver Key certificate (PDF)",
+        "href": "assets/writing_arts/Scholastic_Poetry_Silver_Key_Certificate.pdf"
+      },
+      {
+        "label": "Scholastic Writing recognition letter (PDF)",
+        "href": "assets/writing_arts/Scholastic_Writing_Recognition_Letter.pdf"
       }
     ],
-    "gallerySubtitle": "John Locke Institute commendation, literary journal features, and published poetry anthologies.",
+    "videos": [
+      {
+        "src": "assets/music/20241217_193755-wonderful_time_of_year.mp4",
+        "title": "School Music Concert"
+      },
+      {
+        "src": "assets/music/Aadya_Agarwal_-_7th_grade_-_School_Band_Concert_-_Spring_2024.mp4",
+        "title": "Spring 2024 School Band Concert"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Published writing",
+        "intro": "Essays and poetry recognized by the John Locke Institute and Scholastic Art & Writing Awards, with work published in The Telling Room, Skipping Stones and Poetic Power anthologies, plus science journalism for TechTrek USA."
+      },
+      {
+        "title": "Flute",
+        "intro": "Flutist in Lawrenceville's jazz band and recipient of NJMTA Honors recital recognition."
+      },
+      {
+        "title": "Piano",
+        "intro": "Music-Fest International Rising Talent Festival Grand Prize winner, with a solo recital at Greenfield Hall, Manhattan School of Music."
+      },
+      {
+        "title": "Theater",
+        "intro": "Backstage technical theater work as a stage manager and production assistant, alongside school and community performances."
+      }
+    ],
+    "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater.",
     "gallery": [
+      {
+        "src": "assets/writing_arts/Aadya Flute Pic1.png",
+        "alt": "Aadya with concert flute",
+        "caption": "Wind Ensemble Section Leader & Flutist"
+      },
+      {
+        "src": "assets/writing_arts/flute_performance.png",
+        "alt": "Flute solo in concert hall",
+        "caption": "Flute Solo Performance"
+      },
+      {
+        "src": "assets/music/Flute_pic_2.jpg",
+        "alt": "Flute recital",
+        "caption": "Studio Flute Recital"
+      },
+      {
+        "src": "assets/music/Flute_pic_3.png",
+        "alt": "Flute performance",
+        "caption": "Flute Soloist Honors"
+      },
+      {
+        "src": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
+        "alt": "NJMTA Flute Honors Recital",
+        "caption": "NJMTA Flute Spring Recital Honors Award"
+      },
+      {
+        "src": "assets/ref_images/projects_piano-manhattan-school.jpg",
+        "alt": "Piano recital at Greenfield Hall, Manhattan School of Music",
+        "caption": "Music-Fest Recital — Manhattan School of Music"
+      },
+      {
+        "src": "assets/writing_arts/Copy of piano award.png",
+        "alt": "Piano competition award",
+        "caption": "International Rising Talent Grand Prize"
+      },
+      {
+        "src": "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
+        "alt": "Grand Prize Recital Certificate",
+        "caption": "Manhattan School of Music Recital Certificate"
+      },
+      {
+        "src": "assets/music/Piano_Pic_3.jpg",
+        "alt": "Piano performance",
+        "caption": "Solo Classical Piano Repertoire"
+      },
       {
         "src": "assets/ref_images/projects_john-locke_framed.jpg",
         "alt": "John Locke Global Essay Prize Commendation",
-        "caption": "John Locke Global Essay Commendation"
+        "caption": "John Locke High Commendation (Science & Technology)"
       },
       {
-        "src": "assets/certificates/John Locke 2026 - High Commendation.jpg",
-        "alt": "John Locke Institute Certificate of High Commendation",
-        "caption": "John Locke High Commendation Certificate"
+        "src": "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
+        "alt": "Scholastic Art & Writing recognition",
+        "caption": "Scholastic Art & Writing Awards"
       },
       {
-        "src": "projects/writing/scholastic-honorable-mention.jpeg",
-        "alt": "Scholastic Art & Writing Honorable Mention certificate",
-        "caption": "Scholastic Art & Writing \u2014 Honorable Mention"
+        "src": "projects/writing/celebration-of-poets.png",
+        "alt": "A Celebration of Poets anthology",
+        "caption": "A Celebration of Poets Anthology"
       },
       {
-        "src": "projects/writing/when-kindness-is-planted.webp",
-        "alt": "Poem 'When Kindness Is Planted' in The Telling Room",
-        "caption": "The Telling Room Anthology, 2022"
+        "src": "projects/writing/anthology-fall-2024.jpeg",
+        "alt": "Poetic Power anthology",
+        "caption": "National Youth Poetry Anthology"
       },
       {
         "src": "projects/writing/balance-skipping-stones.jpg",
@@ -552,228 +628,77 @@
       {
         "src": "projects/writing/in-a-shift-of-heart.png",
         "alt": "Poem 'In a Shift of Heart'",
-        "caption": "Published Poetry Feature, 2023"
+        "caption": "Published Poetry Feature"
       },
       {
         "src": "projects/writing/my-moms-frying-pan.png",
         "alt": "Poem 'My Mom's Frying Pan'",
-        "caption": "Anthology Publication, 2024"
+        "caption": "Anthology Publication"
       },
       {
-        "src": "projects/writing/celebration-of-poets.png",
-        "alt": "A Celebration of Poets anthology feature",
-        "caption": "A Celebration of Poets Feature"
-      },
-      {
-        "src": "projects/writing/anthology-fall-2024.jpeg",
-        "alt": "Anthology feature, Fall 2024",
-        "caption": "National Youth Poetry Anthology"
+        "src": "projects/writing/when-kindness-is-planted.webp",
+        "alt": "Poem 'When Kindness Is Planted'",
+        "caption": "The Telling Room Anthology"
       },
       {
         "src": "projects/writing/pds-feature-2023.webp",
-        "alt": "Princeton Day School feature post about Aadya's writing",
-        "caption": "Princeton Day School Feature"
-      }
-    ]
-  },
-  {
-    "title": "Music, Theater & Speaking",
-    "group": "Writing & Arts",
-    "category": "Piano \u00b7 Flute \u00b7 Theater \u00b7 Public Speaking",
-    "summary": "Piano Grand Prize at the Music-Fest International Rising Talent Festival, solo recital at Greenfield Hall at Manhattan School of Music, 1st chair flutist in wind ensemble, technical theater stage crew, and award-winning public speaking.",
-    "cardImage": "projects/piano-manhattan-school.jpg",
-    "heroImage": "projects/piano-manhattan-school.jpg",
-    "badges": [
-      {
-        "label": "Music-Fest Grand Prize",
-        "tone": "plum"
+        "alt": "Princeton Day School feature post",
+        "caption": "School Literary Feature"
       },
       {
-        "label": "Manhattan School of Music",
-        "tone": "berry"
-      }
-    ],
-    "technicalFocus": [
-      "Piano Grand Prize \u2014 Music-Fest International Rising Talent Festival with solo recital at Manhattan School of Music",
-      "Flute (2021\u2013Present): Middle & High School Jazz Band, 1st Chair Flutist; NJMTA auditions and Honors recitals at Westminster Conservatory and Rutgers University",
-      "Theater: backstage technical theater, stage manager and production assistant, with occasional stage performance",
-      "Public speaking: Toastmasters YLP Outstanding Communicator, interschool contest semi-finalist, and North South Foundation 1st place"
-    ],
-    "attachments": [],
-    "videos": [],
-    "sections": [
-      {
-        "title": "Piano \u2014 Music-Fest Grand Prize & Manhattan School of Music",
-        "intro": "Grand Prize at the Music-Fest International Rising Talent Festival, with a solo classical recital at Greenfield Hall, Manhattan School of Music. Studio recitals and honors recitals at Westminster Conservatory, Princeton."
+        "src": "assets/writing_arts/poem_celebration_of_small.png",
+        "alt": "Celebration of Small",
+        "caption": "Poetry Anthology Recognition"
       },
       {
-        "title": "Flute (2021\u2013Present) \u2014 1st Chair & NJMTA Honors",
-        "intro": "1st Chair Flutist in competitive school and regional wind ensembles, NJMTA Spring Recital Honors Award winner, and woodwind section leader."
+        "src": "assets/writing_arts/poem_frying_pan.png",
+        "alt": "My Mom's Frying Pan",
+        "caption": "Published Creative Writing"
       },
       {
-        "title": "Theater \u2014 Technical Stage & Performance",
-        "intro": "School and community theater: backstage technical theater, stage manager and production assistant, with stage performance in Lawrenceville Shakespeare\u2019s Much Ado About Nothing."
+        "src": "assets/writing_arts/poem_shift_of_heart.png",
+        "alt": "In a Shift of Heart",
+        "caption": "Literary Publication"
       },
       {
-        "title": "Public Speaking & Debate Honors",
-        "intro": "Lawrenceville school-wide and Annual Interschool Public Speaking Contests semi-finalist; ETS Toastmasters Outstanding Communicator Award; 1st place at North South Foundation Public Speaking Contest."
+        "src": "techtrek/TechTrek Article 1.png",
+        "alt": "TechTrek USA science journalism article 1",
+        "caption": "TechTrek USA Science Article"
       },
       {
-        "title": "Visual Arts Gallery (2020\u20132024)",
-        "intro": "Visual art portfolio spanning classical sketch, watercolor, and 3rd-grade yearbook-cover contest winner."
-      }
-    ],
-    "gallerySubtitle": "Piano recitals at Manhattan School of Music, jazz band flute performances, technical theater, and visual art.",
-    "gallery": [
-      {
-        "src": "projects/piano-manhattan-school.jpg",
-        "alt": "Aadya performing piano at the Manhattan School of Music",
-        "caption": "Music-Fest Recital \u2014 Manhattan School of Music"
+        "src": "techtrek/TechTrek Article 2.png",
+        "alt": "TechTrek USA science journalism article 2",
+        "caption": "TechTrek USA Science Article"
       },
       {
-        "src": "projects/piano-performance-2.jpg",
-        "alt": "Aadya at the piano in classical recital",
-        "caption": "Piano Solo Performance"
+        "src": "assets/writing_arts/Theater - Much Ado About Nothing.png",
+        "alt": "Theater Much Ado About Nothing",
+        "caption": "Technical Stage & Production"
       },
       {
-        "src": "projects/music/musicfest-grand-prize-recital.jpg",
-        "alt": "Music-Fest Rising Talent Grand Prize Recital",
-        "caption": "Music-Fest Grand Prize Recitalist"
+        "src": "assets/uploads/1792842400029_the-day-the-internet-died.jpg",
+        "alt": "The Day The Internet Died",
+        "caption": "Stage Crew & Production"
       },
       {
-        "src": "projects/music/musicfest-grand-prize.jpeg",
-        "alt": "Receiving Music-Fest International Grand Prize",
-        "caption": "Music-Fest Grand Prize Trophy"
+        "src": "assets/uploads/1792842362259_mit-day-ai-stage.jpg",
+        "alt": "Stage presentation",
+        "caption": "Stage & Presentation"
       },
       {
-        "src": "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-        "alt": "Grand Prize Recital Certificate at Greenfield Hall, Manhattan School of Music",
-        "caption": "Manhattan School of Music Recital Certificate"
+        "src": "assets/speaking/speech_award_ceremony.jpg",
+        "alt": "Speech award ceremony",
+        "caption": "Public Speaking Ceremony"
       },
       {
-        "src": "projects/music/piano-award.png",
-        "alt": "Piano award certificate",
-        "caption": "Classical Piano Distinction"
+        "src": "assets/speaking/speech_stage.jpg",
+        "alt": "Public speaking on stage",
+        "caption": "Public Speaking Contest"
       },
       {
-        "src": "projects/music/archive/piano-musicfest-recital.jpg",
-        "alt": "Aadya at the Music-Fest recital",
-        "caption": "Music-Fest Recital Stage"
-      },
-      {
-        "src": "projects/music/archive/piano-njmta-honors.jpg",
-        "alt": "Aadya piano recital performance",
-        "caption": "Classical Piano Honors Recital"
-      },
-      {
-        "src": "projects/music/flute-aadya.png",
-        "alt": "Aadya performing classical flute",
-        "caption": "Wind Ensemble 1st Chair Flutist"
-      },
-      {
-        "src": "projects/music/njmta-flute-honors.jpeg",
-        "alt": "NJMTA Flute Honors Recital certificate",
-        "caption": "NJMTA Flute Spring Honors Award"
-      },
-      {
-        "src": "assets/writing_arts/flute_performance.png",
-        "alt": "Flute solo in concert hall",
-        "caption": "Flute Concert Soloist"
-      },
-      {
-        "src": "assets/writing_arts/Aadya Flute Pic1.png",
-        "alt": "Aadya with concert flute",
-        "caption": "Wind Ensemble Section Leader"
-      },
-      {
-        "src": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
-        "alt": "NJMTA Recital Certificate",
-        "caption": "Statewide Honors Recognition"
-      },
-      {
-        "src": "projects/flute-1.png",
-        "alt": "Aadya playing flute",
-        "caption": "Chamber & Jazz Band Flute"
-      },
-      {
-        "src": "projects/flute-2.jpg",
-        "alt": "Flute rehearsal",
-        "caption": "Sectional Rehearsal"
-      },
-      {
-        "src": "projects/flute-seniors.jpeg",
-        "alt": "Playing flute for senior living residents",
-        "caption": "Music Therapy for Seniors"
-      },
-      {
-        "src": "projects/music/archive/flute-advanced-band-concert.png",
-        "alt": "Advanced band concert first chair",
-        "caption": "First Chair \u2014 Advanced Band"
-      },
-      {
-        "src": "projects/theater/much-ado-about-nothing.png",
-        "alt": "Much Ado About Nothing theatrical production",
-        "caption": "Much Ado About Nothing Production"
-      },
-      {
-        "src": "projects/theater/archive/the-day-the-internet-died.jpg",
-        "alt": "Scene from The Day The Internet Died",
-        "caption": "Technical Stage Crew & Cast"
-      },
-      {
-        "src": "projects/theater/archive/spring-musical.jpg",
-        "alt": "Spring musical production",
-        "caption": "Spring Musical Stage"
-      },
-      {
-        "src": "projects/theater/archive/ets-toastmasters-award.png",
-        "alt": "ETS Youth Toastmasters Outstanding Communicator Award",
-        "caption": "Toastmasters Outstanding Communicator"
-      },
-      {
-        "src": "projects/theater/archive/nsf-learning-journey-excellence.png",
-        "alt": "North South Foundation Public Speaking 1st Place",
-        "caption": "NSF Public Speaking 1st Place Award"
-      },
-      {
-        "src": "projects/art/art-18-2024.jpg",
-        "alt": "Artwork by Aadya, 2024",
-        "caption": "Original Artwork, 2024"
-      },
-      {
-        "src": "projects/art/art-20-2024.jpg",
-        "alt": "Visual art, 2024",
-        "caption": "Mixed Media Artwork, 2024"
-      },
-      {
-        "src": "projects/art/art-16-2023.webp",
-        "alt": "Artwork, 2023",
-        "caption": "Fine Art Portfolio, 2023"
-      },
-      {
-        "src": "projects/art/artwork-6-2023.jpg",
-        "alt": "Original artwork",
-        "caption": "Original Sketch, 2023"
-      },
-      {
-        "src": "projects/art/artwork-2-2023.jpg",
-        "alt": "Original artwork",
-        "caption": "Color Study, 2023"
-      },
-      {
-        "src": "projects/art/artwork-11-2022.jpg",
-        "alt": "Original artwork",
-        "caption": "Illustration, 2022"
-      },
-      {
-        "src": "projects/art/artwork-7-2022.jpg",
-        "alt": "Original artwork",
-        "caption": "Nature Drawing, 2022"
-      },
-      {
-        "src": "projects/art/artwork-12-yearbook-cover-2020.jpg",
-        "alt": "Yearbook cover contest-winning artwork",
-        "caption": "Yearbook Cover Contest Winner"
+        "src": "assets/certificates/nsf_speech_award.png",
+        "alt": "North South Foundation speech award",
+        "caption": "NSF Public Speaking 1st Place"
       }
     ]
   },
@@ -1313,7 +1238,7 @@
     if (typeof identifier === 'object' && identifier !== null) {
       const title = (identifier.title || '').trim();
       const exactIdx = PROJECTS_DATA.findIndex(p => p.title.toLowerCase() === title.toLowerCase());
-      const matchedIdx = exactIdx >= 0 ? exactIdx : (title.toLowerCase() === 'writing & arts' ? -1 : PROJECTS_DATA.findIndex(p => {
+      const matchedIdx = exactIdx >= 0 ? exactIdx : (PROJECTS_DATA.findIndex(p => {
         const t1 = p.title.toLowerCase();
         const t2 = title.toLowerCase();
         return t1 === t2 || t1.includes(t2) || t2.includes(t1.slice(0, 15));
@@ -1321,6 +1246,22 @@
 
       if (matchedIdx >= 0) {
         project = JSON.parse(JSON.stringify(PROJECTS_DATA[matchedIdx]));
+        if (identifier.sections && Array.isArray(identifier.sections) && identifier.sections.length > 0) {
+          project.sections = identifier.sections;
+        }
+        if (identifier.attachments && Array.isArray(identifier.attachments) && identifier.attachments.length > 0) {
+          project.attachments = identifier.attachments;
+        }
+        if (identifier.highlights && Array.isArray(identifier.highlights) && identifier.highlights.length > 0) {
+          project.technicalFocus = identifier.highlights;
+        }
+        if (identifier.desc) {
+          project.summary = identifier.desc;
+        }
+        if (identifier.img) {
+          project.cardImage = identifier.img;
+          project.heroImage = identifier.img;
+        }
         if (Array.isArray(identifier.images) && identifier.images.length > 0) {
           const existingSrcs = new Set((project.gallery || []).map(g => g.src));
           identifier.images.forEach(img => {
