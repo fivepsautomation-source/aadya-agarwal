@@ -231,7 +231,7 @@
         "Research"
       ],
       "is_robotics": false,
-      "sort_order": 5
+      "sort_order": 7
     },
     {
       "id": 8,
@@ -268,7 +268,7 @@
         "HealthTech"
       ],
       "is_robotics": false,
-      "sort_order": 6
+      "sort_order": 5
     },
     {
       "id": 11,
@@ -335,7 +335,7 @@
         "Hunger Relief"
       ],
       "is_robotics": false,
-      "sort_order": 7
+      "sort_order": 8
     },
     {
       "id": 13,
@@ -364,14 +364,10 @@
         "Youth Volunteering"
       ],
       "is_robotics": false,
-      "sort_order": 8
+      "sort_order": 9
     },
     {
       "id": 14,
-      "title": "Writing & Performing Arts",
-      "category_slug": "writing",
-      "category_name": "Writing & Performing Arts",
-      "img": "assets/writing_arts/Aadya Flute Pic1.png",
       "desc": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
       "highlights": [
         "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
@@ -396,8 +392,9 @@
         "Flute",
         "Piano"
       ],
-      "sort_order": 9,
+      "sort_order": 11,
       "images": [
+        "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
         "assets/writing_arts/Aadya Flute Pic1.png",
         "assets/writing_arts/flute_performance.png",
         "assets/music/Flute_pic_2.jpg",
@@ -465,7 +462,60 @@
           "intro": "Backstage technical theater work as a stage manager and production assistant, alongside school and community performances."
         }
       ],
-      "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater."
+      "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater.",
+      "title": "Creative & Academic Writing",
+      "category_slug": "writing",
+      "category_name": "Writing & Performing Arts",
+      "img": "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png"
+    },
+    {
+      "id": 1792917988413,
+      "title": "here it is",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical Research & AI",
+      "img": "assets/uploads/1792917943889_20260710_121848.jpg",
+      "images": [
+        "assets/uploads/1792917943889_20260710_121848.jpg"
+      ],
+      "desc": "Editted",
+      "highlights": [],
+      "tags": [],
+      "badges": [
+        "Flute",
+        "Piano",
+        "Writing & Performing Arts"
+      ],
+      "sort_order": 10
+    },
+    {
+      "id": 1792918333524,
+      "title": "Music, Theater & Public Speaking",
+      "category_slug": "writing",
+      "category_name": "Writing & Performing Arts",
+      "img": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
+      "images": [
+        "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
+      ],
+      "desc": "editted",
+      "highlights": [],
+      "tags": [],
+      "badges": [],
+      "sort_order": 12
+    },
+    {
+      "id": 1792918752665,
+      "title": "here it is",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical Research & AI",
+      "img": "assets/uploads/1792918739033_bio.jpeg",
+      "images": [
+        "assets/uploads/1792918739033_bio.jpeg"
+      ],
+      "desc": "editted",
+      "highlights": [],
+      "tags": [],
+      "badges": [],
+      "sort_order": 6
     }
   ],
   "documents": [
