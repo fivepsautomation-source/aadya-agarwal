@@ -311,16 +311,19 @@
           }
 
           const isLeftBadge = p.badge_position === 'left' || p.id === 4 || (p.title && p.title.toLowerCase().includes('comparative biochar')) || (coverImg && coverImg.includes('ieee-attendance'));
-          const posClass = isLeftBadge ? 'left-2.5 top-2.5 justify-start' : 'right-2.5 top-2.5 justify-end';
+          const posClass = isLeftBadge ? 'left-2 top-2 justify-start is-left' : 'right-2 top-2 justify-end is-right';
           const badgesHtml = relevantBadges.length
-            ? `<span class="pointer-events-none absolute ${posClass} z-10 flex flex-wrap gap-1.5">` +
+            ? `<span class="pointer-events-none absolute ${posClass} card-badges-wrap z-10 flex flex-wrap gap-1.5" style="top: 0.5rem; ${isLeftBadge ? 'left: 0.5rem;' : 'right: 0.5rem;'}">` +
               relevantBadges.map((badge, i) => `<span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md ${i % 2 === 0 ? 'bg-plum' : 'bg-berry'} text-white">${badge}</span>`).join('') +
               `</span>`
             : '';
 
+          const isTopAlignedImg = p.id === 4 || (coverImg && coverImg.includes('ieee-attendance')) || (p.title && p.title.toLowerCase().includes('comparative biochar')) || p.img_position === 'top';
+          const imgPosStyle = isTopAlignedImg ? 'style="object-position: center top;"' : (p.img_position ? `style="object-position: ${p.img_position};"` : '');
+
           card.innerHTML = `
             <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
-              ${p.article_url ? `<a class="block h-full w-full" href="${p.article_url}" target="_blank" rel="noopener noreferrer" aria-label="Read feature for ${p.title}"><img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${coverImg}"/></a>` : `<img alt="${p.title}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="${coverImg}"/>`}
+              ${p.article_url ? `<a class="block h-full w-full" href="${p.article_url}" target="_blank" rel="noopener noreferrer" aria-label="Read feature for ${p.title}"><img alt="${p.title}" loading="lazy" class="h-full w-full object-cover ${isTopAlignedImg ? 'object-top' : ''} transition duration-300 group-hover:scale-105" ${imgPosStyle} src="${coverImg}"/></a>` : `<img alt="${p.title}" loading="lazy" class="h-full w-full object-cover ${isTopAlignedImg ? 'object-top' : ''} transition duration-300 group-hover:scale-105" ${imgPosStyle} src="${coverImg}"/>`}
               ${badgesHtml}
             </div>
             <div class="flex w-full flex-1 flex-col p-5 text-left">

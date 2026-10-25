@@ -2626,3 +2626,35 @@ img {
   display: none !important;
 }
 
+/* Portfolio Card Badges Positioning & Fallbacks */
+.top-2\.5 { top: 0.625rem; }
+.bottom-2\.5 { bottom: 0.625rem; }
+.left-2\.5 { left: 0.625rem; }
+.right-2\.5 { right: 0.625rem; }
+.justify-start { justify-content: flex-start; }
+
+.card-badges-wrap {
+  position: absolute !important;
+  top: 0.5rem !important;
+  z-index: 20 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.375rem !important;
+  pointer-events: none !important;
+}
+.card-badges-wrap.is-left {
+  left: 0.5rem !important;
+  right: auto !important;
+  justify-content: flex-start !important;
+}
+.card-badges-wrap.is-right {
+  right: 0.5rem !important;
+  left: auto !important;
+  justify-content: flex-end !important;
+}
+
+.portfolio-card img[src*="ieee-attendance"],
+.portfolio-card img[alt*="IEEE/ISEC"] {
+  object-position: center top !important;
+}
+

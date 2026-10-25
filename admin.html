@@ -866,7 +866,7 @@
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;" id="portfolioFilterTabs">
               <button class="btn-secondary" onclick="filterPortfolioList('all', this)" style="background: var(--admin-plum); color: #fff;">All</button>
               <button class="btn-secondary" onclick="filterPortfolioList('robotics', this)">Robotics &amp; Coding</button>
-              <button class="btn-secondary" onclick="filterPortfolioList('environmental', this)">Environmental Sustainability &amp; AI</button>
+              <button class="btn-secondary" onclick="filterPortfolioList('environmental', this)">Research</button>
               <button class="btn-secondary" onclick="filterPortfolioList('biomedical', this)">Biomedical Research &amp; AI</button>
               <button class="btn-secondary" onclick="filterPortfolioList('monivitals', this)">MoniVitals</button>
               <button class="btn-secondary" onclick="filterPortfolioList('writing', this)">Writing &amp; Performing Arts</button>
@@ -1067,7 +1067,7 @@
           <label class="form-label">Category</label>
           <select id="modalProjCategory" class="form-input">
             <option value="robotics">Robotics &amp; Coding</option>
-            <option value="environmental">Environmental Sustainability &amp; AI</option>
+            <option value="environmental">Research</option>
             <option value="biomedical">Biomedical Research &amp; AI</option>
             <option value="monivitals">MoniVitals</option>
             <option value="writing">Writing &amp; Performing Arts</option>
@@ -2485,7 +2485,7 @@
       const category_slug = document.getElementById('modalProjCategory').value;
       const categoryNames = {
         'robotics': 'Robotics & Coding',
-        'environmental': 'Environmental Sustainability & AI',
+        'environmental': 'Research',
         'biomedical': 'Biomedical Research & AI',
         'monivitals': 'MoniVitals',
         'writing': 'Writing & Performing Arts',

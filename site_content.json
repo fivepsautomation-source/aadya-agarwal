@@ -56,7 +56,7 @@
       "id": 3,
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
-      "category_name": "Environmental Sustainability & AI",
+      "category_name": "Research",
       "article_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
       "img": "assets/uploads/1792856574507_pic1.jpeg",
       "images": [
@@ -99,8 +99,9 @@
       "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
-      "category_name": "Environmental Sustainability & AI",
+      "category_name": "Research",
       "img": "assets/uploads/1792856840122_ieee-attendance.jpg",
+      "img_position": "center top",
       "images": [
         "assets/uploads/1792856840122_ieee-attendance.jpg",
         "projects/ieee-engineering-conversation.jpg",
@@ -138,7 +139,7 @@
       "id": 2,
       "title": "Biochar Water Treatment",
       "category_slug": "environmental",
-      "category_name": "Environmental Sustainability & AI",
+      "category_name": "Research",
       "img": "projects/water-treatment-setup.jpg",
       "images": [
         "projects/water-treatment-setup.jpg"
