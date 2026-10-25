@@ -1498,7 +1498,7 @@ img {
 }
 
 .awards-section {
-  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+  padding: clamp(1.75rem, 3.2vw, 2.75rem) 0;
   scroll-margin-top: 5rem;
 }
 
@@ -1510,11 +1510,15 @@ img {
 
 .awards-section-heading {
   max-width: 48rem;
-  margin-bottom: clamp(1.25rem, 2.6vw, 2rem);
+  margin-bottom: clamp(1rem, 2vw, 1.35rem);
+}
+
+.awards-section-heading .editorial-eyebrow {
+  margin-bottom: 0.35rem;
 }
 
 .awards-section-heading .editorial-section-title {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.35rem;
 }
 
 .awards-section-heading .editorial-lead-subtext {
