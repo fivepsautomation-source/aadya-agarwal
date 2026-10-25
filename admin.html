@@ -1174,9 +1174,12 @@
         <input type="text" id="modalProjTags" class="form-input" placeholder="#Robotics, #AI, #Innovation">
       </div>
 
-      <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.08);">
-        <button type="button" onclick="document.getElementById('projectEditModal').close()" class="btn-secondary">Cancel</button>
-        <button type="submit" class="btn-primary" style="width: auto; margin: 0; padding: 0.75rem 1.6rem;">Save Project to Database</button>
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.08);">
+        <button type="button" id="btnDeleteModalProject" onclick="deleteCurrentModalProject()" class="btn-danger" style="margin: 0; padding: 0.65rem 1.25rem; font-size: 0.85rem; display: none;">🗑️ Delete Project</button>
+        <div style="display: flex; gap: 0.75rem; margin-left: auto;">
+          <button type="button" onclick="document.getElementById('projectEditModal').close()" class="btn-secondary">Cancel</button>
+          <button type="submit" class="btn-primary" style="width: auto; margin: 0; padding: 0.75rem 1.6rem;">Save Project to Database</button>
+        </div>
       </div>
     </form>
   </dialog>
@@ -2292,8 +2295,8 @@
         row.innerHTML = `
           <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
             <div style="display: flex; flex-direction: column; gap: 3px; margin-right: 10px;">
-              <button type="button" onclick="moveProjectOrder(${p.id}, -1)" ${isFirst ? 'disabled' : ''} class="btn-icon-order" title="Move Project Up">▲</button>
-              <button type="button" onclick="moveProjectOrder(${p.id}, 1)" ${isLast ? 'disabled' : ''} class="btn-icon-order" title="Move Project Down">▼</button>
+              <button type="button" onclick="moveProjectOrder('${p.id}', -1)" ${isFirst ? 'disabled' : ''} class="btn-icon-order" title="Move Project Up">▲</button>
+              <button type="button" onclick="moveProjectOrder('${p.id}', 1)" ${isLast ? 'disabled' : ''} class="btn-icon-order" title="Move Project Down">▼</button>
             </div>
             <span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 7px; background: rgba(59,18,45,0.08); font-size: 0.78rem; font-weight: 800; color: var(--admin-plum); margin-right: 10px; flex-shrink: 0;">#${idx + 1}</span>
             <img src="${getResolvedImageSrc(p.img || 'assets/logo.png')}" class="item-thumb-micro" onerror="smartImageFallback(this, '${p.img || ''}')">
@@ -2306,10 +2309,10 @@
           <div class="item-actions-col">
             <label class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem;" title="Change cover image">
               <span>📷 Cover</span>
-              <input type="file" accept="image/*" style="display: none;" onchange="quickChangeProjectCover(${p.id}, this)">
+              <input type="file" accept="image/*" style="display: none;" onchange="quickChangeProjectCover('${p.id}', this)">
             </label>
-            <button onclick="editProjectItem(${p.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit &amp; Tags</button>
-            <button onclick="deleteProjectItem(${p.id})" class="btn-danger">Delete</button>
+            <button onclick="editProjectItem('${p.id}')" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit &amp; Tags</button>
+            <button onclick="deleteProjectItem('${p.id}')" class="btn-danger">Delete</button>
           </div>
         `;
         container.appendChild(row);
@@ -2380,6 +2383,8 @@
       currentModalBadges = [];
       renderModalGallery();
       renderModalBadges();
+      const delBtn = document.getElementById('btnDeleteModalProject');
+      if (delBtn) delBtn.style.display = 'none';
       document.getElementById('projectEditModal').showModal();
     }
 
@@ -2411,6 +2416,9 @@
       }
       currentModalBadges = [...loadedBadges];
       renderModalBadges();
+
+      const delBtn = document.getElementById('btnDeleteModalProject');
+      if (delBtn) delBtn.style.display = 'inline-flex';
 
       document.getElementById('projectEditModal').showModal();
     }
@@ -2467,6 +2475,15 @@
       }
     }
 
+    function deleteCurrentModalProject() {
+      const id = document.getElementById('modalProjId').value;
+      if (!id) {
+        document.getElementById('projectEditModal').close();
+        return;
+      }
+      deleteProjectItem(id);
+    }
+
     async function deleteProjectItem(id) {
       if (id === undefined || id === null || id === '') {
         alert('Cannot delete: Invalid or missing project ID.');
@@ -2475,21 +2492,35 @@
       const pToDelete = (siteData.portfolio || []).find(p => String(p.id) === String(id));
       const pName = pToDelete ? pToDelete.title : 'this project';
       if (!confirm(`Are you sure you want to delete "${pName}"?`)) return;
+
+      // Close modal if open
+      const modal = document.getElementById('projectEditModal');
+      if (modal && modal.open) {
+        modal.close();
+      }
+
+      // 1. Immediately remove from local memory and instant update on screen
+      if (siteData && Array.isArray(siteData.portfolio)) {
+        siteData.portfolio = siteData.portfolio.filter(p => String(p.id) !== String(id));
+        siteData.portfolio.forEach((p, idx) => {
+          p.sort_order = idx;
+        });
+        syncToStorage();
+        renderPortfolioList(siteData.portfolio);
+        const countEl = document.getElementById('statCountProjects');
+        if (countEl) countEl.textContent = siteData.portfolio.length;
+      }
+
+      showToast(`Deleting "${pName}"...`);
+
       try {
-        if (siteData && Array.isArray(siteData.portfolio)) {
-          siteData.portfolio = siteData.portfolio.filter(p => String(p.id) !== String(id));
-          siteData.portfolio.forEach((p, idx) => {
-            p.sort_order = idx;
-          });
-          syncToStorage();
-        }
         await apiRequest('/api/portfolio/delete', 'POST', { id });
         await syncToStorageAndPublish(`Deleted project "${pName}"`);
         showToast(`✓ Project "${pName}" deleted!`);
-        loadAllData();
       } catch (e) {
-        alert('Failed to delete project: ' + e.message);
+        console.error('Delete project sync note:', e);
       }
+      loadAllData();
     }
 
     // 5. Image Upload Handler
