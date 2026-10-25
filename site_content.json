@@ -732,7 +732,7 @@
       "description": "National Oceanic and Atmospheric Administration recognition.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 1
+      "sort_order": 2
     },
     {
       "id": 4,
@@ -744,7 +744,7 @@
       "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 2
+      "sort_order": 3
     },
     {
       "id": 1,
@@ -756,7 +756,7 @@
       "description": "One of five national winners; presented the water-quality project at the MIT Media Lab.",
       "link_text": "Read Feature",
       "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
-      "sort_order": 3
+      "sort_order": 1
     },
     {
       "id": 5,
