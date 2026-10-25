@@ -81,9 +81,9 @@
         "assets/uploads/1792857542458_MIT_and_judge__1_.jpeg",
         "assets/uploads/1792857545077_IMG-20260719-WA0017.jpg"
       ],
-      "desc": "One of five winners of MIT Solve AI for a Better World presented an AI-powered water-quality node at the MIT Media Lab.  She is also a Leopold Scholar in Ecology and Ethics at The Lawrenceville School.  Her Journey started with testing water quality. Aadya spent months in the lab testing how softwood- and agricultural-waste-based biochar pulls contaminants out of water, then asked what it would take to put that science in the hands of communities that need it. The answer became Project RHINE, an AI- and IoT-informed monitoring and treatment concept that pairs low-cost sensors, data analysis, and biochar filtration. MIT Solve named RHINE one of five national winners of its AI for A Better World Youth Innovation Global Challenge. The research earned regional U.S. Stockholm Junior Water Prize recognition and a NOAA “Taking the Pulse of the Planet” award, and she presented it at the New Jersey Water Environment Association conference and the IEEE ISEC Conference at Princeton University this March. Her manuscript is now under peer review at the Journal of Emerging Investigators.",
+      "desc": "One of five national winners of MIT Solve AI for a Better World Challenge; presented an AI-powered water-quality node at the MIT Media Lab.  My Journey started with testing water quality. I spent several months in the lab testing how softwood- and agricultural-waste-based biochar pulls contaminants out of water, then asked what it would take to put that science in the hands of communities that need it. The answer became Project RHINE, an AI- and IoT-informed monitoring and treatment concept that pairs low-cost sensors, data analysis, and biochar filtration. MIT Solve named RHINE one of the five national winners of its AI for A Better World Youth Innovation Global Challenge. The research earned regional U.S. Stockholm Junior Water Prize recognition and a NOAA “Taking the Pulse of the Planet” award, and I presented it at the New Jersey Water Environment Association conference and the IEEE ISEC Conference at Princeton University. My manuscript is now under peer review at the Journal of Emerging Investigators.",
       "highlights": [
-        "One of 5 national MIT Solve AI for a Better World winners",
+        "One of five national MIT Solve AI for a Better World winners",
         "Presented the water-remediation IoT node on stage at the MIT Media Lab",
         "Pairs water-quality sensing with edge machine learning and actionable treatment response",
         "Proposed training on river, lake and global water-measurement data with responsible-AI safeguards",
@@ -177,7 +177,7 @@
       "id": 1,
       "title": "Autonomous Ocean pH Buoy",
       "category_slug": "environmental",
-      "category_name": "Climate technology · 2025 concept",
+      "category_name": "Research",
       "img": "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
       "images": [
         "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
@@ -198,9 +198,12 @@
         "#3MYoungScientist",
         "#pHBuoy"
       ],
-      "badges": [],
+      "badges": [
+        "Climate Tech"
+      ],
       "is_robotics": false,
-      "sort_order": 4
+      "sort_order": 4,
+      "badge_position": "right"
     },
     {
       "id": 5,
@@ -512,7 +515,7 @@
     },
     {
       "id": 1792918752665,
-      "title": "Stanford Artificial Intelligence and Medical Imaging",
+      "title": "Stanford Center for Artificial Intelligence in Medicine & Imaging",
       "category_slug": "biomedical",
       "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792918739033_bio.jpeg",
@@ -520,7 +523,7 @@
         "assets/uploads/1792918739033_bio.jpeg",
         "https://aimi.stanford.edu/academic-year-research-internship"
       ],
-      "desc": "Stanford Artificial and Medical Imaging  and Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” integrating neuroimaging and AI. \n\nApplying machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. \n\nDeveloping an understanding of accessibility, model validation, and user-centered design in health technology. \n\nPresented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
+      "desc": "Stanford Artificial Intelligence in Medicine & Imaging  - 30-week Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
       "highlights": [
         "Completed a two-week summer internship",
         "Invited to continue as an academic-year researcher",
