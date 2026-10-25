@@ -371,7 +371,7 @@
       "title": "Creative & Academic Writing",
       "category_slug": "writing",
       "category_name": "Writing & Arts",
-      "img": "assets/writing_arts/Aadya Flute Pic1.png",
+      "img": "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
       "desc": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
       "highlights": [
         "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
@@ -398,6 +398,7 @@
       ],
       "sort_order": 10,
       "images": [
+        "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
         "assets/writing_arts/Aadya Flute Pic1.png",
         "assets/writing_arts/flute_performance.png",
         "assets/music/Flute_pic_2.jpg",
