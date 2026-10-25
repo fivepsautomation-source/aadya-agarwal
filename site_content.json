@@ -227,7 +227,9 @@
         "#MachineLearning",
         "#Bioinformatics"
       ],
-      "badges": [],
+      "badges": [
+        "Research"
+      ],
       "is_robotics": false,
       "sort_order": 5
     },
