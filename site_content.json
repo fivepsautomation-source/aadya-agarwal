@@ -131,8 +131,7 @@
         "IEEE /ISEC"
       ],
       "is_robotics": false,
-      "sort_order": 2,
-      "badge_position": "left"
+      "sort_order": 2
     },
     {
       "id": 2,
