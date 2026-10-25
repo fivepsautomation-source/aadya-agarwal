@@ -131,7 +131,8 @@
         "IEEE"
       ],
       "is_robotics": false,
-      "sort_order": 2
+      "sort_order": 2,
+      "badge_position": "left"
     },
     {
       "id": 2,
