@@ -350,12 +350,18 @@
                 <a class="award-text-link" href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Read the feature <span aria-hidden="true">↗</span></a>
               </div>
             </div>
-            <a class="featured-publication-card featured-publication-link" href="https://www.tellingroom.org/stories-full/when-kindness-is-planted" target="_blank" rel="noopener noreferrer" aria-label="Read Aadya's story featured by Princeton Day School">
+            <div class="featured-publication-card featured-publication-link" id="pdsCard" style="cursor: pointer;" role="button" tabindex="0" aria-label="View Princeton Day School feature image and post">
               <div class="featured-publication-image-wrap">
                 <img class="featured-publication-image" src="projects/writing/pds-feature-2023.webp" alt="Princeton Day School feature celebrating Aadya's writing" style="object-position: top;" loading="lazy">
+                <span class="biochar-zoom-badge">🔍 Click to enlarge</span>
               </div>
-              <div class="featured-publication-copy"><span class="featured-publication-index">03</span><h3>Princeton Day School</h3><p>Featured during middle school.</p><span class="award-text-link">Read the featured story ↗</span></div>
-            </a>
+              <div class="featured-publication-copy">
+                <span class="featured-publication-index">03</span>
+                <h3>Princeton Day School</h3>
+                <p>Featured during middle school.</p>
+                <a class="award-text-link" href="https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Read the featured story <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -416,6 +422,27 @@
           </div>
           <a href="https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch" target="_blank" rel="noopener noreferrer" class="biochar-open-btn">
             <span>Visit Article ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Princeton Day School 2-Step Click Image Modal -->
+    <div id="pdsImageModal" class="biochar-modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-label="Princeton Day School Feature">
+      <div class="biochar-modal-dialog">
+        <button type="button" class="biochar-modal-close" aria-label="Close modal">&times;</button>
+        <div class="biochar-modal-link" title="Click to open Princeton Day School post">
+          <div class="biochar-modal-img-frame">
+            <img src="projects/writing/pds-feature-2023.webp" alt="Princeton Day School feature celebrating Aadya's writing" class="biochar-modal-img" style="object-position: top;">
+          </div>
+        </div>
+        <div class="biochar-modal-footer">
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; color: #fff; margin: 0;">Princeton Day School</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 4px 0 0 0;">Featured during middle school · Click anywhere to view the full post</p>
+          </div>
+          <a href="https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/" target="_blank" rel="noopener noreferrer" class="biochar-open-btn">
+            <span>View Post ↗</span>
           </a>
         </div>
       </div>
@@ -484,6 +511,7 @@
 
     setupTwoStepModal('biocharCard', 'biocharImageModal', 'https://ambiochar.com/what-are-your-desired-outcomes/');
     setupTwoStepModal('lawrentianCard', 'lawrentianImageModal', 'https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch');
+    setupTwoStepModal('pdsCard', 'pdsImageModal', 'https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/');
   })();
   </script>
 </body>
