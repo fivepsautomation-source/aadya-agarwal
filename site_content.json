@@ -137,7 +137,7 @@
       "id": 2,
       "title": "Biochar Water Treatment",
       "category_slug": "environmental",
-      "category_name": "Experimental Research · 2026",
+      "category_name": "Environmental Sustainability & AI",
       "img": "projects/water-treatment-setup.jpg",
       "images": [
         "projects/water-treatment-setup.jpg"
@@ -159,7 +159,9 @@
         "#CleanWater",
         "#MSEF"
       ],
-      "badges": [],
+      "badges": [
+        "STOCKHOLM Water Prize"
+      ],
       "is_robotics": false,
       "sort_order": 2
     },
