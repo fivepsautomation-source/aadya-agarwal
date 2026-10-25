@@ -867,9 +867,9 @@
               <button class="btn-secondary" onclick="filterPortfolioList('all', this)" style="background: var(--admin-plum); color: #fff;">All</button>
               <button class="btn-secondary" onclick="filterPortfolioList('robotics', this)">Robotics &amp; Coding</button>
               <button class="btn-secondary" onclick="filterPortfolioList('environmental', this)">Environmental Sustainability &amp; AI</button>
-              <button class="btn-secondary" onclick="filterPortfolioList('biomedical', this)">Biomedical &amp; AI</button>
+              <button class="btn-secondary" onclick="filterPortfolioList('biomedical', this)">Biomedical Research &amp; AI</button>
               <button class="btn-secondary" onclick="filterPortfolioList('monivitals', this)">MoniVitals</button>
-              <button class="btn-secondary" onclick="filterPortfolioList('writing', this)">Writing &amp; Arts</button>
+              <button class="btn-secondary" onclick="filterPortfolioList('writing', this)">Writing &amp; Performing Arts</button>
               <button class="btn-secondary" onclick="filterPortfolioList('community', this)">School &amp; Community</button>
             </div>
 
@@ -1068,9 +1068,9 @@
           <select id="modalProjCategory" class="form-input">
             <option value="robotics">Robotics &amp; Coding</option>
             <option value="environmental">Environmental Sustainability &amp; AI</option>
-            <option value="biomedical">Biomedical &amp; AI</option>
+            <option value="biomedical">Biomedical Research &amp; AI</option>
             <option value="monivitals">MoniVitals</option>
-            <option value="writing">Writing &amp; Arts</option>
+            <option value="writing">Writing &amp; Performing Arts</option>
             <option value="community">School &amp; Community</option>
           </select>
         </div>
@@ -2227,7 +2227,7 @@
         return ['Hardware CAD', 'ESP32'];
       }
       if (id === 14 || title.includes('writing') || slug === 'writing' || slug === 'arts') {
-        return ['Flute', 'Piano', 'Writing & Arts'];
+        return ['Flute', 'Piano', 'Writing & Performing Arts'];
       }
       if (id === 11 || title.includes('school & community') || title.includes('community') || slug === 'community') {
         return ['School Leadership', 'Community Service'];
@@ -2472,9 +2472,9 @@
       const categoryNames = {
         'robotics': 'Robotics & Coding',
         'environmental': 'Environmental Sustainability & AI',
-        'biomedical': 'Biomedical & AI',
+        'biomedical': 'Biomedical Research & AI',
         'monivitals': 'MoniVitals',
-        'writing': 'Writing & Arts',
+        'writing': 'Writing & Performing Arts',
         'community': 'School & Community'
       };
       const category_name = categoryNames[category_slug] || 'Project';

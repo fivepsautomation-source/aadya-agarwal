@@ -198,7 +198,7 @@
       "id": 5,
       "title": "Biomedical & AI Scientific Research",
       "category_slug": "biomedical",
-      "category_name": "Biomedical & AI",
+      "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792859269041_2222_aadya.png",
       "images": [
         "assets/uploads/1792859269041_2222_aadya.png",
@@ -368,9 +368,9 @@
     },
     {
       "id": 14,
-      "title": "Writing & Arts",
+      "title": "Writing & Performing Arts",
       "category_slug": "writing",
-      "category_name": "Writing & Arts",
+      "category_name": "Writing & Performing Arts",
       "img": "assets/writing_arts/Aadya Flute Pic1.png",
       "desc": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
       "highlights": [

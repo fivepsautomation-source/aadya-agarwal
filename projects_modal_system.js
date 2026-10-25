@@ -483,9 +483,9 @@
     ]
   },
   {
-    "title": "Writing & Arts",
-    "group": "Writing & Arts",
-    "category": "Writing & Arts",
+    "title": "Writing & Performing Arts",
+    "group": "Writing & Performing Arts",
+    "category": "Writing & Performing Arts",
     "summary": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
     "cardImage": "assets/writing_arts/Aadya Flute Pic1.png",
     "heroImage": "assets/writing_arts/Aadya Flute Pic1.png",
@@ -499,7 +499,7 @@
         "tone": "berry"
       },
       {
-        "label": "Writing & Arts",
+        "label": "Writing & Performing Arts",
         "tone": "gold"
       }
     ],
@@ -556,133 +556,133 @@
     "gallery": [
       {
         "src": "assets/writing_arts/Aadya Flute Pic1.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/writing_arts/flute_performance.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/music/Flute_pic_2.jpg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/music/Flute_pic_3.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/ref_images/projects_piano-manhattan-school.jpg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/writing_arts/Copy of piano award.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/music/Piano_Pic_3.jpg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/music/image_1.jpeg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/music/image_5.jpeg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/music/image_8.jpeg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/music/image_9.jpeg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/music/image_10.jpeg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/ref_images/projects_john-locke_framed.jpg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "projects/writing/celebration-of-poets.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "projects/writing/anthology-fall-2024.jpeg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "projects/writing/balance-skipping-stones.jpg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "projects/writing/in-a-shift-of-heart.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "projects/writing/my-moms-frying-pan.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "projects/writing/when-kindness-is-planted.webp",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "projects/writing/pds-feature-2023.webp",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/writing_arts/poem_celebration_of_small.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/writing_arts/poem_frying_pan.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/writing_arts/poem_shift_of_heart.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "techtrek/TechTrek Article 1.png",
@@ -696,23 +696,23 @@
       },
       {
         "src": "assets/writing_arts/Theater - Much Ado About Nothing.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/speaking/speech_award_ceremony.jpg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/speaking/speech_stage.jpg",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       },
       {
         "src": "assets/certificates/nsf_speech_award.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "Writing & Performing Arts",
+        "caption": "Writing & Performing Arts"
       }
     ]
   },
@@ -906,7 +906,7 @@
   {
     "title": "Biomedical & AI Scientific Research",
     "group": "Projects",
-    "category": "Biomedical & AI",
+    "category": "Biomedical Research & AI",
     "summary": "Stanford AIMI clinical AI research, computational drug discovery with AutoDock Vina, Harvard-mentored molecular biology wet lab, and Cambridge cancer genomics research.",
     "cardImage": "assets/certificates/BioResearch Academy Certificate.jpeg",
     "heroImage": "assets/certificates/BioResearch Academy Certificate.jpeg",
