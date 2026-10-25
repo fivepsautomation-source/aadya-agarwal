@@ -2943,36 +2943,88 @@
       });
     }
 
+    function matchesAwardFilter(a, cat) {
+      if (!cat || cat === 'all') return true;
+      const group = (a.category_group || '').toLowerCase();
+      const pill = (a.category_pill || '').toLowerCase();
+      const title = (a.title || '').toLowerCase();
+      if (cat === 'research') {
+        return group === 'research' || pill.includes('water') || pill.includes('winner') || pill.includes('science') || title.includes('mit') || title.includes('water') || title.includes('noaa') || title.includes('mercer');
+      }
+      if (cat === 'robotics') {
+        return group === 'robotics' || pill.includes('robot') || pill.includes('lego') || pill.includes('hackathon') || title.includes('wpi') || title.includes('robotics') || title.includes('fll') || title.includes('hackathon');
+      }
+      if (cat === 'civic') {
+        return group === 'civic' || pill.includes('civic') || pill.includes('service') || pill.includes('state') || title.includes('legislative') || title.includes('service') || title.includes('nations') || title.includes('here');
+      }
+      if (cat === 'writing') {
+        return group === 'writing' || pill.includes('essay') || pill.includes('writing') || pill.includes('poetry') || pill.includes('author') || pill.includes('medal') || title.includes('locke') || title.includes('scholastic') || title.includes('techtrek') || title.includes('sink') || title.includes('patriot') || title.includes('harvard');
+      }
+      if (cat === 'humanities') {
+        return group === 'humanities' || pill.includes('humanities') || pill.includes('school') || pill.includes('spotlight') || title.includes('imbrie') || title.includes('lawrentian') || title.includes('biochar');
+      }
+      if (cat === 'arts') {
+        return group === 'arts' || pill.includes('piano') || pill.includes('flute') || pill.includes('recital') || pill.includes('speaking') || pill.includes('champion') || title.includes('music') || title.includes('flute') || title.includes('speaking');
+      }
+      return false;
+    }
+
     async function moveAwardOrder(id, direction) {
       if (!siteData || !Array.isArray(siteData.awards)) return;
-      const list = [...siteData.awards].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
-      const currentIndex = list.findIndex(a => String(a.id) === String(id));
-      if (currentIndex < 0) return;
-      const targetIndex = currentIndex + direction;
-      if (targetIndex < 0 || targetIndex >= list.length) return;
+      const sortedAwards = [...siteData.awards].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
 
-      const temp = list[currentIndex];
-      list[currentIndex] = list[targetIndex];
-      list[targetIndex] = temp;
+      if (typeof currentAwardsFilter !== 'undefined' && currentAwardsFilter && currentAwardsFilter !== 'all') {
+        const filtered = sortedAwards.filter(a => matchesAwardFilter(a, currentAwardsFilter));
+        const currIdx = filtered.findIndex(a => String(a.id) === String(id));
+        if (currIdx < 0) return;
+        const targetIdx = currIdx + direction;
+        if (targetIdx < 0 || targetIdx >= filtered.length) return;
 
-      list.forEach((item, idx) => {
+        const currItem = filtered[currIdx];
+        const targetItem = filtered[targetIdx];
+
+        // Swap their relative positions in the global list
+        const gCurrIdx = sortedAwards.findIndex(a => String(a.id) === String(currItem.id));
+        const gTargetIdx = sortedAwards.findIndex(a => String(a.id) === String(targetItem.id));
+        if (gCurrIdx >= 0 && gTargetIdx >= 0) {
+          const temp = sortedAwards[gCurrIdx];
+          sortedAwards[gCurrIdx] = sortedAwards[gTargetIdx];
+          sortedAwards[gTargetIdx] = temp;
+        }
+      } else {
+        const currentIndex = sortedAwards.findIndex(a => String(a.id) === String(id));
+        if (currentIndex < 0) return;
+        const targetIndex = currentIndex + direction;
+        if (targetIndex < 0 || targetIndex >= sortedAwards.length) return;
+
+        const temp = sortedAwards[currentIndex];
+        sortedAwards[currentIndex] = sortedAwards[targetIndex];
+        sortedAwards[targetIndex] = temp;
+      }
+
+      sortedAwards.forEach((item, idx) => {
         item.sort_order = idx;
         const orig = siteData.awards.find(a => String(a.id) === String(item.id));
         if (orig) orig.sort_order = idx;
       });
 
+      siteData.awards = sortedAwards;
+
       syncToStorage();
-      renderAwardsList(siteData.awards);
+      if (typeof currentAwardsFilter !== 'undefined' && currentAwardsFilter && currentAwardsFilter !== 'all') {
+        filterAwardsList(currentAwardsFilter);
+      } else {
+        renderAwardsList(siteData.awards);
+      }
 
       try {
-        for (const item of list) {
+        for (const item of siteData.awards) {
           await apiRequest('/api/awards/save', 'POST', item);
         }
       } catch(e) {}
 
-      await syncToStorageAndPublish(`Reordered award "${temp.title}"`);
-      showToast(`✓ Award moved ${direction < 0 ? 'up' : 'down'}!`);
-      loadAllData();
+      await syncToStorageAndPublish(`Reordered awards`);
+      showToast(`✓ Award sequence updated!`);
     }
 
     function filterAwardsList(cat, btn) {
@@ -2999,30 +3051,7 @@
         renderAwardsList(items);
         return;
       }
-      const filtered = items.filter(a => {
-        const group = (a.category_group || '').toLowerCase();
-        const pill = (a.category_pill || '').toLowerCase();
-        const title = (a.title || '').toLowerCase();
-        if (cat === 'research') {
-          return group === 'research' || pill.includes('water') || pill.includes('winner') || pill.includes('science') || title.includes('mit') || title.includes('water') || title.includes('noaa') || title.includes('mercer');
-        }
-        if (cat === 'robotics') {
-          return group === 'robotics' || pill.includes('robot') || pill.includes('lego') || pill.includes('hackathon') || title.includes('wpi') || title.includes('robotics') || title.includes('fll') || title.includes('hackathon');
-        }
-        if (cat === 'civic') {
-          return group === 'civic' || pill.includes('service') || pill.includes('state') || title.includes('legislative') || title.includes('service') || title.includes('nations');
-        }
-        if (cat === 'writing') {
-          return group === 'writing' || pill.includes('essay') || pill.includes('writing') || pill.includes('poetry') || pill.includes('author') || pill.includes('medal') || title.includes('locke') || title.includes('scholastic') || title.includes('techtrek') || title.includes('sink') || title.includes('patriot') || title.includes('harvard');
-        }
-        if (cat === 'humanities') {
-          return group === 'humanities' || pill.includes('humanities') || pill.includes('school') || pill.includes('spotlight') || title.includes('imbrie') || title.includes('lawrentian') || title.includes('biochar');
-        }
-        if (cat === 'arts') {
-          return group === 'arts' || pill.includes('piano') || pill.includes('flute') || pill.includes('recital') || pill.includes('speaking') || pill.includes('champion') || title.includes('music') || title.includes('flute') || title.includes('speaking');
-        }
-        return false;
-      });
+      const filtered = items.filter(a => matchesAwardFilter(a, cat));
       renderAwardsList(filtered);
     }
 

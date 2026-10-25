@@ -347,69 +347,140 @@
       }
     }
 
-    // 4. AWARDS & DISTINCTIONS SYNC (Both index.html and awards.html)
+    // 4. AWARDS & DISTINCTIONS SYNC (Dynamic re-ordering, content sync, and additions)
     if (Array.isArray(data.awards) && data.awards.length > 0) {
-      // 4A. Update awards on awards.html (Visual cards matching by title or id)
-      const visualCards = document.querySelectorAll('.award-visual-card');
-      if (visualCards.length > 0) {
-        visualCards.forEach(card => {
-          const titleEl = card.querySelector('h3');
-          if (!titleEl) return;
-          const cardTitle = titleEl.textContent.trim().toLowerCase();
+      const sortedAwards = [...data.awards].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
 
-          const match = data.awards.find(aw => {
-            const awTitle = (aw.title || '').trim().toLowerCase();
-            return awTitle === cardTitle || awTitle.includes(cardTitle.slice(0, 15)) || cardTitle.includes(awTitle.slice(0, 15));
+      // 4A. Update awards on awards.html (Visual cards matching by ID or title and re-ordering in grid)
+      const sectionConfigs = [
+        { selector: '#research-awards .awards-feature-grid', group: 'research' },
+        { selector: '#robotics-awards .awards-feature-grid', group: 'robotics' },
+        { selector: '#civic-awards .awards-feature-grid', group: 'civic' },
+        { selector: '#writing-awards > .container > .awards-feature-grid', group: 'writing' },
+        { selector: '#music-speaking-awards .awards-feature-grid', group: 'arts' }
+      ];
+
+      sectionConfigs.forEach(conf => {
+        const grid = document.querySelector(conf.selector);
+        if (!grid) return;
+
+        const sectionAwards = sortedAwards.filter(aw => {
+          const grp = (aw.category_group || '').toLowerCase();
+          const pill = (aw.category_pill || '').toLowerCase();
+          const title = (aw.title || '').toLowerCase();
+          if (conf.group === 'research') {
+            return grp === 'research' || pill.includes('water') || pill.includes('winner') || pill.includes('science') || title.includes('mit') || title.includes('water') || title.includes('noaa') || title.includes('mercer');
+          }
+          if (conf.group === 'robotics') {
+            return grp === 'robotics' || pill.includes('robot') || pill.includes('lego') || pill.includes('hackathon') || title.includes('wpi') || title.includes('robotics') || title.includes('fll') || title.includes('hackathon');
+          }
+          if (conf.group === 'civic') {
+            return grp === 'civic' || pill.includes('service') || pill.includes('state') || title.includes('legislative') || title.includes('service') || title.includes('nations') || title.includes('here');
+          }
+          if (conf.group === 'writing') {
+            return grp === 'writing' || grp === 'humanities' || pill.includes('essay') || pill.includes('writing') || pill.includes('poetry') || pill.includes('author') || pill.includes('medal') || title.includes('locke') || title.includes('scholastic') || title.includes('techtrek') || title.includes('sink') || title.includes('patriot') || title.includes('harvard') || title.includes('imbrie');
+          }
+          if (conf.group === 'arts') {
+            return grp === 'arts' || pill.includes('piano') || pill.includes('flute') || pill.includes('recital') || pill.includes('speaking') || pill.includes('champion') || title.includes('music') || title.includes('flute') || title.includes('speaking');
+          }
+          return grp === conf.group;
+        });
+
+        if (sectionAwards.length === 0) return;
+
+        const existingCards = Array.from(grid.querySelectorAll('.award-visual-card'));
+
+        sectionAwards.forEach(aw => {
+          let card = existingCards.find(c => {
+            const idAttr = c.getAttribute('data-award-id');
+            if (idAttr && String(idAttr) === String(aw.id)) return true;
+            const h3 = c.querySelector('h3');
+            if (!h3) return false;
+            const t = h3.textContent.trim().toLowerCase();
+            const awT = (aw.title || '').trim().toLowerCase();
+            return t === awT || t.includes(awT.slice(0, 15)) || awT.includes(t.slice(0, 15));
           });
 
-          if (match) {
+          if (!card) {
+            card = document.createElement('article');
+            card.className = 'award-visual-card';
+            card.innerHTML = `
+              <a class="award-visual-image-link" href="${aw.link_url || '#'}" target="_blank" rel="noopener noreferrer" aria-label="View ${aw.title}">
+                <img src="${window.getResolvedImageSrc(aw.image_url)}" alt="${aw.title}" loading="lazy">
+              </a>
+              <div class="award-visual-content">
+                <span class="award-year-pill">${aw.category_pill || 'Award'}${aw.year ? ' · ' + aw.year : ''}</span>
+                <h3>${aw.title}</h3>
+                <p>${aw.description || ''}</p>
+                ${aw.link_text ? `<a class="award-text-link" href="${aw.link_url || '#'}" target="_blank" rel="noopener noreferrer">${aw.link_text} <span aria-hidden="true">&nearr;</span></a>` : ''}
+              </div>
+            `;
+          } else {
+            const titleEl = card.querySelector('h3');
+            if (titleEl && aw.title) titleEl.textContent = aw.title;
+
             const imgEl = card.querySelector('img');
-            if (imgEl && match.image_url) {
-              imgEl.src = window.getResolvedImageSrc(match.image_url);
+            if (imgEl && aw.image_url) imgEl.src = window.getResolvedImageSrc(aw.image_url);
+
+            const imgLink = card.querySelector('a.award-visual-image-link');
+            if (imgLink && aw.link_url && aw.link_url !== '#') imgLink.href = aw.link_url;
+
+            const pillEl = card.querySelector('.award-year-pill');
+            if (pillEl && (aw.category_pill || aw.year)) {
+              pillEl.textContent = `${aw.category_pill || 'Award'}${aw.year ? ' · ' + aw.year : ''}`;
             }
-            if (match.category_pill || match.year) {
-              const pillEl = card.querySelector('.award-year-pill');
-              if (pillEl) pillEl.textContent = `${match.category_pill || 'Award'} · ${match.year || '2026'}`;
-            }
-            if (match.description) {
-              const descEl = card.querySelector('p');
-              if (descEl) descEl.textContent = match.description;
-            }
-            if (match.link_url && match.link_text) {
-              const linkEl = card.querySelector('.award-text-link');
-              if (linkEl) {
-                linkEl.href = match.link_url;
-                linkEl.innerHTML = `${match.link_text} <span aria-hidden="true">&nearr;</span>`;
+
+            const descEl = card.querySelector('p');
+            if (descEl && aw.description) descEl.textContent = aw.description;
+
+            if (aw.link_url && aw.link_text) {
+              let linkEl = card.querySelector('.award-text-link');
+              if (!linkEl) {
+                linkEl = document.createElement('a');
+                linkEl.className = 'award-text-link';
+                linkEl.target = '_blank';
+                linkEl.rel = 'noopener noreferrer';
+                const contentDiv = card.querySelector('.award-visual-content');
+                if (contentDiv) contentDiv.appendChild(linkEl);
               }
+              linkEl.href = aw.link_url;
+              linkEl.innerHTML = `${aw.link_text} <span aria-hidden="true">&nearr;</span>`;
             }
           }
+
+          card.setAttribute('data-award-id', String(aw.id));
+          // Moving / appending card in sorted order!
+          grid.appendChild(card);
         });
-      }
+      });
 
       // 4B. Update awards on index.html (#awards section)
-      const homeAwards = document.querySelectorAll('#awards .award-feature-card');
-      if (homeAwards.length > 0) {
-        homeAwards.forEach(card => {
-          const titleEl = card.querySelector('h3');
-          if (!titleEl) return;
-          const cardTitle = titleEl.textContent.trim().toLowerCase();
-
-          const match = data.awards.find(aw => {
-            const awTitle = (aw.title || '').trim().toLowerCase();
-            return awTitle === cardTitle || awTitle.includes(cardTitle.slice(0, 15)) || cardTitle.includes(awTitle.slice(0, 15));
-          });
-
-          if (match) {
-            const imgEl = card.querySelector('img');
-            if (imgEl && match.image_url) {
-              imgEl.src = window.getResolvedImageSrc(match.image_url);
-            }
-            if (match.description) {
+      const homeAwardsGrid = document.querySelector('#awards .grid, #awards [class*="grid"]');
+      if (homeAwardsGrid) {
+        const homeCards = Array.from(homeAwardsGrid.querySelectorAll('.award-feature-card'));
+        if (homeCards.length > 0) {
+          sortedAwards.forEach(aw => {
+            const card = homeCards.find(c => {
+              const idAttr = c.getAttribute('data-award-id');
+              if (idAttr && String(idAttr) === String(aw.id)) return true;
+              const h3 = c.querySelector('h3');
+              if (!h3) return false;
+              const t = h3.textContent.trim().toLowerCase();
+              const awT = (aw.title || '').trim().toLowerCase();
+              return t === awT || t.includes(awT.slice(0, 15)) || awT.includes(t.slice(0, 15));
+            });
+            if (card) {
+              card.setAttribute('data-award-id', String(aw.id));
+              const titleEl = card.querySelector('h3');
+              if (titleEl && aw.title) titleEl.textContent = aw.title;
+              const imgEl = card.querySelector('img');
+              if (imgEl && aw.image_url) imgEl.src = window.getResolvedImageSrc(aw.image_url);
               const descEl = card.querySelector('p');
-              if (descEl) descEl.textContent = match.description;
+              if (descEl && aw.description) descEl.textContent = aw.description;
+              homeAwardsGrid.appendChild(card);
             }
-          }
-        });
+          });
+        }
       }
     }
 
