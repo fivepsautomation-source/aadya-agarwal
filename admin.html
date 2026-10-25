@@ -747,6 +747,9 @@
         </div>
 
         <div class="admin-topbar-actions" style="display: flex; gap: 0.65rem; align-items: center;">
+          <button type="button" onclick="forceRefreshLiveCMS()" class="btn-secondary" style="margin: 0; padding: 0.65rem 1.15rem; font-size: 0.85rem; background: #fff; border: 1.5px solid var(--admin-border); color: var(--admin-plum); font-weight: 700; cursor: pointer;" title="Fetch latest content from GitHub repository and reload">
+            <span>🔄 Sync from Live Site</span>
+          </button>
           <button type="button" onclick="exportSiteContentJSON()" class="btn-secondary" style="margin: 0; padding: 0.65rem 1.15rem; font-size: 0.85rem; background: #fff; border: 1.5px solid var(--admin-border); color: var(--admin-plum); font-weight: 700; cursor: pointer;">
             <span>📥 Export site_content.json</span>
           </button>
@@ -1232,6 +1235,17 @@
           <input type="text" id="modalAwardYear" class="form-input" value="2026" required>
         </div>
       </div>
+
+      <div class="form-group">
+        <label class="form-label">Award Section / Category Group</label>
+        <select id="modalAwardCategoryGroup" class="form-input" required>
+          <option value="research">Environmental research &amp; innovation</option>
+          <option value="robotics">Robotics &amp; Coding</option>
+          <option value="civic">Civic Leadership &amp; Service</option>
+          <option value="writing">Writing, Research &amp; Publication</option>
+          <option value="arts">Music &amp; Public Speaking</option>
+        </select>
+      </div>
       
       <!-- Certificate / Image -->
       <div class="form-group" style="background: #fbf9f7; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(15,15,18,0.08); margin-bottom: 1.25rem;">
@@ -1599,45 +1613,72 @@
       showToast('✓ site_content.json downloaded successfully!');
     }
 
+    async function fetchFreshCMSData() {
+      // 1. Try un-cached GitHub Contents API first
+      try {
+        const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
+        const ghRes = await fetch(`https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=${Date.now()}_${Math.random()}`, {
+          headers: {
+            'Authorization': `token ${token}`
+          }
+        });
+        if (ghRes.ok) {
+          const fileInfo = await ghRes.json();
+          if (fileInfo && fileInfo.content) {
+            const binary = atob(fileInfo.content.replace(/\s/g, ''));
+            const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+            const decodedStr = new TextDecoder('utf-8').decode(bytes);
+            const ghData = JSON.parse(decodedStr);
+            if (ghData && (ghData.settings || ghData.portfolio)) {
+              siteData = ghData;
+              localStorage.setItem('aadya_cms_content', JSON.stringify(ghData));
+              return siteData;
+            }
+          }
+        }
+      } catch(e) {}
+
+      // 2. Fetch fresh local/live site_content.json with cache: no-store
+      try {
+        const fallbackRes = await fetch('site_content.json?v=' + Date.now(), { cache: 'no-store' });
+        if (fallbackRes.ok) {
+          const json = await fallbackRes.json();
+          if (json && (json.settings || json.portfolio)) {
+            siteData = json;
+            localStorage.setItem('aadya_cms_content', JSON.stringify(json));
+            return siteData;
+          }
+        }
+      } catch(e) {}
+
+      // 3. Fallback to localStorage only if offline
+      const stored = localStorage.getItem('aadya_cms_content');
+      if (stored) {
+        try {
+          siteData = JSON.parse(stored);
+          return siteData;
+        } catch(e) {}
+      }
+
+      siteData = { settings: {}, portfolio: [], awards: [], documents: [], memberships: [], about: {}, media: [] };
+      return siteData;
+    }
+
+    async function forceRefreshLiveCMS() {
+      showToast('Fetching latest data from repository...');
+      try {
+        localStorage.removeItem('aadya_cms_content');
+        await fetchFreshCMSData();
+        renderAllSections();
+        showToast('✓ Live website data synchronized successfully!');
+      } catch(err) {
+        alert('Could not refresh: ' + err.message);
+      }
+    }
+
     async function handleClientSideFallback(url, method, data) {
       if (!siteData || !siteData.settings) {
-        // Try live un-cached GitHub Contents API first
-        try {
-          const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
-          const ghRes = await fetch(`https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=${Date.now()}_${Math.random()}`, {
-            headers: {
-              'Authorization': `token ${token}`
-            }
-          });
-          if (ghRes.ok) {
-            const fileInfo = await ghRes.json();
-            if (fileInfo && fileInfo.content) {
-              const binary = atob(fileInfo.content.replace(/\s/g, ''));
-              const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
-              const decodedStr = new TextDecoder('utf-8').decode(bytes);
-              const ghData = JSON.parse(decodedStr);
-              if (ghData && (ghData.settings || ghData.portfolio)) {
-                siteData = ghData;
-                localStorage.setItem('aadya_cms_content', JSON.stringify(ghData));
-              }
-            }
-          }
-        } catch(e) {}
-
-        if (!siteData || !siteData.settings) {
-          const stored = localStorage.getItem('aadya_cms_content');
-          if (stored) {
-            try { siteData = JSON.parse(stored); } catch(e) {}
-          }
-        }
-        if (!siteData || !siteData.settings) {
-          try {
-            const fallbackRes = await fetch('site_content.json?v=' + Date.now());
-            siteData = await fallbackRes.json();
-          } catch(e) {
-            siteData = { settings: {}, portfolio: [], awards: [], documents: [], memberships: [], about: {}, media: [] };
-          }
-        }
+        await fetchFreshCMSData();
       }
 
       if (url === '/api/content' && method === 'GET') {
@@ -2833,12 +2874,13 @@
       document.getElementById('modalAwardId').value = '';
       document.getElementById('modalAwardTitle').value = '';
       document.getElementById('modalAwardCategory').value = 'Global STEM Finalist';
+      document.getElementById('modalAwardCategoryGroup').value = 'research';
       document.getElementById('modalAwardYear').value = '2026';
       document.getElementById('modalAwardImg').value = '';
       document.getElementById('modalAwardImgPreview').src = 'assets/logo.png';
       document.getElementById('modalAwardDesc').value = '';
-      document.getElementById('modalAwardLinkText').value = 'Learn More';
-      document.getElementById('modalAwardLinkUrl').value = '#';
+      document.getElementById('modalAwardLinkText').value = '';
+      document.getElementById('modalAwardLinkUrl').value = '';
       document.getElementById('awardEditModal').showModal();
     }
 
@@ -2849,6 +2891,7 @@
       document.getElementById('modalAwardId').value = a.id;
       document.getElementById('modalAwardTitle').value = a.title;
       document.getElementById('modalAwardCategory').value = a.category_pill;
+      document.getElementById('modalAwardCategoryGroup').value = a.category_group || 'research';
       document.getElementById('modalAwardYear').value = a.year;
       document.getElementById('modalAwardImg').value = a.image_url || '';
       const prev = document.getElementById('modalAwardImgPreview');
@@ -2858,8 +2901,8 @@
         prev.src = getResolvedImageSrc(a.image_url || 'assets/logo.png');
       }
       document.getElementById('modalAwardDesc').value = a.description || '';
-      document.getElementById('modalAwardLinkText').value = a.link_text || 'Learn More';
-      document.getElementById('modalAwardLinkUrl').value = a.link_url || '#';
+      document.getElementById('modalAwardLinkText').value = a.link_text || '';
+      document.getElementById('modalAwardLinkUrl').value = a.link_url || '';
       document.getElementById('awardEditModal').showModal();
     }
 
@@ -2877,11 +2920,13 @@
         id: a.id,
         title: a.title,
         category_pill: a.category_pill,
+        category_group: a.category_group,
         year: a.year,
         image_url: a.image_url,
         description: a.description,
-        link_text: a.link_text,
-        link_url: a.link_url
+        link_text: a.link_text || '',
+        link_url: a.link_url || '',
+        sort_order: a.sort_order
       });
       await syncToStorageAndPublish(`Image for ${a.title}`);
       loadAllData();
@@ -2892,6 +2937,7 @@
       const id = document.getElementById('modalAwardId').value;
       const title = document.getElementById('modalAwardTitle').value.trim();
       const category_pill = document.getElementById('modalAwardCategory').value.trim();
+      const category_group = document.getElementById('modalAwardCategoryGroup').value.trim();
       const year = document.getElementById('modalAwardYear').value.trim();
       const image_url = document.getElementById('modalAwardImg').value.trim();
       const description = document.getElementById('modalAwardDesc').value.trim();
@@ -2905,6 +2951,7 @@
         id: id ? parseInt(id) : Date.now(),
         title,
         category_pill,
+        category_group,
         year,
         image_url,
         description,
