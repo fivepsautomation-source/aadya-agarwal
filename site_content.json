@@ -206,14 +206,14 @@
       "id": 5,
       "title": "Biomedical & AI Scientific Research",
       "category_slug": "biomedical",
-      "category_name": "Biomedical & AI",
+      "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792859269041_2222_aadya.png",
       "images": [
         "assets/uploads/1792859269041_2222_aadya.png",
         "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
         "assets/uploads/1792919829384_University_Lecture_on_Fluorescent_Microscopy.png"
       ],
-      "desc": "Stanford AIMI clinical AI research, computational drug discovery with AutoDock Vina, Harvard-mentored molecular biology wet lab, and Cambridge cancer genomics research.",
+      "desc": "Research and Training Experience\n\n1. Molecular and Cellular Biology — Coursework and Wet-Lab Training\nCompleted a 24-week molecular and cellular biology program with Professor Sam Kunes of Harvard University, followed by three weeks of summer wet-lab training. Studied Alzheimer’s disease, molecular mechanisms, experimental design, controls, and laboratory methods.\n\n2. Computational Biology and Cancer Research — Independent Projects\n\nConducting computational research to investigate cancer biology and develop testable hypotheses:\n\nSingle-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\nCancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\nCervical cancer: Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\n3. Stanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
       "highlights": [
         "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
         "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
@@ -238,7 +238,8 @@
         "Research"
       ],
       "is_robotics": false,
-      "sort_order": 7
+      "sort_order": 7,
+      "badge_position": "right"
     },
     {
       "id": 8,
