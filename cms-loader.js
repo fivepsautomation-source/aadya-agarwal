@@ -353,37 +353,24 @@
 
       // 4A. Update awards on awards.html (Visual cards matching by ID or title and re-ordering in grid)
       const sectionConfigs = [
-        { selector: '#research-awards .awards-feature-grid', group: 'research' },
-        { selector: '#robotics-awards .awards-feature-grid', group: 'robotics' },
-        { selector: '#civic-awards .awards-feature-grid', group: 'civic' },
-        { selector: '#writing-awards > .container > .awards-feature-grid', group: 'writing' },
-        { selector: '#music-speaking-awards .awards-feature-grid', group: 'arts' }
+        { selector: '#research-awards .awards-feature-grid', group: 'research', ids: [1, 2, 3, 4] },
+        { selector: '#robotics-awards .awards-feature-grid', group: 'robotics', ids: [5, 6, 7] },
+        { selector: '#civic-awards .awards-feature-grid', group: 'civic', ids: [8, 9, 23] },
+        { selector: '#writing-awards > .container > .awards-feature-grid', group: 'writing', ids: [17, 10, 11, 12, 14, 15] },
+        { selector: '#music-speaking-awards .awards-feature-grid', group: 'arts', ids: [20, 22, 21] }
       ];
 
       sectionConfigs.forEach(conf => {
         const grid = document.querySelector(conf.selector);
         if (!grid) return;
 
+        // Strictly match awards that belong to this section
         const sectionAwards = sortedAwards.filter(aw => {
           const grp = (aw.category_group || '').toLowerCase();
-          const pill = (aw.category_pill || '').toLowerCase();
-          const title = (aw.title || '').toLowerCase();
-          if (conf.group === 'research') {
-            return grp === 'research' || pill.includes('water') || pill.includes('winner') || pill.includes('science') || title.includes('mit') || title.includes('water') || title.includes('noaa') || title.includes('mercer');
-          }
-          if (conf.group === 'robotics') {
-            return grp === 'robotics' || pill.includes('robot') || pill.includes('lego') || pill.includes('hackathon') || title.includes('wpi') || title.includes('robotics') || title.includes('fll') || title.includes('hackathon');
-          }
-          if (conf.group === 'civic') {
-            return grp === 'civic' || pill.includes('service') || pill.includes('state') || title.includes('legislative') || title.includes('service') || title.includes('nations') || title.includes('here');
-          }
           if (conf.group === 'writing') {
-            return grp === 'writing' || grp === 'humanities' || pill.includes('essay') || pill.includes('writing') || pill.includes('poetry') || pill.includes('author') || pill.includes('medal') || title.includes('locke') || title.includes('scholastic') || title.includes('techtrek') || title.includes('sink') || title.includes('patriot') || title.includes('harvard') || title.includes('imbrie');
+            return grp === 'writing' || grp === 'humanities' || conf.ids.includes(aw.id);
           }
-          if (conf.group === 'arts') {
-            return grp === 'arts' || pill.includes('piano') || pill.includes('flute') || pill.includes('recital') || pill.includes('speaking') || pill.includes('champion') || title.includes('music') || title.includes('flute') || title.includes('speaking');
-          }
-          return grp === conf.group;
+          return grp === conf.group || conf.ids.includes(aw.id);
         });
 
         if (sectionAwards.length === 0) return;
@@ -398,24 +385,10 @@
             if (!h3) return false;
             const t = h3.textContent.trim().toLowerCase();
             const awT = (aw.title || '').trim().toLowerCase();
-            return t === awT || t.includes(awT.slice(0, 15)) || awT.includes(t.slice(0, 15));
+            return t === awT || (t.length > 8 && awT.includes(t.slice(0, 15))) || (awT.length > 8 && t.includes(awT.slice(0, 15)));
           });
 
-          if (!card) {
-            card = document.createElement('article');
-            card.className = 'award-visual-card';
-            card.innerHTML = `
-              <a class="award-visual-image-link" href="${aw.link_url || '#'}" target="_blank" rel="noopener noreferrer" aria-label="View ${aw.title}">
-                <img src="${window.getResolvedImageSrc(aw.image_url)}" alt="${aw.title}" loading="lazy">
-              </a>
-              <div class="award-visual-content">
-                <span class="award-year-pill">${aw.category_pill || 'Award'}${aw.year ? ' · ' + aw.year : ''}</span>
-                <h3>${aw.title}</h3>
-                <p>${aw.description || ''}</p>
-                ${aw.link_text ? `<a class="award-text-link" href="${aw.link_url || '#'}" target="_blank" rel="noopener noreferrer">${aw.link_text} <span aria-hidden="true">&nearr;</span></a>` : ''}
-              </div>
-            `;
-          } else {
+          if (card) {
             const titleEl = card.querySelector('h3');
             if (titleEl && aw.title) titleEl.textContent = aw.title;
 
@@ -446,11 +419,10 @@
               linkEl.href = aw.link_url;
               linkEl.innerHTML = `${aw.link_text} <span aria-hidden="true">&nearr;</span>`;
             }
-          }
 
-          card.setAttribute('data-award-id', String(aw.id));
-          // Moving / appending card in sorted order!
-          grid.appendChild(card);
+            card.setAttribute('data-award-id', String(aw.id));
+            grid.appendChild(card);
+          }
         });
       });
 

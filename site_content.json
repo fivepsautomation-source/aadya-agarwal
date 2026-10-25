@@ -827,7 +827,8 @@
       "description": "Community leadership, civic engagement, and grassroots youth volunteer service.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 9
+      "sort_order": 9,
+      "category_group": "civic"
     },
     {
       "id": 17,

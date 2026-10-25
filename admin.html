@@ -2946,27 +2946,26 @@
     function matchesAwardFilter(a, cat) {
       if (!cat || cat === 'all') return true;
       const group = (a.category_group || '').toLowerCase();
-      const pill = (a.category_pill || '').toLowerCase();
-      const title = (a.title || '').toLowerCase();
+      const aid = Number(a.id);
       if (cat === 'research') {
-        return group === 'research' || pill.includes('water') || pill.includes('winner') || pill.includes('science') || title.includes('mit') || title.includes('water') || title.includes('noaa') || title.includes('mercer');
+        return group === 'research' || [1, 2, 3, 4].includes(aid);
       }
       if (cat === 'robotics') {
-        return group === 'robotics' || pill.includes('robot') || pill.includes('lego') || pill.includes('hackathon') || title.includes('wpi') || title.includes('robotics') || title.includes('fll') || title.includes('hackathon');
+        return group === 'robotics' || [5, 6, 7].includes(aid);
       }
       if (cat === 'civic') {
-        return group === 'civic' || pill.includes('civic') || pill.includes('service') || pill.includes('state') || title.includes('legislative') || title.includes('service') || title.includes('nations') || title.includes('here');
+        return group === 'civic' || [8, 9, 23].includes(aid);
       }
       if (cat === 'writing') {
-        return group === 'writing' || pill.includes('essay') || pill.includes('writing') || pill.includes('poetry') || pill.includes('author') || pill.includes('medal') || title.includes('locke') || title.includes('scholastic') || title.includes('techtrek') || title.includes('sink') || title.includes('patriot') || title.includes('harvard');
+        return group === 'writing' || group === 'humanities' || [17, 10, 11, 12, 14, 15].includes(aid);
       }
       if (cat === 'humanities') {
-        return group === 'humanities' || pill.includes('humanities') || pill.includes('school') || pill.includes('spotlight') || title.includes('imbrie') || title.includes('lawrentian') || title.includes('biochar');
+        return group === 'humanities' || [17].includes(aid);
       }
       if (cat === 'arts') {
-        return group === 'arts' || pill.includes('piano') || pill.includes('flute') || pill.includes('recital') || pill.includes('speaking') || pill.includes('champion') || title.includes('music') || title.includes('flute') || title.includes('speaking');
+        return group === 'arts' || [20, 22, 21].includes(aid);
       }
-      return false;
+      return group === cat;
     }
 
     async function moveAwardOrder(id, direction) {
