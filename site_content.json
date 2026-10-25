@@ -357,110 +357,6 @@
       "badges": [],
       "is_robotics": false,
       "sort_order": 10
-    },
-    {
-      "id": 14,
-      "title": "Writing & Arts",
-      "category_name": "Writing & Arts",
-      "category_slug": "writing",
-      "img": "assets/writing_arts/Aadya Flute Pic1.png",
-      "desc": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
-      "highlights": [
-        "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
-        "Bronze Medal, Technology & Innovation theme, Harvard International Review, Summer 2026",
-        "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
-        "2025 National History Day (NJ Regional): a 2,500-word paper on Lysenkoism and the suppression of scientific advancement in the Soviet Union",
-        "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville’s jazz band with NJMTA Honors recitals",
-        "Backstage technical theater, stage manager and production assistant"
-      ],
-      "tags": [
-        "#Flute",
-        "#ClassicalPiano",
-        "#JohnLocke",
-        "#Poetry",
-        "#CreativeWriting",
-        "#ScienceJournalism",
-        "#Theatre",
-        "#NJMTA",
-        "#MusicFest"
-      ],
-      "badges": [
-        "Flute",
-        "Piano",
-        "Writing & Arts"
-      ],
-      "attachments": [
-        {
-          "label": "John Locke 2026 High Commendation (PDF)",
-          "href": "assets/writing_arts/John Locke 2026 - High Commendation.pdf"
-        },
-        {
-          "label": "Scholastic Poetry Silver Key certificate (PDF)",
-          "href": "assets/writing_arts/Scholastic_Poetry_Silver_Key_Certificate.pdf"
-        },
-        {
-          "label": "Scholastic Writing recognition letter (PDF)",
-          "href": "assets/writing_arts/Scholastic_Writing_Recognition_Letter.pdf"
-        }
-      ],
-      "sections": [
-        {
-          "title": "Published writing",
-          "intro": "Essays and poetry recognized by the John Locke Institute and Scholastic Art & Writing Awards, with work published in The Telling Room, Skipping Stones and Poetic Power anthologies, plus science journalism for TechTrek USA."
-        },
-        {
-          "title": "Flute",
-          "intro": "Flutist in Lawrenceville's jazz band and recipient of NJMTA Honors recital recognition."
-        },
-        {
-          "title": "Piano",
-          "intro": "Music-Fest International Rising Talent Festival Grand Prize winner, with a solo recital at Greenfield Hall, Manhattan School of Music."
-        },
-        {
-          "title": "Theater",
-          "intro": "Backstage technical theater work as a stage manager and production assistant, alongside school and community performances."
-        }
-      ],
-      "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater.",
-      "images": [
-        "assets/writing_arts/Aadya Flute Pic1.png",
-        "assets/writing_arts/flute_performance.png",
-        "assets/music/Flute_pic_2.jpg",
-        "assets/music/Flute_pic_3.png",
-        "assets/certificates/NJMTA Flute Honors Recital.jpeg",
-        "assets/ref_images/projects_piano-manhattan-school.jpg",
-        "assets/writing_arts/Copy of piano award.png",
-        "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-        "assets/music/Piano_Pic_3.jpg",
-        "assets/music/image_1.jpeg",
-        "assets/music/image_5.jpeg",
-        "assets/music/image_8.jpeg",
-        "assets/music/image_9.jpeg",
-        "assets/music/image_10.jpeg",
-        "assets/ref_images/projects_john-locke_framed.jpg",
-        "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
-        "projects/writing/celebration-of-poets.png",
-        "projects/writing/anthology-fall-2024.jpeg",
-        "projects/writing/balance-skipping-stones.jpg",
-        "projects/writing/in-a-shift-of-heart.png",
-        "projects/writing/my-moms-frying-pan.png",
-        "projects/writing/when-kindness-is-planted.webp",
-        "projects/writing/pds-feature-2023.webp",
-        "assets/writing_arts/poem_celebration_of_small.png",
-        "assets/writing_arts/poem_frying_pan.png",
-        "assets/writing_arts/poem_shift_of_heart.png",
-        "techtrek/TechTrek Article 1.png",
-        "techtrek/TechTrek Article 2.png",
-        "assets/writing_arts/Theater - Much Ado About Nothing.png",
-        "assets/uploads/1792842400029_the-day-the-internet-died.jpg",
-        "assets/uploads/1792842362259_mit-day-ai-stage.jpg",
-        "assets/speaking/speech_award_ceremony.jpg",
-        "assets/speaking/speech_stage.jpg",
-        "assets/certificates/nsf_speech_award.png"
-      ],
-      "videos": [],
-      "is_robotics": false,
-      "sort_order": 9
     }
   ],
   "documents": [
@@ -677,7 +573,7 @@
       "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
       "link_text": "Acceptance Speech",
       "link_url": "https://www.youtube.com/watch?v=ELyxcPwMp3M",
-      "sort_order": 2
+      "sort_order": 0
     },
     {
       "id": 3,
@@ -689,7 +585,7 @@
       "description": "National Oceanic and Atmospheric Administration recognition.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 3
+      "sort_order": 2
     },
     {
       "id": 4,
@@ -701,7 +597,7 @@
       "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 4
+      "sort_order": 3
     },
     {
       "id": 5,
@@ -713,7 +609,7 @@
       "description": "Ranked #14 out of 108 international robotics teams; Lead Autonomous Programmer and Robot Design Award Finalist at Worcester Polytechnic Institute.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 5
+      "sort_order": 4
     },
     {
       "id": 6,
@@ -725,7 +621,7 @@
       "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 6
+      "sort_order": 5
     },
     {
       "id": 7,
@@ -737,7 +633,7 @@
       "description": "Recognized for Best Beginner Hack in rapid software prototyping at Princeton Day School Panther Hackathon.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 7
+      "sort_order": 6
     },
     {
       "id": 8,
@@ -749,7 +645,7 @@
       "description": "Official commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing youth for grassroots community hunger relief.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 8
+      "sort_order": 7
     },
     {
       "id": 9,
@@ -761,7 +657,7 @@
       "description": "United Nations STEP recognition for youth-led service, hunger relief supply mobilization, and community impact.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 9
+      "sort_order": 8
     },
     {
       "id": 20,
@@ -773,7 +669,7 @@
       "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 20
+      "sort_order": 15
     },
     {
       "id": 21,
@@ -785,7 +681,7 @@
       "description": "Selected as NJMTA Flute Honors Recital award winner; serving as 1st Chair Flutist in competitive school and regional wind ensembles.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 21
+      "sort_order": 16
     },
     {
       "id": 22,
@@ -797,7 +693,7 @@
       "description": "First Place National Champion in public speaking and oratorical debate, demonstrating communication and advocacy excellence.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 22
+      "sort_order": 17
     },
     {
       "id": 17,
@@ -809,7 +705,7 @@
       "description": "Selected from 150 ninth-grade students for demonstrated excellence in English study within the Humanities program at The Lawrenceville School.",
       "link_text": "View Award Photo",
       "link_url": "assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg",
-      "sort_order": 10
+      "sort_order": 9
     },
     {
       "id": 10,
@@ -821,7 +717,7 @@
       "description": "High Commendation in Science & Technology from over 19,000 international entries across 138 nations in the global essay competition.",
       "link_text": "View Certificate",
       "link_url": "assets/certificates/John Locke 2026 - High Commendation.pdf",
-      "sort_order": 11
+      "sort_order": 10
     },
     {
       "id": 11,
@@ -833,7 +729,7 @@
       "description": "Bronze Medal in the Harvard International Review Academic Writing Competition under the Technology & Innovation theme.",
       "link_text": "Explore Harvard Review",
       "link_url": "https://hir.harvard.edu/",
-      "sort_order": 12
+      "sort_order": 11
     },
     {
       "id": 12,
@@ -845,7 +741,7 @@
       "description": "Two Silver Keys in Poetry and four Honorable Mentions in Personal Essay & Memoir in the nation’s longest-running student recognition program.",
       "link_text": "View Certificate",
       "link_url": "assets/certificates/Scholastic_Poetry_Silver_Key_Certificate.pdf",
-      "sort_order": 13
+      "sort_order": 12
     },
     {
       "id": 14,
@@ -857,7 +753,7 @@
       "description": "Featured in youth anthologies including Poetic Power, The Telling Room, Skipping Stones, and When the Sink Speaks in The Rev (Top 10 of 150 entries).",
       "link_text": "Explore Publications",
       "link_url": "https://www.creativity-unleashed.org/TheRev.",
-      "sort_order": 14
+      "sort_order": 13
     },
     {
       "id": 15,
@@ -869,7 +765,7 @@
       "description": "Placed 2nd locally and 3rd at the district level in Patriot’s Pen, the nationwide youth essay contest held by the Veterans of Foreign Wars.",
       "link_text": "View Contest Details",
       "link_url": "https://www.vfw.org/community/youth-and-education/youth-competitions",
-      "sort_order": 15
+      "sort_order": 14
     }
   ],
   "about": {
