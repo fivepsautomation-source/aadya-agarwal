@@ -227,20 +227,7 @@
         "#MachineLearning",
         "#Bioinformatics"
       ],
-      "badges": [
-        {
-          "label": "Stanford AIMI",
-          "tone": "plum"
-        },
-        {
-          "label": "Harvard Fellow",
-          "tone": "berry"
-        },
-        {
-          "label": "AutoDock Vina",
-          "tone": "moss"
-        }
-      ],
+      "badges": [],
       "is_robotics": false,
       "sort_order": 5
     },
