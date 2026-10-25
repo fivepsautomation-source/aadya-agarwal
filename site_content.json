@@ -974,14 +974,14 @@
     "portrait_1": "about/portrait-1.jpg",
     "portrait_2": "assets/uploads/1792953180241_about_photo_1.jpg",
     "location_tag": "The Lawrenceville School · Class of 2029 · Lawrenceville, New Jersey",
-    "lead_bio": "Eco-engineer and equitable-health builder — working where responsible AI, hands-on engineering and community science meet, so that clean water and basic care reach the people the world usually forgets.",
+    "lead_bio": "Student Researcher and Technology builder — working where responsible AI, hands-on engineering and community science meet, so that clean water and basic care reach the people the world usually forgets.",
     "story_p1": "Aadya Agarwal is a Princeton, New Jersey student with roots in India. Her name comes from Sanskrit — it means “first” and “excellent,” and echoes the goddess Durga, a symbol of primordial energy and power. She grew up in a lively, multicultural home where unstructured conversation was the norm, and that upbringing shaped how she works: curious across disciplines, quick to include people, and grateful for the relationships that carry an idea forward.",
-    "story_p2": "Her favorite book is Charlie Mackesy’s The Boy, the Mole, the Fox and the Horse, which keeps her anchored to a simple goal — to live with gratitude and leave the world a little better than she found it. That outlook runs through everything from her water-remediation research to the poems she publishes.",
+    "story_p2": "Her favorite book is Charlie Mackesy’s The Boy, the Mole, the Fox and the Horse, which keeps her anchored to a simple goal — to live with gratitude and leave the world a little better than she found it. That outlook runs through everything from her water-remediation research to equitable healthcare to the poems she writes.",
     "story_p3": "Away from the lab and the page, Aadya is an enthusiastic adventurer and cook. She has gone parasailing, horseback riding and skiing, spent time on farms, and once — at age ten — made a 20-foot cliff jump into the crystal-clear water of a Mexican cenote. In the kitchen she likes to experiment, including an avocado buttercream she is quietly proud of.",
     "glance_intro": "A student drawn to questions that cross disciplines — engineering and environmental research alongside writing, public speaking, music and community service.",
     "at_a_glance": {
       "education": [
-        "The Lawrenceville School, Class of 2029; coursework in honors mathematics, environmental science, biology and technology design.",
+        "The Lawrenceville School, Class of 2029; coursework in honors mathematics, environmental science, biology and tech design & fabrication.",
         "Princeton Day School mathematics and Science Olympiad teams; AoPS coursework in algebra, geometry, competition math and Python.",
         "Selected for Lawrenceville Rising Scholars and a 24-week bio-research program studying cancer biology and cell processes."
       ],
@@ -991,18 +991,18 @@
         "Hands-on work with water-quality measurements, biochar trials, sensor architecture and responsible-AI design."
       ],
       "leadership": [
-        "Elected Lawrenceville House Academic Advisor for the freshman class and serves as a campus tour guide.",
+        "Elected Lawrenceville House Academic Rep for the freshman class, leadership in Big Data AI Club, Sustainability Council, and Associate for TechTrek STEM publication for school chapter",
         "At Princeton Day School, served as an ambassador, wrote and edited for The Spokes, and mentored new Science Olympiad students.",
-        "Through LCAP and STEP For A Better World LEO Club, supports sustainability education, health awareness and service drives."
+        "Through LCAP, AWD and STEP For A Better World LEO Club, supports sustainability education, health awareness, hunger meals packaging, donation drives, ProjectEducate, Senior Citizen centers."
       ],
       "writing": [
         "Published fiction and poetry in The Telling Room, Skipping Stones and Poetic Power anthologies.",
-        "Earned a Scholastic regional Honorable Mention and placed in Patriot’s Pen and an AoPS short-story contest.",
+        "Earned Scholastic regional Silver Key and Honorable Mention awards and placed in VFW Patriot’s Pen and an AoPS short-story contest.",
         "Advanced to the semifinal round of Lawrenceville’s school public-speaking contest."
       ],
       "arts": [
         "Flutist in Lawrenceville’s jazz band; previously first chair and soloist in a middle-school advanced band.",
-        "Earned a piano Grand Prize at the Music-Fest International Rising Talent Festival and NJMTA Honors ratings.",
+        "Earned a piano Grand Prize at the Music-Fest International Rising Talent Festival and NJMTA Honors ratings and flute recitals.",
         "Acts and stage-manages school productions, including Beauty and the Beast Jr. and Lawrenceville Shakespeare theater."
       ],
       "athletics": [
@@ -1022,7 +1022,7 @@
       },
       {
         "title": "Build for the people usually left out.",
-        "desc": "Whether it is a one-minute vitals check at a farmers market or a low-cost water filter, the goal is to make care and opportunity more within reach."
+        "desc": "Whether it is a one-minute vitals check at a farmers market or a low-cost water filter or decoding the language of hidden diseases, the goal is to make care and opportunity more within reach."
       }
     ],
     "invite_headline": "Invite Aadya to speak or collaborate",
