@@ -31,11 +31,11 @@
       ],
       "desc": "From lead coder of an FLL team invited to the WPI US Open to the Lawrenceville FIRST Tech Challenge programming team — building autonomous control and computer-vision pipelines, and teaching robotics to middle schoolers.",
       "highlights": [
-        "Lead coder of an FLL team invited to the WPI US Open",
+        "Lead coder of an FLL team invited to the WPI US Open World Championship",
         "Member of Lawrenceville FIRST Tech Challenge (FTC) programming team",
+        "For the 2026-2027 FTC theme of BioBuzz, developing and refining autonomous and driver-assisted motion control with Pedro Pathing and building Limelight computer vision pipelines for AprilTag field localization and real-time intake monitoring.",
         "Engineered autonomous navigation routines and computer-vision pipelines with OpenCV and Java",
-        "Designed custom robot attachments, motor gear ratios, and sensory feedback loops",
-        "Mentored and coached younger middle school students in robotics construction and algorithm design"
+        "As part of FTC community outreach, teaching robotics to 10–15 students at a local middle school in robot design, algorithmic thinking, and the basics of coding in Python."
       ],
       "tags": [
         "#FIRSTRobotics",
@@ -50,7 +50,8 @@
         "FLL"
       ],
       "is_robotics": true,
-      "sort_order": 0
+      "sort_order": 0,
+      "badge_position": "right"
     },
     {
       "id": 3,
