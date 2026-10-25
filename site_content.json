@@ -18,29 +18,8 @@
       "id": 101,
       "title": "FIRST Robotics — FLL & FTC",
       "category_slug": "robotics",
-      "category_name": "Lead Coder & Programming Team · 2020–Present",
+      "category_name": "Robotics & Coding",
       "img": "assets/robotics/pic 2 - Team award.JPG",
-      "desc": "From lead coder of an FLL team invited to the WPI US Open to the Lawrenceville FIRST Tech Challenge programming team — building autonomous control and computer-vision pipelines, and teaching robotics to middle schoolers.",
-      "highlights": [
-        "Lead coder of an FLL team invited to the prestigious WPI US Open championship",
-        "Active member of the Lawrenceville School FIRST Tech Challenge (FTC) programming team",
-        "Engineered autonomous driving trajectories and sensory navigation using Java and OpenCV computer-vision pipelines",
-        "Designed custom gear-reduction attachments, 3D printed sensor brackets, and closed-loop motor encoders",
-        "Mentored and coached younger middle school students in robotics principles, code architecture, and algorithm design"
-      ],
-      "tags": [
-        "#Robotics",
-        "#FTC",
-        "#FLL",
-        "#OpenCV",
-        "#Java",
-        "#AutonomousControl"
-      ],
-      "badges": [
-        "FTC",
-        "FLL"
-      ],
-      "sort_order": 0,
       "images": [
         "assets/robotics/pic 2 - Team award.JPG",
         "assets/robotics/pic 10 - wpi award.jpg",
@@ -49,15 +28,51 @@
         "assets/robotics/pic 6 - Team Award.JPG",
         "assets/robotics/pic 3 - mt olive.JPG",
         "assets/robotics/pic 8 - On the board.jpg"
-      ]
+      ],
+      "desc": "From lead coder of an FLL team invited to the WPI US Open to the Lawrenceville FIRST Tech Challenge programming team — building autonomous control and computer-vision pipelines, and teaching robotics to middle schoolers.",
+      "highlights": [
+        "Lead coder of an FLL team invited to the WPI US Open",
+        "Member of Lawrenceville FIRST Tech Challenge (FTC) programming team",
+        "Engineered autonomous navigation routines and computer-vision pipelines with OpenCV and Java",
+        "Designed custom robot attachments, motor gear ratios, and sensory feedback loops",
+        "Mentored and coached younger middle school students in robotics construction and algorithm design"
+      ],
+      "tags": [
+        "#FIRSTRobotics",
+        "#FTC",
+        "#FLL",
+        "#Robotics",
+        "#Java",
+        "#AutonomousControl"
+      ],
+      "badges": [
+        "FTC",
+        "FLL"
+      ],
+      "is_robotics": true,
+      "sort_order": 0
     },
     {
       "id": 3,
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
-      "category_name": "MIT Day of AI · July 2026",
-      "img": "projects/mit-day-ai-stage.jpg",
-      "desc": "One of five national MIT Solve AI for a Better World winners, I presented an AI-powered water-quality node at the MIT Media Lab.",
+      "category_name": "Environmental Sustainability & AI",
+      "article_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
+      "img": "assets/uploads/1792856574507_pic1.jpeg",
+      "images": [
+        "assets/uploads/1792856574507_pic1.jpeg",
+        "projects/mit-day-ai-stage.jpg",
+        "assets/uploads/1792790364403_Environment_and_Water_Research_Awards.jpg",
+        "assets/uploads/1792790366841_Environmental_Science_Research_-_Mercer_Science___Engineering_Fair.jpg",
+        "assets/uploads/1792790369208_Receiving_Stockholm_Water_Prize_Award.jpg",
+        "assets/uploads/1792857533843_pic2.jpeg",
+        "assets/uploads/1792857535970_pic4.jpeg",
+        "assets/uploads/1792857538171_pic3.jpeg",
+        "assets/uploads/1792857540341_pic_2.jpeg",
+        "assets/uploads/1792857542458_MIT_and_judge__1_.jpeg",
+        "assets/uploads/1792857545077_IMG-20260719-WA0017.jpg"
+      ],
+      "desc": "One of five national MIT Solve AI for a Better World winners, presented an AI-powered water-quality node at the MIT Media Lab.",
       "highlights": [
         "One of 5 national MIT Solve AI for a Better World winners",
         "Presented the water-remediation IoT node on stage at the MIT Media Lab",
@@ -75,29 +90,29 @@
       ],
       "badges": [
         "MIT Solve",
-        "MIT Media Lab"
+        "MIT Media lab"
       ],
-      "sort_order": 1,
-      "images": [
-        "assets/uploads/1792856574507_pic1.jpeg",
-        "projects/mit-day-ai-stage.jpg",
-        "assets/uploads/1792790364403_Environment_and_Water_Research_Awards.jpg",
-        "assets/uploads/1792790366841_Environmental_Science_Research_-_Mercer_Science___Engineering_Fair.jpg",
-        "assets/uploads/1792790369208_Receiving_Stockholm_Water_Prize_Award.jpg",
-        "assets/uploads/1792857533843_pic2.jpeg",
-        "assets/uploads/1792857535970_pic4.jpeg",
-        "assets/uploads/1792857538171_pic3.jpeg",
-        "assets/uploads/1792857540341_pic_2.jpeg",
-        "assets/uploads/1792857542458_MIT_and_judge__1_.jpeg",
-        "assets/uploads/1792857545077_IMG-20260719-WA0017.jpg"
-      ]
+      "is_robotics": false,
+      "sort_order": 1
     },
     {
       "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
-      "category_name": "Peer-Reviewed Presentation · 2026",
-      "img": "projects/ieee-engineering-conversation.jpg",
+      "category_name": "Environmental Sustainability & AI",
+      "img": "assets/uploads/1792856840122_ieee-attendance.jpg",
+      "images": [
+        "assets/uploads/1792856840122_ieee-attendance.jpg",
+        "projects/ieee-engineering-conversation.jpg",
+        "assets/uploads/1792791286959_ieee_pic3.jpeg",
+        "assets/uploads/1792791289363_ieee_pic4.jpeg",
+        "assets/uploads/1792791291134_ieee_pic7.jpeg",
+        "assets/uploads/1792791293026_ieee_pic16.jpeg",
+        "assets/uploads/1792791694429_WhatsApp_Image_2026-10-24_at_3.09.20_AM3.jpeg",
+        "assets/uploads/1792791696898_WhatsApp_Image_2026-10-24_at_3.09.20_AM2.jpeg",
+        "assets/uploads/1792791698982_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1.jpeg",
+        "assets/uploads/1792791701120_WhatsApp_Image_2026-10-24_at_3.09.20_AM.jpeg"
+      ],
       "desc": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University.",
       "highlights": [
         "Approved research abstract presented at IEEE/ISEC K–12 conference at Princeton University",
@@ -113,29 +128,20 @@
         "#BiocharResearch"
       ],
       "badges": [
-        "IEEE/ISEC",
-        "Princeton"
+        "IEEE /ISEC"
       ],
-      "sort_order": 2,
-      "images": [
-        "assets/uploads/1792856840122_ieee-attendance.jpg",
-        "projects/ieee-engineering-conversation.jpg",
-        "assets/uploads/1792791286959_ieee_pic3.jpeg",
-        "assets/uploads/1792791289363_ieee_pic4.jpeg",
-        "assets/uploads/1792791291134_ieee_pic7.jpeg",
-        "assets/uploads/1792791293026_ieee_pic16.jpeg",
-        "assets/uploads/1792791694429_WhatsApp_Image_2026-10-24_at_3.09.20_AM3.jpeg",
-        "assets/uploads/1792791696898_WhatsApp_Image_2026-10-24_at_3.09.20_AM2.jpeg",
-        "assets/uploads/1792791698982_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1.jpeg",
-        "assets/uploads/1792791701120_WhatsApp_Image_2026-10-24_at_3.09.20_AM.jpeg"
-      ]
+      "is_robotics": false,
+      "sort_order": 3
     },
     {
       "id": 2,
       "title": "Biochar Water Treatment",
       "category_slug": "environmental",
-      "category_name": "Experimental research · 2026",
+      "category_name": "Environmental Sustainability & AI",
       "img": "projects/water-treatment-setup.jpg",
+      "images": [
+        "projects/water-treatment-setup.jpg"
+      ],
       "desc": "Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.",
       "highlights": [
         "Compared softwood and agricultural-waste biochar samples in controlled water-treatment trials",
@@ -154,20 +160,21 @@
         "#MSEF"
       ],
       "badges": [
-        "STOCKHOLM Water Prize",
-        "NJWEA"
+        "STOCKHOLM Water Prize"
       ],
-      "sort_order": 3,
-      "images": [
-        "projects/water-treatment-setup.jpg"
-      ]
+      "is_robotics": false,
+      "sort_order": 2
     },
     {
       "id": 1,
       "title": "Autonomous Ocean pH Buoy",
       "category_slug": "environmental",
       "category_name": "Climate technology · 2025 concept",
-      "img": "projects/ocean-project-presentation.jpg",
+      "img": "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
+      "images": [
+        "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
+        "projects/ocean-project-presentation.jpg"
+      ],
       "desc": "A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.",
       "highlights": [
         "pH sensor feeds real-time water quality readings to an Arduino microcontroller",
@@ -183,22 +190,22 @@
         "#3MYoungScientist",
         "#pHBuoy"
       ],
-      "badges": [
-        "Climate Tech",
-        "3M Challenge"
-      ],
-      "sort_order": 4,
-      "images": [
-        "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
-        "projects/ocean-project-presentation.jpg"
-      ]
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 4
     },
     {
       "id": 5,
       "title": "Biomedical & AI Scientific Research",
       "category_slug": "biomedical",
       "category_name": "Biomedical & AI",
-      "img": "assets/certificates/BioResearch Academy Certificate.jpeg",
+      "img": "assets/uploads/1792859269041_2222_aadya.png",
+      "images": [
+        "assets/uploads/1792859269041_2222_aadya.png",
+        "assets/uploads/1792841966663_Presenting_Research_2.png",
+        "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
+        "assets/uploads/1792842147195_Presenting_Research1.png"
+      ],
       "desc": "Stanford AIMI clinical AI research, computational drug discovery with AutoDock Vina, Harvard-mentored molecular biology wet lab, and Cambridge cancer genomics research.",
       "highlights": [
         "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
@@ -220,29 +227,30 @@
         "#MachineLearning",
         "#Bioinformatics"
       ],
-      "badges": [
-        "Stanford AIMI",
-        "Harvard Fellow"
-      ],
-      "sort_order": 5,
-      "images": [
-        "assets/uploads/1792859269041_2222_aadya.png",
-        "assets/uploads/1792841966663_Presenting_Research_2.png",
-        "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
-        "assets/uploads/1792842147195_Presenting_Research1.png"
-      ]
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 5
     },
     {
       "id": 8,
       "title": "MoniVitals: Equitable Vitals Monitor & App",
       "category_slug": "monivitals",
-      "category_name": "Health Technology",
+      "category_name": "MoniVitals",
       "img": "assets/ref_images/projects_monivitals-market.webp",
-      "desc": "I brought MoniVitals to our local farmers market and senior outreach events, offering neighbors a free check of their critical vitals in under a minute.",
+      "images": [
+        "assets/ref_images/projects_monivitals-market.webp",
+        "assets/monivitals/20260829_100521.jpg",
+        "assets/monivitals/20260829_084022.jpg",
+        "assets/monivitals/20260829_100443.jpg",
+        "assets/monivitals/20260829_084028.jpg",
+        "assets/monivitals/20260829_100506_1_.jpg",
+        "assets/monivitals/20260829_094941_1_.jpg"
+      ],
+      "desc": "Hosted a community health booth at the local farmers’ market, offering free vitals checks, raising awareness of preventive care and regular health monitoring, and gathering user feedback to refine my MoniVitals app.",
       "highlights": [
         "Phone-connected, non-invasive vital screening platform developed for accessible and equitable community health",
         "Measures six vital markers in under a minute, including blood oxygen (SpO2), pulse rate, body temperature, and estimated blood pressure",
-        "Private real-time readings transmitted securely to each visitor's smartphone",
+        "Private real-time readings transmitted securely to each visitor&#x27;s smartphone",
         "Python data telemetry backend integrated with edge ESP32 microcontroller, MAX30102 PPG sensor, and MLX90614 infrared optical thermopile",
         "Conducted over 100 free vital screenings across local New Jersey farmers markets, community centers, and senior living facilities"
       ],
@@ -254,207 +262,16 @@
         "#CommunityHealth",
         "#Telehealth"
       ],
-      "badges": [
-        "HealthTech",
-        "ESP32"
-      ],
-      "sort_order": 6,
-      "images": [
-        "assets/ref_images/projects_monivitals-market.webp",
-        "assets/monivitals/20260829_100521.jpg",
-        "assets/monivitals/20260829_084022.jpg",
-        "assets/monivitals/20260829_100443.jpg",
-        "assets/monivitals/20260829_084028.jpg",
-        "assets/monivitals/20260829_100506_1_.jpg",
-        "assets/monivitals/20260829_094941_1_.jpg"
-      ]
-    },
-    {
-      "id": 9,
-      "title": "Community Field Screening & Senior Care Deployment",
-      "category_slug": "monivitals",
-      "category_name": "Health Technology",
-      "img": "assets/monivitals/20260829_100521.jpg",
-      "desc": "Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.",
-      "highlights": [
-        "Conducted direct user experience testing with seniors aged 65-90",
-        "Optimized font sizing, contrast, and voice-assisted telemetry readings for accessibility",
-        "Logged zero hardware failures over 8 consecutive hours of outdoor community testing",
-        "Gathered physician and nurse practitioner feedback on triage alert thresholds"
-      ],
-      "tags": [
-        "#CommunityHealth",
-        "#FieldTesting",
-        "#ElderCare",
-        "#PublicHealth"
-      ],
-      "badges": [
-        "Field Testing",
-        "Senior Care"
-      ],
-      "sort_order": 7,
-      "images": [
-        "assets/monivitals/20260829_100521.jpg"
-      ]
-    },
-    {
-      "id": 10,
-      "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
-      "category_slug": "monivitals",
-      "category_name": "Health Technology",
-      "img": "assets/monivitals/20260829_084022.jpg",
-      "desc": "Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.",
-      "highlights": [
-        "CAD modeling in Fusion 360 with ergonomic fingertip alignment and light baffling",
-        "I2C bus multiplexing running on ESP32 with power-saving sleep modes",
-        "Secure Bluetooth Low Energy GATT profile broadcasting encrypted telemetry",
-        "Fabricated multi-revision PCB prototype for robust handheld portability"
-      ],
-      "tags": [
-        "#EmbeddedSystems",
-        "#ESP32",
-        "#HardwareCAD",
-        "#PCB",
-        "#IoT"
-      ],
-      "badges": [
-        "Hardware CAD",
-        "ESP32"
-      ],
-      "sort_order": 8,
-      "images": [
-        "assets/monivitals/20260829_084022.jpg"
-      ]
-    },
-    {
-      "id": 14,
-      "title": "Writing & Arts",
-      "category_slug": "writing",
-      "category_name": "Writing & Arts",
-      "img": "assets/writing_arts/Aadya Flute Pic1.png",
-      "desc": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
-      "highlights": [
-        "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
-        "Bronze Medal, Technology & Innovation theme, Harvard International Review, Summer 2026",
-        "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
-        "2025 National History Day (NJ Regional): a 2,500-word paper on Lysenkoism and the suppression of scientific advancement in the Soviet Union",
-        "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville’s jazz band with NJMTA Honors recitals",
-        "Backstage technical theater, stage manager and production assistant"
-      ],
-      "tags": [
-        "#Flute",
-        "#ClassicalPiano",
-        "#JohnLocke",
-        "#Poetry",
-        "#CreativeWriting",
-        "#ScienceJournalism",
-        "#Theatre",
-        "#NJMTA",
-        "#MusicFest"
-      ],
-      "badges": [
-        "Flute",
-        "Piano",
-        "Writing & Arts"
-      ],
-      "sort_order": 9,
-      "images": [
-        "assets/writing_arts/Aadya Flute Pic1.png",
-        "assets/writing_arts/flute_performance.png",
-        "assets/music/Flute_pic_2.jpg",
-        "assets/music/Flute_pic_3.png",
-        "assets/certificates/NJMTA Flute Honors Recital.jpeg",
-        "assets/ref_images/projects_piano-manhattan-school.jpg",
-        "assets/writing_arts/Copy of piano award.png",
-        "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-        "assets/music/Piano_Pic_3.jpg",
-        "assets/music/image_1.jpeg",
-        "assets/music/image_5.jpeg",
-        "assets/music/image_8.jpeg",
-        "assets/music/image_9.jpeg",
-        "assets/music/image_10.jpeg",
-        "assets/ref_images/projects_john-locke_framed.jpg",
-        "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
-        "projects/writing/celebration-of-poets.png",
-        "projects/writing/anthology-fall-2024.jpeg",
-        "projects/writing/balance-skipping-stones.jpg",
-        "projects/writing/in-a-shift-of-heart.png",
-        "projects/writing/my-moms-frying-pan.png",
-        "projects/writing/when-kindness-is-planted.webp",
-        "projects/writing/pds-feature-2023.webp",
-        "assets/writing_arts/poem_celebration_of_small.png",
-        "assets/writing_arts/poem_frying_pan.png",
-        "assets/writing_arts/poem_shift_of_heart.png",
-        "techtrek/TechTrek Article 1.png",
-        "techtrek/TechTrek Article 2.png",
-        "assets/writing_arts/Theater - Much Ado About Nothing.png",
-        "assets/uploads/1792842400029_the-day-the-internet-died.jpg",
-        "assets/uploads/1792842362259_mit-day-ai-stage.jpg",
-        "assets/speaking/speech_award_ceremony.jpg",
-        "assets/speaking/speech_stage.jpg",
-        "assets/certificates/nsf_speech_award.png"
-      ],
-      "attachments": [
-        {
-          "label": "John Locke 2026 High Commendation (PDF)",
-          "href": "assets/writing_arts/John Locke 2026 - High Commendation.pdf"
-        },
-        {
-          "label": "Scholastic Poetry Silver Key certificate (PDF)",
-          "href": "assets/writing_arts/Scholastic_Poetry_Silver_Key_Certificate.pdf"
-        },
-        {
-          "label": "Scholastic Writing recognition letter (PDF)",
-          "href": "assets/writing_arts/Scholastic_Writing_Recognition_Letter.pdf"
-        }
-      ],
-      "sections": [
-        {
-          "title": "Published writing",
-          "intro": "Essays and poetry recognized by the John Locke Institute and Scholastic Art & Writing Awards, with work published in The Telling Room, Skipping Stones and Poetic Power anthologies, plus science journalism for TechTrek USA."
-        },
-        {
-          "title": "Flute",
-          "intro": "Flutist in Lawrenceville's jazz band and recipient of NJMTA Honors recital recognition."
-        },
-        {
-          "title": "Piano",
-          "intro": "Music-Fest International Rising Talent Festival Grand Prize winner, with a solo recital at Greenfield Hall, Manhattan School of Music."
-        },
-        {
-          "title": "Theater",
-          "intro": "Backstage technical theater work as a stage manager and production assistant, alongside school and community performances."
-        }
-      ],
-      "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater."
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 7
     },
     {
       "id": 11,
-      "title": "School & Community",
+      "title": "Mercer County Hunger Relief & Meal Packaging Drives",
       "category_slug": "community",
       "category_name": "School & Community",
-      "img": "assets/music/Playing_Flute_for_Seniors_at_the_Senior_Living_Center2.jpeg",
-      "desc": "Leadership, service and public speaking.",
-      "highlights": [
-        "Lawrenceville House Academic Advisor and campus tour guide",
-        "LCAP and STEP For A Better World LEO Club service",
-        "Toastmasters Outstanding Communicator and North South Foundation public-speaking recognition",
-        "Organized Mercer County food drives and meal-packaging service for local families",
-        "Led winter supply drives recognized by the New Jersey State Assembly and Senate",
-        "Performed flute for senior-living residents and supported intergenerational music programs"
-      ],
-      "tags": [
-        "#SchoolLeadership",
-        "#CommunityService",
-        "#PublicSpeaking",
-        "#Flute",
-        "#YouthVolunteering"
-      ],
-      "badges": [
-        "School Leadership",
-        "Community Service"
-      ],
-      "sort_order": 10,
+      "img": "assets/uploads/1792858843608_222_aadya.png",
       "images": [
         "assets/uploads/1792858843608_222_aadya.png",
         "assets/uploads/1792841840025_flute-seniors.jpeg",
@@ -496,7 +313,50 @@
         "assets/uploads/1792790869730_Serving_at_Senior_Citizen_Center.jpeg",
         "assets/uploads/1792790871447_Sock_Drive_-_NJ_Assembly_Woman_House.png",
         "assets/uploads/1792858241280_aadya_here_22.jpeg"
-      ]
+      ],
+      "desc": "Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.",
+      "highlights": [
+        "Mobilized 150+ youth and student volunteers for regional meal packaging",
+        "Coordinated logistics with Mercer County food banks and community shelters",
+        "Organized annual holiday candy and non-perishable drives for local children",
+        "Direct community leadership recognized by local and state representatives"
+      ],
+      "tags": [
+        "#HungerRelief",
+        "#CivicLeadership",
+        "#YouthVolunteering",
+        "#Community"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 9
+    },
+    {
+      "id": 13,
+      "title": "New Jersey Legislative Commendation & Civic Supply Drives",
+      "category_slug": "community",
+      "category_name": "School & Community",
+      "img": "assets/uploads/1792840583839_pic_6_-_Sock_Drive_-_AssemblyWoman-NJ_State_Senate_House_-_photo2.jpg",
+      "images": [
+        "assets/uploads/1792840583839_pic_6_-_Sock_Drive_-_AssemblyWoman-NJ_State_Senate_House_-_photo2.jpg",
+        "assets/community/Sock Drive - NJ Assembly Woman House.png"
+      ],
+      "desc": "Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.",
+      "highlights": [
+        "Collected and distributed over 1,200 pairs of thermal socks and winter essentials",
+        "Coordinated drop-off hubs at local schools, libraries, and community centers",
+        "Formal legislative resolution presented by NJ State Assemblywoman",
+        "Demonstrated sustainable youth civic engagement model"
+      ],
+      "tags": [
+        "#CivicImpact",
+        "#NJLegislature",
+        "#MutualAid",
+        "#CommunityAction"
+      ],
+      "badges": [],
+      "is_robotics": false,
+      "sort_order": 10
     }
   ],
   "documents": [
@@ -692,6 +552,18 @@
   ],
   "awards": [
     {
+      "id": 1,
+      "title": "MIT Solve — AI for a Better World Youth Innovation Challenge",
+      "category_pill": "National Winner · 2026",
+      "category_group": "research",
+      "year": "2026",
+      "image_url": "assets/uploads/1792835583518_pic1.jpeg",
+      "description": "One of five national winners; presented the water-quality project at the MIT Media Lab.",
+      "link_text": "Read Feature",
+      "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
+      "sort_order": 0
+    },
+    {
       "id": 2,
       "title": "U.S. Stockholm Junior Water Prize",
       "category_pill": "Regional Award · 2026",
@@ -701,7 +573,7 @@
       "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
       "link_text": "Acceptance Speech",
       "link_url": "https://www.youtube.com/watch?v=ELyxcPwMp3M",
-      "sort_order": 0
+      "sort_order": 1
     },
     {
       "id": 3,
@@ -713,7 +585,7 @@
       "description": "National Oceanic and Atmospheric Administration recognition.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 1
+      "sort_order": 2
     },
     {
       "id": 4,
@@ -725,18 +597,6 @@
       "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 2
-    },
-    {
-      "id": 1,
-      "title": "MIT Solve — AI for a Better World Youth Innovation Challenge",
-      "category_pill": "National Winner · 2026",
-      "category_group": "research",
-      "year": "2026",
-      "image_url": "assets/uploads/1792835583518_pic1.jpeg",
-      "description": "One of five national winners; presented the water-quality project at the MIT Media Lab.",
-      "link_text": "Read Feature",
-      "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
       "sort_order": 3
     },
     {
@@ -798,6 +658,42 @@
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 8
+    },
+    {
+      "id": 20,
+      "title": "Music-Fest International Rising Talent Grand Prize",
+      "category_pill": "Grand Prize Winner · 2026",
+      "category_group": "arts",
+      "year": "2026",
+      "image_url": "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
+      "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 15
+    },
+    {
+      "id": 21,
+      "title": "NJMTA Flute Honors Recital Award",
+      "category_pill": "Honors Recital Winner",
+      "category_group": "arts",
+      "year": "2024",
+      "image_url": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
+      "description": "Selected as NJMTA Flute Honors Recital award winner; serving as 1st Chair Flutist in competitive school and regional wind ensembles.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 16
+    },
+    {
+      "id": 22,
+      "title": "North South Foundation National Public Speaking 1st Place",
+      "category_pill": "National Champion",
+      "category_group": "arts",
+      "year": "2024",
+      "image_url": "assets/certificates/Award Certificate - NSF PS1 contest .jpg",
+      "description": "First Place National Champion in public speaking and oratorical debate, demonstrating communication and advocacy excellence.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 17
     },
     {
       "id": 17,
@@ -870,42 +766,6 @@
       "link_text": "View Contest Details",
       "link_url": "https://www.vfw.org/community/youth-and-education/youth-competitions",
       "sort_order": 14
-    },
-    {
-      "id": 20,
-      "title": "Music-Fest International Rising Talent Grand Prize",
-      "category_pill": "Grand Prize Winner · 2026",
-      "category_group": "arts",
-      "year": "2026",
-      "image_url": "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-      "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 15
-    },
-    {
-      "id": 21,
-      "title": "NJMTA Flute Honors Recital Award",
-      "category_pill": "Honors Recital Winner",
-      "category_group": "arts",
-      "year": "2024",
-      "image_url": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
-      "description": "Selected as NJMTA Flute Honors Recital award winner; serving as 1st Chair Flutist in competitive school and regional wind ensembles.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 16
-    },
-    {
-      "id": 22,
-      "title": "North South Foundation National Public Speaking 1st Place",
-      "category_pill": "National Champion",
-      "category_group": "arts",
-      "year": "2024",
-      "image_url": "assets/certificates/Award Certificate - NSF PS1 contest .jpg",
-      "description": "First Place National Champion in public speaking and oratorical debate, demonstrating communication and advocacy excellence.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 17
     }
   ],
   "about": {
