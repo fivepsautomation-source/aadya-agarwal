@@ -367,35 +367,6 @@
       "sort_order": 8
     },
     {
-      "id": 10,
-      "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
-      "category_slug": "monivitals",
-      "category_name": "Health Technology",
-      "img": "assets/monivitals/20260829_084022.jpg",
-      "desc": "Engineered custom 3D printed housing, integrating MAX30102 optical sensor, MLX90614 infrared thermopile, OLED display, and rechargeable lithium-polymer power circuit.",
-      "highlights": [
-        "CAD modeling in Fusion 360 with ergonomic fingertip alignment and light baffling",
-        "I2C bus multiplexing running on ESP32 with power-saving sleep modes",
-        "Secure Bluetooth Low Energy GATT profile broadcasting encrypted telemetry",
-        "Fabricated multi-revision PCB prototype for robust handheld portability"
-      ],
-      "tags": [
-        "#EmbeddedSystems",
-        "#ESP32",
-        "#HardwareCAD",
-        "#PCB",
-        "#IoT"
-      ],
-      "badges": [
-        "Hardware CAD",
-        "ESP32"
-      ],
-      "sort_order": 9,
-      "images": [
-        "assets/monivitals/20260829_084022.jpg"
-      ]
-    },
-    {
       "id": 14,
       "title": "Writing & Arts",
       "category_slug": "writing",
@@ -425,7 +396,7 @@
         "Flute",
         "Piano"
       ],
-      "sort_order": 10,
+      "sort_order": 9,
       "images": [
         "assets/writing_arts/Aadya Flute Pic1.png",
         "assets/writing_arts/flute_performance.png",
