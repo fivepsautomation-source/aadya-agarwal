@@ -6,10 +6,10 @@
 (function() {
   const PROJECTS_DATA = [
   {
-    "title": "FIRST Robotics — FLL & FTC",
+    "title": "FIRST Robotics \u2014 FLL & FTC",
     "group": "Robotics",
-    "category": "Lead Coder & Programming Team · 2020–Present",
-    "summary": "From lead coder of an FLL team invited to the WPI US Open to the Lawrenceville FIRST Tech Challenge programming team — building autonomous control and computer-vision pipelines, and teaching robotics to middle schoolers.",
+    "category": "Lead Coder & Programming Team \u00b7 2020\u2013Present",
+    "summary": "From lead coder of an FLL team invited to the WPI US Open to the Lawrenceville FIRST Tech Challenge programming team \u2014 building autonomous control and computer-vision pipelines, and teaching robotics to middle schoolers.",
     "cardImage": "assets/robotics/pic 2 - Team award.JPG",
     "heroImage": "assets/robotics/pic 2 - Team award.JPG",
     "badges": [
@@ -49,43 +49,43 @@
     "gallery": [
       {
         "src": "assets/robotics/pic 2 - Team award.JPG",
-        "alt": "FIRST Robotics Team Award",
-        "caption": "FIRST Robotics Team Award & Recognition"
+        "alt": "FIRST Robotics \u2014 FLL & FTC",
+        "caption": "FIRST Robotics \u2014 FLL & FTC"
       },
       {
         "src": "assets/robotics/pic 1 - with robot.jpg",
-        "alt": "Aadya with competition robot",
-        "caption": "Hands-on robot tuning and drive-train testing"
+        "alt": "FIRST Robotics \u2014 FLL & FTC",
+        "caption": "FIRST Robotics \u2014 FLL & FTC"
       },
       {
         "src": "assets/robotics/pic 10 - wpi award.jpg",
-        "alt": "WPI Award Ceremony",
-        "caption": "WPI US Open championship award presentation"
+        "alt": "FIRST Robotics \u2014 FLL & FTC",
+        "caption": "FIRST Robotics \u2014 FLL & FTC"
       },
       {
         "src": "assets/robotics/pic 11 - WPI goodies.jpg",
-        "alt": "WPI Championship Experience",
-        "caption": "WPI national tournament participation and badge honors"
+        "alt": "FIRST Robotics \u2014 FLL & FTC",
+        "caption": "FIRST Robotics \u2014 FLL & FTC"
       },
       {
         "src": "assets/robotics/pic12 -WPI Team.png",
-        "alt": "WPI Championship Team",
-        "caption": "Full robotics team celebrating at WPI US Open"
+        "alt": "FIRST Robotics \u2014 FLL & FTC",
+        "caption": "FIRST Robotics \u2014 FLL & FTC"
       },
       {
         "src": "assets/robotics/pic 6 - Team Award.JPG",
-        "alt": "FIRST LEGO League Award",
-        "caption": "Championship banner and trophy honors"
+        "alt": "FIRST Robotics \u2014 FLL & FTC",
+        "caption": "FIRST Robotics \u2014 FLL & FTC"
       },
       {
         "src": "assets/robotics/pic 3 - mt olive.JPG",
-        "alt": "Mt Olive Regional Event",
-        "caption": "Regional tournament field trials and pit demonstrations"
+        "alt": "FIRST Robotics \u2014 FLL & FTC",
+        "caption": "FIRST Robotics \u2014 FLL & FTC"
       },
       {
         "src": "assets/robotics/pic 8 - On the board.jpg",
-        "alt": "Strategy and Autonomous Mapping",
-        "caption": "Field strategy analysis and autonomous game run planning"
+        "alt": "FIRST Robotics \u2014 FLL & FTC",
+        "caption": "FIRST Robotics \u2014 FLL & FTC"
       }
     ]
   },
@@ -508,7 +508,7 @@
       "Bronze Medal, Technology & Innovation theme, Harvard International Review, Summer 2026",
       "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
       "2025 National History Day (NJ Regional): a 2,500-word paper on Lysenkoism and the suppression of scientific advancement in the Soviet Union",
-      "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville’s jazz band with NJMTA Honors recitals",
+      "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville\u2019s jazz band with NJMTA Honors recitals",
       "Backstage technical theater, stage manager and production assistant"
     ],
     "attachments": [
@@ -548,148 +548,163 @@
     "gallery": [
       {
         "src": "assets/writing_arts/Aadya Flute Pic1.png",
-        "alt": "Aadya with concert flute",
-        "caption": "Wind Ensemble Section Leader & Flutist"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/writing_arts/flute_performance.png",
-        "alt": "Flute solo in concert hall",
-        "caption": "Flute Solo Performance"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/music/Flute_pic_2.jpg",
-        "alt": "Flute recital",
-        "caption": "Studio Flute Recital"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/music/Flute_pic_3.png",
-        "alt": "Flute performance",
-        "caption": "Flute Soloist Honors"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
-        "alt": "NJMTA Flute Honors Recital",
-        "caption": "NJMTA Flute Spring Recital Honors Award"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/ref_images/projects_piano-manhattan-school.jpg",
-        "alt": "Piano recital at Greenfield Hall, Manhattan School of Music",
-        "caption": "Music-Fest Recital — Manhattan School of Music"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/writing_arts/Copy of piano award.png",
-        "alt": "Piano competition award",
-        "caption": "International Rising Talent Grand Prize"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/certificates/Grand Prize Recital - Music-Fest International Rising Talent Festival_.jpg",
-        "alt": "Grand Prize Recital Certificate",
-        "caption": "Manhattan School of Music Recital Certificate"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/music/Piano_Pic_3.jpg",
-        "alt": "Piano performance",
-        "caption": "Solo Classical Piano Repertoire"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
+      },
+      {
+        "src": "assets/music/image_1.jpeg",
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
+      },
+      {
+        "src": "assets/music/image_5.jpeg",
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
+      },
+      {
+        "src": "assets/music/image_8.jpeg",
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
+      },
+      {
+        "src": "assets/music/image_9.jpeg",
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
+      },
+      {
+        "src": "assets/music/image_10.jpeg",
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/ref_images/projects_john-locke_framed.jpg",
-        "alt": "John Locke Global Essay Prize Commendation",
-        "caption": "John Locke High Commendation (Science & Technology)"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/ref_images/projects_writing_scholastic-honorable-mention.jpeg",
-        "alt": "Scholastic Art & Writing recognition",
-        "caption": "Scholastic Art & Writing Awards"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "projects/writing/celebration-of-poets.png",
-        "alt": "A Celebration of Poets anthology",
-        "caption": "A Celebration of Poets Anthology"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "projects/writing/anthology-fall-2024.jpeg",
-        "alt": "Poetic Power anthology",
-        "caption": "National Youth Poetry Anthology"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "projects/writing/balance-skipping-stones.jpg",
-        "alt": "Poem 'Balance' in Skipping Stones",
-        "caption": "Skipping Stones Multicultural Magazine"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "projects/writing/in-a-shift-of-heart.png",
-        "alt": "Poem 'In a Shift of Heart'",
-        "caption": "Published Poetry Feature"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "projects/writing/my-moms-frying-pan.png",
-        "alt": "Poem 'My Mom's Frying Pan'",
-        "caption": "Anthology Publication"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "projects/writing/when-kindness-is-planted.webp",
-        "alt": "Poem 'When Kindness Is Planted'",
-        "caption": "The Telling Room Anthology"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "projects/writing/pds-feature-2023.webp",
-        "alt": "Princeton Day School feature post",
-        "caption": "School Literary Feature"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/writing_arts/poem_celebration_of_small.png",
-        "alt": "Celebration of Small",
-        "caption": "Poetry Anthology Recognition"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/writing_arts/poem_frying_pan.png",
-        "alt": "My Mom's Frying Pan",
-        "caption": "Published Creative Writing"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/writing_arts/poem_shift_of_heart.png",
-        "alt": "In a Shift of Heart",
-        "caption": "Literary Publication"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "techtrek/TechTrek Article 1.png",
-        "alt": "TechTrek USA science journalism article 1",
-        "caption": "TechTrek USA Science Article"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "techtrek/TechTrek Article 2.png",
-        "alt": "TechTrek USA science journalism article 2",
-        "caption": "TechTrek USA Science Article"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/writing_arts/Theater - Much Ado About Nothing.png",
-        "alt": "Theater Much Ado About Nothing",
-        "caption": "Technical Stage & Production"
-      },
-      {
-        "src": "assets/uploads/1792842400029_the-day-the-internet-died.jpg",
-        "alt": "The Day The Internet Died",
-        "caption": "Stage Crew & Production"
-      },
-      {
-        "src": "assets/uploads/1792842362259_mit-day-ai-stage.jpg",
-        "alt": "Stage presentation",
-        "caption": "Stage & Presentation"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/speaking/speech_award_ceremony.jpg",
-        "alt": "Speech award ceremony",
-        "caption": "Public Speaking Ceremony"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/speaking/speech_stage.jpg",
-        "alt": "Public speaking on stage",
-        "caption": "Public Speaking Contest"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       },
       {
         "src": "assets/certificates/nsf_speech_award.png",
-        "alt": "North South Foundation speech award",
-        "caption": "NSF Public Speaking 1st Place"
+        "alt": "Writing & Arts",
+        "caption": "Writing & Arts"
       }
     ]
   },
@@ -1463,6 +1478,9 @@
           if (Array.isArray(item.videos)) {
             PROJECTS_DATA[idx].videos = item.videos;
           }
+          if (Array.isArray(item.badges)) {
+            PROJECTS_DATA[idx].badges = item.badges.map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' });
+          }
         } else {
           PROJECTS_DATA.push({
             title: item.title,
@@ -1470,6 +1488,7 @@
             summary: item.desc || '',
             cardImage: item.img || '',
             heroImage: item.img || '',
+            badges: (item.badges || []).map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' }),
             technicalFocus: item.highlights || [],
             sections: Array.isArray(item.sections) ? item.sections : [{ title: "Project Overview", intro: item.desc || "" }],
             attachments: Array.isArray(item.attachments) ? item.attachments : [],

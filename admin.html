@@ -521,6 +521,83 @@
       align-items: center;
       gap: 0.5rem;
     }
+
+    /* Re-order & Badge Styles */
+    .btn-icon-order {
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      border-radius: 6px;
+      border: 1px solid rgba(59, 18, 45, 0.2);
+      background: #ffffff;
+      color: var(--admin-plum);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-icon-order:hover:not(:disabled) {
+      background: var(--admin-plum);
+      color: #ffffff;
+      border-color: var(--admin-plum);
+      transform: translateY(-1px);
+    }
+    .btn-icon-order:disabled {
+      opacity: 0.25;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .badge-pill-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      background: rgba(59, 18, 45, 0.08);
+      color: var(--admin-plum);
+      border: 1px solid rgba(59, 18, 45, 0.22);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .badge-pill-remove {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.12);
+      color: #3b122d;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .badge-pill-remove:hover {
+      background: #dc2626;
+      color: #ffffff;
+    }
+    .badge-quick-btn {
+      padding: 3px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 6px;
+      background: #ffffff;
+      color: var(--admin-plum);
+      border: 1px solid rgba(59, 18, 45, 0.2);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .badge-quick-btn:hover {
+      background: var(--admin-plum);
+      color: #ffffff;
+      border-color: var(--admin-plum);
+    }
   </style>
 </head>
 <body>
@@ -1023,6 +1100,45 @@
         <textarea id="modalProjHighlights" rows="3" class="form-input" placeholder="Point 1&#10;Point 2&#10;Point 3"></textarea>
       </div>
 
+      <!-- SECTION: IMAGE BADGES / TAGS (Displayed over the image) -->
+      <div class="form-group" style="background: #faf7f9; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(186,31,67,0.22); margin-bottom: 1.25rem;">
+        <label class="form-label" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.35rem;">
+          <span style="display: flex; align-items: center; gap: 0.4rem;">
+            🏷️ <span>Image Corner Badges &amp; Tags (Over Card Image)</span>
+          </span>
+          <span style="font-size: 0.72rem; color: var(--admin-berry); font-weight: 700; text-transform: uppercase;">e.g. FLL, FTC, MIT Solve</span>
+        </label>
+        <p style="font-size: 0.76rem; color: rgba(15,15,18,0.6); margin-bottom: 0.75rem;">
+          These small badges appear directly on the top-right corner of the project card image (for example <strong>FLL</strong> and <strong>FTC</strong> in Robotics). You can add, edit, or remove any tag.
+        </p>
+
+        <!-- Current Active Badges Container -->
+        <div id="modalBadgesList" style="display: flex; flex-wrap: wrap; gap: 0.45rem; min-height: 38px; padding: 0.5rem; background: #ffffff; border-radius: 10px; border: 1px solid rgba(15,15,18,0.12); margin-bottom: 0.65rem; align-items: center;">
+          <!-- Dynamically rendered badge pills -->
+        </div>
+
+        <!-- Add Custom Badge Input -->
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.65rem;">
+          <input type="text" id="modalNewBadgeInput" class="form-input" style="flex: 1; padding: 0.55rem 0.85rem; font-size: 0.85rem;" placeholder="Type custom tag name (e.g. FTC, FLL, AI, Research, 1st Place)..." onkeydown="if(event.key==='Enter'){event.preventDefault(); addCustomBadgeFromInput();}">
+          <button type="button" onclick="addCustomBadgeFromInput()" class="btn-primary" style="width: auto; margin: 0; padding: 0.55rem 1.15rem; font-size: 0.82rem; background: var(--admin-berry);">+ Add Tag</button>
+        </div>
+
+        <!-- Quick suggestion chips -->
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;">
+          <span style="font-size: 0.72rem; font-weight: 700; color: rgba(15,15,18,0.5); margin-right: 0.25rem;">Quick Add:</span>
+          <button type="button" onclick="addBadgeTag('FLL')" class="badge-quick-btn">+ FLL</button>
+          <button type="button" onclick="addBadgeTag('FTC')" class="badge-quick-btn">+ FTC</button>
+          <button type="button" onclick="addBadgeTag('MIT Solve')" class="badge-quick-btn">+ MIT Solve</button>
+          <button type="button" onclick="addBadgeTag('IEEE/ISEC')" class="badge-quick-btn">+ IEEE/ISEC</button>
+          <button type="button" onclick="addBadgeTag('AI')" class="badge-quick-btn">+ AI</button>
+          <button type="button" onclick="addBadgeTag('HealthTech')" class="badge-quick-btn">+ HealthTech</button>
+          <button type="button" onclick="addBadgeTag('Research')" class="badge-quick-btn">+ Research</button>
+          <button type="button" onclick="addBadgeTag('Community')" class="badge-quick-btn">+ Community</button>
+          <button type="button" onclick="addBadgeTag('Climate Tech')" class="badge-quick-btn">+ Climate Tech</button>
+          <button type="button" onclick="addBadgeTag('Honors')" class="badge-quick-btn">+ Honors</button>
+        </div>
+      </div>
+
       <div class="form-group">
         <label class="form-label">Tags / Hashtags (Comma-separated)</label>
         <input type="text" id="modalProjTags" class="form-input" placeholder="#Robotics, #AI, #Innovation">
@@ -1220,8 +1336,8 @@
 
     function smartImageFallback(imgEl, originalUrl) {
       if (!imgEl) return;
-      const src = originalUrl || imgEl.getAttribute('src') || '';
-      if (!src) {
+      const src = (originalUrl || imgEl.getAttribute('src') || '').trim();
+      if (!src || src === 'assets/logo.png') {
         imgEl.src = 'assets/logo.png';
         return;
       }
@@ -1230,25 +1346,27 @@
         return;
       }
       try {
-        const cached = sessionStorage.getItem('aadya_preview_' + src);
+        const cached = sessionStorage.getItem('aadya_preview_' + src) || localStorage.getItem('aadya_preview_' + src);
         if (cached) {
           imgEl.src = cached;
           return;
         }
       } catch (e) {}
 
-      if (src.includes('assets/uploads/') && !imgEl.dataset.triedGithubRaw) {
-        imgEl.dataset.triedGithubRaw = 'true';
-        const cleanPath = src.substring(src.indexOf('assets/uploads/'));
-        imgEl.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${cleanPath}`;
-        return;
+      const cleanSrc = src.replace(/^\.\//, '');
+      if (!cleanSrc.startsWith('http') && !cleanSrc.startsWith('data:')) {
+        if (!imgEl.dataset.triedGithubRaw) {
+          imgEl.dataset.triedGithubRaw = 'true';
+          imgEl.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${encodeURI(cleanSrc)}`;
+          return;
+        }
+        if (!imgEl.dataset.triedCdn) {
+          imgEl.dataset.triedCdn = 'true';
+          imgEl.src = `https://cdn.jsdelivr.net/gh/minakshi2517/aadyaagarwal@main/${encodeURI(cleanSrc)}`;
+          return;
+        }
       }
-      if (src.includes('assets/uploads/') && !imgEl.dataset.triedCdn) {
-        imgEl.dataset.triedCdn = 'true';
-        const cleanPath = src.substring(src.indexOf('assets/uploads/'));
-        imgEl.src = `https://cdn.jsdelivr.net/gh/minakshi2517/aadyaagarwal@main/${cleanPath}`;
-        return;
-      }
+
       imgEl.src = 'assets/logo.png';
     }
 
@@ -1350,14 +1468,34 @@
         console.warn('Compression fallback:', err);
       }
 
-      // Commit image directly to GitHub repository assets/uploads/
+      const rawB64 = (compressedUrl || await readFileAsDataUrl(file));
+      const base64Data = rawB64.includes(',') ? rawB64.split(',')[1] : rawB64;
+      const cleanName = (file.name || 'image.jpg').replace(/[^a-zA-Z0-9._-]/g, '_');
+      const filename = `${Date.now()}_${cleanName}`;
+      const path = `assets/uploads/${filename}`;
+
+      // 1. Immediately cache preview locally so user sees it instantly
+      const previewData = compressedUrl || rawB64;
+      localPreviewCache[path] = previewData;
+      try { sessionStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
+      try { localStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
+
+      // 2. Upload to local Python backend if available
+      try {
+        const isLocalHost = (window.location.port === '8000' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || API_BASE);
+        if (isLocalHost) {
+          const apiBase = API_BASE || '';
+          fetch(`${apiBase}/api/upload`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${AUTH_TOKEN}` },
+            body: JSON.stringify({ base64: rawB64, filename })
+          }).catch(() => {});
+        }
+      } catch (serverErr) {}
+
+      // 3. Commit image directly to GitHub repository so all devices worldwide can view it!
       try {
         const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
-        const rawB64 = (compressedUrl || await readFileAsDataUrl(file));
-        const base64Data = rawB64.includes(',') ? rawB64.split(',')[1] : rawB64;
-        const cleanName = (file.name || 'image.jpg').replace(/[^a-zA-Z0-9._-]/g, '_');
-        const filename = `${Date.now()}_${cleanName}`;
-        const path = `assets/uploads/${filename}`;
         const url = `https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/${path}`;
 
         const res = await fetch(url, {
@@ -1374,19 +1512,6 @@
         });
 
         if (res.ok) {
-          const previewData = compressedUrl || rawB64;
-          localPreviewCache[path] = previewData;
-          try { sessionStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
-          try { localStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
-          if (API_BASE) {
-            try {
-              fetch(`${API_BASE}/api/upload`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ base64: rawB64, filename })
-              }).catch(() => {});
-            } catch (e) {}
-          }
           showToast('✓ Image committed to GitHub cloud!');
           return path;
         }
@@ -1394,12 +1519,8 @@
         console.warn('GitHub direct asset upload note:', e);
       }
 
-      const fallbackUrl = compressedUrl || await readFileAsDataUrl(file);
-      localPreviewCache[fallbackUrl] = fallbackUrl;
-      try { sessionStorage.setItem('aadya_preview_' + fallbackUrl, fallbackUrl); } catch (e) {}
-      try { localStorage.setItem('aadya_preview_' + fallbackUrl, fallbackUrl); } catch (e) {}
-      showToast('✓ Image optimized and ready!');
-      return fallbackUrl;
+      showToast('✓ Image attached and cached!');
+      return path;
     }
 
     async function syncToStorageAndPublish(label = 'Changes') {
@@ -1842,6 +1963,7 @@
 
     // 4. Portfolio Manager
     let currentModalGalleryImages = [];
+    let currentModalBadges = [];
 
     // --- PHOTO GALLERY & IMAGE MANAGEMENT ---
     function renderModalGallery() {
@@ -1861,20 +1983,37 @@
       currentModalGalleryImages.forEach((imgUrl, idx) => {
         const isCover = (coverVal === imgUrl);
         const card = document.createElement('div');
-        card.style.cssText = `position: relative; border-radius: 8px; overflow: hidden; background: #eee; border: 2px solid ${isCover ? 'var(--admin-berry)' : 'rgba(0,0,0,0.12)'}; aspect-ratio: 1/1; box-shadow: 0 1px 4px rgba(0,0,0,0.08); group;`;
+        card.style.cssText = `position: relative; border-radius: 8px; overflow: hidden; background: #eee; border: 2px solid ${isCover ? 'var(--admin-berry)' : 'rgba(0,0,0,0.12)'}; aspect-ratio: 1/1; box-shadow: 0 1px 4px rgba(0,0,0,0.08); display: flex; flex-direction: column;`;
         
         card.innerHTML = `
           <img src="${getResolvedImageSrc(imgUrl)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this, '${imgUrl}')">
-          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: space-between; padding: 4px;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 45%, rgba(0,0,0,0.65) 100%); display: flex; flex-direction: column; justify-content: space-between; padding: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 9px; font-weight: 800; color: #fff; background: rgba(0,0,0,0.65); padding: 1px 5px; border-radius: 3px;">#${idx + 1}</span>
               ${isCover ? '<span style="background: var(--admin-berry); color: #fff; font-size: 8px; font-weight: 800; text-transform: uppercase; padding: 2px 5px; border-radius: 4px;">Cover</span>' : '<span></span>'}
-              <button type="button" onclick="deleteGalleryImageAt(${idx})" style="width: 24px; height: 24px; border-radius: 50%; background: #dc2626; color: #fff; border: 1px solid #fff; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.3);" title="Delete this image from project">✕</button>
+              <button type="button" onclick="deleteGalleryImageAt(${idx})" style="width: 22px; height: 22px; border-radius: 50%; background: #dc2626; color: #fff; border: 1px solid #fff; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.3);" title="Delete this image">✕</button>
             </div>
-            ${!isCover ? `<button type="button" onclick="setAsCoverImage('${imgUrl}')" style="padding: 3px; font-size: 9px; font-weight: 700; background: rgba(255,255,255,0.92); color: var(--admin-plum); border: none; border-radius: 4px; cursor: pointer; width: 100%; text-align: center;">Set as Cover</button>` : ''}
+            <div>
+              <div style="display: flex; gap: 3px; margin-bottom: 3px;">
+                <button type="button" onclick="moveGalleryImage(${idx}, -1)" ${idx === 0 ? 'disabled style="opacity: 0.35; cursor: default; flex: 1; padding: 2px 0; font-size: 10px; font-weight: bold; background: rgba(255,255,255,0.8); color: var(--admin-plum); border: none; border-radius: 3px;"' : 'style="cursor: pointer; flex: 1; padding: 2px 0; font-size: 10px; font-weight: bold; background: rgba(255,255,255,0.95); color: var(--admin-plum); border: none; border-radius: 3px;"'} title="Move photo left">◄</button>
+                <button type="button" onclick="moveGalleryImage(${idx}, 1)" ${idx === currentModalGalleryImages.length - 1 ? 'disabled style="opacity: 0.35; cursor: default; flex: 1; padding: 2px 0; font-size: 10px; font-weight: bold; background: rgba(255,255,255,0.8); color: var(--admin-plum); border: none; border-radius: 3px;"' : 'style="cursor: pointer; flex: 1; padding: 2px 0; font-size: 10px; font-weight: bold; background: rgba(255,255,255,0.95); color: var(--admin-plum); border: none; border-radius: 3px;"'} title="Move photo right">►</button>
+              </div>
+              ${!isCover ? `<button type="button" onclick="setAsCoverImage('${imgUrl}')" style="padding: 2px 3px; font-size: 8.5px; font-weight: 700; background: rgba(255,255,255,0.95); color: var(--admin-berry); border: none; border-radius: 3px; cursor: pointer; width: 100%; text-align: center;">Set Cover</button>` : ''}
+            </div>
           </div>
         `;
         container.appendChild(card);
       });
+    }
+
+    function moveGalleryImage(index, direction) {
+      const newIndex = index + direction;
+      if (newIndex < 0 || newIndex >= currentModalGalleryImages.length) return;
+      const temp = currentModalGalleryImages[index];
+      currentModalGalleryImages[index] = currentModalGalleryImages[newIndex];
+      currentModalGalleryImages[newIndex] = temp;
+      renderModalGallery();
+      showToast('Photo position re-arranged.');
     }
 
     function deleteGalleryImageAt(index) {
@@ -1962,10 +2101,60 @@
         images: p.images,
         desc: p.desc,
         highlights: p.highlights,
-        tags: p.tags
+        tags: p.tags,
+        badges: p.badges,
+        sort_order: p.sort_order
       });
       await syncToStorageAndPublish(`Cover photo for ${p.title}`);
       loadAllData();
+    }
+
+    // --- BADGES / TAGS MANAGEMENT ---
+    function renderModalBadges() {
+      const container = document.getElementById('modalBadgesList');
+      if (!container) return;
+      container.innerHTML = '';
+      if (!currentModalBadges.length) {
+        container.innerHTML = '<span style="color: rgba(15,15,18,0.4); font-size: 0.78rem;">No tags attached yet. Click quick tags below or type a custom tag to add.</span>';
+        return;
+      }
+      currentModalBadges.forEach((tag, idx) => {
+        const pill = document.createElement('span');
+        pill.className = 'badge-pill-item';
+        pill.innerHTML = `
+          <span>${tag}</span>
+          <button type="button" class="badge-pill-remove" onclick="removeBadgeTag('${tag}')" title="Remove ${tag}">✕</button>
+        `;
+        container.appendChild(pill);
+      });
+    }
+
+    function addBadgeTag(tagText) {
+      const clean = (tagText || '').trim();
+      if (!clean) return;
+      if (currentModalBadges.includes(clean)) {
+        showToast(`Tag "${clean}" is already added.`);
+        return;
+      }
+      currentModalBadges.push(clean);
+      renderModalBadges();
+      showToast(`✓ Added tag: ${clean}`);
+    }
+
+    function removeBadgeTag(tagText) {
+      currentModalBadges = currentModalBadges.filter(t => t !== tagText);
+      renderModalBadges();
+      showToast(`Removed tag: ${tagText}`);
+    }
+
+    function addCustomBadgeFromInput() {
+      const input = document.getElementById('modalNewBadgeInput');
+      if (!input) return;
+      const val = input.value.trim();
+      if (val) {
+        addBadgeTag(val);
+        input.value = '';
+      }
     }
 
     // 4. Portfolio Manager
@@ -1978,29 +2167,80 @@
         return;
       }
 
-      sortedItems.forEach(p => {
+      sortedItems.forEach((p, idx) => {
         const row = document.createElement('div');
         row.className = 'item-list-row';
         const photoCount = Array.isArray(p.images) ? p.images.length : (p.img ? 1 : 0);
+        const isFirst = (idx === 0);
+        const isLast = (idx === sortedItems.length - 1);
+
+        const badgesList = Array.isArray(p.badges) ? p.badges : [];
+        const badgesHtml = badgesList.length ? `
+          <div style="display: flex; gap: 4px; margin-top: 5px; flex-wrap: wrap;">
+            ${badgesList.map(b => {
+              const label = typeof b === 'object' ? (b.label || '') : String(b);
+              return `<span style="font-size: 9px; font-weight: 800; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; background: rgba(59,18,45,0.08); color: var(--admin-plum); border: 1px solid rgba(59,18,45,0.18);">🏷️ ${label}</span>`;
+            }).join('')}
+          </div>
+        ` : '';
+
         row.innerHTML = `
           <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
+            <div style="display: flex; flex-direction: column; gap: 3px; margin-right: 10px;">
+              <button type="button" onclick="moveProjectOrder(${p.id}, -1)" ${isFirst ? 'disabled' : ''} class="btn-icon-order" title="Move Project Up">▲</button>
+              <button type="button" onclick="moveProjectOrder(${p.id}, 1)" ${isLast ? 'disabled' : ''} class="btn-icon-order" title="Move Project Down">▼</button>
+            </div>
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 7px; background: rgba(59,18,45,0.08); font-size: 0.78rem; font-weight: 800; color: var(--admin-plum); margin-right: 10px; flex-shrink: 0;">#${idx + 1}</span>
             <img src="${getResolvedImageSrc(p.img || 'assets/logo.png')}" class="item-thumb-micro" onerror="smartImageFallback(this, '${p.img || ''}')">
             <div class="item-meta-col">
               <div class="item-meta-title">${p.title}</div>
               <div class="item-meta-subtitle">${p.category_name} &bull; <strong style="color: var(--admin-berry);">${photoCount} Photos in Gallery</strong></div>
+              ${badgesHtml}
             </div>
           </div>
           <div class="item-actions-col">
             <label class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem;" title="Change cover image">
-              <span>📷 Change Cover</span>
+              <span>📷 Cover</span>
               <input type="file" accept="image/*" style="display: none;" onchange="quickChangeProjectCover(${p.id}, this)">
             </label>
-            <button onclick="editProjectItem(${p.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit &amp; Photos (${photoCount})</button>
+            <button onclick="editProjectItem(${p.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit &amp; Tags</button>
             <button onclick="deleteProjectItem(${p.id})" class="btn-danger">Delete</button>
           </div>
         `;
         container.appendChild(row);
       });
+    }
+
+    async function moveProjectOrder(id, direction) {
+      if (!siteData || !Array.isArray(siteData.portfolio)) return;
+      const list = [...siteData.portfolio].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
+      const currentIndex = list.findIndex(p => String(p.id) === String(id));
+      if (currentIndex < 0) return;
+      const targetIndex = currentIndex + direction;
+      if (targetIndex < 0 || targetIndex >= list.length) return;
+
+      const temp = list[currentIndex];
+      list[currentIndex] = list[targetIndex];
+      list[targetIndex] = temp;
+
+      list.forEach((item, idx) => {
+        item.sort_order = idx;
+        const orig = siteData.portfolio.find(p => String(p.id) === String(item.id));
+        if (orig) orig.sort_order = idx;
+      });
+
+      syncToStorage();
+      renderPortfolioList(siteData.portfolio);
+
+      try {
+        for (const item of list) {
+          await apiRequest('/api/portfolio/save', 'POST', item);
+        }
+      } catch(e) {}
+
+      await syncToStorageAndPublish(`Reordered "${temp.title}"`);
+      showToast(`✓ Project moved ${direction < 0 ? 'up' : 'down'}!`);
+      loadAllData();
     }
 
     function filterPortfolioList(cat, btn) {
@@ -2030,12 +2270,14 @@
       document.getElementById('modalProjHighlights').value = '';
       document.getElementById('modalProjTags').value = '';
       currentModalGalleryImages = [];
+      currentModalBadges = [];
       renderModalGallery();
+      renderModalBadges();
       document.getElementById('projectEditModal').showModal();
     }
 
     function editProjectItem(id) {
-      const p = (siteData.portfolio || []).find(item => item.id === id);
+      const p = (siteData.portfolio || []).find(item => String(item.id) === String(id));
       if (!p) return;
       document.getElementById('projModalTitle').textContent = 'Edit Project: ' + p.title;
       document.getElementById('modalProjId').value = p.id;
@@ -2054,6 +2296,11 @@
       
       currentModalGalleryImages = Array.isArray(p.images) && p.images.length > 0 ? [...p.images] : (p.img ? [p.img] : []);
       renderModalGallery();
+
+      // Load badges
+      currentModalBadges = (Array.isArray(p.badges) ? p.badges : []).map(b => typeof b === 'object' ? (b.label || '') : String(b || '')).filter(Boolean);
+      renderModalBadges();
+
       document.getElementById('projectEditModal').showModal();
     }
 
@@ -2081,7 +2328,7 @@
       const sort_order = existing && existing.sort_order !== undefined ? existing.sort_order : ((siteData.portfolio || []).length + 1);
 
       const payload = {
-        id: id ? parseInt(id) : null,
+        id: id ? parseInt(id) : Date.now(),
         title,
         category_slug,
         category_name,
@@ -2090,11 +2337,18 @@
         desc,
         highlights,
         tags,
+        badges: currentModalBadges,
         sort_order
       };
 
       try {
         await apiRequest('/api/portfolio/save', 'POST', payload);
+        if (siteData && Array.isArray(siteData.portfolio)) {
+          const pIdx = siteData.portfolio.findIndex(p => String(p.id) === String(payload.id));
+          if (pIdx >= 0) siteData.portfolio[pIdx] = { ...siteData.portfolio[pIdx], ...payload };
+          else siteData.portfolio.push(payload);
+          syncToStorage();
+        }
         document.getElementById('projectEditModal').close();
         await syncToStorageAndPublish(`Project "${payload.title}"`);
         loadAllData();
@@ -2152,44 +2406,27 @@
     async function uploadMultipleToLibrary(fileInput) {
       if (!fileInput.files || !fileInput.files.length) return;
       const files = Array.from(fileInput.files);
-      showToast(`Uploading ${files.length} images to Media Library...`);
+      showToast(`Uploading & optimizing ${files.length} images to Media Library...`);
 
       let count = 0;
       for (let i = 0; i < files.length; i++) {
-        let uploaded = false;
-        try {
-          if (API_BASE || window.location.port === '8000') {
-            const formData = new FormData();
-            formData.append('file', files[i]);
-            const res = await fetch(`${API_BASE}/api/upload`, {
-              method: 'POST',
-              headers: { 'Authorization': `Bearer ${AUTH_TOKEN}` },
-              body: formData
-            });
-            const data = await res.json();
-            if (data.success) {
-              count++;
-              uploaded = true;
-            }
-          }
-        } catch (e) {}
-
-        if (!uploaded) {
-          try {
-            const dataUrl = await readFileAsDataUrl(files[i]);
-            siteData.media = siteData.media || [];
-            siteData.media.unshift({
-              id: Date.now() + i,
-              filename: files[i].name,
-              url: dataUrl
-            });
-            count++;
-          } catch(err) {}
+        const file = files[i];
+        const imgUrl = await uploadImageSmartly(file);
+        if (imgUrl) {
+          siteData.media = siteData.media || [];
+          siteData.media.unshift({
+            id: Date.now() + i,
+            filename: file.name,
+            url: imgUrl,
+            uploaded_at: new Date().toISOString()
+          });
+          count++;
         }
       }
 
       syncToStorage();
       showToast(`✓ Added ${count} image(s) to Media Library!`);
+      await syncToStorageAndPublish(`Added ${count} media assets`);
       loadAllData();
       fileInput.value = '';
     }
@@ -2198,37 +2435,18 @@
       if (!fileInput.files || !fileInput.files[0]) return;
       const file = fileInput.files[0];
       showToast('Uploading replacement image...');
-      let newUrl = null;
 
-      try {
-        if (API_BASE || window.location.port === '8000') {
-          const formData = new FormData();
-          formData.append('file', file);
-          const res = await fetch(`${API_BASE}/api/upload`, {
-            method: 'POST',
-            headers: { 'Authorization': `Bearer ${AUTH_TOKEN}` },
-            body: formData
-          });
-          const data = await res.json();
-          if (data.success && data.url) newUrl = data.url;
-        }
-      } catch (e) {}
-
-      if (!newUrl) {
-        try {
-          newUrl = await readFileAsDataUrl(file);
-        } catch(err) {}
-      }
-
+      const newUrl = await uploadImageSmartly(file);
       if (newUrl) {
         siteData.media = siteData.media || [];
-        const item = siteData.media.find(m => m.id === mediaId);
+        const item = siteData.media.find(m => String(m.id) === String(mediaId));
         if (item) {
           item.url = newUrl;
           item.filename = file.name;
         }
         syncToStorage();
         showToast('Image replaced in Media Library!');
+        await syncToStorageAndPublish(`Replaced media "${file.name}"`);
         loadAllData();
       }
     }
@@ -2529,19 +2747,29 @@
       const link_text = document.getElementById('modalAwardLinkText').value.trim();
       const link_url = document.getElementById('modalAwardLinkUrl').value.trim();
 
+      const existing = (siteData.awards || []).find(a => String(a.id) === String(id));
+      const sort_order = existing && existing.sort_order !== undefined ? existing.sort_order : ((siteData.awards || []).length + 1);
+
       const payload = {
-        id: id ? parseInt(id) : null,
+        id: id ? parseInt(id) : Date.now(),
         title,
         category_pill,
         year,
         image_url,
         description,
         link_text,
-        link_url
+        link_url,
+        sort_order
       };
 
       try {
         await apiRequest('/api/awards/save', 'POST', payload);
+        if (siteData && Array.isArray(siteData.awards)) {
+          const aIdx = siteData.awards.findIndex(a => String(a.id) === String(payload.id));
+          if (aIdx >= 0) siteData.awards[aIdx] = { ...siteData.awards[aIdx], ...payload };
+          else siteData.awards.push(payload);
+          syncToStorage();
+        }
         document.getElementById('awardEditModal').close();
         await syncToStorageAndPublish(`Award "${payload.title}"`);
         loadAllData();
@@ -2560,15 +2788,24 @@
         countEl.textContent = siteData.awards.length;
       }
       c.innerHTML = '';
-      if (!items || !items.length) {
+      const sortedItems = [...(items || [])].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
+      if (!sortedItems.length) {
         c.innerHTML = '<p style="color: rgba(15,15,18,0.5); padding: 1.5rem 0;">No awards found in this category.</p>';
         return;
       }
-      items.forEach(a => {
+      sortedItems.forEach((a, idx) => {
         const row = document.createElement('div');
         row.className = 'item-list-row';
+        const isFirst = (idx === 0);
+        const isLast = (idx === sortedItems.length - 1);
+
         row.innerHTML = `
           <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
+            <div style="display: flex; flex-direction: column; gap: 3px; margin-right: 10px;">
+              <button type="button" onclick="moveAwardOrder(${a.id}, -1)" ${isFirst ? 'disabled' : ''} class="btn-icon-order" title="Move Award Up">▲</button>
+              <button type="button" onclick="moveAwardOrder(${a.id}, 1)" ${isLast ? 'disabled' : ''} class="btn-icon-order" title="Move Award Down">▼</button>
+            </div>
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 7px; background: rgba(59,18,45,0.08); font-size: 0.78rem; font-weight: 800; color: var(--admin-plum); margin-right: 10px; flex-shrink: 0;">#${idx + 1}</span>
             <img src="${getResolvedImageSrc(a.image_url || 'assets/logo.png')}" class="item-thumb-micro" onerror="smartImageFallback(this, '${a.image_url || ''}')">
             <div class="item-meta-col">
               <div class="item-meta-title">${a.title} ${a.year ? '(' + a.year + ')' : ''}</div>
@@ -2588,6 +2825,38 @@
         `;
         c.appendChild(row);
       });
+    }
+
+    async function moveAwardOrder(id, direction) {
+      if (!siteData || !Array.isArray(siteData.awards)) return;
+      const list = [...siteData.awards].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
+      const currentIndex = list.findIndex(a => String(a.id) === String(id));
+      if (currentIndex < 0) return;
+      const targetIndex = currentIndex + direction;
+      if (targetIndex < 0 || targetIndex >= list.length) return;
+
+      const temp = list[currentIndex];
+      list[currentIndex] = list[targetIndex];
+      list[targetIndex] = temp;
+
+      list.forEach((item, idx) => {
+        item.sort_order = idx;
+        const orig = siteData.awards.find(a => String(a.id) === String(item.id));
+        if (orig) orig.sort_order = idx;
+      });
+
+      syncToStorage();
+      renderAwardsList(siteData.awards);
+
+      try {
+        for (const item of list) {
+          await apiRequest('/api/awards/save', 'POST', item);
+        }
+      } catch(e) {}
+
+      await syncToStorageAndPublish(`Reordered award "${temp.title}"`);
+      showToast(`✓ Award moved ${direction < 0 ? 'up' : 'down'}!`);
+      loadAllData();
     }
 
     function filterAwardsList(cat, btn) {

@@ -55,22 +55,22 @@
         // If it's an uploaded asset, fetch from GitHub raw
         if (src.includes('assets/uploads/')) {
           const cleanPath = src.substring(src.indexOf('assets/uploads/'));
-          target.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${cleanPath}`;
+          target.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${encodeURI(cleanPath)}`;
           return;
         }
 
         // Other relative project/asset paths
         if (!src.startsWith('http') && !src.startsWith('data:')) {
           const cleanRel = src.replace(/^\.\//, '');
-          target.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${cleanRel}`;
+          target.src = `https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${encodeURI(cleanRel)}`;
           return;
         }
       } else if (count === 1) {
         target.dataset.errFallbackCount = '2';
         // Fallback to jsDelivr CDN
-        if (src.includes('assets/uploads/')) {
-          const cleanPath = src.substring(src.indexOf('assets/uploads/'));
-          target.src = `https://cdn.jsdelivr.net/gh/minakshi2517/aadyaagarwal@main/${cleanPath}`;
+        if (!src.startsWith('http') && !src.startsWith('data:')) {
+          const cleanRel = src.replace(/^\.\//, '');
+          target.src = `https://cdn.jsdelivr.net/gh/minakshi2517/aadyaagarwal@main/${encodeURI(cleanRel)}`;
           return;
         }
       }
@@ -290,19 +290,24 @@
           ].filter(Boolean).join(' ').toLowerCase().replace(/[^a-z0-9]+/g, '');
 
           const relevantBadges = [];
-          const addRelevantBadge = label => {
-            const normalizedLabel = String(label || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
-            if (normalizedLabel && searchableProjectText.includes(normalizedLabel) && !relevantBadges.includes(label) && relevantBadges.length < 2) {
-              relevantBadges.push(label);
+          if (Array.isArray(p.badges) && p.badges.length > 0) {
+            p.badges.forEach(b => {
+              const label = typeof b === 'object' ? (b.label || '') : String(b || '');
+              if (label && !relevantBadges.includes(label)) {
+                relevantBadges.push(label);
+              }
+            });
+          } else {
+            const addRelevantBadge = label => {
+              const normalizedLabel = String(label || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+              if (normalizedLabel && searchableProjectText.includes(normalizedLabel) && !relevantBadges.includes(label) && relevantBadges.length < 3) {
+                relevantBadges.push(label);
+              }
+            };
+            highlightBadgeCandidates.forEach(addRelevantBadge);
+            if (isRobotics) {
+              ['FTC', 'FLL'].forEach(addRelevantBadge);
             }
-          };
-
-          if (Array.isArray(p.badges)) {
-            p.badges.forEach(badge => addRelevantBadge(typeof badge === 'object' ? badge.label : badge));
-          }
-          highlightBadgeCandidates.forEach(addRelevantBadge);
-          if (isRobotics) {
-            ['FTC', 'FLL'].forEach(addRelevantBadge);
           }
 
           const badgesHtml = relevantBadges.length
