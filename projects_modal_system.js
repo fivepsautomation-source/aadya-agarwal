@@ -523,6 +523,14 @@
       {
         "label": "Scholastic Writing recognition letter (PDF)",
         "href": "assets/writing_arts/Scholastic_Writing_Recognition_Letter.pdf"
+      },
+      {
+        "label": "TechTrek: AI-Driven Discovery of Solar Fuel Catalysts (Article)",
+        "href": "https://www.techtrekusa.com/post/ai-driven-discovery-of-solar-fuel-catalysts-the-future-of-clean-energy"
+      },
+      {
+        "label": "TechTrek: Beyond Textbooks — Reversing the Central Dogma (Article)",
+        "href": "https://www.techtrekusa.com/post/beyond-textbooks-reversing-the-central-dogma-of-biology"
       }
     ],
     "videos": [],
@@ -678,13 +686,13 @@
       },
       {
         "src": "techtrek/TechTrek Article 1.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "TechTrek: AI-Driven Discovery of Solar Fuel Catalysts",
+        "caption": "TechTrek: AI-Driven Discovery of Solar Fuel Catalysts — The Future of Clean Energy"
       },
       {
         "src": "techtrek/TechTrek Article 2.png",
-        "alt": "Writing & Arts",
-        "caption": "Writing & Arts"
+        "alt": "TechTrek: Beyond Textbooks — Reversing the Central Dogma of Biology",
+        "caption": "TechTrek: Beyond Textbooks — Reversing the Central Dogma of Biology"
       },
       {
         "src": "assets/writing_arts/Theater - Much Ado About Nothing.png",
