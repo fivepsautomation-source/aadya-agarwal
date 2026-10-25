@@ -396,7 +396,7 @@
         "Flute",
         "Piano"
       ],
-      "sort_order": 9,
+      "sort_order": 10,
       "images": [
         "assets/writing_arts/Aadya Flute Pic1.png",
         "assets/writing_arts/flute_performance.png",
@@ -484,7 +484,7 @@
         "Piano",
         "Writing & Arts"
       ],
-      "sort_order": 11
+      "sort_order": 9
     }
   ],
   "documents": [
