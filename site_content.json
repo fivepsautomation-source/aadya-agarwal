@@ -506,7 +506,7 @@
       "id": 1792918752665,
       "title": "here it is",
       "category_slug": "biomedical",
-      "category_name": "Biomedical Research & AI",
+      "category_name": "Biomedical & AI",
       "img": "assets/uploads/1792918739033_bio.jpeg",
       "images": [
         "assets/uploads/1792918739033_bio.jpeg"
@@ -514,12 +514,8 @@
       "desc": "editted",
       "highlights": [],
       "tags": [],
-      "badges": [
-        "Stanford AIMI",
-        "Harvard Fellow"
-      ],
-      "sort_order": 6,
-      "badge_position": "right"
+      "badges": [],
+      "sort_order": 6
     }
   ],
   "documents": [
