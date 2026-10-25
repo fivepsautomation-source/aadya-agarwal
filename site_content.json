@@ -99,7 +99,7 @@
       "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
-      "category_name": "Peer-Reviewed Presentation · 2026",
+      "category_name": "Environmental Sustainability & AI",
       "img": "assets/uploads/1792856840122_ieee-attendance.jpg",
       "images": [
         "assets/uploads/1792856840122_ieee-attendance.jpg",
@@ -127,7 +127,9 @@
         "#WaterRemediation",
         "#BiocharResearch"
       ],
-      "badges": [],
+      "badges": [
+        "IEEE /ISEC"
+      ],
       "is_robotics": false,
       "sort_order": 3
     },
