@@ -127,9 +127,7 @@
         "#WaterRemediation",
         "#BiocharResearch"
       ],
-      "badges": [
-        "IEEE /ISEC"
-      ],
+      "badges": [],
       "is_robotics": false,
       "sort_order": 2
     },
