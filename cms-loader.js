@@ -406,7 +406,7 @@
             const descEl = card.querySelector('p');
             if (descEl && aw.description) descEl.textContent = aw.description;
 
-            if (aw.link_url && aw.link_text) {
+            if (aw.link_url && aw.link_text && aw.link_url !== '#' && aw.link_url.trim() !== '') {
               let linkEl = card.querySelector('.award-text-link');
               if (!linkEl) {
                 linkEl = document.createElement('a');
@@ -418,6 +418,11 @@
               }
               linkEl.href = aw.link_url;
               linkEl.innerHTML = `${aw.link_text} <span aria-hidden="true">&nearr;</span>`;
+            } else {
+              const existingLink = card.querySelector('.award-text-link');
+              if (existingLink) {
+                existingLink.remove();
+              }
             }
 
             card.setAttribute('data-award-id', String(aw.id));
