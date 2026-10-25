@@ -1533,7 +1533,19 @@
       const previewData = compressedUrl || rawB64;
       localPreviewCache[path] = previewData;
       try { sessionStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
-      try { localStorage.setItem('aadya_preview_' + path, previewData); } catch (e) {}
+      try { 
+        localStorage.setItem('aadya_preview_' + path, previewData); 
+      } catch (e) {
+        try {
+          const keys = [];
+          for (let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if (k && k.startsWith('aadya_preview_')) keys.push(k);
+          }
+          keys.slice(0, Math.ceil(keys.length / 2)).forEach(k => localStorage.removeItem(k));
+          localStorage.setItem('aadya_preview_' + path, previewData);
+        } catch(err2) {}
+      }
 
       // 2. Upload to local Python backend if available
       try {

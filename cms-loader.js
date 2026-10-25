@@ -541,9 +541,18 @@
       if (e.target.closest('.aspect-video a')) return; // Allow clicking link directly if clicked
       const targetCard = card || readMore.closest('.portfolio-card');
       if (!targetCard) return;
+
+      let projectPayload = null;
+      const dataProj = targetCard.getAttribute('data-project');
+      if (dataProj) {
+        try {
+          projectPayload = JSON.parse(dataProj);
+        } catch(err) {}
+      }
+
       const title = targetCard.querySelector('h3')?.textContent?.trim() || '';
       if (typeof window.openProjectModal === 'function') {
-        window.openProjectModal(title);
+        window.openProjectModal(projectPayload || title);
       }
     }
   });

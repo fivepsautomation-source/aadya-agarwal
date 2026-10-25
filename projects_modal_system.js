@@ -1001,14 +1001,36 @@
   }
 ];
 
+  function normalizeTitleStr(str) {
+    return (str || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+
+  function findProjectIdxInArray(targetTitle, list) {
+    if (!targetTitle || !Array.isArray(list)) return -1;
+    const tClean = targetTitle.toLowerCase().trim();
+    const tNorm = normalizeTitleStr(targetTitle);
+    
+    // 1. Exact or lowercase match
+    let idx = list.findIndex(p => p && p.title && p.title.toLowerCase().trim() === tClean);
+    if (idx >= 0) return idx;
+
+    // 2. Normalized alphanumeric match
+    idx = list.findIndex(p => p && p.title && normalizeTitleStr(p.title) === tNorm);
+    if (idx >= 0) return idx;
+
+    // 3. Substring match
+    idx = list.findIndex(p => {
+      if (!p || !p.title) return false;
+      const pNorm = normalizeTitleStr(p.title);
+      return (pNorm.length > 5 && tNorm.includes(pNorm)) || (tNorm.length > 5 && pNorm.includes(tNorm));
+    });
+    return idx;
+  }
+
   function getProjectIndex(identifier) {
     if (typeof identifier === 'number') return identifier;
     if (!identifier) return 0;
-    const lower = identifier.toString().toLowerCase().trim();
-    const idx = PROJECTS_DATA.findIndex(p => {
-      const titleLower = p.title.toLowerCase();
-      return titleLower === lower || titleLower.includes(lower) || lower.includes(titleLower.slice(0, 15));
-    });
+    const idx = findProjectIdxInArray(identifier.toString(), PROJECTS_DATA);
     return idx >= 0 ? idx : 0;
   }
 
@@ -1114,7 +1136,7 @@
               const phSrc = typeof window.getResolvedImageSrc === 'function' ? window.getResolvedImageSrc(phRaw) : phRaw;
               return `
               <a href="${phSrc}" target="_blank" rel="noopener noreferrer" aria-label="${ph.alt || 'View photo'}" class="phone-gallery-thumb">
-                <img src="${phSrc}" alt="${ph.alt || project.title + ' photo'}" loading="lazy" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">
+                <img src="${phSrc}" alt="${ph.alt || project.title + ' photo'}" loading="lazy" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';const idx=this.src.indexOf('assets/uploads/');this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+encodeURI(this.src.substring(idx));}else{this.src='assets/logo.png';}">
               </a>
             `;}).join('')}
           </div>
@@ -1245,18 +1267,76 @@
     return modal;
   }
 
+  // CMS Synchronization: Expose global updater immediately for cms-loader.js
+  window.updateProjectsDataFromCMS = function(cmsPortfolio) {
+    if (!Array.isArray(cmsPortfolio) || !cmsPortfolio.length) return;
+    cmsPortfolio.forEach(item => {
+      const idx = findProjectIdxInArray(item.title, PROJECTS_DATA);
+      if (idx >= 0) {
+        PROJECTS_DATA[idx].title = item.title;
+        if (item.desc) PROJECTS_DATA[idx].summary = item.desc;
+        if (item.img) {
+          PROJECTS_DATA[idx].cardImage = item.img;
+          PROJECTS_DATA[idx].heroImage = item.img;
+        }
+        if (Array.isArray(item.images) && item.images.length > 0) {
+          PROJECTS_DATA[idx].gallery = item.images.map(img => typeof img === 'string' ? { src: img, alt: item.title, caption: item.title } : img);
+        }
+        if (Array.isArray(item.highlights)) {
+          PROJECTS_DATA[idx].technicalFocus = item.highlights;
+        }
+        if (Array.isArray(item.sections) && item.sections.length > 0) {
+          PROJECTS_DATA[idx].sections = item.sections;
+        }
+        if (Array.isArray(item.attachments) && item.attachments.length > 0) {
+          PROJECTS_DATA[idx].attachments = item.attachments;
+        }
+        if (Array.isArray(item.videos)) {
+          PROJECTS_DATA[idx].videos = item.videos;
+        }
+        if (Array.isArray(item.badges)) {
+          PROJECTS_DATA[idx].badges = item.badges.map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' });
+        }
+        if (item.gallerySubtitle) {
+          PROJECTS_DATA[idx].gallerySubtitle = item.gallerySubtitle;
+        }
+      } else {
+        PROJECTS_DATA.push({
+          title: item.title,
+          category: item.category_name || '',
+          summary: item.desc || '',
+          cardImage: item.img || '',
+          heroImage: item.img || '',
+          badges: (item.badges || []).map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' }),
+          technicalFocus: item.highlights || [],
+          sections: Array.isArray(item.sections) && item.sections.length ? item.sections : [{ title: "Project Overview", intro: item.desc || "" }],
+          attachments: Array.isArray(item.attachments) ? item.attachments : [],
+          gallerySubtitle: item.gallerySubtitle || '',
+          gallery: (item.images || []).map(img => typeof img === 'string' ? { src: img, alt: item.title, caption: item.title } : img),
+          videos: Array.isArray(item.videos) ? item.videos : []
+        });
+      }
+    });
+  };
+
+  // Immediate bootstrap from localStorage if available
+  try {
+    const storedBootstrap = localStorage.getItem('aadya_cms_content');
+    if (storedBootstrap) {
+      const parsedBootstrap = JSON.parse(storedBootstrap);
+      if (parsedBootstrap && Array.isArray(parsedBootstrap.portfolio)) {
+        window.updateProjectsDataFromCMS(parsedBootstrap.portfolio);
+      }
+    }
+  } catch(e) {}
+
   window.openProjectModal = function(identifier) {
     const modal = setupModalDOM();
     let project = null;
 
     if (typeof identifier === 'object' && identifier !== null) {
       const title = (identifier.title || '').trim();
-      const exactIdx = PROJECTS_DATA.findIndex(p => p.title.toLowerCase() === title.toLowerCase());
-      const matchedIdx = exactIdx >= 0 ? exactIdx : (PROJECTS_DATA.findIndex(p => {
-        const t1 = p.title.toLowerCase();
-        const t2 = title.toLowerCase();
-        return t1 === t2 || t1.includes(t2) || t2.includes(t1.slice(0, 15));
-      }));
+      const matchedIdx = findProjectIdxInArray(title, PROJECTS_DATA);
 
       if (matchedIdx >= 0) {
         project = JSON.parse(JSON.stringify(PROJECTS_DATA[matchedIdx]));
@@ -1277,15 +1357,7 @@
           project.heroImage = identifier.img;
         }
         if (Array.isArray(identifier.images) && identifier.images.length > 0) {
-          const existingSrcs = new Set((project.gallery || []).map(g => g.src));
-          identifier.images.forEach(img => {
-            const src = typeof img === 'string' ? img : img.src;
-            if (src && !existingSrcs.has(src)) {
-              project.gallery = project.gallery || [];
-              project.gallery.push({ src: src, alt: project.title, caption: project.title });
-              existingSrcs.add(src);
-            }
-          });
+          project.gallery = identifier.images.map(img => typeof img === 'string' ? { src: img, alt: project.title, caption: project.title } : img);
         }
         if (Array.isArray(identifier.videos)) {
           project.videos = identifier.videos;
@@ -1312,7 +1384,36 @@
       }
     } else {
       const idx = getProjectIndex(identifier);
-      project = PROJECTS_DATA[idx];
+      project = PROJECTS_DATA[idx] ? JSON.parse(JSON.stringify(PROJECTS_DATA[idx])) : null;
+
+      // Also pull latest images and data from window.CMS_DATA or localStorage
+      const cmsItems = (window.CMS_DATA && Array.isArray(window.CMS_DATA.portfolio))
+        ? window.CMS_DATA.portfolio
+        : (() => {
+            try {
+              const p = JSON.parse(localStorage.getItem('aadya_cms_content') || '{}');
+              return Array.isArray(p.portfolio) ? p.portfolio : [];
+            } catch(e) { return []; }
+          })();
+
+      if (project && cmsItems.length > 0) {
+        const cIdx = findProjectIdxInArray(project.title, cmsItems);
+        if (cIdx >= 0) {
+          const cmsItem = cmsItems[cIdx];
+          if (Array.isArray(cmsItem.images) && cmsItem.images.length > 0) {
+            project.gallery = cmsItem.images.map(img => typeof img === 'string' ? { src: img, alt: project.title, caption: project.title } : img);
+          }
+          if (cmsItem.img) {
+            project.heroImage = cmsItem.img;
+            project.cardImage = cmsItem.img;
+          }
+          if (cmsItem.desc) project.summary = cmsItem.desc;
+          if (Array.isArray(cmsItem.highlights) && cmsItem.highlights.length) project.technicalFocus = cmsItem.highlights;
+          if (Array.isArray(cmsItem.sections) && cmsItem.sections.length) project.sections = cmsItem.sections;
+          if (Array.isArray(cmsItem.attachments) && cmsItem.attachments.length) project.attachments = cmsItem.attachments;
+          if (Array.isArray(cmsItem.videos) && cmsItem.videos.length) project.videos = cmsItem.videos;
+        }
+      }
     }
 
     if (!project) return;
@@ -1465,49 +1566,7 @@
       }, 3000);
     }
 
-    // CMS Synchronization: Expose global updater & load cached updates
-    window.updateProjectsDataFromCMS = function(cmsPortfolio) {
-      if (!Array.isArray(cmsPortfolio) || !cmsPortfolio.length) return;
-      cmsPortfolio.forEach(item => {
-        const idx = PROJECTS_DATA.findIndex(p => p.title.toLowerCase() === (item.title || '').toLowerCase());
-        if (idx >= 0) {
-          PROJECTS_DATA[idx].title = item.title;
-          if (item.desc) PROJECTS_DATA[idx].summary = item.desc;
-          if (item.img) {
-            PROJECTS_DATA[idx].cardImage = item.img;
-            PROJECTS_DATA[idx].heroImage = item.img;
-          }
-          if (Array.isArray(item.images) && item.images.length > 0) {
-            PROJECTS_DATA[idx].gallery = item.images.map(img => typeof img === 'string' ? { src: img, alt: item.title, caption: item.title } : img);
-          }
-          if (Array.isArray(item.highlights)) {
-            PROJECTS_DATA[idx].technicalFocus = item.highlights;
-          }
-          if (Array.isArray(item.videos)) {
-            PROJECTS_DATA[idx].videos = item.videos;
-          }
-          if (Array.isArray(item.badges)) {
-            PROJECTS_DATA[idx].badges = item.badges.map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' });
-          }
-        } else {
-          PROJECTS_DATA.push({
-            title: item.title,
-            category: item.category_name || '',
-            summary: item.desc || '',
-            cardImage: item.img || '',
-            heroImage: item.img || '',
-            badges: (item.badges || []).map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' }),
-            technicalFocus: item.highlights || [],
-            sections: Array.isArray(item.sections) ? item.sections : [{ title: "Project Overview", intro: item.desc || "" }],
-            attachments: Array.isArray(item.attachments) ? item.attachments : [],
-            gallerySubtitle: item.gallerySubtitle || '',
-            gallery: (item.images || []).map(img => typeof img === 'string' ? { src: img, alt: item.title, caption: item.title } : img),
-            videos: Array.isArray(item.videos) ? item.videos : []
-          });
-        }
-      });
-    };
-
+    // Sync latest CMS data if available on load
     try {
       const stored = localStorage.getItem('aadya_cms_content');
       if (stored) {

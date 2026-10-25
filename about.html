@@ -1,115 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="antialiased">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Aadya Agarwal</title>
-  <meta name="description" content="About Aadya Agarwal: Journey, core values, intellectual influences, and multidisciplinary vision bridging precision engineering, empathy, and art.">
-  <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About Aadya Agarwal</title>
+  <meta name="description" content="About Aadya Agarwal — her story, values and how students, educators and researchers can connect, invite her to speak, or collaborate."/>
+  <link rel="icon" type="image/png" href="assets/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css?v=360">
+  <link rel="stylesheet" href="modern-style.css?v=370">
 </head>
-<body id="top" class="min-h-full bg-paper text-ink font-body">
-
-  <header class="site-header">
-    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6">
-      <a href="index.html" class="font-display text-xl font-bold text-plum" aria-label="Aadya Agarwal, back to home">AA</a>
-      
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="index.html#memberships" class="nav-link">Memberships</a>
-        <a href="awards.html" class="nav-link">Awards</a>
-        <a href="connect.html" class="nav-link">Connect</a>
-        <a href="about.html" class="nav-link active">About</a>
-      </nav>
-
-      <!-- Mobile Hamburger Button -->
-      <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div class="mobile-menu" aria-label="Mobile navigation">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="index.html#memberships" class="nav-link">Memberships</a>
-      <a href="awards.html" class="nav-link">Awards</a>
-      <a href="connect.html" class="nav-link active">Connect</a>
-      <a href="about.html" class="nav-link">About</a>
-    </div>
-  </header>
-
+<body class="min-h-full">
   <main>
-    <!-- Editorial Hero Section -->
-    <section class="page-hero" style="border-bottom: none;">
-      <div class="container" style="max-width: 860px; text-align: center;">
-        <span class="page-hero-eyebrow">Personal Journey &amp; Ethos</span>
-        <h1 class="page-hero-title">About Aadya Agarwal</h1>
-        <p class="page-hero-lead" style="margin-left: auto; margin-right: auto; max-width: 640px;">
-          Eco-engineer, student researcher, and builder exploring where precision science, community equity, and creative craft meet.
-        </p>
+    <header class="sticky top-0 z-30 border-b border-ink/10 bg-white/95 backdrop-blur-sm">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6">
+        <a class="font-display text-xl font-bold text-plum" aria-label="Aadya Agarwal, home" href="index.html">AA</a>
+        <nav aria-label="Main navigation" class="flex items-center gap-4 text-xs font-medium text-ink/70 sm:gap-5 sm:text-sm">
+          <a class="hover:text-plum transition-colors" href="portfolio.html">Portfolio</a>
+          <a class="hidden hover:text-plum transition-colors sm:inline" href="awards.html">Awards</a>
+          <a class="hover:text-plum transition-colors" href="connect.html">Connect</a>
+          <span class="font-semibold text-plum">About</span>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Main About Content Section (Clean, Spacious & Attractive) -->
-    <section style="padding-top: 0; padding-bottom: 5rem;">
-      <div class="container about-editorial-wrap">
-        
-        <!-- 1. Featured Quote Card -->
-        <div class="about-quote-card">
-          <blockquote class="about-quote-text">
-            &ldquo;Meaningful change often begins with the willingness to step forward before the path is paved.&rdquo;
-          </blockquote>
-          <span class="about-quote-subtext">
-            The core philosophy behind the name <em>Aadya</em> &mdash; an ancient Sanskrit word meaning &lsquo;The First&rsquo;.
-          </span>
-        </div>
-
-        <!-- 2. The Story Card (Clean Editorial Typography) -->
-        <div class="about-story-card">
-          <span class="editorial-eyebrow">Personal Narrative</span>
-          <h2 class="editorial-section-title" style="margin-bottom: 1.25rem;">The Story Behind the Science</h2>
-
-          <p class="story-lead-p">
-            Aadya Agarwal is a student based in Princeton, New Jersey with roots in India. Her name originates from an ancient Sanskrit word meaning <strong>the first</strong> &mdash; a guiding philosophy she carries into every experiment, prototype, and civic initiative.
+    <!-- Top Hero Section -->
+    <section class="bg-paper py-12 sm:py-16">
+      <div class="mx-auto grid max-w-6xl gap-8 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-berry">About me</p>
+          <h1 class="mt-2 flex flex-wrap items-center gap-3 font-display text-4xl font-semibold tracking-tight text-plum sm:text-5xl">
+            Aadya Agarwal
+            <a href="https://github.com/aanj1" target="_blank" rel="noopener noreferrer" aria-label="Aadya Agarwal on GitHub" class="text-ink/40 transition hover:text-ink/70">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-6 w-6">
+                <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path>
+              </svg>
+            </a>
+          </h1>
+          <p class="mt-2 text-sm text-ink/60">The Lawrenceville School · Class of 2029 · Princeton, New Jersey</p>
+          <p class="mt-5 max-w-xl text-base leading-7 text-ink/75">
+            Eco-engineer and equitable-health builder — working where responsible AI, hands-on engineering and community science meet, so that clean water and basic care reach the people the world usually forgets.
           </p>
-
-          <h3 class="story-subhead">Where Disciplines Meet</h3>
-          <p class="story-prose-p">
-            Drawn to questions that cross traditional boundaries &mdash; precision engineering and environmental chemistry alongside creative writing, classical music, and civic advocacy &mdash; Aadya is happiest when an insight from one field unlocks something unexpected in another. Whether modeling heavy metal biochar adsorption isotherms or optimizing PID loops for autonomous robotics, she believes that technical rigor is only as powerful as the human conscience behind it.
-          </p>
-
-          <h3 class="story-subhead">Life Beyond the Workbench</h3>
-          <p class="story-prose-p">
-            Her favorite book is Charlie Mackesy&rsquo;s <em>The Boy, the Mole, the Fox and the Horse</em>, which keeps her anchored in the quiet, transformative power of empathy and persistence. Away from the lab, Aadya is an adventurous spirit and home cook &mdash; who loves skiing, horseback riding, farm visits, and once made a 20-foot cliff jump into the crystal-clear waters of a Mexican cenote at age ten.
-          </p>
-        </div>
-
-        <!-- Collaboration Sign-off Banner -->
-        <div class="about-signoff-banner">
-          <div>
-            <span class="editorial-eyebrow" style="margin-bottom: 0.15rem;">Collaboration &amp; Outreach</span>
-            <p class="about-signoff-text">Interested in discussing ecological research, robotics, or youth STEM advocacy?</p>
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a href="mailto:aadyanj@gmail.com" class="rounded-lg bg-plum px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-plum/90">Email aadyanj@gmail.com</a>
+            <a href="https://github.com/aanj1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-plum/40 bg-white px-5 py-2.5 text-sm font-semibold text-plum transition hover:bg-plum/5">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-4 w-4">
+                <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path>
+              </svg>
+              GitHub
+            </a>
           </div>
-          <a href="connect.html" class="about-signoff-btn">
-            <span>Let&rsquo;s Connect</span>
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
-
+        <div class="grid grid-cols-2 gap-4">
+          <div class="relative col-span-2 aspect-[4/3] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-md sm:col-span-1 sm:aspect-[3/4]">
+            <img alt="Aadya Agarwal" class="h-full w-full object-cover object-top" src="about/portrait-1.jpg"/>
+          </div>
+          <div class="relative aspect-[4/3] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-md sm:aspect-[3/4]">
+            <img alt="Aadya Agarwal" loading="lazy" class="h-full w-full object-cover object-center" src="about/portrait-2.jpg"/>
+          </div>
+        </div>
       </div>
     </section>
-  </main>
 
-  <footer class="border-t border-ink/10 bg-paper py-8 text-center text-xs text-ink/50">
-    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 sm:flex-row sm:px-6">
-      <p>© 2026 Aadya Agarwal · Built with intentional craft &amp; equitable vision.</p>
-      <a href="#top" class="font-medium text-plum transition hover:text-berry">Back to top ↑</a>
-    </div>
-  </footer>
+    <!-- My story Section -->
+    <section class="border-t border-ink/10 bg-white py-12 sm:py-16">
+      <div class="mx-auto max-w-3xl px-5 sm:px-6">
+        <h2 class="font-display text-3xl font-semibold tracking-tight text-plum">My story</h2>
+        <div class="mt-5 space-y-4">
+          <p class="text-base leading-7 text-ink/75">
+            Aadya Agarwal is a Princeton, New Jersey student with roots in India. Her name comes from Sanskrit — it means “first” and “excellent,” and echoes the goddess Durga, a symbol of primordial energy and power. She grew up in a lively, multicultural home where unstructured conversation was the norm, and that upbringing shaped how she works: curious across disciplines, quick to include people, and grateful for the relationships that carry an idea forward.
+          </p>
+          <p class="text-base leading-7 text-ink/75">
+            Her favorite book is Charlie Mackesy’s <em>The Boy, the Mole, the Fox and the Horse</em>, which keeps her anchored to a simple goal — to live with gratitude and leave the world a little better than she found it. That outlook runs through everything from her water-remediation research to the poems she publishes.
+          </p>
+          <p class="text-base leading-7 text-ink/75">
+            Away from the lab and the page, Aadya is an enthusiastic adventurer and cook. She has gone parasailing, horseback riding and skiing, spent time on farms, and once — at age ten — made a 20-foot cliff jump into the crystal-clear water of a Mexican cenote. In the kitchen she likes to experiment, including an avocado buttercream she is quietly proud of.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- At a glance Section -->
+    <section class="border-t border-ink/10 bg-paper py-12 sm:py-16">
+      <div class="mx-auto max-w-6xl px-5 sm:px-6">
+        <h2 class="font-display text-3xl font-semibold tracking-tight text-plum">At a glance</h2>
+        <p class="mt-2 max-w-3xl text-base leading-7 text-ink/75">
+          A student drawn to questions that cross disciplines — engineering and environmental research alongside writing, public speaking, music and community service.
+        </p>
+        <div class="mt-8 grid gap-5 md:grid-cols-2">
+          
+          <!-- Education Card -->
+          <article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-berry">Education</p>
+            <h3 class="mt-1 font-display text-lg font-semibold text-plum">Academic Background</h3>
+            <ul class="mt-4 space-y-2.5">
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>The Lawrenceville School, Class of 2029; coursework in honors mathematics, environmental science, biology and technology design.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Princeton Day School mathematics and Science Olympiad teams; AoPS coursework in algebra, geometry, competition math and Python.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Selected for Lawrenceville Rising Scholars and a 24-week bio-research program studying cancer biology and cell processes.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Skills Card -->
+          <article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-berry">Skills</p>
+            <h3 class="mt-1 font-display text-lg font-semibold text-plum">Technical Learning</h3>
+            <ul class="mt-4 space-y-2.5">
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Python, robotics coding, experimental design, data analysis and machine-learning concepts.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Completed Harvard CS50 Introduction to Python Programming; studying the broader CS50 computer-science course.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Hands-on work with water-quality measurements, biochar trials, sensor architecture and responsible-AI design.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Leadership Card -->
+          <article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-berry">Leadership</p>
+            <h3 class="mt-1 font-display text-lg font-semibold text-plum">School &amp; Community Roles</h3>
+            <ul class="mt-4 space-y-2.5">
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Elected Lawrenceville House Academic Advisor for the freshman class and serves as a campus tour guide.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>At Princeton Day School, served as an ambassador, wrote and edited for The Spokes, and mentored new Science Olympiad students.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Through LCAP and STEP For A Better World LEO Club, supports sustainability education, health awareness and service drives.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Writing Card -->
+          <article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-berry">Writing</p>
+            <h3 class="mt-1 font-display text-lg font-semibold text-plum">Published Voice</h3>
+            <ul class="mt-4 space-y-2.5">
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Published fiction and poetry in The Telling Room, Skipping Stones and Poetic Power anthologies.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Earned a Scholastic regional Honorable Mention and placed in Patriot’s Pen and an AoPS short-story contest.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Advanced to the semifinal round of Lawrenceville’s school public-speaking contest.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Arts Card -->
+          <article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-berry">Arts</p>
+            <h3 class="mt-1 font-display text-lg font-semibold text-plum">Music &amp; Theater</h3>
+            <ul class="mt-4 space-y-2.5">
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Flutist in Lawrenceville’s jazz band; previously first chair and soloist in a middle-school advanced band.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Earned a piano Grand Prize at the Music-Fest International Rising Talent Festival and NJMTA Honors ratings.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Acts and stage-manages school productions, including Beauty and the Beast Jr. and Lawrenceville Shakespeare theater.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Athletics Card -->
+          <article class="rounded-xl border border-ink/15 bg-white p-5 shadow-sm sm:p-6">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-berry">Athletics</p>
+            <h3 class="mt-1 font-display text-lg font-semibold text-plum">Teams &amp; Sportsmanship</h3>
+            <ul class="mt-4 space-y-2.5">
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Captained a middle-school advanced tennis team and received a Nike Tennis Camp sportsmanship award.</span>
+              </li>
+              <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+                <span>Also plays volleyball, lacrosse and basketball, and participates in Lawrenceville skating.</span>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- For other young women in STEM Section -->
+    <section class="border-t border-ink/10 bg-plum-soft/40 py-12 sm:py-16">
+      <div class="mx-auto max-w-4xl px-5 sm:px-6">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-berry">For other young women in STEM</p>
+        <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-plum sm:text-4xl">What you can take from this work</h2>
+        <p class="mt-4 max-w-2xl text-base leading-7 text-ink/75">
+          Aadya hopes her path is useful to other students — especially young women — who are deciding whether their questions are worth chasing. A few things she has learned along the way:
+        </p>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3 rounded-xl border border-ink/10 bg-white p-5 shadow-sm">
+            <span aria-hidden="true" class="mt-[0.5em] h-2 w-2 shrink-0 rounded-full bg-berry"></span>
+            <span class="text-base leading-7 text-ink/75">
+              <strong class="font-semibold text-ink">Start before you feel ready.</strong> Aadya’s projects began as questions she did not yet know how to answer — a water sample, a sensor, a first line of code — and grew through iteration, not certainty.
+            </span>
+          </li>
+          <li class="flex gap-3 rounded-xl border border-ink/10 bg-white p-5 shadow-sm">
+            <span aria-hidden="true" class="mt-[0.5em] h-2 w-2 shrink-0 rounded-full bg-berry"></span>
+            <span class="text-base leading-7 text-ink/75">
+              <strong class="font-semibold text-ink">Let disciplines cross.</strong> Her strongest work lives where engineering meets environmental science, writing and community service; the most interesting problems rarely stay inside one subject.
+            </span>
+          </li>
+          <li class="flex gap-3 rounded-xl border border-ink/10 bg-white p-5 shadow-sm">
+            <span aria-hidden="true" class="mt-[0.5em] h-2 w-2 shrink-0 rounded-full bg-berry"></span>
+            <span class="text-base leading-7 text-ink/75">
+              <strong class="font-semibold text-ink">Build for the people usually left out.</strong> Whether it is a one-minute vitals check at a farmers market or a low-cost water filter, the goal is to make care and opportunity more within reach.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Invite · Mentor · Research Section -->
+    <section id="invite" class="border-t border-ink/10 bg-white py-12 sm:py-16">
+      <div class="mx-auto max-w-4xl px-5 text-center sm:px-6">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-berry">Invite · Mentor · Research</p>
+        <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-plum sm:text-4xl">Invite Aadya to speak or collaborate</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink/75">
+          Aadya is glad to speak at student events and panels, mentor young women entering STEM, and collaborate on research in water, responsible AI and equitable health. If her work resonates — or you would like her to share it with your students or team — reach out and she will be happy to arrange a conversation.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a href="mailto:aadyanj@gmail.com?subject=Invitation%20to%20speak%20or%20collaborate" class="rounded-lg bg-plum px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-plum/90">Email aadyanj@gmail.com</a>
+          <a class="rounded-lg border border-plum/40 bg-white px-5 py-2.5 text-sm font-semibold text-plum transition hover:bg-plum/5" href="connect.html">Other ways to connect</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-ink/10 bg-white px-5 py-8 text-center text-sm text-ink/50">
+      Aadya Agarwal · The Lawrenceville School · Class of 2029 · <a href="mailto:aadyanj@gmail.com" class="text-plum hover:underline">aadyanj@gmail.com</a>
+    </footer>
+  </main>
 
   <script src="modern-script.js?v=9"></script>
   <script src="cms-loader.js?v=7"></script>
