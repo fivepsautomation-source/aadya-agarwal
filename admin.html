@@ -710,7 +710,7 @@
         </div>
         <div class="sidebar-nav-item" onclick="switchTab('about')">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-          <span>About Story</span>
+          <span>About Page &amp; Story</span>
         </div>
         <div class="sidebar-nav-item" onclick="switchTab('connect')">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -948,36 +948,188 @@
           </div>
         </div>
 
-        <!-- TAB 7: ABOUT STORY -->
+        <!-- TAB 7: ABOUT PAGE & STORY -->
         <div id="tab-about" class="tab-section">
           <div class="cms-card">
             <div class="cms-card-header">
               <div>
-                <h2 class="cms-card-title">About Story, Philosophy &amp; 5 Things Bento</h2>
-                <p class="cms-card-subtitle">Manage personal etymology, Charlie Mackesy quote, and bento items.</p>
+                <h2 class="cms-card-title">About Page &amp; Dual Portraits</h2>
+                <p class="cms-card-subtitle">Manage hero portraits, lead bio, personal story, "At a glance" cards, takeaways for young women in STEM, and invite text.</p>
               </div>
               <button onclick="saveAboutData()" class="btn-primary" style="width: auto; padding: 0.65rem 1.4rem; margin: 0;">Save About Page</button>
             </div>
 
-            <div class="form-group">
-              <label class="form-label">Sanskrit Etymology (आद्या) Content</label>
-              <textarea id="aboutEtymologyContent" rows="4" class="form-input"></textarea>
+            <!-- SECTION 1: DUAL PORTRAITS & HERO BIO -->
+            <div style="background: #fdfbf9; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(186,31,67,0.18); margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--admin-plum); margin: 0 0 0.35rem;">1. Dual Portraits &amp; Hero Bio</h3>
+              <p style="font-size: 0.78rem; color: rgba(15,15,18,0.6); margin-bottom: 1rem;">These two portraits appear side-by-side in the hero section of the About page.</p>
+
+              <div class="grid-2col" style="margin-bottom: 1rem;">
+                <!-- Portrait 1 -->
+                <div style="background: #fff; padding: 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08);">
+                  <label class="form-label" style="font-weight: 700;">Portrait 1 (Primary Headshot)</label>
+                  <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                    <div style="width: 80px; height: 100px; border-radius: 8px; overflow: hidden; background: #eee; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0;">
+                      <img id="aboutPortrait1Preview" src="about/portrait-1.jpg" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this)">
+                    </div>
+                    <div style="flex: 1;">
+                      <label class="btn-secondary" style="cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; padding: 0.45rem 0.85rem; margin-bottom: 0.4rem;">
+                        <span>📷 Change / Upload Image</span>
+                        <input type="file" accept="image/*" style="display: none;" onchange="uploadSingleImage(this, 'aboutPortrait1', 'aboutPortrait1Preview')">
+                      </label>
+                      <input type="text" id="aboutPortrait1" class="form-input" style="font-size: 0.82rem; padding: 0.5rem 0.75rem;" placeholder="Image URL (e.g. about/portrait-1.jpg)" oninput="updateAboutPortraitPreview(1, this.value)">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Portrait 2 -->
+                <div style="background: #fff; padding: 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08);">
+                  <label class="form-label" style="font-weight: 700;">Portrait 2 (Secondary Portrait)</label>
+                  <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                    <div style="width: 80px; height: 100px; border-radius: 8px; overflow: hidden; background: #eee; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0;">
+                      <img id="aboutPortrait2Preview" src="about/portrait-2.jpg" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this)">
+                    </div>
+                    <div style="flex: 1;">
+                      <label class="btn-secondary" style="cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; padding: 0.45rem 0.85rem; margin-bottom: 0.4rem;">
+                        <span>📷 Change / Upload Image</span>
+                        <input type="file" accept="image/*" style="display: none;" onchange="uploadSingleImage(this, 'aboutPortrait2', 'aboutPortrait2Preview')">
+                      </label>
+                      <input type="text" id="aboutPortrait2" class="form-input" style="font-size: 0.82rem; padding: 0.5rem 0.75rem;" placeholder="Image URL (e.g. about/portrait-2.jpg)" oninput="updateAboutPortraitPreview(2, this.value)">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">School, Class &amp; Location Tagline</label>
+                <input type="text" id="aboutLocationTag" class="form-input" placeholder="e.g. The Lawrenceville School · Class of 2029 · Princeton, New Jersey">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Hero Lead Bio</label>
+                <textarea id="aboutLeadBio" rows="3" class="form-input" placeholder="Eco-engineer and equitable-health builder..."></textarea>
+              </div>
             </div>
 
-            <div class="grid-2col">
+            <!-- SECTION 2: MY STORY (3 PARAGRAPHS) -->
+            <div style="background: #fdfbf9; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(186,31,67,0.18); margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--admin-plum); margin: 0 0 0.35rem;">2. My Story (Narrative Paragraphs)</h3>
+              <p style="font-size: 0.78rem; color: rgba(15,15,18,0.6); margin-bottom: 1rem;">Divided into 3 focused paragraphs matching the live About page layout.</p>
+
               <div class="form-group">
-                <label class="form-label">Inspirational Quote</label>
-                <input type="text" id="aboutQuoteText" class="form-input">
+                <label class="form-label">Paragraph 1: Background &amp; Meaning of "Aadya" (Roots)</label>
+                <textarea id="aboutStoryP1" rows="4" class="form-input"></textarea>
               </div>
+
               <div class="form-group">
-                <label class="form-label">Quote Author</label>
-                <input type="text" id="aboutQuoteAuthor" class="form-input">
+                <label class="form-label">Paragraph 2: Guiding Philosophy &amp; Charlie Mackesy</label>
+                <textarea id="aboutStoryP2" rows="3" class="form-input"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Paragraph 3: Adventures, Cooking &amp; Beyond the Lab</label>
+                <textarea id="aboutStoryP3" rows="3" class="form-input"></textarea>
               </div>
             </div>
 
-            <div class="form-group">
-              <label class="form-label">Quote Reflection Narrative</label>
-              <textarea id="aboutQuoteReflection" rows="3" class="form-input"></textarea>
+            <!-- SECTION 3: AT A GLANCE (6 CARDS) -->
+            <div style="background: #fdfbf9; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(186,31,67,0.18); margin-bottom: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem;">
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--admin-plum); margin: 0;">3. "At A Glance" Cards (6 Categories)</h3>
+                <span style="font-size: 0.74rem; color: var(--admin-berry); font-weight: 700;">Enter each bullet point on a NEW line</span>
+              </div>
+              <p style="font-size: 0.78rem; color: rgba(15,15,18,0.6); margin-bottom: 1rem;">Every line in these text boxes becomes a separate bullet point card on the live page.</p>
+
+              <div class="form-group">
+                <label class="form-label">Section Subtitle / Introduction</label>
+                <input type="text" id="aboutGlanceIntro" class="form-input">
+              </div>
+
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label class="form-label">🎓 1. Education — Academic Background</label>
+                  <textarea id="aboutGlanceEducation" rows="4" class="form-input" placeholder="Point 1&#10;Point 2&#10;Point 3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">💻 2. Skills — Technical Learning</label>
+                  <textarea id="aboutGlanceSkills" rows="4" class="form-input" placeholder="Point 1&#10;Point 2&#10;Point 3"></textarea>
+                </div>
+              </div>
+
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label class="form-label">🏛️ 3. Leadership — School &amp; Community Roles</label>
+                  <textarea id="aboutGlanceLeadership" rows="4" class="form-input" placeholder="Point 1&#10;Point 2&#10;Point 3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">✍️ 4. Writing — Published Voice</label>
+                  <textarea id="aboutGlanceWriting" rows="4" class="form-input" placeholder="Point 1&#10;Point 2&#10;Point 3"></textarea>
+                </div>
+              </div>
+
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label class="form-label">🎵 5. Arts — Music &amp; Theater</label>
+                  <textarea id="aboutGlanceArts" rows="4" class="form-input" placeholder="Point 1&#10;Point 2&#10;Point 3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">🎾 6. Athletics — Teams &amp; Sportsmanship</label>
+                  <textarea id="aboutGlanceAthletics" rows="4" class="form-input" placeholder="Point 1&#10;Point 2&#10;Point 3"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 4: FOR OTHER YOUNG WOMEN IN STEM -->
+            <div style="background: #fdfbf9; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(186,31,67,0.18); margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--admin-plum); margin: 0 0 0.35rem;">4. For Other Young Women in STEM (3 Takeaways)</h3>
+              <p style="font-size: 0.78rem; color: rgba(15,15,18,0.6); margin-bottom: 1rem;">Inspiring takeaways for students pursuing STEM questions.</p>
+
+              <div class="form-group">
+                <label class="form-label">Section Introduction Message</label>
+                <input type="text" id="aboutTakeawaysIntro" class="form-input">
+              </div>
+
+              <!-- Takeaway 1 -->
+              <div style="background: #fff; padding: 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); margin-bottom: 0.75rem;">
+                <label class="form-label" style="font-weight: 700;">Takeaway 1</label>
+                <input type="text" id="aboutTakeaway1Title" class="form-input" style="font-weight: 600; margin-bottom: 0.5rem;" placeholder="Headline (e.g. Start before you feel ready.)">
+                <textarea id="aboutTakeaway1Desc" rows="2" class="form-input" placeholder="Description..."></textarea>
+              </div>
+
+              <!-- Takeaway 2 -->
+              <div style="background: #fff; padding: 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); margin-bottom: 0.75rem;">
+                <label class="form-label" style="font-weight: 700;">Takeaway 2</label>
+                <input type="text" id="aboutTakeaway2Title" class="form-input" style="font-weight: 600; margin-bottom: 0.5rem;" placeholder="Headline (e.g. Let disciplines cross.)">
+                <textarea id="aboutTakeaway2Desc" rows="2" class="form-input" placeholder="Description..."></textarea>
+              </div>
+
+              <!-- Takeaway 3 -->
+              <div style="background: #fff; padding: 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); margin-bottom: 1rem;">
+                <label class="form-label" style="font-weight: 700;">Takeaway 3</label>
+                <input type="text" id="aboutTakeaway3Title" class="form-input" style="font-weight: 600; margin-bottom: 0.5rem;" placeholder="Headline (e.g. Build for the people usually left out.)">
+                <textarea id="aboutTakeaway3Desc" rows="2" class="form-input" placeholder="Description..."></textarea>
+              </div>
+            </div>
+
+            <!-- SECTION 5: INVITE AADYA TO SPEAK OR COLLABORATE -->
+            <div style="background: #fdfbf9; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(186,31,67,0.18); margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--admin-plum); margin: 0 0 0.35rem;">5. Invite to Speak or Collaborate</h3>
+              <p style="font-size: 0.78rem; color: rgba(15,15,18,0.6); margin-bottom: 1rem;">Closing callout on the About page inviting event organizers and research collaborators.</p>
+
+              <div class="form-group">
+                <label class="form-label">Invite Headline</label>
+                <input type="text" id="aboutInviteHeadline" class="form-input" placeholder="Invite Aadya to speak or collaborate">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Invite Callout Message</label>
+                <textarea id="aboutInviteBody" rows="3" class="form-input"></textarea>
+              </div>
+            </div>
+
+            <!-- Bottom Save Button -->
+            <div style="display: flex; justify-content: flex-end; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.08);">
+              <button onclick="saveAboutData()" class="btn-primary" style="width: auto; padding: 0.8rem 2rem; margin: 0;">Save All About Page Changes</button>
             </div>
           </div>
         </div>
@@ -1443,6 +1595,16 @@
       }
     }
 
+    function updateAboutPortraitPreview(num, val) {
+      const prev = document.getElementById('aboutPortrait' + num + 'Preview');
+      if (prev) {
+        prev.removeAttribute('data-tried-github-raw');
+        prev.removeAttribute('data-tried-cdn');
+        prev.src = getResolvedImageSrc((val || '').trim());
+      }
+    }
+
+
     function showToast(msg) {
       const container = document.getElementById('toastContainer');
       const toast = document.createElement('div');
@@ -1760,7 +1922,11 @@
 
       if (url === '/api/about/save' && method === 'POST') {
         siteData.about = siteData.about || {};
-        siteData.about[data.key] = data.data;
+        if (data.key) {
+          siteData.about[data.key] = data.data;
+        } else {
+          siteData.about = Object.assign({}, siteData.about, data);
+        }
         syncToStorage();
         return { success: true };
       }
@@ -2038,12 +2204,50 @@
 
       // Render About
       const ab = siteData.about || {};
-      if (ab.etymology) document.getElementById('aboutEtymologyContent').value = ab.etymology.content || '';
-      if (ab.quote) {
-        document.getElementById('aboutQuoteText').value = ab.quote.text || '';
-        document.getElementById('aboutQuoteAuthor').value = ab.quote.author || '';
-        document.getElementById('aboutQuoteReflection').value = ab.quote.reflection || '';
+      const setVal = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.value = val != null ? val : '';
+      };
+      
+      setVal('aboutPortrait1', ab.portrait_1 || 'about/portrait-1.jpg');
+      updateAboutPortraitPreview(1, ab.portrait_1 || 'about/portrait-1.jpg');
+
+      setVal('aboutPortrait2', ab.portrait_2 || 'about/portrait-2.jpg');
+      updateAboutPortraitPreview(2, ab.portrait_2 || 'about/portrait-2.jpg');
+
+      setVal('aboutLocationTag', ab.location_tag || 'The Lawrenceville School · Class of 2029 · Princeton, New Jersey');
+      setVal('aboutLeadBio', ab.lead_bio || '');
+
+      setVal('aboutStoryP1', ab.story_p1 || '');
+      setVal('aboutStoryP2', ab.story_p2 || '');
+      setVal('aboutStoryP3', ab.story_p3 || '');
+
+      setVal('aboutGlanceIntro', ab.glance_intro || '');
+      const glance = ab.at_a_glance || {};
+      setVal('aboutGlanceEducation', Array.isArray(glance.education) ? glance.education.join('\n') : (glance.education || ''));
+      setVal('aboutGlanceSkills', Array.isArray(glance.skills) ? glance.skills.join('\n') : (glance.skills || ''));
+      setVal('aboutGlanceLeadership', Array.isArray(glance.leadership) ? glance.leadership.join('\n') : (glance.leadership || ''));
+      setVal('aboutGlanceWriting', Array.isArray(glance.writing) ? glance.writing.join('\n') : (glance.writing || ''));
+      setVal('aboutGlanceArts', Array.isArray(glance.arts) ? glance.arts.join('\n') : (glance.arts || ''));
+      setVal('aboutGlanceAthletics', Array.isArray(glance.athletics) ? glance.athletics.join('\n') : (glance.athletics || ''));
+
+      setVal('aboutTakeawaysIntro', ab.takeaways_intro || '');
+      const takeaways = Array.isArray(ab.takeaways) ? ab.takeaways : [];
+      if (takeaways[0]) {
+        setVal('aboutTakeaway1Title', takeaways[0].title || '');
+        setVal('aboutTakeaway1Desc', takeaways[0].desc || '');
       }
+      if (takeaways[1]) {
+        setVal('aboutTakeaway2Title', takeaways[1].title || '');
+        setVal('aboutTakeaway2Desc', takeaways[1].desc || '');
+      }
+      if (takeaways[2]) {
+        setVal('aboutTakeaway3Title', takeaways[2].title || '');
+        setVal('aboutTakeaway3Desc', takeaways[2].desc || '');
+      }
+
+      setVal('aboutInviteHeadline', ab.invite_headline || '');
+      setVal('aboutInviteBody', ab.invite_body || '');
 
       // Render Connect
       document.getElementById('connectEmail').value = s.connect_email || '';
@@ -3191,20 +3395,46 @@
     }
 
     async function saveAboutData() {
-      const etymology = {
-        tag: 'IDENTITY · ETYMOLOGY',
-        title: 'What "Aadya" Means to Me',
-        content: document.getElementById('aboutEtymologyContent').value.trim()
+      const getVal = id => {
+        const el = document.getElementById(id);
+        return el ? el.value.trim() : '';
       };
-      const quote = {
-        text: document.getElementById('aboutQuoteText').value.trim(),
-        author: document.getElementById('aboutQuoteAuthor').value.trim(),
-        reflection: document.getElementById('aboutQuoteReflection').value.trim()
+      const splitLines = id => {
+        const val = getVal(id);
+        if (!val) return [];
+        return val.split('\n').map(s => s.trim()).filter(Boolean);
       };
 
-      await apiRequest('/api/about/save', 'POST', { key: 'etymology', data: etymology });
-      await apiRequest('/api/about/save', 'POST', { key: 'quote', data: quote });
-      await syncToStorageAndPublish('About sections');
+      const updatedAbout = {
+        portrait_1: getVal('aboutPortrait1') || 'about/portrait-1.jpg',
+        portrait_2: getVal('aboutPortrait2') || 'about/portrait-2.jpg',
+        location_tag: getVal('aboutLocationTag'),
+        lead_bio: getVal('aboutLeadBio'),
+        story_p1: getVal('aboutStoryP1'),
+        story_p2: getVal('aboutStoryP2'),
+        story_p3: getVal('aboutStoryP3'),
+        glance_intro: getVal('aboutGlanceIntro'),
+        at_a_glance: {
+          education: splitLines('aboutGlanceEducation'),
+          skills: splitLines('aboutGlanceSkills'),
+          leadership: splitLines('aboutGlanceLeadership'),
+          writing: splitLines('aboutGlanceWriting'),
+          arts: splitLines('aboutGlanceArts'),
+          athletics: splitLines('aboutGlanceAthletics')
+        },
+        takeaways_intro: getVal('aboutTakeawaysIntro'),
+        takeaways: [
+          { title: getVal('aboutTakeaway1Title'), desc: getVal('aboutTakeaway1Desc') },
+          { title: getVal('aboutTakeaway2Title'), desc: getVal('aboutTakeaway2Desc') },
+          { title: getVal('aboutTakeaway3Title'), desc: getVal('aboutTakeaway3Desc') }
+        ].filter(t => t.title || t.desc),
+        invite_headline: getVal('aboutInviteHeadline'),
+        invite_body: getVal('aboutInviteBody')
+      };
+
+      await apiRequest('/api/about/save', 'POST', updatedAbout);
+      await syncToStorageAndPublish('About page and dual portraits');
+      showToast('About page saved and published successfully!');
       loadAllData();
     }
 

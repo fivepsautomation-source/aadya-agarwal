@@ -509,8 +509,111 @@
       }
     }
 
-    // 6. ABOUT PAGE STORY SECTIONS
+    // 6. ABOUT PAGE STORY SECTIONS & MODERN ABOUT ELEMENTS
     if (data.about) {
+      const ab = data.about;
+
+      // Location tag & Lead Bio
+      if (ab.location_tag) {
+        document.querySelectorAll('[data-cms="about_location_tag"]').forEach(el => {
+          el.textContent = ab.location_tag;
+        });
+      }
+      if (ab.lead_bio) {
+        document.querySelectorAll('[data-cms="about_lead_bio"]').forEach(el => {
+          el.textContent = ab.lead_bio;
+        });
+      }
+
+      // Dual Portraits
+      if (ab.portrait_1) {
+        document.querySelectorAll('[data-cms="about_portrait_1"]').forEach(el => {
+          if (el.tagName === 'IMG') el.src = (window.resolveCmsImage ? window.resolveCmsImage(ab.portrait_1) : ab.portrait_1);
+        });
+      }
+      if (ab.portrait_2) {
+        document.querySelectorAll('[data-cms="about_portrait_2"]').forEach(el => {
+          if (el.tagName === 'IMG') el.src = (window.resolveCmsImage ? window.resolveCmsImage(ab.portrait_2) : ab.portrait_2);
+        });
+      }
+
+      // Story Paragraphs (1, 2, 3)
+      if (ab.story_p1) {
+        document.querySelectorAll('[data-cms="about_story_p1"]').forEach(el => {
+          el.textContent = ab.story_p1;
+        });
+      }
+      if (ab.story_p2) {
+        document.querySelectorAll('[data-cms="about_story_p2"]').forEach(el => {
+          el.innerHTML = ab.story_p2;
+        });
+      }
+      if (ab.story_p3) {
+        document.querySelectorAll('[data-cms="about_story_p3"]').forEach(el => {
+          el.textContent = ab.story_p3;
+        });
+      }
+
+      // At a Glance Intro & 6 Bullet Lists
+      if (ab.glance_intro) {
+        document.querySelectorAll('[data-cms="about_glance_intro"]').forEach(el => {
+          el.textContent = ab.glance_intro;
+        });
+      }
+
+      const renderBulletList = (selector, items) => {
+        if (!Array.isArray(items) || !items.length) return;
+        document.querySelectorAll(selector).forEach(ul => {
+          ul.innerHTML = items.map(item => `
+            <li class="flex gap-2.5 text-sm leading-6 text-ink/75">
+              <span aria-hidden="true" class="mt-[0.65em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum"></span>
+              <span>${item}</span>
+            </li>
+          `).join('');
+        });
+      };
+
+      if (ab.at_a_glance) {
+        renderBulletList('[data-cms="about_glance_education"]', ab.at_a_glance.education);
+        renderBulletList('[data-cms="about_glance_skills"]', ab.at_a_glance.skills);
+        renderBulletList('[data-cms="about_glance_leadership"]', ab.at_a_glance.leadership);
+        renderBulletList('[data-cms="about_glance_writing"]', ab.at_a_glance.writing);
+        renderBulletList('[data-cms="about_glance_arts"]', ab.at_a_glance.arts);
+        renderBulletList('[data-cms="about_glance_athletics"]', ab.at_a_glance.athletics);
+      }
+
+      // Takeaways for Young Women in STEM
+      if (ab.takeaways_intro) {
+        document.querySelectorAll('[data-cms="about_takeaways_intro"]').forEach(el => {
+          el.textContent = ab.takeaways_intro;
+        });
+      }
+      if (Array.isArray(ab.takeaways) && ab.takeaways.length) {
+        document.querySelectorAll('[data-cms="about_takeaways"]').forEach(ul => {
+          ul.innerHTML = ab.takeaways.map(t => `
+            <li class="flex gap-3 rounded-xl border border-ink/10 bg-white p-5 shadow-sm">
+              <span aria-hidden="true" class="mt-[0.5em] h-2 w-2 shrink-0 rounded-full bg-berry"></span>
+              <span class="text-base leading-7 text-ink/75">
+                <strong class="font-semibold text-ink">${t.title ? t.title + ' ' : ''}</strong>${t.desc || ''}
+              </span>
+            </li>
+          `).join('');
+        });
+      }
+
+      // Invite Section
+      if (ab.invite_headline) {
+        document.querySelectorAll('[data-cms="about_invite_headline"]').forEach(el => {
+          el.textContent = ab.invite_headline;
+        });
+      }
+      if (ab.invite_body) {
+        document.querySelectorAll('[data-cms="about_invite_body"]').forEach(el => {
+          el.textContent = ab.invite_body;
+        });
+      }
+
+      // Legacy fallback
       if (data.about.etymology && data.about.etymology.content) {
         document.querySelectorAll('[data-cms="about_etymology"], .about-quote-subtext').forEach(el => {
           if (el.classList.contains('about-quote-subtext')) {
