@@ -88,7 +88,9 @@
         "#ClimateAction",
         "#ResponsibleAI"
       ],
-      "badges": [],
+      "badges": [
+        "MIT Solve"
+      ],
       "is_robotics": false,
       "sort_order": 1
     },
