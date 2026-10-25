@@ -99,7 +99,7 @@
       "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
-      "category_name": "Research",
+      "category_name": "Environmental Sustainability & AI",
       "img": "assets/uploads/1792856840122_ieee-attendance.jpg",
       "img_position": "center top",
       "images": [
@@ -129,7 +129,7 @@
         "#BiocharResearch"
       ],
       "badges": [
-        "IEEE"
+        "IEEE ISEC"
       ],
       "is_robotics": false,
       "sort_order": 2,
