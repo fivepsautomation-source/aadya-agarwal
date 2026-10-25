@@ -335,7 +335,7 @@
         "Hunger Relief"
       ],
       "is_robotics": false,
-      "sort_order": 7
+      "sort_order": 8
     },
     {
       "id": 13,
@@ -515,7 +515,7 @@
       "highlights": [],
       "tags": [],
       "badges": [],
-      "sort_order": 8
+      "sort_order": 7
     }
   ],
   "documents": [
