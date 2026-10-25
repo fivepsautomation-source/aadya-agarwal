@@ -562,10 +562,41 @@
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.03em;
+      transition: all 0.15s ease;
+    }
+    .badge-pill-item:hover {
+      background: rgba(59, 18, 45, 0.14);
+      border-color: rgba(59, 18, 45, 0.4);
+    }
+    .badge-pill-text {
+      cursor: pointer;
+      user-select: none;
+    }
+    .badge-pill-text:hover {
+      text-decoration: underline;
+    }
+    .badge-pill-edit {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(59, 18, 45, 0.12);
+      color: var(--admin-plum);
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .badge-pill-edit:hover {
+      background: var(--admin-plum);
+      color: #ffffff;
+      transform: scale(1.1);
     }
     .badge-pill-remove {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: rgba(0,0,0,0.12);
       color: #3b122d;
@@ -581,6 +612,7 @@
     .badge-pill-remove:hover {
       background: #dc2626;
       color: #ffffff;
+      transform: scale(1.1);
     }
     .badge-quick-btn {
       padding: 3px 8px;
@@ -1106,10 +1138,10 @@
           <span style="display: flex; align-items: center; gap: 0.4rem;">
             🏷️ <span>Image Corner Badges &amp; Tags (Over Card Image)</span>
           </span>
-          <span style="font-size: 0.72rem; color: var(--admin-berry); font-weight: 700; text-transform: uppercase;">e.g. FLL, FTC, MIT Solve</span>
+          <span style="font-size: 0.72rem; color: var(--admin-berry); font-weight: 700; text-transform: uppercase;">Click Tag or ✏️ to Edit</span>
         </label>
         <p style="font-size: 0.76rem; color: rgba(15,15,18,0.6); margin-bottom: 0.75rem;">
-          These small badges appear directly on the top-right corner of the project card image (for example <strong>FLL</strong> and <strong>FTC</strong> in Robotics). You can add, edit, or remove any tag.
+          These small badges appear on the top-right corner of the project card image. Click on any tag or its <strong>✏️</strong> button to rename/edit it, or <strong>✕</strong> to remove it.
         </p>
 
         <!-- Current Active Badges Container -->
@@ -2109,31 +2141,96 @@
       loadAllData();
     }
 
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function getDefaultBadgesForProject(p) {
+      if (!p) return [];
+      const id = Number(p.id);
+      const title = (p.title || '').toLowerCase();
+      const slug = (p.category_slug || '').toLowerCase();
+
+      if (id === 101 || title.includes('robotics') || title.includes('fll') || title.includes('ftc') || slug === 'robotics') {
+        return ['FTC', 'FLL'];
+      }
+      if (id === 3 || title.includes('mit solve') || title.includes('solve')) {
+        return ['MIT Solve', 'MIT Media lab'];
+      }
+      if (id === 4 || title.includes('ieee') || title.includes('isec')) {
+        return ['IEEE /ISEC', 'Princeton'];
+      }
+      if (id === 2 || (title.includes('biochar') && !title.includes('ieee'))) {
+        return ['STOCKHOLM Water Prize', 'NJWEA'];
+      }
+      if (id === 1 || title.includes('buoy') || title.includes('ocean')) {
+        return ['Climate Tech', '3M Challenge'];
+      }
+      if (id === 5 || title.includes('biomedical') || slug === 'biomedical') {
+        return ['Stanford AIMI', 'Harvard Fellow'];
+      }
+      if (id === 8 || title.includes('monivitals') || slug === 'monivitals') {
+        return ['HealthTech', 'ESP32'];
+      }
+      if (id === 11 || title.includes('hunger') || title.includes('meal')) {
+        return ['Civic Leadership', 'Youth Volunteering'];
+      }
+      if (id === 13 || title.includes('legislative') || title.includes('commendation') || title.includes('assembly')) {
+        return ['NJ Legislature', 'Civic Impact'];
+      }
+      if (id === 14 || title.includes('writing') || slug === 'writing' || slug === 'arts') {
+        return ['Flute', 'Piano', 'Writing & Arts'];
+      }
+      return [];
+    }
+
     // --- BADGES / TAGS MANAGEMENT ---
     function renderModalBadges() {
       const container = document.getElementById('modalBadgesList');
       if (!container) return;
       container.innerHTML = '';
       if (!currentModalBadges.length) {
-        container.innerHTML = '<span style="color: rgba(15,15,18,0.4); font-size: 0.78rem;">No tags attached yet. Click quick tags below or type a custom tag to add.</span>';
+        container.innerHTML = '<span style="color: rgba(15,15,18,0.45); font-size: 0.78rem; font-style: italic;">No tags attached yet. Click quick tags below or type a custom tag to add.</span>';
         return;
       }
       currentModalBadges.forEach((tag, idx) => {
         const pill = document.createElement('span');
         pill.className = 'badge-pill-item';
         pill.innerHTML = `
-          <span>${tag}</span>
-          <button type="button" class="badge-pill-remove" onclick="removeBadgeTag('${tag}')" title="Remove ${tag}">✕</button>
+          <span class="badge-pill-text" onclick="editBadgeTag(${idx})" title="Click to rename tag">${escapeHtml(tag)}</span>
+          <button type="button" class="badge-pill-edit" onclick="editBadgeTag(${idx})" title="Edit tag '${escapeHtml(tag)}'">✏️</button>
+          <button type="button" class="badge-pill-remove" onclick="removeBadgeTag(${idx})" title="Remove tag '${escapeHtml(tag)}'">✕</button>
         `;
         container.appendChild(pill);
       });
+    }
+
+    function editBadgeTag(index) {
+      if (index < 0 || index >= currentModalBadges.length) return;
+      const current = currentModalBadges[index];
+      const updated = prompt('Edit tag text (e.g. FTC, FLL, AI, Research, 1st Place):', current);
+      if (updated === null) return; // User cancelled
+      const clean = updated.trim();
+      if (!clean) {
+        removeBadgeTag(index);
+        return;
+      }
+      currentModalBadges[index] = clean;
+      renderModalBadges();
+      showToast(`✓ Tag updated to: "${clean}"`);
     }
 
     function addBadgeTag(tagText) {
       const clean = (tagText || '').trim();
       if (!clean) return;
       if (currentModalBadges.includes(clean)) {
-        showToast(`Tag "${clean}" is already added.`);
+        showToast(`Tag "${clean}" is already in this project.`);
         return;
       }
       currentModalBadges.push(clean);
@@ -2141,10 +2238,17 @@
       showToast(`✓ Added tag: ${clean}`);
     }
 
-    function removeBadgeTag(tagText) {
-      currentModalBadges = currentModalBadges.filter(t => t !== tagText);
-      renderModalBadges();
-      showToast(`Removed tag: ${tagText}`);
+    function removeBadgeTag(indexOrTag) {
+      if (typeof indexOrTag === 'number') {
+        const removed = currentModalBadges[indexOrTag];
+        currentModalBadges.splice(indexOrTag, 1);
+        renderModalBadges();
+        showToast(`Removed tag: ${removed || ''}`);
+      } else {
+        currentModalBadges = currentModalBadges.filter(t => t !== indexOrTag);
+        renderModalBadges();
+        showToast(`Removed tag: ${indexOrTag}`);
+      }
     }
 
     function addCustomBadgeFromInput() {
@@ -2174,13 +2278,13 @@
         const isFirst = (idx === 0);
         const isLast = (idx === sortedItems.length - 1);
 
-        const badgesList = Array.isArray(p.badges) ? p.badges : [];
+        let badgesList = (Array.isArray(p.badges) ? p.badges : []).map(b => typeof b === 'object' ? (b.label || '') : String(b)).filter(Boolean);
+        if (!badgesList.length) {
+          badgesList = getDefaultBadgesForProject(p);
+        }
         const badgesHtml = badgesList.length ? `
           <div style="display: flex; gap: 4px; margin-top: 5px; flex-wrap: wrap;">
-            ${badgesList.map(b => {
-              const label = typeof b === 'object' ? (b.label || '') : String(b);
-              return `<span style="font-size: 9px; font-weight: 800; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; background: rgba(59,18,45,0.08); color: var(--admin-plum); border: 1px solid rgba(59,18,45,0.18);">🏷️ ${label}</span>`;
-            }).join('')}
+            ${badgesList.map(b => `<span style="font-size: 9px; font-weight: 800; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; background: rgba(59,18,45,0.08); color: var(--admin-plum); border: 1px solid rgba(59,18,45,0.18);">🏷️ ${escapeHtml(b)}</span>`).join('')}
           </div>
         ` : '';
 
@@ -2297,8 +2401,12 @@
       currentModalGalleryImages = Array.isArray(p.images) && p.images.length > 0 ? [...p.images] : (p.img ? [p.img] : []);
       renderModalGallery();
 
-      // Load badges
-      currentModalBadges = (Array.isArray(p.badges) ? p.badges : []).map(b => typeof b === 'object' ? (b.label || '') : String(b || '')).filter(Boolean);
+      // Load badges: if project doesn't have custom badges yet, load its canonical defaults
+      let loadedBadges = (Array.isArray(p.badges) ? p.badges : []).map(b => typeof b === 'object' ? (b.label || '') : String(b || '')).filter(Boolean);
+      if (!loadedBadges.length) {
+        loadedBadges = getDefaultBadgesForProject(p);
+      }
+      currentModalBadges = [...loadedBadges];
       renderModalBadges();
 
       document.getElementById('projectEditModal').showModal();
