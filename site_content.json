@@ -513,16 +513,26 @@
       "id": 1792918752665,
       "title": "here it is",
       "category_slug": "biomedical",
-      "category_name": "Biomedical & AI",
+      "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792918739033_bio.jpeg",
       "images": [
-        "assets/uploads/1792918739033_bio.jpeg"
+        "assets/uploads/1792918739033_bio.jpeg",
+        "https://aimi.stanford.edu/academic-year-research-internship"
       ],
-      "desc": "editted",
-      "highlights": [],
+      "desc": "Stanford Artificial and Medical Imaging  and Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
+      "highlights": [
+        "Completed a two-week summer internship",
+        "Invited to continue as an academic-year researcher",
+        "Presented my Stanford AIMI project, “User-Centric AI for Assisting the Visually Impaired,” to The Lawrenceville School’s Board of Trustees on October 23, 2026."
+      ],
       "tags": [],
-      "badges": [],
-      "sort_order": 6
+      "badges": [
+        "Stanford AIMI",
+        "Harvard Fellow",
+        "Stanford Artificial Intelligence and Medical Imaging (AIMI)"
+      ],
+      "sort_order": 6,
+      "badge_position": "right"
     }
   ],
   "documents": [
