@@ -335,7 +335,7 @@
         "Hunger Relief"
       ],
       "is_robotics": false,
-      "sort_order": 7
+      "sort_order": 8
     },
     {
       "id": 13,
@@ -484,7 +484,7 @@
         "Piano",
         "Writing & Arts"
       ],
-      "sort_order": 8
+      "sort_order": 7
     }
   ],
   "documents": [
