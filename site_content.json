@@ -231,7 +231,7 @@
         "Research"
       ],
       "is_robotics": false,
-      "sort_order": 5
+      "sort_order": 6
     },
     {
       "id": 8,
@@ -268,7 +268,7 @@
         "HealthTech"
       ],
       "is_robotics": false,
-      "sort_order": 6
+      "sort_order": 5
     },
     {
       "id": 11,
