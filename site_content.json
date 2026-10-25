@@ -725,8 +725,8 @@
       "year": "2026",
       "image_url": "assets/ref_images/projects_msef-water-award.jpg",
       "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Acceptance Speech",
+      "link_url": "https://www.youtube.com/watch?v=ELyxcPwMp3M",
       "sort_order": 1
     },
     {
@@ -737,8 +737,8 @@
       "year": "2026",
       "image_url": "assets/nova.jpeg",
       "description": "National Oceanic and Atmospheric Administration recognition.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Learn More",
+      "link_url": "#",
       "sort_order": 2
     },
     {
@@ -749,8 +749,8 @@
       "year": "2026",
       "image_url": "assets/science_fairs/Science_Fair_Awards_At_Mercer_County_Science_Fair.jpg",
       "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Learn More",
+      "link_url": "#",
       "sort_order": 3
     },
     {
@@ -773,8 +773,8 @@
       "year": "2026",
       "image_url": "assets/robotics/pic 10 - wpi award.jpg",
       "description": "Ranked #14 out of 108 international robotics teams; Lead Autonomous Programmer and Robot Design Award Finalist at Worcester Polytechnic Institute.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Learn More",
+      "link_url": "#",
       "sort_order": 4
     },
     {
@@ -785,8 +785,8 @@
       "year": "2024",
       "image_url": "assets/robotics/pic 2 - Team award.JPG",
       "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Learn More",
+      "link_url": "#",
       "sort_order": 5
     },
     {
@@ -797,8 +797,8 @@
       "year": "2024",
       "image_url": "assets/certificates/Service Award - NJ State Assembly.jpeg",
       "description": "Official commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing youth for grassroots community hunger relief.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Learn More",
+      "link_url": "#",
       "sort_order": 7
     },
     {
@@ -809,8 +809,8 @@
       "year": "2024",
       "image_url": "assets/certificates/STEP UN Future of Service.jpeg",
       "description": "United Nations STEP recognition for youth-led service, hunger relief supply mobilization, and community impact.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Learn More",
+      "link_url": "#",
       "sort_order": 8
     },
     {
@@ -820,8 +820,8 @@
       "year": "2026",
       "image_url": "assets/uploads/1792909567344_WhatsApp_Image_2026-10-24_at_10.03.05_PM.jpeg",
       "description": "Community leadership, civic engagement, and grassroots youth volunteer service.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Learn More",
+      "link_url": "#",
       "sort_order": 9,
       "category_group": "civic"
     },
@@ -833,8 +833,8 @@
       "year": "2026",
       "image_url": "assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg",
       "description": "Selected from 150 ninth-grade students for demonstrated excellence in English study within the Humanities program at The Lawrenceville School.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "View Award Photo",
+      "link_url": "assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg",
       "sort_order": 10
     },
     {
@@ -845,8 +845,8 @@
       "year": "2026",
       "image_url": "assets/ref_images/projects_john-locke_framed.jpg",
       "description": "High Commendation in Science & Technology from over 19,000 international entries across 138 nations in the global essay competition.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "View Certificate",
+      "link_url": "assets/certificates/John Locke 2026 - High Commendation.pdf",
       "sort_order": 11
     },
     {
@@ -857,8 +857,8 @@
       "year": "2026",
       "image_url": "assets/uploads/1792860078914_hir.jpeg",
       "description": "Bronze Medal in the Harvard International Review Academic Writing Competition under the Technology & Innovation theme.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Explore Harvard Review",
+      "link_url": "https://hir.harvard.edu/",
       "sort_order": 12
     },
     {
@@ -869,8 +869,8 @@
       "year": "2026",
       "image_url": "assets/certificates/scholastic_silver_key_card.jpg",
       "description": "Two Silver Keys in Poetry and four Honorable Mentions in Personal Essay & Memoir in the nation’s longest-running student recognition program.",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "View Certificate",
+      "link_url": "assets/certificates/Scholastic_Poetry_Silver_Key_Certificate.pdf",
       "sort_order": 13
     },
     {
@@ -881,8 +881,8 @@
       "year": "2024–2026",
       "image_url": "assets/certificates/poetry_publications_card.jpg",
       "description": "Featured in youth anthologies including Poetic Power, The Telling Room, Skipping Stones, and When the Sink Speaks in The Rev (Top 10 of 150 entries).",
-      "link_text": "",
-      "link_url": "",
+      "link_text": "Explore Publications",
+      "link_url": "https://www.creativity-unleashed.org/TheRev.",
       "sort_order": 14
     },
     {
@@ -967,6 +967,12 @@
     ]
   },
   "media": [
+    {
+      "id": 1792913171331,
+      "filename": "WhatsApp Image 2026-10-24 at 10.03.05 PM.jpeg",
+      "url": "assets/uploads/1792913169275_WhatsApp_Image_2026-10-24_at_10.03.05_PM.jpeg",
+      "uploaded_at": "2026-10-25T07:26:11.332Z"
+    },
     {
       "id": 1,
       "filename": "20261023_091817_test_admin_upload.png",
