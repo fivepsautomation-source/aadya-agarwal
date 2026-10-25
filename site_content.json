@@ -264,7 +264,9 @@
         "#CommunityHealth",
         "#Telehealth"
       ],
-      "badges": [],
+      "badges": [
+        "HealthTech"
+      ],
       "is_robotics": false,
       "sort_order": 6
     },
