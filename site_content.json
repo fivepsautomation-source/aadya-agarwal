@@ -485,6 +485,21 @@
         "Writing & Arts"
       ],
       "sort_order": 7
+    },
+    {
+      "id": 1792918333524,
+      "title": "Music, Theater & Public Speaking",
+      "category_slug": "writing",
+      "category_name": "Writing & Arts",
+      "img": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
+      "images": [
+        "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
+      ],
+      "desc": "editted",
+      "highlights": [],
+      "tags": [],
+      "badges": [],
+      "sort_order": 12
     }
   ],
   "documents": [
