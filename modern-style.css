@@ -2623,22 +2623,6 @@ img {
 }
 
 .biochar-zoom-badge {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(15, 15, 18, 0.75);
-  color: #fff;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  pointer-events: none;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  letter-spacing: 0.02em;
-  z-index: 2;
+  display: none !important;
 }
 
