@@ -360,7 +360,9 @@
         "#MutualAid",
         "#CommunityAction"
       ],
-      "badges": [],
+      "badges": [
+        "Youth Volunteering"
+      ],
       "is_robotics": false,
       "sort_order": 8
     },
