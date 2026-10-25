@@ -859,16 +859,15 @@
               </button>
             </div>
 
-            <!-- Filter Categories -->
+            <!-- Filter Categories (Matches Website Tabs 1-to-1) -->
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;" id="portfolioFilterTabs">
-              <button class="btn-secondary" onclick="filterPortfolioList('all', this)" style="background: var(--admin-plum); color: #fff;">All Projects</button>
+              <button class="btn-secondary" onclick="filterPortfolioList('all', this)" style="background: var(--admin-plum); color: #fff;">All</button>
               <button class="btn-secondary" onclick="filterPortfolioList('robotics', this)">Robotics &amp; Coding</button>
-              <button class="btn-secondary" onclick="filterPortfolioList('environmental', this)">Environmental &amp; AI</button>
+              <button class="btn-secondary" onclick="filterPortfolioList('environmental', this)">Environmental Sustainability &amp; AI</button>
               <button class="btn-secondary" onclick="filterPortfolioList('biomedical', this)">Biomedical &amp; AI</button>
               <button class="btn-secondary" onclick="filterPortfolioList('monivitals', this)">MoniVitals</button>
+              <button class="btn-secondary" onclick="filterPortfolioList('writing', this)">Writing &amp; Arts</button>
               <button class="btn-secondary" onclick="filterPortfolioList('community', this)">School &amp; Community</button>
-              <button class="btn-secondary" onclick="filterPortfolioList('writing', this)">Writing</button>
-              <button class="btn-secondary" onclick="filterPortfolioList('arts', this)">Arts</button>
             </div>
 
             <!-- Project Cards List -->
@@ -1068,9 +1067,8 @@
             <option value="environmental">Environmental Sustainability &amp; AI</option>
             <option value="biomedical">Biomedical &amp; AI</option>
             <option value="monivitals">MoniVitals</option>
+            <option value="writing">Writing &amp; Arts</option>
             <option value="community">School &amp; Community</option>
-            <option value="writing">Writing</option>
-            <option value="arts">Arts</option>
           </select>
         </div>
       </div>
@@ -2161,10 +2159,10 @@
         return ['FTC', 'FLL'];
       }
       if (id === 3 || title.includes('mit solve') || title.includes('solve')) {
-        return ['MIT Solve', 'MIT Media lab'];
+        return ['MIT Solve', 'MIT Media Lab'];
       }
       if (id === 4 || title.includes('ieee') || title.includes('isec')) {
-        return ['IEEE /ISEC', 'Princeton'];
+        return ['IEEE/ISEC', 'Princeton'];
       }
       if (id === 2 || (title.includes('biochar') && !title.includes('ieee'))) {
         return ['STOCKHOLM Water Prize', 'NJWEA'];
@@ -2175,17 +2173,20 @@
       if (id === 5 || title.includes('biomedical') || slug === 'biomedical') {
         return ['Stanford AIMI', 'Harvard Fellow'];
       }
-      if (id === 8 || title.includes('monivitals') || slug === 'monivitals') {
+      if (id === 8 || title.includes('vitals monitor') || title.includes('equitable vitals')) {
         return ['HealthTech', 'ESP32'];
       }
-      if (id === 11 || title.includes('hunger') || title.includes('meal')) {
-        return ['Civic Leadership', 'Youth Volunteering'];
+      if (id === 9 || title.includes('field screening') || title.includes('senior care')) {
+        return ['Field Testing', 'Senior Care'];
       }
-      if (id === 13 || title.includes('legislative') || title.includes('commendation') || title.includes('assembly')) {
-        return ['NJ Legislature', 'Civic Impact'];
+      if (id === 10 || title.includes('hardware prototype') || title.includes('enclosure')) {
+        return ['Hardware CAD', 'ESP32'];
       }
       if (id === 14 || title.includes('writing') || slug === 'writing' || slug === 'arts') {
         return ['Flute', 'Piano', 'Writing & Arts'];
+      }
+      if (id === 11 || title.includes('school & community') || title.includes('community') || slug === 'community') {
+        return ['School Leadership', 'Community Service'];
       }
       return [];
     }
@@ -2358,6 +2359,8 @@
       const items = siteData.portfolio || [];
       if (cat === 'all') {
         renderPortfolioList(items);
+      } else if (cat === 'writing') {
+        renderPortfolioList(items.filter(p => p.category_slug === 'writing' || p.category_slug === 'arts'));
       } else {
         renderPortfolioList(items.filter(p => p.category_slug === cat));
       }
@@ -2422,9 +2425,8 @@
         'environmental': 'Environmental Sustainability & AI',
         'biomedical': 'Biomedical & AI',
         'monivitals': 'MoniVitals',
-        'community': 'School & Community',
-        'writing': 'Writing',
-        'arts': 'Arts'
+        'writing': 'Writing & Arts',
+        'community': 'School & Community'
       };
       const category_name = categoryNames[category_slug] || 'Project';
       const img = document.getElementById('modalProjImg').value.trim() || (currentModalGalleryImages[0] || '');
