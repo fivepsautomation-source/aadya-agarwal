@@ -367,34 +367,6 @@
       "sort_order": 8
     },
     {
-      "id": 9,
-      "title": "Community Field Screening & Senior Care Deployment",
-      "category_slug": "monivitals",
-      "category_name": "Health Technology",
-      "img": "assets/monivitals/20260829_100521.jpg",
-      "desc": "Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families.",
-      "highlights": [
-        "Conducted direct user experience testing with seniors aged 65-90",
-        "Optimized font sizing, contrast, and voice-assisted telemetry readings for accessibility",
-        "Logged zero hardware failures over 8 consecutive hours of outdoor community testing",
-        "Gathered physician and nurse practitioner feedback on triage alert thresholds"
-      ],
-      "tags": [
-        "#CommunityHealth",
-        "#FieldTesting",
-        "#ElderCare",
-        "#PublicHealth"
-      ],
-      "badges": [
-        "Field Testing",
-        "Senior Care"
-      ],
-      "sort_order": 9,
-      "images": [
-        "assets/monivitals/20260829_100521.jpg"
-      ]
-    },
-    {
       "id": 10,
       "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
       "category_slug": "monivitals",
@@ -418,7 +390,7 @@
         "Hardware CAD",
         "ESP32"
       ],
-      "sort_order": 10,
+      "sort_order": 9,
       "images": [
         "assets/monivitals/20260829_084022.jpg"
       ]
@@ -453,7 +425,7 @@
         "Flute",
         "Piano"
       ],
-      "sort_order": 11,
+      "sort_order": 10,
       "images": [
         "assets/writing_arts/Aadya Flute Pic1.png",
         "assets/writing_arts/flute_performance.png",
@@ -718,18 +690,6 @@
   ],
   "awards": [
     {
-      "id": 1,
-      "title": "MIT Solve — AI for a Better World Youth Innovation Challenge",
-      "category_pill": "National Winner · 2026",
-      "category_group": "research",
-      "year": "2026",
-      "image_url": "assets/uploads/1792835583518_pic1.jpeg",
-      "description": "One of five national winners; presented the water-quality project at the MIT Media Lab.",
-      "link_text": "Read Feature",
-      "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
-      "sort_order": 1
-    },
-    {
       "id": 2,
       "title": "U.S. Stockholm Junior Water Prize",
       "category_pill": "Regional Award · 2026",
@@ -739,7 +699,7 @@
       "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
       "link_text": "",
       "link_url": "",
-      "sort_order": 2
+      "sort_order": 1
     },
     {
       "id": 3,
@@ -749,9 +709,9 @@
       "year": "2026",
       "image_url": "assets/nova.jpeg",
       "description": "National Oceanic and Atmospheric Administration recognition.",
-      "link_text": "",
-      "link_url": "",
-      "sort_order": 3
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 1
     },
     {
       "id": 4,
@@ -763,7 +723,19 @@
       "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 4
+      "sort_order": 2
+    },
+    {
+      "id": 1,
+      "title": "MIT Solve — AI for a Better World Youth Innovation Challenge",
+      "category_pill": "National Winner · 2026",
+      "category_group": "research",
+      "year": "2026",
+      "image_url": "assets/uploads/1792835583518_pic1.jpeg",
+      "description": "One of five national winners; presented the water-quality project at the MIT Media Lab.",
+      "link_text": "Read Feature",
+      "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
+      "sort_order": 3
     },
     {
       "id": 5,
@@ -775,7 +747,7 @@
       "description": "Ranked #14 out of 108 international robotics teams; Lead Autonomous Programmer and Robot Design Award Finalist at Worcester Polytechnic Institute.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 5
+      "sort_order": 4
     },
     {
       "id": 6,
@@ -787,7 +759,7 @@
       "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 6
+      "sort_order": 5
     },
     {
       "id": 8,
@@ -799,7 +771,7 @@
       "description": "Official commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing youth for grassroots community hunger relief.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 7
+      "sort_order": 6
     },
     {
       "id": 9,
@@ -811,7 +783,7 @@
       "description": "United Nations STEP recognition for youth-led service, hunger relief supply mobilization, and community impact.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 8
+      "sort_order": 7
     },
     {
       "id": 23,
@@ -820,9 +792,9 @@
       "year": "2026",
       "image_url": "assets/uploads/1792913169275_WhatsApp_Image_2026-10-24_at_10.03.05_PM.jpeg",
       "description": "Community leadership, civic engagement, and grassroots youth volunteer service.",
-      "link_text": "",
-      "link_url": "",
-      "sort_order": 9,
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 8,
       "category_group": "civic"
     },
     {
@@ -855,7 +827,7 @@
       "category_pill": "Bronze Medal · 2026",
       "category_group": "writing",
       "year": "2026",
-      "image_url": "assets/certificates/hir_summer_2026_award.jpg",
+      "image_url": "assets/uploads/1792860078914_hir.jpeg",
       "description": "Bronze Medal in the Harvard International Review Academic Writing Competition under the Technology & Innovation theme.",
       "link_text": "",
       "link_url": "",
@@ -895,7 +867,7 @@
       "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 15
+      "sort_order": 14
     },
     {
       "id": 22,
@@ -907,7 +879,7 @@
       "description": "First Place National Champion in public speaking and oratorical debate, demonstrating communication and advocacy excellence.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 16
+      "sort_order": 15
     },
     {
       "id": 15,
@@ -915,11 +887,11 @@
       "category_pill": "District & Local Winner · VFW",
       "category_group": "writing",
       "year": "2024",
-      "image_url": "assets/certificates/vfw_patriots_pen_official_certificate.jpg",
+      "image_url": "assets/certificates/vfw_patriots_pen_award.jpg",
       "description": "Placed 2nd locally and 3rd at the district level in Patriot’s Pen, the nationwide youth essay contest held by the Veterans of Foreign Wars.",
       "link_text": "",
       "link_url": "",
-      "sort_order": 17
+      "sort_order": 16
     }
   ],
   "about": {
