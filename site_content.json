@@ -81,14 +81,13 @@
         "assets/uploads/1792857542458_MIT_and_judge__1_.jpeg",
         "assets/uploads/1792857545077_IMG-20260719-WA0017.jpg"
       ],
-      "desc": "One of five winners of MIT Solve AI for a Better World presented an AI-powered water-quality node at the MIT Media Lab.  It all started with water. Aadya spent months in the lab testing how softwood- and agricultural-waste-based biochar pulls contaminants out of water, then asked what it would take to put that science in the hands of communities that need it. The answer became Project RHINE, an AI- and IoT-informed monitoring and treatment concept that pairs low-cost sensors, data analysis, and biochar filtration. MIT Solve named RHINE one of five national winners of its AI for A Better World Youth Innovation Global Challenge. The research earned regional U.S. Stockholm Junior Water Prize recognition and a NOAA “Taking the Pulse of the Planet” award, and she presented it at the New Jersey Water Environment Association conference and the IEEE ISEC Conference at Princeton University this March. Her manuscript is now under peer review at the Journal of Emerging Investigators.",
+      "desc": "One of five winners of MIT Solve AI for a Better World presented an AI-powered water-quality node at the MIT Media Lab.  She is also a Leopold Scholar in Ecology and Ethics at The Lawrenceville School.  Her Journey started with testing water quality. Aadya spent months in the lab testing how softwood- and agricultural-waste-based biochar pulls contaminants out of water, then asked what it would take to put that science in the hands of communities that need it. The answer became Project RHINE, an AI- and IoT-informed monitoring and treatment concept that pairs low-cost sensors, data analysis, and biochar filtration. MIT Solve named RHINE one of five national winners of its AI for A Better World Youth Innovation Global Challenge. The research earned regional U.S. Stockholm Junior Water Prize recognition and a NOAA “Taking the Pulse of the Planet” award, and she presented it at the New Jersey Water Environment Association conference and the IEEE ISEC Conference at Princeton University this March. Her manuscript is now under peer review at the Journal of Emerging Investigators.",
       "highlights": [
         "One of 5 national MIT Solve AI for a Better World winners",
         "Presented the water-remediation IoT node on stage at the MIT Media Lab",
         "Pairs water-quality sensing with edge machine learning and actionable treatment response",
         "Proposed training on river, lake and global water-measurement data with responsible-AI safeguards",
-        "Human review, fixed safety limits, and decision logs govern operation",
-        "Named Leopold Scholar in Ecology and Ethics by The Lawrenceville School"
+        "Human review, fixed safety limits, and decision logs govern operation"
       ],
       "tags": [
         "#MITSolve",
