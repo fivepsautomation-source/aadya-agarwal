@@ -396,7 +396,13 @@
             if (imgEl && aw.image_url) imgEl.src = window.getResolvedImageSrc(aw.image_url);
 
             const imgLink = card.querySelector('a.award-visual-image-link');
-            if (imgLink && aw.link_url && aw.link_url !== '#') imgLink.href = aw.link_url;
+            if (imgLink) {
+              if (aw.link_url && aw.link_url !== '#' && aw.link_url.trim() !== '') {
+                imgLink.href = aw.link_url;
+              } else if (aw.image_url) {
+                imgLink.href = window.getResolvedImageSrc(aw.image_url);
+              }
+            }
 
             const pillEl = card.querySelector('.award-year-pill');
             if (pillEl && (aw.category_pill || aw.year)) {
