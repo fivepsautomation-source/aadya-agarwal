@@ -1,21 +1,38 @@
 (function () {
   const textAttributes = ['alt', 'aria-label', 'placeholder', 'title'];
-  const excludedElements = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE', 'TEXTAREA']);
-  const preservedNumberSelectors = '.conference-number, .featured-publication-index';
+  const excludedElements = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE', 'TEXTAREA', 'FOOTER']);
+  const preservedNumberSelectors = '.conference-number, .featured-publication-index, footer, .site-footer, .preserve-numbers, [data-cms]';
+
+  const tokenWords = ['FIRST', 'SECOND', 'THIRD', 'FOURTH', 'FIFTH'];
 
   function removeNumbers(value) {
-    return value
+    const preserved = [];
+    const protectedVal = value.replace(/\bClass\s+of\s+\d{4}\b/gi, (match) => {
+      const idx = preserved.length;
+      preserved.push(match);
+      const token = tokenWords[idx] || `TOKEN_${idx}`;
+      return `__PRESERVED_CLASS_${token}__`;
+    });
+
+    let cleaned = protectedVal
       .replace(/\s*[,;:|·•#]?\s*\d+(?:[.,:/\u2013\u2014-]\d+)*\+?(?:st|nd|rd|th)?/gi, ' ')
       .replace(/^[\s,;:|·•\u2013\u2014-]+|[\s,;:|·•\u2013\u2014-]+$/g, '')
       .replace(/\s+[\u2013\u2014-]\s*(?=[A-Za-z])/g, ' ')
       .replace(/\s+[,;:|·•\u2013\u2014-]+\s+/g, ' ')
       .replace(/\s{2,}/g, ' ');
+
+    preserved.forEach((p, i) => {
+      const token = tokenWords[i] || `TOKEN_${i}`;
+      cleaned = cleaned.replace(`__PRESERVED_CLASS_${token}__`, p);
+    });
+
+    return cleaned;
   }
 
   function shouldSkip(element) {
     return excludedElements.has(element.tagName)
       || element.isContentEditable
-      || element.closest(preservedNumberSelectors);
+      || (element.closest && element.closest(preservedNumberSelectors));
   }
 
   function processNode(node) {
