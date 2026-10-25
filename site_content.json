@@ -177,7 +177,7 @@
       "id": 1,
       "title": "Autonomous Ocean pH Buoy",
       "category_slug": "environmental",
-      "category_name": "Climate technology · 2025 concept",
+      "category_name": "Research",
       "img": "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
       "images": [
         "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
@@ -198,9 +198,12 @@
         "#3MYoungScientist",
         "#pHBuoy"
       ],
-      "badges": [],
+      "badges": [
+        "Climate Tech"
+      ],
       "is_robotics": false,
-      "sort_order": 4
+      "sort_order": 4,
+      "badge_position": "right"
     },
     {
       "id": 5,
