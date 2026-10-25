@@ -310,8 +310,10 @@
             }
           }
 
+          const isLeftBadge = p.badge_position === 'left' || p.id === 4 || (p.title && p.title.toLowerCase().includes('comparative biochar')) || (coverImg && coverImg.includes('ieee-attendance'));
+          const posClass = isLeftBadge ? 'left-2.5 top-2.5 justify-start' : 'right-2.5 top-2.5 justify-end';
           const badgesHtml = relevantBadges.length
-            ? `<span class="pointer-events-none absolute right-2 top-2 z-10 flex flex-wrap justify-end gap-1.5">` +
+            ? `<span class="pointer-events-none absolute ${posClass} z-10 flex flex-wrap gap-1.5">` +
               relevantBadges.map((badge, i) => `<span class="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] shadow-md ${i % 2 === 0 ? 'bg-plum' : 'bg-berry'} text-white">${badge}</span>`).join('') +
               `</span>`
             : '';
