@@ -93,7 +93,7 @@
         "MIT Media lab"
       ],
       "is_robotics": false,
-      "sort_order": 1
+      "sort_order": 2
     },
     {
       "id": 4,
@@ -131,7 +131,7 @@
         "IEEE /ISEC"
       ],
       "is_robotics": false,
-      "sort_order": 2
+      "sort_order": 1
     },
     {
       "id": 2,
@@ -364,7 +364,7 @@
         "Youth Volunteering"
       ],
       "is_robotics": false,
-      "sort_order": 8
+      "sort_order": 9
     },
     {
       "id": 14,
@@ -484,7 +484,7 @@
         "Piano",
         "Writing & Arts"
       ],
-      "sort_order": 9
+      "sort_order": 8
     }
   ],
   "documents": [
