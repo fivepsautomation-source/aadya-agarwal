@@ -126,7 +126,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 4
+      "sort_order": 3
     },
     {
       "id": 2,
@@ -185,7 +185,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 6
+      "sort_order": 4
     },
     {
       "id": 5,
@@ -235,7 +235,7 @@
         }
       ],
       "is_robotics": false,
-      "sort_order": 7
+      "sort_order": 5
     },
     {
       "id": 8,
@@ -270,7 +270,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 8
+      "sort_order": 7
     },
     {
       "id": 11,
@@ -464,7 +464,7 @@
         "assets/certificates/nsf_speech_award.png"
       ],
       "videos": [],
-      "sort_order": 5,
+      "sort_order": 8,
       "id": 1792905804595
     },
     {
@@ -567,7 +567,7 @@
         "assets/certificates/nsf_speech_award.png"
       ],
       "videos": [],
-      "sort_order": 5,
+      "sort_order": 8,
       "id": 1792905804595
     }
   ],
