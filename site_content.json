@@ -227,7 +227,9 @@
         "#MachineLearning",
         "#Bioinformatics"
       ],
-      "badges": [],
+      "badges": [
+        "Stanford AIMI"
+      ],
       "is_robotics": false,
       "sort_order": 5
     },
