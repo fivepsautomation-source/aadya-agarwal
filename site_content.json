@@ -59,22 +59,7 @@
       ],
       "is_robotics": true,
       "sort_order": 0,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "Autonomous Navigation & Computer-Vision Algorithms",
-          "intro": "Implemented autonomous navigation routines utilizing sensor telemetry, AprilTag detection, and OpenCV vision pipelines to achieve high-precision field localization and game element scoring."
-        },
-        {
-          "title": "Mechanical Architecture & Drive-train Iterations",
-          "intro": "Prototyped lightweight intake mechanisms and multi-stage lift systems using custom 3D-printed brackets and high-torque motor gearboxes engineered for rapid cycle times."
-        },
-        {
-          "title": "STEM Mentorship & Community Outreach",
-          "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 3,
@@ -96,9 +81,9 @@
         "assets/uploads/1792857542458_MIT_and_judge__1_.jpeg",
         "assets/uploads/1792857545077_IMG-20260719-WA0017.jpg"
       ],
-      "desc": "One of five national winners of MIT Solve AI for a Better World Challenge; presented an AI-powered water-quality node at the MIT Media Lab.  My Journey started with testing water quality. I spent several months in the lab testing how softwood- and agricultural-waste-based biochar pulls contaminants out of water, then asked what it would take to put that science in the hands of communities that need it. The answer became Project RHINE, an AI- and IoT-informed monitoring and treatment concept that pairs low-cost sensors, data analysis, and biochar filtration. MIT Solve named RHINE one of the five national winners of its AI for A Better World Youth Innovation Global Challenge. The research earned regional U.S. Stockholm Junior Water Prize recognition and a NOAA “Taking the Pulse of the Planet” award, and I presented it at the New Jersey Water Environment Association conference and the IEEE ISEC Conference at Princeton University. My manuscript is now under peer review at the Journal of Emerging Investigators.",
+      "desc": "One of five winners of MIT Solve AI for a Better World presented an AI-powered water-quality node at the MIT Media Lab.  She is also a Leopold Scholar in Ecology and Ethics at The Lawrenceville School.  Her Journey started with testing water quality. Aadya spent months in the lab testing how softwood- and agricultural-waste-based biochar pulls contaminants out of water, then asked what it would take to put that science in the hands of communities that need it. The answer became Project RHINE, an AI- and IoT-informed monitoring and treatment concept that pairs low-cost sensors, data analysis, and biochar filtration. MIT Solve named RHINE one of five national winners of its AI for A Better World Youth Innovation Global Challenge. The research earned regional U.S. Stockholm Junior Water Prize recognition and a NOAA “Taking the Pulse of the Planet” award, and she presented it at the New Jersey Water Environment Association conference and the IEEE ISEC Conference at Princeton University this March. Her manuscript is now under peer review at the Journal of Emerging Investigators.",
       "highlights": [
-        "One of five national MIT Solve AI for a Better World winners",
+        "One of 5 national MIT Solve AI for a Better World winners",
         "Presented the water-remediation IoT node on stage at the MIT Media Lab",
         "Pairs water-quality sensing with edge machine learning and actionable treatment response",
         "Proposed training on river, lake and global water-measurement data with responsible-AI safeguards",
@@ -116,28 +101,16 @@
       ],
       "is_robotics": false,
       "sort_order": 1,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "The technical pitch",
-          "intro": "The proposed IoT node would pair water-quality sensors with AI-assisted treatment decisions. River, lake and global measurements inform the model plan; human review, fixed safety limits and decision logs govern its use."
-        },
-        {
-          "title": "On stage and recognition at MIT Media Lab",
-          "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
       "category_name": "Research",
-      "img": "assets/uploads/1792975178236_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
+      "img": "assets/uploads/1792856840122_ieee-attendance.jpg",
       "img_position": "center top",
       "images": [
-        "assets/uploads/1792975178236_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
         "assets/uploads/1792856840122_ieee-attendance.jpg",
         "projects/ieee-engineering-conversation.jpg",
         "assets/uploads/1792791286959_ieee_pic3.jpeg",
@@ -166,30 +139,7 @@
       ],
       "is_robotics": false,
       "sort_order": 2,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "IEEE/ISEC 2026 presentation at Princeton University",
-          "intro": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University."
-        },
-        {
-          "title": "NJWEA & science-fair recognition",
-          "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference."
-        },
-        {
-          "title": "Materials and experimental setup",
-          "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements."
-        },
-        {
-          "title": "Device and filtration design",
-          "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration."
-        },
-        {
-          "title": "Measurements and results",
-          "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "left"
     },
     {
       "id": 2,
@@ -198,26 +148,16 @@
       "category_name": "Research",
       "img": "projects/water-treatment-setup.jpg",
       "images": [
-        "projects/water-treatment-setup.jpg",
-        "assets/uploads/1792968928514_Types_of_Biochar_for_Experiment.jpg",
-        "assets/uploads/1792968932186_Biochar_Testing.jpg",
-        "assets/uploads/1792968935412_Biochar_Experiments__1_.jpg",
-        "assets/uploads/1792968936411_Project_-_Neutralizing_Ocean_Acidification_-_Setup_2.jpg",
-        "assets/uploads/1792968937446_Water_Toxicity_Testing_-_pic_2.jpeg",
-        "assets/uploads/1792968938471_Contaminated_Water_-_pH_Testing.jpg",
-        "assets/uploads/1792968939340_Filtering_Treated_Water_2.jpg",
-        "assets/uploads/1792968940223_pH_Testing.jpg"
+        "projects/water-treatment-setup.jpg"
       ],
-      "desc": "Bench tests comparing waste-derived biochars for water remediation, collected 900+ data points from water treatment lab experiments (varying dosage, pH, and contact times) and conducted statistical analysis using Mann-Whitney U and Spearman’s rank correlation methods. Also conducted a toxicological study on Aliivibrio fischeri, a BSL-1 bioluminescent marine bacterium commonly used as an indicator of aquatic toxicity. The findings will help optimize filtration parameters and guide future practical applications for improving water quality",
+      "desc": "Bench tests comparing waste-derived biochars for water remediation, with pH, filtration and toxicity measurements.",
       "highlights": [
-        "Comparative analysis of two types of biochar sourced from two different feedstocks (softwood and agricultural waste) in removing heavy metals (iron, zinc, copper) and fertilizer chemicals (nitrates, phosphates) from water.",
+        "Compared softwood and agricultural-waste biochar samples in controlled water-treatment trials",
         "Measured pH and water-quality changes across treatment trials over time",
-        "Awards:",
-        "U.S. Stockholm Junior Water Prize Regional Award, nominated for the State level",
-        "National Oceanic and Atmospheric Administration (NOAA) “Taking the Pulse of the Planet” Award",
-        "NJWEA (NJ Water Environment Association) Mercer Science & Engineering Fair (MSEF) winner",
-        "Invited to present at the 2026 NJWEA Water Resource annual conference and exposition in Atlantic City, NJ",
-        "Second Place in Earth and Environmental Science Category"
+        "Explored heavy-metal and nutrient removal with a floating treatment device concept",
+        "Second place in Earth & Environmental Science at Mercer Science & Engineering Fair (MSEF)",
+        "Stockholm Junior Water Prize Regional Award & Acceptance Speech at NJWEA",
+        "NOAA Taking the Pulse of the Planet award"
       ],
       "tags": [
         "#Biochar",
@@ -228,41 +168,16 @@
         "#MSEF"
       ],
       "badges": [
-        "NJWEA",
-        "MSEF"
+        "STOCKHOLM Water Prize"
       ],
       "is_robotics": false,
-      "sort_order": 3,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "IEEE/ISEC 2026 presentation at Princeton University",
-          "intro": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University."
-        },
-        {
-          "title": "NJWEA & science-fair recognition",
-          "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference."
-        },
-        {
-          "title": "Materials and experimental setup",
-          "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements."
-        },
-        {
-          "title": "Device and filtration design",
-          "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration."
-        },
-        {
-          "title": "Measurements and results",
-          "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 3
     },
     {
       "id": 1,
       "title": "Autonomous Ocean pH Buoy",
       "category_slug": "environmental",
-      "category_name": "Research",
+      "category_name": "Climate technology · 2025 concept",
       "img": "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
       "images": [
         "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
@@ -285,19 +200,7 @@
       ],
       "badges": [],
       "is_robotics": false,
-      "sort_order": 4,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "System architecture and 3M challenge brief",
-          "intro": "A pH sensor, Arduino and servo-operated 3D-printed disk form a closed-loop calcium carbonate dispenser. Next steps include field testing, dispenser calibration, solar power and predictive dosing."
-        },
-        {
-          "title": "Autonomous Closed-Loop Marine Dosing",
-          "intro": "Submersible sensor node constantly samples coastal water acidity. Upon detecting localized acidification events, calibrated alkaline reagent is released to protect marine calcifiers and restore pH balance."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 4
     },
     {
       "id": 5,
@@ -310,7 +213,7 @@
         "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
         "assets/uploads/1792919829384_University_Lecture_on_Fluorescent_Microscopy.png"
       ],
-      "desc": "Research and Training Experience\n\n1. Molecular and Cellular Biology — Coursework and Wet-Lab Training\nCompleted a 24-week molecular and cellular biology program with Professor Sam Kunes of Harvard University, followed by three weeks of summer wet-lab training. Studied Alzheimer’s disease, molecular mechanisms, experimental design, controls, and laboratory methods.\n\n2. Computational Biology and Cancer Research — Independent Projects\n\nConducting computational research to investigate cancer biology and develop testable hypotheses:\n\nSingle-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\nCancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\nCervical cancer: Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\n3. Stanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
+      "desc": "Research and Training Experience\n\n Molecular and Cellular Biology — Coursework and Wet-Lab Training\nComputational Biology and Cancer Research — Independent Projects\nConducting computational research to investigate cancer biology and develop testable hypotheses\nComplered Project work in Single-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\n5.Cancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\n6. Cervical cancer: Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\nStanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
       "highlights": [
         "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
         "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
@@ -332,30 +235,12 @@
         "#Bioinformatics"
       ],
       "badges": [
-        "Research"
+        "Science Research",
+        "Cancer Biology Research"
       ],
       "is_robotics": false,
       "sort_order": 7,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
-          "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 – June 2027.<br><br>• Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>• Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>• Scheduled to present research at a Stanford Health event in summer 2027."
-        },
-        {
-          "title": "Computational Oncology Research, Mentored Independent Research",
-          "intro": "Research Co-Author | June 2026 – Present.<br><br>• Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>• Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>• Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal."
-        },
-        {
-          "title": "Biomedical Research Fellow — Advanced BioResearch Academy, Boston. MA",
-          "intro": "Research Trainee | Fall 2025 – Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>• Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>• Delivered independent research project presentations at the end of each 12-week session.<br>• Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research."
-        },
-        {
-          "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
-          "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 8,
@@ -392,22 +277,7 @@
         "HealthTech"
       ],
       "is_robotics": false,
-      "sort_order": 5,
-      "sections": [
-        {
-          "title": "Community Field Screening & Senior Care Deployment",
-          "intro": "Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families. Optimized font sizing, high-contrast visual indicators, and voice-assisted telemetry readings for senior accessibility."
-        },
-        {
-          "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
-          "intro": "Engineered custom 3D printed housing in Fusion 360 with ergonomic fingertip alignment and optical light baffling. Integrated MAX30102 optical sensor and MLX90614 thermopile over I2C multiplexed bus with low-power sleep state management."
-        },
-        {
-          "title": "Pulse Oximetry Optical Bias Mitigation Research",
-          "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 5
     },
     {
       "id": 11,
@@ -474,18 +344,7 @@
         "Hunger Relief"
       ],
       "is_robotics": false,
-      "sort_order": 8,
-      "sections": [
-        {
-          "title": "Grassroots Logistics & Youth Mobilization",
-          "intro": "Organized supply collection points across regional schools, managed volunteer shift scheduling, and ensured safe handling and direct delivery of nutritional meals to local food pantries."
-        },
-        {
-          "title": "Annual Holiday Candy & Nutritional Support",
-          "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 8
     },
     {
       "id": 13,
@@ -514,18 +373,7 @@
         "Youth Volunteering"
       ],
       "is_robotics": false,
-      "sort_order": 9,
-      "sections": [
-        {
-          "title": "Regional Winter Drive Logistics",
-          "intro": "Established secure donation collection bins across Mercer County schools and public libraries, coordinating weekly sorting, sanitization, and packaging."
-        },
-        {
-          "title": "Bipartisan Legislative Commendation",
-          "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 9
     },
     {
       "id": 14,
@@ -533,11 +381,12 @@
       "category_slug": "writing",
       "category_name": "Writing & Performing Arts",
       "img": "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
-      "desc": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
+      "desc": "Love to write Essays, poetry, and apply to Essay  and writing competitions\nAssociate Editor - School Science Magazine",
       "highlights": [
         "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
         "Bronze Medal, Technology & Innovation theme, Harvard International Review, Summer 2026",
-        "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
+        "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in",
+        "The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
         "2025 National History Day (NJ Regional): a 2,500-word paper on Lysenkoism and the suppression of scientific advancement in the Soviet Union",
         "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville’s jazz band with NJMTA Honors recitals",
         "Backstage technical theater, stage manager and production assistant"
@@ -553,7 +402,10 @@
         "#NJMTA",
         "#MusicFest"
       ],
-      "badges": [],
+      "badges": [
+        "Creative Writing",
+        "Academic Essay Contests"
+      ],
       "sort_order": 11,
       "images": [
         "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
@@ -625,47 +477,72 @@
         }
       ],
       "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater.",
-      "badge_position": "right",
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 1792917988413,
-      "title": "BioResearch Academy - 24 week Advanced Biology course and 3 week wet-lab",
+      "title": "Molecular and Cell Biology- Advanced Bio Medical Research coursework",
       "category_slug": "biomedical",
       "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792917943889_20260710_121848.jpg",
       "images": [
         "assets/uploads/1792917943889_20260710_121848.jpg"
       ],
-      "desc": "Bioresearch Academy, Prof. Sam Kunes, Harvard University\n24-week Advanced BioResearch Program                       \nCompleted an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy\nDelivered independent research project presentations at the end of each 12-week session\n3-week Wet lab research work      \nConducting intensive hands-on research in molecular and cellular biology, including high-throughput RNA sequencing\nDeveloped wet-lab technical skills",
-      "highlights": [],
+      "desc": "From Biomedical Theory to Hands-On Laboratory Learning\nAdvanced BioResearch Program & BioResearch Academy\nOctober 2025–July 2026\nInstruction led by Dr. Sam Kunes, Professor at Harvard University",
+      "highlights": [
+        "I completed 24 weeks of online biomedical coursework during the academic year, plus three weeks of hands-on wet-lab training in summer 2026. Moving from studying biological mechanisms to learning experimental techniques helped me connect the science behind disease with the tools researchers use to investigate it.",
+        "Academic-Year Coursework | October 2025–May 2026",
+        "Through the 24-week Advanced BioResearch Program, I explored how cells develop, divide, and become cancerous—and how emerging technologies allow researchers to study and manipulate these processes. The curriculum brought together cancer biology, neuroscience, developmental biology, and experimental approaches, alongside research-project discussions and a student presentation.",
+        "My coursework covered:",
+        "Cellular mechanisms and cancer: DNA replication, cell-cycle regulation, and differences between normal and tumor cells.",
+        "Development and neuroscience: embryonic development, artificial embryo models, and brain organoids.",
+        "Technologies for biological discovery: massively parallel nucleotide sequencing, advanced microscopy, and spatial transcriptomics.",
+        "Engineering biology: CRISPR genome editing and synthetic biology applications in research and therapy.",
+        "Summer Laboratory Training | Summer 2026",
+        "Following the online coursework, I spent three weeks at BioResearch Academy learning wet-lab techniques and connecting classroom concepts with hands-on experimentation. The program emphasizes experimental design, interpreting complex data, and understanding when, why, and how to use different research methods. Its curriculum combines research-paper discussions with laboratory work to develop scientific reasoning and creative problem-solving.",
+        "Together, these experiences provided a foundation for my continued exploration of biomedical research, connecting molecular and cellular mechanisms with the experimental approaches used to study them."
+      ],
       "tags": [],
-      "badges": [],
+      "badges": [
+        "Bio Research Academy"
+      ],
       "sort_order": 10,
-      "badge_position": "right",
-      "sections": [],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 1792918333524,
       "title": "Music, Theater & Public Speaking",
       "category_slug": "writing",
-      "category_name": "Writing & Arts",
+      "category_name": "Writing & Performing Arts",
       "img": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
       "images": [
         "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
       ],
-      "desc": "editted",
-      "highlights": [],
+      "desc": "Arts & Music\n\nFlute & Piano\nFlute: 2021–Present | Piano: 2019–2025\n\nMusic has been an important part of my life through flute and piano. I play flute in the Lawrenceville School Jazz Band and previously served as first-chair flutist and soloist in my middle school’s advanced band. My piano experience includes six years of private study and performances at Manhattan School of Music’s Greenfield Hall. Across both instruments, I have performed in studio, honors, and community recitals, including programs at Westminster Conservatory and local senior citizen homes.\n\nTheater\nSchool theater: 2022–Present | Community programs: 2021, 2023\n\nI enjoy exploring theater both onstage and behind the scenes. My experience includes acting in Lawrenceville’s Shakespeare Freshmen Theater and The Day the Internet Died, as well as serving as stage manager for Beauty and the Beast Jr., where I led and coordinated the production team. Through school productions and community programs, I have also explored scenic design, singing, and screenwriting, with performances at McCarter Theatre, Westminster Conservatory, and West Windsor Arts Council.\n\nSpeech & Debate\n2022–Present\n\nThrough public speaking and debate, I have developed my voice, confidence, and ability to build persuasive arguments. I have trained with the ETS Toastmasters Youth Leadership Program and PowerSpeakers Unlimited, participated in Public Forum debate, and competed in online Stanford and Harvard debate tournaments. I also represented my class in Lawrenceville’s school-wide public speaking contest and delivered a model speech used to coach other students.",
+      "highlights": [
+        "Music",
+        "Grand Prize — Music-Fest International Rising Talent Festival, piano.",
+        "Honors Rating — NJMTA auditions, flute, 2025; performed in the honors recital at Rutgers University’s Sh are Recital Hall.",
+        "Honors Rating — NJMTA auditions, piano, two consecutive years.",
+        "Speech & Debate",
+        "Outstanding Communicator Award — ETS Toastmasters Youth Leadership Program; invited to join the Junior Advanced Toastmasters team.",
+        "First Place / Certificate of Learning Journey Excellence — PowerSpeakers Unlimited.",
+        "Speaker Award — Melissa Kenneth Wooten online TFA/TOC tournament, Novice Public Forum.",
+        "Class Representative — Selected by classmates for Lawrenceville’s inter-grade public speaking competition, 2025.",
+        "Model Speech Selection — ETS Toastmasters Youth Leadership Program; speech used for coaching in other classrooms."
+      ],
       "tags": [],
-      "badges": [],
+      "badges": [
+        "Flute",
+        "Piano",
+        "Writing & Performing Arts"
+      ],
       "sort_order": 12,
-      "sections": [],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 1792918752665,
-      "title": "Stanford Center for Artificial Intelligence in Medicine & Imaging",
+      "title": "Stanford Artificial Intelligence and Medical Imaging",
       "category_slug": "biomedical",
       "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792918739033_bio.jpeg",
@@ -673,18 +550,18 @@
         "assets/uploads/1792918739033_bio.jpeg",
         "https://aimi.stanford.edu/academic-year-research-internship"
       ],
-      "desc": "Stanford Artificial Intelligence in Medicine & Imaging  - 30-week Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
+      "desc": "Stanford Artificial and Medical Imaging  and Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” integrating neuroimaging and AI. \n\nApplying machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. \n\nDeveloping an understanding of accessibility, model validation, and user-centered design in health technology. \n\nPresented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
       "highlights": [
         "Completed a two-week summer internship",
         "Invited to continue as an academic-year researcher",
         "Presented my Stanford AIMI project, “User-Centric AI for Assisting the Visually Impaired,” to The Lawrenceville School’s Board of Trustees on October 23, 2026."
       ],
       "tags": [],
-      "badges": [],
+      "badges": [
+        "Stanford AIMI"
+      ],
       "sort_order": 6,
-      "badge_position": "right",
-      "sections": [],
-      "hide_badges": false
+      "badge_position": "right"
     }
   ],
   "documents": [
