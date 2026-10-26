@@ -977,21 +977,26 @@
         "Presented my Stanford AIMI project, “User-Centric AI for Assisting the Visually Impaired,” to The Lawrenceville School’s Board of Trustees on October 23, 2026."
       ],
       "tags": [],
-      "badges": [],
+      "badges": [
+        "Stanford AIMI"
+      ],
       "sort_order": 6,
       "badge_position": "right",
       "sections": [
         {
           "title": "Stanford AIMI 30-Week Research Internship",
-          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI."
+          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI.",
+          "photos": []
         },
         {
           "title": "Machine Learning & Computer Vision Modeling",
-          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis."
+          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis.",
+          "photos": []
         },
         {
           "title": "Accessibility & Board of Trustees Presentation",
-          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology."
+          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology.",
+          "photos": []
         }
       ],
       "hide_badges": false
