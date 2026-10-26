@@ -910,8 +910,8 @@
   "group": "Writing & Performing Arts",
   "category": "Writing & Performing Arts",
   "summary": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
-  "cardImage": "assets/writing_arts/Aadya Flute Pic1.png",
-  "heroImage": "assets/writing_arts/Aadya Flute Pic1.png",
+  "cardImage": "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
+  "heroImage": "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
   "link_url": "https://www.tellingroom.org/stories-full/when-kindness-is-planted",
   "article_url": "https://www.tellingroom.org/stories-full/when-kindness-is-planted",
   "badges": [
@@ -2319,6 +2319,13 @@
     }
 
     if (project) {
+      if (typeof identifier === 'object' && identifier !== null) {
+        const outsideImg = identifier.img || identifier.cardImage || identifier.heroImage;
+        if (outsideImg) {
+          project.heroImage = outsideImg;
+          project.cardImage = outsideImg;
+        }
+      }
       const pTitle = (project.title || '').toLowerCase();
       const pHero = (project.heroImage || project.cardImage || '').toLowerCase();
       if (
@@ -2340,8 +2347,10 @@
         pHero.includes('1792918427379')
       ) {
         const tellingRoomUrl = 'https://www.tellingroom.org/stories-full/when-kindness-is-planted';
-        if (!project.link_url) project.link_url = tellingRoomUrl;
-        if (!project.article_url) project.article_url = tellingRoomUrl;
+        project.link_url = tellingRoomUrl;
+        project.article_url = tellingRoomUrl;
+        project.heroImage = 'assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png';
+        project.cardImage = 'assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png';
       }
     }
 
@@ -2396,6 +2405,15 @@
         try {
           projectObj = JSON.parse(dataProject);
         } catch(err) {}
+      }
+
+      // Always pass the image actually displayed on the card so it matches inside the modal
+      const cardCoverImg = card.querySelector('img')?.getAttribute('src');
+      if (cardCoverImg) {
+        if (!projectObj) projectObj = { title: title };
+        projectObj.cardImage = cardCoverImg;
+        projectObj.heroImage = cardCoverImg;
+        projectObj.img = cardCoverImg;
       }
 
       if (typeof window.openProjectModal === 'function') {
