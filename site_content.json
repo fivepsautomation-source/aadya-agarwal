@@ -148,13 +148,12 @@
         "assets/uploads/1792791698982_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1.jpeg",
         "assets/uploads/1792791701120_WhatsApp_Image_2026-10-24_at_3.09.20_AM.jpeg"
       ],
-      "desc": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 Conference at Princeton University.\n\nLeopold Scholar in Ecology and Ethics, Lawrenceville Research Institute - Selected for a selective ecology, sustainability, and environmental-ethics research program.",
+      "desc": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 Conference at Princeton University.",
       "highlights": [
         "Approved research abstract presented at the IEEE/ISEC K–12 conference at Princeton University",
         "Comparative analysis of softwood vs. agricultural-waste biochars for remediation",
         "Bench trials tracking heavy metal and nutrient removal, dissolved oxygen, and pH response",
-        "Technical engagement and presentation with engineering and academic faculty at Princeton",
-        "Lawrenceville Environment and Sustainability Council: Community Service & Events Subcommittee Lead"
+        "Technical engagement and presentation with engineering and academic faculty at Princeton"
       ],
       "tags": [
         "#IEEE",
@@ -172,28 +171,23 @@
       "sections": [
         {
           "title": "IEEE/ISEC 2026 presentation at Princeton University",
-          "intro": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University.",
-          "photos": []
+          "intro": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University."
         },
         {
           "title": "NJWEA & science-fair recognition",
-          "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference.",
-          "photos": []
+          "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference."
         },
         {
           "title": "Materials and experimental setup",
-          "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements.",
-          "photos": []
+          "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements."
         },
         {
           "title": "Device and filtration design",
-          "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration.",
-          "photos": []
+          "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration."
         },
         {
           "title": "Measurements and results",
-          "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions.",
-          "photos": []
+          "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
         }
       ],
       "hide_badges": false
@@ -307,69 +301,6 @@
       "hide_badges": false
     },
     {
-      "id": 5,
-      "title": "Biomedical & AI Scientific Research",
-      "category_slug": "biomedical",
-      "category_name": "Biomedical Research & AI",
-      "img": "assets/uploads/1792859269041_2222_aadya.png",
-      "images": [
-        "assets/uploads/1792859269041_2222_aadya.png",
-        "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
-        "assets/uploads/1792919829384_University_Lecture_on_Fluorescent_Microscopy.png"
-      ],
-      "desc": "1. Molecular and Cellular Biology — Coursework and Wet-Lab Training\n\n2. Computational Biology and Cancer Research — Independent Projects\n\n3. Conducting computational research to investigate cancer biology and develop testable hypotheses:\n\n4. Independent Biology and AI project - Single-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\n5. Independent Math and Cancer Biology Project - Cancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\n6) Mentor Led Cervical cancer Research Prokect : Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\n3. Stanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
-      "highlights": [
-        "Studied Alzheimer’s disease, molecular mechanisms, experimental design, controls, and laboratory methods in Wet Lab at Bioresearch Academy",
-        "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
-        "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
-        "Bioinformatics Tools: AutoDock Vina (Molecular Docking), Computational Structural Biology, Protein Modeling, Graph Theory Networks.",
-        "Wet Lab Techniques: Sterile cell culture, CRISPR-Cas9 protocols, gel electrophoresis, PCR preparation, chemical safety.",
-        "Stanford AIMI Clinical AI: Selected for competitive 30-week internship (<5% acceptance rate), developing computer vision assistive interfaces utilizing medical imaging.",
-        "Computational Oncology: Co-authoring manuscript on cervical cancer treatments using AutoDock Vina molecular docking simulations.",
-        "Biomedical Research Fellow (Harvard Mentor Prof. Sam Kunes): 24-week bioresearch program with 3 weeks hands-on wet lab work in Boston (CRISPR, gel electrophoresis, PCR).",
-        "Independent Cancer Research (Cambridge Mentor Dr. Kristina Kordova): scRNA-seq analysis & Python classification model identifying 32 breast cancer biomarker clusters."
-      ],
-      "tags": [
-        "#StanfordAIMI",
-        "#HarvardBioResearch",
-        "#ComputationalOncology",
-        "#AutoDockVina",
-        "#CRISPR",
-        "#scRNAseq",
-        "#MachineLearning",
-        "#Bioinformatics"
-      ],
-      "badges": [
-        "Research"
-      ],
-      "is_robotics": false,
-      "sort_order": 7,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
-          "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 – June 2027.<br><br>• Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>• Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>• Scheduled to present research at a Stanford Health event in summer 2027.",
-          "photos": []
-        },
-        {
-          "title": "Computational Oncology Research, Mentored Independent Research",
-          "intro": "Research Co-Author | June 2026 – Present.<br><br>• Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>• Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>• Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal.",
-          "photos": []
-        },
-        {
-          "title": "Biomedical Research Fellow — Advanced BioResearch Academy, Boston. MA",
-          "intro": "Research Trainee | Fall 2025 – Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>• Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>• Delivered independent research project presentations at the end of each 12-week session.<br>• Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research.",
-          "photos": []
-        },
-        {
-          "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
-          "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications.",
-          "photos": []
-        }
-      ],
-      "hide_badges": false
-    },
-    {
       "id": 8,
       "title": "MoniVitals: Equitable Vitals Monitor & App",
       "category_slug": "monivitals",
@@ -417,6 +348,100 @@
         {
           "title": "Pulse Oximetry Optical Bias Mitigation Research",
           "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
+        }
+      ],
+      "hide_badges": false
+    },
+    {
+      "id": 1792918752665,
+      "title": "Stanford Center for Artificial Intelligence in Medicine & Imaging",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical Research & AI",
+      "img": "assets/uploads/1792918739033_bio.jpeg",
+      "images": [
+        "assets/uploads/1792918739033_bio.jpeg",
+        "https://aimi.stanford.edu/academic-year-research-internship"
+      ],
+      "desc": "Stanford Artificial Intelligence in Medicine & Imaging  - 30-week Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
+      "highlights": [
+        "Completed a two-week summer internship",
+        "Invited to continue as an academic-year researcher",
+        "Presented my Stanford AIMI project, “User-Centric AI for Assisting the Visually Impaired,” to The Lawrenceville School’s Board of Trustees on October 23, 2026."
+      ],
+      "tags": [],
+      "badges": [],
+      "sort_order": 6,
+      "badge_position": "right",
+      "sections": [
+        {
+          "title": "Stanford AIMI 30-Week Research Internship",
+          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI."
+        },
+        {
+          "title": "Machine Learning & Computer Vision Modeling",
+          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis."
+        },
+        {
+          "title": "Accessibility & Board of Trustees Presentation",
+          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology."
+        }
+      ],
+      "hide_badges": false
+    },
+    {
+      "id": 5,
+      "title": "Biomedical & AI Scientific Research",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical Research & AI",
+      "img": "assets/uploads/1792859269041_2222_aadya.png",
+      "images": [
+        "assets/uploads/1792859269041_2222_aadya.png",
+        "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
+        "assets/uploads/1792919829384_University_Lecture_on_Fluorescent_Microscopy.png"
+      ],
+      "desc": "Research and Training Experience\n\n1. Molecular and Cellular Biology — Coursework and Wet-Lab Training\nCompleted a 24-week molecular and cellular biology program with Professor Sam Kunes of Harvard University, followed by three weeks of summer wet-lab training. Studied Alzheimer’s disease, molecular mechanisms, experimental design, controls, and laboratory methods.\n\n2. Computational Biology and Cancer Research — Independent Projects\n\nConducting computational research to investigate cancer biology and develop testable hypotheses:\n\nSingle-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\nCancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\nCervical cancer: Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\n3. Stanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
+      "highlights": [
+        "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
+        "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
+        "Bioinformatics Tools: AutoDock Vina (Molecular Docking), Computational Structural Biology, Protein Modeling, Graph Theory Networks.",
+        "Wet Lab Techniques: Sterile cell culture, CRISPR-Cas9 protocols, gel electrophoresis, PCR preparation, chemical safety.",
+        "Stanford AIMI Clinical AI: Selected for competitive 30-week internship (<5% acceptance rate), developing computer vision assistive interfaces utilizing medical imaging.",
+        "Computational Oncology: Co-authoring manuscript on cervical cancer treatments using AutoDock Vina molecular docking simulations.",
+        "Biomedical Research Fellow (Harvard Mentor Prof. Sam Kunes): 24-week bioresearch program with 3 weeks hands-on wet lab work in Boston (CRISPR, gel electrophoresis, PCR).",
+        "Independent Cancer Research (Cambridge Mentor Dr. Kristina Kordova): scRNA-seq analysis & Python classification model identifying 32 breast cancer biomarker clusters."
+      ],
+      "tags": [
+        "#StanfordAIMI",
+        "#HarvardBioResearch",
+        "#ComputationalOncology",
+        "#AutoDockVina",
+        "#CRISPR",
+        "#scRNAseq",
+        "#MachineLearning",
+        "#Bioinformatics"
+      ],
+      "badges": [
+        "Research"
+      ],
+      "is_robotics": false,
+      "sort_order": 7,
+      "badge_position": "right",
+      "sections": [
+        {
+          "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
+          "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 – June 2027.<br><br>• Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>• Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>• Scheduled to present research at a Stanford Health event in summer 2027."
+        },
+        {
+          "title": "Computational Oncology Research, Mentored Independent Research",
+          "intro": "Research Co-Author | June 2026 – Present.<br><br>• Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>• Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>• Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal."
+        },
+        {
+          "title": "Biomedical Research Fellow — Advanced BioResearch Academy, Boston. MA",
+          "intro": "Research Trainee | Fall 2025 – Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>• Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>• Delivered independent research project presentations at the end of each 12-week session.<br>• Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research."
+        },
+        {
+          "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
+          "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications."
         }
       ],
       "hide_badges": false
@@ -540,6 +565,83 @@
       "hide_badges": false
     },
     {
+      "id": 1792994088000,
+      "title": "Leopold Scholars in Ecology and Ethics",
+      "category_slug": "community",
+      "category_name": "School & Community",
+      "img": "assets/community/leopold-scholars-in-ecology-and-ethics.jpg",
+      "images": [
+        "assets/community/leopold-scholars-in-ecology-and-ethics.jpg"
+      ],
+      "desc": "Selected for The Lawrenceville School's Leopold Scholars in Ecology and Ethics — an honors fellowship immersing students in field ecology, stream preservation, and Aldo Leopold's Land Ethic.",
+      "highlights": [
+        "Selected as Leopold Scholar in Ecology and Ethics by The Lawrenceville School",
+        "Conducted empirical stream ecology and watershed research at the Stroud Water Research Center",
+        "Immersed in Aldo Leopold's Land Ethic exploring biodiversity conservation and environmental stewardship",
+        "Leadership role on the School's Sustainability Council advancing campus ecological initiatives"
+      ],
+      "tags": [
+        "#LeopoldScholars",
+        "#Lawrenceville",
+        "#EcologyAndEthics",
+        "#Sustainability",
+        "#LandEthic"
+      ],
+      "badges": [
+        "Ecology & Ethics"
+      ],
+      "is_robotics": false,
+      "sort_order": 10,
+      "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/sliders/post/leopold-scholars-in-ecology-and-ethics",
+      "sections": [
+        {
+          "title": "Ecology, Watersheds & The Land Ethic",
+          "intro": "The Leopold Scholars program recognizes Lawrenceville students committed to sustainability, environmental ethics, and leadership. Immersing scholars in the writings and legacy of Lawrenceville alumnus Aldo Leopold (Class of 1905), the fellowship centers on the Land Ethic — broadening ethical community boundaries to encompass soils, waters, plants, and animals."
+        },
+        {
+          "title": "Field Research & Sustainability Leadership",
+          "intro": "Includes intensive ecological field trials and stream assessment at the Stroud Water Research Center, presentations at the Fall Academic Showcase, and executive service on the School's Sustainability Council leading campus-wide habitat and resource stewardship."
+        }
+      ],
+      "gallerySubtitle": "Ecology seminar, watershed field studies, and campus environmental leadership.",
+      "hide_badges": false
+    },
+    {
+      "id": 1792917988413,
+      "title": "Bioresearch Academy - 24-week Advanced Biology course and three week wet-lab",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical Research & AI",
+      "img": "assets/uploads/1792917943889_20260710_121848.jpg",
+      "images": [
+        "assets/uploads/1792917943889_20260710_121848.jpg"
+      ],
+      "desc": "24-week Advanced BioResearch Program  with Prof. Sam Kunes, Harvard University    \n                \nCompleted an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy\n     \nConducted intensive hands-on research in molecular and cellular biology, including high-throughput RNA sequencing",
+      "highlights": [
+        "Delivered independent research project presentations at the end of each 12-week session",
+        "Developed wet-lab technical skills",
+        "3-week Wet lab research work"
+      ],
+      "tags": [],
+      "badges": [
+        "Molecular and Cell Biology Research"
+      ],
+      "sort_order": 11,
+      "badge_position": "right",
+      "sections": [
+        {
+          "title": "24-Week Advanced BioResearch Curriculum",
+          "intro": "Completed an intensive 24-week bioresearch program under Prof. Sam Kunes (Harvard University) covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy. Delivered independent research project presentations at the end of each 12-week session.",
+          "photos": []
+        },
+        {
+          "title": "3-Week Physical Wet Lab & Molecular Biology Research",
+          "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills.",
+          "photos": []
+        }
+      ],
+      "hide_badges": false
+    },
+    {
       "id": 14,
       "title": "Creative & Academic Writing",
       "category_slug": "writing",
@@ -563,8 +665,11 @@
         "#NJMTA",
         "#MusicFest"
       ],
-      "badges": [],
-      "sort_order": 11,
+      "badges": [
+        "Creative Writing",
+        "Academic Writing"
+      ],
+      "sort_order": 12,
       "images": [
         "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
         "assets/writing_arts/Aadya Flute Pic1.png",
@@ -767,41 +872,6 @@
       "hide_badges": false
     },
     {
-      "id": 1792917988413,
-      "title": "Bioresearch Academy - Advanced Bio Research course and wet-lab",
-      "category_slug": "biomedical",
-      "category_name": "Biomedical Research & AI",
-      "img": "assets/uploads/1792917943889_20260710_121848.jpg",
-      "images": [
-        "assets/uploads/1792917943889_20260710_121848.jpg"
-      ],
-      "desc": "24-week Advanced BioResearch Program  with Prof. Sam Kunes, Harvard University    \n                \nCompleted an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy\n     \nConducted intensive hands-on research in molecular and cellular biology, including high-throughput RNA sequencing",
-      "highlights": [
-        "Delivered independent research project presentations at the end of each 12-week session",
-        "Developed wet-lab technical skills",
-        "3-week Wet lab research work"
-      ],
-      "tags": [],
-      "badges": [
-        "Molecular and Cell Biology Research"
-      ],
-      "sort_order": 10,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "24-Week Advanced BioResearch Curriculum",
-          "intro": "Completed an intensive 24-week bioresearch program under Prof. Sam Kunes (Harvard University) covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy. Delivered independent research project presentations at the end of each 12-week session.",
-          "photos": []
-        },
-        {
-          "title": "3-Week Physical Wet Lab & Molecular Biology Research",
-          "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills.",
-          "photos": []
-        }
-      ],
-      "hide_badges": false
-    },
-    {
       "id": 1792918333524,
       "title": "Music, Theater & Public Speaking",
       "category_slug": "writing",
@@ -826,9 +896,11 @@
       "tags": [],
       "badges": [
         "Flute",
-        "Piano"
+        "Piano",
+        "Theater",
+        "Public Speaking and Debate"
       ],
-      "sort_order": 12,
+      "sort_order": 13,
       "sections": [
         {
           "title": "Piano",
@@ -952,47 +1024,6 @@
       ],
       "hide_badges": false,
       "badge_position": "right"
-    },
-    {
-      "id": 1792918752665,
-      "title": "Stanford Center for Artificial Intelligence in Medicine & Imaging",
-      "category_slug": "biomedical",
-      "category_name": "Biomedical Research & AI",
-      "img": "assets/uploads/1792918739033_bio.jpeg",
-      "images": [
-        "assets/uploads/1792918739033_bio.jpeg",
-        "https://aimi.stanford.edu/academic-year-research-internship"
-      ],
-      "desc": "Stanford Artificial Intelligence in Medicine & Imaging  - 30-week Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
-      "highlights": [
-        "Completed a two-week summer internship",
-        "Invited to continue as an academic-year researcher",
-        "Presented my Stanford AIMI project, “User-Centric AI for Assisting the Visually Impaired,” to The Lawrenceville School’s Board of Trustees on October 23, 2026."
-      ],
-      "tags": [],
-      "badges": [
-        "Stanford AIMI"
-      ],
-      "sort_order": 6,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "Stanford AIMI 30-Week Research Internship",
-          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI.",
-          "photos": []
-        },
-        {
-          "title": "Machine Learning & Computer Vision Modeling",
-          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis.",
-          "photos": []
-        },
-        {
-          "title": "Accessibility & Board of Trustees Presentation",
-          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology.",
-          "photos": []
-        }
-      ],
-      "hide_badges": false
     }
   ],
   "documents": [
@@ -1236,6 +1267,18 @@
       "sort_order": 4
     },
     {
+      "id": 6,
+      "title": "FIRST LEGO League NJ Regional & State Awards",
+      "category_pill": "FIRST LEGO League",
+      "category_group": "robotics",
+      "year": "2024",
+      "image_url": "assets/robotics/pic 2 - Team award.JPG",
+      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 5
+    },
+    {
       "id": 5,
       "title": "WPI US Open World Championship",
       "category_pill": "World Finalist · 2026",
@@ -1243,18 +1286,6 @@
       "year": "2026",
       "image_url": "assets/robotics/pic 10 - wpi award.jpg",
       "description": "Ranked #14 out of 108 international robotics teams; Lead Autonomous Programmer and Robot Design Award Finalist at Worcester Polytechnic Institute.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 5
-    },
-    {
-      "id": 6,
-      "title": "FIRST LEGO League — NJ Regional & State Awards",
-      "category_pill": "FIRST LEGO League",
-      "category_group": "robotics",
-      "year": "2024",
-      "image_url": "assets/robotics/pic 2 - Team award.JPG",
-      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 6
@@ -1267,6 +1298,18 @@
       "year": "2024",
       "image_url": "assets/certificates/Service Award - NJ State Assembly.jpeg",
       "description": "Official commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing youth for grassroots community hunger relief.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 7
+    },
+    {
+      "id": 7,
+      "title": "Panther Hackathon Best Beginner Hack",
+      "category_pill": "Princeton Day School",
+      "category_group": "robotics",
+      "year": "2024",
+      "image_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
+      "description": "Recognized for a beginner-level hackathon project.",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 7

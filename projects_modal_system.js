@@ -1561,6 +1561,51 @@
     ]
   },
   {
+    "title": "Leopold Scholars in Ecology and Ethics",
+    "group": "School & Community",
+    "category": "School & Community",
+    "summary": "Selected for The Lawrenceville School's Leopold Scholars in Ecology and Ethics — an honors fellowship immersing students in field ecology, stream preservation, and Aldo Leopold's Land Ethic.",
+    "cardImage": "assets/community/leopold-scholars-in-ecology-and-ethics.jpg",
+    "heroImage": "assets/community/leopold-scholars-in-ecology-and-ethics.jpg",
+    "badges": [
+      {
+        "label": "Ecology & Ethics",
+        "tone": "plum"
+      },
+      {
+        "label": "The Lawrenceville School",
+        "tone": "berry"
+      }
+    ],
+    "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/sliders/post/leopold-scholars-in-ecology-and-ethics",
+    "technicalFocus": [
+      "Selected as Leopold Scholar in Ecology and Ethics by The Lawrenceville School",
+      "Conducted empirical stream ecology and watershed research at the Stroud Water Research Center",
+      "Immersed in Aldo Leopold's Land Ethic exploring biodiversity conservation and environmental stewardship",
+      "Leadership role on the School's Sustainability Council advancing campus ecological initiatives"
+    ],
+    "attachments": [],
+    "videos": [],
+    "sections": [
+      {
+        "title": "Ecology, Watersheds & The Land Ethic",
+        "intro": "The Leopold Scholars program recognizes Lawrenceville students committed to sustainability, environmental ethics, and leadership. Immersing scholars in the writings and legacy of Lawrenceville alumnus Aldo Leopold (Class of 1905), the fellowship centers on the Land Ethic — broadening ethical community boundaries to encompass soils, waters, plants, and animals."
+      },
+      {
+        "title": "Field Research & Sustainability Leadership",
+        "intro": "Includes intensive ecological field trials and stream assessment at the Stroud Water Research Center, presentations at the Fall Academic Showcase, and executive service on the School's Sustainability Council leading campus-wide habitat and resource stewardship."
+      }
+    ],
+    "gallerySubtitle": "Ecology seminar, watershed field studies, and campus environmental leadership.",
+    "gallery": [
+      {
+        "src": "assets/community/leopold-scholars-in-ecology-and-ethics.jpg",
+        "alt": "Leopold Scholars in Ecology and Ethics - The Lawrenceville School",
+        "caption": "Leopold Scholars in Ecology and Ethics — Click to view full article on The Lawrenceville School"
+      }
+    ]
+  },
+  {
     "title": "Biomedical & AI Scientific Research",
     "group": "Projects",
     "category": "Biomedical Research & AI",
@@ -1694,6 +1739,7 @@
   function renderModalContent(project) {
     const heroRaw = project.heroImage || project.cardImage || '';
     const heroSrc = typeof window.getResolvedImageSrc === 'function' ? window.getResolvedImageSrc(heroRaw) : heroRaw;
+    const linkUrl = project.link_url || project.article_url || project.external_url || '';
 
     // Key Highlights HTML
     let techFocusHtml = '';
@@ -1914,17 +1960,39 @@
 
     return `
       <!-- Hero Banner with Title Overlay -->
-      <div class="modal-hero-banner">
-        ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image" style="object-position: center !important;" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
-        <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 pointer-events-none">
-          ${project.category ? `<span class="modal-category-badge mb-2 rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">${project.category}</span>` : ''}
-          <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
-        </div>
+      <div class="modal-hero-banner relative">
+        ${linkUrl ? `
+          <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="block relative group cursor-pointer overflow-hidden" title="Click to view full story on The Lawrenceville School">
+            ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image transition duration-300 group-hover:scale-105" style="object-position: center !important;" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
+            <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 flex flex-col justify-end">
+              ${project.category ? `<span class="modal-category-badge mb-2 rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm inline-block w-fit">${project.category}</span>` : ''}
+              <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
+              <span class="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-white/95 underline decoration-white/60 underline-offset-4 group-hover:text-white">
+                <span>Click to view official article on The Lawrenceville School</span>
+                <span aria-hidden="true">&nearr;</span>
+              </span>
+            </div>
+          </a>
+        ` : `
+          ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image" style="object-position: center !important;" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
+          <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 pointer-events-none">
+            ${project.category ? `<span class="modal-category-badge mb-2 rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">${project.category}</span>` : ''}
+            <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
+          </div>
+        `}
       </div>
 
       <!-- Main Modal Body -->
       <div class="mx-auto max-w-5xl px-5 py-8 sm:px-8 sm:py-10 bg-paper">
         <p class="max-w-3xl text-sm leading-relaxed text-ink/80 sm:text-base md:text-lg">${project.summary}</p>
+        ${linkUrl ? `
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-plum px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-berry focus-visible:outline-2 focus-visible:outline-offset-2">
+              <span>Read Official Article on The Lawrenceville School</span>
+              <span aria-hidden="true">&nearr;</span>
+            </a>
+          </div>
+        ` : ''}
         ${techFocusHtml}
         ${docsHtml}
         ${sectionsHtml}
@@ -2079,6 +2147,12 @@
         }
         if (Array.isArray(identifier.videos)) {
           project.videos = identifier.videos;
+        }
+        if (identifier.link_url) {
+          project.link_url = identifier.link_url;
+        }
+        if (identifier.article_url) {
+          project.article_url = identifier.article_url;
         }
       } else {
         const imgs = Array.isArray(identifier.images) ? identifier.images : (identifier.img ? [identifier.img] : []);

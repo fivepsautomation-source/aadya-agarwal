@@ -285,6 +285,7 @@
             title: p.title,
             category: p.category_name,
             article_url: p.article_url,
+            link_url: p.link_url || p.article_url || '',
             img: coverImg,
             images: galleryImgs,
             videos: Array.isArray(p.videos) ? p.videos : [],
