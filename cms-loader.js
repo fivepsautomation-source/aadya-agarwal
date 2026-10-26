@@ -119,6 +119,13 @@
       try {
         const parsed = JSON.parse(local);
         if (parsed && (parsed.settings || parsed.portfolio || parsed.awards)) {
+          if (Array.isArray(parsed.portfolio)) {
+            parsed.portfolio.forEach(item => {
+              if (item.id === 4 || (item.title && item.title.toLowerCase().includes('comparative biochar'))) {
+                item.badge_position = 'right';
+              }
+            });
+          }
           return parsed;
         }
       } catch(e) {}
@@ -313,7 +320,10 @@
             }
           }
 
-          const isLeftBadge = p.badge_position === 'left';
+          if (p.id === 4 || (p.title && p.title.toLowerCase().includes('comparative biochar'))) {
+            p.badge_position = 'right';
+          }
+          const isLeftBadge = p.badge_position === 'left' && p.id !== 4 && !(p.title && p.title.toLowerCase().includes('comparative biochar'));
           const posClass = isLeftBadge ? 'left-2 top-2 justify-start is-left' : 'right-2 top-2 justify-end is-right';
           const badgesHtml = relevantBadges.length
             ? `<span class="pointer-events-none absolute ${posClass} card-badges-wrap z-10 flex flex-wrap gap-1.5" style="top: 0.5rem; ${isLeftBadge ? 'left: 0.5rem;' : 'right: 0.5rem;'}">` +

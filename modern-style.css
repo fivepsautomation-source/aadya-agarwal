@@ -2636,9 +2636,12 @@ img {
 .card-badges-wrap {
   position: absolute !important;
   top: 0.5rem !important;
+  right: 0.5rem !important;
+  left: auto !important;
   z-index: 20 !important;
   display: flex !important;
   flex-wrap: wrap !important;
+  justify-content: flex-end !important;
   gap: 0.375rem !important;
   pointer-events: none !important;
 }
@@ -2653,8 +2656,20 @@ img {
   justify-content: flex-end !important;
 }
 
+/* Force IEEE/ISEC card badge strictly to default top-right corner */
+.portfolio-card img[src*="ieee-attendance"] ~ .card-badges-wrap,
+.portfolio-card img[alt*="IEEE/ISEC"] ~ .card-badges-wrap,
+.portfolio-card [data-category="environmental"] .card-badges-wrap,
+.portfolio-card img[src*="ieee-attendance"] + .card-badges-wrap,
+.portfolio-card img[alt*="IEEE/ISEC"] + .card-badges-wrap {
+  right: 0.5rem !important;
+  left: auto !important;
+  justify-content: flex-end !important;
+}
+
 .portfolio-card img[src*="ieee-attendance"],
 .portfolio-card img[alt*="IEEE/ISEC"] {
   object-position: center top !important;
 }
+
 
