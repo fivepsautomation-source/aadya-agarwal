@@ -760,27 +760,35 @@
     },
     {
       "id": 1792917988413,
-      "title": "BioResearch Academy - 24 week Advanced Biology course and 3 week wet-lab",
+      "title": "Bioresearch Academy - 24-week Advanced Biology course and three week wet-lab",
       "category_slug": "biomedical",
       "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792917943889_20260710_121848.jpg",
       "images": [
         "assets/uploads/1792917943889_20260710_121848.jpg"
       ],
-      "desc": "Bioresearch Academy, Prof. Sam Kunes, Harvard University\n24-week Advanced BioResearch Program                       \nCompleted an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy\nDelivered independent research project presentations at the end of each 12-week session\n3-week Wet lab research work      \nConducting intensive hands-on research in molecular and cellular biology, including high-throughput RNA sequencing\nDeveloped wet-lab technical skills",
-      "highlights": [],
+      "desc": "24-week Advanced BioResearch Program  with Prof. Sam Kunes, Harvard University    \n                \nCompleted an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy\n     \nConducted intensive hands-on research in molecular and cellular biology, including high-throughput RNA sequencing",
+      "highlights": [
+        "Delivered independent research project presentations at the end of each 12-week session",
+        "Developed wet-lab technical skills",
+        "3-week Wet lab research work"
+      ],
       "tags": [],
-      "badges": [],
+      "badges": [
+        "Molecular and Cell Biology Research"
+      ],
       "sort_order": 10,
       "badge_position": "right",
       "sections": [
         {
           "title": "24-Week Advanced BioResearch Curriculum",
-          "intro": "Completed an intensive 24-week bioresearch program under Prof. Sam Kunes (Harvard University) covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy. Delivered independent research project presentations at the end of each 12-week session."
+          "intro": "Completed an intensive 24-week bioresearch program under Prof. Sam Kunes (Harvard University) covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy. Delivered independent research project presentations at the end of each 12-week session.",
+          "photos": []
         },
         {
           "title": "3-Week Physical Wet Lab & Molecular Biology Research",
-          "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills."
+          "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills.",
+          "photos": []
         }
       ],
       "hide_badges": false
