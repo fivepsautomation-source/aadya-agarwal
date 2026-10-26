@@ -275,14 +275,6 @@
         "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
         "projects/ocean-project-presentation.jpg"
       ],
-      "videos": [
-        {
-          "type": "local",
-          "src": "projects/videos/3m-buoy-preview.mp4",
-          "title": "3M Young Scientist Challenge Submission Video",
-          "poster": "projects/ocean-project-presentation.jpg"
-        }
-      ],
       "desc": "A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.",
       "highlights": [
         "pH sensor feeds real-time water quality readings to an Arduino microcontroller",
@@ -978,8 +970,9 @@
       "title": "here it is",
       "category_slug": "community",
       "category_name": "School & Community",
-      "img": "assets/uploads/1792995905368_pic_6_-_Sock_Drive_-_AssemblyWoman-NJ_State_Senate_House_-_photo2.jpg",
+      "img": "assets/uploads/1792997037025_WhatsApp_Image_2026-10-26_at_11.21.07_AM.jpeg",
       "images": [
+        "assets/uploads/1792997037025_WhatsApp_Image_2026-10-26_at_11.21.07_AM.jpeg",
         "assets/uploads/1792995905368_pic_6_-_Sock_Drive_-_AssemblyWoman-NJ_State_Senate_House_-_photo2.jpg"
       ],
       "desc": "its sub heading ,project description",
