@@ -357,6 +357,24 @@
               <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">${p.desc || ''}</span>
             </div>
           `;
+          card.addEventListener('click', (e) => {
+            const anchor = e.target.closest('a');
+            if (anchor && !anchor.classList.contains('card-read-more')) {
+              const href = (anchor.getAttribute('href') || '').trim();
+              if ((href.startsWith('http://') || href.startsWith('https://')) && anchor.getAttribute('target') === '_blank') return;
+            }
+            e.preventDefault();
+            const dataProject = card.getAttribute('data-project');
+            let pObj = null;
+            if (dataProject) {
+              try { pObj = JSON.parse(dataProject); } catch(err) {}
+            }
+            const title = card.querySelector('h3')?.textContent?.trim() || '';
+            if (typeof window.openProjectModal === 'function') {
+              window.openProjectModal(pObj || title);
+            }
+          });
+
           cardsGrid.appendChild(card);
         });
 

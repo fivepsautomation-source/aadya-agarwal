@@ -2194,102 +2194,44 @@
       cardObserver.observe(grid, { childList: true });
     });
 
-    // Bind click handlers: entering card is done via content below image or "Read more" button
-    const cards = document.querySelectorAll('.portfolio-card');
-    cards.forEach((card, i) => {
-      const contentBox = card.querySelector('.p-5') || card.children[1];
-      if (contentBox) {
-        contentBox.style.cursor = 'pointer';
-        contentBox.addEventListener('click', (e) => {
-          if (e.target.closest('a') && !e.target.closest('.card-read-more')) return;
-          const title = card.querySelector('h3')?.textContent?.trim() || '';
-          const dataProject = card.getAttribute('data-project');
-          let projectObj = null;
-          if (dataProject) {
-            try { projectObj = JSON.parse(dataProject); } catch(err) {}
-          }
-          window.openProjectModal(projectObj || title || i);
-        });
-      }
+    // Universal delegated click listener for ALL portfolio cards (static or dynamically loaded by CMS)
+    document.addEventListener('click', (e) => {
+      // Ignore clicks inside open modal
+      if (e.target.closest('#projectModal')) return;
 
-      // Card-level fallback (ignores image area)
-      card.addEventListener('click', (e) => {
-        if (e.target.closest('.aspect-video') || e.target.closest('.card-media-box')) return;
-        if (e.target.closest('a') && !e.target.closest('.card-read-more')) return;
-        
-        const title = card.querySelector('h3')?.textContent?.trim() || '';
-        const dataProject = card.getAttribute('data-project');
-        let projectObj = null;
-        if (dataProject) {
-          try {
-            projectObj = JSON.parse(dataProject);
-          } catch(err) {}
+      // Find closest portfolio-card
+      const card = e.target.closest('.portfolio-card');
+      if (!card) return;
+
+      // If clicked on an external link with an actual external http/https URL and target="_blank", allow navigation
+      const anchor = e.target.closest('a');
+      if (anchor && !anchor.classList.contains('card-read-more')) {
+        const href = (anchor.getAttribute('href') || '').trim();
+        if ((href.startsWith('http://') || href.startsWith('https://')) && anchor.getAttribute('target') === '_blank') {
+          return;
         }
-        window.openProjectModal(projectObj || title || i);
-      });
-    });
+      }
 
-  function setupCardImageSwitchers() {
-    const cards = document.querySelectorAll('.portfolio-card');
-    cards.forEach((card) => {
-      const mediaBox = card.querySelector('.aspect-video');
-      if (!mediaBox || mediaBox.dataset.hasSwitcher) return;
-      mediaBox.dataset.hasSwitcher = 'true';
-      mediaBox.classList.add('card-media-box');
+      e.preventDefault();
+      e.stopPropagation();
 
-      const imgEl = mediaBox.querySelector('img');
-      if (!imgEl) return;
-      imgEl.classList.add('card-image-foreground');
-
-      let images = [];
-      const dataProjectStr = card.getAttribute('data-project');
-      if (dataProjectStr) {
+      const title = card.querySelector('h3')?.textContent?.trim() || '';
+      const dataProject = card.getAttribute('data-project');
+      let projectObj = null;
+      if (dataProject) {
         try {
-          const pObj = JSON.parse(dataProjectStr);
-          if (Array.isArray(pObj.images) && pObj.images.length > 0) {
-            images = pObj.images;
-          } else if (pObj.img) {
-            images = [pObj.img];
-          }
-        } catch(e) {}
+          projectObj = JSON.parse(dataProject);
+        } catch(err) {}
       }
 
-      if (images.length === 0 && card.getAttribute('data-is-robotics')) {
-        images = [
-          "assets/robotics/pic 2 - Team award.JPG",
-          "assets/robotics/fll_team_wpi.jpg",
-          "assets/robotics/pic 1 - 2024.jpg",
-          "assets/robotics/ftc_match_focus.jpg"
-        ];
+      if (typeof window.openProjectModal === 'function') {
+        window.openProjectModal(projectObj || title);
       }
+    }, true);
 
-      if (images.length > 1) {
-        let curIdx = 0;
-
-        const changeImage = (newIdx) => {
-          curIdx = (newIdx + images.length) % images.length;
-          imgEl.style.transition = 'opacity 0.15s ease';
-          imgEl.style.opacity = '0.35';
-          setTimeout(() => {
-            imgEl.src = images[curIdx];
-            imgEl.style.opacity = '1';
-          }, 150);
-        };
-
-        mediaBox.addEventListener('click', (e) => {
-          if (e.target.closest('a')) return;
-          e.stopPropagation();
-          e.preventDefault();
-          changeImage(curIdx + 1);
-        });
-      } else {
-        // Prevent opening modal when clicking single image
-        mediaBox.addEventListener('click', (e) => {
-          e.stopPropagation();
-        });
-      }
-    });
-  }
+    function setupCardImageSwitchers() {
+      // Keep switchers non-blocking
+    }
 
     // National Memberships Carousel Auto-advance (index.html)
     const membershipCarousel = document.querySelector('[aria-label="National memberships carousel"]');
