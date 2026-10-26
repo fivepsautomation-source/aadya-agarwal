@@ -185,6 +185,7 @@ class AdminCMSHandler(http.server.SimpleHTTPRequestHandler):
                     'category_pill': row['category_pill'],
                     'year': row['year'],
                     'image_url': row['image_url'],
+                    'video_url': row['video_url'] if ('video_url' in row.keys() and row['video_url']) else '',
                     'description': row['description'],
                     'link_text': row['link_text'],
                     'link_url': row['link_url'],
@@ -220,6 +221,43 @@ class AdminCMSHandler(http.server.SimpleHTTPRequestHandler):
             conn.close()
             self.send_json({'media': media})
             return
+
+        # Support HTTP Range requests for video/media streaming
+        range_header = self.headers.get('Range')
+        clean_path = urllib.parse.unquote(path.lstrip('/'))
+        if range_header and os.path.isfile(clean_path):
+            try:
+                file_size = os.path.getsize(clean_path)
+                range_match = re.match(r'bytes=(\d+)-(\d*)', range_header)
+                if range_match:
+                    start = int(range_match.group(1))
+                    end = int(range_match.group(2)) if range_match.group(2) else file_size - 1
+                    end = min(end, file_size - 1)
+                    length = end - start + 1
+                    
+                    self.send_response(206)
+                    content_type = mimetypes.guess_type(clean_path)[0] or 'application/octet-stream'
+                    self.send_header('Content-Type', content_type)
+                    self.send_header('Content-Range', f'bytes {start}-{end}/{file_size}')
+                    self.send_header('Content-Length', str(length))
+                    self.send_header('Accept-Ranges', 'bytes')
+                    self.end_headers()
+                    
+                    with open(clean_path, 'rb') as f:
+                        f.seek(start)
+                        bytes_left = length
+                        chunk_size = 64 * 1024
+                        while bytes_left > 0:
+                            chunk = f.read(min(chunk_size, bytes_left))
+                            if not chunk:
+                                break
+                            self.wfile.write(chunk)
+                            bytes_left -= len(chunk)
+                    return
+            except (ConnectionResetError, BrokenPipeError):
+                return
+            except Exception:
+                pass
 
         # Default static file serving
         return super().do_GET()
@@ -429,6 +467,7 @@ class AdminCMSHandler(http.server.SimpleHTTPRequestHandler):
             category_pill = data.get('category_pill', 'Honors')
             year = data.get('year', '2026')
             image_url = data.get('image_url', '')
+            video_url = data.get('video_url', '')
             description = data.get('description', '')
             link_text = data.get('link_text', 'Learn More')
             link_url = data.get('link_url', '#')
@@ -438,13 +477,13 @@ class AdminCMSHandler(http.server.SimpleHTTPRequestHandler):
             c = conn.cursor()
             if aw_id:
                 c.execute('''
-                UPDATE awards_items SET title=?, category_pill=?, year=?, image_url=?, description=?, link_text=?, link_url=?, sort_order=? WHERE id=?
-                ''', (title, category_pill, year, image_url, description, link_text, link_url, sort_order, aw_id))
+                UPDATE awards_items SET title=?, category_pill=?, year=?, image_url=?, video_url=?, description=?, link_text=?, link_url=?, sort_order=? WHERE id=?
+                ''', (title, category_pill, year, image_url, video_url, description, link_text, link_url, sort_order, aw_id))
             else:
                 c.execute('''
-                INSERT INTO awards_items (title, category_pill, year, image_url, description, link_text, link_url, sort_order)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                ''', (title, category_pill, year, image_url, description, link_text, link_url, sort_order))
+                INSERT INTO awards_items (title, category_pill, year, image_url, video_url, description, link_text, link_url, sort_order)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (title, category_pill, year, image_url, video_url, description, link_text, link_url, sort_order))
                 aw_id = c.lastrowid
             conn.commit()
             conn.close()

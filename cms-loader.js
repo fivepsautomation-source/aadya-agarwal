@@ -527,6 +527,30 @@
           });
         }
       }
+
+      // Conference Featured Video card sync (awards.html)
+      const confCard = document.querySelector('.conference-video-card');
+      if (confCard && data.settings) {
+        const vUrl = data.settings.conference_video_url;
+        const vTitle = data.settings.conference_video_title;
+        const vDesc = data.settings.conference_video_desc;
+        if (vUrl) {
+          const ytMatch = vUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+          const ytId = ytMatch ? ytMatch[1] : (vUrl.length === 11 ? vUrl : null);
+          const iframe = confCard.querySelector('iframe');
+          if (iframe && ytId) {
+            iframe.src = `https://www.youtube-nocookie.com/embed/${ytId}`;
+          }
+        }
+        if (vTitle) {
+          const h3 = confCard.querySelector('h3');
+          if (h3) h3.textContent = vTitle;
+        }
+        if (vDesc) {
+          const p = confCard.querySelector('p');
+          if (p) p.textContent = vDesc;
+        }
+      }
     }
 
     // 5. MEMBERSHIPS & ORGANIZATIONS

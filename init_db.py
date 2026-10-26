@@ -95,6 +95,7 @@ def init_database():
         category_pill TEXT NOT NULL,
         year TEXT NOT NULL,
         image_url TEXT NOT NULL,
+        video_url TEXT DEFAULT '',
         description TEXT NOT NULL,
         link_text TEXT NOT NULL,
         link_url TEXT NOT NULL,

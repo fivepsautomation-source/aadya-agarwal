@@ -5,6 +5,7 @@ Aadya Aranyo - website*/
 # Large unreferenced raw video recordings (>100MB rejected by GitHub)
 **/*.mp4
 !projects/videos/*.mp4
+projects/videos/3m-buoy-submission.mp4
 **/*.mov
 **/*.avi
 **/*.wmv

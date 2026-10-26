@@ -946,6 +946,46 @@
               <!-- Loaded via JavaScript -->
             </div>
           </div>
+
+          <!-- CONFERENCE FEATURED VIDEO (Section 07 · Conferences on Awards Page) -->
+          <div class="cms-card" style="margin-top: 1.5rem; border: 1px solid rgba(186,31,67,0.22); background: #fdfbfc;">
+            <div class="cms-card-header" style="margin-bottom: 1rem;">
+              <div>
+                <h2 class="cms-card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span>🎬 Conference Featured Video</span>
+                  <span style="font-size: 0.72rem; font-weight: 700; color: #fff; background: var(--admin-berry); padding: 0.2rem 0.6rem; border-radius: 999px; text-transform: uppercase;">Acceptance Speech</span>
+                </h2>
+                <p class="cms-card-subtitle">Manage the featured presentation video embedded on the Awards &amp; Honors page (Section 07 · Conferences).</p>
+              </div>
+              <button type="button" onclick="saveConferenceVideo()" class="btn-primary" style="width: auto; padding: 0.55rem 1.2rem; margin: 0; background: var(--admin-plum);">
+                <span>Save Conference Video</span>
+              </button>
+            </div>
+
+            <div class="grid-2col" style="gap: 1rem; margin-bottom: 1rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Video Title / Heading</label>
+                <input type="text" id="confVideoTitle" class="form-input" value="Acceptance Speech">
+              </div>
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Video Subtitle / Award Context</label>
+                <input type="text" id="confVideoDesc" class="form-input" value="NJWEA Stockholm Junior Water Prize Regional Award · Aadya Agarwal">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label class="form-label">YouTube Video URL or Embed Link</label>
+              <div style="display: flex; gap: 0.5rem;">
+                <input type="text" id="confVideoUrl" class="form-input" style="font-family: 'JetBrains Mono', monospace;" value="https://www.youtube.com/watch?v=ELyxcPwMp3M" oninput="updateConferenceVideoPreview(this.value)">
+                <button type="button" onclick="promptPasteConfVideo()" class="btn-secondary" style="white-space: nowrap;">📋 Paste</button>
+              </div>
+            </div>
+
+            <!-- Preview box -->
+            <div id="confVideoPreviewBox" style="background: #0f0f12; border-radius: 12px; padding: 1rem; color: #fff;">
+              <!-- Embed iframe preview rendered by JS -->
+            </div>
+          </div>
         </div>
 
         <!-- TAB 7: ABOUT PAGE & STORY -->
@@ -1178,11 +1218,33 @@
               </div>
             </div>
 
-            <div class="image-dropzone" onclick="document.getElementById('libraryUploadInput').click()" style="margin-bottom: 2rem;">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--admin-berry)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--admin-plum);">Drop Image or Click to Upload</h3>
-              <p style="font-size: 0.8rem; color: rgba(15,15,18,0.5);">Saved permanently to database &amp; assets/uploads/</p>
-              <input type="file" id="libraryUploadInput" style="display: none;" accept="image/*" multiple onchange="uploadMultipleToLibrary(this)">
+            <!-- Action Bar for Images & Videos -->
+            <div style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem; flex-wrap: wrap;">
+              <button type="button" onclick="document.getElementById('libraryUploadInput').click()" class="btn-primary" style="margin: 0; width: auto; padding: 0.55rem 1.2rem; background: var(--admin-plum); display: inline-flex; align-items: center; gap: 0.4rem;">
+                <span>📷 Upload Images</span>
+              </button>
+              <label class="btn-primary" style="margin: 0; width: auto; padding: 0.55rem 1.2rem; background: var(--admin-berry); cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;" title="Upload MP4, WebM or MOV video file">
+                <span>🎬 Upload Video File (.mp4)</span>
+                <input type="file" id="libraryVideoUploadInput" style="display: none;" accept="video/mp4,video/webm,video/quicktime" onchange="uploadVideoToLibrary(this)">
+              </label>
+              <button type="button" onclick="promptAddVideoLinkToLibrary()" class="btn-secondary" style="margin: 0; width: auto; padding: 0.55rem 1.1rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                <span>🔗 Add YouTube / Video Link</span>
+              </button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+              <div class="image-dropzone" onclick="document.getElementById('libraryUploadInput').click()" style="margin: 0;">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--admin-plum)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--admin-plum);">Drop Image or Click</h3>
+                <p style="font-size: 0.78rem; color: rgba(15,15,18,0.5);">Upload multiple photos to library</p>
+                <input type="file" id="libraryUploadInput" style="display: none;" accept="image/*" multiple onchange="uploadMultipleToLibrary(this)">
+              </div>
+
+              <div class="image-dropzone" onclick="document.getElementById('libraryVideoUploadInput').click()" style="margin: 0; border-color: rgba(186,31,67,0.35); background: rgba(186,31,67,0.02);">
+                <span style="font-size: 2.2rem; line-height: 1;">🎬</span>
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--admin-berry);">Drop Video or Click</h3>
+                <p style="font-size: 0.78rem; color: rgba(15,15,18,0.5);">Upload .mp4 / .webm video files</p>
+              </div>
             </div>
 
             <div id="mediaGalleryGrid" class="grid-3col">
@@ -1197,6 +1259,40 @@
 
   <!-- Toast Container -->
   <div class="toast-container" id="toastContainer"></div>
+
+  <!-- QUICK PROJECT VIDEO MODAL -->
+  <dialog id="quickVideoModal" style="padding: 0; border: none; border-radius: 18px; max-width: 680px; width: 92vw; margin: auto; box-shadow: 0 25px 60px rgba(0,0,0,0.3); background: #fff;">
+    <div style="padding: 1.25rem 1.75rem; border-bottom: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between; background: #faf9f7;">
+      <div>
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--admin-plum); margin: 0;" id="quickVideoModalTitle">🎬 Project Video Recording</h3>
+        <p style="font-size: 0.78rem; color: rgba(15,15,18,0.55); margin: 0.2rem 0 0;" id="quickVideoModalSubtitle">Manage or add YouTube video link or direct MP4 recording</p>
+      </div>
+      <button onclick="document.getElementById('quickVideoModal').close()" style="background: none; border: none; font-size: 1.75rem; line-height: 1; cursor: pointer; color: rgba(0,0,0,0.5); padding: 0.2rem 0.5rem;">&times;</button>
+    </div>
+    <div style="padding: 1.5rem; max-height: 75vh; overflow-y: auto;">
+      <input type="hidden" id="quickVideoProjectId">
+
+      <!-- Action buttons -->
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+        <button type="button" onclick="addNewQuickVideoRow()" class="btn-primary" style="margin: 0; padding: 0.5rem 1rem; font-size: 0.8rem; background: var(--admin-plum); cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; width: auto;">
+          <span>+ Add Video URL / YouTube</span>
+        </button>
+        <label class="btn-secondary" style="margin: 0; padding: 0.5rem 1rem; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem;" title="Upload MP4 or WebM video file">
+          <span>📤 Upload Video File (.mp4)</span>
+          <input type="file" accept="video/mp4,video/webm,video/quicktime" style="display: none;" onchange="uploadQuickVideoFile(this)">
+        </label>
+      </div>
+
+      <!-- Quick videos container -->
+      <div id="quickVideosList" style="display: flex; flex-direction: column; gap: 0.85rem;">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+    <div style="padding: 1rem 1.75rem; border-top: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem; background: #faf9f7;">
+      <button type="button" onclick="document.getElementById('quickVideoModal').close()" class="btn-secondary" style="margin: 0;">Cancel</button>
+      <button type="button" onclick="saveQuickVideos()" class="btn-primary" style="margin: 0; width: auto; background: var(--admin-berry);">💾 Save Videos to Project</button>
+    </div>
+  </dialog>
 
   <!-- PROJECT EDIT MODAL -->
   <dialog id="projectEditModal" style="padding: 0; border: none; border-radius: 18px; max-width: 760px; width: 92vw; margin: auto; box-shadow: 0 25px 60px rgba(0,0,0,0.3); background: #fff;">
@@ -1490,6 +1586,21 @@
             </label>
             <input type="text" id="modalAwardImg" class="form-input" style="font-size: 0.82rem; padding: 0.55rem 0.8rem;" placeholder="Image URL (e.g. assets/certificates/...)" oninput="updateAwardPreview(this.value)">
           </div>
+        </div>
+      </div>
+
+      <!-- Award Video / Speech Recording -->
+      <div class="form-group" style="background: #fdfbfc; padding: 1rem 1.25rem; border-radius: 14px; border: 1px solid rgba(186,31,67,0.18); margin-bottom: 1.25rem;">
+        <label class="form-label" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.35rem;">
+          <span style="display: inline-flex; align-items: center; gap: 0.4rem;">
+            <span>🎬 Award Video / Speech Recording (Optional)</span>
+          </span>
+          <span style="font-size: 0.72rem; color: var(--admin-berry); text-transform: uppercase;">YouTube Link or MP4</span>
+        </label>
+        <p style="font-size: 0.75rem; color: rgba(15,15,18,0.55); margin: 0 0 0.5rem;">If this award or conference has a recording (e.g. YouTube acceptance speech or presentation), paste the link here.</p>
+        <div style="display: flex; gap: 0.45rem;">
+          <input type="text" id="modalAwardVideoUrl" class="form-input" style="font-size: 0.82rem; font-family: 'JetBrains Mono', monospace;" placeholder="e.g. https://www.youtube.com/watch?v=... or projects/videos/...">
+          <button type="button" onclick="promptPasteAwardVideo()" class="btn-secondary" style="padding: 0.45rem 0.75rem; font-size: 0.75rem; white-space: nowrap;">📋 Paste</button>
         </div>
       </div>
 
@@ -2324,6 +2435,20 @@
       setVal('aboutInviteHeadline', ab.invite_headline || '');
       setVal('aboutInviteBody', ab.invite_body || '');
 
+      // Conference Video (Awards Page Section 07)
+      const confUrl = s.conference_video_url || 'https://www.youtube.com/watch?v=ELyxcPwMp3M';
+      const confTitle = s.conference_video_title || 'Acceptance Speech';
+      const confDesc = s.conference_video_desc || 'NJWEA Stockholm Junior Water Prize Regional Award · Aadya Agarwal';
+      const cuEl = document.getElementById('confVideoUrl');
+      if (cuEl) cuEl.value = confUrl;
+      const ctEl = document.getElementById('confVideoTitle');
+      if (ctEl) ctEl.value = confTitle;
+      const cdEl = document.getElementById('confVideoDesc');
+      if (cdEl) cdEl.value = confDesc;
+      if (typeof updateConferenceVideoPreview === 'function') {
+        updateConferenceVideoPreview(confUrl);
+      }
+
       // Render Connect
       document.getElementById('connectEmail').value = s.connect_email || '';
       document.getElementById('connectGithub').value = s.connect_github || '';
@@ -2985,14 +3110,19 @@
           photosHtml = secPhotos.map((ph, phIdx) => {
             const rawSrc = (typeof ph === 'string' ? ph : ph.src) || '';
             const caption = (typeof ph === 'object' && ph.caption) ? ph.caption : '';
+            const isSecVid = (typeof ph === 'object' && ph.type === 'video') || rawSrc.includes('youtube') || rawSrc.endsWith('.mp4') || rawSrc.endsWith('.webm');
+            const ytId = isSecVid ? extractYouTubeId(rawSrc) : null;
             return `
               <div style="display: flex; align-items: center; gap: 0.5rem; background: #ffffff; border: 1px solid rgba(59,18,45,0.15); border-radius: 8px; padding: 0.35rem 0.5rem; margin-bottom: 0.35rem;">
-                <img src="${getResolvedImageSrc(rawSrc)}" style="width: 44px; height: 36px; object-fit: cover; border-radius: 4px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.src='assets/logo.png'">
+                ${isSecVid ? (ytId ? `<img src="https://img.youtube.com/vi/${ytId}/mqdefault.jpg" style="width: 44px; height: 36px; object-fit: cover; border-radius: 4px; border: 1px solid #ba1f43;">` : `<div style="width: 44px; height: 36px; background: #0f0f12; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🎬</div>`) : `<img src="${getResolvedImageSrc(rawSrc)}" style="width: 44px; height: 36px; object-fit: cover; border-radius: 4px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.src='assets/logo.png'">`}
                 <div style="flex: 1; display: flex; flex-direction: column; gap: 0.15rem; min-width: 0;">
-                  <input type="text" value="${escapeHtml(caption)}" placeholder="Caption / Title" oninput="updateSectionPhotoCaption(${idx}, ${phIdx}, this.value)" style="font-size: 0.75rem; padding: 0.2rem 0.4rem; border: 1px solid rgba(0,0,0,0.15); border-radius: 4px; width: 100%;">
+                  <div style="display: flex; align-items: center; gap: 0.35rem;">
+                    ${isSecVid ? '<span style="font-size: 0.62rem; font-weight: 800; background: #ba1f43; color: #fff; padding: 1px 4px; border-radius: 3px;">VIDEO</span>' : ''}
+                    <input type="text" value="${escapeHtml(caption)}" placeholder="Caption / Title" oninput="updateSectionPhotoCaption(${idx}, ${phIdx}, this.value)" style="font-size: 0.75rem; padding: 0.2rem 0.4rem; border: 1px solid rgba(0,0,0,0.15); border-radius: 4px; width: 100%;">
+                  </div>
                   <span style="font-size: 0.65rem; color: rgba(15,15,18,0.55); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(rawSrc)}</span>
                 </div>
-                <button type="button" onclick="removeSectionPhoto(${idx}, ${phIdx})" style="background: none; border: none; cursor: pointer; color: #ba1f43; font-size: 0.9rem; padding: 0 4px;" title="Delete image">✕</button>
+                <button type="button" onclick="removeSectionPhoto(${idx}, ${phIdx})" style="background: none; border: none; cursor: pointer; color: #ba1f43; font-size: 0.9rem; padding: 0 4px;" title="Delete">✕</button>
               </div>
             `;
           }).join('');
@@ -3029,7 +3159,7 @@
               <label class="form-label" style="font-size: 0.75rem; margin: 0; font-weight: 700; color: var(--admin-plum); display: flex; align-items: center; gap: 0.35rem;">
                 <span>🖼️ Section Images (${secPhotos.length})</span>
               </label>
-              <div style="display: flex; gap: 0.35rem;">
+              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
                 <button type="button" onclick="promptAddSectionPhoto(${idx})" class="btn-secondary" style="margin: 0; padding: 0.25rem 0.65rem; font-size: 0.72rem; cursor: pointer;">
                   + Add Image URL
                 </button>
@@ -3037,6 +3167,9 @@
                   <span>📁 Upload Image</span>
                   <input type="file" accept="image/*" style="display: none;" onchange="uploadSectionPhoto(${idx}, this)">
                 </label>
+                <button type="button" onclick="promptAddSectionVideo(${idx})" class="btn-secondary" style="margin: 0; padding: 0.25rem 0.65rem; font-size: 0.72rem; cursor: pointer; color: #ba1f43; border-color: rgba(186,31,67,0.3); background: rgba(186,31,67,0.04);">
+                  <span>🎬 + Add Video</span>
+                </button>
               </div>
             </div>
             <div style="max-height: 190px; overflow-y: auto; padding: 0.35rem; background: #faf8f6; border-radius: 8px; border: 1px solid rgba(0,0,0,0.06);">
@@ -3090,6 +3223,26 @@
         });
         renderModalSections();
         showToast('✓ Image added to section!');
+      }
+    }
+
+    function promptAddSectionVideo(secIdx) {
+      const url = prompt('Enter or paste YouTube video link or direct MP4 URL:');
+      if (url && url.trim()) {
+        const clean = url.trim();
+        if (!currentModalSections[secIdx]) currentModalSections[secIdx] = { title: '', intro: '' };
+        if (!Array.isArray(currentModalSections[secIdx].photos)) {
+          currentModalSections[secIdx].photos = [];
+        }
+        const title = prompt('Enter a title/caption for this video (optional):', '') || 'Section Video';
+        currentModalSections[secIdx].photos.push({
+          src: clean,
+          alt: title,
+          caption: title,
+          type: 'video'
+        });
+        renderModalSections();
+        showToast('✓ Video added to section!');
       }
     }
 
@@ -3411,45 +3564,94 @@
       fileInput.value = '';
     }
 
-    async function uploadProjectVideoFile(fileInput) {
-      if (!fileInput.files || !fileInput.files.length) return;
-      const file = fileInput.files[0];
-      if (file.size > 25 * 1024 * 1024) {
-        alert('Video file is larger than 25MB. For large videos, we strongly recommend uploading to YouTube and pasting the unlisted/public YouTube link here for instant global HD streaming.');
+    // Universal Smart Video File Uploader (works locally via /api/upload and GitHub)
+    async function uploadVideoFileSmartly(file) {
+      if (!file) return null;
+      if (file.size > 50 * 1024 * 1024) {
+        alert('Notice: Video file is over 50MB. For faster playback and zero buffering, uploading to YouTube and pasting the link is strongly recommended.');
       }
       showToast(`Uploading video "${file.name}"...`);
+
+      const cleanName = (file.name || 'video.mp4').replace(/[^a-zA-Z0-9._-]/g, '_');
+      const filename = `${Date.now()}_${cleanName}`;
+      const path = `assets/uploads/${filename}`;
+
+      // 1. Try local Python backend via multipart FormData (fastest & handles large video files)
+      try {
+        const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        if (isLocalHost) {
+          const formData = new FormData();
+          formData.append('file', file, cleanName);
+          const res = await fetch('/api/upload', {
+            method: 'POST',
+            body: formData
+          });
+          if (res.ok) {
+            const json = await res.json();
+            if (json && json.url) return json.url;
+          }
+        }
+      } catch (err) {
+        console.warn('Local Python backend upload note:', err);
+      }
+
+      // 2. Base64 fallback to /api/upload
       try {
         const rawB64 = await readFileAsDataUrl(file);
         const base64Data = rawB64.includes(',') ? rawB64.split(',')[1] : rawB64;
-        const cleanName = (file.name || 'video.mp4').replace(/[^a-zA-Z0-9._-]/g, '_');
-        const filename = `${Date.now()}_${cleanName}`;
-        const path = `assets/uploads/${filename}`;
-
         try {
-          localStorage.setItem('aadya_preview_' + path, rawB64);
           sessionStorage.setItem('aadya_preview_' + path, rawB64);
-        } catch(err) {}
+          localStorage.setItem('aadya_preview_' + path, rawB64);
+        } catch(e) {}
 
-        const owner = 'minakshi2517';
-        const repo = 'aadyaagarwal';
+        const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        if (isLocalHost) {
+          const res = await fetch('/api/upload', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ base64: base64Data, filename: cleanName })
+          });
+          if (res.ok) {
+            const json = await res.json();
+            if (json && json.url) return json.url;
+          }
+        }
+
+        // 3. GitHub API upload if file <= 25MB
         const storedToken = localStorage.getItem('aadya_github_token');
         const activeToken = (storedToken && (storedToken.startsWith('ghp_') || storedToken.startsWith('gho_'))) ? storedToken : DEFAULT_GH_TOKEN;
+        if (file.size <= 25 * 1024 * 1024) {
+          const owner = 'minakshi2517';
+          const repo = 'aadyaagarwal';
+          const ghRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${activeToken}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: `Upload project video ${filename} [skip ci]`,
+              content: base64Data
+            })
+          });
+          if (ghRes.ok) return path;
+        }
 
-        const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
-          method: 'PUT',
-          headers: {
-            'Authorization': `token ${activeToken}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: `Upload project video ${filename} [skip ci]`,
-            content: base64Data
-          })
-        });
+        return path;
+      } catch(e) {
+        console.error('Video upload error:', e);
+        return path;
+      }
+    }
 
+    async function uploadProjectVideoFile(fileInput) {
+      if (!fileInput.files || !fileInput.files.length) return;
+      const file = fileInput.files[0];
+      try {
+        const uploadedUrl = await uploadVideoFileSmartly(file);
         currentModalVideos.push({
           type: 'local',
-          src: path,
+          src: uploadedUrl,
           title: file.name.replace(/\.[^/.]+$/, ''),
           poster: ''
         });
@@ -3461,7 +3663,285 @@
       fileInput.value = '';
     }
 
-    // --- BADGES / TAGS MANAGEMENT ---
+    
+    // ========================================================
+    // QUICK PROJECT VIDEO MODAL MANAGEMENT
+    // ========================================================
+    let currentQuickVideoProjectId = null;
+    let currentQuickVideos = [];
+
+    function openQuickVideoModal(id) {
+      const p = (siteData.portfolio || []).find(item => String(item.id) === String(id));
+      if (!p) return;
+      currentQuickVideoProjectId = p.id;
+      document.getElementById('quickVideoProjectId').value = p.id;
+      document.getElementById('quickVideoModalTitle').textContent = '🎬 Videos for: ' + p.title;
+      document.getElementById('quickVideoModalSubtitle').textContent = (p.category_name || 'Project') + ' · Add YouTube videos or upload MP4 recordings';
+      
+      currentQuickVideos = getDefaultVideosForProject(p);
+      renderQuickVideosList();
+      document.getElementById('quickVideoModal').showModal();
+    }
+
+    function renderQuickVideosList() {
+      const container = document.getElementById('quickVideosList');
+      if (!container) return;
+      container.innerHTML = '';
+
+      if (!currentQuickVideos.length) {
+        container.innerHTML = `
+          <div style="padding: 1.5rem; text-align: center; background: #faf9f7; border-radius: 12px; border: 1px dashed rgba(186,31,67,0.25); color: rgba(15,15,18,0.6); font-size: 0.85rem;">
+            No videos added yet for this project.<br>Click <strong>"+ Add Video URL / YouTube"</strong> or <strong>"📤 Upload Video File (.mp4)"</strong> above to add one!
+          </div>
+        `;
+        return;
+      }
+
+      currentQuickVideos.forEach((vid, idx) => {
+        const card = document.createElement('div');
+        card.className = 'quick-video-card';
+        card.style.cssText = 'background: #ffffff; border-radius: 12px; border: 1px solid rgba(59,18,45,0.16); padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);';
+
+        const isFirst = (idx === 0);
+        const isLast = (idx === currentQuickVideos.length - 1);
+        const vType = vid.type || (vid.src && (vid.src.endsWith('.mp4') || vid.src.endsWith('.webm') || vid.src.includes('/videos/')) ? 'local' : 'youtube');
+        const vSrc = vid.src || '';
+        const vTitle = vid.title || '';
+        const vPoster = vid.poster || '';
+        const ytId = extractYouTubeId(vSrc);
+
+        let previewHtml = '';
+        if (ytId) {
+          previewHtml = `
+            <div style="margin-top: 0.65rem; display: flex; align-items: center; gap: 0.75rem; background: #0f0f12; border-radius: 8px; padding: 0.5rem 0.75rem; color: #fff;">
+              <img src="https://img.youtube.com/vi/${ytId}/mqdefault.jpg" style="width: 72px; height: 42px; object-fit: cover; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);" onerror="this.src='assets/logo.png'">
+              <div style="flex: 1; min-width: 0;">
+                <div style="font-size: 0.76rem; font-weight: 700; color: #ff334b; text-transform: uppercase;">YouTube Video Detected</div>
+                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.7); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">ID: ${ytId}</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=${ytId}" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 700; color: #fff; background: rgba(255,255,255,0.18); padding: 0.35rem 0.65rem; border-radius: 6px; text-decoration: none;">
+                Watch ↗
+              </a>
+            </div>
+          `;
+        } else if (vSrc) {
+          previewHtml = `
+            <div style="margin-top: 0.65rem; display: flex; align-items: center; gap: 0.75rem; background: #faf9f7; border: 1px solid rgba(59,18,45,0.12); border-radius: 8px; padding: 0.5rem 0.75rem;">
+              <span style="font-size: 1.2rem;">🎬</span>
+              <div style="flex: 1; min-width: 0;">
+                <div style="font-size: 0.76rem; font-weight: 700; color: var(--admin-plum);">Direct Video File</div>
+                <div style="font-size: 0.72rem; color: rgba(15,15,18,0.6); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(vSrc)}</div>
+              </div>
+              <a href="${escapeHtml(vSrc)}" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 700; color: var(--admin-berry); background: rgba(186,31,67,0.08); padding: 0.35rem 0.65rem; border-radius: 6px; text-decoration: none;">
+                Open Link ↗
+              </a>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.65rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 6px; background: rgba(186,31,67,0.1); font-size: 0.72rem; font-weight: 800; color: var(--admin-berry);">🎬 #${idx + 1}</span>
+              <span style="font-size: 0.82rem; font-weight: 700; color: var(--admin-plum);">Video Recording ${idx + 1}</span>
+              <span style="font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px; background: ${vType === 'youtube' ? 'rgba(255,0,0,0.1)' : 'rgba(59,18,45,0.08)'}; color: ${vType === 'youtube' ? '#c00' : 'var(--admin-plum)'}; text-transform: uppercase;">${vType === 'youtube' ? 'YouTube' : 'Direct MP4'}</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <button type="button" onclick="moveQuickVideo(${idx}, -1)" ${isFirst ? 'disabled' : ''} class="btn-icon-order" title="Move Video Up">▲</button>
+              <button type="button" onclick="moveQuickVideo(${idx}, 1)" ${isLast ? 'disabled' : ''} class="btn-icon-order" title="Move Video Down">▼</button>
+              <button type="button" onclick="removeQuickVideo(${idx})" class="btn-danger" style="padding: 0.25rem 0.6rem; font-size: 0.72rem; margin-left: 0.35rem;" title="Delete this video">🗑️ Delete</button>
+            </div>
+          </div>
+
+          <div class="grid-2col" style="gap: 0.75rem; margin-bottom: 0.5rem;">
+            <div>
+              <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Video Source Type</label>
+              <select class="form-input qv-type-select" onchange="updateQuickVideoField(${idx}, 'type', this.value); renderQuickVideosList();" style="font-size: 0.82rem; padding: 0.45rem 0.75rem;">
+                <option value="youtube" ${vType === 'youtube' ? 'selected' : ''}>YouTube Video (Link or ID)</option>
+                <option value="local" ${vType === 'local' ? 'selected' : ''}>Direct Video URL / MP4 File</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Video Title / Label</label>
+              <input type="text" class="form-input qv-title-input" value="${escapeHtml(vTitle)}" oninput="updateQuickVideoField(${idx}, 'title', this.value)" placeholder="e.g. 3M Young Scientist Challenge submission" style="font-size: 0.82rem; padding: 0.45rem 0.75rem;">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 0.5rem;">
+            <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">
+              ${vType === 'youtube' ? 'YouTube Video URL or Video ID' : 'Direct Video URL or Relative Path (.mp4 / .webm)'}
+            </label>
+            <div style="display: flex; gap: 0.45rem;">
+              <input type="text" class="form-input qv-src-input" value="${escapeHtml(vSrc)}" oninput="updateQuickVideoField(${idx}, 'src', this.value)" placeholder="${vType === 'youtube' ? 'https://www.youtube.com/watch?v=... or youtu.be/...' : 'projects/videos/my-video.mp4 or https://...'}" style="font-size: 0.82rem; padding: 0.45rem 0.75rem; font-family: 'JetBrains Mono', monospace;">
+              <button type="button" onclick="promptPasteQuickVideoUrl(${idx})" class="btn-secondary" style="padding: 0.45rem 0.75rem; font-size: 0.75rem; white-space: nowrap;">📋 Paste</button>
+            </div>
+          </div>
+
+          <!-- Video Poster / Thumbnail -->
+          <div style="margin-top: 0.5rem; background: #faf8f6; border-radius: 8px; padding: 0.5rem 0.75rem; border: 1px solid rgba(59,18,45,0.08);">
+            <label class="form-label" style="font-size: 0.72rem; margin-bottom: 0.25rem; display: flex; align-items: center; justify-content: space-between;">
+              <span>Video Poster / Preview Image (Optional)</span>
+              <span style="font-size: 0.68rem; color: rgba(15,15,18,0.5);">Shown before video plays</span>
+            </label>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              ${vPoster ? `<img src="${getResolvedImageSrc(vPoster)}" style="width: 44px; height: 32px; object-fit: cover; border-radius: 4px; border: 1px solid rgba(0,0,0,0.15);" onerror="this.src='assets/logo.png'">` : ''}
+              <input type="text" class="form-input qv-poster-input" value="${escapeHtml(vPoster)}" oninput="updateQuickVideoField(${idx}, 'poster', this.value)" placeholder="e.g. projects/ocean-project-presentation.jpg" style="font-size: 0.78rem; padding: 0.35rem 0.65rem; flex: 1;">
+              <label class="btn-primary" style="margin: 0; padding: 0.35rem 0.75rem; font-size: 0.75rem; cursor: pointer; background: var(--admin-plum); display: inline-flex; align-items: center; gap: 0.25rem; white-space: nowrap;">
+                <span>📁 Poster</span>
+                <input type="file" accept="image/*" style="display: none;" onchange="uploadQuickVideoPoster(${idx}, this)">
+              </label>
+            </div>
+          </div>
+
+          ${previewHtml}
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function addNewQuickVideoRow() {
+      currentQuickVideos.push({
+        type: 'youtube',
+        src: '',
+        title: '',
+        poster: ''
+      });
+      renderQuickVideosList();
+      setTimeout(() => {
+        const inputs = document.querySelectorAll('#quickVideosList .qv-src-input');
+        if (inputs.length) inputs[inputs.length - 1].focus();
+      }, 50);
+    }
+
+    function removeQuickVideo(idx) {
+      if (idx >= 0 && idx < currentQuickVideos.length) {
+        currentQuickVideos.splice(idx, 1);
+        renderQuickVideosList();
+        showToast('Video removed.');
+      }
+    }
+
+    function moveQuickVideo(idx, dir) {
+      const target = idx + dir;
+      if (target < 0 || target >= currentQuickVideos.length) return;
+      const temp = currentQuickVideos[idx];
+      currentQuickVideos[idx] = currentQuickVideos[target];
+      currentQuickVideos[target] = temp;
+      renderQuickVideosList();
+    }
+
+    function updateQuickVideoField(idx, field, val) {
+      if (currentQuickVideos[idx]) {
+        currentQuickVideos[idx][field] = val;
+        if (field === 'src') {
+          const isYt = val.includes('youtube.com') || val.includes('youtu.be') || /^[a-zA-Z0-9_-]{11}$/.test(val.trim());
+          if (isYt && currentQuickVideos[idx].type !== 'youtube') {
+            currentQuickVideos[idx].type = 'youtube';
+            renderQuickVideosList();
+          }
+        }
+      }
+    }
+
+    async function promptPasteQuickVideoUrl(idx) {
+      try {
+        const text = await navigator.clipboard.readText();
+        if (text && text.trim()) {
+          updateQuickVideoField(idx, 'src', text.trim());
+          renderQuickVideosList();
+          showToast('Video URL pasted from clipboard!');
+          return;
+        }
+      } catch(e) {}
+      const manual = prompt('Enter or paste video URL / YouTube link:');
+      if (manual && manual.trim()) {
+        updateQuickVideoField(idx, 'src', manual.trim());
+        renderQuickVideosList();
+      }
+    }
+
+    async function uploadQuickVideoPoster(idx, fileInput) {
+      if (!fileInput.files || !fileInput.files[0]) return;
+      const file = fileInput.files[0];
+      showToast('Uploading video poster image...');
+      try {
+        const imgUrl = await uploadImageSmartly(file);
+        if (imgUrl && currentQuickVideos[idx]) {
+          currentQuickVideos[idx].poster = imgUrl;
+          renderQuickVideosList();
+          showToast('✓ Video poster uploaded!');
+        }
+      } catch(e) {
+        alert('Failed to upload poster: ' + e.message);
+      }
+      fileInput.value = '';
+    }
+
+    async function uploadQuickVideoFile(fileInput) {
+      if (!fileInput.files || !fileInput.files.length) return;
+      const file = fileInput.files[0];
+      try {
+        const uploadedUrl = await uploadVideoFileSmartly(file);
+        currentQuickVideos.push({
+          type: 'local',
+          src: uploadedUrl,
+          title: file.name.replace(/\.[^/.]+$/, ''),
+          poster: ''
+        });
+        renderQuickVideosList();
+        showToast(`✓ Video "${file.name}" added!`);
+      } catch(e) {
+        alert('Video upload failed: ' + e.message);
+      }
+      fileInput.value = '';
+    }
+
+    async function saveQuickVideos() {
+      if (!currentQuickVideoProjectId) return;
+      const p = (siteData.portfolio || []).find(item => String(item.id) === String(currentQuickVideoProjectId));
+      if (!p) return;
+
+      // Clean videos directly from DOM inputs
+      const cleanVideos = [];
+      const cards = document.querySelectorAll('#quickVideosList .quick-video-card');
+      if (cards.length > 0) {
+        cards.forEach(card => {
+          const type = (card.querySelector('.qv-type-select')?.value || 'youtube').trim();
+          const src = (card.querySelector('.qv-src-input')?.value || '').trim();
+          const title = (card.querySelector('.qv-title-input')?.value || '').trim();
+          const poster = (card.querySelector('.qv-poster-input')?.value || '').trim();
+          if (src) {
+            cleanVideos.push({ type, src, title, poster });
+          }
+        });
+      } else if (Array.isArray(currentQuickVideos) && currentQuickVideos.length > 0) {
+        currentQuickVideos.forEach(v => {
+          if (v && v.src && v.src.trim()) {
+            cleanVideos.push({
+              type: v.type || 'youtube',
+              src: v.src.trim(),
+              title: (v.title || '').trim(),
+              poster: (v.poster || '').trim()
+            });
+          }
+        });
+      }
+
+      p.videos = cleanVideos;
+
+      try {
+        await apiRequest('/api/portfolio/save', 'POST', p);
+        syncToStorage();
+        document.getElementById('quickVideoModal').close();
+        await syncToStorageAndPublish(`Videos for "${p.title}"`);
+        renderPortfolioList(siteData.portfolio || []);
+        showToast(`✓ Videos saved for "${p.title}"!`);
+      } catch(err) {
+        alert('Failed to save videos: ' + err.message);
+      }
+    }
+
+// --- BADGES / TAGS MANAGEMENT ---
     function renderModalBadges() {
       const container = document.getElementById('modalBadgesList');
       if (!container) return;
@@ -3624,6 +4104,9 @@
               <span>📷 Cover</span>
               <input type="file" accept="image/*" style="display: none;" onchange="quickChangeProjectCover('${p.id}', this)">
             </label>
+            <button type="button" onclick="openQuickVideoModal('${p.id}')" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.35rem; color: #ba1f43; border-color: rgba(186,31,67,0.35); background: rgba(186,31,67,0.04);" title="Manage or Add Video for this project">
+              <span>🎬 ${vidCount > 0 ? vidCount + ' Video' + (vidCount > 1 ? 's' : '') : '+ Add Video'}</span>
+            </button>
             <button onclick="editProjectItem('${p.id}')" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit &amp; Tags</button>
             <button onclick="deleteProjectItem('${p.id}')" class="btn-danger">Delete</button>
           </div>
@@ -4006,7 +4489,165 @@
       }
     }
 
-    function renderMediaGallery(items) {
+    
+    // ========================================================
+    // CONFERENCE FEATURED VIDEO & AWARD VIDEOS
+    // ========================================================
+    function updateConferenceVideoPreview(url) {
+      const box = document.getElementById('confVideoPreviewBox');
+      if (!box) return;
+      const cleanUrl = (url || '').trim();
+      const ytId = extractYouTubeId(cleanUrl);
+
+      if (ytId) {
+        box.innerHTML = `
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);">
+            <iframe src="https://www.youtube-nocookie.com/embed/${ytId}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+          </div>
+          <div style="margin-top: 0.65rem; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.78rem; color: #4ade80; font-weight: 700;">✓ YouTube Video Ready (ID: ${ytId})</span>
+            <a href="https://www.youtube.com/watch?v=${ytId}" target="_blank" rel="noopener noreferrer" style="color: #fff; font-size: 0.75rem; text-decoration: underline;">Test on YouTube ↗</a>
+          </div>
+        `;
+      } else if (cleanUrl && (cleanUrl.endsWith('.mp4') || cleanUrl.endsWith('.webm') || cleanUrl.includes('/videos/'))) {
+        box.innerHTML = `
+          <div style="max-height: 280px; overflow: hidden; border-radius: 8px;">
+            <video src="${escapeHtml(cleanUrl)}" controls style="width: 100%; max-height: 280px; object-fit: contain; background: #000;"></video>
+          </div>
+          <div style="margin-top: 0.5rem; font-size: 0.78rem; color: #4ade80; font-weight: 700;">✓ Direct MP4 Video Preview</div>
+        `;
+      } else {
+        box.innerHTML = `
+          <div style="padding: 2rem 1rem; text-align: center; color: rgba(255,255,255,0.6); font-size: 0.82rem;">
+            🎬 Enter or paste a YouTube video link above to see the live conference preview.
+          </div>
+        `;
+      }
+    }
+
+    async function promptPasteConfVideo() {
+      try {
+        const text = await navigator.clipboard.readText();
+        if (text && text.trim()) {
+          const el = document.getElementById('confVideoUrl');
+          if (el) {
+            el.value = text.trim();
+            updateConferenceVideoPreview(text.trim());
+            showToast('Conference video link pasted!');
+            return;
+          }
+        }
+      } catch(e) {}
+      const manual = prompt('Enter YouTube or video link:');
+      if (manual && manual.trim()) {
+        const el = document.getElementById('confVideoUrl');
+        if (el) {
+          el.value = manual.trim();
+          updateConferenceVideoPreview(manual.trim());
+        }
+      }
+    }
+
+    async function saveConferenceVideo() {
+      const confUrl = (document.getElementById('confVideoUrl')?.value || '').trim();
+      const confTitle = (document.getElementById('confVideoTitle')?.value || '').trim();
+      const confDesc = (document.getElementById('confVideoDesc')?.value || '').trim();
+
+      const payload = {
+        conference_video_url: confUrl,
+        conference_video_title: confTitle,
+        conference_video_desc: confDesc
+      };
+
+      try {
+        await apiRequest('/api/settings/update', 'POST', payload);
+        siteData.settings = siteData.settings || {};
+        Object.assign(siteData.settings, payload);
+        syncToStorage();
+        await syncToStorageAndPublish('Conference Featured Video');
+        showToast('✓ Conference Featured Video saved!');
+      } catch(err) {
+        alert('Failed to save conference video: ' + err.message);
+      }
+    }
+
+    async function promptPasteAwardVideo() {
+      try {
+        const text = await navigator.clipboard.readText();
+        if (text && text.trim()) {
+          document.getElementById('modalAwardVideoUrl').value = text.trim();
+          showToast('Award video URL pasted!');
+          return;
+        }
+      } catch(e) {}
+      const manual = prompt('Enter award video URL (YouTube or MP4):');
+      if (manual && manual.trim()) {
+        document.getElementById('modalAwardVideoUrl').value = manual.trim();
+      }
+    }
+
+    async function promptEditAwardVideo(id) {
+      const a = (siteData.awards || []).find(item => Number(item.id) === Number(id));
+      if (!a) return;
+      const current = a.video_url || '';
+      const updated = prompt(`Enter YouTube or video URL for "${a.title}":`, current);
+      if (updated === null) return;
+      a.video_url = updated.trim();
+      try {
+        await apiRequest('/api/awards/save', 'POST', a);
+        syncToStorage();
+        await syncToStorageAndPublish(`Video for award "${a.title}"`);
+        renderAwardsList(siteData.awards || []);
+        showToast(a.video_url ? `✓ Video attached to "${a.title}"!` : `Video removed from "${a.title}".`);
+      } catch(e) {
+        alert('Failed to update award video: ' + e.message);
+      }
+    }
+
+    // Media Library Video Uploaders
+    async function uploadVideoToLibrary(fileInput) {
+      if (!fileInput.files || !fileInput.files.length) return;
+      const file = fileInput.files[0];
+      try {
+        const uploadedUrl = await uploadVideoFileSmartly(file);
+        siteData.media = siteData.media || [];
+        siteData.media.unshift({
+          id: Date.now(),
+          filename: file.name,
+          url: uploadedUrl,
+          uploaded_at: new Date().toISOString()
+        });
+        syncToStorage();
+        await syncToStorageAndPublish(`Added video "${file.name}" to media library`);
+        renderMediaGallery(siteData.media);
+        showToast(`✓ Video "${file.name}" added to Media Library!`);
+      } catch(e) {
+        alert('Failed to upload video: ' + e.message);
+      }
+      fileInput.value = '';
+    }
+
+    async function promptAddVideoLinkToLibrary() {
+      const link = prompt('Enter or paste video URL or YouTube link:');
+      if (!link || !link.trim()) return;
+      const cleanUrl = link.trim();
+      const ytId = extractYouTubeId(cleanUrl);
+      const title = prompt('Enter a label / title for this video:', ytId ? `YouTube Video (${ytId})` : 'Video Recording') || 'Video Asset';
+
+      siteData.media = siteData.media || [];
+      siteData.media.unshift({
+        id: Date.now(),
+        filename: title,
+        url: cleanUrl,
+        uploaded_at: new Date().toISOString()
+      });
+      syncToStorage();
+      await syncToStorageAndPublish(`Added video link "${title}" to media library`);
+      renderMediaGallery(siteData.media);
+      showToast('✓ Video link added to Media Library!');
+    }
+
+function renderMediaGallery(items) {
       const container = document.getElementById('mediaGalleryGrid');
       container.innerHTML = '';
       if (!items.length) {
@@ -4016,10 +4657,36 @@
       items.forEach(m => {
         const card = document.createElement('div');
         card.style.cssText = 'border: 1px solid rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column;';
+        
+        const mUrl = m.url || '';
+        const ytId = extractYouTubeId(mUrl);
+        const isVideo = ytId || mUrl.endsWith('.mp4') || mUrl.endsWith('.webm') || mUrl.endsWith('.mov') || mUrl.includes('/videos/');
+
+        let mediaThumbHtml = '';
+        if (ytId) {
+          mediaThumbHtml = `
+            <div style="height: 160px; background: #0f0f12; position: relative; overflow: hidden;">
+              <img src="https://img.youtube.com/vi/${ytId}/mqdefault.jpg" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='assets/logo.png'">
+              <span style="position: absolute; top: 8px; left: 8px; background: #ba1f43; color: #fff; font-size: 0.65rem; font-weight: 800; padding: 2px 7px; border-radius: 4px; text-transform: uppercase;">🎬 YouTube</span>
+            </div>
+          `;
+        } else if (mUrl.endsWith('.mp4') || mUrl.endsWith('.webm') || mUrl.endsWith('.mov') || mUrl.includes('/videos/')) {
+          mediaThumbHtml = `
+            <div style="height: 160px; background: #0f0f12; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <video src="${escapeHtml(mUrl)}" style="width: 100%; height: 100%; object-fit: cover;" preload="metadata" muted playsinline></video>
+              <span style="position: absolute; top: 8px; left: 8px; background: var(--admin-plum); color: #fff; font-size: 0.65rem; font-weight: 800; padding: 2px 7px; border-radius: 4px; text-transform: uppercase;">🎬 MP4 Video</span>
+            </div>
+          `;
+        } else {
+          mediaThumbHtml = `
+            <div style="height: 160px; background: #eee; overflow: hidden; position: relative;">
+              <img src="${getResolvedImageSrc(m.url)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this, '${m.url}')">
+            </div>
+          `;
+        }
+
         card.innerHTML = `
-          <div style="height: 160px; background: #eee; overflow: hidden; position: relative;">
-            <img src="${getResolvedImageSrc(m.url)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="smartImageFallback(this, '${m.url}')">
-          </div>
+          ${mediaThumbHtml}
           <div style="padding: 0.85rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <p style="font-size: 0.82rem; font-weight: 700; color: var(--admin-plum); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${m.filename}">${m.filename}</p>
@@ -4027,10 +4694,14 @@
             </div>
             <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
               <button onclick="navigator.clipboard.writeText('${m.url}'); showToast('URL copied to clipboard!');" class="btn-secondary" style="flex: 1; padding: 0.4rem; font-size: 0.75rem; justify-content: center;">Copy URL</button>
-              <label class="btn-secondary" style="padding: 0.4rem 0.6rem; font-size: 0.75rem; cursor: pointer;" title="Replace this image with a new file">
-                <span>Replace</span>
-                <input type="file" accept="image/*" style="display: none;" onchange="replaceMediaImage(${m.id}, this)">
-              </label>
+              ${!isVideo ? `
+                <label class="btn-secondary" style="padding: 0.4rem 0.6rem; font-size: 0.75rem; cursor: pointer;" title="Replace this image with a new file">
+                  <span>Replace</span>
+                  <input type="file" accept="image/*" style="display: none;" onchange="replaceMediaImage(${m.id}, this)">
+                </label>
+              ` : `
+                <a href="${escapeHtml(m.url)}" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.4rem 0.6rem; font-size: 0.75rem; text-decoration: none;">View ↗</a>
+              `}
               <button onclick="deleteMedia(${m.id})" class="btn-danger" style="padding: 0.4rem 0.6rem; font-size: 0.75rem;">Delete</button>
             </div>
           </div>
@@ -4241,6 +4912,8 @@
       document.getElementById('modalAwardYear').value = '2026';
       document.getElementById('modalAwardImg').value = '';
       document.getElementById('modalAwardImgPreview').src = 'assets/logo.png';
+      const vidEl = document.getElementById('modalAwardVideoUrl');
+      if (vidEl) vidEl.value = '';
       document.getElementById('modalAwardDesc').value = '';
       document.getElementById('modalAwardLinkText').value = '';
       document.getElementById('modalAwardLinkUrl').value = '';
@@ -4263,6 +4936,8 @@
         prev.removeAttribute('data-tried-cdn');
         prev.src = getResolvedImageSrc(a.image_url || 'assets/logo.png');
       }
+      const vidEl = document.getElementById('modalAwardVideoUrl');
+      if (vidEl) vidEl.value = a.video_url || '';
       document.getElementById('modalAwardDesc').value = a.description || '';
       document.getElementById('modalAwardLinkText').value = a.link_text || '';
       document.getElementById('modalAwardLinkUrl').value = a.link_url || '';
@@ -4303,6 +4978,7 @@
       const category_group = document.getElementById('modalAwardCategoryGroup').value.trim();
       const year = document.getElementById('modalAwardYear').value.trim();
       const image_url = document.getElementById('modalAwardImg').value.trim();
+      const video_url = (document.getElementById('modalAwardVideoUrl')?.value || '').trim();
       const description = document.getElementById('modalAwardDesc').value.trim();
       const link_text = document.getElementById('modalAwardLinkText').value.trim();
       const link_url = document.getElementById('modalAwardLinkUrl').value.trim();
@@ -4317,6 +4993,7 @@
         category_group,
         year,
         image_url,
+        video_url,
         description,
         link_text,
         link_url,
@@ -4371,15 +5048,18 @@
             <div class="item-meta-col">
               <div class="item-meta-title">${a.title} ${a.year ? '(' + a.year + ')' : ''}</div>
               <div class="item-meta-subtitle">
-                <span style="background: rgba(186, 31, 67, 0.1); color: var(--admin-berry); font-weight: 700; padding: 2px 7px; border-radius: 4px; font-size: 0.75rem; margin-right: 6px;">${a.category_pill || 'Award'}</span> &bull; ${(a.description || '').slice(0, 95)}...
+                <span style="background: rgba(186, 31, 67, 0.1); color: var(--admin-berry); font-weight: 700; padding: 2px 7px; border-radius: 4px; font-size: 0.75rem; margin-right: 6px;">${a.category_pill || 'Award'}</span>${a.video_url ? ` <span style="background: rgba(186, 31, 67, 0.15); color: #ba1f43; font-weight: 700; padding: 2px 7px; border-radius: 4px; font-size: 0.72rem; margin-right: 6px;">🎬 Video Attached</span>` : ''} &bull; ${(a.description || '').slice(0, 95)}...
               </div>
             </div>
           </div>
           <div class="item-actions-col">
             <label class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem;" title="Change award image">
-              <span>📷 Change Image</span>
+              <span>📷 Image</span>
               <input type="file" accept="image/*" style="display: none;" onchange="quickChangeAwardImage(${a.id}, this)">
             </label>
+            <button type="button" onclick="promptEditAwardVideo(${a.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.35rem; color: #ba1f43; border-color: rgba(186,31,67,0.3); background: rgba(186,31,67,0.04);" title="Add or edit video link for this award">
+              <span>🎬 ${a.video_url ? 'Edit Video' : '+ Add Video'}</span>
+            </button>
             <button onclick="editAwardItem(${a.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit</button>
             <button onclick="deleteAwardItem(${a.id})" class="btn-danger">Delete</button>
           </div>

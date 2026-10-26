@@ -1828,7 +1828,22 @@
                       if (cleanSrc.startsWith('/') && !cleanSrc.startsWith('//')) cleanSrc = cleanSrc.substring(1);
                       const pSrc = (typeof window.getResolvedImageSrc === 'function') ? window.getResolvedImageSrc(cleanSrc) : cleanSrc;
                       const caption = (typeof ph === 'object' && ph.caption) ? ph.caption : '';
-                      const altText = (typeof ph === 'object' && ph.alt) ? ph.alt : (caption || (sec.title + ' image'));
+                      const isVid = (typeof ph === 'object' && ph.type === 'video') || pSrc.includes('youtube') || pSrc.includes('youtu.be') || pSrc.endsWith('.mp4') || pSrc.endsWith('.webm');
+                      if (isVid) {
+                        const secYtId = pSrc.replace(/^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|shorts\/)/, '').split(/[^a-zA-Z0-9_-]/)[0];
+                        return `
+                          <figure class="min-w-0 col-span-full sm:col-span-2">
+                            <div class="relative aspect-video w-full rounded-lg overflow-hidden border border-ink/15 bg-black shadow-md">
+                              ${(secYtId && secYtId.length === 11) ? `
+                                <iframe src="https://www.youtube.com/embed/${secYtId}?rel=0" title="${caption || altText}" class="absolute inset-0 w-full h-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              ` : `
+                                <video src="${pSrc}" controls playsinline preload="metadata" class="w-full h-full object-contain"></video>
+                              `}
+                            </div>
+                            ${caption ? `<figcaption class="mt-2 text-sm text-ink/75 leading-snug font-medium flex items-center justify-between"><span>${caption}</span>${secYtId ? `<a href="https://www.youtube.com/watch?v=${secYtId}" target="_blank" rel="noopener noreferrer" class="text-xs text-plum hover:text-berry font-bold">YouTube ↗</a>` : ''}</figcaption>` : ''}
+                          </figure>
+                        `;
+                      }
                       return `
                         <figure class="min-w-0">
                           <a href="${pSrc}" target="_blank" rel="noopener noreferrer" aria-label="View full image: ${caption || altText}" class="block overflow-hidden rounded-lg border border-ink/10 bg-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry hover:opacity-95 transition">
@@ -1923,7 +1938,6 @@
         videosHtml = `
           <div class="video-recording-section mt-10">
             <div class="mb-4 flex items-center justify-between">
-              <h3 class="font-display text-2xl font-bold text-plum">Featured Video</h3>
               <span class="text-xs font-semibold uppercase tracking-wider text-[#ba1f43]">${validVideos.length === 1 ? 'Video Recording' : validVideos.length + ' Videos'}</span>
             </div>
             <div class="space-y-6">
