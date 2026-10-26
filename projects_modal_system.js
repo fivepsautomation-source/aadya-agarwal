@@ -1081,7 +1081,11 @@
     let sectionsHtml = '';
     const activeSections = (Array.isArray(project.sections) && project.sections.length > 0)
       ? project.sections
-      : (project.summary ? [{ title: "Project Overview & Methodology", intro: project.summary }] : []);
+      : (project.summary || project.desc
+          ? [{ title: "Project Overview & Methodology", intro: project.summary || project.desc }]
+          : (Array.isArray(project.technicalFocus) && project.technicalFocus.length > 0
+              ? [{ title: "Technical Highlights & Methodology", intro: project.technicalFocus.join(' • ') }]
+              : [{ title: "Project Overview & Methodology", intro: "Explore the comprehensive methodology, trials, and research outcomes for this initiative." }]));
 
     if (activeSections.length > 0) {
       sectionsHtml = `
@@ -1423,6 +1427,32 @@
           if (Array.isArray(cmsItem.sections) && cmsItem.sections.length) project.sections = cmsItem.sections;
           if (Array.isArray(cmsItem.attachments) && cmsItem.attachments.length) project.attachments = cmsItem.attachments;
           if (Array.isArray(cmsItem.videos) && cmsItem.videos.length) project.videos = cmsItem.videos;
+        }
+      if (!project && cmsItems.length > 0) {
+        const cIdx = findProjectIdxInArray(String(identifier), cmsItems);
+        if (cIdx >= 0) {
+          const cmsItem = cmsItems[cIdx];
+          const imgs = Array.isArray(cmsItem.images) && cmsItem.images.length > 0 ? cmsItem.images : (cmsItem.img ? [cmsItem.img] : []);
+          project = {
+            title: cmsItem.title || 'Project Detail',
+            category: cmsItem.category_name || '',
+            summary: cmsItem.desc || '',
+            heroImage: cmsItem.img || imgs[0] || '',
+            cardImage: cmsItem.img || imgs[0] || '',
+            technicalFocus: Array.isArray(cmsItem.highlights) ? cmsItem.highlights : [],
+            sections: Array.isArray(cmsItem.sections) && cmsItem.sections.length > 0
+              ? cmsItem.sections
+              : (cmsItem.desc ? [{ title: "Project Overview & Methodology", intro: cmsItem.desc }] : []),
+            attachments: Array.isArray(cmsItem.attachments) ? cmsItem.attachments : [],
+            gallery: imgs.map(img => typeof img === 'string' ? { src: img, alt: cmsItem.title, caption: cmsItem.title } : img),
+            gallerySubtitle: cmsItem.gallerySubtitle || "Project documentation, images, and milestones.",
+            videos: Array.isArray(cmsItem.videos) ? cmsItem.videos : []
+          };
+          if (cmsItem.hide_badges) {
+            project.badges = [];
+          } else if (Array.isArray(cmsItem.badges)) {
+            project.badges = cmsItem.badges.map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' });
+          }
         }
       }
     }

@@ -643,7 +643,16 @@
       "badges": [],
       "sort_order": 10,
       "badge_position": "right",
-      "sections": [],
+      "sections": [
+        {
+          "title": "24-Week Advanced BioResearch Curriculum",
+          "intro": "Completed an intensive 24-week bioresearch program under Prof. Sam Kunes (Harvard University) covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy. Delivered independent research project presentations at the end of each 12-week session."
+        },
+        {
+          "title": "3-Week Physical Wet Lab & Molecular Biology Research",
+          "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills."
+        }
+      ],
       "hide_badges": false
     },
     {
@@ -660,7 +669,20 @@
       "tags": [],
       "badges": [],
       "sort_order": 12,
-      "sections": [],
+      "sections": [
+        {
+          "title": "Theater Productions & Dramatic Performance",
+          "intro": "Active participant in school and regional theater productions, developing character portrayals, dramatic timing, and stage presence through collaborative ensemble rehearsal and live performances."
+        },
+        {
+          "title": "Vocal Performance & Musical Repertoire",
+          "intro": "Extensive vocal training and musical ensemble performances, interpreting classical, contemporary, and musical theater repertoires."
+        },
+        {
+          "title": "Public Speaking, Forensics & Speech Competitions",
+          "intro": "Trained in competitive forensics and impromptu address, delivering persuasive presentations on civic engagement, technology ethics, and educational equity."
+        }
+      ],
       "hide_badges": false
     },
     {
@@ -683,7 +705,20 @@
       "badges": [],
       "sort_order": 6,
       "badge_position": "right",
-      "sections": [],
+      "sections": [
+        {
+          "title": "Stanford AIMI 30-Week Research Internship",
+          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI."
+        },
+        {
+          "title": "Machine Learning & Computer Vision Modeling",
+          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis."
+        },
+        {
+          "title": "Accessibility & Board of Trustees Presentation",
+          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology."
+        }
+      ],
       "hide_badges": false
     }
   ],
