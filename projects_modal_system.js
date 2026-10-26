@@ -2302,6 +2302,8 @@
           }
         ];
       }
+    }
+
     if (project) {
       const pTitle = (project.title || '').toLowerCase();
       const pHero = (project.heroImage || project.cardImage || '').toLowerCase();
