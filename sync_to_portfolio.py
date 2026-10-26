@@ -48,4 +48,20 @@ if os.path.exists(src_projects):
         shutil.copytree(src_projects, dst_projects)
     print("Projects synchronized successfully!")
 
+# Copy slider folder recursively
+src_slider = os.path.join(src_dir, 'slider')
+dst_slider = os.path.join(dst_dir, 'slider')
+if os.path.exists(src_slider):
+    if os.path.exists(dst_slider):
+        for root, dirs, files in os.walk(src_slider):
+            rel_dir = os.path.relpath(root, src_slider)
+            target_sub = os.path.join(dst_slider, rel_dir)
+            if not os.path.exists(target_sub):
+                os.makedirs(target_sub)
+            for file in files:
+                shutil.copy2(os.path.join(root, file), os.path.join(target_sub, file))
+    else:
+        shutil.copytree(src_slider, dst_slider)
+    print("Slider synchronized successfully!")
+
 print("All synchronized to C:\\Users\\hp\\Desktop\\Aadya-New-Portfolio successfully!")
