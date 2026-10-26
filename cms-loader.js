@@ -290,7 +290,10 @@
             link_url: p.link_url || p.article_url || '',
             img: coverImg,
             images: galleryImgs,
-            videos: (Array.isArray(p.videos) && p.videos.length > 0) ? p.videos : ((p.title && p.title.toLowerCase().includes('ocean')) ? [{ type: 'local', src: 'projects/videos/3m-buoy-preview.mp4', title: '3M Young Scientist Challenge Submission Video', poster: 'projects/ocean-project-presentation.jpg' }] : []),
+            videos: (Array.isArray(p.videos) && p.videos.length > 0) ? p.videos : (
+              (p.title && p.title.toLowerCase().includes('ocean')) ? [{ type: 'local', src: 'projects/videos/3m-buoy-preview.mp4', title: '3M Young Scientist Challenge Submission Video', poster: 'projects/ocean-project-presentation.jpg' }] :
+              ((p.title && (p.title.toLowerCase().includes('music') || p.title.toLowerCase().includes('theater') || p.title.toLowerCase().includes('speaking'))) ? [{ type: 'local', src: 'projects/videos/music-performance-preview.mp4', title: 'Flute & Piano Recital Performance', poster: 'assets/uploads/1792918305114_Aadya_Flute_Pic1.png', is_placeholder: true }] : [])
+            ),
             desc: p.desc,
             highlights: p.highlights || [],
             tags: p.tags || [],

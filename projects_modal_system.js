@@ -1966,8 +1966,11 @@
                         </video>
                       </div>
                       <div class="bg-paper px-5 py-3 border-t border-ink/10 flex items-center justify-between">
-                        <span class="text-sm font-semibold text-ink">${vidTitle}</span>
-                        <span class="text-xs font-mono font-medium text-ink/50">MP4 Video</span>
+                        <div>
+                          <span class="text-sm font-semibold text-ink">${vidTitle}</span>
+                          ${vid.is_placeholder ? `<span class="block text-xs text-ink/50 mt-0.5">Video Placeholder · Recording upload pending</span>` : ''}
+                        </div>
+                        <span class="text-xs font-mono font-medium ${vid.is_placeholder ? 'rounded bg-berry/10 px-2 py-0.5 text-berry font-semibold' : 'text-ink/50'}">${vid.is_placeholder ? 'Placeholder' : 'MP4 Video'}</span>
                       </div>
                     </div>
                   `;
@@ -2278,6 +2281,16 @@
             src: 'projects/videos/3m-buoy-preview.mp4',
             title: '3M Young Scientist Challenge Submission Video',
             poster: 'projects/ocean-project-presentation.jpg'
+          }
+        ];
+      } else if (project.title && (project.title.toLowerCase().includes('music') || project.title.toLowerCase().includes('theater') || project.title.toLowerCase().includes('speaking'))) {
+        project.videos = [
+          {
+            type: 'local',
+            src: 'projects/videos/music-performance-preview.mp4',
+            title: 'Flute & Piano Recital Performance',
+            poster: 'assets/uploads/1792918305114_Aadya_Flute_Pic1.png',
+            is_placeholder: true
           }
         ];
       }

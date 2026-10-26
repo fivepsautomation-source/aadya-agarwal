@@ -800,6 +800,15 @@
       "images": [
         "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
       ],
+      "videos": [
+        {
+          "type": "local",
+          "src": "projects/videos/music-performance-preview.mp4",
+          "title": "Flute & Piano Recital Performance",
+          "poster": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
+          "is_placeholder": true
+        }
+      ],
       "desc": "editted",
       "highlights": [],
       "tags": [],
