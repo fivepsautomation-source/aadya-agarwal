@@ -14,9 +14,12 @@
   window.getResolvedImageSrc = function(url) {
     if (!url) return 'assets/logo.png';
     if (typeof url !== 'string') return url;
-    const cleanUrl = url.trim();
+    let cleanUrl = url.trim();
     if (!cleanUrl) return 'assets/logo.png';
     if (cleanUrl.startsWith('data:')) return cleanUrl;
+    if (cleanUrl.startsWith('/') && !cleanUrl.startsWith('//') && !cleanUrl.startsWith('/api/')) {
+      cleanUrl = cleanUrl.substring(1);
+    }
 
     try {
       const localCached = localStorage.getItem('aadya_preview_' + cleanUrl);
@@ -123,6 +126,12 @@
             parsed.portfolio.forEach(item => {
               if (item.id === 4 || (item.title && item.title.toLowerCase().includes('comparative biochar'))) {
                 item.badge_position = 'right';
+              }
+              if ((item.id === 14 || item.id === 1792918333524) && Array.isArray(item.sections)) {
+                const hasPhotos = item.sections.some(s => Array.isArray(s.photos) && s.photos.length > 0);
+                if (!hasPhotos) {
+                  try { localStorage.removeItem(CMS_KEY); } catch(e) {}
+                }
               }
             });
           }

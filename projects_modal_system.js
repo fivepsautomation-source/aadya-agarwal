@@ -536,22 +536,211 @@
     "videos": [],
     "sections": [
       {
-        "title": "Published writing",
-        "intro": "Essays and poetry recognized by the John Locke Institute and Scholastic Art & Writing Awards, with work published in The Telling Room, Skipping Stones and Poetic Power anthologies, plus science journalism for TechTrek USA."
+            "title": "Published writing",
+            "intro": "Selected published poems, stories and anthology features.",
+            "photos": [
+                  {
+                        "src": "projects/writing/scholastic-honorable-mention.jpeg",
+                        "alt": "2025 Scholastic Art & Writing Honorable Mention notification",
+                        "caption": "Scholastic Art & Writing, Honorable Mention 2025"
+                  },
+                  {
+                        "src": "projects/writing/when-kindness-is-planted.webp",
+                        "alt": "\u201cWhen Kindness Is Planted,\u201d published in The Telling Room",
+                        "caption": "\u201cWhen Kindness Is Planted\u201d, The Telling Room 2022"
+                  },
+                  {
+                        "src": "projects/writing/balance-skipping-stones.jpg",
+                        "alt": "Poem \u201cBalance,\u201d published in Skipping Stones",
+                        "caption": "\u201cBalance\u201d, Skipping Stones, Fall 2023"
+                  },
+                  {
+                        "src": "projects/writing/in-a-shift-of-heart.png",
+                        "alt": "Poem \u201cIn a Shift of Heart\u201d",
+                        "caption": "\u201cIn a Shift of Heart\u201d, Summer 2023"
+                  },
+                  {
+                        "src": "projects/writing/my-moms-frying-pan.png",
+                        "alt": "Poem \u201cMy Mom\u2019s Frying Pan\u201d",
+                        "caption": "\u201cMy Mom\u2019s Frying Pan\u201d, Spring 2024"
+                  },
+                  {
+                        "src": "projects/writing/celebration-of-poets.png",
+                        "alt": "\u201cA Celebration of Poets\u201d anthology feature",
+                        "caption": "\u201cA Celebration of Poets\u201d anthology, Summer 2024"
+                  },
+                  {
+                        "src": "projects/writing/anthology-fall-2024.jpeg",
+                        "alt": "Anthology feature, Fall 2024",
+                        "caption": "Anthology feature, Fall 2024"
+                  },
+                  {
+                        "src": "projects/writing/pds-feature-2023.webp",
+                        "alt": "Princeton Day School feature post about Aadya's writing",
+                        "caption": "Princeton Day School feature, 2023"
+                  }
+            ]
       },
       {
-        "title": "Flute",
-        "intro": "Flutist in Lawrenceville's jazz band and recipient of NJMTA Honors recital recognition."
+            "title": "Piano",
+            "intro": "Grand Prize at the Music-Fest International Rising Talent Festival, with a recital at the Manhattan School of Music. Private lessons since 2021, with studio recitals and performances at Westminster Conservatory, Princeton.",
+            "photos": [
+                  {
+                        "src": "projects/piano-manhattan-school.jpg",
+                        "alt": "Aadya performing piano at the Manhattan School of Music",
+                        "caption": "Music-Fest recital, Manhattan School of Music"
+                  },
+                  {
+                        "src": "projects/piano-performance-2.jpg",
+                        "alt": "Aadya at the piano in performance",
+                        "caption": "Piano performance"
+                  },
+                  {
+                        "src": "projects/music/musicfest-grand-prize-recital.jpg",
+                        "alt": "Aadya at the Music-Fest Rising Talent grand-prize recital",
+                        "caption": "Music-Fest Rising Talent grand-prize recital"
+                  },
+                  {
+                        "src": "projects/music/musicfest-grand-prize.jpeg",
+                        "alt": "Aadya receiving the Music-Fest Grand Prize",
+                        "caption": "Music-Fest Grand Prize"
+                  },
+                  {
+                        "src": "projects/music/piano-award.png",
+                        "alt": "Aadya's piano award certificate",
+                        "caption": "Piano award"
+                  },
+                  {
+                        "src": "projects/music/archive/piano-musicfest-recital.jpg",
+                        "alt": "Aadya at the Music-Fest Rising Talent recital",
+                        "caption": "Music-Fest Rising Talent recital, 2024"
+                  },
+                  {
+                        "src": "projects/music/archive/piano-njmta-honors.jpg",
+                        "alt": "Aadya at an NJMTA Honors piano performance",
+                        "caption": "NJMTA Honors, 2023\u20132024"
+                  }
+            ]
       },
       {
-        "title": "Piano",
-        "intro": "Music-Fest International Rising Talent Festival Grand Prize winner, with a solo recital at Greenfield Hall, Manhattan School of Music."
+            "title": "Flute",
+            "intro": "Jazz-band flutist at Lawrenceville and a former first-chair soloist. NJMTA auditions and Honors recitals at Westminster Conservatory and Rutgers University Music Hall.",
+            "photos": [
+                  {
+                        "src": "projects/music/flute-aadya.png",
+                        "alt": "Aadya playing the flute",
+                        "caption": "Flute performance"
+                  },
+                  {
+                        "src": "projects/music/njmta-flute-honors.jpeg",
+                        "alt": "Aadya at the NJMTA Flute Honors Recital",
+                        "caption": "NJMTA Flute Honors Recital"
+                  },
+                  {
+                        "src": "projects/flute-1.png",
+                        "alt": "Aadya playing flute",
+                        "caption": "Flute performance"
+                  },
+                  {
+                        "src": "projects/flute-2.jpg",
+                        "alt": "Aadya with her flute",
+                        "caption": "Flute practice"
+                  },
+                  {
+                        "src": "projects/music/archive/flute-advanced-band-concert.png",
+                        "alt": "Aadya as first-chair flutist at a school advanced-band concert",
+                        "caption": "First chair, advanced band concert"
+                  },
+                  {
+                        "src": "projects/music/archive/flute-studio-recital-2024.jpg",
+                        "alt": "Aadya at a flute studio recital",
+                        "caption": "Studio recital, 2024"
+                  }
+            ]
       },
       {
-        "title": "Theater",
-        "intro": "Backstage technical theater work as a stage manager and production assistant, alongside school and community performances."
+            "title": "Theater",
+            "intro": "School and community theater: backstage technical theater, stage manager and production assistant, with occasional acting and stage performance, including Lawrenceville Shakespeare\u2019s Much Ado About Nothing.",
+            "photos": [
+                  {
+                        "src": "projects/theater/much-ado-about-nothing.png",
+                        "alt": "Much Ado About Nothing production",
+                        "caption": "Much Ado About Nothing"
+                  },
+                  {
+                        "src": "projects/theater/archive/the-day-the-internet-died.jpg",
+                        "alt": "Scene from the fall play The Day The Internet Died",
+                        "caption": "Fall play, The Day The Internet Died"
+                  },
+                  {
+                        "src": "projects/theater/archive/spring-musical.jpg",
+                        "alt": "Aadya in a spring musical production",
+                        "caption": "Spring musical"
+                  }
+            ]
+      },
+      {
+            "title": "Art (2020 to 2024)",
+            "intro": "Visual art across the years, including a third-grade yearbook-cover contest win.",
+            "photos": [
+                  {
+                        "src": "projects/art/art-18-2024.jpg",
+                        "alt": "Artwork by Aadya, 2024",
+                        "caption": "Artwork, 2024"
+                  },
+                  {
+                        "src": "projects/art/art-20-2024.jpg",
+                        "alt": "Artwork by Aadya, 2024",
+                        "caption": "Artwork, 2024"
+                  },
+                  {
+                        "src": "projects/art/art-16-2023.webp",
+                        "alt": "Artwork by Aadya, 2023",
+                        "caption": "Artwork, 2023"
+                  },
+                  {
+                        "src": "projects/art/artwork-6-2023.jpg",
+                        "alt": "Artwork by Aadya, 2023",
+                        "caption": "Artwork, 2023"
+                  },
+                  {
+                        "src": "projects/art/artwork-2-2023.jpg",
+                        "alt": "Artwork by Aadya, 2023",
+                        "caption": "Artwork, 2023"
+                  },
+                  {
+                        "src": "projects/art/artwork-11-2022.jpg",
+                        "alt": "Artwork by Aadya, 2022",
+                        "caption": "Artwork, 2022"
+                  },
+                  {
+                        "src": "projects/art/artwork-7-2022.jpg",
+                        "alt": "Artwork by Aadya, 2022",
+                        "caption": "Artwork, 2022"
+                  },
+                  {
+                        "src": "projects/art/artwork-1-2022.jpg",
+                        "alt": "Artwork by Aadya, 2022",
+                        "caption": "Artwork, 2022"
+                  },
+                  {
+                        "src": "projects/art/artwork-3-2021.jpg",
+                        "alt": "Artwork by Aadya, 2021",
+                        "caption": "Artwork, 2021"
+                  },
+                  {
+                        "src": "projects/art/artwork-4-2021.jpg",
+                        "alt": "Artwork by Aadya, 2021",
+                        "caption": "Artwork, 2021"
+                  },
+                  {
+                        "src": "projects/art/artwork-12-yearbook-cover-2020.jpg",
+                        "alt": "Aadya's 3rd-grade yearbook cover contest-winning artwork",
+                        "caption": "Yearbook cover contest winner, 2020"
+                  }
+            ]
       }
-    ],
+],
     "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater.",
     "gallery": [
       {
@@ -716,6 +905,474 @@
       }
     ]
   },
+  {
+  "title": "Creative & Academic Writing",
+  "group": "Writing & Performing Arts",
+  "category": "Writing & Performing Arts",
+  "summary": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
+  "cardImage": "assets/writing_arts/Aadya Flute Pic1.png",
+  "heroImage": "assets/writing_arts/Aadya Flute Pic1.png",
+  "badges": [
+    {
+      "label": "Writing",
+      "tone": "plum"
+    },
+    {
+      "label": "Poetry",
+      "tone": "berry"
+    }
+  ],
+  "technicalFocus": [
+    "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
+    "Bronze Medal, Technology & Innovation theme, Harvard International Review, Summer 2026",
+    "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
+    "2025 National History Day (NJ Regional): a 2,500-word paper on Lysenkoism and the suppression of scientific advancement in the Soviet Union",
+    "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville\u2019s jazz band with NJMTA Honors recitals",
+    "Backstage technical theater, stage manager and production assistant"
+  ],
+  "attachments": [
+    {
+      "label": "John Locke 2026 High Commendation (PDF)",
+      "href": "assets/writing_arts/John Locke 2026 - High Commendation.pdf"
+    },
+    {
+      "label": "Scholastic Poetry Silver Key certificate (PDF)",
+      "href": "assets/writing_arts/Scholastic_Poetry_Silver_Key_Certificate.pdf"
+    },
+    {
+      "label": "Scholastic Writing recognition letter (PDF)",
+      "href": "assets/writing_arts/Scholastic_Writing_Recognition_Letter.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Published writing",
+      "intro": "Selected published poems, stories and anthology features.",
+      "photos": [
+        {
+          "src": "projects/writing/scholastic-honorable-mention.jpeg",
+          "alt": "2025 Scholastic Art & Writing Honorable Mention notification",
+          "caption": "Scholastic Art & Writing, Honorable Mention 2025"
+        },
+        {
+          "src": "projects/writing/when-kindness-is-planted.webp",
+          "alt": "\u201cWhen Kindness Is Planted,\u201d published in The Telling Room",
+          "caption": "\u201cWhen Kindness Is Planted\u201d, The Telling Room 2022"
+        },
+        {
+          "src": "projects/writing/balance-skipping-stones.jpg",
+          "alt": "Poem \u201cBalance,\u201d published in Skipping Stones",
+          "caption": "\u201cBalance\u201d, Skipping Stones, Fall 2023"
+        },
+        {
+          "src": "projects/writing/in-a-shift-of-heart.png",
+          "alt": "Poem \u201cIn a Shift of Heart\u201d",
+          "caption": "\u201cIn a Shift of Heart\u201d, Summer 2023"
+        },
+        {
+          "src": "projects/writing/my-moms-frying-pan.png",
+          "alt": "Poem \u201cMy Mom\u2019s Frying Pan\u201d",
+          "caption": "\u201cMy Mom\u2019s Frying Pan\u201d, Spring 2024"
+        },
+        {
+          "src": "projects/writing/celebration-of-poets.png",
+          "alt": "\u201cA Celebration of Poets\u201d anthology feature",
+          "caption": "\u201cA Celebration of Poets\u201d anthology, Summer 2024"
+        },
+        {
+          "src": "projects/writing/anthology-fall-2024.jpeg",
+          "alt": "Anthology feature, Fall 2024",
+          "caption": "Anthology feature, Fall 2024"
+        },
+        {
+          "src": "projects/writing/pds-feature-2023.webp",
+          "alt": "Princeton Day School feature post about Aadya's writing",
+          "caption": "Princeton Day School feature, 2023"
+        }
+      ]
+    },
+    {
+      "title": "Piano",
+      "intro": "Grand Prize at the Music-Fest International Rising Talent Festival, with a recital at the Manhattan School of Music. Private lessons since 2021, with studio recitals and performances at Westminster Conservatory, Princeton.",
+      "photos": [
+        {
+          "src": "projects/piano-manhattan-school.jpg",
+          "alt": "Aadya performing piano at the Manhattan School of Music",
+          "caption": "Music-Fest recital, Manhattan School of Music"
+        },
+        {
+          "src": "projects/piano-performance-2.jpg",
+          "alt": "Aadya at the piano in performance",
+          "caption": "Piano performance"
+        },
+        {
+          "src": "projects/music/musicfest-grand-prize-recital.jpg",
+          "alt": "Aadya at the Music-Fest Rising Talent grand-prize recital",
+          "caption": "Music-Fest Rising Talent grand-prize recital"
+        },
+        {
+          "src": "projects/music/musicfest-grand-prize.jpeg",
+          "alt": "Aadya receiving the Music-Fest Grand Prize",
+          "caption": "Music-Fest Grand Prize"
+        },
+        {
+          "src": "projects/music/piano-award.png",
+          "alt": "Aadya's piano award certificate",
+          "caption": "Piano award"
+        },
+        {
+          "src": "projects/music/archive/piano-musicfest-recital.jpg",
+          "alt": "Aadya at the Music-Fest Rising Talent recital",
+          "caption": "Music-Fest Rising Talent recital, 2024"
+        },
+        {
+          "src": "projects/music/archive/piano-njmta-honors.jpg",
+          "alt": "Aadya at an NJMTA Honors piano performance",
+          "caption": "NJMTA Honors, 2023\u20132024"
+        }
+      ]
+    },
+    {
+      "title": "Flute",
+      "intro": "Jazz-band flutist at Lawrenceville and a former first-chair soloist. NJMTA auditions and Honors recitals at Westminster Conservatory and Rutgers University Music Hall.",
+      "photos": [
+        {
+          "src": "projects/music/flute-aadya.png",
+          "alt": "Aadya playing the flute",
+          "caption": "Flute performance"
+        },
+        {
+          "src": "projects/music/njmta-flute-honors.jpeg",
+          "alt": "Aadya at the NJMTA Flute Honors Recital",
+          "caption": "NJMTA Flute Honors Recital"
+        },
+        {
+          "src": "projects/flute-1.png",
+          "alt": "Aadya playing flute",
+          "caption": "Flute performance"
+        },
+        {
+          "src": "projects/flute-2.jpg",
+          "alt": "Aadya with her flute",
+          "caption": "Flute practice"
+        },
+        {
+          "src": "projects/music/archive/flute-advanced-band-concert.png",
+          "alt": "Aadya as first-chair flutist at a school advanced-band concert",
+          "caption": "First chair, advanced band concert"
+        },
+        {
+          "src": "projects/music/archive/flute-studio-recital-2024.jpg",
+          "alt": "Aadya at a flute studio recital",
+          "caption": "Studio recital, 2024"
+        }
+      ]
+    },
+    {
+      "title": "Theater",
+      "intro": "School and community theater: backstage technical theater, stage manager and production assistant, with occasional acting and stage performance, including Lawrenceville Shakespeare\u2019s Much Ado About Nothing.",
+      "photos": [
+        {
+          "src": "projects/theater/much-ado-about-nothing.png",
+          "alt": "Much Ado About Nothing production",
+          "caption": "Much Ado About Nothing"
+        },
+        {
+          "src": "projects/theater/archive/the-day-the-internet-died.jpg",
+          "alt": "Scene from the fall play The Day The Internet Died",
+          "caption": "Fall play, The Day The Internet Died"
+        },
+        {
+          "src": "projects/theater/archive/spring-musical.jpg",
+          "alt": "Aadya in a spring musical production",
+          "caption": "Spring musical"
+        }
+      ]
+    },
+    {
+      "title": "Art (2020 to 2024)",
+      "intro": "Visual art across the years, including a third-grade yearbook-cover contest win.",
+      "photos": [
+        {
+          "src": "projects/art/art-18-2024.jpg",
+          "alt": "Artwork by Aadya, 2024",
+          "caption": "Artwork, 2024"
+        },
+        {
+          "src": "projects/art/art-20-2024.jpg",
+          "alt": "Artwork by Aadya, 2024",
+          "caption": "Artwork, 2024"
+        },
+        {
+          "src": "projects/art/art-16-2023.webp",
+          "alt": "Artwork by Aadya, 2023",
+          "caption": "Artwork, 2023"
+        },
+        {
+          "src": "projects/art/artwork-6-2023.jpg",
+          "alt": "Artwork by Aadya, 2023",
+          "caption": "Artwork, 2023"
+        },
+        {
+          "src": "projects/art/artwork-2-2023.jpg",
+          "alt": "Artwork by Aadya, 2023",
+          "caption": "Artwork, 2023"
+        },
+        {
+          "src": "projects/art/artwork-11-2022.jpg",
+          "alt": "Artwork by Aadya, 2022",
+          "caption": "Artwork, 2022"
+        },
+        {
+          "src": "projects/art/artwork-7-2022.jpg",
+          "alt": "Artwork by Aadya, 2022",
+          "caption": "Artwork, 2022"
+        },
+        {
+          "src": "projects/art/artwork-1-2022.jpg",
+          "alt": "Artwork by Aadya, 2022",
+          "caption": "Artwork, 2022"
+        },
+        {
+          "src": "projects/art/artwork-3-2021.jpg",
+          "alt": "Artwork by Aadya, 2021",
+          "caption": "Artwork, 2021"
+        },
+        {
+          "src": "projects/art/artwork-4-2021.jpg",
+          "alt": "Artwork by Aadya, 2021",
+          "caption": "Artwork, 2021"
+        },
+        {
+          "src": "projects/art/artwork-12-yearbook-cover-2020.jpg",
+          "alt": "Aadya's 3rd-grade yearbook cover contest-winning artwork",
+          "caption": "Yearbook cover contest winner, 2020"
+        }
+      ]
+    }
+  ]
+},
+  {
+  "title": "Music, Theater & Public Speaking",
+  "group": "Writing & Performing Arts",
+  "category": "Music, Theater & Public Speaking",
+  "summary": "Grand Prize piano recitals at the Manhattan School of Music, jazz-band flute soloist, backstage technical theater, competitive forensics and speech commendations.",
+  "cardImage": "assets/writing_arts/Aadya Flute Pic1.png",
+  "heroImage": "assets/writing_arts/Aadya Flute Pic1.png",
+  "badges": [
+    {
+      "label": "Music",
+      "tone": "plum"
+    },
+    {
+      "label": "Theater",
+      "tone": "berry"
+    },
+    {
+      "label": "Speech",
+      "tone": "gold"
+    }
+  ],
+  "technicalFocus": [
+    "Piano Grand Prize at the Music-Fest International Rising Talent Festival; solo recital at Greenfield Hall, Manhattan School of Music",
+    "Flutist in Lawrenceville\u2019s jazz band with NJMTA auditions and Honors recitals at Westminster Conservatory and Rutgers University Music Hall",
+    "Backstage technical theater work as a stage manager and production assistant for school and regional productions",
+    "Competitive speech first-place awards from North South Foundation and Toastmasters Outstanding Communicator recognition"
+  ],
+  "attachments": [
+    {
+      "label": "Scholastic Poetry Silver Key certificate (PDF)",
+      "href": "assets/writing_arts/Scholastic_Poetry_Silver_Key_Certificate.pdf"
+    },
+    {
+      "label": "John Locke 2026 High Commendation (PDF)",
+      "href": "assets/writing_arts/John Locke 2026 - High Commendation.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Piano",
+      "intro": "Grand Prize at the Music-Fest International Rising Talent Festival, with a recital at the Manhattan School of Music. Private lessons since 2021, with studio recitals and performances at Westminster Conservatory, Princeton.",
+      "photos": [
+        {
+          "src": "projects/piano-manhattan-school.jpg",
+          "alt": "Aadya performing piano at the Manhattan School of Music",
+          "caption": "Music-Fest recital, Manhattan School of Music"
+        },
+        {
+          "src": "projects/piano-performance-2.jpg",
+          "alt": "Aadya at the piano in performance",
+          "caption": "Piano performance"
+        },
+        {
+          "src": "projects/music/musicfest-grand-prize-recital.jpg",
+          "alt": "Aadya at the Music-Fest Rising Talent grand-prize recital",
+          "caption": "Music-Fest Rising Talent grand-prize recital"
+        },
+        {
+          "src": "projects/music/musicfest-grand-prize.jpeg",
+          "alt": "Aadya receiving the Music-Fest Grand Prize",
+          "caption": "Music-Fest Grand Prize"
+        },
+        {
+          "src": "projects/music/piano-award.png",
+          "alt": "Aadya's piano award certificate",
+          "caption": "Piano award"
+        },
+        {
+          "src": "projects/music/archive/piano-musicfest-recital.jpg",
+          "alt": "Aadya at the Music-Fest Rising Talent recital",
+          "caption": "Music-Fest Rising Talent recital, 2024"
+        },
+        {
+          "src": "projects/music/archive/piano-njmta-honors.jpg",
+          "alt": "Aadya at an NJMTA Honors piano performance",
+          "caption": "NJMTA Honors, 2023\u20132024"
+        }
+      ]
+    },
+    {
+      "title": "Flute",
+      "intro": "Jazz-band flutist at Lawrenceville and a former first-chair soloist. NJMTA auditions and Honors recitals at Westminster Conservatory and Rutgers University Music Hall.",
+      "photos": [
+        {
+          "src": "projects/music/flute-aadya.png",
+          "alt": "Aadya playing the flute",
+          "caption": "Flute performance"
+        },
+        {
+          "src": "projects/music/njmta-flute-honors.jpeg",
+          "alt": "Aadya at the NJMTA Flute Honors Recital",
+          "caption": "NJMTA Flute Honors Recital"
+        },
+        {
+          "src": "projects/flute-1.png",
+          "alt": "Aadya playing flute",
+          "caption": "Flute performance"
+        },
+        {
+          "src": "projects/flute-2.jpg",
+          "alt": "Aadya with her flute",
+          "caption": "Flute practice"
+        },
+        {
+          "src": "projects/music/archive/flute-advanced-band-concert.png",
+          "alt": "Aadya as first-chair flutist at a school advanced-band concert",
+          "caption": "First chair, advanced band concert"
+        },
+        {
+          "src": "projects/music/archive/flute-studio-recital-2024.jpg",
+          "alt": "Aadya at a flute studio recital",
+          "caption": "Studio recital, 2024"
+        }
+      ]
+    },
+    {
+      "title": "Theater",
+      "intro": "School and community theater: backstage technical theater, stage manager and production assistant, with occasional acting and stage performance, including Lawrenceville Shakespeare\u2019s Much Ado About Nothing.",
+      "photos": [
+        {
+          "src": "projects/theater/much-ado-about-nothing.png",
+          "alt": "Much Ado About Nothing production",
+          "caption": "Much Ado About Nothing"
+        },
+        {
+          "src": "projects/theater/archive/the-day-the-internet-died.jpg",
+          "alt": "Scene from the fall play The Day The Internet Died",
+          "caption": "Fall play, The Day The Internet Died"
+        },
+        {
+          "src": "projects/theater/archive/spring-musical.jpg",
+          "alt": "Aadya in a spring musical production",
+          "caption": "Spring musical"
+        }
+      ]
+    },
+    {
+      "title": "Public Speaking, Forensics & Speech Honors",
+      "intro": "Trained in competitive forensics, Toastmasters communication, and impromptu address, delivering persuasive presentations on civic engagement, technology ethics, and educational equity.",
+      "photos": [
+        {
+          "src": "assets/speaking/speech_award_ceremony.jpg",
+          "alt": "Aadya receiving speech honors award",
+          "caption": "Speech Competition Honors Ceremony"
+        },
+        {
+          "src": "assets/speaking/speech_stage.jpg",
+          "alt": "Aadya on stage delivering speech",
+          "caption": "Keynote and competitive speech presentation"
+        },
+        {
+          "src": "assets/certificates/nsf_speech_award.png",
+          "alt": "North South Foundation speech award",
+          "caption": "North South Foundation Speech First Place"
+        }
+      ]
+    },
+    {
+      "title": "Art (2020 to 2024)",
+      "intro": "Visual art across the years, including a third-grade yearbook-cover contest win.",
+      "photos": [
+        {
+          "src": "projects/art/art-18-2024.jpg",
+          "alt": "Artwork by Aadya, 2024",
+          "caption": "Artwork, 2024"
+        },
+        {
+          "src": "projects/art/art-20-2024.jpg",
+          "alt": "Artwork by Aadya, 2024",
+          "caption": "Artwork, 2024"
+        },
+        {
+          "src": "projects/art/art-16-2023.webp",
+          "alt": "Artwork by Aadya, 2023",
+          "caption": "Artwork, 2023"
+        },
+        {
+          "src": "projects/art/artwork-6-2023.jpg",
+          "alt": "Artwork by Aadya, 2023",
+          "caption": "Artwork, 2023"
+        },
+        {
+          "src": "projects/art/artwork-2-2023.jpg",
+          "alt": "Artwork by Aadya, 2023",
+          "caption": "Artwork, 2023"
+        },
+        {
+          "src": "projects/art/artwork-11-2022.jpg",
+          "alt": "Artwork by Aadya, 2022",
+          "caption": "Artwork, 2022"
+        },
+        {
+          "src": "projects/art/artwork-7-2022.jpg",
+          "alt": "Artwork by Aadya, 2022",
+          "caption": "Artwork, 2022"
+        },
+        {
+          "src": "projects/art/artwork-1-2022.jpg",
+          "alt": "Artwork by Aadya, 2022",
+          "caption": "Artwork, 2022"
+        },
+        {
+          "src": "projects/art/artwork-3-2021.jpg",
+          "alt": "Artwork by Aadya, 2021",
+          "caption": "Artwork, 2021"
+        },
+        {
+          "src": "projects/art/artwork-4-2021.jpg",
+          "alt": "Artwork by Aadya, 2021",
+          "caption": "Artwork, 2021"
+        },
+        {
+          "src": "projects/art/artwork-12-yearbook-cover-2020.jpg",
+          "alt": "Aadya's 3rd-grade yearbook cover contest-winning artwork",
+          "caption": "Yearbook cover contest winner, 2020"
+        }
+      ]
+    }
+  ]
+},
+
   {
     "title": "Mercer County Hunger Relief & Meal Packaging Drives",
     "group": "School & Community",
@@ -1092,7 +1749,34 @@
         <div class="mt-10 space-y-4">
           <h3 class="font-display text-2xl font-bold text-plum">Explore the work</h3>
           <div class="space-y-4">
-            ${activeSections.map((sec, secIdx) => `
+            ${activeSections.map((sec, secIdx) => {
+              const secPhotos = Array.isArray(sec.photos) ? sec.photos : (Array.isArray(sec.images) ? sec.images.map(img => typeof img === 'string' ? { src: img } : img) : []);
+              let photosGridHtml = '';
+              if (secPhotos.length > 0) {
+                photosGridHtml = `
+                  <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                    ${secPhotos.map(ph => {
+                      const rawSrc = (typeof ph === 'string' ? ph : ph.src) || '';
+                      let cleanSrc = rawSrc.trim();
+                      if (cleanSrc.startsWith('/') && !cleanSrc.startsWith('//')) cleanSrc = cleanSrc.substring(1);
+                      const pSrc = (typeof window.getResolvedImageSrc === 'function') ? window.getResolvedImageSrc(cleanSrc) : cleanSrc;
+                      const caption = (typeof ph === 'object' && ph.caption) ? ph.caption : '';
+                      const altText = (typeof ph === 'object' && ph.alt) ? ph.alt : (caption || (sec.title + ' image'));
+                      return `
+                        <figure class="min-w-0">
+                          <a href="${pSrc}" target="_blank" rel="noopener noreferrer" aria-label="View full image: ${caption || altText}" class="block overflow-hidden rounded-lg border border-ink/10 bg-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry hover:opacity-95 transition">
+                            <div class="relative aspect-[4/3] bg-[#faf8f5] flex items-center justify-center overflow-hidden">
+                              <img src="${pSrc}" alt="${altText}" loading="lazy" class="w-full h-full object-contain" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';const idx=this.src.indexOf('assets/uploads/');this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+encodeURI(this.src.substring(idx));}else if(this.src.startsWith('/projects/')){this.src=this.src.substring(1);}else{this.src='assets/logo.png';}">
+                            </div>
+                          </a>
+                          ${caption ? `<figcaption class="mt-2 text-sm text-ink/65 leading-snug font-medium">${caption}</figcaption>` : ''}
+                        </figure>
+                      `;
+                    }).join('')}
+                  </div>
+                `;
+              }
+              return `
               <details class="group rounded-xl border border-ink/15 bg-white overflow-hidden shadow-xs transition duration-200 open:border-plum/40" ${secIdx === 0 ? 'open' : ''}>
                 <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-display text-lg font-semibold marker:hidden sm:px-6 [&::-webkit-details-marker]:hidden hover:text-plum transition select-none">
                   <span>${sec.title || 'Project Section'}</span>
@@ -1100,9 +1784,10 @@
                 </summary>
                 <div class="border-t border-ink/10 px-5 pb-6 pt-5 sm:px-6 bg-[#FAFBF9]">
                   <p class="max-w-3xl leading-relaxed text-ink/75 text-sm sm:text-base">${sec.intro || ''}</p>
+                  ${photosGridHtml}
                 </div>
               </details>
-            `).join('')}
+            `;}).join('')}
           </div>
         </div>
       `;
@@ -1129,7 +1814,18 @@
     }
 
     let galleryHtml = '';
-    if (galleryPhotos.length > 0) {
+    const hasSectionPhotos = activeSections.some(sec => Array.isArray(sec.photos) && sec.photos.length > 0);
+    const isWritingOrArts = (
+      (project.group && project.group.toLowerCase().includes('writing')) ||
+      (project.category_slug && project.category_slug.toLowerCase() === 'writing') ||
+      (project.title && (
+        project.title.toLowerCase().includes('writing') ||
+        project.title.toLowerCase().includes('music') ||
+        project.title.toLowerCase().includes('arts')
+      ))
+    );
+
+    if (galleryPhotos.length > 0 && !hasSectionPhotos && !isWritingOrArts) {
       const subtitle = project.gallerySubtitle || `Documented photographs, research trials, and field milestones for ${project.title}.`;
       galleryHtml = `
         <div class="photo-gallery-section">
@@ -1351,7 +2047,14 @@
       if (matchedIdx >= 0) {
         project = JSON.parse(JSON.stringify(PROJECTS_DATA[matchedIdx]));
         if (identifier.sections && Array.isArray(identifier.sections) && identifier.sections.length > 0) {
-          project.sections = identifier.sections;
+          project.sections = identifier.sections.map(s => {
+            if (Array.isArray(s.photos) && s.photos.length > 0) return s;
+            const matching = (project.sections || []).find(ps => ps.title && s.title && (ps.title.toLowerCase().trim() === s.title.toLowerCase().trim() || ps.title.toLowerCase().includes(s.title.toLowerCase()) || s.title.toLowerCase().includes(ps.title.toLowerCase())));
+            if (matching && Array.isArray(matching.photos) && matching.photos.length > 0) {
+              return { ...s, photos: matching.photos };
+            }
+            return s;
+          });
         }
         if (identifier.hide_badges) {
           project.badges = [];
@@ -1424,7 +2127,16 @@
           }
           if (cmsItem.desc) project.summary = cmsItem.desc;
           if (Array.isArray(cmsItem.highlights) && cmsItem.highlights.length) project.technicalFocus = cmsItem.highlights;
-          if (Array.isArray(cmsItem.sections) && cmsItem.sections.length) project.sections = cmsItem.sections;
+          if (Array.isArray(cmsItem.sections) && cmsItem.sections.length) {
+            project.sections = cmsItem.sections.map(s => {
+              if (Array.isArray(s.photos) && s.photos.length > 0) return s;
+              const matching = (project.sections || []).find(ps => ps.title && s.title && (ps.title.toLowerCase().trim() === s.title.toLowerCase().trim() || ps.title.toLowerCase().includes(s.title.toLowerCase()) || s.title.toLowerCase().includes(ps.title.toLowerCase())));
+              if (matching && Array.isArray(matching.photos) && matching.photos.length > 0) {
+                return { ...s, photos: matching.photos };
+              }
+              return s;
+            });
+          }
           if (Array.isArray(cmsItem.attachments) && cmsItem.attachments.length) project.attachments = cmsItem.attachments;
           if (Array.isArray(cmsItem.videos) && cmsItem.videos.length) project.videos = cmsItem.videos;
         }

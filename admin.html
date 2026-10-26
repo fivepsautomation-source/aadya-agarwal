@@ -1573,12 +1573,18 @@
     function getResolvedImageSrc(url) {
       if (!url) return 'assets/logo.png';
       if (typeof url !== 'string') return url;
-      if (localPreviewCache[url]) return localPreviewCache[url];
+      let clean = url.trim();
+      if (!clean) return 'assets/logo.png';
+      if (clean.startsWith('data:')) return clean;
+      if (clean.startsWith('/') && !clean.startsWith('//') && !clean.startsWith('/api/')) {
+        clean = clean.substring(1);
+      }
+      if (localPreviewCache[clean]) return localPreviewCache[clean];
       try {
-        const cached = sessionStorage.getItem('aadya_preview_' + url);
+        const cached = sessionStorage.getItem('aadya_preview_' + clean);
         if (cached) return cached;
       } catch (e) {}
-      return url;
+      return clean;
     }
 
     function smartImageFallback(imgEl, originalUrl) {
@@ -2608,24 +2614,213 @@
 ];
       }
 
-      if (id === 14 || title.includes('writing') || slug === 'writing' || slug === 'arts') {
+      if (id === 14 || title.includes('writing') || slug === 'writing' || slug === 'arts' || title.includes('music') || title.includes('theater')) {
         return [
-        {
-                "title": "Published writing",
-                "intro": "Essays and poetry recognized by the John Locke Institute and Scholastic Art & Writing Awards, with work published in The Telling Room, Skipping Stones and Poetic Power anthologies, plus science journalism for TechTrek USA."
-        },
-        {
-                "title": "Flute",
-                "intro": "Flutist in Lawrenceville's jazz band and recipient of NJMTA Honors recital recognition."
-        },
-        {
-                "title": "Piano",
-                "intro": "Music-Fest International Rising Talent Festival Grand Prize winner, with a solo recital at Greenfield Hall, Manhattan School of Music."
-        },
-        {
-                "title": "Theater",
-                "intro": "Backstage technical theater work as a stage manager and production assistant, alongside school and community performances."
-        }
+          {
+                    "title": "Published writing",
+                    "intro": "Selected published poems, stories and anthology features.",
+                    "photos": [
+                              {
+                                        "src": "projects/writing/scholastic-honorable-mention.jpeg",
+                                        "alt": "2025 Scholastic Art & Writing Honorable Mention notification",
+                                        "caption": "Scholastic Art & Writing, Honorable Mention 2025"
+                              },
+                              {
+                                        "src": "projects/writing/when-kindness-is-planted.webp",
+                                        "alt": "\u201cWhen Kindness Is Planted,\u201d published in The Telling Room",
+                                        "caption": "\u201cWhen Kindness Is Planted\u201d, The Telling Room 2022"
+                              },
+                              {
+                                        "src": "projects/writing/balance-skipping-stones.jpg",
+                                        "alt": "Poem \u201cBalance,\u201d published in Skipping Stones",
+                                        "caption": "\u201cBalance\u201d, Skipping Stones, Fall 2023"
+                              },
+                              {
+                                        "src": "projects/writing/in-a-shift-of-heart.png",
+                                        "alt": "Poem \u201cIn a Shift of Heart\u201d",
+                                        "caption": "\u201cIn a Shift of Heart\u201d, Summer 2023"
+                              },
+                              {
+                                        "src": "projects/writing/my-moms-frying-pan.png",
+                                        "alt": "Poem \u201cMy Mom\u2019s Frying Pan\u201d",
+                                        "caption": "\u201cMy Mom\u2019s Frying Pan\u201d, Spring 2024"
+                              },
+                              {
+                                        "src": "projects/writing/celebration-of-poets.png",
+                                        "alt": "\u201cA Celebration of Poets\u201d anthology feature",
+                                        "caption": "\u201cA Celebration of Poets\u201d anthology, Summer 2024"
+                              },
+                              {
+                                        "src": "projects/writing/anthology-fall-2024.jpeg",
+                                        "alt": "Anthology feature, Fall 2024",
+                                        "caption": "Anthology feature, Fall 2024"
+                              },
+                              {
+                                        "src": "projects/writing/pds-feature-2023.webp",
+                                        "alt": "Princeton Day School feature post about Aadya's writing",
+                                        "caption": "Princeton Day School feature, 2023"
+                              }
+                    ]
+          },
+          {
+                    "title": "Piano",
+                    "intro": "Grand Prize at the Music-Fest International Rising Talent Festival, with a recital at the Manhattan School of Music. Private lessons since 2021, with studio recitals and performances at Westminster Conservatory, Princeton.",
+                    "photos": [
+                              {
+                                        "src": "projects/piano-manhattan-school.jpg",
+                                        "alt": "Aadya performing piano at the Manhattan School of Music",
+                                        "caption": "Music-Fest recital, Manhattan School of Music"
+                              },
+                              {
+                                        "src": "projects/piano-performance-2.jpg",
+                                        "alt": "Aadya at the piano in performance",
+                                        "caption": "Piano performance"
+                              },
+                              {
+                                        "src": "projects/music/musicfest-grand-prize-recital.jpg",
+                                        "alt": "Aadya at the Music-Fest Rising Talent grand-prize recital",
+                                        "caption": "Music-Fest Rising Talent grand-prize recital"
+                              },
+                              {
+                                        "src": "projects/music/musicfest-grand-prize.jpeg",
+                                        "alt": "Aadya receiving the Music-Fest Grand Prize",
+                                        "caption": "Music-Fest Grand Prize"
+                              },
+                              {
+                                        "src": "projects/music/piano-award.png",
+                                        "alt": "Aadya's piano award certificate",
+                                        "caption": "Piano award"
+                              },
+                              {
+                                        "src": "projects/music/archive/piano-musicfest-recital.jpg",
+                                        "alt": "Aadya at the Music-Fest Rising Talent recital",
+                                        "caption": "Music-Fest Rising Talent recital, 2024"
+                              },
+                              {
+                                        "src": "projects/music/archive/piano-njmta-honors.jpg",
+                                        "alt": "Aadya at an NJMTA Honors piano performance",
+                                        "caption": "NJMTA Honors, 2023\u20132024"
+                              }
+                    ]
+          },
+          {
+                    "title": "Flute",
+                    "intro": "Jazz-band flutist at Lawrenceville and a former first-chair soloist. NJMTA auditions and Honors recitals at Westminster Conservatory and Rutgers University Music Hall.",
+                    "photos": [
+                              {
+                                        "src": "projects/music/flute-aadya.png",
+                                        "alt": "Aadya playing the flute",
+                                        "caption": "Flute performance"
+                              },
+                              {
+                                        "src": "projects/music/njmta-flute-honors.jpeg",
+                                        "alt": "Aadya at the NJMTA Flute Honors Recital",
+                                        "caption": "NJMTA Flute Honors Recital"
+                              },
+                              {
+                                        "src": "projects/flute-1.png",
+                                        "alt": "Aadya playing flute",
+                                        "caption": "Flute performance"
+                              },
+                              {
+                                        "src": "projects/flute-2.jpg",
+                                        "alt": "Aadya with her flute",
+                                        "caption": "Flute practice"
+                              },
+                              {
+                                        "src": "projects/music/archive/flute-advanced-band-concert.png",
+                                        "alt": "Aadya as first-chair flutist at a school advanced-band concert",
+                                        "caption": "First chair, advanced band concert"
+                              },
+                              {
+                                        "src": "projects/music/archive/flute-studio-recital-2024.jpg",
+                                        "alt": "Aadya at a flute studio recital",
+                                        "caption": "Studio recital, 2024"
+                              }
+                    ]
+          },
+          {
+                    "title": "Theater",
+                    "intro": "School and community theater: backstage technical theater, stage manager and production assistant, with occasional acting and stage performance, including Lawrenceville Shakespeare\u2019s Much Ado About Nothing.",
+                    "photos": [
+                              {
+                                        "src": "projects/theater/much-ado-about-nothing.png",
+                                        "alt": "Much Ado About Nothing production",
+                                        "caption": "Much Ado About Nothing"
+                              },
+                              {
+                                        "src": "projects/theater/archive/the-day-the-internet-died.jpg",
+                                        "alt": "Scene from the fall play The Day The Internet Died",
+                                        "caption": "Fall play, The Day The Internet Died"
+                              },
+                              {
+                                        "src": "projects/theater/archive/spring-musical.jpg",
+                                        "alt": "Aadya in a spring musical production",
+                                        "caption": "Spring musical"
+                              }
+                    ]
+          },
+          {
+                    "title": "Art (2020 to 2024)",
+                    "intro": "Visual art across the years, including a third-grade yearbook-cover contest win.",
+                    "photos": [
+                              {
+                                        "src": "projects/art/art-18-2024.jpg",
+                                        "alt": "Artwork by Aadya, 2024",
+                                        "caption": "Artwork, 2024"
+                              },
+                              {
+                                        "src": "projects/art/art-20-2024.jpg",
+                                        "alt": "Artwork by Aadya, 2024",
+                                        "caption": "Artwork, 2024"
+                              },
+                              {
+                                        "src": "projects/art/art-16-2023.webp",
+                                        "alt": "Artwork by Aadya, 2023",
+                                        "caption": "Artwork, 2023"
+                              },
+                              {
+                                        "src": "projects/art/artwork-6-2023.jpg",
+                                        "alt": "Artwork by Aadya, 2023",
+                                        "caption": "Artwork, 2023"
+                              },
+                              {
+                                        "src": "projects/art/artwork-2-2023.jpg",
+                                        "alt": "Artwork by Aadya, 2023",
+                                        "caption": "Artwork, 2023"
+                              },
+                              {
+                                        "src": "projects/art/artwork-11-2022.jpg",
+                                        "alt": "Artwork by Aadya, 2022",
+                                        "caption": "Artwork, 2022"
+                              },
+                              {
+                                        "src": "projects/art/artwork-7-2022.jpg",
+                                        "alt": "Artwork by Aadya, 2022",
+                                        "caption": "Artwork, 2022"
+                              },
+                              {
+                                        "src": "projects/art/artwork-1-2022.jpg",
+                                        "alt": "Artwork by Aadya, 2022",
+                                        "caption": "Artwork, 2022"
+                              },
+                              {
+                                        "src": "projects/art/artwork-3-2021.jpg",
+                                        "alt": "Artwork by Aadya, 2021",
+                                        "caption": "Artwork, 2021"
+                              },
+                              {
+                                        "src": "projects/art/artwork-4-2021.jpg",
+                                        "alt": "Artwork by Aadya, 2021",
+                                        "caption": "Artwork, 2021"
+                              },
+                              {
+                                        "src": "projects/art/artwork-12-yearbook-cover-2020.jpg",
+                                        "alt": "Aadya's 3rd-grade yearbook cover contest-winning artwork",
+                                        "caption": "Yearbook cover contest winner, 2020"
+                              }
+                    ]
+          }
 ];
       }
 
@@ -2754,6 +2949,32 @@
         const isFirst = (idx === 0);
         const isLast = (idx === currentModalSections.length - 1);
 
+        const secPhotos = Array.isArray(sec.photos) ? sec.photos : (Array.isArray(sec.images) ? sec.images.map(img => typeof img === 'string' ? { src: img } : img) : []);
+        
+        let photosHtml = '';
+        if (secPhotos.length > 0) {
+          photosHtml = secPhotos.map((ph, phIdx) => {
+            const rawSrc = (typeof ph === 'string' ? ph : ph.src) || '';
+            const caption = (typeof ph === 'object' && ph.caption) ? ph.caption : '';
+            return `
+              <div style="display: flex; align-items: center; gap: 0.5rem; background: #ffffff; border: 1px solid rgba(59,18,45,0.15); border-radius: 8px; padding: 0.35rem 0.5rem; margin-bottom: 0.35rem;">
+                <img src="${getResolvedImageSrc(rawSrc)}" style="width: 44px; height: 36px; object-fit: cover; border-radius: 4px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.src='assets/logo.png'">
+                <div style="flex: 1; display: flex; flex-direction: column; gap: 0.15rem; min-width: 0;">
+                  <input type="text" value="${escapeHtml(caption)}" placeholder="Caption / Title" oninput="updateSectionPhotoCaption(${idx}, ${phIdx}, this.value)" style="font-size: 0.75rem; padding: 0.2rem 0.4rem; border: 1px solid rgba(0,0,0,0.15); border-radius: 4px; width: 100%;">
+                  <span style="font-size: 0.65rem; color: rgba(15,15,18,0.55); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(rawSrc)}</span>
+                </div>
+                <button type="button" onclick="removeSectionPhoto(${idx}, ${phIdx})" style="background: none; border: none; cursor: pointer; color: #ba1f43; font-size: 0.9rem; padding: 0 4px;" title="Delete image">✕</button>
+              </div>
+            `;
+          }).join('');
+        } else {
+          photosHtml = `
+            <div style="padding: 0.5rem; text-align: center; color: rgba(15,15,18,0.45); font-size: 0.72rem; border: 1px dashed rgba(59,18,45,0.15); border-radius: 6px;">
+              No images in this section yet. Click "+ Add Image URL" or "📁 Upload Image" below.
+            </div>
+          `;
+        }
+
         card.innerHTML = `
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.4rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2770,13 +2991,92 @@
             <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Section Title (Header)</label>
             <input type="text" class="form-input section-title-input" value="${escapeHtml(sec.title || '')}" oninput="updateProjectSection(${idx}, 'title', this.value)" placeholder="e.g. Autonomous Navigation & Computer-Vision Algorithms" style="font-size: 0.85rem; padding: 0.45rem 0.75rem; font-weight: 600;">
           </div>
-          <div>
+          <div style="margin-bottom: 0.5rem;">
             <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Section Description / Intro Content</label>
             <textarea rows="3" class="form-input section-intro-input" oninput="updateProjectSection(${idx}, 'intro', this.value)" placeholder="Write the details, methodology, research trials, or results..." style="font-size: 0.82rem; padding: 0.45rem 0.75rem; line-height: 1.45;">${escapeHtml(sec.intro || '')}</textarea>
+          </div>
+          <div style="margin-top: 0.75rem; border-top: 1px dashed rgba(59,18,45,0.15); padding-top: 0.65rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.4rem;">
+              <label class="form-label" style="font-size: 0.75rem; margin: 0; font-weight: 700; color: var(--admin-plum); display: flex; align-items: center; gap: 0.35rem;">
+                <span>🖼️ Section Images (${secPhotos.length})</span>
+              </label>
+              <div style="display: flex; gap: 0.35rem;">
+                <button type="button" onclick="promptAddSectionPhoto(${idx})" class="btn-secondary" style="margin: 0; padding: 0.25rem 0.65rem; font-size: 0.72rem; cursor: pointer;">
+                  + Add Image URL
+                </button>
+                <label class="btn-primary" style="margin: 0; padding: 0.25rem 0.65rem; font-size: 0.72rem; cursor: pointer; background: var(--admin-plum); display: inline-flex; align-items: center; gap: 0.25rem;">
+                  <span>📁 Upload Image</span>
+                  <input type="file" accept="image/*" style="display: none;" onchange="uploadSectionPhoto(${idx}, this)">
+                </label>
+              </div>
+            </div>
+            <div style="max-height: 190px; overflow-y: auto; padding: 0.35rem; background: #faf8f6; border-radius: 8px; border: 1px solid rgba(0,0,0,0.06);">
+              ${photosHtml}
+            </div>
           </div>
         `;
         container.appendChild(card);
       });
+    }
+
+    async function uploadSectionPhoto(secIdx, fileInput) {
+      if (!fileInput.files || !fileInput.files[0]) return;
+      const file = fileInput.files[0];
+      showToast('Uploading & optimizing section image...');
+      try {
+        const imgUrl = await uploadImageSmartly(file);
+        if (imgUrl) {
+          if (!currentModalSections[secIdx]) currentModalSections[secIdx] = { title: '', intro: '' };
+          if (!Array.isArray(currentModalSections[secIdx].photos)) {
+            currentModalSections[secIdx].photos = [];
+          }
+          const defaultCaption = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ');
+          currentModalSections[secIdx].photos.push({
+            src: imgUrl,
+            alt: defaultCaption,
+            caption: defaultCaption
+          });
+          renderModalSections();
+          showToast('✓ Image added to section!');
+        }
+      } catch (err) {
+        alert('Image upload failed: ' + err.message);
+      }
+      fileInput.value = '';
+    }
+
+    function promptAddSectionPhoto(secIdx) {
+      const url = prompt('Enter or paste image URL or path (e.g. projects/writing/my-work.jpg):');
+      if (url && url.trim()) {
+        const clean = url.trim();
+        if (!currentModalSections[secIdx]) currentModalSections[secIdx] = { title: '', intro: '' };
+        if (!Array.isArray(currentModalSections[secIdx].photos)) {
+          currentModalSections[secIdx].photos = [];
+        }
+        const caption = prompt('Enter a caption/title for this image (optional):', '') || '';
+        currentModalSections[secIdx].photos.push({
+          src: clean,
+          alt: caption || 'Section photo',
+          caption: caption
+        });
+        renderModalSections();
+        showToast('✓ Image added to section!');
+      }
+    }
+
+    function removeSectionPhoto(secIdx, photoIdx) {
+      if (currentModalSections[secIdx] && Array.isArray(currentModalSections[secIdx].photos)) {
+        currentModalSections[secIdx].photos.splice(photoIdx, 1);
+        renderModalSections();
+        showToast('Photo removed from section.');
+      }
+    }
+
+    function updateSectionPhotoCaption(secIdx, photoIdx, caption) {
+      if (currentModalSections[secIdx] && Array.isArray(currentModalSections[secIdx].photos) && currentModalSections[secIdx].photos[photoIdx]) {
+        currentModalSections[secIdx].photos[photoIdx].caption = caption;
+        currentModalSections[secIdx].photos[photoIdx].alt = caption;
+      }
     }
 
     function addNewProjectSectionRow() {
@@ -3152,18 +3452,20 @@
       const cleanSections = [];
       const sectionCards = document.querySelectorAll('#modalSectionsList .section-accordion-card');
       if (sectionCards.length > 0) {
-        sectionCards.forEach(card => {
+        sectionCards.forEach((card, idx) => {
           const t = (card.querySelector('.section-title-input')?.value || '').trim();
           const intro = (card.querySelector('.section-intro-input')?.value || '').trim();
-          if (t || intro) {
-            cleanSections.push({ title: t, intro: intro });
+          const photos = Array.isArray(currentModalSections[idx]?.photos) ? currentModalSections[idx].photos : [];
+          if (t || intro || photos.length > 0) {
+            cleanSections.push({ title: t, intro: intro, photos: photos });
           }
         });
       } else if (Array.isArray(currentModalSections) && currentModalSections.length > 0) {
         currentModalSections.forEach(s => {
           const t = (s.title || '').trim();
           const intro = (s.intro || '').trim();
-          if (t || intro) cleanSections.push({ title: t, intro: intro });
+          const photos = Array.isArray(s.photos) ? s.photos : [];
+          if (t || intro || photos.length > 0) cleanSections.push({ title: t, intro: intro, photos: photos });
         });
       }
 
