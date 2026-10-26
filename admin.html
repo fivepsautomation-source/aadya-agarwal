@@ -1297,9 +1297,14 @@
               These expandable accordions appear on the website inside the project popup modal under <strong>"Explore the work"</strong>.
             </p>
           </div>
-          <button type="button" onclick="addNewProjectSectionRow()" class="btn-primary" style="margin: 0; padding: 0.45rem 0.95rem; font-size: 0.8rem; background: var(--admin-plum); cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; width: auto;">
-            <span>+ Add New Section</span>
-          </button>
+          <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
+            <button type="button" onclick="addNewProjectSectionRow()" class="btn-primary" style="margin: 0; padding: 0.45rem 0.95rem; font-size: 0.8rem; background: var(--admin-plum); cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; width: auto;">
+              <span>+ Add New Section</span>
+            </button>
+            <button type="button" onclick="resetDefaultSections()" class="btn-secondary" style="margin: 0; padding: 0.45rem 0.85rem; font-size: 0.78rem;" title="Reset back to standard website accordions">
+              <span>🔄 Reset to Default Sections</span>
+            </button>
+          </div>
         </div>
 
         <!-- Sections List Container -->
@@ -1912,7 +1917,7 @@
       if (url === '/api/portfolio/save' && method === 'POST') {
         siteData.portfolio = siteData.portfolio || [];
         if (data.id) {
-          const idx = siteData.portfolio.findIndex(p => p.id === data.id);
+          const idx = siteData.portfolio.findIndex(p => String(p.id) === String(data.id));
           if (idx >= 0) {
             siteData.portfolio[idx] = { ...siteData.portfolio[idx], ...data };
           } else {
@@ -2494,6 +2499,204 @@
       return [];
     }
 
+
+    function getDefaultSectionsForProject(p) {
+      if (!p) return [];
+      const id = Number(p.id);
+      const title = (p.title || '').toLowerCase();
+      const slug = (p.category_slug || '').toLowerCase();
+
+      if (id === 101 || title.includes('robotics') || title.includes('fll') || title.includes('ftc') || slug === 'robotics') {
+        return [
+        {
+                "title": "Autonomous Navigation & Computer-Vision Algorithms",
+                "intro": "Implemented autonomous navigation routines utilizing sensor telemetry, AprilTag detection, and OpenCV vision pipelines to achieve high-precision field localization and game element scoring."
+        },
+        {
+                "title": "Mechanical Architecture & Drive-train Iterations",
+                "intro": "Prototyped lightweight intake mechanisms and multi-stage lift systems using custom 3D-printed brackets and high-torque motor gearboxes engineered for rapid cycle times."
+        },
+        {
+                "title": "STEM Mentorship & Community Outreach",
+                "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access."
+        }
+];
+      }
+
+      if (id === 8 || id === 9 || id === 10 || title.includes('vitals') || title.includes('monivitals') || slug === 'monivitals') {
+        return [
+        {
+                "title": "Community Field Screening & Senior Care Deployment",
+                "intro": "Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families. Optimized font sizing, high-contrast visual indicators, and voice-assisted telemetry readings for senior accessibility."
+        },
+        {
+                "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
+                "intro": "Engineered custom 3D printed housing in Fusion 360 with ergonomic fingertip alignment and optical light baffling. Integrated MAX30102 optical sensor and MLX90614 thermopile over I2C multiplexed bus with low-power sleep state management."
+        },
+        {
+                "title": "Pulse Oximetry Optical Bias Mitigation Research",
+                "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
+        }
+];
+      }
+
+      if (id === 1 || title.includes('buoy') || title.includes('ocean')) {
+        return [
+        {
+                "title": "System architecture and 3M challenge brief",
+                "intro": "A pH sensor, Arduino and servo-operated 3D-printed disk form a closed-loop calcium carbonate dispenser. Next steps include field testing, dispenser calibration, solar power and predictive dosing."
+        },
+        {
+                "title": "Autonomous Closed-Loop Marine Dosing",
+                "intro": "Submersible sensor node constantly samples coastal water acidity. Upon detecting localized acidification events, calibrated alkaline reagent is released to protect marine calcifiers and restore pH balance."
+        }
+];
+      }
+
+      if (id === 4 || id === 2 || title.includes('biochar') || title.includes('isec')) {
+        return [
+        {
+                "title": "IEEE/ISEC 2026 presentation at Princeton University",
+                "intro": "Approved abstract: \u201cComparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.\u201d Presented at the IEEE/ISEC K\u201312 conference at Princeton University."
+        },
+        {
+                "title": "NJWEA & science-fair recognition",
+                "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference."
+        },
+        {
+                "title": "Materials and experimental setup",
+                "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements."
+        },
+        {
+                "title": "Device and filtration design",
+                "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration."
+        },
+        {
+                "title": "Measurements and results",
+                "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
+        }
+];
+      }
+
+      if (id === 3 || title.includes('mit solve') || title.includes('better world')) {
+        return [
+        {
+                "title": "The technical pitch",
+                "intro": "The proposed IoT node would pair water-quality sensors with AI-assisted treatment decisions. River, lake and global measurements inform the model plan; human review, fixed safety limits and decision logs govern its use."
+        },
+        {
+                "title": "On stage and recognition at MIT Media Lab",
+                "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar."
+        }
+];
+      }
+
+      if (id === 101 || title.includes('robotics') || title.includes('fll') || title.includes('ftc') || slug === 'robotics') {
+        return [
+        {
+                "title": "FIRST Tech Challenge \u2014 Lawrenceville (2025\u2013Present)",
+                "intro": "On the Lawrenceville School FTC programming team for the 2026\u20132027 BioBuzz season: developing and refining autonomous and driver-assisted motion control with Pedro Pathing, and building Limelight computer-vision pipelines for AprilTag field localization and real-time intake monitoring. Through FTC community outreach, teaching robotics to 10\u201315 students at a local middle school across three hands-on sessions."
+        },
+        {
+                "title": "FIRST Lego League \u2014 The LeapcoderZ (2020\u20132024)",
+                "intro": "Lead Coder and Innovation Lead for The LeapcoderZ. Award record: Robot Design Award Finalist at the WPI FLL US Open World (June 2024), Robot Design Award at NJ Regionals (2023\u20132024), Breakthrough Award at NJ State (2023\u20132024), and Robot Design Award at NJ Regionals (2022\u20132023). Architected multi-sensor line-tracking, PID gyro stabilization, and modular attachment quick-swaps."
+        },
+        {
+                "title": "PDS Panther Hackathon, Grade 7th \u2013 Best Beginner Hackathon",
+                "intro": "Won Best Beginner Hack at the PDS Panther Hackathon in Grade 7th for \u201cHobbyPals\u201d \u2014 an interactive online platform helping youth pursue creative hobbies while developing healthy screen-time habits. Rapid ideation, front-end interaction flow, and functional web prototype created under hackathon time limits. Delivered technical pitch and live interactive demo to judge panel."
+        }
+];
+      }
+
+      if (id === 14 || title.includes('writing') || slug === 'writing' || slug === 'arts') {
+        return [
+        {
+                "title": "Published writing",
+                "intro": "Essays and poetry recognized by the John Locke Institute and Scholastic Art & Writing Awards, with work published in The Telling Room, Skipping Stones and Poetic Power anthologies, plus science journalism for TechTrek USA."
+        },
+        {
+                "title": "Flute",
+                "intro": "Flutist in Lawrenceville's jazz band and recipient of NJMTA Honors recital recognition."
+        },
+        {
+                "title": "Piano",
+                "intro": "Music-Fest International Rising Talent Festival Grand Prize winner, with a solo recital at Greenfield Hall, Manhattan School of Music."
+        },
+        {
+                "title": "Theater",
+                "intro": "Backstage technical theater work as a stage manager and production assistant, alongside school and community performances."
+        }
+];
+      }
+
+      if (id === 11 || title.includes('hunger') || title.includes('meal')) {
+        return [
+        {
+                "title": "Grassroots Logistics & Youth Mobilization",
+                "intro": "Organized supply collection points across regional schools, managed volunteer shift scheduling, and ensured safe handling and direct delivery of nutritional meals to local food pantries."
+        },
+        {
+                "title": "Annual Holiday Candy & Nutritional Support",
+                "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs."
+        }
+];
+      }
+
+      if (title.includes('senior living') || title.includes('musical companionship')) {
+        return [
+        {
+                "title": "Digital Literacy & Family Connectivity",
+                "intro": "Patiently guided elderly residents through smartphone navigation, FaceTime video calls, accessibility settings, and voice-to-text messaging."
+        },
+        {
+                "title": "Cognitive Music Therapy Recitals",
+                "intro": "Performed melodic classical flute and piano repertoire designed to stimulate memory recall, alleviate anxiety, and bring joy to memory-care elders."
+        }
+];
+      }
+
+      if (id === 13 || title.includes('legislative') || title.includes('civic')) {
+        return [
+        {
+                "title": "Regional Winter Drive Logistics",
+                "intro": "Established secure donation collection bins across Mercer County schools and public libraries, coordinating weekly sorting, sanitization, and packaging."
+        },
+        {
+                "title": "Bipartisan Legislative Commendation",
+                "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families."
+        }
+];
+      }
+
+      if (id === 5 || title.includes('biomedical') || title.includes('aimi') || title.includes('stanford') || slug === 'biomedical') {
+        return [
+        {
+                "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
+                "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 \u2013 June 2027.<br><br>\u2022 Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>\u2022 Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>\u2022 Scheduled to present research at a Stanford Health event in summer 2027."
+        },
+        {
+                "title": "Computational Oncology Research, Mentored Independent Research",
+                "intro": "Research Co-Author | June 2026 \u2013 Present.<br><br>\u2022 Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>\u2022 Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>\u2022 Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal."
+        },
+        {
+                "title": "Biomedical Research Fellow \u2014 Advanced BioResearch Academy, Boston. MA",
+                "intro": "Research Trainee | Fall 2025 \u2013 Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>\u2022 Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>\u2022 Delivered independent research project presentations at the end of each 12-week session.<br>\u2022 Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research."
+        },
+        {
+                "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
+                "intro": "July \u2013 August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>\u2022 Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>\u2022 Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>\u2022 Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>\u2022 Authored a 6-page research paper detailing methodology, analysis, and biological implications."
+        }
+];
+      }
+
+      return [
+        {
+          title: "Project Overview & Methodology",
+          intro: p.desc || "Documented technical research, system architecture, and project milestones."
+        }
+      ];
+    }
+
     // --- "EXPLORE THE WORK" SECTIONS ACCORDION MANAGEMENT ---
     let currentModalSections = [];
 
@@ -2535,11 +2738,11 @@
           </div>
           <div style="margin-bottom: 0.5rem;">
             <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Section Title (Header)</label>
-            <input type="text" class="form-input" value="${escapeHtml(sec.title || '')}" oninput="updateProjectSection(${idx}, 'title', this.value)" placeholder="e.g. Autonomous Navigation & Computer-Vision Algorithms" style="font-size: 0.85rem; padding: 0.45rem 0.75rem; font-weight: 600;">
+            <input type="text" class="form-input section-title-input" value="${escapeHtml(sec.title || '')}" oninput="updateProjectSection(${idx}, 'title', this.value)" placeholder="e.g. Autonomous Navigation & Computer-Vision Algorithms" style="font-size: 0.85rem; padding: 0.45rem 0.75rem; font-weight: 600;">
           </div>
           <div>
             <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Section Description / Intro Content</label>
-            <textarea rows="3" class="form-input" oninput="updateProjectSection(${idx}, 'intro', this.value)" placeholder="Write the details, methodology, research trials, or results..." style="font-size: 0.82rem; padding: 0.45rem 0.75rem; line-height: 1.45;">${escapeHtml(sec.intro || '')}</textarea>
+            <textarea rows="3" class="form-input section-intro-input" oninput="updateProjectSection(${idx}, 'intro', this.value)" placeholder="Write the details, methodology, research trials, or results..." style="font-size: 0.82rem; padding: 0.45rem 0.75rem; line-height: 1.45;">${escapeHtml(sec.intro || '')}</textarea>
           </div>
         `;
         container.appendChild(card);
@@ -2577,6 +2780,20 @@
       currentModalSections[idx] = currentModalSections[targetIdx];
       currentModalSections[targetIdx] = temp;
       renderModalSections();
+    }
+
+    function resetDefaultSections() {
+      const id = document.getElementById('modalProjId').value;
+      const p = (siteData.portfolio || []).find(item => String(item.id) === String(id));
+      if (p) {
+        currentModalSections = getDefaultSectionsForProject(p);
+      } else {
+        currentModalSections = [
+          { title: "Project Overview", intro: document.getElementById('modalProjDesc').value || "" }
+        ];
+      }
+      renderModalSections();
+      showToast('✓ Reset to standard website accordions!');
     }
 
     // --- BADGES / TAGS MANAGEMENT ---
@@ -2866,8 +3083,12 @@
       currentModalBadges = [...loadedBadges];
       renderModalBadges();
 
-      // Load "Explore the work" sections
-      currentModalSections = Array.isArray(p.sections) ? JSON.parse(JSON.stringify(p.sections)) : [];
+      // Load "Explore the work" sections: if custom sections exist, load them; otherwise load canonical defaults
+      if (Array.isArray(p.sections) && p.sections.length > 0) {
+        currentModalSections = JSON.parse(JSON.stringify(p.sections));
+      } else {
+        currentModalSections = getDefaultSectionsForProject(p);
+      }
       renderModalSections();
 
       const delBtn = document.getElementById('btnDeleteModalProject');
@@ -2897,10 +3118,24 @@
       const badge_position = (document.getElementById('modalProjBadgePosition') && document.getElementById('modalProjBadgePosition').value) || 'right';
       const hide_badges = document.getElementById('modalProjHideBadges') ? document.getElementById('modalProjHideBadges').checked : false;
 
-      // Clean sections (ensure title or intro is present)
-      const cleanSections = currentModalSections
-        .map(s => ({ title: (s.title || '').trim(), intro: (s.intro || '').trim() }))
-        .filter(s => s.title || s.intro);
+      // Clean sections: read directly from DOM cards so no user edit is ever missed
+      const cleanSections = [];
+      const sectionCards = document.querySelectorAll('#modalSectionsList .section-accordion-card');
+      if (sectionCards.length > 0) {
+        sectionCards.forEach(card => {
+          const t = (card.querySelector('.section-title-input')?.value || '').trim();
+          const intro = (card.querySelector('.section-intro-input')?.value || '').trim();
+          if (t || intro) {
+            cleanSections.push({ title: t, intro: intro });
+          }
+        });
+      } else if (Array.isArray(currentModalSections) && currentModalSections.length > 0) {
+        currentModalSections.forEach(s => {
+          const t = (s.title || '').trim();
+          const intro = (s.intro || '').trim();
+          if (t || intro) cleanSections.push({ title: t, intro: intro });
+        });
+      }
 
       const existing = (siteData.portfolio || []).find(p => String(p.id) === String(id));
       const sort_order = existing && existing.sort_order !== undefined ? existing.sort_order : ((siteData.portfolio || []).length + 1);
@@ -2923,16 +3158,18 @@
       };
 
       try {
-        await apiRequest('/api/portfolio/save', 'POST', payload);
         if (siteData && Array.isArray(siteData.portfolio)) {
           const pIdx = siteData.portfolio.findIndex(p => String(p.id) === String(payload.id));
           if (pIdx >= 0) siteData.portfolio[pIdx] = { ...siteData.portfolio[pIdx], ...payload };
           else siteData.portfolio.push(payload);
           syncToStorage();
+          renderPortfolioList(siteData.portfolio);
         }
         document.getElementById('projectEditModal').close();
+        showToast(`✓ Project "${payload.title}" saved! Syncing...`);
+        await apiRequest('/api/portfolio/save', 'POST', payload);
         await syncToStorageAndPublish(`Project "${payload.title}"`);
-        loadAllData();
+        renderPortfolioList(siteData.portfolio);
       } catch (e) {
         alert('Failed to save project: ' + e.message);
       }

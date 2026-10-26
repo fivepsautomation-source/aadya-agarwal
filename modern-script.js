@@ -428,7 +428,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: false });
   }
 
+  const existingProjectModalFn = window.openProjectModal;
   window.openProjectModal = function(data) {
+    if (typeof existingProjectModalFn === 'function' && existingProjectModalFn !== window.openProjectModal) {
+      existingProjectModalFn(data);
+      return;
+    }
     if (!modalOverlay) return;
 
     if (modalCategory) modalCategory.textContent = data.category || '';

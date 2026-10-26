@@ -1079,19 +1079,23 @@
 
     // Sections (Explore the work) HTML - Clean text accordions just like Robotics
     let sectionsHtml = '';
-    if (Array.isArray(project.sections) && project.sections.length > 0) {
+    const activeSections = (Array.isArray(project.sections) && project.sections.length > 0)
+      ? project.sections
+      : (project.summary ? [{ title: "Project Overview & Methodology", intro: project.summary }] : []);
+
+    if (activeSections.length > 0) {
       sectionsHtml = `
         <div class="mt-10 space-y-4">
           <h3 class="font-display text-2xl font-bold text-plum">Explore the work</h3>
           <div class="space-y-4">
-            ${project.sections.map((sec, secIdx) => `
+            ${activeSections.map((sec, secIdx) => `
               <details class="group rounded-xl border border-ink/15 bg-white overflow-hidden shadow-xs transition duration-200 open:border-plum/40" ${secIdx === 0 ? 'open' : ''}>
                 <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-display text-lg font-semibold marker:hidden sm:px-6 [&::-webkit-details-marker]:hidden hover:text-plum transition select-none">
-                  <span>${sec.title}</span>
+                  <span>${sec.title || 'Project Section'}</span>
                   <span aria-hidden="true" class="text-2xl leading-none text-[#ba1f43] transition-transform duration-200 group-open:rotate-45 font-light">+</span>
                 </summary>
                 <div class="border-t border-ink/10 px-5 pb-6 pt-5 sm:px-6 bg-[#FAFBF9]">
-                  <p class="max-w-3xl leading-relaxed text-ink/75 text-sm sm:text-base">${sec.intro}</p>
+                  <p class="max-w-3xl leading-relaxed text-ink/75 text-sm sm:text-base">${sec.intro || ''}</p>
                 </div>
               </details>
             `).join('')}
@@ -1285,7 +1289,7 @@
         if (Array.isArray(item.highlights)) {
           PROJECTS_DATA[idx].technicalFocus = item.highlights;
         }
-        if (Array.isArray(item.sections)) {
+        if (Array.isArray(item.sections) && item.sections.length > 0) {
           PROJECTS_DATA[idx].sections = item.sections;
         }
         if (Array.isArray(item.attachments)) {
@@ -1342,7 +1346,7 @@
 
       if (matchedIdx >= 0) {
         project = JSON.parse(JSON.stringify(PROJECTS_DATA[matchedIdx]));
-        if (identifier.sections && Array.isArray(identifier.sections)) {
+        if (identifier.sections && Array.isArray(identifier.sections) && identifier.sections.length > 0) {
           project.sections = identifier.sections;
         }
         if (identifier.hide_badges) {
