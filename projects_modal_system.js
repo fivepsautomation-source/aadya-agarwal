@@ -1285,16 +1285,18 @@
         if (Array.isArray(item.highlights)) {
           PROJECTS_DATA[idx].technicalFocus = item.highlights;
         }
-        if (Array.isArray(item.sections) && item.sections.length > 0) {
+        if (Array.isArray(item.sections)) {
           PROJECTS_DATA[idx].sections = item.sections;
         }
-        if (Array.isArray(item.attachments) && item.attachments.length > 0) {
+        if (Array.isArray(item.attachments)) {
           PROJECTS_DATA[idx].attachments = item.attachments;
         }
         if (Array.isArray(item.videos)) {
           PROJECTS_DATA[idx].videos = item.videos;
         }
-        if (Array.isArray(item.badges)) {
+        if (item.hide_badges) {
+          PROJECTS_DATA[idx].badges = [];
+        } else if (Array.isArray(item.badges)) {
           PROJECTS_DATA[idx].badges = item.badges.map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' });
         }
         if (item.gallerySubtitle) {
@@ -1340,8 +1342,13 @@
 
       if (matchedIdx >= 0) {
         project = JSON.parse(JSON.stringify(PROJECTS_DATA[matchedIdx]));
-        if (identifier.sections && Array.isArray(identifier.sections) && identifier.sections.length > 0) {
+        if (identifier.sections && Array.isArray(identifier.sections)) {
           project.sections = identifier.sections;
+        }
+        if (identifier.hide_badges) {
+          project.badges = [];
+        } else if (Array.isArray(identifier.badges)) {
+          project.badges = identifier.badges.map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' });
         }
         if (identifier.attachments && Array.isArray(identifier.attachments) && identifier.attachments.length > 0) {
           project.attachments = identifier.attachments;

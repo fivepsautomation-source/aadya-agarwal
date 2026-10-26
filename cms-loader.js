@@ -290,7 +290,10 @@
           ].filter(Boolean).join(' ').toLowerCase().replace(/[^a-z0-9]+/g, '');
 
           const relevantBadges = [];
-          if (Array.isArray(p.badges) && p.badges.length > 0) {
+          if (p.hide_badges) {
+            // Explicitly hidden: 0 badges
+          } else if (Array.isArray(p.badges)) {
+            // Explicit badges array configured by admin (if empty, exactly 0 badges shown)
             p.badges.forEach(b => {
               const label = typeof b === 'object' ? (b.label || '') : String(b || '');
               if (label && !relevantBadges.includes(label)) {

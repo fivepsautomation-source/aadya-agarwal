@@ -27,6 +27,8 @@ def dump_content():
             'highlights': json.loads(row['highlights_json']) if row['highlights_json'] else [],
             'tags': json.loads(row['tags_json']) if row['tags_json'] else [],
             'badges': json.loads(row['badges_json']) if row['badges_json'] else [],
+            'sections': json.loads(row['sections_json']) if ('sections_json' in row.keys() and row['sections_json']) else [],
+            'hide_badges': bool(row['hide_badges']) if ('hide_badges' in row.keys() and row['hide_badges']) else False,
             'is_robotics': bool(row['is_robotics']),
             'sort_order': row['sort_order']
         })
