@@ -994,6 +994,26 @@
       ],
       "badge_position": "right",
       "sort_order": 14
+    },
+    {
+      "id": 1792997124021,
+      "title": "2nd blank tile",
+      "category_slug": "community",
+      "category_name": "School & Community",
+      "img": "assets/uploads/1792997085606_20260710_121848.jpg",
+      "images": [
+        "assets/uploads/1792997085606_20260710_121848.jpg"
+      ],
+      "desc": "project description",
+      "highlights": [
+        "key highliths"
+      ],
+      "tags": [],
+      "badges": [],
+      "hide_badges": false,
+      "sections": [],
+      "badge_position": "right",
+      "sort_order": 15
     }
   ],
   "documents": [
