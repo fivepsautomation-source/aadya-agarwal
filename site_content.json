@@ -196,7 +196,15 @@
           "photos": []
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "videos": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/watch?v=ELyxcPwMp3M",
+          "title": "NJWEA Stockholm Junior Water Prize Special Award acceptance speech",
+          "poster": ""
+        }
+      ]
     },
     {
       "id": 2,
@@ -263,7 +271,15 @@
           "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "videos": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/watch?v=ELyxcPwMp3M",
+          "title": "NJWEA Stockholm Junior Water Prize Special Award acceptance speech",
+          "poster": ""
+        }
+      ]
     },
     {
       "id": 1,
@@ -306,7 +322,15 @@
           "photos": []
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "videos": [
+        {
+          "type": "local",
+          "src": "projects/videos/3m-buoy-preview.mp4",
+          "title": "3M Young Scientist Challenge submission",
+          "poster": "projects/ocean-project-presentation.jpg"
+        }
+      ]
     },
     {
       "id": 5,

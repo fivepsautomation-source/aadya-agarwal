@@ -53,6 +53,9 @@ def init_database():
         highlights_json TEXT NOT NULL,
         tags_json TEXT NOT NULL,
         badges_json TEXT NOT NULL,
+        sections_json TEXT DEFAULT '[]',
+        videos_json TEXT DEFAULT '[]',
+        hide_badges INTEGER DEFAULT 0,
         is_robotics INTEGER DEFAULT 0,
         sort_order INTEGER DEFAULT 0
     )

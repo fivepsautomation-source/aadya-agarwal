@@ -141,6 +141,7 @@ class AdminCMSHandler(http.server.SimpleHTTPRequestHandler):
                     'tags': json.loads(row['tags_json']) if row['tags_json'] else [],
                     'badges': json.loads(row['badges_json']) if row['badges_json'] else [],
                     'sections': json.loads(row['sections_json']) if ('sections_json' in row.keys() and row['sections_json']) else [],
+                    'videos': json.loads(row['videos_json']) if ('videos_json' in row.keys() and row['videos_json']) else [],
                     'hide_badges': bool(row['hide_badges']) if ('hide_badges' in row.keys() and row['hide_badges']) else False,
                     'is_robotics': bool(row['is_robotics']),
                     'sort_order': row['sort_order']
@@ -304,6 +305,7 @@ class AdminCMSHandler(http.server.SimpleHTTPRequestHandler):
             tags = json.dumps(data.get('tags', []))
             badges = json.dumps(data.get('badges', []))
             sections = json.dumps(data.get('sections', []))
+            videos = json.dumps(data.get('videos', []))
             hide_badges = 1 if data.get('hide_badges') else 0
             is_rob = 1 if cat_slug == 'robotics' else 0
             sort_order = int(data.get('sort_order', 0))
@@ -313,14 +315,14 @@ class AdminCMSHandler(http.server.SimpleHTTPRequestHandler):
             if item_id:
                 c.execute('''
                 UPDATE portfolio_items 
-                SET title=?, category_slug=?, category_name=?, img=?, images_json=?, description=?, highlights_json=?, tags_json=?, badges_json=?, sections_json=?, hide_badges=?, is_robotics=?, sort_order=?
+                SET title=?, category_slug=?, category_name=?, img=?, images_json=?, description=?, highlights_json=?, tags_json=?, badges_json=?, sections_json=?, videos_json=?, hide_badges=?, is_robotics=?, sort_order=?
                 WHERE id=?
-                ''', (title, cat_slug, cat_name, img, images, desc, highlights, tags, badges, sections, hide_badges, is_rob, sort_order, item_id))
+                ''', (title, cat_slug, cat_name, img, images, desc, highlights, tags, badges, sections, videos, hide_badges, is_rob, sort_order, item_id))
             else:
                 c.execute('''
-                INSERT INTO portfolio_items (title, category_slug, category_name, img, images_json, description, highlights_json, tags_json, badges_json, sections_json, hide_badges, is_robotics, sort_order)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ''', (title, cat_slug, cat_name, img, images, desc, highlights, tags, badges, sections, hide_badges, is_rob, sort_order))
+                INSERT INTO portfolio_items (title, category_slug, category_name, img, images_json, description, highlights_json, tags_json, badges_json, sections_json, videos_json, hide_badges, is_robotics, sort_order)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (title, cat_slug, cat_name, img, images, desc, highlights, tags, badges, sections, videos, hide_badges, is_rob, sort_order))
                 item_id = c.lastrowid
             conn.commit()
             conn.close()

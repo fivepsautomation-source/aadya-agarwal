@@ -1313,6 +1313,35 @@
         </div>
       </div>
 
+      <!-- SECTION: PROJECT VIDEOS (Featured Videos & YouTube Recordings) -->
+      <div class="form-group" style="background: #fbfbfc; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(59,18,45,0.18); margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <label class="form-label" style="margin: 0; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span>🎬 Featured Videos &amp; Recordings</span>
+              <span id="modalVideosCountBadge" style="background: var(--admin-berry); color: #fff; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.72rem; font-weight: 800;">0 Videos</span>
+            </label>
+            <p style="font-size: 0.76rem; color: rgba(15,15,18,0.6); margin: 0.2rem 0 0;">
+              Add YouTube links or video files. These appear inside the project popup modal on the website under <strong>"Featured Video"</strong>.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
+            <button type="button" onclick="addNewProjectVideoRow()" class="btn-primary" style="margin: 0; padding: 0.45rem 0.95rem; font-size: 0.8rem; background: var(--admin-plum); cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; width: auto;">
+              <span>+ Add Video</span>
+            </button>
+            <label class="btn-secondary" style="margin: 0; padding: 0.45rem 0.85rem; font-size: 0.78rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem;" title="Upload MP4 or WebM video file">
+              <span>📤 Upload Video File (.mp4)</span>
+              <input type="file" accept="video/mp4,video/webm,video/quicktime" style="display: none;" onchange="uploadProjectVideoFile(this)">
+            </label>
+          </div>
+        </div>
+
+        <!-- Videos List Container -->
+        <div id="modalVideosList" style="display: flex; flex-direction: column; gap: 0.85rem; max-height: 420px; overflow-y: auto; padding-right: 4px;">
+          <!-- Dynamically rendered video cards -->
+        </div>
+      </div>
+
       <!-- SECTION: IMAGE BADGES / TAGS (Displayed over the image) -->
       <div class="form-group" style="background: #faf7f9; padding: 1.25rem; border-radius: 14px; border: 1px solid rgba(186,31,67,0.22); margin-bottom: 1.25rem;">
         <label class="form-label" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.35rem;">
@@ -3126,6 +3155,312 @@
       showToast('✓ Reset to standard website accordions!');
     }
 
+    // --- FEATURED VIDEOS & RECORDINGS MANAGEMENT ---
+    let currentModalVideos = [];
+
+    function extractYouTubeId(urlOrId) {
+      if (!urlOrId || typeof urlOrId !== 'string') return '';
+      const clean = urlOrId.trim();
+      const match = clean.match(/(?:youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|shorts\/)([a-zA-Z0-9_-]{11})/);
+      if (match && match[1]) return match[1];
+      if (/^[a-zA-Z0-9_-]{11}$/.test(clean)) return clean;
+      return '';
+    }
+
+    function getDefaultVideosForProject(p) {
+      if (!p) return [];
+      if (Array.isArray(p.videos) && p.videos.length > 0) {
+        return JSON.parse(JSON.stringify(p.videos));
+      }
+      const id = Number(p.id);
+      const title = (p.title || '').toLowerCase();
+      if (id === 1 || title.includes('ocean') || title.includes('buoy')) {
+        return [
+          {
+            type: 'local',
+            src: 'projects/videos/3m-buoy-preview.mp4',
+            title: '3M Young Scientist Challenge submission',
+            poster: 'projects/ocean-project-presentation.jpg'
+          }
+        ];
+      }
+      if (id === 2 || id === 4 || (title.includes('biochar') && !title.includes('music'))) {
+        return [
+          {
+            type: 'youtube',
+            src: 'https://www.youtube.com/watch?v=ELyxcPwMp3M',
+            title: 'NJWEA Stockholm Junior Water Prize Special Award acceptance speech',
+            poster: ''
+          }
+        ];
+      }
+      if (id === 1792918333524 || title.includes('music') || title.includes('recital') || title.includes('theater')) {
+        return [
+          {
+            type: 'local',
+            src: 'projects/videos/music-performance-preview.mp4',
+            title: 'Flute & Piano Recital Performance',
+            poster: 'assets/uploads/1792918305114_Aadya_Flute_Pic1.png',
+            is_placeholder: true
+          }
+        ];
+      }
+      return [];
+    }
+
+    function renderModalVideos() {
+      const container = document.getElementById('modalVideosList');
+      const badge = document.getElementById('modalVideosCountBadge');
+      if (badge) badge.textContent = `${currentModalVideos.length} ${currentModalVideos.length === 1 ? 'Video' : 'Videos'}`;
+      if (!container) return;
+      container.innerHTML = '';
+
+      if (!currentModalVideos.length) {
+        container.innerHTML = `
+          <div style="padding: 1.25rem; text-align: center; background: #ffffff; border-radius: 10px; border: 1px dashed rgba(59,18,45,0.2); color: rgba(15,15,18,0.55); font-size: 0.82rem;">
+            No videos added yet for this project. Click <strong>"+ Add Video"</strong> or <strong>"📤 Upload Video File (.mp4)"</strong> above to attach a recording.
+          </div>
+        `;
+        return;
+      }
+
+      currentModalVideos.forEach((vid, idx) => {
+        const card = document.createElement('div');
+        card.className = 'video-entry-card';
+        card.style.cssText = 'background: #ffffff; border-radius: 10px; border: 1px solid rgba(59,18,45,0.15); padding: 0.85rem 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.03); margin-bottom: 0.5rem;';
+
+        const isFirst = (idx === 0);
+        const isLast = (idx === currentModalVideos.length - 1);
+        const vType = vid.type || (vid.src && (vid.src.endsWith('.mp4') || vid.src.endsWith('.webm') || vid.src.includes('/videos/')) ? 'local' : 'youtube');
+        const vSrc = vid.src || '';
+        const vTitle = vid.title || '';
+        const vPoster = vid.poster || '';
+        const ytId = extractYouTubeId(vSrc);
+
+        let previewHtml = '';
+        if (ytId) {
+          previewHtml = `
+            <div style="margin-top: 0.65rem; display: flex; align-items: center; gap: 0.75rem; background: #0f0f12; border-radius: 8px; padding: 0.5rem 0.75rem; color: #fff;">
+              <img src="https://img.youtube.com/vi/${ytId}/mqdefault.jpg" style="width: 72px; height: 42px; object-fit: cover; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);" onerror="this.src='assets/logo.png'">
+              <div style="flex: 1; min-width: 0;">
+                <div style="font-size: 0.76rem; font-weight: 700; color: #ff334b; text-transform: uppercase; letter-spacing: 0.05em;">YouTube Video Detected</div>
+                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.7); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">ID: ${ytId}</div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=${ytId}" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 700; color: #fff; background: rgba(255,255,255,0.18); padding: 0.35rem 0.65rem; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;">
+                <span>Watch on YouTube ↗</span>
+              </a>
+            </div>
+          `;
+        } else if (vSrc) {
+          previewHtml = `
+            <div style="margin-top: 0.65rem; display: flex; align-items: center; gap: 0.75rem; background: #faf9f7; border: 1px solid rgba(59,18,45,0.12); border-radius: 8px; padding: 0.5rem 0.75rem;">
+              <span style="font-size: 1.2rem;">🎬</span>
+              <div style="flex: 1; min-width: 0;">
+                <div style="font-size: 0.76rem; font-weight: 700; color: var(--admin-plum);">Direct Video File</div>
+                <div style="font-size: 0.72rem; color: rgba(15,15,18,0.6); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(vSrc)}</div>
+              </div>
+              <a href="${escapeHtml(vSrc)}" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 700; color: var(--admin-berry); background: rgba(186,31,67,0.08); padding: 0.35rem 0.65rem; border-radius: 6px; text-decoration: none;">
+                <span>Open Video Link ↗</span>
+              </a>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 6px; background: rgba(186,31,67,0.1); font-size: 0.72rem; font-weight: 800; color: var(--admin-berry);">🎬 #${idx + 1}</span>
+              <span style="font-size: 0.82rem; font-weight: 700; color: var(--admin-plum);">Video Recording ${idx + 1}</span>
+              <span style="font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px; background: ${vType === 'youtube' ? 'rgba(255,0,0,0.1)' : 'rgba(59,18,45,0.08)'}; color: ${vType === 'youtube' ? '#c00' : 'var(--admin-plum)'}; text-transform: uppercase;">${vType === 'youtube' ? 'YouTube' : 'Direct MP4'}</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <button type="button" onclick="moveProjectVideo(${idx}, -1)" ${isFirst ? 'disabled' : ''} class="btn-icon-order" title="Move Video Up">▲</button>
+              <button type="button" onclick="moveProjectVideo(${idx}, 1)" ${isLast ? 'disabled' : ''} class="btn-icon-order" title="Move Video Down">▼</button>
+              <button type="button" onclick="removeProjectVideo(${idx})" class="btn-danger" style="padding: 0.25rem 0.6rem; font-size: 0.72rem; margin-left: 0.35rem;" title="Delete this video">🗑️ Delete</button>
+            </div>
+          </div>
+
+          <div class="grid-2col" style="gap: 0.75rem; margin-bottom: 0.5rem;">
+            <div>
+              <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Video Source Type</label>
+              <select class="form-input video-type-select" onchange="updateProjectVideoField(${idx}, 'type', this.value); renderModalVideos();" style="font-size: 0.82rem; padding: 0.45rem 0.75rem;">
+                <option value="youtube" ${vType === 'youtube' ? 'selected' : ''}>YouTube Video (Link or ID)</option>
+                <option value="local" ${vType === 'local' ? 'selected' : ''}>Direct Video URL / MP4 File</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Video Title / Label</label>
+              <input type="text" class="form-input video-title-input" value="${escapeHtml(vTitle)}" oninput="updateProjectVideoField(${idx}, 'title', this.value)" placeholder="e.g. 3M Young Scientist Challenge submission" style="font-size: 0.82rem; padding: 0.45rem 0.75rem;">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 0.5rem;">
+            <label class="form-label" style="font-size: 0.75rem; margin-bottom: 0.25rem;">
+              ${vType === 'youtube' ? 'YouTube Video URL or Video ID' : 'Direct Video URL or Relative Path (.mp4 / .webm)'}
+            </label>
+            <div style="display: flex; gap: 0.45rem;">
+              <input type="text" class="form-input video-src-input" value="${escapeHtml(vSrc)}" oninput="updateProjectVideoField(${idx}, 'src', this.value)" placeholder="${vType === 'youtube' ? 'https://www.youtube.com/watch?v=... or youtu.be/...' : 'projects/videos/my-video.mp4 or https://...'}" style="font-size: 0.82rem; padding: 0.45rem 0.75rem; font-family: 'JetBrains Mono', monospace;">
+              <button type="button" onclick="promptPasteVideoUrl(${idx})" class="btn-secondary" style="padding: 0.45rem 0.75rem; font-size: 0.75rem; white-space: nowrap;">📋 Paste</button>
+            </div>
+          </div>
+
+          <!-- Video Poster / Thumbnail Image -->
+          <div style="margin-top: 0.5rem; background: #faf8f6; border-radius: 8px; padding: 0.6rem 0.75rem; border: 1px solid rgba(59,18,45,0.08);">
+            <label class="form-label" style="font-size: 0.72rem; margin-bottom: 0.25rem; display: flex; align-items: center; justify-content: space-between;">
+              <span>Video Poster / Preview Image (Optional)</span>
+              <span style="font-size: 0.68rem; color: rgba(15,15,18,0.5);">Shown before video plays</span>
+            </label>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              ${vPoster ? `<img src="${getResolvedImageSrc(vPoster)}" style="width: 44px; height: 32px; object-fit: cover; border-radius: 4px; border: 1px solid rgba(0,0,0,0.15);" onerror="this.src='assets/logo.png'">` : ''}
+              <input type="text" class="form-input video-poster-input" value="${escapeHtml(vPoster)}" oninput="updateProjectVideoField(${idx}, 'poster', this.value)" placeholder="e.g. projects/ocean-project-presentation.jpg" style="font-size: 0.78rem; padding: 0.35rem 0.65rem; flex: 1;">
+              <label class="btn-primary" style="margin: 0; padding: 0.35rem 0.75rem; font-size: 0.75rem; cursor: pointer; background: var(--admin-plum); display: inline-flex; align-items: center; gap: 0.25rem; white-space: nowrap;">
+                <span>📁 Upload Poster</span>
+                <input type="file" accept="image/*" style="display: none;" onchange="uploadVideoPoster(${idx}, this)">
+              </label>
+            </div>
+          </div>
+
+          ${previewHtml}
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function addNewProjectVideoRow() {
+      currentModalVideos.push({
+        type: 'youtube',
+        src: '',
+        title: '',
+        poster: ''
+      });
+      renderModalVideos();
+      setTimeout(() => {
+        const inputs = document.querySelectorAll('#modalVideosList .video-src-input');
+        if (inputs.length > 0) inputs[inputs.length - 1].focus();
+      }, 50);
+    }
+
+    function removeProjectVideo(idx) {
+      if (idx >= 0 && idx < currentModalVideos.length) {
+        currentModalVideos.splice(idx, 1);
+        renderModalVideos();
+        showToast('Video removed.');
+      }
+    }
+
+    function moveProjectVideo(idx, dir) {
+      const target = idx + dir;
+      if (target < 0 || target >= currentModalVideos.length) return;
+      const temp = currentModalVideos[idx];
+      currentModalVideos[idx] = currentModalVideos[target];
+      currentModalVideos[target] = temp;
+      renderModalVideos();
+    }
+
+    function updateProjectVideoField(idx, field, val) {
+      if (currentModalVideos[idx]) {
+        currentModalVideos[idx][field] = val;
+        if (field === 'src') {
+          const isYt = val.includes('youtube.com') || val.includes('youtu.be') || /^[a-zA-Z0-9_-]{11}$/.test(val.trim());
+          if (isYt && currentModalVideos[idx].type !== 'youtube') {
+            currentModalVideos[idx].type = 'youtube';
+            renderModalVideos();
+          }
+        }
+      }
+    }
+
+    async function promptPasteVideoUrl(idx) {
+      try {
+        const text = await navigator.clipboard.readText();
+        if (text && text.trim()) {
+          updateProjectVideoField(idx, 'src', text.trim());
+          renderModalVideos();
+          showToast('Video URL pasted from clipboard!');
+        } else {
+          const manual = prompt('Enter or paste video URL / YouTube link:');
+          if (manual && manual.trim()) {
+            updateProjectVideoField(idx, 'src', manual.trim());
+            renderModalVideos();
+          }
+        }
+      } catch(e) {
+        const manual = prompt('Enter or paste video URL / YouTube link:');
+        if (manual && manual.trim()) {
+          updateProjectVideoField(idx, 'src', manual.trim());
+          renderModalVideos();
+        }
+      }
+    }
+
+    async function uploadVideoPoster(idx, fileInput) {
+      if (!fileInput.files || !fileInput.files.length) return;
+      const file = fileInput.files[0];
+      showToast('Uploading video poster image...');
+      try {
+        const imgUrl = await uploadImageSmartly(file);
+        if (imgUrl && currentModalVideos[idx]) {
+          currentModalVideos[idx].poster = imgUrl;
+          renderModalVideos();
+          showToast('✓ Video poster uploaded!');
+        }
+      } catch(e) {
+        alert('Failed to upload poster: ' + e.message);
+      }
+      fileInput.value = '';
+    }
+
+    async function uploadProjectVideoFile(fileInput) {
+      if (!fileInput.files || !fileInput.files.length) return;
+      const file = fileInput.files[0];
+      if (file.size > 25 * 1024 * 1024) {
+        alert('Video file is larger than 25MB. For large videos, we strongly recommend uploading to YouTube and pasting the unlisted/public YouTube link here for instant global HD streaming.');
+      }
+      showToast(`Uploading video "${file.name}"...`);
+      try {
+        const rawB64 = await readFileAsDataUrl(file);
+        const base64Data = rawB64.includes(',') ? rawB64.split(',')[1] : rawB64;
+        const cleanName = (file.name || 'video.mp4').replace(/[^a-zA-Z0-9._-]/g, '_');
+        const filename = `${Date.now()}_${cleanName}`;
+        const path = `assets/uploads/${filename}`;
+
+        try {
+          localStorage.setItem('aadya_preview_' + path, rawB64);
+          sessionStorage.setItem('aadya_preview_' + path, rawB64);
+        } catch(err) {}
+
+        const owner = 'minakshi2517';
+        const repo = 'aadyaagarwal';
+        const storedToken = localStorage.getItem('aadya_github_token');
+        const activeToken = (storedToken && (storedToken.startsWith('ghp_') || storedToken.startsWith('gho_'))) ? storedToken : DEFAULT_GH_TOKEN;
+
+        const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${activeToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: `Upload project video ${filename} [skip ci]`,
+            content: base64Data
+          })
+        });
+
+        currentModalVideos.push({
+          type: 'local',
+          src: path,
+          title: file.name.replace(/\.[^/.]+$/, ''),
+          poster: ''
+        });
+        renderModalVideos();
+        showToast(`✓ Video "${file.name}" added to project!`);
+      } catch(e) {
+        alert('Video upload error: ' + e.message);
+      }
+      fileInput.value = '';
+    }
+
     // --- BADGES / TAGS MANAGEMENT ---
     function renderModalBadges() {
       const container = document.getElementById('modalBadgesList');
@@ -3267,6 +3602,9 @@
               </div>`
             : `<div style="margin-top: 5px;"><span style="font-size: 9px; font-weight: 700; color: rgba(15,15,18,0.4);">No tags (0 tags)</span></div>`);
 
+        const pVids = Array.isArray(p.videos) ? p.videos : getDefaultVideosForProject(p);
+        const vidCount = pVids.filter(v => v && v.src && v.src.trim()).length;
+
         row.innerHTML = `
           <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
             <div style="display: flex; flex-direction: column; gap: 3px; margin-right: 10px;">
@@ -3277,7 +3615,7 @@
             <img src="${getResolvedImageSrc(p.img || 'assets/logo.png')}" class="item-thumb-micro" onerror="smartImageFallback(this, '${p.img || ''}')">
             <div class="item-meta-col">
               <div class="item-meta-title">${p.title}</div>
-              <div class="item-meta-subtitle">${p.category_name} &bull; <strong style="color: var(--admin-berry);">${photoCount} Photos in Gallery</strong></div>
+              <div class="item-meta-subtitle">${p.category_name} &bull; <strong style="color: var(--admin-berry);">${photoCount} Photos in Gallery</strong>${vidCount > 0 ? ` &bull; <strong style="color: #c00;">🎬 ${vidCount} Video${vidCount > 1 ? 's' : ''}</strong>` : ''}</div>
               ${badgesHtml}
             </div>
           </div>
@@ -3357,6 +3695,7 @@
       currentModalGalleryImages = [];
       currentModalBadges = [];
       currentModalSections = [];
+      currentModalVideos = [];
       const hideEl = document.getElementById('modalProjHideBadges');
       if (hideEl) hideEl.checked = false;
       const badgePosEl = document.getElementById('modalProjBadgePosition');
@@ -3364,6 +3703,7 @@
       renderModalGallery();
       renderModalBadges();
       renderModalSections();
+      renderModalVideos();
       const delBtn = document.getElementById('btnDeleteModalProject');
       if (delBtn) delBtn.style.display = 'none';
 
@@ -3421,6 +3761,10 @@
       }
       renderModalSections();
 
+      // Load Featured Videos: if custom videos exist, load them; otherwise load canonical defaults
+      currentModalVideos = getDefaultVideosForProject(p);
+      renderModalVideos();
+
       const delBtn = document.getElementById('btnDeleteModalProject');
       if (delBtn) delBtn.style.display = 'inline-flex';
 
@@ -3469,10 +3813,37 @@
         });
       }
 
+      // Clean videos: read directly from DOM cards so no user edit is ever missed
+      const cleanVideos = [];
+      const videoCards = document.querySelectorAll('#modalVideosList .video-entry-card');
+      if (videoCards.length > 0) {
+        videoCards.forEach(card => {
+          const type = (card.querySelector('.video-type-select')?.value || 'youtube').trim();
+          let src = (card.querySelector('.video-src-input')?.value || '').trim();
+          const title = (card.querySelector('.video-title-input')?.value || '').trim();
+          const poster = (card.querySelector('.video-poster-input')?.value || '').trim();
+          if (src) {
+            cleanVideos.push({ type, src, title, poster });
+          }
+        });
+      } else if (Array.isArray(currentModalVideos) && currentModalVideos.length > 0) {
+        currentModalVideos.forEach(v => {
+          if (v && v.src && v.src.trim()) {
+            cleanVideos.push({
+              type: v.type || 'youtube',
+              src: v.src.trim(),
+              title: (v.title || '').trim(),
+              poster: (v.poster || '').trim()
+            });
+          }
+        });
+      }
+
       const existing = (siteData.portfolio || []).find(p => String(p.id) === String(id));
       const sort_order = existing && existing.sort_order !== undefined ? existing.sort_order : ((siteData.portfolio || []).length + 1);
 
       const payload = {
+        ...(existing || {}),
         id: id ? parseInt(id) : Date.now(),
         title,
         category_slug,
@@ -3485,6 +3856,7 @@
         badges: currentModalBadges,
         hide_badges: hide_badges,
         sections: cleanSections,
+        videos: cleanVideos,
         badge_position,
         sort_order
       };

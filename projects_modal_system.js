@@ -1932,7 +1932,7 @@
                 const isYouTube = vid.type === 'youtube' || (!vid.src.endsWith('.mp4') && !vid.src.endsWith('.mov') && !vid.src.endsWith('.webm') && !vid.src.includes('/'));
 
                 if (isYouTube) {
-                  const ytId = vid.src.replace(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)/, '').split(/[^a-zA-Z0-9_-]/)[0];
+                  const ytId = vid.src.replace(/^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|shorts\/)/, '').split(/[^a-zA-Z0-9_-]/)[0];
                   return `
                     <div class="overflow-hidden rounded-2xl border border-ink/15 bg-black shadow-lg">
                       <div class="relative aspect-video w-full bg-black">
@@ -2295,7 +2295,7 @@
       }
     }
 
-    if (project && (!Array.isArray(project.videos) || project.videos.length === 0)) {
+    if (project && !Array.isArray(project.videos)) {
       if (project.title && (project.title.toLowerCase().includes('ocean') || project.title.toLowerCase().includes('buoy'))) {
         project.videos = [
           {
