@@ -288,7 +288,7 @@
             link_url: p.link_url || p.article_url || '',
             img: coverImg,
             images: galleryImgs,
-            videos: Array.isArray(p.videos) ? p.videos : [],
+            videos: (Array.isArray(p.videos) && p.videos.length > 0) ? p.videos : ((p.title && p.title.toLowerCase().includes('ocean')) ? [{ type: 'local', src: 'projects/videos/3m-buoy-preview.mp4', title: '3M Young Scientist Challenge Submission Video', poster: 'projects/ocean-project-presentation.jpg' }] : []),
             desc: p.desc,
             highlights: p.highlights || [],
             tags: p.tags || [],

@@ -2063,7 +2063,7 @@
         if (Array.isArray(item.attachments)) {
           PROJECTS_DATA[idx].attachments = item.attachments;
         }
-        if (Array.isArray(item.videos)) {
+        if (Array.isArray(item.videos) && item.videos.length > 0) {
           PROJECTS_DATA[idx].videos = item.videos;
         }
         if (item.hide_badges) {
@@ -2145,7 +2145,7 @@
         if (Array.isArray(identifier.images) && identifier.images.length > 0) {
           project.gallery = identifier.images.map(img => typeof img === 'string' ? { src: img, alt: project.title, caption: project.title } : img);
         }
-        if (Array.isArray(identifier.videos)) {
+        if (Array.isArray(identifier.videos) && identifier.videos.length > 0) {
           project.videos = identifier.videos;
         }
         if (identifier.link_url) {
@@ -2242,6 +2242,19 @@
             project.badges = cmsItem.badges.map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' });
           }
         }
+      }
+    }
+
+    if (project && (!Array.isArray(project.videos) || project.videos.length === 0)) {
+      if (project.title && (project.title.toLowerCase().includes('ocean') || project.title.toLowerCase().includes('buoy'))) {
+        project.videos = [
+          {
+            type: 'local',
+            src: 'projects/videos/3m-buoy-preview.mp4',
+            title: '3M Young Scientist Challenge Submission Video',
+            poster: 'projects/ocean-project-presentation.jpg'
+          }
+        ];
       }
     }
 

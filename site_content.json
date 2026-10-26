@@ -298,7 +298,15 @@
           "intro": "Submersible sensor node constantly samples coastal water acidity. Upon detecting localized acidification events, calibrated alkaline reagent is released to protect marine calcifiers and restore pH balance."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "videos": [
+        {
+          "type": "local",
+          "src": "projects/videos/3m-buoy-preview.mp4",
+          "title": "3M Young Scientist Challenge Submission Video",
+          "poster": "projects/ocean-project-presentation.jpg"
+        }
+      ]
     },
     {
       "id": 8,
