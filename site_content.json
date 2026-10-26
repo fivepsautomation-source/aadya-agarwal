@@ -311,8 +311,9 @@
         "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
         "assets/uploads/1792919829384_University_Lecture_on_Fluorescent_Microscopy.png"
       ],
-      "desc": "Research and Training Experience\n\n1. Molecular and Cellular Biology — Coursework and Wet-Lab Training\nCompleted a 24-week molecular and cellular biology program with Professor Sam Kunes of Harvard University, followed by three weeks of summer wet-lab training. Studied Alzheimer’s disease, molecular mechanisms, experimental design, controls, and laboratory methods.\n\n2. Computational Biology and Cancer Research — Independent Projects\n\nConducting computational research to investigate cancer biology and develop testable hypotheses:\n\nSingle-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\nCancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\nCervical cancer: Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\n3. Stanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
+      "desc": "1. Molecular and Cellular Biology — Coursework and Wet-Lab Training\n\n2. Computational Biology and Cancer Research — Independent Projects\n\n3. Conducting computational research to investigate cancer biology and develop testable hypotheses:\n\n4. Independent Biology and AI project - Single-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\n5. Independent Math and Cancer Biology Project - Cancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\n6) Mentor Led Cervical cancer Research Prokect : Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\n3. Stanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
       "highlights": [
+        "Studied Alzheimer’s disease, molecular mechanisms, experimental design, controls, and laboratory methods in Wet Lab at Bioresearch Academy",
         "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
         "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
         "Bioinformatics Tools: AutoDock Vina (Molecular Docking), Computational Structural Biology, Protein Modeling, Graph Theory Networks.",
@@ -333,7 +334,8 @@
         "#Bioinformatics"
       ],
       "badges": [
-        "Research"
+        "Research",
+        "Independent Biology and AI Projects"
       ],
       "is_robotics": false,
       "sort_order": 7,
@@ -341,19 +343,23 @@
       "sections": [
         {
           "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
-          "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 – June 2027.<br><br>• Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>• Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>• Scheduled to present research at a Stanford Health event in summer 2027."
+          "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 – June 2027.<br><br>• Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>• Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>• Scheduled to present research at a Stanford Health event in summer 2027.",
+          "photos": []
         },
         {
           "title": "Computational Oncology Research, Mentored Independent Research",
-          "intro": "Research Co-Author | June 2026 – Present.<br><br>• Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>• Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>• Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal."
+          "intro": "Research Co-Author | June 2026 – Present.<br><br>• Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>• Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>• Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal.",
+          "photos": []
         },
         {
           "title": "Biomedical Research Fellow — Advanced BioResearch Academy, Boston. MA",
-          "intro": "Research Trainee | Fall 2025 – Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>• Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>• Delivered independent research project presentations at the end of each 12-week session.<br>• Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research."
+          "intro": "Research Trainee | Fall 2025 – Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>• Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>• Delivered independent research project presentations at the end of each 12-week session.<br>• Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research.",
+          "photos": []
         },
         {
           "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
-          "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications."
+          "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications.",
+          "photos": []
         }
       ],
       "hide_badges": false
@@ -1225,18 +1231,6 @@
       "sort_order": 4
     },
     {
-      "id": 6,
-      "title": "FIRST LEGO League NJ Regional & State Awards",
-      "category_pill": "FIRST LEGO League",
-      "category_group": "robotics",
-      "year": "2024",
-      "image_url": "assets/robotics/pic 2 - Team award.JPG",
-      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 5
-    },
-    {
       "id": 5,
       "title": "WPI US Open World Championship",
       "category_pill": "World Finalist · 2026",
@@ -1244,6 +1238,18 @@
       "year": "2026",
       "image_url": "assets/robotics/pic 10 - wpi award.jpg",
       "description": "Ranked #14 out of 108 international robotics teams; Lead Autonomous Programmer and Robot Design Award Finalist at Worcester Polytechnic Institute.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 5
+    },
+    {
+      "id": 6,
+      "title": "FIRST LEGO League — NJ Regional & State Awards",
+      "category_pill": "FIRST LEGO League",
+      "category_group": "robotics",
+      "year": "2024",
+      "image_url": "assets/robotics/pic 2 - Team award.JPG",
+      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 6
@@ -1256,18 +1262,6 @@
       "year": "2024",
       "image_url": "assets/certificates/Service Award - NJ State Assembly.jpeg",
       "description": "Official commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing youth for grassroots community hunger relief.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 7
-    },
-    {
-      "id": 7,
-      "title": "Panther Hackathon Best Beginner Hack",
-      "category_pill": "Princeton Day School",
-      "category_group": "robotics",
-      "year": "2024",
-      "image_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
-      "description": "Recognized for a beginner-level hackathon project.",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 7
