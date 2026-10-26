@@ -1038,12 +1038,12 @@
     const heroRaw = project.heroImage || project.cardImage || '';
     const heroSrc = typeof window.getResolvedImageSrc === 'function' ? window.getResolvedImageSrc(heroRaw) : heroRaw;
 
-    // Technical focus HTML
+    // Key Highlights HTML
     let techFocusHtml = '';
     if (Array.isArray(project.technicalFocus) && project.technicalFocus.length > 0) {
       techFocusHtml = `
         <div class="mt-8 rounded-xl border border-berry/25 bg-[#fff0f6] p-5 sm:p-6 shadow-xs">
-          <h3 class="text-sm font-semibold uppercase tracking-widest text-[#ba1f43] font-bold">Technical focus</h3>
+          <h3 class="text-sm font-semibold uppercase tracking-widest text-[#ba1f43] font-bold">Key Highlights</h3>
           <ul class="mt-4 space-y-3">
             ${project.technicalFocus.map(item => `
               <li class="flex items-start gap-3 text-sm leading-6 text-ink/80">
@@ -1084,7 +1084,7 @@
       : (project.summary || project.desc
           ? [{ title: "Project Overview & Methodology", intro: project.summary || project.desc }]
           : (Array.isArray(project.technicalFocus) && project.technicalFocus.length > 0
-              ? [{ title: "Technical Highlights & Methodology", intro: project.technicalFocus.join(' • ') }]
+              ? [{ title: "Key Highlights & Methodology", intro: project.technicalFocus.join(' • ') }]
               : [{ title: "Project Overview & Methodology", intro: "Explore the comprehensive methodology, trials, and research outcomes for this initiative." }]));
 
     if (activeSections.length > 0) {

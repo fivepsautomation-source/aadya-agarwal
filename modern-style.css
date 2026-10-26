@@ -910,7 +910,7 @@ dialog#projectModal::backdrop,
   object-fit: cover !important;
 }
 
-/* Technical Focus Box */
+/* Key Highlights Box */
 .tech-focus-box {
   border-radius: 14px !important;
   border: 1px solid rgba(194, 37, 92, 0.25) !important;
