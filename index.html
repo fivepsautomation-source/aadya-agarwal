@@ -470,7 +470,7 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+function setupFilterTabs() {
   const filterTabsContainer = document.querySelector('.portfolio-filter-tabs');
   if (filterTabsContainer) {
     filterTabsContainer.addEventListener('click', (e) => {
@@ -481,10 +481,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Update button active states
       filterTabsContainer.querySelectorAll('.filter-tab-btn').forEach(b => {
         b.setAttribute('aria-pressed', 'false');
-        b.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-ink/15 bg-white text-ink/65 hover:border-plum/50 hover:text-plum';
+        b.classList.remove('bg-plum', 'text-white', 'border-plum');
+        b.classList.add('bg-white', 'text-ink/65', 'border-ink/15');
       });
       btn.setAttribute('aria-pressed', 'true');
-      btn.className = 'filter-tab-btn shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-berry border-plum bg-plum text-white';
+      btn.classList.remove('bg-white', 'text-ink/65', 'border-ink/15');
+      btn.classList.add('bg-plum', 'text-white', 'border-plum');
 
       // Show / hide matching cards
       document.querySelector('.portfolio-cards-grid')?.classList.toggle('is-writing-filter', targetFilter === 'writing');
@@ -499,7 +501,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupFilterTabs);
+} else {
+  setupFilterTabs();
+}
 </script>
 
 

@@ -228,6 +228,10 @@
 }
 
 /* Filter Tab Buttons */
+.portfolio-filter-tabs {
+  position: relative !important;
+  z-index: 30 !important;
+}
 .filter-tab-btn {
   flex-shrink: 0;
   border-radius: 0.5rem;
@@ -237,6 +241,8 @@
   font-weight: 500;
   background: #ffffff;
   color: rgba(15, 15, 18, 0.65);
+  cursor: pointer !important;
+  user-select: none !important;
   transition: all 0.15s ease;
 }
 

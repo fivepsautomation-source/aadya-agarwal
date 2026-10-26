@@ -1428,6 +1428,8 @@
           if (Array.isArray(cmsItem.attachments) && cmsItem.attachments.length) project.attachments = cmsItem.attachments;
           if (Array.isArray(cmsItem.videos) && cmsItem.videos.length) project.videos = cmsItem.videos;
         }
+      }
+
       if (!project && cmsItems.length > 0) {
         const cIdx = findProjectIdxInArray(String(identifier), cmsItems);
         if (cIdx >= 0) {
