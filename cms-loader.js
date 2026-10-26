@@ -399,7 +399,7 @@
       // 4A. Update awards on awards.html (Visual cards matching by ID or title and re-ordering in grid)
       const sectionConfigs = [
         { selector: '#research-awards .awards-feature-grid', group: 'research', ids: [1, 2, 3, 4] },
-        { selector: '#robotics-awards .awards-feature-grid', group: 'robotics', ids: [5, 6, 7] },
+        { selector: '#robotics-awards .awards-feature-grid', group: 'robotics', ids: [6, 5, 7] },
         { selector: '#civic-awards .awards-feature-grid', group: 'civic', ids: [8, 9, 23] },
         { selector: '#writing-awards > .container > .awards-feature-grid', group: 'writing', ids: [17, 10, 11, 12, 14, 15] },
         { selector: '#music-speaking-awards .awards-feature-grid', group: 'arts', ids: [20, 22, 21] }
@@ -480,6 +480,14 @@
             grid.appendChild(card);
           }
         });
+
+        // Ensure defined conf.ids order is strictly honored
+        if (Array.isArray(conf.ids) && conf.ids.length > 0) {
+          conf.ids.forEach(id => {
+            const card = grid.querySelector(`[data-award-id="${id}"]`);
+            if (card) grid.appendChild(card);
+          });
+        }
       });
 
       // 4B. Update awards on index.html (#awards section)

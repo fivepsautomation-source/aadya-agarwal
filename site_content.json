@@ -1225,6 +1225,18 @@
       "sort_order": 4
     },
     {
+      "id": 6,
+      "title": "FIRST LEGO League NJ Regional & State Awards",
+      "category_pill": "FIRST LEGO League",
+      "category_group": "robotics",
+      "year": "2024",
+      "image_url": "assets/robotics/pic 2 - Team award.JPG",
+      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 5
+    },
+    {
       "id": 5,
       "title": "WPI US Open World Championship",
       "category_pill": "World Finalist · 2026",
@@ -1232,18 +1244,6 @@
       "year": "2026",
       "image_url": "assets/robotics/pic 10 - wpi award.jpg",
       "description": "Ranked #14 out of 108 international robotics teams; Lead Autonomous Programmer and Robot Design Award Finalist at Worcester Polytechnic Institute.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 5
-    },
-    {
-      "id": 6,
-      "title": "FIRST LEGO League — NJ Regional & State Awards",
-      "category_pill": "FIRST LEGO League",
-      "category_group": "robotics",
-      "year": "2024",
-      "image_url": "assets/robotics/pic 2 - Team award.JPG",
-      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 6
@@ -1256,6 +1256,18 @@
       "year": "2024",
       "image_url": "assets/certificates/Service Award - NJ State Assembly.jpeg",
       "description": "Official commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing youth for grassroots community hunger relief.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 7
+    },
+    {
+      "id": 7,
+      "title": "Panther Hackathon Best Beginner Hack",
+      "category_pill": "Princeton Day School",
+      "category_group": "robotics",
+      "year": "2024",
+      "image_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
+      "description": "Recognized for a beginner-level hackathon project.",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 7
