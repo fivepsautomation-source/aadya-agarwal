@@ -80,7 +80,7 @@
       "id": 3,
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
-      "category_name": "Research",
+      "category_name": "",
       "article_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
       "img": "assets/uploads/1792856574507_pic1.jpeg",
       "images": [
@@ -133,7 +133,7 @@
       "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
-      "category_name": "Research",
+      "category_name": "",
       "img": "assets/uploads/1792979034626_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
       "img_position": "center top",
       "modal_img_position": "top",
@@ -210,7 +210,7 @@
       "id": 2,
       "title": "Biochar Water Treatment",
       "category_slug": "environmental",
-      "category_name": "Research",
+      "category_name": "",
       "img": "projects/water-treatment-setup.jpg",
       "images": [
         "projects/water-treatment-setup.jpg",
@@ -285,7 +285,7 @@
       "id": 1,
       "title": "Autonomous Ocean pH Buoy",
       "category_slug": "environmental",
-      "category_name": "Research",
+      "category_name": "",
       "img": "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
       "images": [
         "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
@@ -364,9 +364,7 @@
         "#MachineLearning",
         "#Bioinformatics"
       ],
-      "badges": [
-        "Research"
-      ],
+      "badges": [],
       "is_robotics": false,
       "sort_order": 7,
       "badge_position": "right",

@@ -318,7 +318,7 @@
             // Explicit badges array configured by admin (if empty, exactly 0 badges shown)
             p.badges.forEach(b => {
               const label = typeof b === 'object' ? (b.label || '') : String(b || '');
-              if (label && !relevantBadges.includes(label)) {
+              if (label && label.toLowerCase() !== 'research' && !relevantBadges.includes(label)) {
                 relevantBadges.push(label);
               }
             });
@@ -349,20 +349,23 @@
           const isTopAlignedImg = p.id === 4 || (coverImg && coverImg.includes('ieee-attendance')) || (p.title && p.title.toLowerCase().includes('comparative biochar')) || p.img_position === 'top';
           const imgPosStyle = isTopAlignedImg ? 'style="object-position: center top;"' : (p.img_position ? `style="object-position: ${p.img_position};"` : '');
 
-          card.innerHTML = `
-            <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
-              <img alt="${p.title}" loading="lazy" class="h-full w-full object-cover ${isTopAlignedImg ? 'object-top' : ''} transition duration-300 group-hover:scale-105" ${imgPosStyle} src="${coverImg}"/>
-              ${badgesHtml}
-            </div>
-            <div class="flex w-full flex-1 flex-col p-5 text-left">
-              <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
-                <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">${p.category_name || ''}</span>
-                <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
-              </span>
-              <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">${p.title}</h3>
-              <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">${p.desc || ''}</span>
-            </div>
-          `;
+              const rawCat = (p.category_name || '').trim();
+              const displayCat = rawCat.toLowerCase() === 'research' ? '' : rawCat;
+
+              card.innerHTML = `
+                <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
+                  <img alt="${p.title}" loading="lazy" class="h-full w-full object-cover ${isTopAlignedImg ? 'object-top' : ''} transition duration-300 group-hover:scale-105" ${imgPosStyle} src="${coverImg}"/>
+                  ${badgesHtml}
+                </div>
+                <div class="flex w-full flex-1 flex-col p-5 text-left">
+                  <span class="card-meta-row mb-3 flex w-full items-start justify-between gap-3">
+                    <span class="card-category-label max-w-[60%] text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-plum">${displayCat}</span>
+                    <span class="card-read-more shrink-0 rounded-md bg-[#ba1f43] px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">Read more</span>
+                  </span>
+                  <h3 class="font-display text-lg font-semibold leading-snug transition-colors group-hover:text-berry">${p.title}</h3>
+                  <span class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/60">${p.desc || ''}</span>
+                </div>
+              `;
           card.addEventListener('click', (e) => {
             const anchor = e.target.closest('a');
             if (anchor && !anchor.classList.contains('card-read-more')) {
