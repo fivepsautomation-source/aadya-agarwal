@@ -440,7 +440,13 @@
           "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "attachments": [
+        {
+          "label": "MoniVitals project board (PDF)",
+          "href": "https://drive.google.com/file/d/1ZjMXrRyixVsCfiFuJaEqjXi_TDEurrdv/view?usp=drive_link"
+        }
+      ]
     },
     {
       "id": 11,

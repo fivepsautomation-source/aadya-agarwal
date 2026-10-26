@@ -116,7 +116,7 @@
     "attachments": [
       {
         "label": "MoniVitals project board (PDF)",
-        "href": "docs/monivitals-board.pdf"
+        "href": "https://drive.google.com/file/d/1ZjMXrRyixVsCfiFuJaEqjXi_TDEurrdv/view?usp=drive_link"
       }
     ],
     "videos": [],

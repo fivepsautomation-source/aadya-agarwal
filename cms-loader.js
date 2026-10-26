@@ -297,9 +297,9 @@
             desc: p.desc,
             highlights: p.highlights || [],
             tags: p.tags || [],
-            category_slug: p.category_slug,
-            attachments: Array.isArray(p.attachments) ? p.attachments : [],
-            sections: Array.isArray(p.sections) ? p.sections : [],
+            attachments: (Array.isArray(p.attachments) && p.attachments.length > 0) ? p.attachments : (
+              (p.title && p.title.toLowerCase().includes('monivitals')) ? [{ label: "MoniVitals project board (PDF)", href: "https://drive.google.com/file/d/1ZjMXrRyixVsCfiFuJaEqjXi_TDEurrdv/view?usp=drive_link" }] : []
+            ),
             gallerySubtitle: p.gallerySubtitle || ''
           }));
 
