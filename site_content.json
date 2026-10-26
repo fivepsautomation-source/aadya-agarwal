@@ -534,14 +534,12 @@
       "category_slug": "writing",
       "category_name": "Writing & Performing Arts",
       "img": "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
-      "desc": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
+      "desc": "Loves writing short stories, poems, essays, and poetry, and participating in Academic and creative writing contests. Won Regional, National and International awards",
       "highlights": [
-        "High Commendation, John Locke International Essay Writing Competition (Science & Technology), 2026",
-        "Bronze Medal, Technology & Innovation theme, Harvard International Review, Summer 2026",
-        "Scholastic Art & Writing Awards in Poetry, Science Fiction and Personal Memoir; published in The Telling Room, Skipping Stones and Poetic Power anthologies; TechTrek USA science articles",
-        "2025 National History Day (NJ Regional): a 2,500-word paper on Lysenkoism and the suppression of scientific advancement in the Soviet Union",
-        "Piano Grand Prize at the Music-Fest International Rising Talent Festival; flute in Lawrenceville’s jazz band with NJMTA Honors recitals",
-        "Backstage technical theater, stage manager and production assistant"
+        "John Locke Institute Essay Competition 2026: High Commendation  (Among top 3%-5%) globally for analytical writing connecting scientific inquiry and historical frameworks. Title: Should You Be Polite to ChatGPT",
+        "Harvard International Review Academic Writing Contest (Summer 2026) : Awarded Bronze Medal in the Technology, Innovation, and Power theme for an independent analytical essay examining how racial bias in pulse oximetry can create inequities in health care and shape global public-health outcomes, Title: Western Standard For All How Medical Bias Still Leaves Billions At Risk",
+        "Scholastic Art & Writing Awards: 2 Silver Key and 3 Honorable Mention recipients for science fiction and creative writing.",
+        "John H. Imbrie Humanities/English Prize 2025-2026: Awarded to one of approximately 150 Second Form (Grade 9) Lawrenceville students for humanistic inquiry and prose."
       ],
       "tags": [
         "#Flute",
@@ -554,7 +552,11 @@
         "#NJMTA",
         "#MusicFest"
       ],
-      "badges": [],
+      "badges": [
+        "Creative Writing",
+        "Academic Writing",
+        "Scientific writing"
+      ],
       "sort_order": 11,
       "images": [
         "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
