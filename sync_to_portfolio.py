@@ -32,4 +32,20 @@ if os.path.exists(src_assets):
         shutil.copytree(src_assets, dst_assets)
     print("Assets synchronized successfully!")
 
+# Copy projects folder recursively (including videos)
+src_projects = os.path.join(src_dir, 'projects')
+dst_projects = os.path.join(dst_dir, 'projects')
+if os.path.exists(src_projects):
+    if os.path.exists(dst_projects):
+        for root, dirs, files in os.walk(src_projects):
+            rel_dir = os.path.relpath(root, src_projects)
+            target_sub = os.path.join(dst_projects, rel_dir)
+            if not os.path.exists(target_sub):
+                os.makedirs(target_sub)
+            for file in files:
+                shutil.copy2(os.path.join(root, file), os.path.join(target_sub, file))
+    else:
+        shutil.copytree(src_projects, dst_projects)
+    print("Projects synchronized successfully!")
+
 print("All synchronized to C:\\Users\\hp\\Desktop\\Aadya-New-Portfolio successfully!")

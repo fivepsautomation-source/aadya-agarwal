@@ -1954,12 +1954,14 @@
                     <div class="overflow-hidden rounded-2xl border border-ink/15 bg-black shadow-lg">
                       <div class="relative aspect-video w-full bg-black">
                         <video 
-                          src="${videoSrc}" 
                           controls 
                           playsinline 
-                          preload="metadata" 
+                          preload="auto" 
                           poster="${vid.poster || ''}" 
-                          class="h-full w-full object-contain">
+                          class="h-full w-full object-contain"
+                          onerror="if(!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${videoSrc}';this.load();}">
+                          <source src="${videoSrc}" type="video/mp4">
+                          <source src="https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/${videoSrc}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>
                       </div>
