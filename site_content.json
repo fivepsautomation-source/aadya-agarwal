@@ -407,7 +407,8 @@
           "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "badge_position": "right"
     },
     {
       "id": 11,
@@ -485,7 +486,8 @@
           "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "badge_position": "right"
     },
     {
       "id": 13,
@@ -525,7 +527,8 @@
           "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "badge_position": "right"
     },
     {
       "id": 14,
@@ -683,7 +686,8 @@
           "intro": "Trained in competitive forensics and impromptu address, delivering persuasive presentations on civic engagement, technology ethics, and educational equity."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "badge_position": "right"
     },
     {
       "id": 1792918752665,

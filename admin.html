@@ -3089,7 +3089,7 @@
       document.getElementById('modalProjTags').value = (p.tags || []).join(', ');
       
       const badgePosEl = document.getElementById('modalProjBadgePosition');
-      if (badgePosEl) badgePosEl.value = p.badge_position || (p.id === 4 ? 'left' : 'right');
+      if (badgePosEl) badgePosEl.value = p.badge_position || 'right';
 
       currentModalGalleryImages = Array.isArray(p.images) && p.images.length > 0 ? [...p.images] : (p.img ? [p.img] : []);
       renderModalGallery();

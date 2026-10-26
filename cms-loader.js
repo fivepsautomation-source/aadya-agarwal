@@ -313,7 +313,7 @@
             }
           }
 
-          const isLeftBadge = p.badge_position === 'left' || p.id === 4 || (p.title && p.title.toLowerCase().includes('comparative biochar')) || (coverImg && coverImg.includes('ieee-attendance'));
+          const isLeftBadge = p.badge_position === 'left';
           const posClass = isLeftBadge ? 'left-2 top-2 justify-start is-left' : 'right-2 top-2 justify-end is-right';
           const badgesHtml = relevantBadges.length
             ? `<span class="pointer-events-none absolute ${posClass} card-badges-wrap z-10 flex flex-wrap gap-1.5" style="top: 0.5rem; ${isLeftBadge ? 'left: 0.5rem;' : 'right: 0.5rem;'}">` +
