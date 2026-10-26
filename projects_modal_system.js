@@ -2098,6 +2098,10 @@
         if (item.gallerySubtitle) {
           PROJECTS_DATA[idx].gallerySubtitle = item.gallerySubtitle;
         }
+        if (item.link_url || item.article_url) {
+          PROJECTS_DATA[idx].link_url = item.link_url || item.article_url;
+          PROJECTS_DATA[idx].article_url = item.article_url || item.link_url;
+        }
       } else {
         PROJECTS_DATA.push({
           title: item.title,
@@ -2105,6 +2109,8 @@
           summary: item.desc || '',
           cardImage: item.img || '',
           heroImage: item.img || '',
+          link_url: item.link_url || item.article_url || '',
+          article_url: item.article_url || item.link_url || '',
           badges: (item.badges || []).map(b => typeof b === 'object' ? b : { label: b, tone: 'plum' }),
           technicalFocus: item.highlights || [],
           sections: Array.isArray(item.sections) && item.sections.length ? item.sections : [{ title: "Project Overview", intro: item.desc || "" }],
@@ -2189,6 +2195,8 @@
           category: identifier.category || '',
           summary: identifier.desc || '',
           heroImage: identifier.img || imgs[0] || '',
+          link_url: identifier.link_url || identifier.article_url || '',
+          article_url: identifier.article_url || identifier.link_url || '',
           technicalFocus: identifier.highlights || [],
           sections: Array.isArray(identifier.sections) && identifier.sections.length ? identifier.sections : [
             {
@@ -2293,6 +2301,20 @@
             is_placeholder: true
           }
         ];
+      }
+    if (project) {
+      const pTitle = (project.title || '').toLowerCase();
+      const pHero = (project.heroImage || project.cardImage || '').toLowerCase();
+      if (
+        project.id === 1792995954131 ||
+        project.id === '1792995954131' ||
+        pTitle.includes('here it is') ||
+        pTitle.includes('leopold') ||
+        pHero.includes('1792997037025')
+      ) {
+        const lawrencevilleUrl = 'https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/sliders/post/leopold-scholars-in-ecology-and-ethics';
+        if (!project.link_url) project.link_url = lawrencevilleUrl;
+        if (!project.article_url) project.article_url = lawrencevilleUrl;
       }
     }
 

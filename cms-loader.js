@@ -351,7 +351,7 @@
 
           card.innerHTML = `
             <div class="relative aspect-video w-full overflow-hidden bg-ink select-none">
-              ${p.article_url ? `<a class="block h-full w-full" href="${p.article_url}" target="_blank" rel="noopener noreferrer" aria-label="Read feature for ${p.title}"><img alt="${p.title}" loading="lazy" class="h-full w-full object-cover ${isTopAlignedImg ? 'object-top' : ''} transition duration-300 group-hover:scale-105" ${imgPosStyle} src="${coverImg}"/></a>` : `<img alt="${p.title}" loading="lazy" class="h-full w-full object-cover ${isTopAlignedImg ? 'object-top' : ''} transition duration-300 group-hover:scale-105" ${imgPosStyle} src="${coverImg}"/>`}
+              <img alt="${p.title}" loading="lazy" class="h-full w-full object-cover ${isTopAlignedImg ? 'object-top' : ''} transition duration-300 group-hover:scale-105" ${imgPosStyle} src="${coverImg}"/>
               ${badgesHtml}
             </div>
             <div class="flex w-full flex-1 flex-col p-5 text-left">
