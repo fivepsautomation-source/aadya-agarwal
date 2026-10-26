@@ -912,6 +912,8 @@
   "summary": "Essays, poetry and science journalism, from an international essay commendation to Scholastic Art & Writing recognition, alongside a piano Grand Prize, jazz-band flute, technical theater and a gallery of visual art.",
   "cardImage": "assets/writing_arts/Aadya Flute Pic1.png",
   "heroImage": "assets/writing_arts/Aadya Flute Pic1.png",
+  "link_url": "https://www.tellingroom.org/stories-full/when-kindness-is-planted",
+  "article_url": "https://www.tellingroom.org/stories-full/when-kindness-is-planted",
   "badges": [
     {
       "label": "Writing",
@@ -1982,17 +1984,29 @@
       }
     }
 
+    const isTellingRoom = linkUrl.includes('tellingroom.org') || (project.title && project.title.toLowerCase().includes('kindness'));
+    const isLawrenceville = linkUrl.includes('lawrenceville.org');
+    const bannerLinkText = isTellingRoom
+      ? 'Click to read story on The Telling Room'
+      : (isLawrenceville ? 'Click to view official article on The Lawrenceville School' : 'Click to view full feature / publication');
+    const buttonLinkText = isTellingRoom
+      ? 'Read Published Story on The Telling Room'
+      : (isLawrenceville ? 'Read Official Article on The Lawrenceville School' : 'Read Full Feature / Article');
+    const bannerTitleAttr = isTellingRoom
+      ? 'Click to view story on The Telling Room'
+      : (isLawrenceville ? 'Click to view full story on The Lawrenceville School' : 'Click to view external publication');
+
     return `
       <!-- Hero Banner with Title Overlay -->
       <div class="${heroBannerClass}">
         ${linkUrl ? `
-          <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="block relative group cursor-pointer overflow-hidden" title="Click to view full story on The Lawrenceville School">
+          <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="block relative group cursor-pointer overflow-hidden" title="${bannerTitleAttr}">
             ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="${heroImgClass} transition duration-300 group-hover:scale-105" style="${heroImgStyle}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
             <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 flex flex-col justify-end">
               ${project.category ? `<span class="modal-category-badge mb-2 rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm inline-block w-fit">${project.category}</span>` : ''}
               <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
               <span class="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-white/95 underline decoration-white/60 underline-offset-4 group-hover:text-white">
-                <span>Click to view official article on The Lawrenceville School</span>
+                <span>${bannerLinkText}</span>
                 <span aria-hidden="true">&nearr;</span>
               </span>
             </div>
@@ -2012,7 +2026,7 @@
         ${linkUrl ? `
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-plum px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-berry focus-visible:outline-2 focus-visible:outline-offset-2">
-              <span>Read Official Article on The Lawrenceville School</span>
+              <span>${buttonLinkText}</span>
               <span aria-hidden="true">&nearr;</span>
             </a>
           </div>
@@ -2317,6 +2331,17 @@
         const lawrencevilleUrl = 'https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/sliders/post/leopold-scholars-in-ecology-and-ethics';
         if (!project.link_url) project.link_url = lawrencevilleUrl;
         if (!project.article_url) project.article_url = lawrencevilleUrl;
+      } else if (
+        project.id === 14 ||
+        project.id === '14' ||
+        pTitle.includes('creative & academic writing') ||
+        pTitle.includes('when kindness') ||
+        pHero.includes('when_kindness_was_planted') ||
+        pHero.includes('1792918427379')
+      ) {
+        const tellingRoomUrl = 'https://www.tellingroom.org/stories-full/when-kindness-is-planted';
+        if (!project.link_url) project.link_url = tellingRoomUrl;
+        if (!project.article_url) project.article_url = tellingRoomUrl;
       }
     }
 
