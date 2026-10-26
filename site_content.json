@@ -797,7 +797,11 @@
       "desc": "editted",
       "highlights": [],
       "tags": [],
-      "badges": [],
+      "badges": [
+        "Flute",
+        "Piano",
+        "Theater"
+      ],
       "sort_order": 12,
       "sections": [
         {
@@ -843,7 +847,7 @@
         },
         {
           "title": "Flute",
-          "intro": "Music has been an important part of my life through flute and piano. I play flute in the Lawrenceville School Jazz Band and previously served as first-chair flutist and soloist in my middle school’s advanced band. Jazz-band flutist at Lawrenceville and a former first-chair soloist. \n\nNJMTA auditions and Honors recitals at Westminster Conservatory and Rutgers University Music Hall.",
+          "intro": "Music has been an important part of my life through the flute. I play flute in the Lawrenceville School Jazz Band and previously served as first-chair flutist and soloist in my middle school’s advanced band. Jazz-band flutist at Lawrenceville and a former first-chair soloist. \n\nNJMTA auditions and Honors recitals at Westminster Conservatory and Rutgers University Music Hall.",
           "photos": [
             {
               "src": "projects/music/flute-aadya.png",
