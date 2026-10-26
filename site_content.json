@@ -148,12 +148,13 @@
         "assets/uploads/1792791698982_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1.jpeg",
         "assets/uploads/1792791701120_WhatsApp_Image_2026-10-24_at_3.09.20_AM.jpeg"
       ],
-      "desc": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 Conference at Princeton University.",
+      "desc": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 Conference at Princeton University.\n\nLeopold Scholar in Ecology and Ethics, Lawrenceville Research Institute - Selected for a selective ecology, sustainability, and environmental-ethics research program.",
       "highlights": [
         "Approved research abstract presented at the IEEE/ISEC K–12 conference at Princeton University",
         "Comparative analysis of softwood vs. agricultural-waste biochars for remediation",
         "Bench trials tracking heavy metal and nutrient removal, dissolved oxygen, and pH response",
-        "Technical engagement and presentation with engineering and academic faculty at Princeton"
+        "Technical engagement and presentation with engineering and academic faculty at Princeton",
+        "Lawrenceville Environment and Sustainability Council: Community Service & Events Subcommittee Lead"
       ],
       "tags": [
         "#IEEE",
@@ -163,7 +164,8 @@
         "#BiocharResearch"
       ],
       "badges": [
-        "IEEE ISEC"
+        "IEEE ISEC",
+        "Leopold Scholar"
       ],
       "is_robotics": false,
       "sort_order": 2,
@@ -171,23 +173,28 @@
       "sections": [
         {
           "title": "IEEE/ISEC 2026 presentation at Princeton University",
-          "intro": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University."
+          "intro": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University.",
+          "photos": []
         },
         {
           "title": "NJWEA & science-fair recognition",
-          "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference."
+          "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference.",
+          "photos": []
         },
         {
           "title": "Materials and experimental setup",
-          "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements."
+          "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements.",
+          "photos": []
         },
         {
           "title": "Device and filtration design",
-          "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration."
+          "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration.",
+          "photos": []
         },
         {
           "title": "Measurements and results",
-          "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
+          "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions.",
+          "photos": []
         }
       ],
       "hide_badges": false
