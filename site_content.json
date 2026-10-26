@@ -275,7 +275,7 @@
         "assets/uploads/1792783192868_WhatsApp_Image_2026-10-24_at_12.48.03_AM.jpeg",
         "projects/ocean-project-presentation.jpg"
       ],
-      "desc": "A sensor-driven buoy concept designed to detect low water pH and dispense calcium carbonate in response.",
+      "desc": "Climate Action Concept: Neutralizing Ocean Acidification: An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems",
       "highlights": [
         "pH sensor feeds real-time water quality readings to an Arduino microcontroller",
         "A servo rotates a 3D-printed dispensing disk below a refillable mineral chamber",
@@ -297,11 +297,13 @@
       "sections": [
         {
           "title": "System architecture and 3M challenge brief",
-          "intro": "A pH sensor, Arduino and servo-operated 3D-printed disk form a closed-loop calcium carbonate dispenser. Next steps include field testing, dispenser calibration, solar power and predictive dosing."
+          "intro": "A pH sensor, Arduino and servo-operated 3D-printed disk form a closed-loop calcium carbonate dispenser. Next steps include field testing, dispenser calibration, solar power and predictive dosing.",
+          "photos": []
         },
         {
           "title": "Autonomous Closed-Loop Marine Dosing",
-          "intro": "Submersible sensor node constantly samples coastal water acidity. Upon detecting localized acidification events, calibrated alkaline reagent is released to protect marine calcifiers and restore pH balance."
+          "intro": "Submersible sensor node constantly samples coastal water acidity. Upon detecting localized acidification events, calibrated alkaline reagent is released to protect marine calcifiers and restore pH balance.",
+          "photos": []
         }
       ],
       "hide_badges": false
