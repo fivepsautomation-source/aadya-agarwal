@@ -59,22 +59,7 @@
       ],
       "is_robotics": true,
       "sort_order": 0,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "Autonomous Navigation & Computer-Vision Algorithms",
-          "intro": "Implemented autonomous navigation routines utilizing sensor telemetry, AprilTag detection, and OpenCV vision pipelines to achieve high-precision field localization and game element scoring."
-        },
-        {
-          "title": "Mechanical Architecture & Drive-train Iterations",
-          "intro": "Prototyped lightweight intake mechanisms and multi-stage lift systems using custom 3D-printed brackets and high-torque motor gearboxes engineered for rapid cycle times."
-        },
-        {
-          "title": "STEM Mentorship & Community Outreach",
-          "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 3,
@@ -116,28 +101,16 @@
       ],
       "is_robotics": false,
       "sort_order": 1,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "The technical pitch",
-          "intro": "The proposed IoT node would pair water-quality sensors with AI-assisted treatment decisions. River, lake and global measurements inform the model plan; human review, fixed safety limits and decision logs govern its use."
-        },
-        {
-          "title": "On stage and recognition at MIT Media Lab",
-          "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
       "category_name": "Research",
-      "img": "assets/uploads/1792975178236_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
+      "img": "assets/uploads/1792856840122_ieee-attendance.jpg",
       "img_position": "center top",
       "images": [
-        "assets/uploads/1792975178236_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
         "assets/uploads/1792856840122_ieee-attendance.jpg",
         "projects/ieee-engineering-conversation.jpg",
         "assets/uploads/1792791286959_ieee_pic3.jpeg",
@@ -166,30 +139,7 @@
       ],
       "is_robotics": false,
       "sort_order": 2,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "IEEE/ISEC 2026 presentation at Princeton University",
-          "intro": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University."
-        },
-        {
-          "title": "NJWEA & science-fair recognition",
-          "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference."
-        },
-        {
-          "title": "Materials and experimental setup",
-          "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements."
-        },
-        {
-          "title": "Device and filtration design",
-          "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration."
-        },
-        {
-          "title": "Measurements and results",
-          "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "left"
     },
     {
       "id": 2,
@@ -233,30 +183,7 @@
       ],
       "is_robotics": false,
       "sort_order": 3,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "IEEE/ISEC 2026 presentation at Princeton University",
-          "intro": "Approved abstract: “Comparative Analysis of Softwood and Agricultural Waste Biochars for Heavy Metal and Nutrient Remediation in Water.” Presented at the IEEE/ISEC K–12 conference at Princeton University."
-        },
-        {
-          "title": "NJWEA & science-fair recognition",
-          "intro": "Biochar research earned second place in Earth and Environmental Science at the Mercer Science and Engineering Fair, a Stockholm Junior Water Prize regional award, a NOAA Taking the Pulse of the Planet award, and an invitation to present at the NJWEA Annual Conference."
-        },
-        {
-          "title": "Materials and experimental setup",
-          "intro": "Compared softwood and agricultural-waste biochars in controlled water-treatment trials, with sample vessels and pH measurements."
-        },
-        {
-          "title": "Device and filtration design",
-          "intro": "Explored a floating device that could carry biochar filtration media and water-quality sensors with end-to-end multi-stage filtration."
-        },
-        {
-          "title": "Measurements and results",
-          "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 1,
@@ -283,21 +210,12 @@
         "#3MYoungScientist",
         "#pHBuoy"
       ],
-      "badges": [],
+      "badges": [
+        "Climate Tech"
+      ],
       "is_robotics": false,
       "sort_order": 4,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "System architecture and 3M challenge brief",
-          "intro": "A pH sensor, Arduino and servo-operated 3D-printed disk form a closed-loop calcium carbonate dispenser. Next steps include field testing, dispenser calibration, solar power and predictive dosing."
-        },
-        {
-          "title": "Autonomous Closed-Loop Marine Dosing",
-          "intro": "Submersible sensor node constantly samples coastal water acidity. Upon detecting localized acidification events, calibrated alkaline reagent is released to protect marine calcifiers and restore pH balance."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 5,
@@ -336,26 +254,7 @@
       ],
       "is_robotics": false,
       "sort_order": 7,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
-          "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 – June 2027.<br><br>• Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>• Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>• Scheduled to present research at a Stanford Health event in summer 2027."
-        },
-        {
-          "title": "Computational Oncology Research, Mentored Independent Research",
-          "intro": "Research Co-Author | June 2026 – Present.<br><br>• Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>• Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>• Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal."
-        },
-        {
-          "title": "Biomedical Research Fellow — Advanced BioResearch Academy, Boston. MA",
-          "intro": "Research Trainee | Fall 2025 – Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>• Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>• Delivered independent research project presentations at the end of each 12-week session.<br>• Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research."
-        },
-        {
-          "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
-          "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications."
-        }
-      ],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 8,
@@ -392,22 +291,7 @@
         "HealthTech"
       ],
       "is_robotics": false,
-      "sort_order": 5,
-      "sections": [
-        {
-          "title": "Community Field Screening & Senior Care Deployment",
-          "intro": "Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families. Optimized font sizing, high-contrast visual indicators, and voice-assisted telemetry readings for senior accessibility."
-        },
-        {
-          "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
-          "intro": "Engineered custom 3D printed housing in Fusion 360 with ergonomic fingertip alignment and optical light baffling. Integrated MAX30102 optical sensor and MLX90614 thermopile over I2C multiplexed bus with low-power sleep state management."
-        },
-        {
-          "title": "Pulse Oximetry Optical Bias Mitigation Research",
-          "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 5
     },
     {
       "id": 11,
@@ -474,18 +358,7 @@
         "Hunger Relief"
       ],
       "is_robotics": false,
-      "sort_order": 8,
-      "sections": [
-        {
-          "title": "Grassroots Logistics & Youth Mobilization",
-          "intro": "Organized supply collection points across regional schools, managed volunteer shift scheduling, and ensured safe handling and direct delivery of nutritional meals to local food pantries."
-        },
-        {
-          "title": "Annual Holiday Candy & Nutritional Support",
-          "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 8
     },
     {
       "id": 13,
@@ -514,18 +387,7 @@
         "Youth Volunteering"
       ],
       "is_robotics": false,
-      "sort_order": 9,
-      "sections": [
-        {
-          "title": "Regional Winter Drive Logistics",
-          "intro": "Established secure donation collection bins across Mercer County schools and public libraries, coordinating weekly sorting, sanitization, and packaging."
-        },
-        {
-          "title": "Bipartisan Legislative Commendation",
-          "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 9
     },
     {
       "id": 14,
@@ -625,8 +487,7 @@
         }
       ],
       "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater.",
-      "badge_position": "right",
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 1792917988413,
@@ -642,9 +503,7 @@
       "tags": [],
       "badges": [],
       "sort_order": 10,
-      "badge_position": "right",
-      "sections": [],
-      "hide_badges": false
+      "badge_position": "right"
     },
     {
       "id": 1792918333524,
@@ -659,9 +518,7 @@
       "highlights": [],
       "tags": [],
       "badges": [],
-      "sort_order": 12,
-      "sections": [],
-      "hide_badges": false
+      "sort_order": 12
     },
     {
       "id": 1792918752665,
@@ -670,8 +527,7 @@
       "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792918739033_bio.jpeg",
       "images": [
-        "assets/uploads/1792918739033_bio.jpeg",
-        "https://aimi.stanford.edu/academic-year-research-internship"
+        "assets/uploads/1792918739033_bio.jpeg"
       ],
       "desc": "Stanford Artificial Intelligence in Medicine & Imaging  - 30-week Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
       "highlights": [
@@ -684,9 +540,7 @@
         "Stanford AIMI"
       ],
       "sort_order": 6,
-      "badge_position": "right",
-      "sections": [],
-      "hide_badges": false
+      "badge_position": "right"
     }
   ],
   "documents": [
