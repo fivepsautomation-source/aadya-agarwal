@@ -1741,6 +1741,25 @@
     const heroSrc = typeof window.getResolvedImageSrc === 'function' ? window.getResolvedImageSrc(heroRaw) : heroRaw;
     const linkUrl = project.link_url || project.article_url || project.external_url || '';
 
+    const isTopAlignedModalImg = Boolean(
+      project.id === 4 ||
+      project.id === '4' ||
+      (project.title && (
+        project.title.toLowerCase().includes('comparative biochar') ||
+        (project.title.toLowerCase().includes('ieee') && project.title.toLowerCase().includes('biochar')) ||
+        (project.title.toLowerCase().includes('ieee') && project.title.toLowerCase().includes('isec'))
+      )) ||
+      (heroRaw && (
+        heroRaw.includes('ieee-attendance') ||
+        heroRaw.includes('1792979034626') ||
+        heroRaw.includes('WhatsApp_Image_2026-10-24_at_3.09.20_AM')
+      )) ||
+      project.modal_img_position === 'top'
+    );
+    const heroImgStyle = isTopAlignedModalImg ? 'object-position: center top !important;' : 'object-position: center !important;';
+    const heroBannerClass = isTopAlignedModalImg ? 'modal-hero-banner is-top-aligned relative' : 'modal-hero-banner relative';
+    const heroImgClass = isTopAlignedModalImg ? 'modal-hero-image is-top-aligned' : 'modal-hero-image';
+
     // Key Highlights HTML
     let techFocusHtml = '';
     if (Array.isArray(project.technicalFocus) && project.technicalFocus.length > 0) {
@@ -1960,10 +1979,10 @@
 
     return `
       <!-- Hero Banner with Title Overlay -->
-      <div class="modal-hero-banner relative">
+      <div class="${heroBannerClass}">
         ${linkUrl ? `
           <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="block relative group cursor-pointer overflow-hidden" title="Click to view full story on The Lawrenceville School">
-            ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image transition duration-300 group-hover:scale-105" style="object-position: center !important;" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
+            ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="${heroImgClass} transition duration-300 group-hover:scale-105" style="${heroImgStyle}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
             <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 flex flex-col justify-end">
               ${project.category ? `<span class="modal-category-badge mb-2 rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm inline-block w-fit">${project.category}</span>` : ''}
               <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
@@ -1974,7 +1993,7 @@
             </div>
           </a>
         ` : `
-          ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="modal-hero-image" style="object-position: center !important;" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
+          ${heroSrc ? `<img src="${heroSrc}" alt="${project.title}" class="${heroImgClass}" style="${heroImgStyle}" onerror="if(this.src.includes('assets/uploads/')&&!this.dataset.gh){this.dataset.gh='1';this.src='https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/'+this.getAttribute('src');}else{this.src='assets/logo.png';}">` : ''}
           <div class="modal-hero-overlay px-5 py-5 text-white sm:px-8 sm:py-7 pointer-events-none">
             ${project.category ? `<span class="modal-category-badge mb-2 rounded-full bg-[#ba1f43] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">${project.category}</span>` : ''}
             <h2 class="font-display text-xl font-bold tracking-tight text-white leading-tight sm:text-3xl">${project.title}</h2>
@@ -2148,6 +2167,8 @@
         if (Array.isArray(identifier.videos) && identifier.videos.length > 0) {
           project.videos = identifier.videos;
         }
+        if (identifier.id !== undefined) project.id = identifier.id;
+        if (identifier.modal_img_position) project.modal_img_position = identifier.modal_img_position;
         if (identifier.link_url) {
           project.link_url = identifier.link_url;
         }
@@ -2157,6 +2178,8 @@
       } else {
         const imgs = Array.isArray(identifier.images) ? identifier.images : (identifier.img ? [identifier.img] : []);
         project = {
+          id: identifier.id,
+          modal_img_position: identifier.modal_img_position,
           title: identifier.title || 'Project Detail',
           category: identifier.category || '',
           summary: identifier.desc || '',

@@ -9,7 +9,7 @@ if not os.path.exists(dst_dir):
 
 # Copy html, css, js
 for f in os.listdir(src_dir):
-    if f.endswith('.html') or f.endswith('.css') or f.endswith('.js'):
+    if f.endswith('.html') or f.endswith('.css') or f.endswith('.js') or f.endswith('.json'):
         src_file = os.path.join(src_dir, f)
         dst_file = os.path.join(dst_dir, f)
         shutil.copy2(src_file, dst_file)

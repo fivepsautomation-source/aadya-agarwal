@@ -282,6 +282,8 @@
           const galleryImgs = Array.isArray(p.images) && p.images.length ? p.images.map(img => window.getResolvedImageSrc(img)) : (coverImg ? [coverImg] : []);
 
           card.setAttribute('data-project', JSON.stringify({
+            id: p.id,
+            modal_img_position: p.modal_img_position || (p.id === 4 ? 'top' : ''),
             title: p.title,
             category: p.category_name,
             article_url: p.article_url,
