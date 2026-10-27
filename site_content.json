@@ -77,7 +77,9 @@
           "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "img_position": "center 65%",
+      "modal_img_position": "center 65%"
     },
     {
       "id": 3,
@@ -130,7 +132,9 @@
           "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "img_position": "center 60%",
+      "modal_img_position": "center 60%"
     },
     {
       "id": 4,
@@ -138,8 +142,8 @@
       "category_slug": "environmental",
       "category_name": "",
       "img": "assets/uploads/1792979034626_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
-      "img_position": "center top",
-      "modal_img_position": "top",
+      "img_position": "center 25%",
+      "modal_img_position": "center 35%",
       "images": [
         "assets/uploads/1792979034626_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
         "assets/uploads/1792975178236_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
@@ -329,8 +333,8 @@
       "videos": [
         {
           "type": "local",
-          "src": "projects/videos/3m-buoy-preview.mp4",
-          "title": "3M Young Scientist Challenge submission",
+          "src": "projects/videos/3MYSC Submission - Neutralizing Ocean Acidification_ An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems.mp4",
+          "title": "3MYSC Submission - Neutralizing Ocean Acidification: An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems",
           "poster": "projects/ocean-project-presentation.jpg"
         }
       ]
@@ -389,7 +393,9 @@
           "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "img_position": "8% 50%",
+      "modal_img_position": "8% 50%"
     },
     {
       "id": 8,
@@ -447,7 +453,9 @@
           "label": "MoniVitals project board (PDF)",
           "href": "https://drive.google.com/file/d/1ZjMXrRyixVsCfiFuJaEqjXi_TDEurrdv/view?usp=drive_link"
         }
-      ]
+      ],
+      "img_position": "center 25%",
+      "modal_img_position": "center 25%"
     },
     {
       "id": 11,
@@ -525,7 +533,9 @@
           "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "img_position": "center 25%",
+      "modal_img_position": "center 25%"
     },
     {
       "id": 13,
@@ -565,7 +575,9 @@
           "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "img_position": "center 30%",
+      "modal_img_position": "center 30%"
     },
     {
       "id": 14,
@@ -821,7 +833,9 @@
           "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "img_position": "center 35%",
+      "modal_img_position": "center 35%"
     },
     {
       "id": 1792918333524,
@@ -968,7 +982,9 @@
         }
       ],
       "hide_badges": false,
-      "badge_position": "right"
+      "badge_position": "right",
+      "img_position": "center 25%",
+      "modal_img_position": "center 25%"
     },
     {
       "id": 1792918752665,
@@ -1004,7 +1020,9 @@
           "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology."
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "img_position": "18% 30%",
+      "modal_img_position": "18% 30%"
     },
     {
       "id": 1792995954131,
@@ -1063,6 +1081,8 @@
         }
       ],
       "badge_position": "right",
+      "img_position": "75% 15%",
+      "modal_img_position": "center 30%",
       "sort_order": 15
     }
   ],
@@ -1268,7 +1288,7 @@
       "description": "One of five national winners; presented the water-quality project at the MIT Media Lab.",
       "link_text": "Read Feature",
       "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
-      "sort_order": 1
+      "sort_order": 0
     },
     {
       "id": 2,
@@ -1280,7 +1300,7 @@
       "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
       "link_text": "",
       "link_url": "",
-      "sort_order": 2
+      "sort_order": 1
     },
     {
       "id": 3,
@@ -1292,7 +1312,7 @@
       "description": "National Oceanic and Atmospheric Administration recognition.",
       "link_text": "",
       "link_url": "",
-      "sort_order": 3
+      "sort_order": 2
     },
     {
       "id": 4,
@@ -1302,6 +1322,18 @@
       "year": "2026",
       "image_url": "assets/science_fairs/Science_Fair_Awards_At_Mercer_County_Science_Fair.jpg",
       "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 3
+    },
+    {
+      "id": 6,
+      "title": "FIRST LEGO League — NJ Regional & State Awards",
+      "category_pill": "FIRST LEGO League",
+      "category_group": "robotics",
+      "year": "2024",
+      "image_url": "assets/robotics/pic 2 - Team award.JPG",
+      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 4
@@ -1319,15 +1351,16 @@
       "sort_order": 5
     },
     {
-      "id": 6,
-      "title": "FIRST LEGO League — NJ Regional & State Awards",
-      "category_pill": "FIRST LEGO League",
+      "id": 7,
+      "title": "Panther Hackathon Best Beginner Hack",
+      "category_pill": "Princeton Day School",
       "category_group": "robotics",
       "year": "2024",
-      "image_url": "assets/robotics/pic 2 - Team award.JPG",
-      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
-      "link_text": "Learn More",
-      "link_url": "#",
+      "image_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
+      "video_url": "",
+      "description": "Recognized for a beginner-level hackathon project demonstrating algorithmic problem-solving and rapid prototyping at the Princeton Day School Panther Hackathon.",
+      "link_text": "View Hackathon Project",
+      "link_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
       "sort_order": 6
     },
     {
@@ -1427,6 +1460,44 @@
       "sort_order": 14
     },
     {
+      "id": 15,
+      "title": "Veterans of Foreign Wars — Patriot’s Pen",
+      "category_pill": "District & Local Winner · VFW",
+      "category_group": "writing",
+      "year": "2024",
+      "image_url": "assets/certificates/vfw_patriots_pen_official_certificate.jpg",
+      "description": "Placed 2nd locally and 3rd at the district level in Patriot’s Pen, the nationwide youth essay contest held by the Veterans of Foreign Wars.",
+      "link_text": "",
+      "link_url": "",
+      "sort_order": 15
+    },
+    {
+      "id": "techtrek-1",
+      "title": "AI-Driven Discovery of Solar Fuel Catalysts",
+      "category_pill": "TechTrek · Chemistry",
+      "category_group": "writing",
+      "year": "2024",
+      "image_url": "techtrek/TechTrek Article 1.png",
+      "video_url": "",
+      "description": "Science article published by TechTrek USA exploring machine learning acceleration in clean energy materials discovery.",
+      "link_text": "Read on TechTrek",
+      "link_url": "https://www.techtrekusa.com/post/ai-driven-discovery-of-solar-fuel-catalysts-the-future-of-clean-energy",
+      "sort_order": 16
+    },
+    {
+      "id": "techtrek-2",
+      "title": "Beyond Textbooks: Reversing the Central Dogma of Biology",
+      "category_pill": "TechTrek · Biology",
+      "category_group": "writing",
+      "year": "2024",
+      "image_url": "techtrek/TechTrek Article 2.png",
+      "video_url": "",
+      "description": "Science article published by TechTrek USA examining non-canonical translation and molecular biology paradigms.",
+      "link_text": "Read on TechTrek",
+      "link_url": "https://www.techtrekusa.com/post/beyond-textbooks-reversing-the-central-dogma-of-biology",
+      "sort_order": 17
+    },
+    {
       "id": 20,
       "title": "Music-Fest International Rising Talent Grand Prize",
       "category_pill": "Classical Piano",
@@ -1436,7 +1507,7 @@
       "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 15
+      "sort_order": 18
     },
     {
       "id": 22,
@@ -1448,19 +1519,59 @@
       "description": "First Place National Champion in public speaking and oratorical debate, demonstrating communication and advocacy excellence.",
       "link_text": "Learn More",
       "link_url": "#",
-      "sort_order": 16
+      "sort_order": 19
     },
     {
-      "id": 15,
-      "title": "Veterans of Foreign Wars — Patriot’s Pen",
-      "category_pill": "District & Local Winner · VFW",
-      "category_group": "writing",
+      "id": 21,
+      "title": "NJMTA Flute Honors Recital Award",
+      "category_pill": "Honors Recital Winner",
+      "category_group": "arts",
       "year": "2024",
-      "image_url": "assets/certificates/vfw_patriots_pen_official_certificate.jpg",
-      "description": "Placed 2nd locally and 3rd at the district level in Patriot’s Pen, the nationwide youth essay contest held by the Veterans of Foreign Wars.",
-      "link_text": "",
-      "link_url": "",
-      "sort_order": 17
+      "image_url": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
+      "video_url": "",
+      "description": "Selected as NJMTA Flute Honors Recital award winner; serving as 1st Chair Flutist in competitive school and regional wind ensembles.",
+      "link_text": "View Flute Honors Certificate",
+      "link_url": "assets/certificates/NJMTA%20Flute%20Honors%20Recital.jpeg",
+      "sort_order": 20
+    },
+    {
+      "id": "biochar",
+      "title": "American Biochar Company",
+      "category_pill": "Industry Spotlight",
+      "category_group": "research",
+      "year": "2026",
+      "image_url": "assets/american-biochar-card.webp",
+      "video_url": "",
+      "description": "Young Researcher Spotlight feature covering biochar filtration research, PFAS remediation, and environmental innovation.",
+      "link_text": "Read the feature",
+      "link_url": "https://ambiochar.com/what-are-your-desired-outcomes/",
+      "sort_order": 21
+    },
+    {
+      "id": "lawrentian",
+      "title": "The Lawrentian — “One 2 Watch”",
+      "category_pill": "Magazine Feature",
+      "category_group": "research",
+      "year": "2026",
+      "image_url": "assets/The Lawrentian one 2 watch.jpeg",
+      "video_url": "",
+      "description": "Quarterly school magazine profile following Aadya’s water research and youth-led environmental initiatives.",
+      "link_text": "Read the feature",
+      "link_url": "https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch",
+      "sort_order": 22
+    },
+    {
+      "id": "pds",
+      "title": "Princeton Day School",
+      "category_pill": "School Feature",
+      "category_group": "writing",
+      "year": "2023",
+      "image_url": "projects/writing/pds-feature-2023.webp",
+      "video_url": "",
+      "description": "Featured during middle school celebrating creative writing, poetry honors, and scholastic achievements.",
+      "link_text": "Read the feature",
+      "link_url": "https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/",
+      "sort_order": 23
     }
   ],
   "about": {
@@ -1578,7 +1689,7 @@
   "media": [
     {
       "id": 1792913171331,
-      "filename": "WhatsApp Image 2026-10-24 at 10.03.05 PM.jpeg",
+      "filename": "1792913169275_WhatsApp_Image_2026-10-24_at_10.03.05_PM.jpeg",
       "url": "assets/uploads/1792913169275_WhatsApp_Image_2026-10-24_at_10.03.05_PM.jpeg",
       "uploaded_at": "2026-10-25T07:26:11.332Z"
     }
